@@ -16,5 +16,51 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
         }
+
+        private void FDangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void circularPCB1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonTuyChinh2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonTuyChinh1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonTuyChinh1_Click(object sender, EventArgs e)
+        {
+            if (radioButtonTuyChinh2.Checked)
+            {
+                this.Hide(); //an form 1
+                FNguoiBan form2 = new FNguoiBan(); // tao doi tuong form 2
+                form2.ShowDialog(); //show la thao tac dong thoi 2 form
+                                    //ShowDialog thi khi tat form2 thi moi tro lai thao tac tren form1
+                form2 = null; //tat form2, tuc la form 2 tro ve null
+                this.Show(); //hien lai form 1
+            }
+            else if (radioButtonTuyChinh3.Checked)
+            {
+                this.Hide();
+                FNguoiMua form = new FNguoiMua();
+                form.ShowDialog();
+                form = null;
+                this.Show();
+            }
+        }
     }
 }

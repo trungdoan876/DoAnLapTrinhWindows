@@ -1,6 +1,6 @@
 ﻿namespace DoANLapTrinhWin
 {
-    partial class FNguoiBan
+    partial class FNguoiMua
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FNguoiBan));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FNguoiMua));
+            this.panelThan = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnThoat = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnThongKe = new System.Windows.Forms.Button();
+            this.btnDonHangMua = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnThongTin = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnSP = new System.Windows.Forms.Button();
+            this.btnMH = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnDonHang = new System.Windows.Forms.Button();
-            this.panelThan = new System.Windows.Forms.Panel();
+            this.btnGioHang = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -53,9 +54,18 @@
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
+            // panelThan
+            // 
+            this.panelThan.Location = new System.Drawing.Point(229, 4);
+            this.panelThan.Margin = new System.Windows.Forms.Padding(4);
+            this.panelThan.Name = "panelThan";
+            this.panelThan.Size = new System.Drawing.Size(1306, 819);
+            this.panelThan.TabIndex = 3;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel1.Controls.Add(this.panelThan);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel4);
@@ -65,16 +75,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(216, 721);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(230, 823);
+            this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.btnThoat);
             this.panel6.Location = new System.Drawing.Point(0, 385);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(221, 75);
             this.panel6.TabIndex = 8;
@@ -87,7 +98,7 @@
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThoat.Location = new System.Drawing.Point(-16, -12);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.btnThoat.Size = new System.Drawing.Size(299, 108);
@@ -101,7 +112,7 @@
             this.panel7.BackColor = System.Drawing.Color.MediumVioletRed;
             this.panel7.Controls.Add(this.pictureBox1);
             this.panel7.Location = new System.Drawing.Point(0, 4);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(221, 44);
             this.panel7.TabIndex = 9;
@@ -110,7 +121,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(4, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -119,36 +130,36 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnThongKe);
+            this.panel4.Controls.Add(this.btnDonHangMua);
             this.panel4.Location = new System.Drawing.Point(0, 302);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(221, 75);
             this.panel4.TabIndex = 5;
             // 
-            // btnThongKe
+            // btnDonHangMua
             // 
-            this.btnThongKe.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.btnThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
-            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(-20, -15);
-            this.btnThongKe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btnThongKe.Size = new System.Drawing.Size(303, 108);
-            this.btnThongKe.TabIndex = 6;
-            this.btnThongKe.Text = "Thống kê";
-            this.btnThongKe.UseVisualStyleBackColor = false;
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            this.btnDonHangMua.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.btnDonHangMua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDonHangMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDonHangMua.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDonHangMua.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHangMua.Image")));
+            this.btnDonHangMua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDonHangMua.Location = new System.Drawing.Point(-20, -15);
+            this.btnDonHangMua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDonHangMua.Name = "btnDonHangMua";
+            this.btnDonHangMua.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnDonHangMua.Size = new System.Drawing.Size(303, 108);
+            this.btnDonHangMua.TabIndex = 6;
+            this.btnDonHangMua.Text = "Đơn hàng";
+            this.btnDonHangMua.UseVisualStyleBackColor = false;
+            this.btnDonHangMua.Click += new System.EventHandler(this.btnDonHangMua_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnThongTin);
             this.panel2.Location = new System.Drawing.Point(0, 55);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(221, 75);
             this.panel2.TabIndex = 1;
@@ -162,7 +173,7 @@
             this.btnThongTin.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTin.Image")));
             this.btnThongTin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongTin.Location = new System.Drawing.Point(-20, -15);
-            this.btnThongTin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThongTin.Margin = new System.Windows.Forms.Padding(4);
             this.btnThongTin.Name = "btnThongTin";
             this.btnThongTin.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.btnThongTin.Size = new System.Drawing.Size(303, 108);
@@ -173,78 +184,75 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnSP);
+            this.panel3.Controls.Add(this.btnMH);
             this.panel3.Location = new System.Drawing.Point(0, 138);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(221, 75);
             this.panel3.TabIndex = 2;
             // 
-            // btnSP
+            // btnMH
             // 
-            this.btnSP.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.btnSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSP.Image = ((System.Drawing.Image)(resources.GetObject("btnSP.Image")));
-            this.btnSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSP.Location = new System.Drawing.Point(-20, -14);
-            this.btnSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSP.Name = "btnSP";
-            this.btnSP.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btnSP.Size = new System.Drawing.Size(303, 108);
-            this.btnSP.TabIndex = 0;
-            this.btnSP.Text = "Sản phẩm";
-            this.btnSP.UseVisualStyleBackColor = false;
-            this.btnSP.Click += new System.EventHandler(this.btnSP_Click);
+            this.btnMH.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.btnMH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMH.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMH.Image = ((System.Drawing.Image)(resources.GetObject("btnMH.Image")));
+            this.btnMH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMH.Location = new System.Drawing.Point(-20, -14);
+            this.btnMH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMH.Name = "btnMH";
+            this.btnMH.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnMH.Size = new System.Drawing.Size(303, 108);
+            this.btnMH.TabIndex = 0;
+            this.btnMH.Text = "Mua hàng";
+            this.btnMH.UseVisualStyleBackColor = false;
+            this.btnMH.Click += new System.EventHandler(this.btnMH_Click);
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.btnDonHang);
+            this.panel5.Controls.Add(this.btnGioHang);
             this.panel5.Location = new System.Drawing.Point(0, 220);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(221, 75);
             this.panel5.TabIndex = 4;
             // 
-            // btnDonHang
+            // btnGioHang
             // 
-            this.btnDonHang.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.btnDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDonHang.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDonHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.Image")));
-            this.btnDonHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDonHang.Location = new System.Drawing.Point(-16, -18);
-            this.btnDonHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnDonHang.Name = "btnDonHang";
-            this.btnDonHang.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btnDonHang.Size = new System.Drawing.Size(299, 108);
-            this.btnDonHang.TabIndex = 3;
-            this.btnDonHang.Text = "Đơn hàng";
-            this.btnDonHang.UseVisualStyleBackColor = false;
-            this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click);
+            this.btnGioHang.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.btnGioHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGioHang.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGioHang.Image = ((System.Drawing.Image)(resources.GetObject("btnGioHang.Image")));
+            this.btnGioHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGioHang.Location = new System.Drawing.Point(-16, -18);
+            this.btnGioHang.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGioHang.Name = "btnGioHang";
+            this.btnGioHang.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnGioHang.Size = new System.Drawing.Size(299, 108);
+            this.btnGioHang.TabIndex = 3;
+            this.btnGioHang.Text = "Giỏ hàng";
+            this.btnGioHang.UseVisualStyleBackColor = false;
+            this.btnGioHang.Click += new System.EventHandler(this.btnGioHang_Click);
             // 
-            // panelThan
+            // panel8
             // 
-            this.panelThan.Location = new System.Drawing.Point(212, 0);
-            this.panelThan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelThan.Name = "panelThan";
-            this.panelThan.Size = new System.Drawing.Size(1359, 721);
-            this.panelThan.TabIndex = 1;
+            this.panel8.Location = new System.Drawing.Point(233, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1359, 826);
+            this.panel8.TabIndex = 3;
             // 
-            // FNguoiBan
+            // FNguoiMua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1571, 721);
-            this.Controls.Add(this.panelThan);
+            this.ClientSize = new System.Drawing.Size(1533, 823);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "FNguoiBan";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FNguoiBan";
-            this.Load += new System.EventHandler(this.FNguoiBan_Load);
+            this.Name = "FNguoiMua";
+            this.Text = "FNguoiMua";
+            this.Load += new System.EventHandler(this.FNguoiMua_Load);
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -259,19 +267,20 @@
 
         #endregion
 
+        private System.Windows.Forms.Panel panelThan;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnSP;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnThongTin;
-        private System.Windows.Forms.Button btnDonHang;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panelThan;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnDonHangMua;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnThongTin;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnMH;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnGioHang;
+        private System.Windows.Forms.Panel panel8;
     }
 }

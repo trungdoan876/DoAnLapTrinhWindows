@@ -56,5 +56,10 @@ namespace DoANLapTrinhWin
         {
             moFormCon(new FThongKeNguoiBan());
         }
+
+        private void FNguoiBan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

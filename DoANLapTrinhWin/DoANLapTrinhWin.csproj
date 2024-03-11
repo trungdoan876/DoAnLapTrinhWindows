@@ -51,11 +51,29 @@
     <Compile Include="ButtonTuyChinh.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CircularPCB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DropdownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FCTSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCTSP.Designer.cs">
+      <DependentUpon>FCTSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FDangNhap.Designer.cs">
       <DependentUpon>FDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDonHangMua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDonHangMua.Designer.cs">
+      <DependentUpon>FDonHangMua.cs</DependentUpon>
     </Compile>
     <Compile Include="FDonHangNguoiBan.cs">
       <SubType>Form</SubType>
@@ -63,17 +81,41 @@
     <Compile Include="FDonHangNguoiBan.Designer.cs">
       <DependentUpon>FDonHangNguoiBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FGioHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGioHang.Designer.cs">
+      <DependentUpon>FGioHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMuaHang.Designer.cs">
+      <DependentUpon>FMuaHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FNguoiBan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FNguoiBan.Designer.cs">
       <DependentUpon>FNguoiBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FNguoiMua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNguoiMua.Designer.cs">
+      <DependentUpon>FNguoiMua.cs</DependentUpon>
+    </Compile>
     <Compile Include="FSanPhamNguoiBan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FSanPhamNguoiBan.Designer.cs">
       <DependentUpon>FSanPhamNguoiBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThanhToan.Designer.cs">
+      <DependentUpon>FThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="FThongKeNguoiBan.cs">
       <SubType>Form</SubType>
@@ -87,31 +129,63 @@
     <Compile Include="FThongTinNguoiBan.Designer.cs">
       <DependentUpon>FThongTinNguoiBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FThongTinNguoiMua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongTinNguoiMua.Designer.cs">
+      <DependentUpon>FThongTinNguoiMua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuRenderer.cs" />
+    <Compile Include="MoreMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadioButtonTuyChinh.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UCTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCTextBox.Designer.cs">
       <DependentUpon>UCTextBox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FCTSP.resx">
+      <DependentUpon>FCTSP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDonHangMua.resx">
+      <DependentUpon>FDonHangMua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FDonHangNguoiBan.resx">
       <DependentUpon>FDonHangNguoiBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FGioHang.resx">
+      <DependentUpon>FGioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMuaHang.resx">
+      <DependentUpon>FMuaHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FNguoiBan.resx">
       <DependentUpon>FNguoiBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FNguoiMua.resx">
+      <DependentUpon>FNguoiMua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FSanPhamNguoiBan.resx">
       <DependentUpon>FSanPhamNguoiBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThanhToan.resx">
+      <DependentUpon>FThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThongKeNguoiBan.resx">
       <DependentUpon>FThongKeNguoiBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThongTinNguoiBan.resx">
       <DependentUpon>FThongTinNguoiBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongTinNguoiMua.resx">
+      <DependentUpon>FThongTinNguoiMua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
