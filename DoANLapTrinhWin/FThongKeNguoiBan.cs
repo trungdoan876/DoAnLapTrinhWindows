@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoANLapTrinhWin
 {
-    public partial class Form1 : Form
+    public partial class FThongKeNguoiBan : Form
     {
-        public Form1()
+        public FThongKeNguoiBan()
         {
             InitializeComponent();
         }
