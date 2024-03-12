@@ -142,6 +142,12 @@
     <Compile Include="RadioButtonTuyChinh.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UCSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSP.Designer.cs">
+      <DependentUpon>UCSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +202,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCSP.resx">
+      <DependentUpon>UCSP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCTextBox.resx">
       <DependentUpon>UCTextBox.cs</DependentUpon>
     </EmbeddedResource>

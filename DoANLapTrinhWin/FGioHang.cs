@@ -37,5 +37,10 @@ namespace DoANLapTrinhWin
             form2 = null; //tat form2, tuc la form 2 tro ve null
             this.Show();
         }
+
+        private void dropdownMenu1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

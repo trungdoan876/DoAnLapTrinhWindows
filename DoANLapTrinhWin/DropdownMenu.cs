@@ -16,7 +16,7 @@ namespace DoANLapTrinhWin
         private bool isMainMenu;
         private int menuItemHeight = 25;
         private Color menuItemTextColor = Color.DimGray;
-        private Color primaryColor = Color.MediumSlateBlue;
+        private Color primaryColor = Color.MediumVioletRed;
         private Bitmap menuItemHeaderSize;
 
         public DropdownMenu(IContainer container) : base(container)

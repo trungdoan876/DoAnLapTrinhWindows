@@ -10,29 +10,19 @@ using System.Windows.Forms;
 
 namespace DoANLapTrinhWin
 {
-    public partial class FMuaHang : Form
+    public partial class UCSP : UserControl
     {
-        public FMuaHang()
+        public UCSP()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void UCSP_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void UCSP_Click(object sender, EventArgs e)
         {
             this.Hide(); //an form 1
             FCTSP form2 = new FCTSP(); // tao doi tuong form 2
@@ -41,16 +31,5 @@ namespace DoANLapTrinhWin
             form2 = null; //tat form2, tuc la form 2 tro ve null
             this.Show();
         }
-
-        private void ucsp1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FMuaHang_Load(object sender, EventArgs e)
-        {
-
-        }
     }
-    
 }
