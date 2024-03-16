@@ -17,14 +17,21 @@ namespace DoANLapTrinhWin
         private Color mauKhung = Color.MediumPurple;
         private int kichThuocKhung = 2;
         private bool gachChan = false;
-        //private Color borderFocusColor = Color.MediumVioletRed;
-        //private bool co = false;
+        private Color borderFocusColor = Color.Green;
+        private bool isFocusColor = false;
+
         private int banKinhKhung = 0;
+
+        private Color chumoColor = Color.DarkGray;
+        private string chumoText = "";
+        private bool ischumo = false;
+        private bool ismatkhau = false;
         //constructor
         public UCTextBox()
         {
             InitializeComponent();
         }
+       
         //properties
         public Color MauKhung
         {
@@ -82,6 +89,74 @@ namespace DoANLapTrinhWin
             get { return textBox1.Multiline; }
             set { textBox1.Multiline = value; }
         }
+
+        public bool PasswordChar
+        {
+            get { return ismatkhau; }
+            set { ismatkhau = value;
+                textBox1.UseSystemPasswordChar = value; }
+        }
+
+        public string Texts
+        {
+            get
+            {
+                if (ischumo) return "";
+                else return textBox1.Text;
+            }
+            set
+            {
+                textBox1.Text = value;
+                Setischumo();
+            }
+        }
+
+        public Color ChumoColor { 
+            get => chumoColor; 
+            set 
+            {
+                chumoColor = value;
+                if(ismatkhau) textBox1.ForeColor = value;
+            } 
+        }
+
+        public string ChumoText 
+        { get => chumoText; 
+            set
+            { 
+                chumoText = value;
+                textBox1.Text ="";
+                Setischumo();
+            }
+                
+        }
+        private void Setischumo()
+        {
+            if(string.IsNullOrWhiteSpace(textBox1.Text) && chumoText != "") 
+            {
+                ischumo = true;
+                textBox1.Text = chumoText;
+                textBox1.ForeColor = chumoColor;    
+                if(ismatkhau)
+                {
+                    textBox1.UseSystemPasswordChar= false;
+                }
+            }
+        }
+        private void Removechumo()
+        {
+            if (ischumo && chumoText != "")
+            {
+                ischumo = false;
+                textBox1.Text = "";
+                textBox1.ForeColor = this.ForeColor;
+                if (ismatkhau)
+                {
+                    textBox1.UseSystemPasswordChar = true;
+                }
+            }
+        }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -100,7 +175,8 @@ namespace DoANLapTrinhWin
                     if (banKinhKhung > 15) SetTextBoxRoundedRegion();
                     graph.SmoothingMode = SmoothingMode.AntiAlias;
                     penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-                    //if (!co) penBorder.Color = borderFocusColor;
+                    if (isFocusColor) penBorder.Color = borderFocusColor;
+
                     if (gachChan)
                     {
                         graph.DrawPath(penBorderSmooth, pathBorderSmooth);
@@ -154,6 +230,22 @@ namespace DoANLapTrinhWin
                 pathTxt = GetFigurePath(textBox1.ClientRectangle, kichThuocKhung * 2);
                 textBox1.Region = new Region(pathTxt);
             }
+        }
+    
+
+
+        private void UCTextBox_Enter(object sender, EventArgs e)
+        {
+            isFocusColor = true;
+            this.Invalidate();
+            Removechumo();
+        }
+
+        private void UCTextBox_Leave(object sender, EventArgs e)
+        {
+            isFocusColor = false;
+            this.Invalidate();
+            Setischumo();
         }
     }
 }

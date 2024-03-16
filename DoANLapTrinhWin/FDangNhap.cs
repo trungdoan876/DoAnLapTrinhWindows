@@ -44,23 +44,35 @@ namespace DoANLapTrinhWin
 
         private void buttonTuyChinh1_Click(object sender, EventArgs e)
         {
-            if (radioButtonTuyChinh2.Checked)
-            {
+            
                 this.Hide(); //an form 1
                 FNguoiBan form2 = new FNguoiBan(); // tao doi tuong form 2
                 form2.ShowDialog(); //show la thao tac dong thoi 2 form
                                     //ShowDialog thi khi tat form2 thi moi tro lai thao tac tren form1
                 form2 = null; //tat form2, tuc la form 2 tro ve null
                 this.Show(); //hien lai form 1
-            }
-            else if (radioButtonTuyChinh3.Checked)
-            {
-                this.Hide();
+         
+           
+                /*this.Hide();
                 FNguoiMua form = new FNguoiMua();
                 form.ShowDialog();
                 form = null;
-                this.Show();
-            }
+                this.Show();*/
+            
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonTuyChinh3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FNguoiMua form = new FNguoiMua();
+            form.ShowDialog();
+            form = null;
+            this.Show();
         }
     }
 }

@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace DoANLapTrinhWin
 {
-    public partial class FThongTinNguoiBan : Form
+    public partial class FDanhGia : Form
     {
-        public FThongTinNguoiBan()
+        public FDanhGia()
         {
             InitializeComponent();
         }
-
- 
     }
 }

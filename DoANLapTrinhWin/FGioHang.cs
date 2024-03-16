@@ -22,11 +22,7 @@ namespace DoANLapTrinhWin
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            dropdownMenu1.Show(button1, button1.Width, 0);
-           
-        }
+  
 
         private void chuyenKhoanToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -42,5 +38,12 @@ namespace DoANLapTrinhWin
         {
 
         }
+
+        private void buttonTuyChinh1_Click(object sender, EventArgs e)
+        {
+            dropdownMenu1.Show(buttonTuyChinh1, buttonTuyChinh1.Width, 0);
+        }
+
+      
     }
 }

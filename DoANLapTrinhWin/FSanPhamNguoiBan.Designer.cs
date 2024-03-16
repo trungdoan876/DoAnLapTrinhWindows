@@ -29,321 +29,348 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FSanPhamNguoiBan));
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSuaSP = new System.Windows.Forms.Button();
-            this.btnXoaSP = new System.Windows.Forms.Button();
-            this.btnThemSP = new System.Windows.Forms.Button();
-            this.ucTextBox1 = new DoANLapTrinhWin.UCTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnSua = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.btnXoa = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.ucTextBox8 = new DoANLapTrinhWin.UCTextBox();
+            this.ucTextBox1 = new DoANLapTrinhWin.UCTextBox();
+            this.ucTextBox2 = new DoANLapTrinhWin.UCTextBox();
+            this.buttonTuyChinh1 = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.btnThem = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.ucTextBox6 = new DoANLapTrinhWin.UCTextBox();
+            this.ucTextBox5 = new DoANLapTrinhWin.UCTextBox();
+            this.ucTextBox3 = new DoANLapTrinhWin.UCTextBox();
+            this.ucTextBox4 = new DoANLapTrinhWin.UCTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // pictureBox1
             // 
-            this.button1.Location = new System.Drawing.Point(16, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 41);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Hình ảnh";
-            this.button1.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1497, 40);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 44;
+            this.pictureBox1.TabStop = false;
             // 
-            // comboBox1
+            // label9
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(161, 151);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(412, 33);
-            this.comboBox1.TabIndex = 38;
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label9.Location = new System.Drawing.Point(84, 86);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(142, 25);
+            this.label9.TabIndex = 186;
+            this.label9.Text = "Mã sản phẩm";
             // 
-            // textBox5
+            // label10
             // 
-            this.textBox5.Location = new System.Drawing.Point(174, 382);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(398, 122);
-            this.textBox5.TabIndex = 37;
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label10.Location = new System.Drawing.Point(84, 176);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(145, 25);
+            this.label10.TabIndex = 192;
+            this.label10.Text = "Giá sản phẩm";
             // 
-            // textBox4
+            // label11
             // 
-            this.textBox4.Location = new System.Drawing.Point(160, 275);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(412, 31);
-            this.textBox4.TabIndex = 36;
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label11.Location = new System.Drawing.Point(84, 277);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(85, 25);
+            this.label11.TabIndex = 194;
+            this.label11.Text = "Xuất xứ";
             // 
-            // textBox3
+            // pictureBox2
             // 
-            this.textBox3.Location = new System.Drawing.Point(162, 217);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(412, 31);
-            this.textBox3.TabIndex = 35;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(191, 396);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(265, 225);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 205;
+            this.pictureBox2.TabStop = false;
             // 
-            // textBox6
+            // label12
             // 
-            this.textBox6.Location = new System.Drawing.Point(403, 25);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(96, 31);
-            this.textBox6.TabIndex = 34;
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label12.Location = new System.Drawing.Point(84, 368);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(109, 25);
+            this.label12.TabIndex = 209;
+            this.label12.Text = "Tình trạng";
             // 
-            // label7
+            // comboBox3
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(0, 385);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(166, 25);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Mô tả sản phẩm";
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(68, 378);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(454, 45);
+            this.comboBox3.TabIndex = 208;
             // 
-            // label6
+            // pictureBox3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 275);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 25);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "Xuất xứ";
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1154, 86);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(564, 564);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 210;
+            this.pictureBox3.TabStop = false;
             // 
-            // label5
+            // label13
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 223);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 25);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Giá sản phẩm";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 159);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 25);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Ngành hàng";
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label13.Location = new System.Drawing.Point(631, 279);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(166, 25);
+            this.label13.TabIndex = 216;
+            this.label13.Text = "Mô tả sản phẩm";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(219, 30);
+            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label2.Location = new System.Drawing.Point(631, 178);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 26);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Mã sản phẩm";
+            this.label2.Size = new System.Drawing.Size(129, 25);
+            this.label2.TabIndex = 214;
+            this.label2.Text = "Ngành hàng";
             // 
-            // dataGridView1
+            // label8
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LavenderBlush;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column5,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column6,
-            this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(581, 58);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1119, 490);
-            this.dataGridView1.TabIndex = 39;
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label8.Location = new System.Drawing.Point(631, 88);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(149, 25);
+            this.label8.TabIndex = 212;
+            this.label8.Text = "Tên sản phẩm";
             // 
-            // Column1
+            // btnSua
             // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
+            this.btnSua.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(1089, 586);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(195, 67);
+            this.btnSua.TabIndex = 218;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
             // 
-            // Column5
+            // btnXoa
             // 
-            this.Column5.HeaderText = "Mã sản phẩm";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 150;
+            this.btnXoa.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(813, 586);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(195, 67);
+            this.btnXoa.TabIndex = 217;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
             // 
-            // Column2
+            // ucTextBox8
             // 
-            this.Column2.HeaderText = "Tên sản phẩm";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Phân loại hàng";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Giá ";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 150;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Mô tả ";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 150;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Trạng thái kiểm duyệt";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 150;
-            // 
-            // btnSuaSP
-            // 
-            this.btnSuaSP.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.btnSuaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaSP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSuaSP.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaSP.Image")));
-            this.btnSuaSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSuaSP.Location = new System.Drawing.Point(400, 528);
-            this.btnSuaSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSuaSP.Name = "btnSuaSP";
-            this.btnSuaSP.Size = new System.Drawing.Size(171, 66);
-            this.btnSuaSP.TabIndex = 42;
-            this.btnSuaSP.Text = "Sửa";
-            this.btnSuaSP.UseVisualStyleBackColor = false;
-            // 
-            // btnXoaSP
-            // 
-            this.btnXoaSP.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.btnXoaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaSP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnXoaSP.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaSP.Image")));
-            this.btnXoaSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoaSP.Location = new System.Drawing.Point(221, 528);
-            this.btnXoaSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnXoaSP.Name = "btnXoaSP";
-            this.btnXoaSP.Size = new System.Drawing.Size(171, 66);
-            this.btnXoaSP.TabIndex = 41;
-            this.btnXoaSP.Text = "Xóa";
-            this.btnXoaSP.UseVisualStyleBackColor = false;
-            // 
-            // btnThemSP
-            // 
-            this.btnThemSP.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.btnThemSP.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btnThemSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemSP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSP.Image")));
-            this.btnThemSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemSP.Location = new System.Drawing.Point(29, 528);
-            this.btnThemSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.Size = new System.Drawing.Size(184, 66);
-            this.btnThemSP.TabIndex = 40;
-            this.btnThemSP.Text = "Thêm";
-            this.btnThemSP.UseVisualStyleBackColor = false;
+            this.ucTextBox8.BackColor = System.Drawing.SystemColors.Window;
+            this.ucTextBox8.BanKinhKhung = 15;
+            this.ucTextBox8.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucTextBox8.ChumoText = "";
+            this.ucTextBox8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucTextBox8.GachChan = false;
+            this.ucTextBox8.KichThuocKhung = 1;
+            this.ucTextBox8.Location = new System.Drawing.Point(615, 288);
+            this.ucTextBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.ucTextBox8.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucTextBox8.Multiline = false;
+            this.ucTextBox8.Name = "ucTextBox8";
+            this.ucTextBox8.Padding = new System.Windows.Forms.Padding(9);
+            this.ucTextBox8.PasswordChar = false;
+            this.ucTextBox8.Size = new System.Drawing.Size(618, 156);
+            this.ucTextBox8.TabIndex = 215;
+            this.ucTextBox8.Texts = "";
             // 
             // ucTextBox1
             // 
             this.ucTextBox1.BackColor = System.Drawing.SystemColors.Window;
             this.ucTextBox1.BanKinhKhung = 15;
+            this.ucTextBox1.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucTextBox1.ChumoText = "";
             this.ucTextBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucTextBox1.GachChan = false;
             this.ucTextBox1.KichThuocKhung = 1;
-            this.ucTextBox1.Location = new System.Drawing.Point(708, 9);
-            this.ucTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ucTextBox1.MauKhung = System.Drawing.Color.MediumVioletRed;
+            this.ucTextBox1.Location = new System.Drawing.Point(615, 187);
+            this.ucTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucTextBox1.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucTextBox1.Multiline = false;
             this.ucTextBox1.Name = "ucTextBox1";
-            this.ucTextBox1.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
-            this.ucTextBox1.Size = new System.Drawing.Size(349, 41);
-            this.ucTextBox1.TabIndex = 43;
+            this.ucTextBox1.Padding = new System.Windows.Forms.Padding(9);
+            this.ucTextBox1.PasswordChar = false;
+            this.ucTextBox1.Size = new System.Drawing.Size(618, 50);
+            this.ucTextBox1.TabIndex = 213;
+            this.ucTextBox1.Texts = "";
             // 
-            // pictureBox1
+            // ucTextBox2
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1065, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 44;
-            this.pictureBox1.TabStop = false;
+            this.ucTextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.ucTextBox2.BanKinhKhung = 15;
+            this.ucTextBox2.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucTextBox2.ChumoText = "";
+            this.ucTextBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucTextBox2.GachChan = false;
+            this.ucTextBox2.KichThuocKhung = 1;
+            this.ucTextBox2.Location = new System.Drawing.Point(615, 97);
+            this.ucTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.ucTextBox2.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucTextBox2.Multiline = false;
+            this.ucTextBox2.Name = "ucTextBox2";
+            this.ucTextBox2.Padding = new System.Windows.Forms.Padding(9);
+            this.ucTextBox2.PasswordChar = false;
+            this.ucTextBox2.Size = new System.Drawing.Size(618, 50);
+            this.ucTextBox2.TabIndex = 211;
+            this.ucTextBox2.Texts = "";
             // 
-            // textBox1
+            // buttonTuyChinh1
             // 
-            this.textBox1.Location = new System.Drawing.Point(162, 82);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(412, 31);
-            this.textBox1.TabIndex = 45;
+            this.buttonTuyChinh1.BackColor = System.Drawing.Color.SeaGreen;
+            this.buttonTuyChinh1.FlatAppearance.BorderSize = 0;
+            this.buttonTuyChinh1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTuyChinh1.ForeColor = System.Drawing.Color.White;
+            this.buttonTuyChinh1.Location = new System.Drawing.Point(158, 528);
+            this.buttonTuyChinh1.Name = "buttonTuyChinh1";
+            this.buttonTuyChinh1.Size = new System.Drawing.Size(195, 67);
+            this.buttonTuyChinh1.TabIndex = 207;
+            this.buttonTuyChinh1.Text = "Hình ảnh";
+            this.buttonTuyChinh1.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // btnThem
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 87);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 26);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "Tên sản phẩm";
+            this.btnThem.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Location = new System.Drawing.Point(539, 586);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(195, 67);
+            this.btnThem.TabIndex = 202;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // ucTextBox6
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 333);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 25);
-            this.label3.TabIndex = 47;
-            this.label3.Text = "Tình trạng";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.ucTextBox6.BackColor = System.Drawing.SystemColors.Window;
+            this.ucTextBox6.BanKinhKhung = 15;
+            this.ucTextBox6.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucTextBox6.ChumoText = "";
+            this.ucTextBox6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucTextBox6.GachChan = false;
+            this.ucTextBox6.KichThuocKhung = 1;
+            this.ucTextBox6.Location = new System.Drawing.Point(68, 286);
+            this.ucTextBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.ucTextBox6.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucTextBox6.Multiline = false;
+            this.ucTextBox6.Name = "ucTextBox6";
+            this.ucTextBox6.Padding = new System.Windows.Forms.Padding(9);
+            this.ucTextBox6.PasswordChar = false;
+            this.ucTextBox6.Size = new System.Drawing.Size(454, 50);
+            this.ucTextBox6.TabIndex = 193;
+            this.ucTextBox6.Texts = "";
             // 
-            // comboBox2
+            // ucTextBox5
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(159, 333);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(412, 33);
-            this.comboBox2.TabIndex = 48;
+            this.ucTextBox5.BackColor = System.Drawing.SystemColors.Window;
+            this.ucTextBox5.BanKinhKhung = 15;
+            this.ucTextBox5.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucTextBox5.ChumoText = "";
+            this.ucTextBox5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucTextBox5.GachChan = false;
+            this.ucTextBox5.KichThuocKhung = 1;
+            this.ucTextBox5.Location = new System.Drawing.Point(68, 185);
+            this.ucTextBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.ucTextBox5.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucTextBox5.Multiline = false;
+            this.ucTextBox5.Name = "ucTextBox5";
+            this.ucTextBox5.Padding = new System.Windows.Forms.Padding(9);
+            this.ucTextBox5.PasswordChar = false;
+            this.ucTextBox5.Size = new System.Drawing.Size(454, 50);
+            this.ucTextBox5.TabIndex = 191;
+            this.ucTextBox5.Texts = "";
+            // 
+            // ucTextBox3
+            // 
+            this.ucTextBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.ucTextBox3.BanKinhKhung = 15;
+            this.ucTextBox3.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucTextBox3.ChumoText = "";
+            this.ucTextBox3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucTextBox3.GachChan = false;
+            this.ucTextBox3.KichThuocKhung = 1;
+            this.ucTextBox3.Location = new System.Drawing.Point(1039, 33);
+            this.ucTextBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.ucTextBox3.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucTextBox3.Multiline = false;
+            this.ucTextBox3.Name = "ucTextBox3";
+            this.ucTextBox3.Padding = new System.Windows.Forms.Padding(9);
+            this.ucTextBox3.PasswordChar = false;
+            this.ucTextBox3.Size = new System.Drawing.Size(380, 50);
+            this.ucTextBox3.TabIndex = 188;
+            this.ucTextBox3.Texts = "";
+            // 
+            // ucTextBox4
+            // 
+            this.ucTextBox4.BackColor = System.Drawing.SystemColors.Window;
+            this.ucTextBox4.BanKinhKhung = 15;
+            this.ucTextBox4.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucTextBox4.ChumoText = "";
+            this.ucTextBox4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucTextBox4.GachChan = false;
+            this.ucTextBox4.KichThuocKhung = 1;
+            this.ucTextBox4.Location = new System.Drawing.Point(68, 97);
+            this.ucTextBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.ucTextBox4.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucTextBox4.Multiline = false;
+            this.ucTextBox4.Name = "ucTextBox4";
+            this.ucTextBox4.Padding = new System.Windows.Forms.Padding(9);
+            this.ucTextBox4.PasswordChar = false;
+            this.ucTextBox4.Size = new System.Drawing.Size(454, 50);
+            this.ucTextBox4.TabIndex = 184;
+            this.ucTextBox4.Texts = "";
             // 
             // FSanPhamNguoiBan
             // 
@@ -351,67 +378,62 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1705, 720);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.ucTextBox1);
-            this.Controls.Add(this.btnSuaSP);
-            this.Controls.Add(this.btnXoaSP);
-            this.Controls.Add(this.btnThemSP);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.ucTextBox8);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.ucTextBox1);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.ucTextBox2);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.buttonTuyChinh1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.ucTextBox6);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.ucTextBox5);
+            this.Controls.Add(this.ucTextBox3);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.ucTextBox4);
+            this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FSanPhamNguoiBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FSanPhamNguoiBan_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.Button btnSuaSP;
-        private System.Windows.Forms.Button btnXoaSP;
-        private System.Windows.Forms.Button btnThemSP;
-        private UCTextBox ucTextBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label9;
+        private UCTextBox ucTextBox4;
+        private UCTextBox ucTextBox3;
+        private System.Windows.Forms.Label label10;
+        private UCTextBox ucTextBox5;
+        private System.Windows.Forms.Label label11;
+        private UCTextBox ucTextBox6;
+        private ButtonTuyChinh btnThem;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private ButtonTuyChinh buttonTuyChinh1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label13;
+        private UCTextBox ucTextBox8;
+        private System.Windows.Forms.Label label2;
+        private UCTextBox ucTextBox1;
+        private System.Windows.Forms.Label label8;
+        private UCTextBox ucTextBox2;
+        private ButtonTuyChinh btnSua;
+        private ButtonTuyChinh btnXoa;
     }
 }

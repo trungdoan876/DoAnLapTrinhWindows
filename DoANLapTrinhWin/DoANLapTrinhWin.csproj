@@ -63,6 +63,12 @@
     <Compile Include="FCTSP.Designer.cs">
       <DependentUpon>FCTSP.cs</DependentUpon>
     </Compile>
+    <Compile Include="FDanhGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDanhGia.Designer.cs">
+      <DependentUpon>FDanhGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     <Compile Include="FThongKeNguoiBan.Designer.cs">
       <DependentUpon>FThongKeNguoiBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FThongTinChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongTinChiTiet.Designer.cs">
+      <DependentUpon>FThongTinChiTiet.cs</DependentUpon>
+    </Compile>
     <Compile Include="FThongTinNguoiBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     </Compile>
     <Compile Include="FThongTinNguoiMua.Designer.cs">
       <DependentUpon>FThongTinNguoiMua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FYeuThich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FYeuThich.Designer.cs">
+      <DependentUpon>FYeuThich.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuRenderer.cs" />
     <Compile Include="MoreMenu.cs" />
@@ -186,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThongKeNguoiBan.resx">
       <DependentUpon>FThongKeNguoiBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongTinChiTiet.resx">
+      <DependentUpon>FThongTinChiTiet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThongTinNguoiBan.resx">
       <DependentUpon>FThongTinNguoiBan.cs</DependentUpon>

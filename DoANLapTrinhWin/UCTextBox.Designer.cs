@@ -49,6 +49,8 @@
             this.Name = "UCTextBox";
             this.Padding = new System.Windows.Forms.Padding(7);
             this.Size = new System.Drawing.Size(270, 40);
+            this.Enter += new System.EventHandler(this.UCTextBox_Enter);
+            this.Leave += new System.EventHandler(this.UCTextBox_Leave);
             this.ResumeLayout(false);
             this.PerformLayout();
 
