@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSP));
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblGiaTien = new System.Windows.Forms.Label();
+            this.lblTenSP = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -41,9 +41,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(202, 254);
+            this.pictureBox4.Location = new System.Drawing.Point(229, 244);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox4.Size = new System.Drawing.Size(27, 28);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 26;
             this.pictureBox4.TabStop = false;
@@ -51,51 +52,57 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 264);
+            this.label4.Location = new System.Drawing.Point(16, 229);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 25);
+            this.label4.Size = new System.Drawing.Size(70, 20);
             this.label4.TabIndex = 28;
-            this.label4.Text = "550 lượt mua";
+            this.label4.Text = "lượt mua";
             // 
-            // label5
+            // lblGiaTien
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(74, 238);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 25);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "50.000VND";
+            this.lblGiaTien.AutoSize = true;
+            this.lblGiaTien.Location = new System.Drawing.Point(120, 189);
+            this.lblGiaTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGiaTien.Name = "lblGiaTien";
+            this.lblGiaTien.Size = new System.Drawing.Size(64, 20);
+            this.lblGiaTien.TabIndex = 27;
+            this.lblGiaTien.Text = "Giá tiền";
             // 
-            // label6
+            // lblTenSP
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 213);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(232, 25);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Cây Cam Ngọt Của Tôi";
+            this.lblTenSP.AutoSize = true;
+            this.lblTenSP.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblTenSP.Location = new System.Drawing.Point(58, 152);
+            this.lblTenSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTenSP.Name = "lblTenSP";
+            this.lblTenSP.Size = new System.Drawing.Size(53, 20);
+            this.lblTenSP.TabIndex = 26;
+            this.lblTenSP.Text = "tenSP";
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(54, 23);
+            this.pictureBox5.Location = new System.Drawing.Point(71, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(184, 174);
+            this.pictureBox5.Size = new System.Drawing.Size(138, 139);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 26;
             this.pictureBox5.TabStop = false;
             // 
             // UCSP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblGiaTien);
+            this.Controls.Add(this.lblTenSP);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCSP";
-            this.Size = new System.Drawing.Size(283, 331);
+            this.Size = new System.Drawing.Size(291, 291);
             this.Load += new System.EventHandler(this.UCSP_Load);
             this.Click += new System.EventHandler(this.UCSP_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -108,8 +115,8 @@
         #endregion
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        public System.Windows.Forms.Label lblTenSP;
+        public System.Windows.Forms.Label lblGiaTien;
+        public System.Windows.Forms.PictureBox pictureBox5;
     }
 }

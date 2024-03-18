@@ -231,6 +231,10 @@ namespace DoANLapTrinhWin
                 textBox1.Region = new Region(pathTxt);
             }
         }
+        public TextBox textBox
+        {
+            get { return textBox1; }
+        }
     
 
 

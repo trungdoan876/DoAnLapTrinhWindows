@@ -44,7 +44,7 @@ namespace DoANLapTrinhWin
 
         private void btnSP_Click(object sender, EventArgs e)
         {
-            moFormCon(new FSanPhamNguoiBan());
+            moFormCon(new FSanPham());
         }
 
         private void btnDonHang_Click(object sender, EventArgs e)
@@ -61,7 +61,6 @@ namespace DoANLapTrinhWin
         {
 
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
