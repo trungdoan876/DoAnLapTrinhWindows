@@ -188,6 +188,12 @@
     <Compile Include="UCSP.Designer.cs">
       <DependentUpon>UCSP.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCSPBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSPBan.Designer.cs">
+      <DependentUpon>UCSPBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -256,6 +262,9 @@
     </Compile>
     <EmbeddedResource Include="UCSP.resx">
       <DependentUpon>UCSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSPBan.resx">
+      <DependentUpon>UCSPBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCTextBox.resx">
       <DependentUpon>UCTextBox.cs</DependentUpon>

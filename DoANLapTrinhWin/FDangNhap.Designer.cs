@@ -41,8 +41,8 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.buttonTuyChinh3 = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.buttonTuyChinh2 = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.btnMuaHang = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.btnBanHang = new DoANLapTrinhWin.ButtonTuyChinh();
             this.buttonTuyChinh1 = new DoANLapTrinhWin.ButtonTuyChinh();
             this.btnThoat = new DoANLapTrinhWin.ButtonTuyChinh();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,7 +87,7 @@
             this.ucTextBox1.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucTextBox1.Multiline = false;
             this.ucTextBox1.Name = "ucTextBox1";
-            this.ucTextBox1.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.ucTextBox1.Padding = new System.Windows.Forms.Padding(7);
             this.ucTextBox1.PasswordChar = false;
             this.ucTextBox1.Size = new System.Drawing.Size(353, 42);
             this.ucTextBox1.TabIndex = 21;
@@ -116,7 +116,7 @@
             this.ucTextBox2.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucTextBox2.Multiline = false;
             this.ucTextBox2.Name = "ucTextBox2";
-            this.ucTextBox2.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.ucTextBox2.Padding = new System.Windows.Forms.Padding(7);
             this.ucTextBox2.PasswordChar = true;
             this.ucTextBox2.Size = new System.Drawing.Size(353, 42);
             this.ucTextBox2.TabIndex = 21;
@@ -136,7 +136,7 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(497, 175);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(412, 304);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -171,7 +171,7 @@
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(439, 33);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(93, 110);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -194,42 +194,42 @@
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(875, 14);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(67, 65);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 19;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // buttonTuyChinh3
+            // btnMuaHang
             // 
-            this.buttonTuyChinh3.BackColor = System.Drawing.Color.SeaGreen;
-            this.buttonTuyChinh3.FlatAppearance.BorderSize = 0;
-            this.buttonTuyChinh3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTuyChinh3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTuyChinh3.ForeColor = System.Drawing.Color.White;
-            this.buttonTuyChinh3.Location = new System.Drawing.Point(261, 142);
-            this.buttonTuyChinh3.Name = "buttonTuyChinh3";
-            this.buttonTuyChinh3.Size = new System.Drawing.Size(136, 57);
-            this.buttonTuyChinh3.TabIndex = 22;
-            this.buttonTuyChinh3.Text = "Mua hàng";
-            this.buttonTuyChinh3.UseVisualStyleBackColor = false;
-            this.buttonTuyChinh3.Click += new System.EventHandler(this.buttonTuyChinh3_Click);
+            this.btnMuaHang.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnMuaHang.FlatAppearance.BorderSize = 0;
+            this.btnMuaHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMuaHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMuaHang.ForeColor = System.Drawing.Color.White;
+            this.btnMuaHang.Location = new System.Drawing.Point(261, 142);
+            this.btnMuaHang.Name = "btnMuaHang";
+            this.btnMuaHang.Size = new System.Drawing.Size(136, 57);
+            this.btnMuaHang.TabIndex = 22;
+            this.btnMuaHang.Text = "Mua hàng";
+            this.btnMuaHang.UseVisualStyleBackColor = false;
+            this.btnMuaHang.Click += new System.EventHandler(this.buttonTuyChinh3_Click);
             // 
-            // buttonTuyChinh2
+            // btnBanHang
             // 
-            this.buttonTuyChinh2.BackColor = System.Drawing.Color.SeaGreen;
-            this.buttonTuyChinh2.FlatAppearance.BorderSize = 0;
-            this.buttonTuyChinh2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTuyChinh2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTuyChinh2.ForeColor = System.Drawing.Color.White;
-            this.buttonTuyChinh2.Location = new System.Drawing.Point(74, 142);
-            this.buttonTuyChinh2.Name = "buttonTuyChinh2";
-            this.buttonTuyChinh2.Size = new System.Drawing.Size(132, 57);
-            this.buttonTuyChinh2.TabIndex = 21;
-            this.buttonTuyChinh2.Text = "Bán hàng";
-            this.buttonTuyChinh2.UseVisualStyleBackColor = false;
+            this.btnBanHang.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnBanHang.FlatAppearance.BorderSize = 0;
+            this.btnBanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBanHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBanHang.ForeColor = System.Drawing.Color.White;
+            this.btnBanHang.Location = new System.Drawing.Point(74, 142);
+            this.btnBanHang.Name = "btnBanHang";
+            this.btnBanHang.Size = new System.Drawing.Size(132, 57);
+            this.btnBanHang.TabIndex = 21;
+            this.btnBanHang.Text = "Bán hàng";
+            this.btnBanHang.UseVisualStyleBackColor = false;
+            this.btnBanHang.Click += new System.EventHandler(this.btnBanHang_Click_1);
             // 
             // buttonTuyChinh1
             // 
@@ -244,7 +244,6 @@
             this.buttonTuyChinh1.TabIndex = 7;
             this.buttonTuyChinh1.Text = "Đăng nhập";
             this.buttonTuyChinh1.UseVisualStyleBackColor = false;
-            this.buttonTuyChinh1.Click += new System.EventHandler(this.buttonTuyChinh1_Click);
             // 
             // btnThoat
             // 
@@ -270,8 +269,8 @@
             this.ClientSize = new System.Drawing.Size(971, 523);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonTuyChinh3);
-            this.Controls.Add(this.buttonTuyChinh2);
+            this.Controls.Add(this.btnMuaHang);
+            this.Controls.Add(this.btnBanHang);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label3);
@@ -309,8 +308,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private ButtonTuyChinh buttonTuyChinh2;
-        private ButtonTuyChinh buttonTuyChinh3;
+        private ButtonTuyChinh btnBanHang;
+        private ButtonTuyChinh btnMuaHang;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private ButtonTuyChinh btnThoat;

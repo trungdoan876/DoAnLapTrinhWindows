@@ -82,12 +82,11 @@ namespace DoANLapTrinhWin
             }
             catch (Exception ex)
             {
-                // Xử lý ngoại lệ nếu có
                 Console.WriteLine("Error: " + ex.Message);
             }
             finally
             {
-                conn.Close(); // Đóng kết nối sau khi hoàn thành công việc
+                conn.Close();
             }
         }
     }

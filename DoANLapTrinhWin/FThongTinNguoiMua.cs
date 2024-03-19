@@ -15,6 +15,7 @@ namespace DoANLapTrinhWin
         public FThongTinNguoiMua()
         {
             InitializeComponent();
+            moFormCon(new FThongTinChiTiet());
         }
         private Form formcon;
         private void moFormCon(Form form)

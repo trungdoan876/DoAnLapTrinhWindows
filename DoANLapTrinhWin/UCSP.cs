@@ -24,23 +24,12 @@ namespace DoANLapTrinhWin
 
         private void UCSP_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms.OfType<FMuaHang>().Any())
-            {
+            //if (Application.OpenForms.OfType<FMuaHang>().Any())
                 this.Hide(); //an form 1
                 FCTSP formCTSP = new FCTSP();
                 formCTSP.ShowDialog();
                 formCTSP = null;
                 this.Show();
-            }
-            else if (Application.OpenForms.OfType<FTatCaSanPham>().Any())
-            {
-                this.Hide(); //an form 1
-                FCTSPSua formCTSP1 = new FCTSPSua("SP1");
-                formCTSP1.ShowDialog(); 
-                formCTSP1 = null;
-                this.Show();
-            }
         }
-
     }
 }

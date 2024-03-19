@@ -36,13 +36,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.btnThemSP = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelThanSP
@@ -116,7 +114,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -126,22 +123,14 @@
             this.panel1.Size = new System.Drawing.Size(1214, 55);
             this.panel1.TabIndex = 0;
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.btnThemSP);
-            this.panel5.Location = new System.Drawing.Point(531, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(171, 55);
-            this.panel5.TabIndex = 5;
-            // 
             // btnThemSP
             // 
             this.btnThemSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnThemSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemSP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnThemSP.Location = new System.Drawing.Point(-16, -15);
+            this.btnThemSP.Location = new System.Drawing.Point(386, 516);
             this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.Size = new System.Drawing.Size(205, 87);
+            this.btnThemSP.Size = new System.Drawing.Size(189, 67);
             this.btnThemSP.TabIndex = 4;
             this.btnThemSP.Text = "Thêm sản phẩm";
             this.btnThemSP.UseVisualStyleBackColor = false;
@@ -152,7 +141,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1213, 559);
+            this.ClientSize = new System.Drawing.Size(1213, 587);
+            this.Controls.Add(this.btnThemSP);
             this.Controls.Add(this.panelThanSP);
             this.Controls.Add(this.panel1);
             this.Name = "FSanPham";
@@ -163,7 +153,6 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -177,7 +166,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnThemSP;
     }
 }

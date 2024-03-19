@@ -35,7 +35,7 @@
             // 
             this.panelTatCaSP.Location = new System.Drawing.Point(0, -3);
             this.panelTatCaSP.Name = "panelTatCaSP";
-            this.panelTatCaSP.Size = new System.Drawing.Size(912, 454);
+            this.panelTatCaSP.Size = new System.Drawing.Size(995, 421);
             this.panelTatCaSP.TabIndex = 0;
             // 
             // FTatCaSanPham
@@ -43,7 +43,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(911, 450);
+            this.ClientSize = new System.Drawing.Size(996, 418);
             this.Controls.Add(this.panelTatCaSP);
             this.Name = "FTatCaSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -37,18 +37,19 @@ namespace DoANLapTrinhWin
                     string tenSanPham = row["TenSanPham"].ToString();
                     int giaTien = Convert.ToInt32(row["GiaBan"]);
 
-                    UCSP ucSP = new UCSP();
-                    ucSP.lblTenSP.Text = tenSanPham;
-                    ucSP.lblGiaTien.Text = giaTien.ToString() +"VND";
+                    UCSPBan ucSPBan = new UCSPBan();
+                    ucSPBan.lblMaSP.Text = maSanPham;
+                    ucSPBan.lblTenSP.Text = tenSanPham;
+                    ucSPBan.lblGiaTien.Text = giaTien.ToString() +"VND";
 
-                    ucSP.Location = new Point(x, y);
-                    x += ucSP.Width += 5;
-                    if (x == ucSP.Width * 4)
+                    ucSPBan.Location = new Point(x, y);
+                    x += ucSPBan.Width += 5;
+                    if (x == ucSPBan.Width * 3)
                     {
                         x = 0;
-                        y += ucSP.Height + 5;
+                        y += ucSPBan.Height + 5;
                     }
-                    panelTatCaSP.Controls.Add(ucSP);
+                    panelTatCaSP.Controls.Add(ucSPBan);
                 }
             }
             catch (Exception ex)
@@ -57,7 +58,7 @@ namespace DoANLapTrinhWin
             }
             finally
             {
-                conn.Close(); // Đóng kết nối sau khi hoàn thành công việc
+                conn.Close(); 
             }
         }
     }

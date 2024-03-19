@@ -15,6 +15,7 @@ namespace DoANLapTrinhWin
         public FSanPham()
         {
             InitializeComponent();
+            moFormCon(new FTatCaSanPham());
         }
         private Form formcon;
         private void moFormCon(Form form)
@@ -44,7 +45,11 @@ namespace DoANLapTrinhWin
         }
         private void btnThemSP_Click_1(object sender, EventArgs e)
         {
-            moFormCon(new FSanPhamNguoiBan());
+             this.Hide(); //an form 1
+            FSanPhamNguoiBan form2 = new FSanPhamNguoiBan(); // tao doi tuong form 2
+            form2.ShowDialog(); 
+            form2 = null; //tat form2, tuc la form 2 tro ve null
+            this.Show(); 
         }
     }
 }
