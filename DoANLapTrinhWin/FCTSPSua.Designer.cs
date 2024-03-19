@@ -32,20 +32,20 @@
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.ucTextBox8 = new DoANLapTrinhWin.UCTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.ucTextBox1 = new DoANLapTrinhWin.UCTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.ucTextBox2 = new DoANLapTrinhWin.UCTextBox();
-            this.btnThem = new DoANLapTrinhWin.ButtonTuyChinh();
             this.label11 = new System.Windows.Forms.Label();
-            this.ucTextBox6 = new DoANLapTrinhWin.UCTextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.ucTextBox5 = new DoANLapTrinhWin.UCTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.ucTextBox4 = new DoANLapTrinhWin.UCTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ucTextBox3 = new DoANLapTrinhWin.UCTextBox();
+            this.ucTextBox8 = new DoANLapTrinhWin.UCTextBox();
+            this.ucTextBox1 = new DoANLapTrinhWin.UCTextBox();
+            this.ucTextBox2 = new DoANLapTrinhWin.UCTextBox();
+            this.btnThem = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.ucTextBox6 = new DoANLapTrinhWin.UCTextBox();
+            this.ucTextBox5 = new DoANLapTrinhWin.UCTextBox();
+            this.ucTextBox4 = new DoANLapTrinhWin.UCTextBox();
             this.SuspendLayout();
             // 
             // label12
@@ -81,6 +81,85 @@
             this.label13.TabIndex = 233;
             this.label13.Text = "Mô tả sản phẩm";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label2.Location = new System.Drawing.Point(551, 178);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 20);
+            this.label2.TabIndex = 231;
+            this.label2.Text = "Ngành hàng";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label8.Location = new System.Drawing.Point(551, 39);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(110, 20);
+            this.label8.TabIndex = 229;
+            this.label8.Text = "Tên sản phẩm";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label11.Location = new System.Drawing.Point(141, 178);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 20);
+            this.label11.TabIndex = 224;
+            this.label11.Text = "Xuất xứ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label10.Location = new System.Drawing.Point(141, 109);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(108, 20);
+            this.label10.TabIndex = 222;
+            this.label10.Text = "Giá sản phẩm";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label9.Location = new System.Drawing.Point(141, 39);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(105, 20);
+            this.label9.TabIndex = 220;
+            this.label9.Text = "Mã sản phẩm";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label1.Location = new System.Drawing.Point(551, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 20);
+            this.label1.TabIndex = 237;
+            this.label1.Text = "Giá gốc";
+            // 
+            // ucTextBox3
+            // 
+            this.ucTextBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.ucTextBox3.BanKinhKhung = 15;
+            this.ucTextBox3.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucTextBox3.ChumoText = "";
+            this.ucTextBox3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucTextBox3.GachChan = false;
+            this.ucTextBox3.KichThuocKhung = 1;
+            this.ucTextBox3.Location = new System.Drawing.Point(539, 122);
+            this.ucTextBox3.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucTextBox3.Multiline = false;
+            this.ucTextBox3.Name = "ucTextBox3";
+            this.ucTextBox3.Padding = new System.Windows.Forms.Padding(7);
+            this.ucTextBox3.PasswordChar = false;
+            this.ucTextBox3.Size = new System.Drawing.Size(464, 40);
+            this.ucTextBox3.TabIndex = 236;
+            this.ucTextBox3.Texts = "";
+            // 
             // ucTextBox8
             // 
             this.ucTextBox8.BackColor = System.Drawing.SystemColors.Window;
@@ -100,16 +179,6 @@
             this.ucTextBox8.TabIndex = 232;
             this.ucTextBox8.Texts = "";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(551, 182);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 20);
-            this.label2.TabIndex = 231;
-            this.label2.Text = "Ngành hàng";
-            // 
             // ucTextBox1
             // 
             this.ucTextBox1.BackColor = System.Drawing.SystemColors.Window;
@@ -128,16 +197,6 @@
             this.ucTextBox1.Size = new System.Drawing.Size(464, 40);
             this.ucTextBox1.TabIndex = 230;
             this.ucTextBox1.Texts = "";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label8.Location = new System.Drawing.Point(551, 44);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 20);
-            this.label8.TabIndex = 229;
-            this.label8.Text = "Tên sản phẩm";
             // 
             // ucTextBox2
             // 
@@ -163,7 +222,7 @@
             this.btnThem.BackColor = System.Drawing.Color.SeaGreen;
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,16 +233,6 @@
             this.btnThem.TabIndex = 225;
             this.btnThem.Text = "Cập nhật";
             this.btnThem.UseVisualStyleBackColor = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label11.Location = new System.Drawing.Point(141, 182);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 20);
-            this.label11.TabIndex = 224;
-            this.label11.Text = "Xuất xứ";
             // 
             // ucTextBox6
             // 
@@ -204,16 +253,6 @@
             this.ucTextBox6.TabIndex = 223;
             this.ucTextBox6.Texts = "";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label10.Location = new System.Drawing.Point(141, 115);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(108, 20);
-            this.label10.TabIndex = 222;
-            this.label10.Text = "Giá sản phẩm";
-            // 
             // ucTextBox5
             // 
             this.ucTextBox5.BackColor = System.Drawing.SystemColors.Window;
@@ -233,16 +272,6 @@
             this.ucTextBox5.TabIndex = 221;
             this.ucTextBox5.Texts = "";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label9.Location = new System.Drawing.Point(141, 44);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 20);
-            this.label9.TabIndex = 220;
-            this.label9.Text = "Mã sản phẩm";
-            // 
             // ucTextBox4
             // 
             this.ucTextBox4.BackColor = System.Drawing.SystemColors.Window;
@@ -261,35 +290,6 @@
             this.ucTextBox4.Size = new System.Drawing.Size(340, 40);
             this.ucTextBox4.TabIndex = 219;
             this.ucTextBox4.Texts = "";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label1.Location = new System.Drawing.Point(551, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 20);
-            this.label1.TabIndex = 237;
-            this.label1.Text = "Giá gốc";
-            // 
-            // ucTextBox3
-            // 
-            this.ucTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.ucTextBox3.BanKinhKhung = 15;
-            this.ucTextBox3.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucTextBox3.ChumoText = "";
-            this.ucTextBox3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucTextBox3.GachChan = false;
-            this.ucTextBox3.KichThuocKhung = 1;
-            this.ucTextBox3.Location = new System.Drawing.Point(539, 122);
-            this.ucTextBox3.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucTextBox3.Multiline = false;
-            this.ucTextBox3.Name = "ucTextBox3";
-            this.ucTextBox3.Padding = new System.Windows.Forms.Padding(7);
-            this.ucTextBox3.PasswordChar = false;
-            this.ucTextBox3.Size = new System.Drawing.Size(464, 40);
-            this.ucTextBox3.TabIndex = 236;
-            this.ucTextBox3.Texts = "";
             // 
             // FCTSPSua
             // 

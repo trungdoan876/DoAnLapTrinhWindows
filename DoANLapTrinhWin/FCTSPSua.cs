@@ -14,24 +14,21 @@ namespace DoANLapTrinhWin
     public partial class FCTSPSua : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        public string maSanPham;
-        //UCSPBan uCSPBan = new UCSPBan();
         public FCTSPSua(string maSanPham)
         {
             InitializeComponent();
-            this.maSanPham = maSanPham; 
-            ucTextBox4.textBox.Text = maSanPham;
+        }
+        public FCTSPSua(SanPham sp)
+        {
+            InitializeComponent();
+            //this.maSanPham = sp.ma;
+            ucTextBox4.textBox.Text = sp.ma;
+            ucTextBox2.textBox.Text = sp.ten;
+            ucTextBox5.textBox.Text = sp.giaBan.ToString();
         }
         private void FCTSPSua_Load(object sender, EventArgs e)
         {
-            /*try
-            {
-                conn.Open();
-                //string sqlStr = string.Format("SELECT *FROM SanPham WHERE maSanPham ={0}",);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
 
-            }*/
         }
     }
 }

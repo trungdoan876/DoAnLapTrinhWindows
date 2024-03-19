@@ -36,12 +36,10 @@ namespace DoANLapTrinhWin
                     string maSanPham = row["MaSanPham"].ToString();
                     string tenSanPham = row["TenSanPham"].ToString();
                     int giaTien = Convert.ToInt32(row["GiaBan"]);
+                    SanPham sp = new SanPham(maSanPham,tenSanPham,giaTien,"","");
 
-                    UCSPBan ucSPBan = new UCSPBan();
-                    ucSPBan.lblMaSP.Text = maSanPham;
-                    ucSPBan.lblTenSP.Text = tenSanPham;
-                    ucSPBan.lblGiaTien.Text = giaTien.ToString() +"VND";
-
+                    UCSPBan ucSPBan = new UCSPBan(sp);
+                   
                     ucSPBan.Location = new Point(x, y);
                     x += ucSPBan.Width += 5;
                     if (x == ucSPBan.Width * 3)

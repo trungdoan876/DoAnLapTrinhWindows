@@ -181,6 +181,7 @@
     <Compile Include="RadioButtonTuyChinh.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="SanPham.cs" />
     <Compile Include="Taikhoan.cs" />
     <Compile Include="UCSP.cs">
       <SubType>UserControl</SubType>

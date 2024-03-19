@@ -328,7 +328,7 @@
             this.ucHoTenNB.Name = "ucHoTenNB";
             this.ucHoTenNB.Padding = new System.Windows.Forms.Padding(7);
             this.ucHoTenNB.PasswordChar = false;
-            this.ucHoTenNB.Size = new System.Drawing.Size(285, 40);
+            this.ucHoTenNB.Size = new System.Drawing.Size(285, 51);
             this.ucHoTenNB.TabIndex = 170;
             this.ucHoTenNB.Texts = "";
             // 
