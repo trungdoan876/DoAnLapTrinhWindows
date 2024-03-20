@@ -33,13 +33,20 @@ namespace DoANLapTrinhWin
                 int y  = 0;
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
-                    string maSanPham = row["MaSanPham"].ToString();
-                    string tenSanPham = row["TenSanPham"].ToString();
+                    string maSP = row["MaSanPham"].ToString();
+                    string tenSP = row["TenSanPham"].ToString();
                     int giaTien = Convert.ToInt32(row["GiaBan"]);
-                    SanPham sp = new SanPham(maSanPham,tenSanPham,giaTien,"","");
+                    int giaGoc = Convert.ToInt32(row["GiaGoc"]);
+                    string moTaSP = row["MoTaSanPham"].ToString();
+                    string tinhTrang = row["TinhTrang"].ToString();
+                    string nganhHang = row["NganhHang"].ToString();
+                    string xuatXu = row["XuatXu"].ToString();
+                    //string thoiGianSuDung = row["ThoiGianSuDung"].ToString();
+                    DateTime ngayDang = DateTime.Now;
+                    SanPham sp = new SanPham(maSP,tenSP,giaTien,giaGoc,xuatXu,"",ngayDang,moTaSP,nganhHang,tinhTrang,"");
 
                     UCSPBan ucSPBan = new UCSPBan(sp);
-                   
+                    
                     ucSPBan.Location = new Point(x, y);
                     x += ucSPBan.Width += 5;
                     if (x == ucSPBan.Width * 3)

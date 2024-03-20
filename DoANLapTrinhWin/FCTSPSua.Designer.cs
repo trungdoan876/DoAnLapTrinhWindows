@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCTSPSua));
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbboxTinhTrang = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -38,38 +38,40 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ucTextBox3 = new DoANLapTrinhWin.UCTextBox();
-            this.ucTextBox8 = new DoANLapTrinhWin.UCTextBox();
-            this.ucTextBox1 = new DoANLapTrinhWin.UCTextBox();
-            this.ucTextBox2 = new DoANLapTrinhWin.UCTextBox();
-            this.btnThem = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.ucTextBox6 = new DoANLapTrinhWin.UCTextBox();
-            this.ucTextBox5 = new DoANLapTrinhWin.UCTextBox();
-            this.ucTextBox4 = new DoANLapTrinhWin.UCTextBox();
+            this.lblThoiGianSuDung = new System.Windows.Forms.Label();
+            this.uctxtThoiGian = new DoANLapTrinhWin.UCTextBox();
+            this.uctxtGiaGoc = new DoANLapTrinhWin.UCTextBox();
+            this.uctxtMoTa = new DoANLapTrinhWin.UCTextBox();
+            this.uctxtNganhHang = new DoANLapTrinhWin.UCTextBox();
+            this.uctxtTenSP = new DoANLapTrinhWin.UCTextBox();
+            this.btnCapNhat = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.uctxtXuatXu = new DoANLapTrinhWin.UCTextBox();
+            this.uctxtGiaSP = new DoANLapTrinhWin.UCTextBox();
+            this.uctxtMaSP = new DoANLapTrinhWin.UCTextBox();
             this.SuspendLayout();
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label12.Location = new System.Drawing.Point(141, 244);
+            this.label12.Location = new System.Drawing.Point(141, 317);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 20);
             this.label12.TabIndex = 235;
             this.label12.Text = "Tình trạng";
             // 
-            // comboBox1
+            // cbboxTinhTrang
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbboxTinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbboxTinhTrang.FormattingEnabled = true;
+            this.cbboxTinhTrang.Items.AddRange(new object[] {
             "10%",
             "20%",
             "30%"});
-            this.comboBox1.Location = new System.Drawing.Point(129, 258);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(340, 37);
-            this.comboBox1.TabIndex = 234;
+            this.cbboxTinhTrang.Location = new System.Drawing.Point(129, 331);
+            this.cbboxTinhTrang.Name = "cbboxTinhTrang";
+            this.cbboxTinhTrang.Size = new System.Drawing.Size(340, 37);
+            this.cbboxTinhTrang.TabIndex = 234;
             // 
             // label13
             // 
@@ -141,155 +143,184 @@
             this.label1.TabIndex = 237;
             this.label1.Text = "Giá gốc";
             // 
-            // ucTextBox3
+            // lblThoiGianSuDung
             // 
-            this.ucTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.ucTextBox3.BanKinhKhung = 15;
-            this.ucTextBox3.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucTextBox3.ChumoText = "";
-            this.ucTextBox3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucTextBox3.GachChan = false;
-            this.ucTextBox3.KichThuocKhung = 1;
-            this.ucTextBox3.Location = new System.Drawing.Point(539, 122);
-            this.ucTextBox3.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucTextBox3.Multiline = false;
-            this.ucTextBox3.Name = "ucTextBox3";
-            this.ucTextBox3.Padding = new System.Windows.Forms.Padding(7);
-            this.ucTextBox3.PasswordChar = false;
-            this.ucTextBox3.Size = new System.Drawing.Size(464, 40);
-            this.ucTextBox3.TabIndex = 236;
-            this.ucTextBox3.Texts = "";
+            this.lblThoiGianSuDung.AutoSize = true;
+            this.lblThoiGianSuDung.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lblThoiGianSuDung.Location = new System.Drawing.Point(141, 244);
+            this.lblThoiGianSuDung.Name = "lblThoiGianSuDung";
+            this.lblThoiGianSuDung.Size = new System.Drawing.Size(134, 20);
+            this.lblThoiGianSuDung.TabIndex = 239;
+            this.lblThoiGianSuDung.Text = "Thời gian sử dụng";
             // 
-            // ucTextBox8
+            // uctxtThoiGian
             // 
-            this.ucTextBox8.BackColor = System.Drawing.SystemColors.Window;
-            this.ucTextBox8.BanKinhKhung = 15;
-            this.ucTextBox8.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucTextBox8.ChumoText = "";
-            this.ucTextBox8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucTextBox8.GachChan = false;
-            this.ucTextBox8.KichThuocKhung = 1;
-            this.ucTextBox8.Location = new System.Drawing.Point(539, 255);
-            this.ucTextBox8.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucTextBox8.Multiline = false;
-            this.ucTextBox8.Name = "ucTextBox8";
-            this.ucTextBox8.Padding = new System.Windows.Forms.Padding(7);
-            this.ucTextBox8.PasswordChar = false;
-            this.ucTextBox8.Size = new System.Drawing.Size(464, 116);
-            this.ucTextBox8.TabIndex = 232;
-            this.ucTextBox8.Texts = "";
+            this.uctxtThoiGian.BackColor = System.Drawing.SystemColors.Window;
+            this.uctxtThoiGian.BanKinhKhung = 15;
+            this.uctxtThoiGian.ChumoColor = System.Drawing.Color.DarkGray;
+            this.uctxtThoiGian.ChumoText = "";
+            this.uctxtThoiGian.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.uctxtThoiGian.GachChan = false;
+            this.uctxtThoiGian.KichThuocKhung = 1;
+            this.uctxtThoiGian.Location = new System.Drawing.Point(129, 255);
+            this.uctxtThoiGian.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.uctxtThoiGian.Multiline = false;
+            this.uctxtThoiGian.Name = "uctxtThoiGian";
+            this.uctxtThoiGian.Padding = new System.Windows.Forms.Padding(7);
+            this.uctxtThoiGian.PasswordChar = false;
+            this.uctxtThoiGian.Size = new System.Drawing.Size(340, 40);
+            this.uctxtThoiGian.TabIndex = 238;
+            this.uctxtThoiGian.Texts = "";
             // 
-            // ucTextBox1
+            // uctxtGiaGoc
             // 
-            this.ucTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.ucTextBox1.BanKinhKhung = 15;
-            this.ucTextBox1.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucTextBox1.ChumoText = "";
-            this.ucTextBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucTextBox1.GachChan = false;
-            this.ucTextBox1.KichThuocKhung = 1;
-            this.ucTextBox1.Location = new System.Drawing.Point(539, 190);
-            this.ucTextBox1.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucTextBox1.Multiline = false;
-            this.ucTextBox1.Name = "ucTextBox1";
-            this.ucTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.ucTextBox1.PasswordChar = false;
-            this.ucTextBox1.Size = new System.Drawing.Size(464, 40);
-            this.ucTextBox1.TabIndex = 230;
-            this.ucTextBox1.Texts = "";
+            this.uctxtGiaGoc.BackColor = System.Drawing.SystemColors.Window;
+            this.uctxtGiaGoc.BanKinhKhung = 15;
+            this.uctxtGiaGoc.ChumoColor = System.Drawing.Color.DarkGray;
+            this.uctxtGiaGoc.ChumoText = "";
+            this.uctxtGiaGoc.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.uctxtGiaGoc.GachChan = false;
+            this.uctxtGiaGoc.KichThuocKhung = 1;
+            this.uctxtGiaGoc.Location = new System.Drawing.Point(539, 122);
+            this.uctxtGiaGoc.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.uctxtGiaGoc.Multiline = false;
+            this.uctxtGiaGoc.Name = "uctxtGiaGoc";
+            this.uctxtGiaGoc.Padding = new System.Windows.Forms.Padding(7);
+            this.uctxtGiaGoc.PasswordChar = false;
+            this.uctxtGiaGoc.Size = new System.Drawing.Size(464, 40);
+            this.uctxtGiaGoc.TabIndex = 236;
+            this.uctxtGiaGoc.Texts = "";
             // 
-            // ucTextBox2
+            // uctxtMoTa
             // 
-            this.ucTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.ucTextBox2.BanKinhKhung = 15;
-            this.ucTextBox2.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucTextBox2.ChumoText = "";
-            this.ucTextBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucTextBox2.GachChan = false;
-            this.ucTextBox2.KichThuocKhung = 1;
-            this.ucTextBox2.Location = new System.Drawing.Point(539, 52);
-            this.ucTextBox2.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucTextBox2.Multiline = false;
-            this.ucTextBox2.Name = "ucTextBox2";
-            this.ucTextBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.ucTextBox2.PasswordChar = false;
-            this.ucTextBox2.Size = new System.Drawing.Size(464, 40);
-            this.ucTextBox2.TabIndex = 228;
-            this.ucTextBox2.Texts = "";
+            this.uctxtMoTa.BackColor = System.Drawing.SystemColors.Window;
+            this.uctxtMoTa.BanKinhKhung = 15;
+            this.uctxtMoTa.ChumoColor = System.Drawing.Color.DarkGray;
+            this.uctxtMoTa.ChumoText = "";
+            this.uctxtMoTa.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.uctxtMoTa.GachChan = false;
+            this.uctxtMoTa.KichThuocKhung = 1;
+            this.uctxtMoTa.Location = new System.Drawing.Point(539, 255);
+            this.uctxtMoTa.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.uctxtMoTa.Multiline = true;
+            this.uctxtMoTa.Name = "uctxtMoTa";
+            this.uctxtMoTa.Padding = new System.Windows.Forms.Padding(7);
+            this.uctxtMoTa.PasswordChar = false;
+            this.uctxtMoTa.Size = new System.Drawing.Size(464, 152);
+            this.uctxtMoTa.TabIndex = 232;
+            this.uctxtMoTa.Texts = "";
             // 
-            // btnThem
+            // uctxtNganhHang
             // 
-            this.btnThem.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(427, 407);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(172, 63);
-            this.btnThem.TabIndex = 225;
-            this.btnThem.Text = "Cập nhật";
-            this.btnThem.UseVisualStyleBackColor = false;
+            this.uctxtNganhHang.BackColor = System.Drawing.SystemColors.Window;
+            this.uctxtNganhHang.BanKinhKhung = 15;
+            this.uctxtNganhHang.ChumoColor = System.Drawing.Color.DarkGray;
+            this.uctxtNganhHang.ChumoText = "";
+            this.uctxtNganhHang.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.uctxtNganhHang.GachChan = false;
+            this.uctxtNganhHang.KichThuocKhung = 1;
+            this.uctxtNganhHang.Location = new System.Drawing.Point(539, 190);
+            this.uctxtNganhHang.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.uctxtNganhHang.Multiline = false;
+            this.uctxtNganhHang.Name = "uctxtNganhHang";
+            this.uctxtNganhHang.Padding = new System.Windows.Forms.Padding(7);
+            this.uctxtNganhHang.PasswordChar = false;
+            this.uctxtNganhHang.Size = new System.Drawing.Size(464, 40);
+            this.uctxtNganhHang.TabIndex = 230;
+            this.uctxtNganhHang.Texts = "";
             // 
-            // ucTextBox6
+            // uctxtTenSP
             // 
-            this.ucTextBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.ucTextBox6.BanKinhKhung = 15;
-            this.ucTextBox6.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucTextBox6.ChumoText = "";
-            this.ucTextBox6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucTextBox6.GachChan = false;
-            this.ucTextBox6.KichThuocKhung = 1;
-            this.ucTextBox6.Location = new System.Drawing.Point(129, 189);
-            this.ucTextBox6.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucTextBox6.Multiline = false;
-            this.ucTextBox6.Name = "ucTextBox6";
-            this.ucTextBox6.Padding = new System.Windows.Forms.Padding(7);
-            this.ucTextBox6.PasswordChar = false;
-            this.ucTextBox6.Size = new System.Drawing.Size(340, 40);
-            this.ucTextBox6.TabIndex = 223;
-            this.ucTextBox6.Texts = "";
+            this.uctxtTenSP.BackColor = System.Drawing.SystemColors.Window;
+            this.uctxtTenSP.BanKinhKhung = 15;
+            this.uctxtTenSP.ChumoColor = System.Drawing.Color.DarkGray;
+            this.uctxtTenSP.ChumoText = "";
+            this.uctxtTenSP.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.uctxtTenSP.GachChan = false;
+            this.uctxtTenSP.KichThuocKhung = 1;
+            this.uctxtTenSP.Location = new System.Drawing.Point(539, 52);
+            this.uctxtTenSP.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.uctxtTenSP.Multiline = false;
+            this.uctxtTenSP.Name = "uctxtTenSP";
+            this.uctxtTenSP.Padding = new System.Windows.Forms.Padding(7);
+            this.uctxtTenSP.PasswordChar = false;
+            this.uctxtTenSP.Size = new System.Drawing.Size(464, 40);
+            this.uctxtTenSP.TabIndex = 228;
+            this.uctxtTenSP.Texts = "";
             // 
-            // ucTextBox5
+            // btnCapNhat
             // 
-            this.ucTextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.ucTextBox5.BanKinhKhung = 15;
-            this.ucTextBox5.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucTextBox5.ChumoText = "";
-            this.ucTextBox5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucTextBox5.GachChan = false;
-            this.ucTextBox5.KichThuocKhung = 1;
-            this.ucTextBox5.Location = new System.Drawing.Point(129, 122);
-            this.ucTextBox5.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucTextBox5.Multiline = false;
-            this.ucTextBox5.Name = "ucTextBox5";
-            this.ucTextBox5.Padding = new System.Windows.Forms.Padding(7);
-            this.ucTextBox5.PasswordChar = false;
-            this.ucTextBox5.Size = new System.Drawing.Size(340, 40);
-            this.ucTextBox5.TabIndex = 221;
-            this.ucTextBox5.Texts = "";
+            this.btnCapNhat.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnCapNhat.FlatAppearance.BorderSize = 0;
+            this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCapNhat.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.ForeColor = System.Drawing.Color.White;
+            this.btnCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btnCapNhat.Image")));
+            this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCapNhat.Location = new System.Drawing.Point(212, 396);
+            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(172, 63);
+            this.btnCapNhat.TabIndex = 225;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = false;
             // 
-            // ucTextBox4
+            // uctxtXuatXu
             // 
-            this.ucTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.ucTextBox4.BanKinhKhung = 15;
-            this.ucTextBox4.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucTextBox4.ChumoText = "";
-            this.ucTextBox4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucTextBox4.GachChan = false;
-            this.ucTextBox4.KichThuocKhung = 1;
-            this.ucTextBox4.Location = new System.Drawing.Point(129, 52);
-            this.ucTextBox4.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucTextBox4.Multiline = false;
-            this.ucTextBox4.Name = "ucTextBox4";
-            this.ucTextBox4.Padding = new System.Windows.Forms.Padding(7);
-            this.ucTextBox4.PasswordChar = false;
-            this.ucTextBox4.Size = new System.Drawing.Size(340, 40);
-            this.ucTextBox4.TabIndex = 219;
-            this.ucTextBox4.Texts = "";
+            this.uctxtXuatXu.BackColor = System.Drawing.SystemColors.Window;
+            this.uctxtXuatXu.BanKinhKhung = 15;
+            this.uctxtXuatXu.ChumoColor = System.Drawing.Color.DarkGray;
+            this.uctxtXuatXu.ChumoText = "";
+            this.uctxtXuatXu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.uctxtXuatXu.GachChan = false;
+            this.uctxtXuatXu.KichThuocKhung = 1;
+            this.uctxtXuatXu.Location = new System.Drawing.Point(129, 189);
+            this.uctxtXuatXu.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.uctxtXuatXu.Multiline = false;
+            this.uctxtXuatXu.Name = "uctxtXuatXu";
+            this.uctxtXuatXu.Padding = new System.Windows.Forms.Padding(7);
+            this.uctxtXuatXu.PasswordChar = false;
+            this.uctxtXuatXu.Size = new System.Drawing.Size(340, 40);
+            this.uctxtXuatXu.TabIndex = 223;
+            this.uctxtXuatXu.Texts = "";
+            // 
+            // uctxtGiaSP
+            // 
+            this.uctxtGiaSP.BackColor = System.Drawing.SystemColors.Window;
+            this.uctxtGiaSP.BanKinhKhung = 15;
+            this.uctxtGiaSP.ChumoColor = System.Drawing.Color.DarkGray;
+            this.uctxtGiaSP.ChumoText = "";
+            this.uctxtGiaSP.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.uctxtGiaSP.GachChan = false;
+            this.uctxtGiaSP.KichThuocKhung = 1;
+            this.uctxtGiaSP.Location = new System.Drawing.Point(129, 122);
+            this.uctxtGiaSP.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.uctxtGiaSP.Multiline = false;
+            this.uctxtGiaSP.Name = "uctxtGiaSP";
+            this.uctxtGiaSP.Padding = new System.Windows.Forms.Padding(7);
+            this.uctxtGiaSP.PasswordChar = false;
+            this.uctxtGiaSP.Size = new System.Drawing.Size(340, 40);
+            this.uctxtGiaSP.TabIndex = 221;
+            this.uctxtGiaSP.Texts = "";
+            // 
+            // uctxtMaSP
+            // 
+            this.uctxtMaSP.BackColor = System.Drawing.SystemColors.Window;
+            this.uctxtMaSP.BanKinhKhung = 15;
+            this.uctxtMaSP.ChumoColor = System.Drawing.Color.DarkGray;
+            this.uctxtMaSP.ChumoText = "";
+            this.uctxtMaSP.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.uctxtMaSP.GachChan = false;
+            this.uctxtMaSP.KichThuocKhung = 1;
+            this.uctxtMaSP.Location = new System.Drawing.Point(129, 52);
+            this.uctxtMaSP.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.uctxtMaSP.Multiline = false;
+            this.uctxtMaSP.Name = "uctxtMaSP";
+            this.uctxtMaSP.Padding = new System.Windows.Forms.Padding(7);
+            this.uctxtMaSP.PasswordChar = false;
+            this.uctxtMaSP.Size = new System.Drawing.Size(340, 40);
+            this.uctxtMaSP.TabIndex = 219;
+            this.uctxtMaSP.Texts = "";
             // 
             // FCTSPSua
             // 
@@ -297,23 +328,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1073, 510);
+            this.Controls.Add(this.lblThoiGianSuDung);
+            this.Controls.Add(this.uctxtThoiGian);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ucTextBox3);
+            this.Controls.Add(this.uctxtGiaGoc);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbboxTinhTrang);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.ucTextBox8);
+            this.Controls.Add(this.uctxtMoTa);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.ucTextBox1);
+            this.Controls.Add(this.uctxtNganhHang);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.ucTextBox2);
-            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.uctxtTenSP);
+            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.ucTextBox6);
+            this.Controls.Add(this.uctxtXuatXu);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.ucTextBox5);
+            this.Controls.Add(this.uctxtGiaSP);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.ucTextBox4);
+            this.Controls.Add(this.uctxtMaSP);
             this.Name = "FCTSPSua";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCTSPSua";
@@ -326,21 +359,23 @@
         #endregion
 
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbboxTinhTrang;
         private System.Windows.Forms.Label label13;
-        private UCTextBox ucTextBox8;
+        private UCTextBox uctxtMoTa;
         private System.Windows.Forms.Label label2;
-        private UCTextBox ucTextBox1;
+        private UCTextBox uctxtNganhHang;
         private System.Windows.Forms.Label label8;
-        private UCTextBox ucTextBox2;
-        private ButtonTuyChinh btnThem;
+        private UCTextBox uctxtTenSP;
+        private ButtonTuyChinh btnCapNhat;
         private System.Windows.Forms.Label label11;
-        private UCTextBox ucTextBox6;
+        private UCTextBox uctxtXuatXu;
         private System.Windows.Forms.Label label10;
-        private UCTextBox ucTextBox5;
+        private UCTextBox uctxtGiaSP;
         private System.Windows.Forms.Label label9;
-        private UCTextBox ucTextBox4;
+        private UCTextBox uctxtMaSP;
         private System.Windows.Forms.Label label1;
-        private UCTextBox ucTextBox3;
+        private UCTextBox uctxtGiaGoc;
+        private System.Windows.Forms.Label lblThoiGianSuDung;
+        private UCTextBox uctxtThoiGian;
     }
 }

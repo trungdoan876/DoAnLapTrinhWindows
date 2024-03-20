@@ -176,6 +176,8 @@
     </Compile>
     <Compile Include="MenuRenderer.cs" />
     <Compile Include="MoreMenu.cs" />
+    <Compile Include="NguoiBan.cs" />
+    <Compile Include="NguoiMua.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RadioButtonTuyChinh.cs">
@@ -283,6 +285,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HinhAnh\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

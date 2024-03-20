@@ -12,7 +12,6 @@ namespace DoANLapTrinhWin
 {
     public partial class UCSPBan : UserControl
     {
-        //public string maSanPham;
         SanPham sp;
         public UCSPBan()
         {
@@ -22,11 +21,9 @@ namespace DoANLapTrinhWin
         {
             this.sp = sp;
             InitializeComponent();
-
-
-            this.lblMaSP.Text = sp.ma;
-            this.lblTenSP.Text = sp.ten;
-            this.lblGiaTien.Text = sp.giaBan.ToString() + "VND";
+            this.lblMaSP.Text = sp.MaSP;
+            this.lblTenSP.Text = sp.TenSP;
+            this.lblGiaTien.Text = sp.GiaBan.ToString() + "VND";
         }
         private void UCSPBan_Click(object sender, EventArgs e)
         {

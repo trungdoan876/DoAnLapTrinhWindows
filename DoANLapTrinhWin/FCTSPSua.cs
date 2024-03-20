@@ -21,10 +21,15 @@ namespace DoANLapTrinhWin
         public FCTSPSua(SanPham sp)
         {
             InitializeComponent();
-            //this.maSanPham = sp.ma;
-            ucTextBox4.textBox.Text = sp.ma;
-            ucTextBox2.textBox.Text = sp.ten;
-            ucTextBox5.textBox.Text = sp.giaBan.ToString();
+            uctxtMaSP.textBox.Text = sp.MaSP;
+            uctxtTenSP.textBox.Text = sp.TenSP;
+            uctxtGiaSP.textBox.Text = sp.GiaBan.ToString();
+            uctxtGiaGoc.textBox.Text = sp.GiaGoc.ToString();
+            uctxtXuatXu.textBox.Text = sp.XuatXu;
+            uctxtNganhHang.textBox.Text = sp.NganhHang;
+            uctxtMoTa.textBox.Text = sp.MoTaSanPham;
+            uctxtThoiGian.textBox.Text = sp.ThoiGianDaSuDung;
+            cbboxTinhTrang.Text = sp.TinhTrang;
         }
         private void FCTSPSua_Load(object sender, EventArgs e)
         {
