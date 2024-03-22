@@ -33,14 +33,12 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.ucTextBox6 = new DoANLapTrinhWin.UCTextBox();
-            this.dropdownMenu1 = new DoANLapTrinhWin.DropdownMenu(this.components);
             this.thanhToanKhiNhanHangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chuyenKhoanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ghiNoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonTuyChinh1 = new DoANLapTrinhWin.ButtonTuyChinh();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.dropdownMenu1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,42 +84,7 @@
             this.ucTextBox6.TabIndex = 60;
             this.ucTextBox6.Texts = "";
             // 
-            // dropdownMenu1
-            // 
-            this.dropdownMenu1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.dropdownMenu1.IsMainMenu = false;
-            this.dropdownMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thanhToanKhiNhanHangToolStripMenuItem,
-            this.chuyenKhoanToolStripMenuItem,
-            this.ghiNoToolStripMenuItem});
-            this.dropdownMenu1.MenuItemHeight = 25;
-            this.dropdownMenu1.MenuItemTextColor = System.Drawing.Color.DimGray;
-            this.dropdownMenu1.Name = "dropdownMenu1";
-            this.dropdownMenu1.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
-            this.dropdownMenu1.Size = new System.Drawing.Size(372, 118);
-            this.dropdownMenu1.Opening += new System.ComponentModel.CancelEventHandler(this.dropdownMenu1_Opening);
-            // 
-            // thanhToanKhiNhanHangToolStripMenuItem
-            // 
-            this.thanhToanKhiNhanHangToolStripMenuItem.Name = "thanhToanKhiNhanHangToolStripMenuItem";
-            this.thanhToanKhiNhanHangToolStripMenuItem.Size = new System.Drawing.Size(371, 38);
-            this.thanhToanKhiNhanHangToolStripMenuItem.Text = "Thanh toán khi nhận hàng";
-            // 
-            // chuyenKhoanToolStripMenuItem
-            // 
-            this.chuyenKhoanToolStripMenuItem.Name = "chuyenKhoanToolStripMenuItem";
-            this.chuyenKhoanToolStripMenuItem.Size = new System.Drawing.Size(371, 38);
-            this.chuyenKhoanToolStripMenuItem.Text = "Chuyển khoản";
-            this.chuyenKhoanToolStripMenuItem.Click += new System.EventHandler(this.chuyenKhoanToolStripMenuItem_Click);
-            // 
-            // ghiNoToolStripMenuItem
-            // 
-            this.ghiNoToolStripMenuItem.Name = "ghiNoToolStripMenuItem";
-            this.ghiNoToolStripMenuItem.Size = new System.Drawing.Size(371, 38);
-            this.ghiNoToolStripMenuItem.Text = "Ghi nợ";
-            // 
-            // pictureBox1
-            // 
+          
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(883, 403);
             this.pictureBox1.Name = "pictureBox1";
@@ -162,7 +125,6 @@
             this.Name = "FGioHang";
             this.Text = "FGioHang";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.dropdownMenu1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -172,7 +134,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private DropdownMenu dropdownMenu1;
         private System.Windows.Forms.ToolStripMenuItem thanhToanKhiNhanHangToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chuyenKhoanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ghiNoToolStripMenuItem;

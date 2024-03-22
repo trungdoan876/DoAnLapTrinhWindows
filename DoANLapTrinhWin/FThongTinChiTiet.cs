@@ -30,8 +30,8 @@ namespace DoANLapTrinhWin
                 if (docDuLieu.Read())
                 {
                     // Đưa dữ liệu vào TextBox
-                    ucMaTaiKhoan.textBox.Text = docDuLieu["MaKhachHang"].ToString();
-                    ucHoTen.textBox.Text = docDuLieu["TenNguoiMua"].ToString();
+                    ucMaTaiKhoan.textBox.Text = docDuLieu["MaKH"].ToString();
+                    ucHoTen.textBox.Text = docDuLieu["TenKH"].ToString();
                     ucGioiTinh.textBox.Text = docDuLieu["GioiTinh"].ToString();
                     ucNgaySinh.textBox.Text = docDuLieu["NgaySinh"].ToString();
                     ucCCCD.textBox.Text = docDuLieu["MaDinhDanh"].ToString();

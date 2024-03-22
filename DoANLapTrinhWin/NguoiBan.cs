@@ -7,30 +7,15 @@ using System.Threading.Tasks;
 
 namespace DoANLapTrinhWin
 {
-    public class NguoiBan
+     class NguoiBan : Nguoi
     {
-        private string tenTaiKhoan;
-        private string maNB;
-        private string Ten;
-        private string SDT;
-        private DateTime NgaySinh;
-        private string gioiTinh;
-        private string CCCD;
-        private string diaChi;
         private string moTaShop;
-        private string eMail;
-        public NguoiBan (string tenTaiKhoan, string maNB, string Ten,string SDT,DateTime NgaySinh,string gioiTinh, string CCCD, string diaChi,string moTaShop,string eMail) 
-        {
-            this.tenTaiKhoan = tenTaiKhoan;
-            this.maNB = maNB;
-            this.Ten = Ten;
-            this.SDT = SDT;
-            this.NgaySinh = NgaySinh;
-            this.gioiTinh = gioiTinh;
-            this.CCCD = CCCD;
-            this.diaChi = diaChi;
-            this.moTaShop  = moTaShop;
-            this.eMail = eMail;
-        }
-    }
+        public NguoiBan(string tenTaiKhoan, string ma, string Ten, string SDT, DateTime NgaySinh, string gioiTinh, string CCCD, string diaChi, string eMail, string moTaShop)
+                : base(tenTaiKhoan, ma, Ten, SDT, NgaySinh, gioiTinh, CCCD, diaChi, eMail)
+         {
+                // Thuộc tính không được kế thừa từ lớp Nguoi
+                this.moTaShop = moTaShop;
+         }
+     }
+
 }

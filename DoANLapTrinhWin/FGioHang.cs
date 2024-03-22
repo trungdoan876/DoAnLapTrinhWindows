@@ -41,7 +41,7 @@ namespace DoANLapTrinhWin
 
         private void buttonTuyChinh1_Click(object sender, EventArgs e)
         {
-            dropdownMenu1.Show(buttonTuyChinh1, buttonTuyChinh1.Width, 0);
+
         }
 
       
