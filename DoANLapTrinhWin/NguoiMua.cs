@@ -29,6 +29,5 @@ namespace DoANLapTrinhWin
             this.diaChi = diaChi;
             this.eMail = eMail;
         }
-
     }
 }
