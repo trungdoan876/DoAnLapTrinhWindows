@@ -35,15 +35,16 @@ namespace DoANLapTrinhWin
                 {
                     string maSP = row["MaSanPham"].ToString();
                     string tenSP = row["TenSanPham"].ToString();
-                    int giaTien = Convert.ToInt32(row["GiaBan"]);
-                    int giaGoc = Convert.ToInt32(row["GiaGoc"]);
+                    string giaTien = row["GiaBan"].ToString();
+                    string giaGoc = row["GiaGoc"].ToString();
                     string moTaSP = row["MoTaSanPham"].ToString();
                     string tinhTrang = row["TinhTrang"].ToString();
                     string nganhHang = row["NganhHang"].ToString();
                     string xuatXu = row["XuatXu"].ToString();
+                    string diaChi = row["DiaChi"].ToString() ;
                     //string thoiGianSuDung = row["ThoiGianSuDung"].ToString();
                     DateTime ngayDang = DateTime.Now;
-                    SanPham sp = new SanPham(maSP,tenSP,giaTien,giaGoc,xuatXu,"",ngayDang,moTaSP,nganhHang,tinhTrang,"");
+                    SanPham sp = new SanPham(maSP,tenSP,giaTien,giaGoc,xuatXu,"",ngayDang,moTaSP,nganhHang,tinhTrang,"", diaChi);
 
                     UCSPBan ucSPBan = new UCSPBan(sp);
                     

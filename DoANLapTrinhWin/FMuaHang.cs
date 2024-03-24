@@ -47,11 +47,15 @@ namespace DoANLapTrinhWin
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
                     string tenSanPham = row["TenSanPham"].ToString();
-                    int giaTien = Convert.ToInt32(row["GiaBan"]);
+                    string giaBan = "đ" + row["GiaBan"].ToString() ;
+                    string  giaGoc = "đ" + row["GiaGoc"].ToString();
+                    string diaChi = row["DiaChi"].ToString();
 
                     UCSP ucSP = new UCSP();
                     ucSP.lblTenSP.Text = tenSanPham;
-                    ucSP.lblGiaTien.Text = giaTien.ToString() + "VND";
+                    ucSP.lblGiaBan.Text = giaBan;
+                    ucSP.lblGiaGoc.Text = giaGoc;
+                    ucSP.lblDiaChi.Text = diaChi;
 
                     ucSP.Location = new Point(x, y);
                     x += ucSP.Width += 5;
@@ -72,6 +76,38 @@ namespace DoANLapTrinhWin
                 conn.Close();
             }
         }
+        bool sidebarExpand = true;
+
+        private void sidebarTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                // neu mo rong panelMenu
+                panelBoLoc.Width -= 10;
+                if (panelBoLoc.Width == panelBoLoc.MinimumSize.Width)
+                {
+                    sidebarExpand = false;
+                    sidebarTimer.Stop();
+                   
+                }
+            }
+            else
+            {
+                panelBoLoc.Width += 10;
+                if (panelBoLoc.Width == panelBoLoc.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    sidebarTimer.Stop();
+                }
+            }
+        }
+
+        private void btnBoLoc_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+ 
     }
     
     

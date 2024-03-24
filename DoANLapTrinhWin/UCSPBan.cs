@@ -23,7 +23,7 @@ namespace DoANLapTrinhWin
             InitializeComponent();
             this.lblMaSP.Text = sp.MaSP;
             this.lblTenSP.Text = sp.TenSP;
-            this.lblGiaTien.Text = sp.GiaBan.ToString() + "VND";
+            this.lblGiaTien.Text = sp.GiaBan + "VND";
         }
         private void UCSPBan_Click(object sender, EventArgs e)
         {

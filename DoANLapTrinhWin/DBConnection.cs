@@ -13,7 +13,8 @@ namespace DoANLapTrinhWin
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public DBConnection() { }
-        //cai load doan nay lam gi z
+        //cai load doan nay lam gi z\
+        //ai biet dau nay 
         public DataTable Load(string sqlStr)
         {
             try
