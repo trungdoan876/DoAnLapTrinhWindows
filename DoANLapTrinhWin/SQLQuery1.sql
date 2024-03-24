@@ -1,4 +1,4 @@
-﻿DROP TABLE NguoiMua
+﻿--(localdb)\mssqllocaldb
 CREATE TABLE SanPham (
 	Hinh varbinary(max),
 	MaSanPham nchar(10) PRIMARY KEY,
@@ -18,39 +18,42 @@ INSERT INTO SanPham VALUES (null,'SP2',N'Son dưỡng',90000,150000,N'Việt Nam
 INSERT INTO SanPham VALUES (null, 'SP3',N'Máy tính',20000000 ,10000000,N'Thái Lan', N'5 tháng',GETDATE(),N'Bề mặt của máy thường làm từ nhựa, kim loại hoặc hợp kim nhôm, tạo cảm giác chắc chắn và sang trọng. Trên mặt trước của máy, bạn thường sẽ thấy các cổng kết nối như cổng USB, cổng âm thanh, và có thể một ổ đĩa quang để đọc đĩa CD/DVD. Màn hình hiển thị thông tin và các phím bấm để tương tác cũng là một phần quan trọng của máy tính.',N'Học tập','90%','NB02')
 Select * from SanPham
 GO
+DROP TABLE NguoiBan
 CREATE TABLE NguoiBan
 (
 	TenTaiKhoan Nchar(100),
 	MatKhau nchar(100),
-    MaNguoiBan NCHAR(10) PRIMARY KEY,
+    MaNguoiBan NCHAR(10),
     Ten NVARCHAR(100),
-    SDT CHAR(20),
+    SDT char(10),
     NgaySinh DATE,
     GioiTinh NVARCHAR(10),
-    CMNDorCCCD char(30),
+    CCCD char(20),
     DiaChi NVARCHAR(100),
     Email NVARCHAR(100),
     MoTaShop NVARCHAR(1000),
-    Hinh varbinary(max)
+    Hinh varbinary(max),
+	PRIMARY KEY(TenTaiKhoan,MaNguoiBan)
 );
 Select * from NguoiBan
 
-INSERT INTO NguoiBan VALUES('Nb1','123','NB01', N'Nguyễn Văn A', '093546342', '1999-12-10', N'Nam', 048304000448, N'TPHCM', null, N'Cửa hàng có một loạt các sản phẩm từ các thương hiệu nổi tiếng đến những nhãn hiệu độc lập, mang đến sự đa dạng và lựa chọn cho khách hàng. Bạn có thể tìm thấy từ trang phục hàng ngày đến trang phục dành cho các dịp đặc biệt, từ trang phục công sở đến trang phục dạo phố.', null);
-INSERT INTO NguoiBan VALUES('Nb2','123','NB02', N'Nguyễn Văn B', '093824641', '1999-12-10', N'Nữ', 048304000498, N'TPHCM', null, N'Ở đây bạn sẽ tìm thấy đủ loại đồ ăn vặt từ khô, chua, ngọt đến mặn, đáp ứng mọi sở thích và khẩu vị của khách hàng. Từ các loại snack truyền thống đến những món ăn vặt mang hơi hướng hiện đại và sáng tạo, có đủ để làm hài lòng cả những người khó tính nhất.', null);
-
-CREATE TABLE KhachHang
+INSERT INTO NguoiBan VALUES('Nb1','123','NB01', N'Nguyễn Văn A', 093546342, '1999-12-10', N'Nam', 048304000448, N'TPHCM', null, N'Cửa hàng có một loạt các sản phẩm từ các thương hiệu nổi tiếng đến những nhãn hiệu độc lập, mang đến sự đa dạng và lựa chọn cho khách hàng. Bạn có thể tìm thấy từ trang phục hàng ngày đến trang phục dành cho các dịp đặc biệt, từ trang phục công sở đến trang phục dạo phố.', null);
+INSERT INTO NguoiBan VALUES('Nb2','123','NB02', N'Nguyễn Văn B', 093824641, '1999-12-10', N'Nữ', 048304000498, N'TPHCM', null, N'Ở đây bạn sẽ tìm thấy đủ loại đồ ăn vặt từ khô, chua, ngọt đến mặn, đáp ứng mọi sở thích và khẩu vị của khách hàng. Từ các loại snack truyền thống đến những món ăn vặt mang hơi hướng hiện đại và sáng tạo, có đủ để làm hài lòng cả những người khó tính nhất.', null);
+GO
+CREATE TABLE NguoiMua
 (
-	MaKH nchar(10) PRIMARY KEY,
-	TenKH nvarchar(100),
+	MaNguoiMua nchar(10),
+	TenNguoiMua nvarchar(100),
 	TenTaiKhoan varchar(100),
 	MatKhau varchar(100),
 	NgaySinh DATE,
 	GioiTinh nchar(10),
-	MaDinhDanh int,
+	CCCD char(20),
 	DiaChi nvarchar(200), 
-	SDT char(20),
+	SDT char(10),
 	Email varchar(50),
 	Hinh varbinary(max)
+	PRIMARY KEY(TenTaiKhoan,MaNguoiMua)
 )
-INSERT INTO KhachHang VALUES ('NM01',N'Nguyễn Thị B','Nm1','123456','1990-03-20','Nu',27839293,'hcm','0192837283',null,null)
-select *from KhachHang
+INSERT INTO NguoiMua VALUES ('NM01',N'Nguyễn Thị B','Nm1','123456','1990-03-20','Nu',27839293,'hcm','0192837283',null,null)
+select *from NguoiMua

@@ -38,19 +38,18 @@ namespace DoANLapTrinhWin
         {
 
         }
-        //KH001 -123456
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        private void btnBanHang_Click_1(object sender, EventArgs e)
+        private void btnBanHang_Click(object sender, EventArgs e)
         {
             selctecOption = "Bán hàng";
             btnBanHang.BackColor = Color.SeaGreen;
             btnMuaHang.BackColor = Color.DimGray;
             // TaoButton(sender);
         }
-        private void btnMuaHang_Click_1(object sender, EventArgs e)
+        private void btnMuaHang_Click(object sender, EventArgs e)
         {
             // TaoButton(sender);
             selctecOption = "Mua hàng";
@@ -67,7 +66,7 @@ namespace DoANLapTrinhWin
                     conn.Open();
                     string tenTK = ucDangNhap.textBox.Text;
                     string matKhau = ucMatKhau.textBox.Text;
-                    string sql = "Select * from KhachHang where TenTaiKhoan='" + tenTK + "' and MatKhau='" + matKhau + "'";
+                    string sql = "Select * from NguoiMua WHERE TenTaiKhoan='" + tenTK + "' and MatKhau='" + matKhau + "'";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     SqlDataReader dta = cmd.ExecuteReader();
                     if (dta.Read() == true)
@@ -84,7 +83,6 @@ namespace DoANLapTrinhWin
                     {
                         MessageBox.Show("Khong the dang nhap!");
                     }
-
                 }
                 catch (Exception exc)
                 {
@@ -103,13 +101,13 @@ namespace DoANLapTrinhWin
                     conn.Open();
                     string tenTK = ucDangNhap.textBox.Text;
                     string matKhau = ucMatKhau.textBox.Text;
-                    string sql = "Select * from Nguoiban where Tentaikhoan='" + tenTK + "' and Matkhau='" + matKhau + "'";
+                    string sql = "Select * from NguoiBan where TenTaiKhoan='" + tenTK + "' and MatKhau='" + matKhau + "'";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     SqlDataReader dta = cmd.ExecuteReader();
                     if (dta.Read() == true)
                     {
                         this.Hide(); 
-                        FNguoiBan form2 = new FNguoiBan(); 
+                        FNguoiBan form2 = new FNguoiBan(ucDangNhap.textBox.Text); 
                         form2.ShowDialog(); 
                         form2 = null; 
                         this.Show();

@@ -16,6 +16,6 @@ namespace DoANLapTrinhWin
                 // Thuộc tính không được kế thừa từ lớp Nguoi
                 this.moTaShop = moTaShop;
          }
-     }
+    }
 
 }

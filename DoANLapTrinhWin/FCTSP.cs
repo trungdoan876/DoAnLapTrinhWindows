@@ -16,25 +16,6 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
         }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
         int count = -1;
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -55,13 +36,7 @@ namespace DoANLapTrinhWin
             pictureBox2.Image = imageList1.Images[count];
            
         }
-
         private void FCTSP_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
         {
 
         }

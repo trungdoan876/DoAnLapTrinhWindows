@@ -76,7 +76,7 @@
             this.label9.Size = new System.Drawing.Size(792, 232);
             this.label9.TabIndex = 36;
             this.label9.Text = resources.GetString("label9.Text");
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+          
             // 
             // label6
             // 
@@ -99,7 +99,7 @@
             this.label4.Size = new System.Drawing.Size(639, 67);
             this.label4.TabIndex = 31;
             this.label4.Text = "Sách - Cây Cam Ngọt Của Tôi";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+          
             // 
             // button2
             // 
@@ -135,7 +135,7 @@
             this.label2.Size = new System.Drawing.Size(180, 29);
             this.label2.TabIndex = 48;
             this.label2.Text = "      Tình trạng:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            
             // 
             // imageList1
             // 
@@ -154,7 +154,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 50;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            
             // 
             // button3
             // 

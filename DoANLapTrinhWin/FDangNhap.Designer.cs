@@ -191,7 +191,7 @@
             this.btnMuaHang.TabIndex = 22;
             this.btnMuaHang.Text = "Mua hàng";
             this.btnMuaHang.UseVisualStyleBackColor = false;
-            this.btnMuaHang.Click += new System.EventHandler(this.btnMuaHang_Click_1);
+            this.btnMuaHang.Click += new System.EventHandler(this.btnMuaHang_Click);
             // 
             // btnBanHang
             // 
@@ -206,7 +206,7 @@
             this.btnBanHang.TabIndex = 21;
             this.btnBanHang.Text = "Bán hàng";
             this.btnBanHang.UseVisualStyleBackColor = false;
-            this.btnBanHang.Click += new System.EventHandler(this.btnBanHang_Click_1);
+            this.btnBanHang.Click += new System.EventHandler(this.btnBanHang_Click);
             // 
             // btnDangNhap
             // 

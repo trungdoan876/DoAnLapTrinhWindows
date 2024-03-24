@@ -12,9 +12,11 @@ namespace DoANLapTrinhWin
 {
     public partial class FNguoiBan : Form
     {
-        public FNguoiBan()
+        string tenTaiKhoan;
+        public FNguoiBan(string tenTaiKhoan)
         {
             InitializeComponent();
+            this.tenTaiKhoan = tenTaiKhoan;
         }
         private Form formcon;
         private void moFormCon(Form form)
@@ -39,29 +41,21 @@ namespace DoANLapTrinhWin
 
         private void btnThongTin_Click(object sender, EventArgs e)
         {
-            moFormCon(new FThongTinNguoiBan());
+            moFormCon(new FThongTinNguoiBan(tenTaiKhoan));
         }
-
         private void btnSP_Click(object sender, EventArgs e)
         {
             moFormCon(new FSanPham());
         }
-
         private void btnDonHang_Click(object sender, EventArgs e)
         {
             moFormCon(new FDonHangNguoiBan());
         }
-
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             moFormCon(new FThongKeNguoiBan());
         }
-
         private void FNguoiBan_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

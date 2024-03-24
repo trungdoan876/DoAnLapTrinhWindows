@@ -11,9 +11,9 @@ namespace DoANLapTrinhWin
 {
     class NguoiMua: Nguoi
     {
-        public NguoiMua (string tenTaiKhoan, string ma,string Ten, string SDT,DateTime ngaySinh,string gioiTinh,string CCCD,string diaChi,string eMail) : base (tenTaiKhoan, ma, Ten, SDT, ngaySinh, gioiTinh, CCCD, diaChi, eMail)
+        public NguoiMua (string tenTaiKhoan, string ma,string Ten, string SDT,DateTime ngaySinh,string gioiTinh,string CCCD,string diaChi,string eMail) 
+            : base (tenTaiKhoan, ma, Ten, SDT, ngaySinh, gioiTinh, CCCD, diaChi, eMail)
         {
-
         }
     }
 }

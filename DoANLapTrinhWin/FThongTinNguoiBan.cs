@@ -14,32 +14,35 @@ namespace DoANLapTrinhWin
 {
     public partial class FThongTinNguoiBan : Form
     {
+        string maTK;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        public FThongTinNguoiBan()
+        NguoiBanDAO nguoiDao = new NguoiBanDAO();
+        public FThongTinNguoiBan(string tenTaiKhoan)
         {
             InitializeComponent();
+            this.maTK = tenTaiKhoan;
         }
-
         private void FThongTinNguoiBan_Load(object sender, EventArgs e)
         {
+            NguoiBan nguoiban = new NguoiBan(ucMaNBan.textBox.Text,ucMaNBan.textBox.Text,ucHoTenNB.textBox.Text,ucSDT.textBox.Text,dtpNgSinh.Value,ucGioiTinh.textBox.Text,ucCCCD.textBox.Text,ucDiaChi.textBox.Text,ucEmail.textBox.Text,ucMoTaShop.textBox.Text);
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT *FROM Nguoiban");
+                string sqlStr = string.Format("SELECT *FROM NguoiBan WHERE TenTaiKhoan = '{0}'",maTK);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 SqlDataReader docDuLieu = cmd.ExecuteReader();
                 if (docDuLieu.Read())
                 {
                     // Đưa dữ liệu vào TextBox
-                    ucMaNBan.textBox.Text = docDuLieu["Manguoiban"].ToString();
+                    ucMaNBan.textBox.Text = docDuLieu["MaNguoiBan"].ToString();
                     ucHoTenNB.textBox.Text = docDuLieu["Ten"].ToString();
-                    ucGioiTinh.textBox.Text = docDuLieu["Gioitinh"].ToString();
-                    ucNgSinh.textBox.Text = docDuLieu["Ngaysinh"].ToString();
-                    ucCCCD.textBox.Text = docDuLieu["CMNDorCCCD"].ToString();
+                    ucGioiTinh.textBox.Text = docDuLieu["GioiTinh"].ToString();
+                    //ucNgSinh.textBox.Text = docDuLieu["NgaySinh"].ToString();
+                    ucCCCD.textBox.Text = docDuLieu["CCCD"].ToString();
                     ucSDT.textBox.Text = docDuLieu["SDT"].ToString();
-                    ucDiaChi.textBox.Text = docDuLieu["Diachi"].ToString();
+                    ucDiaChi.textBox.Text = docDuLieu["DiaChi"].ToString();
                     ucEmail.textBox.Text = docDuLieu["Email"].ToString();
-                    ucMoTaShop.textBox.Text = docDuLieu["Motashop"].ToString();    
+                    ucMoTaShop.textBox.Text = docDuLieu["MoTaShop"].ToString();    
                 }
             }
             catch (Exception ex)

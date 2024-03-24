@@ -14,6 +14,7 @@ namespace DoANLapTrinhWin
     public partial class FThongTinChiTiet : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        //NguoiMua nguoiMua = new NguoiMua();
         public FThongTinChiTiet()
         {
             InitializeComponent();
@@ -23,18 +24,18 @@ namespace DoANLapTrinhWin
         {
             try
             {
-                conn.Open();
-                string sqlStr = string.Format("SELECT *FROM KhachHang");
+                conn.Open(); //
+                string sqlStr = string.Format("SELECT *FROM NguoiMua");
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 SqlDataReader docDuLieu = cmd.ExecuteReader();
                 if (docDuLieu.Read())
                 {
                     // Đưa dữ liệu vào TextBox
-                    ucMaTaiKhoan.textBox.Text = docDuLieu["MaKH"].ToString();
-                    ucHoTen.textBox.Text = docDuLieu["TenKH"].ToString();
+                    ucMaTaiKhoan.textBox.Text = docDuLieu["MaNguoiMua"].ToString();
+                    ucHoTen.textBox.Text = docDuLieu["TenNguoiMua"].ToString();
                     ucGioiTinh.textBox.Text = docDuLieu["GioiTinh"].ToString();
                     ucNgaySinh.textBox.Text = docDuLieu["NgaySinh"].ToString();
-                    ucCCCD.textBox.Text = docDuLieu["MaDinhDanh"].ToString();
+                    ucCCCD.textBox.Text = docDuLieu["CCCD"].ToString();
                     ucSDT.textBox.Text = docDuLieu["SDT"].ToString();
                     //ucDiaChi.textBox.Text = docDuLieu["Diachi"].ToString();
                     ucEmail.textBox.Text = docDuLieu["Email"].ToString();

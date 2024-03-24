@@ -16,7 +16,6 @@ namespace DoANLapTrinhWin
             this.Matkhau = Matkhau;
 
         }
-
         public string Tentaikhoan1 { get => Tentaikhoan; set => Tentaikhoan = value; }
         public string Matkhau1 { get => Matkhau; set => Matkhau = value; }
     }

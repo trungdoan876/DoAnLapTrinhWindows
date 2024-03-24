@@ -171,6 +171,8 @@
     </Compile>
     <Compile Include="Nguoi.cs" />
     <Compile Include="NguoiBan.cs" />
+    <Compile Include="NguoiBanDAO.cs" />
+    <Compile Include="NguoiDAO.cs" />
     <Compile Include="NguoiMua.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

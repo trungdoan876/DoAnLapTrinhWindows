@@ -45,12 +45,12 @@
             this.ucMoTaShop = new DoANLapTrinhWin.UCTextBox();
             this.ucGioiTinh = new DoANLapTrinhWin.UCTextBox();
             this.ucMaNBan = new DoANLapTrinhWin.UCTextBox();
-            this.ucNgSinh = new DoANLapTrinhWin.UCTextBox();
             this.ucEmail = new DoANLapTrinhWin.UCTextBox();
             this.ucCCCD = new DoANLapTrinhWin.UCTextBox();
             this.ucHoTenNB = new DoANLapTrinhWin.UCTextBox();
             this.ucDiaChi = new DoANLapTrinhWin.UCTextBox();
             this.buttonTuyChinh1 = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.dtpNgSinh = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -256,25 +256,6 @@
             this.ucMaNBan.TabIndex = 179;
             this.ucMaNBan.Texts = "";
             // 
-            // ucNgSinh
-            // 
-            this.ucNgSinh.BackColor = System.Drawing.SystemColors.Window;
-            this.ucNgSinh.BanKinhKhung = 15;
-            this.ucNgSinh.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucNgSinh.ChumoText = "";
-            this.ucNgSinh.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucNgSinh.GachChan = false;
-            this.ucNgSinh.KichThuocKhung = 1;
-            this.ucNgSinh.Location = new System.Drawing.Point(250, 198);
-            this.ucNgSinh.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucNgSinh.Multiline = false;
-            this.ucNgSinh.Name = "ucNgSinh";
-            this.ucNgSinh.Padding = new System.Windows.Forms.Padding(7);
-            this.ucNgSinh.PasswordChar = false;
-            this.ucNgSinh.Size = new System.Drawing.Size(285, 40);
-            this.ucNgSinh.TabIndex = 178;
-            this.ucNgSinh.Texts = "";
-            // 
             // ucEmail
             // 
             this.ucEmail.BackColor = System.Drawing.SystemColors.Window;
@@ -365,12 +346,20 @@
             this.buttonTuyChinh1.Text = "Cập nhật ảnh";
             this.buttonTuyChinh1.UseVisualStyleBackColor = false;
             // 
+            // dtpNgSinh
+            // 
+            this.dtpNgSinh.Location = new System.Drawing.Point(250, 210);
+            this.dtpNgSinh.Name = "dtpNgSinh";
+            this.dtpNgSinh.Size = new System.Drawing.Size(285, 26);
+            this.dtpNgSinh.TabIndex = 191;
+            // 
             // FThongTinNguoiBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(971, 547);
+            this.Controls.Add(this.dtpNgSinh);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ucSDT);
             this.Controls.Add(this.label8);
@@ -381,7 +370,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ucGioiTinh);
             this.Controls.Add(this.ucMaNBan);
-            this.Controls.Add(this.ucNgSinh);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -413,7 +401,6 @@
         private System.Windows.Forms.Label label6;
         private UCTextBox ucGioiTinh;
         private UCTextBox ucMaNBan;
-        private UCTextBox ucNgSinh;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -428,5 +415,6 @@
         private UCTextBox ucMoTaShop;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DateTimePicker dtpNgSinh;
     }
 }

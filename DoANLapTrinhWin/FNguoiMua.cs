@@ -36,14 +36,6 @@ namespace DoANLapTrinhWin
         {
 
         }
-
-       
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnThongTin_Click_1(object sender, EventArgs e)
         {
             moFormConMua(new FThongTinNguoiMua());

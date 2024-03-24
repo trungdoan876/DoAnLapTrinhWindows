@@ -32,5 +32,14 @@ namespace DoANLapTrinhWin
             this.diaChi = diaChi;
             this.eMail = eMail;
         }
+        public string TenTaiKhoan { get => tenTaiKhoan; set => tenTaiKhoan = value; }
+        public string Ma { get => ma; set => ma = value; }
+        public string Ten1 { get => Ten; set => Ten = value; }
+        public string SDT1 { get => SDT; set => SDT = value; }
+        public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
+        public string GioiTinh { get => gioiTinh; set => gioiTinh = value; }
+        public string CCCD1 { get => CCCD; set => CCCD = value; }
+        public string DiaChi { get => diaChi; set => diaChi = value; }
+        public string EMail { get => eMail; set => eMail = value; }
     }
 }
