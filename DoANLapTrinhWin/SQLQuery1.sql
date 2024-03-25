@@ -41,7 +41,7 @@ CREATE TABLE NguoiBan
     Hinh varbinary(max),
 	PRIMARY KEY(MaNguoiBan)
 );
-Select * from NguoiBan
+Select * from SanPham
 GO
 CREATE TABLE NguoiMua
 (
