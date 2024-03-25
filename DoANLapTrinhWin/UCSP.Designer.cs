@@ -28,31 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSP));
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblGiaBan = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblGiaGoc = new System.Windows.Forms.Label();
             this.lblDiaChi = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.lblMaSP = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.ucHeart1 = new DoANLapTrinhWin.UCHeart();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(224, 227);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(35, 31);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 26;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // lblGiaBan
             // 
@@ -111,13 +95,6 @@
             this.lblDiaChi.TabIndex = 29;
             this.lblDiaChi.Text = "Địa chỉ";
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-heart-30 (1).png");
-            this.imageList1.Images.SetKeyName(1, "icons8-heart-30.png");
-            // 
             // lblMaSP
             // 
             this.lblMaSP.AutoSize = true;
@@ -131,15 +108,22 @@
             this.lblMaSP.TabIndex = 30;
             this.lblMaSP.Text = "MSP";
             // 
+            // ucHeart1
+            // 
+            this.ucHeart1.Location = new System.Drawing.Point(240, 214);
+            this.ucHeart1.Name = "ucHeart1";
+            this.ucHeart1.Size = new System.Drawing.Size(48, 52);
+            this.ucHeart1.TabIndex = 31;
+            // 
             // UCSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.ucHeart1);
             this.Controls.Add(this.lblMaSP);
             this.Controls.Add(this.lblDiaChi);
             this.Controls.Add(this.lblGiaGoc);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.lblGiaBan);
             this.Controls.Add(this.lblTenSP);
@@ -148,7 +132,6 @@
             this.Size = new System.Drawing.Size(291, 291);
             this.Load += new System.EventHandler(this.UCSP_Load);
             this.Click += new System.EventHandler(this.UCSP_Click);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -156,13 +139,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox4;
         public System.Windows.Forms.Label lblTenSP;
         public System.Windows.Forms.Label lblGiaBan;
         public System.Windows.Forms.PictureBox pictureBox5;
         public System.Windows.Forms.Label lblGiaGoc;
         public System.Windows.Forms.Label lblDiaChi;
-        private System.Windows.Forms.ImageList imageList1;
         public System.Windows.Forms.Label lblMaSP;
+        private UCHeart ucHeart1;
     }
 }

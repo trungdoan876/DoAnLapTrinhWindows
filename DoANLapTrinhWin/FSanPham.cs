@@ -38,10 +38,24 @@ namespace DoANLapTrinhWin
         {
 
         }
+        private Button btnOK;
+        private void TaoButton(object button)
+        {
+            var btn = (Button)button;
 
+            btn.BackColor = Color.SeaGreen;
+            btn.ForeColor = Color.White;
+            if (btnOK != null && btnOK != btn)
+            {
+                btnOK.BackColor = Color.FromArgb(64, 64, 64);
+                btnOK.ForeColor = Color.White;
+            }
+            btnOK = btn;
+        }
         private void btnTatCaSP_Click(object sender, EventArgs e)
         {
             moFormCon(new FTatCaSanPham());
+            TaoButton(sender);
         }
         private void btnThemSP_Click_1(object sender, EventArgs e)
         {
@@ -50,6 +64,16 @@ namespace DoANLapTrinhWin
             form2.ShowDialog(); 
             form2 = null; //tat form2, tuc la form 2 tro ve null
             this.Show(); 
+        }
+
+        private void btnDaDangBan_Click(object sender, EventArgs e)
+        {
+            TaoButton(sender);
+        }
+
+        private void btnChuaDangBan_Click(object sender, EventArgs e)
+        {
+            TaoButton(sender);
         }
     }
 }

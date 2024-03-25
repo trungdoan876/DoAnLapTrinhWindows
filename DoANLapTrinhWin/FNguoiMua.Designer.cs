@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FNguoiMua));
             this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -43,13 +49,10 @@
             this.btnMH = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnGH = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -58,9 +61,6 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel8
@@ -72,11 +72,79 @@
             this.panel8.Controls.Add(this.label1);
             this.panel8.Controls.Add(this.pictureBox5);
             this.panel8.Controls.Add(this.label3);
-            this.panel8.Location = new System.Drawing.Point(233, 4);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Location = new System.Drawing.Point(175, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1507, 826);
+            this.panel8.Size = new System.Drawing.Size(1130, 661);
             this.panel8.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(442, 178);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(93, 110);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 36;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label2.Location = new System.Drawing.Point(278, 319);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(326, 128);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "SHOP";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(549, 178);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(412, 304);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 34;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(58, 396);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(217, 29);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Sending sweet things";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(61, 227);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(93, 110);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 32;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label3.Location = new System.Drawing.Point(150, 202);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(319, 128);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "panda";
             // 
             // panel1
             // 
@@ -90,18 +158,16 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(237, 823);
+            this.panel1.Size = new System.Drawing.Size(178, 658);
             this.panel1.TabIndex = 4;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.btnThoat);
-            this.panel6.Location = new System.Drawing.Point(12, 511);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Location = new System.Drawing.Point(9, 409);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(221, 75);
+            this.panel6.Size = new System.Drawing.Size(166, 60);
             this.panel6.TabIndex = 8;
             // 
             // btnThoat
@@ -111,11 +177,10 @@
             this.btnThoat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(-16, -12);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThoat.Location = new System.Drawing.Point(-12, -10);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btnThoat.Size = new System.Drawing.Size(299, 108);
+            this.btnThoat.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnThoat.Size = new System.Drawing.Size(224, 86);
             this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
@@ -125,18 +190,18 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel7.Controls.Add(this.pictureBox2);
-            this.panel7.Location = new System.Drawing.Point(31, 4);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.panel7.Location = new System.Drawing.Point(23, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(236, 182);
+            this.panel7.Size = new System.Drawing.Size(177, 136);
             this.panel7.TabIndex = 9;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-37, 23);
+            this.pictureBox2.Location = new System.Drawing.Point(-27, 8);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(240, 147);
+            this.pictureBox2.Size = new System.Drawing.Size(180, 118);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -144,10 +209,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnThongTin);
-            this.panel2.Location = new System.Drawing.Point(12, 181);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(9, 145);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(221, 75);
+            this.panel2.Size = new System.Drawing.Size(166, 60);
             this.panel2.TabIndex = 1;
             // 
             // btnThongTin
@@ -158,11 +222,10 @@
             this.btnThongTin.ForeColor = System.Drawing.Color.White;
             this.btnThongTin.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTin.Image")));
             this.btnThongTin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongTin.Location = new System.Drawing.Point(-20, -15);
-            this.btnThongTin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThongTin.Location = new System.Drawing.Point(-15, -12);
             this.btnThongTin.Name = "btnThongTin";
-            this.btnThongTin.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btnThongTin.Size = new System.Drawing.Size(303, 108);
+            this.btnThongTin.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnThongTin.Size = new System.Drawing.Size(227, 86);
             this.btnThongTin.TabIndex = 0;
             this.btnThongTin.Text = "Thông tin";
             this.btnThongTin.UseVisualStyleBackColor = false;
@@ -171,10 +234,9 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.btnDH);
-            this.panel4.Location = new System.Drawing.Point(12, 428);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(9, 342);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(221, 75);
+            this.panel4.Size = new System.Drawing.Size(166, 60);
             this.panel4.TabIndex = 5;
             // 
             // btnDH
@@ -185,11 +247,10 @@
             this.btnDH.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDH.Image = ((System.Drawing.Image)(resources.GetObject("btnDH.Image")));
             this.btnDH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDH.Location = new System.Drawing.Point(-20, -15);
-            this.btnDH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDH.Location = new System.Drawing.Point(-15, -12);
             this.btnDH.Name = "btnDH";
-            this.btnDH.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btnDH.Size = new System.Drawing.Size(303, 108);
+            this.btnDH.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnDH.Size = new System.Drawing.Size(227, 86);
             this.btnDH.TabIndex = 6;
             this.btnDH.Text = "Đơn hàng";
             this.btnDH.UseVisualStyleBackColor = false;
@@ -198,10 +259,9 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btnMH);
-            this.panel3.Location = new System.Drawing.Point(12, 264);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(9, 211);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(221, 75);
+            this.panel3.Size = new System.Drawing.Size(166, 60);
             this.panel3.TabIndex = 2;
             // 
             // btnMH
@@ -212,11 +272,10 @@
             this.btnMH.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMH.Image = ((System.Drawing.Image)(resources.GetObject("btnMH.Image")));
             this.btnMH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMH.Location = new System.Drawing.Point(-20, -14);
-            this.btnMH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMH.Location = new System.Drawing.Point(-15, -11);
             this.btnMH.Name = "btnMH";
-            this.btnMH.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btnMH.Size = new System.Drawing.Size(303, 108);
+            this.btnMH.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnMH.Size = new System.Drawing.Size(227, 86);
             this.btnMH.TabIndex = 0;
             this.btnMH.Text = "Mua hàng";
             this.btnMH.UseVisualStyleBackColor = false;
@@ -225,10 +284,9 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.btnGH);
-            this.panel5.Location = new System.Drawing.Point(12, 346);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Location = new System.Drawing.Point(9, 277);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(221, 75);
+            this.panel5.Size = new System.Drawing.Size(166, 60);
             this.panel5.TabIndex = 4;
             // 
             // btnGH
@@ -238,91 +296,31 @@
             this.btnGH.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGH.Image = ((System.Drawing.Image)(resources.GetObject("btnGH.Image")));
             this.btnGH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGH.Location = new System.Drawing.Point(-16, -18);
-            this.btnGH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGH.Location = new System.Drawing.Point(-12, -14);
             this.btnGH.Name = "btnGH";
-            this.btnGH.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btnGH.Size = new System.Drawing.Size(299, 108);
+            this.btnGH.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnGH.Size = new System.Drawing.Size(224, 86);
             this.btnGH.TabIndex = 3;
             this.btnGH.Text = "Giỏ hàng";
             this.btnGH.UseVisualStyleBackColor = false;
             this.btnGH.Click += new System.EventHandler(this.btnGH_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(589, 223);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 138);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(371, 399);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(435, 170);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "SHOP";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(732, 223);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(550, 380);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 34;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(77, 495);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 38);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Sending sweet things";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(81, 284);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(124, 138);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 32;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label3.Location = new System.Drawing.Point(200, 252);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(427, 170);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "panda";
-            // 
             // FNguoiMua
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1743, 823);
+            this.ClientSize = new System.Drawing.Size(1307, 658);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel8);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FNguoiMua";
             this.Text = "FNguoiMua";
             this.Load += new System.EventHandler(this.FNguoiMua_Load);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -331,9 +329,6 @@
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }

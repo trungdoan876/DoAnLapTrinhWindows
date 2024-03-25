@@ -32,9 +32,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnTatCaSP = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDaDangBan = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnChuaDangBan = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnThemSP = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
@@ -73,43 +73,45 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.btnDaDangBan);
             this.panel3.Location = new System.Drawing.Point(177, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(171, 55);
             this.panel3.TabIndex = 2;
             // 
-            // button2
+            // btnDaDangBan
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(-16, -15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 87);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Đã đăng bán";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDaDangBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDaDangBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDaDangBan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDaDangBan.Location = new System.Drawing.Point(-16, -15);
+            this.btnDaDangBan.Name = "btnDaDangBan";
+            this.btnDaDangBan.Size = new System.Drawing.Size(205, 87);
+            this.btnDaDangBan.TabIndex = 4;
+            this.btnDaDangBan.Text = "Đã đăng bán";
+            this.btnDaDangBan.UseVisualStyleBackColor = false;
+            this.btnDaDangBan.Click += new System.EventHandler(this.btnDaDangBan_Click);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.btnChuaDangBan);
             this.panel4.Location = new System.Drawing.Point(354, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(171, 55);
             this.panel4.TabIndex = 3;
             // 
-            // button3
+            // btnChuaDangBan
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(-16, -15);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(205, 87);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Chưa đăng bán";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnChuaDangBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnChuaDangBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChuaDangBan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnChuaDangBan.Location = new System.Drawing.Point(-16, -15);
+            this.btnChuaDangBan.Name = "btnChuaDangBan";
+            this.btnChuaDangBan.Size = new System.Drawing.Size(205, 87);
+            this.btnChuaDangBan.TabIndex = 4;
+            this.btnChuaDangBan.Text = "Chưa đăng bán";
+            this.btnChuaDangBan.UseVisualStyleBackColor = false;
+            this.btnChuaDangBan.Click += new System.EventHandler(this.btnChuaDangBan_Click);
             // 
             // panel1
             // 
@@ -162,9 +164,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnTatCaSP;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDaDangBan;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnChuaDangBan;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnThemSP;
     }

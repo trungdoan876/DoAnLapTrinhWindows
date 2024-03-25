@@ -39,26 +39,44 @@ namespace DoANLapTrinhWin
         private void btnThongTin_Click_1(object sender, EventArgs e)
         {
             moFormConMua(new FThongTinNguoiMua());
+            TaoButton(sender);
         }
 
         private void btnMH_Click_1(object sender, EventArgs e)
         {
             moFormConMua(new FMuaHang());
+            TaoButton(sender);
         }
 
         private void btnGH_Click(object sender, EventArgs e)
         {
             moFormConMua(new FGioHang());
+            TaoButton(sender);
         }
 
         private void btnDH_Click(object sender, EventArgs e)
         {
             moFormConMua(new FDonHangMua());
+            TaoButton(sender);
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private Button btnOK;
+        private void TaoButton(object button)
+        {
+            var btn = (Button)button;
+
+            btn.BackColor = Color.SeaGreen;
+            btn.ForeColor = Color.White;
+            if (btnOK != null && btnOK != btn)
+            {
+                btnOK.BackColor = Color.FromArgb(64, 64, 64);
+                btnOK.ForeColor = Color.White;
+            }
+            btnOK = btn;
         }
     }
 }

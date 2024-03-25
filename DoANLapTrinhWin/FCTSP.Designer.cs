@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCTSP));
             this.lblTenSP = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -50,12 +49,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblXuatxu = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblNganhHang = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.ucTBMTSP = new DoANLapTrinhWin.UCTextBox();
             this.buttonTuyChinh2 = new DoANLapTrinhWin.ButtonTuyChinh();
             this.buttonTuyChinh1 = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.lblNganhHang = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.ucHeart1 = new DoANLapTrinhWin.UCHeart();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,18 +68,6 @@
             this.lblTenSP.Size = new System.Drawing.Size(183, 71);
             this.lblTenSP.TabIndex = 31;
             this.lblTenSP.Text = "TenSP";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(309, 365);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 43);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 44;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
@@ -273,6 +260,28 @@
             this.label3.Text = "   ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // lblNganhHang
+            // 
+            this.lblNganhHang.AutoSize = true;
+            this.lblNganhHang.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNganhHang.Location = new System.Drawing.Point(591, 327);
+            this.lblNganhHang.Name = "lblNganhHang";
+            this.lblNganhHang.Size = new System.Drawing.Size(114, 24);
+            this.lblNganhHang.TabIndex = 71;
+            this.lblNganhHang.Text = "Ngành Hàng";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Location = new System.Drawing.Point(427, 327);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(154, 24);
+            this.label6.TabIndex = 70;
+            this.label6.Text = "      Ngành Hàng:";
+            // 
             // ucTBMTSP
             // 
             this.ucTBMTSP.BackColor = System.Drawing.Color.White;
@@ -320,27 +329,12 @@
             this.buttonTuyChinh1.Text = "Mua Hàng";
             this.buttonTuyChinh1.UseVisualStyleBackColor = false;
             // 
-            // lblNganhHang
+            // ucHeart1
             // 
-            this.lblNganhHang.AutoSize = true;
-            this.lblNganhHang.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNganhHang.Location = new System.Drawing.Point(591, 327);
-            this.lblNganhHang.Name = "lblNganhHang";
-            this.lblNganhHang.Size = new System.Drawing.Size(114, 24);
-            this.lblNganhHang.TabIndex = 71;
-            this.lblNganhHang.Text = "Ngành Hàng";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(427, 327);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 24);
-            this.label6.TabIndex = 70;
-            this.label6.Text = "      Ngành Hàng:";
+            this.ucHeart1.Location = new System.Drawing.Point(311, 356);
+            this.ucHeart1.Name = "ucHeart1";
+            this.ucHeart1.Size = new System.Drawing.Size(48, 52);
+            this.ucHeart1.TabIndex = 72;
             // 
             // FCTSP
             // 
@@ -348,6 +342,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1026, 585);
+            this.Controls.Add(this.ucHeart1);
             this.Controls.Add(this.lblNganhHang);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ucTBMTSP);
@@ -369,13 +364,11 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.lblTenSP);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FCTSP";
             this.Text = "FCTSP";
             this.Load += new System.EventHandler(this.FCTSP_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -384,7 +377,6 @@
 
         #endregion
         private System.Windows.Forms.Label lblTenSP;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -408,5 +400,6 @@
         private UCTextBox ucTBMTSP;
         private System.Windows.Forms.Label lblNganhHang;
         private System.Windows.Forms.Label label6;
+        private UCHeart ucHeart1;
     }
 }

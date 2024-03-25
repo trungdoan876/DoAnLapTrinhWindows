@@ -70,21 +70,7 @@ namespace DoANLapTrinhWin
            
         }
 
-        int currentImageIndex = 0;
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            currentImageIndex++;
-
-            // Nếu vị trí hiện tại vượt quá số lượng hình ảnh, quay lại hình ảnh đầu tiên
-            if (currentImageIndex >= imageList2.Images.Count)
-            {
-                currentImageIndex = 0;
-            }
-
-            // Đặt hình ảnh mới cho PictureBox
-            pictureBox4.Image = imageList2.Images[currentImageIndex];
-
-        }
+       
 
 
     }

@@ -42,22 +42,41 @@ namespace DoANLapTrinhWin
         private void btnThongTin_Click(object sender, EventArgs e)
         {
             moFormCon(new FThongTinNguoiBan(tenTaiKhoan));
+            TaoButton(sender);
         }
         private void btnSP_Click(object sender, EventArgs e)
         {
             moFormCon(new FSanPham());
+            TaoButton(sender);
         }
         private void btnDonHang_Click(object sender, EventArgs e)
         {
             moFormCon(new FDonHangNguoiBan());
+            TaoButton(sender);
         }
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             moFormCon(new FThongKeNguoiBan());
+            TaoButton(sender);
         }
         private void FNguoiBan_Load(object sender, EventArgs e)
         {
 
         }
+        private Button btnOK;
+        private void TaoButton(object button)
+        {
+            var btn = (Button)button;
+
+            btn.BackColor = Color.SeaGreen;
+            btn.ForeColor = Color.White;
+            if (btnOK != null && btnOK != btn)
+            {
+                btnOK.BackColor = Color.FromArgb(64, 64, 64);
+                btnOK.ForeColor = Color.White;
+            }
+            btnOK = btn;
+        }
+
     }
 }

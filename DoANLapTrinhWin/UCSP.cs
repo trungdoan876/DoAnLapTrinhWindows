@@ -45,15 +45,6 @@ namespace DoANLapTrinhWin
                 formCTSP = null;
                 this.Show();
         }
-        private int currentImageIndex = 0;
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            currentImageIndex++;
-            if (currentImageIndex >= 2)
-            {
-                currentImageIndex = 0;
-            }
-            pictureBox4.Image = imageList1.Images[currentImageIndex];
-        }
+
     }
 }
