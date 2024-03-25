@@ -63,3 +63,5 @@ CREATE TABLE NguoiMua
 INSERT INTO NguoiMua VALUES ('NM01',N'Nguyễn Thị B','Nm1','123456','1990-03-20','Nu','27839293','hcm','0192837283',null,null,null);
 GO
 select *from NguoiMua
+
+UPDATE SanPham SET DiaChi = N'Đà Nẵng' WHERE MaSanPham= 'SP5'
