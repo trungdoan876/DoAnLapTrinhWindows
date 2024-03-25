@@ -1,4 +1,5 @@
 ﻿--(localdb)\mssqllocaldb
+DROP TABLE SanPham
 CREATE TABLE SanPham 
 (
 	Hinh varbinary(max),
@@ -41,7 +42,7 @@ CREATE TABLE NguoiBan
     Hinh varbinary(max),
 	PRIMARY KEY(MaNguoiBan)
 );
-Select * from NguoiBan
+Select * from SanPham
 GO
 CREATE TABLE NguoiMua
 (
@@ -55,8 +56,10 @@ CREATE TABLE NguoiMua
 	DiaChi nvarchar(200), 
 	SDT char(10),
 	Email varchar(50),
-	Hinh varbinary(max)
+	Hinh varbinary(max),
+	MaDonHang char(10),
 	PRIMARY KEY(TenTaiKhoan,MaNguoiMua)
 )
-INSERT INTO NguoiMua VALUES ('NM01',N'Nguyễn Thị B','Nm1','123456','1990-03-20','Nu',27839293,'hcm','0192837283',null,null)
+INSERT INTO NguoiMua VALUES ('NM01',N'Nguyễn Thị B','Nm1','123456','1990-03-20','Nu','27839293','hcm','0192837283',null,null,null);
+GO
 select *from NguoiMua
