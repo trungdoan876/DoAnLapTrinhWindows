@@ -23,10 +23,12 @@ namespace DoANLapTrinhWin
         {
                InitializeComponent();
         }
+    
             public UCSP(SanPham sp)
         {
             this.sp = sp;
             InitializeComponent();
+            this.lblMaSP.Text = sp.MaSP;
             this.lblTenSP.Text = sp.TenSP;
             this.lblGiaBan.Text = "đ" + sp.GiaBan ;
             this.lblGiaGoc.Text = "đ" + sp.GiaGoc ;
@@ -35,9 +37,10 @@ namespace DoANLapTrinhWin
 
         private void UCSP_Click(object sender, EventArgs e)
         {
+            UCSP ucsp = new UCSP();
             //if (Application.OpenForms.OfType<FMuaHang>().Any())
                 this.Hide(); //an form 1
-                FCTSP formCTSP = new FCTSP();
+                FCTSP formCTSP = new FCTSP(sp);
                 formCTSP.ShowDialog();
                 formCTSP = null;
                 this.Show();

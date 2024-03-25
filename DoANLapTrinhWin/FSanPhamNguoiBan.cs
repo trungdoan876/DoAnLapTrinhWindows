@@ -15,6 +15,7 @@ namespace DoANLapTrinhWin
     public partial class FSanPhamNguoiBan : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        SanPhamDAO spDAO = new SanPhamDAO();
         public FSanPhamNguoiBan()
         {
             InitializeComponent();
@@ -27,23 +28,10 @@ namespace DoANLapTrinhWin
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Ket noi
-                conn.Open();
-               string sqlStr = string.Format("INSERT INTO SanPham(MaSanPham, TenSanPham, GiaBan, MoTaSanPham, NganhHang ) VALUES ('{0}', '{1}', '{2}','{3}', '{4}' )", ucTextBox4.textBox.Text, ucTextBox2.textBox.Text, ucTextBox5.textBox.Text, ucTextBox8.textBox.Text, ucTextBox1.textBox.Text);
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Them thanh cong");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Them that bai" + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            SanPham sp = new SanPham(ucMaSP.textBox.Text,ucTenSP.textBox.Text, ucGiaBan.textBox.Text, ucGiaGoc.textBox.Text,
+    ucXuatXu.textBox.Text, ucTGDSD.textBox.Text,dtpNgayDang.Value, ucMoTaSP.textBox.Text, ucNganhHang.textBox.Text,
+    cbbTinhTrang.Text,ucMaNB.textBox.Text,ucDC.textBox.Text);
+            spDAO.ThemSanPham(sp);
         }
     }
 }

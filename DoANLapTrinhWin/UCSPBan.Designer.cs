@@ -112,6 +112,7 @@
             this.btnXoaSP.Size = new System.Drawing.Size(40, 39);
             this.btnXoaSP.TabIndex = 33;
             this.btnXoaSP.UseVisualStyleBackColor = false;
+            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
             // 
             // UCSPBan
             // 

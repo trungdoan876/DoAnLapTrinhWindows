@@ -13,20 +13,21 @@ namespace DoANLapTrinhWin
 {
     public partial class FMuaHang : Form
     {
+        SanPham sp;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public FMuaHang()
         {
             InitializeComponent();
         }
-        private void pictureBox2_Click(object sender, EventArgs e)
+        /*private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide(); //an form 1
-            FCTSP form2 = new FCTSP(); // tao doi tuong form 2
+            FCTSP form2 = new FCTSP(sp); // tao doi tuong form 2
             form2.ShowDialog(); //show la thao tac dong thoi 2 form
                                 //ShowDialog thi khi tat form2 thi moi tro lai thao tac tren form1
             form2 = null; //tat form2, tuc la form 2 tro ve null
             this.Show();
-        }
+        }*/
         private void ucsp1_Load(object sender, EventArgs e)
         {
 
@@ -46,16 +47,27 @@ namespace DoANLapTrinhWin
                 int y = 0;
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
-                    string tenSanPham = row["TenSanPham"].ToString();
+                    string maSP = row["MaSanPham"].ToString();
+                    string tenSP = row["TenSanPham"].ToString();
                     string giaBan = "đ" + row["GiaBan"].ToString() ;
                     string  giaGoc = "đ" + row["GiaGoc"].ToString();
                     string diaChi = row["DiaChi"].ToString();
+                    string xuatXu = row["XuatXu"].ToString();
+                    string nganhHang = row["NganhHang"].ToString();
+                    DateTime ngayDang = DateTime.Now;
+                    string moTaSP = row["MoTaSanPham"].ToString();
+                    string tinhTrang = row["TinhTrang"].ToString();
+                    string thoiGianSuDung = row["TGDSD"].ToString();
 
-                    UCSP ucSP = new UCSP();
-                    ucSP.lblTenSP.Text = tenSanPham;
+                    SanPham sp = new SanPham(maSP, tenSP, giaBan, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, "", diaChi);
+                    UCSP ucSP = new UCSP(sp);
+                    ucSP.lblMaSP.Text = maSP;
+                    ucSP.lblTenSP.Text = tenSP;
                     ucSP.lblGiaBan.Text = giaBan;
                     ucSP.lblGiaGoc.Text = giaGoc;
                     ucSP.lblDiaChi.Text = diaChi;
+                    
+                    
 
                     ucSP.Location = new Point(x, y);
                     x += ucSP.Width += 5;

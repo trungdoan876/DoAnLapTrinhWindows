@@ -13,6 +13,7 @@ namespace DoANLapTrinhWin
     public partial class UCSPBan : UserControl
     {
         SanPham sp;
+        SanPhamDAO spDAO = new SanPhamDAO();
         public UCSPBan()
         {
             InitializeComponent();
@@ -37,6 +38,11 @@ namespace DoANLapTrinhWin
         private void UCSPBan_Load(object sender, EventArgs e)
         {
 
+        }
+        private void btnXoaSP_Click(object sender, EventArgs e)
+        {
+            SanPham sp = new SanPham(lblMaSP.Text,"","","","","",DateTime.Now,"","","","","");
+            spDAO.XoaSanPham(sp);
         }
     }
 }
