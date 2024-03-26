@@ -38,11 +38,15 @@ namespace DoANLapTrinhWin
         {
             UCSP ucsp = new UCSP();
             this.Hide(); //an form 1
-            FCTSP formCTSP = new FCTSP(sp.MaSP);
+            FCTSP formCTSP = new FCTSP(sp);
             formCTSP.ShowDialog();
             formCTSP = null;
             this.Show();
         }
 
+        private void ucHeart1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

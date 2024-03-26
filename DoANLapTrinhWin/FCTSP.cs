@@ -16,10 +16,10 @@ namespace DoANLapTrinhWin
     {
         SanPham sp;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        /*public FCTSP()
+        public FCTSP()
         {
             InitializeComponent();
-        }*/
+        }
         public FCTSP(string maSP)
         {
             InitializeComponent();
@@ -38,7 +38,6 @@ namespace DoANLapTrinhWin
             lblXuatxu.Text = sp.XuatXu;
             lblTinhTrang.Text = sp.TinhTrang;
             lblTGDSD.Text = sp.ThoiGianDaSuDung;
-
         }
         private void FCTSP_Load(object sender, EventArgs e)
         {
@@ -64,7 +63,7 @@ namespace DoANLapTrinhWin
         }
         private void btnThemVaoGio_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

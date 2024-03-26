@@ -114,6 +114,7 @@
             this.ucHeart1.Name = "ucHeart1";
             this.ucHeart1.Size = new System.Drawing.Size(48, 52);
             this.ucHeart1.TabIndex = 31;
+            this.ucHeart1.Load += new System.EventHandler(this.ucHeart1_Load);
             // 
             // UCSP
             // 

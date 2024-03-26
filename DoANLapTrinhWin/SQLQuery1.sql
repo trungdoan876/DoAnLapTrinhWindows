@@ -1,5 +1,6 @@
 ﻿--(localdb)\mssqllocaldb
 DROP TABLE SanPham
+select * from SanPham
 CREATE TABLE SanPham 
 (
 	Hinh varbinary(max),
@@ -64,6 +65,18 @@ CREATE TABLE NguoiMua
 INSERT INTO NguoiMua VALUES ('NM01',N'Nguyễn Thị B','Nm1','123456','1990-03-20','Nu','27839293','hcm','0192837283',null,null,null);
 GO
 select *from NguoiMua
-
-
+GO
+DROP TABLE GioHang
+CREATE TABLE GioHang
+(
+	MaSanPham nchar(10),
+	TenSanPham nvarchar(100),
+	GiaBan nvarchar(100),
+	SoLuong int,
+	MaNguoiMua nchar(10),
+	TenNguoiMua nvarchar(100),
+	MaNguoiBan nchar(10),
+    TenNguoiBan NVARCHAR(100),
+)
+GO
 UPDATE SanPham SET DiaChi = N'Đà Nẵng' WHERE MaSanPham= 'SP5'
