@@ -68,9 +68,10 @@
             // 
             // panelMuaHang
             // 
+            this.panelMuaHang.AutoScroll = true;
             this.panelMuaHang.Location = new System.Drawing.Point(1, 69);
             this.panelMuaHang.Name = "panelMuaHang";
-            this.panelMuaHang.Size = new System.Drawing.Size(936, 531);
+            this.panelMuaHang.Size = new System.Drawing.Size(905, 627);
             this.panelMuaHang.TabIndex = 27;
             // 
             // sidebarTimer
@@ -317,7 +318,7 @@
             this.panelBoLoc.Controls.Add(this.label4);
             this.panelBoLoc.Controls.Add(this.checkBox8);
             this.panelBoLoc.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelBoLoc.Location = new System.Drawing.Point(901, 0);
+            this.panelBoLoc.Location = new System.Drawing.Point(905, 0);
             this.panelBoLoc.MaximumSize = new System.Drawing.Size(182, 634);
             this.panelBoLoc.MinimumSize = new System.Drawing.Size(34, 634);
             this.panelBoLoc.Name = "panelBoLoc";
@@ -329,7 +330,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1083, 634);
+            this.ClientSize = new System.Drawing.Size(1087, 708);
             this.Controls.Add(this.panelBoLoc);
             this.Controls.Add(this.panelMuaHang);
             this.Controls.Add(this.pictureBox1);

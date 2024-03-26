@@ -15,6 +15,7 @@ namespace DoANLapTrinhWin
     public partial class UCSP : UserControl
     {
         SanPham sp;
+        SanPhamDAO spDAO = new SanPhamDAO();
         private void UCSP_Load(object sender, EventArgs e)
         {
 
@@ -23,8 +24,7 @@ namespace DoANLapTrinhWin
         {
                InitializeComponent();
         }
-    
-            public UCSP(SanPham sp)
+        public UCSP(SanPham sp)
         {
             this.sp = sp;
             InitializeComponent();
@@ -34,16 +34,14 @@ namespace DoANLapTrinhWin
             this.lblGiaGoc.Text = "đ" + sp.GiaGoc ;
             this.lblDiaChi.Text = sp.DiaChi; 
         }
-
         private void UCSP_Click(object sender, EventArgs e)
         {
             UCSP ucsp = new UCSP();
-            //if (Application.OpenForms.OfType<FMuaHang>().Any())
-                this.Hide(); //an form 1
-                FCTSP formCTSP = new FCTSP(sp);
-                formCTSP.ShowDialog();
-                formCTSP = null;
-                this.Show();
+            this.Hide(); //an form 1
+            FCTSP formCTSP = new FCTSP(sp.MaSP);
+            formCTSP.ShowDialog();
+            formCTSP = null;
+            this.Show();
         }
 
     }

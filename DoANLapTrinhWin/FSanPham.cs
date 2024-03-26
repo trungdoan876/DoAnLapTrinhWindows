@@ -12,10 +12,12 @@ namespace DoANLapTrinhWin
 {
     public partial class FSanPham : Form
     {
-        public FSanPham()
+        string maNBan;
+        public FSanPham(string maNB)
         {
             InitializeComponent();
-            moFormCon(new FTatCaSanPham());
+            this.maNBan = maNB;
+            moFormCon(new FTatCaSanPham(maNB));
         }
         private Form formcon;
         private void moFormCon(Form form)
@@ -33,7 +35,6 @@ namespace DoANLapTrinhWin
             form.BringToFront();
             form.Show();
         }
-
         private void FSanPham_Load(object sender, EventArgs e)
         {
 
@@ -54,21 +55,14 @@ namespace DoANLapTrinhWin
         }
         private void btnTatCaSP_Click(object sender, EventArgs e)
         {
-            moFormCon(new FTatCaSanPham());
+            moFormCon(new FTatCaSanPham(maNBan));
             TaoButton(sender);
-        }
-        private void btnThemSP_Click_1(object sender, EventArgs e)
-        {
-             this.Hide(); //an form 1
-            FSanPhamNguoiBan form2 = new FSanPhamNguoiBan(); // tao doi tuong form 2
-            form2.ShowDialog(); 
-            form2 = null; //tat form2, tuc la form 2 tro ve null
-            this.Show(); 
         }
 
         private void btnDaDangBan_Click(object sender, EventArgs e)
         {
             TaoButton(sender);
+            moFormCon(new FDaDangBan(maNBan));
         }
 
         private void btnChuaDangBan_Click(object sender, EventArgs e)

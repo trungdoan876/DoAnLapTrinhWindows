@@ -24,11 +24,11 @@ namespace DoANLapTrinhWin
         }
         private void FThongTinNguoiBan_Load(object sender, EventArgs e)
         {
-            NguoiBan nguoiban = new NguoiBan(ucMaNBan.textBox.Text,ucMaNBan.textBox.Text,ucHoTenNB.textBox.Text,ucSDT.textBox.Text,dtpNgSinh.Value,ucGioiTinh.textBox.Text,ucCCCD.textBox.Text,ucDiaChi.textBox.Text,ucEmail.textBox.Text,ucMoTaShop.textBox.Text);
+            NguoiBan nguoiban = new NguoiBan(ucMaNBan.textBox.Text,ucHoTenNB.textBox.Text,ucSDT.textBox.Text,dtpNgSinh.Value,ucGioiTinh.textBox.Text,ucCCCD.textBox.Text,ucDiaChi.textBox.Text,ucEmail.textBox.Text,ucMoTaShop.textBox.Text);
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT *FROM NguoiBan WHERE TenTaiKhoan = '{0}'",maTK);
+                string sqlStr = string.Format("SELECT *FROM NguoiBan WHERE MaNguoiBan = '{0}'",maTK);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 SqlDataReader docDuLieu = cmd.ExecuteReader();
                 if (docDuLieu.Read())

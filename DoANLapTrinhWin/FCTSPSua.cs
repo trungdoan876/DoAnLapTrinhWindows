@@ -44,5 +44,13 @@ namespace DoANLapTrinhWin
                     cbTinhTrang.Text,ucMaNB.textBox.Text,ucDC.textBox.Text);
             spDao.CapNhatSanPham(sp);
         }
+
+        private void btnDangBan_Click(object sender, EventArgs e)
+        {
+            SanPham sp = new SanPham(ucMaSP.textBox.Text, ucTenSP.textBox.Text, ucGiaSP.textBox.Text, ucGiaGoc.textBox.Text,
+                    ucXuatXu.textBox.Text, ucThoiGian.textBox.Text, dtpNgayDang.Value, ucMoTa.textBox.Text, ucNganhHang.textBox.Text,
+                    cbTinhTrang.Text, ucMaNB.textBox.Text, ucDC.textBox.Text);
+            spDao.CapNhatDangBan(sp);
+        }
     }
 }

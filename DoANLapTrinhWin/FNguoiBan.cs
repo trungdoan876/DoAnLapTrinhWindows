@@ -46,7 +46,7 @@ namespace DoANLapTrinhWin
         }
         private void btnSP_Click(object sender, EventArgs e)
         {
-            moFormCon(new FSanPham());
+            moFormCon(new FSanPham(tenTaiKhoan));
             TaoButton(sender);
         }
         private void btnDonHang_Click(object sender, EventArgs e)

@@ -64,9 +64,9 @@ namespace DoANLapTrinhWin
                 try
                 {
                     conn.Open();
-                    string tenTK = ucDangNhap.textBox.Text;
+                    string tenTK = ucDangNhap.textBox.Text; //tenTK = ma
                     string matKhau = ucMatKhau.textBox.Text;
-                    string sql = "Select * from NguoiMua WHERE TenTaiKhoan='" + tenTK + "' and MatKhau='" + matKhau + "'";
+                    string sql = "Select * from NguoiMua WHERE MaNguoiMua='" + tenTK + "' and MatKhau='" + matKhau + "'";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     SqlDataReader dta = cmd.ExecuteReader();
                     if (dta.Read() == true)
@@ -101,13 +101,13 @@ namespace DoANLapTrinhWin
                     conn.Open();
                     string tenTK = ucDangNhap.textBox.Text;
                     string matKhau = ucMatKhau.textBox.Text;
-                    string sql = "Select * from NguoiBan where TenTaiKhoan='" + tenTK + "' and MatKhau='" + matKhau + "'";
+                    string sql = "Select * from NguoiBan where MaNguoiBan='" + tenTK + "' and MatKhau='" + matKhau + "'";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     SqlDataReader dta = cmd.ExecuteReader();
                     if (dta.Read() == true)
                     {
                         this.Hide(); 
-                        FNguoiBan form2 = new FNguoiBan(ucDangNhap.textBox.Text); 
+                        FNguoiBan form2 = new FNguoiBan(tenTK); 
                         form2.ShowDialog(); 
                         form2 = null; 
                         this.Show();

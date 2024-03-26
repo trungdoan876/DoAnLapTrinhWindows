@@ -16,15 +16,13 @@ namespace DoANLapTrinhWin
     {
         SanPham sp;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        public FCTSP()
+        /*public FCTSP()
         {
             InitializeComponent();
-        }
+        }*/
         public FCTSP(string maSP)
         {
             InitializeComponent();
-
-
         }
         public FCTSP(SanPham sp)
         {
@@ -42,16 +40,13 @@ namespace DoANLapTrinhWin
             lblTGDSD.Text = sp.ThoiGianDaSuDung;
 
         }
-
-
         private void FCTSP_Load(object sender, EventArgs e)
         {
 
         }
-
         int count = -1;
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             if (count >0)
             {
@@ -60,18 +55,16 @@ namespace DoANLapTrinhWin
             }
             pictureBox2.Image = imageList1.Images[count];
         }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void btnNext_Click(object sender, EventArgs e)
         {
             if(count <2) { 
                 count++;
             }
             pictureBox2.Image = imageList1.Images[count];
-           
         }
+        private void btnThemVaoGio_Click(object sender, EventArgs e)
+        {
 
-       
-
-
+        }
     }
 }

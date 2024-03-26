@@ -36,7 +36,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnChuaDangBan = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnThemSP = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -47,7 +46,7 @@
             // 
             this.panelThanSP.Location = new System.Drawing.Point(0, 54);
             this.panelThanSP.Name = "panelThanSP";
-            this.panelThanSP.Size = new System.Drawing.Size(1214, 456);
+            this.panelThanSP.Size = new System.Drawing.Size(1214, 548);
             this.panelThanSP.TabIndex = 1;
             // 
             // panel2
@@ -125,26 +124,12 @@
             this.panel1.Size = new System.Drawing.Size(1214, 55);
             this.panel1.TabIndex = 0;
             // 
-            // btnThemSP
-            // 
-            this.btnThemSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnThemSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemSP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnThemSP.Location = new System.Drawing.Point(386, 516);
-            this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.Size = new System.Drawing.Size(189, 67);
-            this.btnThemSP.TabIndex = 4;
-            this.btnThemSP.Text = "Thêm sản phẩm";
-            this.btnThemSP.UseVisualStyleBackColor = false;
-            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click_1);
-            // 
             // FSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1213, 587);
-            this.Controls.Add(this.btnThemSP);
+            this.ClientSize = new System.Drawing.Size(1213, 598);
             this.Controls.Add(this.panelThanSP);
             this.Controls.Add(this.panel1);
             this.Name = "FSanPham";
@@ -168,6 +153,5 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnChuaDangBan;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnThemSP;
     }
 }

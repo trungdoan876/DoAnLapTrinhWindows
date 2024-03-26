@@ -15,15 +15,7 @@ namespace DoANLapTrinhWin
         public FGioHang()
         {
             InitializeComponent();
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-  
-
+        }  
         private void chuyenKhoanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide(); //an form 1
@@ -33,17 +25,5 @@ namespace DoANLapTrinhWin
             form2 = null; //tat form2, tuc la form 2 tro ve null
             this.Show();
         }
-
-        private void dropdownMenu1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void buttonTuyChinh1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
     }
 }

@@ -13,21 +13,11 @@ namespace DoANLapTrinhWin
 {
     public partial class FMuaHang : Form
     {
-        SanPham sp;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public FMuaHang()
         {
             InitializeComponent();
         }
-        /*private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Hide(); //an form 1
-            FCTSP form2 = new FCTSP(sp); // tao doi tuong form 2
-            form2.ShowDialog(); //show la thao tac dong thoi 2 form
-                                //ShowDialog thi khi tat form2 thi moi tro lai thao tac tren form1
-            form2 = null; //tat form2, tuc la form 2 tro ve null
-            this.Show();
-        }*/
         private void ucsp1_Load(object sender, EventArgs e)
         {
 
@@ -66,9 +56,7 @@ namespace DoANLapTrinhWin
                     ucSP.lblGiaBan.Text = giaBan;
                     ucSP.lblGiaGoc.Text = giaGoc;
                     ucSP.lblDiaChi.Text = diaChi;
-                    
-                    
-
+                    //vi tri moi uc
                     ucSP.Location = new Point(x, y);
                     x += ucSP.Width += 5;
                     if (x == ucSP.Width * 3)
@@ -89,7 +77,6 @@ namespace DoANLapTrinhWin
             }
         }
         bool sidebarExpand = true;
-
         private void sidebarTimer_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand)
@@ -113,14 +100,9 @@ namespace DoANLapTrinhWin
                 }
             }
         }
-
         private void btnBoLoc_Click(object sender, EventArgs e)
         {
             sidebarTimer.Start();
         }
-
- 
     }
-    
-    
 }

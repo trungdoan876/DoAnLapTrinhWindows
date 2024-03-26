@@ -26,5 +26,10 @@ namespace DoANLapTrinhWin
             string sqlStr = string.Format("UPDATE SanPham SET TenSanPham = '{0}', GiaBan = '{1}', GiaGoc ='{2}', XuatXu = '{3}', TGDSD = '{4}',MoTaSanPham ='{5}', NganhHang ='{6}',TinhTrang ='{7}',DiaChi='{9}',NgayDang='{10}' WHERE MaSanPham = '{8}'", sp.TenSP, sp.GiaBan, sp.GiaGoc, sp.XuatXu, sp.ThoiGianDaSuDung, sp.MoTaSanPham, sp.NganhHang, sp.TinhTrang, sp.MaSP, sp.DiaChi, sp.NgayDang);
             tt.ThucThi(sqlStr);
         }
+        public void CapNhatDangBan(SanPham sp)
+        {
+            string sqlStr = string.Format("UPDATE SanPham SET DangBan = '{0}'WHERE MaSanPham ='{1}'", 1,sp.MaSP);
+            tt.ThucThi(sqlStr);
+        }
     }
 }

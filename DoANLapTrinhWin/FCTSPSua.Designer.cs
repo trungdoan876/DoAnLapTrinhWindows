@@ -48,7 +48,7 @@
             this.ucXuatXu = new DoANLapTrinhWin.UCTextBox();
             this.ucGiaSP = new DoANLapTrinhWin.UCTextBox();
             this.ucMaSP = new DoANLapTrinhWin.UCTextBox();
-            this.buttonTuyChinh1 = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.btnDangBan = new DoANLapTrinhWin.ButtonTuyChinh();
             this.dtpNgayDang = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.ucMaNB = new DoANLapTrinhWin.UCTextBox();
@@ -329,22 +329,23 @@
             this.ucMaSP.TabIndex = 219;
             this.ucMaSP.Texts = "";
             // 
-            // buttonTuyChinh1
+            // btnDangBan
             // 
-            this.buttonTuyChinh1.BackColor = System.Drawing.Color.SeaGreen;
-            this.buttonTuyChinh1.FlatAppearance.BorderSize = 0;
-            this.buttonTuyChinh1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTuyChinh1.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTuyChinh1.ForeColor = System.Drawing.Color.White;
-            this.buttonTuyChinh1.Image = ((System.Drawing.Image)(resources.GetObject("buttonTuyChinh1.Image")));
-            this.buttonTuyChinh1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTuyChinh1.Location = new System.Drawing.Point(317, 404);
-            this.buttonTuyChinh1.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonTuyChinh1.Name = "buttonTuyChinh1";
-            this.buttonTuyChinh1.Size = new System.Drawing.Size(172, 63);
-            this.buttonTuyChinh1.TabIndex = 240;
-            this.buttonTuyChinh1.Text = " Đăng bán";
-            this.buttonTuyChinh1.UseVisualStyleBackColor = false;
+            this.btnDangBan.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnDangBan.FlatAppearance.BorderSize = 0;
+            this.btnDangBan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangBan.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangBan.ForeColor = System.Drawing.Color.White;
+            this.btnDangBan.Image = ((System.Drawing.Image)(resources.GetObject("btnDangBan.Image")));
+            this.btnDangBan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangBan.Location = new System.Drawing.Point(317, 404);
+            this.btnDangBan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDangBan.Name = "btnDangBan";
+            this.btnDangBan.Size = new System.Drawing.Size(172, 63);
+            this.btnDangBan.TabIndex = 240;
+            this.btnDangBan.Text = " Đăng bán";
+            this.btnDangBan.UseVisualStyleBackColor = false;
+            this.btnDangBan.Click += new System.EventHandler(this.btnDangBan_Click);
             // 
             // dtpNgayDang
             // 
@@ -422,7 +423,7 @@
             this.Controls.Add(this.ucMaNB);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ucDC);
-            this.Controls.Add(this.buttonTuyChinh1);
+            this.Controls.Add(this.btnDangBan);
             this.Controls.Add(this.lblThoiGianSuDung);
             this.Controls.Add(this.ucThoiGian);
             this.Controls.Add(this.label1);
@@ -472,7 +473,7 @@
         private UCTextBox ucGiaGoc;
         private System.Windows.Forms.Label lblThoiGianSuDung;
         private UCTextBox ucThoiGian;
-        private ButtonTuyChinh buttonTuyChinh1;
+        private ButtonTuyChinh btnDangBan;
         private System.Windows.Forms.DateTimePicker dtpNgayDang;
         private System.Windows.Forms.Label label5;
         private UCTextBox ucMaNB;

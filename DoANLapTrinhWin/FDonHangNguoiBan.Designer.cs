@@ -28,69 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDonHangNguoiBan));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnChuaDangBan = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnDaDangBan = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnTatCaSP = new System.Windows.Forms.Button();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1234, 55);
-            this.panel1.TabIndex = 0;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel2.Location = new System.Drawing.Point(1, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1224, 55);
+            this.panel2.TabIndex = 4;
             // 
-            // button3
+            // panel4
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(634, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(320, 55);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Trả hàng/Hoàn tiền";
-            this.button3.UseVisualStyleBackColor = false;
+            this.panel4.Controls.Add(this.btnChuaDangBan);
+            this.panel4.Location = new System.Drawing.Point(354, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(171, 55);
+            this.panel4.TabIndex = 3;
             // 
-            // button2
+            // btnChuaDangBan
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(317, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(320, 55);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Đã hủy";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnChuaDangBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnChuaDangBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChuaDangBan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnChuaDangBan.Location = new System.Drawing.Point(-16, -15);
+            this.btnChuaDangBan.Name = "btnChuaDangBan";
+            this.btnChuaDangBan.Size = new System.Drawing.Size(205, 87);
+            this.btnChuaDangBan.TabIndex = 4;
+            this.btnChuaDangBan.Text = "Trả hàng/Hoàn tiền";
+            this.btnChuaDangBan.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // panel3
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(320, 55);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Đang thực hiện";
-            this.button1.UseVisualStyleBackColor = false;
+            this.panel3.Controls.Add(this.btnDaDangBan);
+            this.panel3.Location = new System.Drawing.Point(177, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(171, 55);
+            this.panel3.TabIndex = 2;
+            // 
+            // btnDaDangBan
+            // 
+            this.btnDaDangBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDaDangBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDaDangBan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDaDangBan.Location = new System.Drawing.Point(-16, -15);
+            this.btnDaDangBan.Name = "btnDaDangBan";
+            this.btnDaDangBan.Size = new System.Drawing.Size(205, 87);
+            this.btnDaDangBan.TabIndex = 4;
+            this.btnDaDangBan.Text = "Đã hủy";
+            this.btnDaDangBan.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnTatCaSP);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(171, 55);
+            this.panel5.TabIndex = 1;
+            // 
+            // btnTatCaSP
+            // 
+            this.btnTatCaSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTatCaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTatCaSP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnTatCaSP.Location = new System.Drawing.Point(-14, -25);
+            this.btnTatCaSP.Name = "btnTatCaSP";
+            this.btnTatCaSP.Size = new System.Drawing.Size(203, 104);
+            this.btnTatCaSP.TabIndex = 3;
+            this.btnTatCaSP.Text = "Đang thực hiện";
+            this.btnTatCaSP.UseVisualStyleBackColor = false;
             // 
             // FDonHangNguoiBan
             // 
@@ -98,19 +119,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1237, 450);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "FDonHangNguoiBan";
             this.Text = "FDonHangNguoiBan";
-            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnChuaDangBan;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnDaDangBan;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnTatCaSP;
     }
 }

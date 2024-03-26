@@ -34,8 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblTGDSD = new System.Windows.Forms.Label();
@@ -52,8 +52,8 @@
             this.lblNganhHang = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.ucTBMTSP = new DoANLapTrinhWin.UCTextBox();
-            this.buttonTuyChinh2 = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.buttonTuyChinh1 = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.btnThemVaoGio = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.btnMuaHang = new DoANLapTrinhWin.ButtonTuyChinh();
             this.ucHeart1 = new DoANLapTrinhWin.UCHeart();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -97,27 +97,24 @@
             this.pictureBox2.TabIndex = 50;
             this.pictureBox2.TabStop = false;
             // 
-            // button3
+            // btnBack
             // 
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(88, 374);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(56, 34);
-            this.button3.TabIndex = 51;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.Location = new System.Drawing.Point(88, 374);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(56, 34);
+            this.btnBack.TabIndex = 51;
+            this.btnBack.UseVisualStyleBackColor = true;            // 
+            // btnNext
             // 
-            // button4
-            // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(206, 374);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(56, 34);
-            this.button4.TabIndex = 52;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
+            this.btnNext.Location = new System.Drawing.Point(206, 374);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(56, 34);
+            this.btnNext.TabIndex = 52;
+            this.btnNext.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -303,31 +300,32 @@
             this.ucTBMTSP.TabIndex = 69;
             this.ucTBMTSP.Texts = "";
             // 
-            // buttonTuyChinh2
+            // btnThemVaoGio
             // 
-            this.buttonTuyChinh2.BackColor = System.Drawing.Color.SeaGreen;
-            this.buttonTuyChinh2.FlatAppearance.BorderSize = 0;
-            this.buttonTuyChinh2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTuyChinh2.ForeColor = System.Drawing.Color.White;
-            this.buttonTuyChinh2.Location = new System.Drawing.Point(206, 481);
-            this.buttonTuyChinh2.Name = "buttonTuyChinh2";
-            this.buttonTuyChinh2.Size = new System.Drawing.Size(177, 46);
-            this.buttonTuyChinh2.TabIndex = 64;
-            this.buttonTuyChinh2.Text = "Thêm vào giỏ hàng";
-            this.buttonTuyChinh2.UseVisualStyleBackColor = false;
+            this.btnThemVaoGio.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnThemVaoGio.FlatAppearance.BorderSize = 0;
+            this.btnThemVaoGio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemVaoGio.ForeColor = System.Drawing.Color.White;
+            this.btnThemVaoGio.Location = new System.Drawing.Point(206, 481);
+            this.btnThemVaoGio.Name = "btnThemVaoGio";
+            this.btnThemVaoGio.Size = new System.Drawing.Size(177, 46);
+            this.btnThemVaoGio.TabIndex = 64;
+            this.btnThemVaoGio.Text = "Thêm vào giỏ hàng";
+            this.btnThemVaoGio.UseVisualStyleBackColor = false;
+            this.btnThemVaoGio.Click += new System.EventHandler(this.btnThemVaoGio_Click);
             // 
-            // buttonTuyChinh1
+            // btnMuaHang
             // 
-            this.buttonTuyChinh1.BackColor = System.Drawing.Color.SeaGreen;
-            this.buttonTuyChinh1.FlatAppearance.BorderSize = 0;
-            this.buttonTuyChinh1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTuyChinh1.ForeColor = System.Drawing.Color.White;
-            this.buttonTuyChinh1.Location = new System.Drawing.Point(31, 481);
-            this.buttonTuyChinh1.Name = "buttonTuyChinh1";
-            this.buttonTuyChinh1.Size = new System.Drawing.Size(150, 46);
-            this.buttonTuyChinh1.TabIndex = 63;
-            this.buttonTuyChinh1.Text = "Mua Hàng";
-            this.buttonTuyChinh1.UseVisualStyleBackColor = false;
+            this.btnMuaHang.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnMuaHang.FlatAppearance.BorderSize = 0;
+            this.btnMuaHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMuaHang.ForeColor = System.Drawing.Color.White;
+            this.btnMuaHang.Location = new System.Drawing.Point(31, 481);
+            this.btnMuaHang.Name = "btnMuaHang";
+            this.btnMuaHang.Size = new System.Drawing.Size(150, 46);
+            this.btnMuaHang.TabIndex = 63;
+            this.btnMuaHang.Text = "Mua ngay";
+            this.btnMuaHang.UseVisualStyleBackColor = false;
             // 
             // ucHeart1
             // 
@@ -350,8 +348,8 @@
             this.Controls.Add(this.lblXuatxu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNgayDang);
-            this.Controls.Add(this.buttonTuyChinh2);
-            this.Controls.Add(this.buttonTuyChinh1);
+            this.Controls.Add(this.btnThemVaoGio);
+            this.Controls.Add(this.btnMuaHang);
             this.Controls.Add(this.lblDiaChi);
             this.Controls.Add(this.lblGiaBan);
             this.Controls.Add(this.lblGiaGoc);
@@ -360,8 +358,8 @@
             this.Controls.Add(this.lblTGDSD);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTenSP);
@@ -380,8 +378,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblTGDSD;
@@ -390,8 +388,8 @@
         private System.Windows.Forms.Label lblGiaGoc;
         private System.Windows.Forms.Label lblGiaBan;
         private System.Windows.Forms.Label lblDiaChi;
-        private ButtonTuyChinh buttonTuyChinh1;
-        private ButtonTuyChinh buttonTuyChinh2;
+        private ButtonTuyChinh btnMuaHang;
+        private ButtonTuyChinh btnThemVaoGio;
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.Label lblNgayDang;
         private System.Windows.Forms.Label label1;
