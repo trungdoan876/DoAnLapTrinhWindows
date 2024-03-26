@@ -67,5 +67,10 @@ namespace DoANLapTrinhWin
                 conn.Close(); 
             }
         }
+
+        private void panelTatCaSP_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

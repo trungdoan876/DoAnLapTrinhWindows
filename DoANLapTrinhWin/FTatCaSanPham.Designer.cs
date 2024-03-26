@@ -37,6 +37,7 @@
             this.panelTatCaSP.Name = "panelTatCaSP";
             this.panelTatCaSP.Size = new System.Drawing.Size(995, 421);
             this.panelTatCaSP.TabIndex = 0;
+            this.panelTatCaSP.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTatCaSP_Paint);
             // 
             // FTatCaSanPham
             // 
