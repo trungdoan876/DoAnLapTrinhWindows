@@ -105,7 +105,8 @@
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(56, 34);
             this.btnBack.TabIndex = 51;
-            this.btnBack.UseVisualStyleBackColor = true;            // 
+            this.btnBack.UseVisualStyleBackColor = true;
+            // 
             // btnNext
             // 
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
@@ -326,6 +327,7 @@
             this.btnMuaHang.TabIndex = 63;
             this.btnMuaHang.Text = "Mua ngay";
             this.btnMuaHang.UseVisualStyleBackColor = false;
+            this.btnMuaHang.Click += new System.EventHandler(this.btnMuaHang_Click);
             // 
             // ucHeart1
             // 
