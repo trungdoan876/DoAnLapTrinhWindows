@@ -19,7 +19,7 @@ namespace DoANLapTrinhWin
         private void chuyenKhoanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide(); //an form 1
-            FThanhToan form2 = new FThanhToan(); // tao doi tuong form 2
+            FChuyenKhoan form2 = new FChuyenKhoan(); // tao doi tuong form 2
             form2.ShowDialog(); //show la thao tac dong thoi 2 form
                                 //ShowDialog thi khi tat form2 thi moi tro lai thao tac tren form1
             form2 = null; //tat form2, tuc la form 2 tro ve null

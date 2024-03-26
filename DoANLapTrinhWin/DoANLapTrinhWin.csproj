@@ -55,6 +55,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="FThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThanhToan.Designer.cs">
+      <DependentUpon>FThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCTSP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,11 +145,11 @@
     <Compile Include="FTatCaSanPham.Designer.cs">
       <DependentUpon>FTatCaSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="FThanhToan.cs">
+    <Compile Include="FChuyenKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FThanhToan.Designer.cs">
-      <DependentUpon>FThanhToan.cs</DependentUpon>
+    <Compile Include="FChuyenKhoan.Designer.cs">
+      <DependentUpon>FChuyenKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="FThongKeNguoiBan.cs">
       <SubType>Form</SubType>
@@ -246,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FTatCaSanPham.resx">
       <DependentUpon>FTatCaSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChuyenKhoan.resx">
+      <DependentUpon>FChuyenKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThanhToan.resx">
       <DependentUpon>FThanhToan.cs</DependentUpon>

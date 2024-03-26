@@ -69,7 +69,7 @@ namespace DoANLapTrinhWin
         private void btnMuaHang_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FThanhToan form2 = new FThanhToan();
+            FThanhToan form2 = new FThanhToan(sp);
             form2.ShowDialog();
             form2 = null; //tat form2, tuc la form 2 tro ve null
             this.Show();
