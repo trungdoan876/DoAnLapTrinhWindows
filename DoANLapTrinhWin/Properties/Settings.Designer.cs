@@ -26,8 +26,8 @@ namespace DoANLapTrinhWin.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=QuanLyBanHang;Integrated Secur" +
-            "ity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=876LT\\SQLEXPRESS;Initial Catalog=QuanLyBanHang;Integrated Security=Tr" +
+            "ue;Encrypt=False")]
         public string connStr {
             get {
                 return ((string)(this["connStr"]));

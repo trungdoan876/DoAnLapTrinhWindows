@@ -45,9 +45,9 @@ namespace DoANLapTrinhWin
                     string diaChi = row["DiaChi"].ToString();
                     string thoiGianSuDung = row["TGDSD"].ToString();
                     DateTime ngayDang = DateTime.Now;
-                    SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, "", diaChi);
+                    SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi,"", "");
 
-                    UCSPBan ucSPBan = new UCSPBan(sp);
+                    UCSPDangBan ucSPBan = new UCSPDangBan(sp);
 
                     ucSPBan.Location = new Point(x, y);
                     x += ucSPBan.Width += 5;

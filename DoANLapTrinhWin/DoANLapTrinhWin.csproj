@@ -133,17 +133,17 @@
     <Compile Include="FSanPham.Designer.cs">
       <DependentUpon>FSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSanPhamNguoiBan.cs">
+    <Compile Include="FThemSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FSanPhamNguoiBan.Designer.cs">
-      <DependentUpon>FSanPhamNguoiBan.cs</DependentUpon>
+    <Compile Include="FThemSanPham.Designer.cs">
+      <DependentUpon>FThemSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="FTatCaSanPham.cs">
+    <Compile Include="FDanhSachSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FTatCaSanPham.Designer.cs">
-      <DependentUpon>FTatCaSanPham.cs</DependentUpon>
+    <Compile Include="FDanhSachSanPham.Designer.cs">
+      <DependentUpon>FDanhSachSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="FChuyenKhoan.cs">
       <SubType>Form</SubType>
@@ -157,11 +157,11 @@
     <Compile Include="FThongKeNguoiBan.Designer.cs">
       <DependentUpon>FThongKeNguoiBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FThongTinChiTiet.cs">
+    <Compile Include="FThongTinChiTietNguoiMua.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FThongTinChiTiet.Designer.cs">
-      <DependentUpon>FThongTinChiTiet.cs</DependentUpon>
+    <Compile Include="FThongTinChiTietNguoiMua.Designer.cs">
+      <DependentUpon>FThongTinChiTietNguoiMua.cs</DependentUpon>
     </Compile>
     <Compile Include="FThongTinNguoiBan.cs">
       <SubType>Form</SubType>
@@ -190,6 +190,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanPham.cs" />
     <Compile Include="SanPhamDAO.cs" />
+    <Compile Include="UC\UCSPGioHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCSPGioHang.Designer.cs">
+      <DependentUpon>UCSPGioHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCSPDangBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCSPDangBan.Designer.cs">
+      <DependentUpon>UCSPDangBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCHeart.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -247,11 +259,11 @@
     <EmbeddedResource Include="FSanPham.resx">
       <DependentUpon>FSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FSanPhamNguoiBan.resx">
-      <DependentUpon>FSanPhamNguoiBan.cs</DependentUpon>
+    <EmbeddedResource Include="FThemSanPham.resx">
+      <DependentUpon>FThemSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FTatCaSanPham.resx">
-      <DependentUpon>FTatCaSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="FDanhSachSanPham.resx">
+      <DependentUpon>FDanhSachSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FChuyenKhoan.resx">
       <DependentUpon>FChuyenKhoan.cs</DependentUpon>
@@ -262,14 +274,17 @@
     <EmbeddedResource Include="FThongKeNguoiBan.resx">
       <DependentUpon>FThongKeNguoiBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FThongTinChiTiet.resx">
-      <DependentUpon>FThongTinChiTiet.cs</DependentUpon>
+    <EmbeddedResource Include="FThongTinChiTietNguoiMua.resx">
+      <DependentUpon>FThongTinChiTietNguoiMua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThongTinNguoiBan.resx">
       <DependentUpon>FThongTinNguoiBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThongTinNguoiMua.resx">
       <DependentUpon>FThongTinNguoiMua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FYeuThich.resx">
+      <DependentUpon>FYeuThich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -280,6 +295,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UC\UCSPGioHang.resx">
+      <DependentUpon>UCSPGioHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCHeart.resx">
       <DependentUpon>UCHeart.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCSPBan.resx">
       <DependentUpon>UCSPBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCSPDangBan.resx">
+      <DependentUpon>UCSPDangBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCTextBox.resx">
       <DependentUpon>UCTextBox.cs</DependentUpon>
@@ -306,9 +327,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="HinhAnh\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="SQLQuery1.sql" />
   </ItemGroup>

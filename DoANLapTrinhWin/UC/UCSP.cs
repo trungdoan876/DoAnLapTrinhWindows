@@ -32,7 +32,7 @@ namespace DoANLapTrinhWin
             this.lblTenSP.Text = sp.TenSP;
             this.lblGiaBan.Text = "đ" + sp.GiaBan ;
             this.lblGiaGoc.Text = "đ" + sp.GiaGoc ;
-            this.lblDiaChi.Text = sp.DiaChi; 
+            this.lblDiaChi.Text = sp.DiaChi;
         }
         private void UCSP_Click(object sender, EventArgs e)
         {
@@ -42,11 +42,6 @@ namespace DoANLapTrinhWin
             formCTSP.ShowDialog();
             formCTSP = null;
             this.Show();
-        }
-
-        private void ucHeart1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -37,6 +37,7 @@ namespace DoANLapTrinhWin
                 int y = 0;
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
+                    string maNB = row["MaNguoiBan"].ToString();
                     string maSP = row["MaSanPham"].ToString();
                     string tenSP = row["TenSanPham"].ToString();
                     string giaBan = "đ" + row["GiaBan"].ToString() ;
@@ -48,8 +49,8 @@ namespace DoANLapTrinhWin
                     string moTaSP = row["MoTaSanPham"].ToString();
                     string tinhTrang = row["TinhTrang"].ToString();
                     string thoiGianSuDung = row["TGDSD"].ToString();
-
-                    SanPham sp = new SanPham(maSP, tenSP, giaBan, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, "", diaChi);
+                    string soLuong = row["SoLuong"].ToString();
+                    SanPham sp = new SanPham(maSP, tenSP, giaBan, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi,maNB,soLuong);
                     UCSP ucSP = new UCSP(sp);
                     ucSP.lblMaSP.Text = maSP;
                     ucSP.lblTenSP.Text = tenSP;

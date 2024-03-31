@@ -118,7 +118,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1237, 450);
+            this.ClientSize = new System.Drawing.Size(1237, 624);
             this.Controls.Add(this.panel2);
             this.Name = "FDonHangNguoiBan";
             this.Text = "FDonHangNguoiBan";

@@ -60,7 +60,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(75, 74);
+            this.pictureBox1.Location = new System.Drawing.Point(169, 140);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -71,7 +71,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(262, 187);
+            this.label2.Location = new System.Drawing.Point(356, 253);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 184;
@@ -81,7 +81,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label3.Location = new System.Drawing.Point(262, 110);
+            this.label3.Location = new System.Drawing.Point(356, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 20);
             this.label3.TabIndex = 183;
@@ -91,7 +91,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label6.Location = new System.Drawing.Point(262, 37);
+            this.label6.Location = new System.Drawing.Point(356, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 20);
             this.label6.TabIndex = 182;
@@ -101,7 +101,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label7.Location = new System.Drawing.Point(609, 265);
+            this.label7.Location = new System.Drawing.Point(703, 331);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 20);
             this.label7.TabIndex = 176;
@@ -111,7 +111,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label5.Location = new System.Drawing.Point(609, 187);
+            this.label5.Location = new System.Drawing.Point(703, 253);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 20);
             this.label5.TabIndex = 175;
@@ -121,7 +121,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label4.Location = new System.Drawing.Point(609, 110);
+            this.label4.Location = new System.Drawing.Point(703, 176);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 20);
             this.label4.TabIndex = 174;
@@ -131,7 +131,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label11.Location = new System.Drawing.Point(609, 37);
+            this.label11.Location = new System.Drawing.Point(703, 103);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(57, 20);
             this.label11.TabIndex = 173;
@@ -141,7 +141,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label1.Location = new System.Drawing.Point(262, 265);
+            this.label1.Location = new System.Drawing.Point(356, 331);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 190;
@@ -151,7 +151,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label8.Location = new System.Drawing.Point(262, 349);
+            this.label8.Location = new System.Drawing.Point(356, 415);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 20);
             this.label8.TabIndex = 188;
@@ -161,7 +161,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.White;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(842, 320);
+            this.pictureBox5.Location = new System.Drawing.Point(936, 386);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(151, 169);
@@ -173,7 +173,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(10, 265);
+            this.pictureBox2.Location = new System.Drawing.Point(104, 331);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(274, 254);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -189,7 +189,7 @@
             this.ucSDT.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucSDT.GachChan = false;
             this.ucSDT.KichThuocKhung = 1;
-            this.ucSDT.Location = new System.Drawing.Point(250, 276);
+            this.ucSDT.Location = new System.Drawing.Point(344, 342);
             this.ucSDT.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucSDT.Multiline = false;
             this.ucSDT.Name = "ucSDT";
@@ -208,7 +208,7 @@
             this.ucMoTaShop.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucMoTaShop.GachChan = false;
             this.ucMoTaShop.KichThuocKhung = 1;
-            this.ucMoTaShop.Location = new System.Drawing.Point(250, 357);
+            this.ucMoTaShop.Location = new System.Drawing.Point(344, 423);
             this.ucMoTaShop.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucMoTaShop.Multiline = true;
             this.ucMoTaShop.Name = "ucMoTaShop";
@@ -227,7 +227,7 @@
             this.ucGioiTinh.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucGioiTinh.GachChan = false;
             this.ucGioiTinh.KichThuocKhung = 1;
-            this.ucGioiTinh.Location = new System.Drawing.Point(250, 121);
+            this.ucGioiTinh.Location = new System.Drawing.Point(344, 187);
             this.ucGioiTinh.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucGioiTinh.Multiline = false;
             this.ucGioiTinh.Name = "ucGioiTinh";
@@ -246,7 +246,7 @@
             this.ucMaNBan.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucMaNBan.GachChan = false;
             this.ucMaNBan.KichThuocKhung = 1;
-            this.ucMaNBan.Location = new System.Drawing.Point(250, 46);
+            this.ucMaNBan.Location = new System.Drawing.Point(344, 112);
             this.ucMaNBan.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucMaNBan.Multiline = false;
             this.ucMaNBan.Name = "ucMaNBan";
@@ -265,7 +265,7 @@
             this.ucEmail.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucEmail.GachChan = false;
             this.ucEmail.KichThuocKhung = 1;
-            this.ucEmail.Location = new System.Drawing.Point(597, 276);
+            this.ucEmail.Location = new System.Drawing.Point(691, 342);
             this.ucEmail.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucEmail.Multiline = false;
             this.ucEmail.Name = "ucEmail";
@@ -284,7 +284,7 @@
             this.ucCCCD.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucCCCD.GachChan = false;
             this.ucCCCD.KichThuocKhung = 1;
-            this.ucCCCD.Location = new System.Drawing.Point(597, 121);
+            this.ucCCCD.Location = new System.Drawing.Point(691, 187);
             this.ucCCCD.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucCCCD.Multiline = false;
             this.ucCCCD.Name = "ucCCCD";
@@ -303,7 +303,7 @@
             this.ucHoTenNB.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucHoTenNB.GachChan = false;
             this.ucHoTenNB.KichThuocKhung = 1;
-            this.ucHoTenNB.Location = new System.Drawing.Point(597, 46);
+            this.ucHoTenNB.Location = new System.Drawing.Point(691, 112);
             this.ucHoTenNB.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucHoTenNB.Multiline = false;
             this.ucHoTenNB.Name = "ucHoTenNB";
@@ -322,7 +322,7 @@
             this.ucDiaChi.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucDiaChi.GachChan = false;
             this.ucDiaChi.KichThuocKhung = 1;
-            this.ucDiaChi.Location = new System.Drawing.Point(597, 198);
+            this.ucDiaChi.Location = new System.Drawing.Point(691, 264);
             this.ucDiaChi.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucDiaChi.Multiline = false;
             this.ucDiaChi.Name = "ucDiaChi";
@@ -338,7 +338,7 @@
             this.buttonTuyChinh1.FlatAppearance.BorderSize = 0;
             this.buttonTuyChinh1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTuyChinh1.ForeColor = System.Drawing.Color.White;
-            this.buttonTuyChinh1.Location = new System.Drawing.Point(64, 211);
+            this.buttonTuyChinh1.Location = new System.Drawing.Point(158, 277);
             this.buttonTuyChinh1.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTuyChinh1.Name = "buttonTuyChinh1";
             this.buttonTuyChinh1.Size = new System.Drawing.Size(121, 51);
@@ -348,7 +348,7 @@
             // 
             // dtpNgSinh
             // 
-            this.dtpNgSinh.Location = new System.Drawing.Point(250, 210);
+            this.dtpNgSinh.Location = new System.Drawing.Point(344, 276);
             this.dtpNgSinh.Name = "dtpNgSinh";
             this.dtpNgSinh.Size = new System.Drawing.Size(285, 26);
             this.dtpNgSinh.TabIndex = 191;
@@ -358,7 +358,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(971, 547);
+            this.ClientSize = new System.Drawing.Size(1178, 744);
             this.Controls.Add(this.dtpNgSinh);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ucSDT);

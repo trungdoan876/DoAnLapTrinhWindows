@@ -13,6 +13,7 @@ namespace DoANLapTrinhWin
         private string giaBan;
         private string giaGoc;
         private string xuatXu;
+        private string soLuong; //so luong co san
 	    private string thoiGianDaSuDung;
         private DateTime ngayDang;
         private string moTaSanPham;
@@ -20,8 +21,23 @@ namespace DoANLapTrinhWin
         private string tinhTrang;
         private string maNguoiBan;
         private string diaChi;
+        public SanPham(string tenSP, string giaBan, string tinhTrang,string maSP,string soLuong) //khoi tao dung cho FGioHang
+        {
+            this.tenSP = tenSP;
+            this.giaBan = giaBan;
+            this.tinhTrang = tinhTrang;
+            this.maSP = maSP;
+            this.soLuong = soLuong;
+        }
+        public SanPham(string tenSP, string giaBan,string giaGoc,string diaChi) //khoi tao dung  cho FYeuThich
+        {
+            this.tenSP = tenSP;
+            this.giaBan = giaBan;
+            this.diaChi = diaChi;
+            this.giaGoc = giaGoc;
+        }
         public SanPham(string maSP, string tenSP, string giaBan, string giaGoc, string xuatXu, string thoiGianDaSuDung,DateTime ngayDang, string moTaSanPham,
-            string nganhHang, string tinhTrang, string maNguoiBan, string diaChi)
+            string nganhHang, string tinhTrang, string diaChi, string maNguoiBan, string soLuong)
         {
             this.maSP = maSP;
             this.tenSP = tenSP;
@@ -33,11 +49,11 @@ namespace DoANLapTrinhWin
             this.moTaSanPham = moTaSanPham;
             this.nganhHang = nganhHang;
             this.tinhTrang = tinhTrang;
-            this.maNguoiBan = maNguoiBan;
             this.diaChi = diaChi;
-
+            this.maNguoiBan = maNguoiBan;
+            this.soLuong = soLuong;
         }
-
+        public string SoLuong { get => soLuong; set => soLuong = value; }
         public string MaSP { get => maSP; set => maSP = value; }
         public string TenSP { get => tenSP; set => tenSP = value; }
         public string GiaBan { get => giaBan; set => giaBan = value; }

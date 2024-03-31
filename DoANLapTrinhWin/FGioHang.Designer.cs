@@ -90,10 +90,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(676, 400);
+            this.pictureBox1.Location = new System.Drawing.Point(676, 423);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(302, 220);
+            this.pictureBox1.Size = new System.Drawing.Size(302, 197);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 63;
             this.pictureBox1.TabStop = false;
@@ -110,7 +110,7 @@
             this.buttonTuyChinh1.Location = new System.Drawing.Point(725, 551);
             this.buttonTuyChinh1.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTuyChinh1.Name = "buttonTuyChinh1";
-            this.buttonTuyChinh1.Size = new System.Drawing.Size(210, 69);
+            this.buttonTuyChinh1.Size = new System.Drawing.Size(219, 69);
             this.buttonTuyChinh1.TabIndex = 64;
             this.buttonTuyChinh1.Text = "Thanh toán";
             this.buttonTuyChinh1.UseVisualStyleBackColor = false;
@@ -120,15 +120,15 @@
             this.panelGioHang.AutoScroll = true;
             this.panelGioHang.Location = new System.Drawing.Point(-2, -2);
             this.panelGioHang.Name = "panelGioHang";
-            this.panelGioHang.Size = new System.Drawing.Size(1064, 397);
+            this.panelGioHang.Size = new System.Drawing.Size(1180, 432);
             this.panelGioHang.TabIndex = 65;
             // 
             // FGioHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LavenderBlush;
-            this.ClientSize = new System.Drawing.Size(1061, 631);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1178, 644);
             this.Controls.Add(this.panelGioHang);
             this.Controls.Add(this.buttonTuyChinh1);
             this.Controls.Add(this.pictureBox1);
@@ -153,5 +153,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private ButtonTuyChinh buttonTuyChinh1;
         private System.Windows.Forms.Panel panelGioHang;
+
     }
 }

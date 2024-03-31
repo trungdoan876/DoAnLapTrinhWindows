@@ -13,7 +13,7 @@ namespace DoANLapTrinhWin
         DBConnection tt = new DBConnection();
         public void ThemSanPham(SanPham sp)
         {
-            string sqlStr = string.Format("INSERT INTO SanPham(MaSanPham, TenSanPham, GiaBan, GiaGoc, XuatXu, TGDSD, MoTaSanPham, NganhHang, TinhTrang,DiaChi,MaNguoiBan,NgayDang ) VALUES ('{0}', N'{1}', '{2}','{3}', N'{4}','{5}',N'{6}',N'{7}',N'{8}',N'{9}','{10}','{11}' )", sp.MaSP, sp.TenSP, sp.GiaBan, sp.GiaGoc, sp.XuatXu, sp.ThoiGianDaSuDung, sp.MoTaSanPham, sp.NganhHang, sp.TinhTrang,sp.DiaChi,sp.MaNguoiBan,sp.NgayDang);
+            string sqlStr = string.Format("INSERT INTO SanPham(MaSanPham, TenSanPham, GiaBan, GiaGoc, XuatXu, TGDSD, MoTaSanPham, NganhHang, TinhTrang,DiaChi,NgayDang,MaNguoiBan,SoLuong) VALUES ('{0}', N'{1}', '{2}','{3}', N'{4}','{5}',N'{6}',N'{7}',N'{8}',N'{9}','{10}','{11}','{12}')", sp.MaSP, sp.TenSP, sp.GiaBan, sp.GiaGoc, sp.XuatXu, sp.ThoiGianDaSuDung, sp.MoTaSanPham, sp.NganhHang, sp.TinhTrang,sp.DiaChi,sp.NgayDang,sp.MaNguoiBan,sp.SoLuong);
             tt.ThucThi(sqlStr);
         }
         public void XoaSanPham(SanPham sp)
@@ -29,6 +29,12 @@ namespace DoANLapTrinhWin
         public void CapNhatDangBan(SanPham sp)
         {
             string sqlStr = string.Format("UPDATE SanPham SET DangBan = '{0}'WHERE MaSanPham ='{1}'", 1,sp.MaSP);
+            //kiem tra dang ban xem da dang ban chua thi moi duoc dang ban
+            tt.ThucThi(sqlStr);
+        }
+        public void GoSanPham(SanPham sp)
+        {
+            string sqlStr = string.Format("UPDATE SanPham SET DangBan = '{0}'WHERE MaSanPham ='{1}'", 0, sp.MaSP);
             tt.ThucThi(sqlStr);
         }
     }

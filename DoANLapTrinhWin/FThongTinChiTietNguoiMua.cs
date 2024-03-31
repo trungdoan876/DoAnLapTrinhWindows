@@ -11,11 +11,10 @@ using System.Windows.Forms;
 
 namespace DoANLapTrinhWin
 {
-    public partial class FThongTinChiTiet : Form
+    public partial class FThongTinChiTietNguoiMua : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        //NguoiMua nguoiMua = new NguoiMua();
-        public FThongTinChiTiet()
+        public FThongTinChiTietNguoiMua()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace DoANLapTrinhWin
 {
-    partial class FSanPhamNguoiBan
+    partial class FThemSanPham
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FSanPhamNguoiBan));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FThemSanPham));
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -37,6 +37,17 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.cbbTinhTrang = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtpNgayDang = new System.Windows.Forms.DateTimePicker();
+            this.lblMaNB = new System.Windows.Forms.Label();
+            this.ucDC = new DoANLapTrinhWin.UCTextBox();
+            this.ucTGDSD = new DoANLapTrinhWin.UCTextBox();
+            this.ucGiaGoc = new DoANLapTrinhWin.UCTextBox();
             this.ucMoTaSP = new DoANLapTrinhWin.UCTextBox();
             this.ucNganhHang = new DoANLapTrinhWin.UCTextBox();
             this.ucTenSP = new DoANLapTrinhWin.UCTextBox();
@@ -45,17 +56,8 @@
             this.ucXuatXu = new DoANLapTrinhWin.UCTextBox();
             this.ucGiaBan = new DoANLapTrinhWin.UCTextBox();
             this.ucMaSP = new DoANLapTrinhWin.UCTextBox();
-            this.cbbTinhTrang = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ucGiaGoc = new DoANLapTrinhWin.UCTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ucTGDSD = new DoANLapTrinhWin.UCTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.ucDC = new DoANLapTrinhWin.UCTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.ucMaNB = new DoANLapTrinhWin.UCTextBox();
-            this.dtpNgayDang = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ucSoLuong = new DoANLapTrinhWin.UCTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +66,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label9.Location = new System.Drawing.Point(63, 66);
+            this.label9.Location = new System.Drawing.Point(411, 80);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(105, 20);
             this.label9.TabIndex = 186;
@@ -74,7 +76,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label10.Location = new System.Drawing.Point(60, 138);
+            this.label10.Location = new System.Drawing.Point(408, 145);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(108, 20);
             this.label10.TabIndex = 192;
@@ -84,7 +86,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label11.Location = new System.Drawing.Point(60, 270);
+            this.label11.Location = new System.Drawing.Point(421, 272);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 20);
             this.label11.TabIndex = 194;
@@ -93,7 +95,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(51, 356);
+            this.pictureBox2.Location = new System.Drawing.Point(599, 395);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(199, 180);
@@ -104,7 +106,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(747, 204);
+            this.pictureBox3.Location = new System.Drawing.Point(-29, 20);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(423, 451);
@@ -116,17 +118,17 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label13.Location = new System.Drawing.Point(455, 269);
+            this.label13.Location = new System.Drawing.Point(815, 337);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(123, 20);
+            this.label13.Size = new System.Drawing.Size(194, 20);
             this.label13.TabIndex = 216;
-            this.label13.Text = "Mô tả sản phẩm";
+            this.label13.Text = "Mô tả tình trạng sản phẩm";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(455, 138);
+            this.label2.Location = new System.Drawing.Point(815, 151);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 214;
@@ -136,11 +138,148 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label8.Location = new System.Drawing.Point(455, 66);
+            this.label8.Location = new System.Drawing.Point(815, 80);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 20);
             this.label8.TabIndex = 212;
             this.label8.Text = "Tên sản phẩm";
+            // 
+            // cbbTinhTrang
+            // 
+            this.cbbTinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTinhTrang.FormattingEnabled = true;
+            this.cbbTinhTrang.Items.AddRange(new object[] {
+            "10%",
+            "20%",
+            "30%"});
+            this.cbbTinhTrang.Location = new System.Drawing.Point(399, 410);
+            this.cbbTinhTrang.Name = "cbbTinhTrang";
+            this.cbbTinhTrang.Size = new System.Drawing.Size(340, 37);
+            this.cbbTinhTrang.TabIndex = 217;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label12.Location = new System.Drawing.Point(424, 393);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(80, 20);
+            this.label12.TabIndex = 218;
+            this.label12.Text = "Tình trạng";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label1.Location = new System.Drawing.Point(421, 204);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 20);
+            this.label1.TabIndex = 220;
+            this.label1.Text = "Giá gốc";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label3.Location = new System.Drawing.Point(815, 204);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(134, 20);
+            this.label3.TabIndex = 222;
+            this.label3.Text = "Thời gian sử dụng";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label4.Location = new System.Drawing.Point(411, 338);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 20);
+            this.label4.TabIndex = 224;
+            this.label4.Text = "Địa chỉ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label5.Location = new System.Drawing.Point(53, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 20);
+            this.label5.TabIndex = 226;
+            this.label5.Text = "Mã người bán:";
+            // 
+            // dtpNgayDang
+            // 
+            this.dtpNgayDang.Location = new System.Drawing.Point(1003, 20);
+            this.dtpNgayDang.Name = "dtpNgayDang";
+            this.dtpNgayDang.Size = new System.Drawing.Size(264, 26);
+            this.dtpNgayDang.TabIndex = 227;
+            // 
+            // lblMaNB
+            // 
+            this.lblMaNB.AutoSize = true;
+            this.lblMaNB.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lblMaNB.Location = new System.Drawing.Point(164, 26);
+            this.lblMaNB.Name = "lblMaNB";
+            this.lblMaNB.Size = new System.Drawing.Size(45, 20);
+            this.lblMaNB.TabIndex = 228;
+            this.lblMaNB.Text = "NBxx";
+            // 
+            // ucDC
+            // 
+            this.ucDC.BackColor = System.Drawing.SystemColors.Window;
+            this.ucDC.BanKinhKhung = 15;
+            this.ucDC.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucDC.ChumoText = "";
+            this.ucDC.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucDC.GachChan = false;
+            this.ucDC.KichThuocKhung = 1;
+            this.ucDC.Location = new System.Drawing.Point(399, 349);
+            this.ucDC.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucDC.Multiline = false;
+            this.ucDC.Name = "ucDC";
+            this.ucDC.Padding = new System.Windows.Forms.Padding(7);
+            this.ucDC.PasswordChar = false;
+            this.ucDC.Size = new System.Drawing.Size(340, 40);
+            this.ucDC.TabIndex = 223;
+            this.ucDC.Texts = "";
+            // 
+            // ucTGDSD
+            // 
+            this.ucTGDSD.BackColor = System.Drawing.SystemColors.Window;
+            this.ucTGDSD.BanKinhKhung = 15;
+            this.ucTGDSD.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucTGDSD.ChumoText = "";
+            this.ucTGDSD.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucTGDSD.GachChan = false;
+            this.ucTGDSD.KichThuocKhung = 1;
+            this.ucTGDSD.Location = new System.Drawing.Point(803, 216);
+            this.ucTGDSD.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucTGDSD.Multiline = false;
+            this.ucTGDSD.Name = "ucTGDSD";
+            this.ucTGDSD.Padding = new System.Windows.Forms.Padding(7);
+            this.ucTGDSD.PasswordChar = false;
+            this.ucTGDSD.Size = new System.Drawing.Size(464, 40);
+            this.ucTGDSD.TabIndex = 221;
+            this.ucTGDSD.Texts = "";
+            // 
+            // ucGiaGoc
+            // 
+            this.ucGiaGoc.BackColor = System.Drawing.SystemColors.Window;
+            this.ucGiaGoc.BanKinhKhung = 15;
+            this.ucGiaGoc.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucGiaGoc.ChumoText = "";
+            this.ucGiaGoc.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucGiaGoc.GachChan = false;
+            this.ucGiaGoc.KichThuocKhung = 1;
+            this.ucGiaGoc.Location = new System.Drawing.Point(399, 216);
+            this.ucGiaGoc.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucGiaGoc.Multiline = false;
+            this.ucGiaGoc.Name = "ucGiaGoc";
+            this.ucGiaGoc.Padding = new System.Windows.Forms.Padding(7);
+            this.ucGiaGoc.PasswordChar = false;
+            this.ucGiaGoc.Size = new System.Drawing.Size(340, 40);
+            this.ucGiaGoc.TabIndex = 219;
+            this.ucGiaGoc.Texts = "";
             // 
             // ucMoTaSP
             // 
@@ -151,13 +290,13 @@
             this.ucMoTaSP.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucMoTaSP.GachChan = false;
             this.ucMoTaSP.KichThuocKhung = 1;
-            this.ucMoTaSP.Location = new System.Drawing.Point(443, 281);
+            this.ucMoTaSP.Location = new System.Drawing.Point(803, 349);
             this.ucMoTaSP.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucMoTaSP.Multiline = false;
             this.ucMoTaSP.Name = "ucMoTaSP";
             this.ucMoTaSP.Padding = new System.Windows.Forms.Padding(7);
             this.ucMoTaSP.PasswordChar = false;
-            this.ucMoTaSP.Size = new System.Drawing.Size(464, 119);
+            this.ucMoTaSP.Size = new System.Drawing.Size(464, 98);
             this.ucMoTaSP.TabIndex = 215;
             this.ucMoTaSP.Texts = "";
             // 
@@ -170,7 +309,7 @@
             this.ucNganhHang.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucNganhHang.GachChan = false;
             this.ucNganhHang.KichThuocKhung = 1;
-            this.ucNganhHang.Location = new System.Drawing.Point(443, 150);
+            this.ucNganhHang.Location = new System.Drawing.Point(803, 154);
             this.ucNganhHang.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucNganhHang.Multiline = false;
             this.ucNganhHang.Name = "ucNganhHang";
@@ -189,7 +328,7 @@
             this.ucTenSP.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucTenSP.GachChan = false;
             this.ucTenSP.KichThuocKhung = 1;
-            this.ucTenSP.Location = new System.Drawing.Point(443, 78);
+            this.ucTenSP.Location = new System.Drawing.Point(803, 86);
             this.ucTenSP.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucTenSP.Multiline = false;
             this.ucTenSP.Name = "ucTenSP";
@@ -205,7 +344,7 @@
             this.buttonTuyChinh1.FlatAppearance.BorderSize = 0;
             this.buttonTuyChinh1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTuyChinh1.ForeColor = System.Drawing.Color.White;
-            this.buttonTuyChinh1.Location = new System.Drawing.Point(22, 464);
+            this.buttonTuyChinh1.Location = new System.Drawing.Point(90, 407);
             this.buttonTuyChinh1.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTuyChinh1.Name = "buttonTuyChinh1";
             this.buttonTuyChinh1.Size = new System.Drawing.Size(146, 54);
@@ -222,7 +361,7 @@
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(477, 464);
+            this.btnThem.Location = new System.Drawing.Point(567, 502);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(172, 63);
@@ -240,7 +379,7 @@
             this.ucXuatXu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucXuatXu.GachChan = false;
             this.ucXuatXu.KichThuocKhung = 1;
-            this.ucXuatXu.Location = new System.Drawing.Point(51, 281);
+            this.ucXuatXu.Location = new System.Drawing.Point(399, 285);
             this.ucXuatXu.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucXuatXu.Multiline = false;
             this.ucXuatXu.Name = "ucXuatXu";
@@ -259,7 +398,7 @@
             this.ucGiaBan.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucGiaBan.GachChan = false;
             this.ucGiaBan.KichThuocKhung = 1;
-            this.ucGiaBan.Location = new System.Drawing.Point(51, 148);
+            this.ucGiaBan.Location = new System.Drawing.Point(399, 154);
             this.ucGiaBan.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucGiaBan.Multiline = false;
             this.ucGiaBan.Name = "ucGiaBan";
@@ -278,7 +417,7 @@
             this.ucMaSP.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucMaSP.GachChan = false;
             this.ucMaSP.KichThuocKhung = 1;
-            this.ucMaSP.Location = new System.Drawing.Point(51, 78);
+            this.ucMaSP.Location = new System.Drawing.Point(399, 91);
             this.ucMaSP.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucMaSP.Multiline = false;
             this.ucMaSP.Name = "ucMaSP";
@@ -288,161 +427,46 @@
             this.ucMaSP.TabIndex = 184;
             this.ucMaSP.Texts = "";
             // 
-            // cbbTinhTrang
+            // label6
             // 
-            this.cbbTinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTinhTrang.FormattingEnabled = true;
-            this.cbbTinhTrang.Items.AddRange(new object[] {
-            "10%",
-            "20%",
-            "30%"});
-            this.cbbTinhTrang.Location = new System.Drawing.Point(51, 356);
-            this.cbbTinhTrang.Name = "cbbTinhTrang";
-            this.cbbTinhTrang.Size = new System.Drawing.Size(340, 37);
-            this.cbbTinhTrang.TabIndex = 217;
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label6.Location = new System.Drawing.Point(815, 273);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(123, 20);
+            this.label6.TabIndex = 230;
+            this.label6.Text = "Số lượng sẵn có";
             // 
-            // label12
+            // ucSoLuong
             // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label12.Location = new System.Drawing.Point(63, 342);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 20);
-            this.label12.TabIndex = 218;
-            this.label12.Text = "Tình trạng";
+            this.ucSoLuong.BackColor = System.Drawing.SystemColors.Window;
+            this.ucSoLuong.BanKinhKhung = 15;
+            this.ucSoLuong.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucSoLuong.ChumoText = "";
+            this.ucSoLuong.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucSoLuong.GachChan = false;
+            this.ucSoLuong.KichThuocKhung = 1;
+            this.ucSoLuong.Location = new System.Drawing.Point(803, 285);
+            this.ucSoLuong.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucSoLuong.Multiline = false;
+            this.ucSoLuong.Name = "ucSoLuong";
+            this.ucSoLuong.Padding = new System.Windows.Forms.Padding(7);
+            this.ucSoLuong.PasswordChar = false;
+            this.ucSoLuong.Size = new System.Drawing.Size(464, 40);
+            this.ucSoLuong.TabIndex = 229;
+            this.ucSoLuong.Texts = "";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label1.Location = new System.Drawing.Point(60, 211);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 20);
-            this.label1.TabIndex = 220;
-            this.label1.Text = "Giá gốc";
-            // 
-            // ucGiaGoc
-            // 
-            this.ucGiaGoc.BackColor = System.Drawing.SystemColors.Window;
-            this.ucGiaGoc.BanKinhKhung = 15;
-            this.ucGiaGoc.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucGiaGoc.ChumoText = "";
-            this.ucGiaGoc.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucGiaGoc.GachChan = false;
-            this.ucGiaGoc.KichThuocKhung = 1;
-            this.ucGiaGoc.Location = new System.Drawing.Point(51, 221);
-            this.ucGiaGoc.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucGiaGoc.Multiline = false;
-            this.ucGiaGoc.Name = "ucGiaGoc";
-            this.ucGiaGoc.Padding = new System.Windows.Forms.Padding(7);
-            this.ucGiaGoc.PasswordChar = false;
-            this.ucGiaGoc.Size = new System.Drawing.Size(340, 40);
-            this.ucGiaGoc.TabIndex = 219;
-            this.ucGiaGoc.Texts = "";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label3.Location = new System.Drawing.Point(455, 209);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 20);
-            this.label3.TabIndex = 222;
-            this.label3.Text = "Thời gian sử dụng";
-            // 
-            // ucTGDSD
-            // 
-            this.ucTGDSD.BackColor = System.Drawing.SystemColors.Window;
-            this.ucTGDSD.BanKinhKhung = 15;
-            this.ucTGDSD.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucTGDSD.ChumoText = "";
-            this.ucTGDSD.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucTGDSD.GachChan = false;
-            this.ucTGDSD.KichThuocKhung = 1;
-            this.ucTGDSD.Location = new System.Drawing.Point(443, 221);
-            this.ucTGDSD.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucTGDSD.Multiline = false;
-            this.ucTGDSD.Name = "ucTGDSD";
-            this.ucTGDSD.Padding = new System.Windows.Forms.Padding(7);
-            this.ucTGDSD.PasswordChar = false;
-            this.ucTGDSD.Size = new System.Drawing.Size(464, 40);
-            this.ucTGDSD.TabIndex = 221;
-            this.ucTGDSD.Texts = "";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label4.Location = new System.Drawing.Point(943, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
-            this.label4.TabIndex = 224;
-            this.label4.Text = "Địa chỉ";
-            // 
-            // ucDC
-            // 
-            this.ucDC.BackColor = System.Drawing.SystemColors.Window;
-            this.ucDC.BanKinhKhung = 15;
-            this.ucDC.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucDC.ChumoText = "";
-            this.ucDC.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucDC.GachChan = false;
-            this.ucDC.KichThuocKhung = 1;
-            this.ucDC.Location = new System.Drawing.Point(931, 78);
-            this.ucDC.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucDC.Multiline = false;
-            this.ucDC.Name = "ucDC";
-            this.ucDC.Padding = new System.Windows.Forms.Padding(7);
-            this.ucDC.PasswordChar = false;
-            this.ucDC.Size = new System.Drawing.Size(336, 40);
-            this.ucDC.TabIndex = 223;
-            this.ucDC.Texts = "";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label5.Location = new System.Drawing.Point(943, 136);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 20);
-            this.label5.TabIndex = 226;
-            this.label5.Text = "Mã người bán";
-            // 
-            // ucMaNB
-            // 
-            this.ucMaNB.BackColor = System.Drawing.SystemColors.Window;
-            this.ucMaNB.BanKinhKhung = 15;
-            this.ucMaNB.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucMaNB.ChumoText = "";
-            this.ucMaNB.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucMaNB.GachChan = false;
-            this.ucMaNB.KichThuocKhung = 1;
-            this.ucMaNB.Location = new System.Drawing.Point(931, 148);
-            this.ucMaNB.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucMaNB.Multiline = false;
-            this.ucMaNB.Name = "ucMaNB";
-            this.ucMaNB.Padding = new System.Windows.Forms.Padding(7);
-            this.ucMaNB.PasswordChar = false;
-            this.ucMaNB.Size = new System.Drawing.Size(336, 40);
-            this.ucMaNB.TabIndex = 225;
-            this.ucMaNB.Texts = "";
-            // 
-            // dtpNgayDang
-            // 
-            this.dtpNgayDang.Location = new System.Drawing.Point(1003, 26);
-            this.dtpNgayDang.Name = "dtpNgayDang";
-            this.dtpNgayDang.Size = new System.Drawing.Size(264, 26);
-            this.dtpNgayDang.TabIndex = 227;
-            // 
-            // FSanPhamNguoiBan
+            // FThemSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1279, 576);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.ucSoLuong);
+            this.Controls.Add(this.lblMaNB);
             this.Controls.Add(this.dtpNgayDang);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.ucMaNB);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ucDC);
             this.Controls.Add(this.label3);
@@ -457,9 +481,7 @@
             this.Controls.Add(this.ucNganhHang);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.ucTenSP);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.buttonTuyChinh1);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.ucXuatXu);
@@ -467,7 +489,9 @@
             this.Controls.Add(this.ucGiaBan);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.ucMaSP);
-            this.Name = "FSanPhamNguoiBan";
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Name = "FThemSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FSanPhamNguoiBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -503,7 +527,9 @@
         private System.Windows.Forms.Label label4;
         private UCTextBox ucDC;
         private System.Windows.Forms.Label label5;
-        private UCTextBox ucMaNB;
         private System.Windows.Forms.DateTimePicker dtpNgayDang;
+        private System.Windows.Forms.Label lblMaNB;
+        private System.Windows.Forms.Label label6;
+        private UCTextBox ucSoLuong;
     }
 }

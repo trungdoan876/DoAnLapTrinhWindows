@@ -90,7 +90,7 @@ namespace DoANLapTrinhWin
             MessageBox.Show("Bạn đã đặt hàng thành công. ");
 
         }
-        int soluong = 1;
+        //int soluong = 1;
         private void btnTru_Click(object sender, EventArgs e)
         {
             if (int.TryParse(txtSL.Text, out int value))

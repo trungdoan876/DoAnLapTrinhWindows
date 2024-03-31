@@ -17,7 +17,7 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.maNBan = maNB;
-            moFormCon(new FTatCaSanPham(maNB));
+            moFormCon(new FDanhSachSanPham(maNB));
         }
         private Form formcon;
         private void moFormCon(Form form)
@@ -55,7 +55,7 @@ namespace DoANLapTrinhWin
         }
         private void btnTatCaSP_Click(object sender, EventArgs e)
         {
-            moFormCon(new FTatCaSanPham(maNBan));
+            moFormCon(new FDanhSachSanPham(maNBan));
             TaoButton(sender);
         }
 

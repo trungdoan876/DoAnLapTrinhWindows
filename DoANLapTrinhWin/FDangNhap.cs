@@ -72,7 +72,7 @@ namespace DoANLapTrinhWin
                     if (dta.Read() == true)
                     {
                         this.Hide(); //an form 1
-                        FNguoiMua form2 = new FNguoiMua(); 
+                        FNguoiMua form2 = new FNguoiMua(tenTK); 
                         form2.ShowDialog(); 
                         form2 = null; 
                         this.Show();

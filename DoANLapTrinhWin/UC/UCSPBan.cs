@@ -41,7 +41,7 @@ namespace DoANLapTrinhWin
         }
         private void btnXoaSP_Click(object sender, EventArgs e)
         {
-            SanPham sp = new SanPham(lblMaSP.Text,"","","","","",DateTime.Now,"","","","","");
+            SanPham sp = new SanPham(lblMaSP.Text,"","","","","",DateTime.Now,"","","","", "", "");
             spDAO.XoaSanPham(sp);
         }
     }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DoANLapTrinhWin
 {
@@ -16,11 +17,8 @@ namespace DoANLapTrinhWin
     {
         SanPham sp;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        string maNM;
         public FCTSP()
-        {
-            InitializeComponent();
-        }
-        public FCTSP(string maSP)
         {
             InitializeComponent();
         }
@@ -38,6 +36,7 @@ namespace DoANLapTrinhWin
             lblXuatxu.Text = sp.XuatXu;
             lblTinhTrang.Text = sp.TinhTrang;
             lblTGDSD.Text = sp.ThoiGianDaSuDung;
+            lblSoLuong.Text = sp.SoLuong+" sản phẩm sẵn có";
         }
         private void FCTSP_Load(object sender, EventArgs e)
         {
@@ -49,7 +48,6 @@ namespace DoANLapTrinhWin
         {
             if (count >0)
             {
-               // MessageBox.Show("huhu");
                 count--;
             }
             pictureBox2.Image = imageList1.Images[count];
@@ -63,7 +61,27 @@ namespace DoANLapTrinhWin
         }
         private void btnThemVaoGio_Click(object sender, EventArgs e)
         {
-            
+            //bang gio hang: maNB,maNM,maSP,soluongSP,giaban
+            //hien len uc: ten, dia chi, tinh trang, gia tien, so luong
+            //them vao bang gio hang
+            try
+            {
+                // Ket noi
+                conn.Open();
+                string sqlStr = string.Format("INSERT INTO GioHang(MaNguoiBan, MaNguoiMua, MaSanPham, soLuongSP, giaBan) VALUES ('{0}', '{1}','{2}','{3}','{4}')", sp.MaNguoiBan,"NM01",sp.MaSP,sp.SoLuong,sp.GiaBan);
+                MessageBox.Show(sp.MaNguoiBan);
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                if (cmd.ExecuteNonQuery() > 0)
+                    MessageBox.Show("them thanh cong");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("them that bai" + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void btnMuaHang_Click(object sender, EventArgs e)
@@ -73,6 +91,27 @@ namespace DoANLapTrinhWin
             form2.ShowDialog();
             form2 = null; //tat form2, tuc la form 2 tro ve null
             this.Show();
+        }
+
+        private void btnTru_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtSL.Text, out int value))
+            {
+                if (value > 0)
+                {
+                    value--;
+                    txtSL.Text = value.ToString();
+                }
+            }
+        }
+
+        private void btnCong_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtSL.Text, out int value))
+            {
+                value++;
+                txtSL.Text = value.ToString();
+            }
         }
     }
 }

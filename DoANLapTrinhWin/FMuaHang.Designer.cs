@@ -69,9 +69,9 @@
             // panelMuaHang
             // 
             this.panelMuaHang.AutoScroll = true;
-            this.panelMuaHang.Location = new System.Drawing.Point(1, 69);
+            this.panelMuaHang.Location = new System.Drawing.Point(1, 56);
             this.panelMuaHang.Name = "panelMuaHang";
-            this.panelMuaHang.Size = new System.Drawing.Size(905, 627);
+            this.panelMuaHang.Size = new System.Drawing.Size(919, 548);
             this.panelMuaHang.TabIndex = 27;
             // 
             // sidebarTimer
@@ -318,7 +318,7 @@
             this.panelBoLoc.Controls.Add(this.label4);
             this.panelBoLoc.Controls.Add(this.checkBox8);
             this.panelBoLoc.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelBoLoc.Location = new System.Drawing.Point(905, 0);
+            this.panelBoLoc.Location = new System.Drawing.Point(926, 0);
             this.panelBoLoc.MaximumSize = new System.Drawing.Size(182, 634);
             this.panelBoLoc.MinimumSize = new System.Drawing.Size(34, 634);
             this.panelBoLoc.Name = "panelBoLoc";
@@ -330,13 +330,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1087, 708);
+            this.ClientSize = new System.Drawing.Size(1108, 602);
             this.Controls.Add(this.panelBoLoc);
             this.Controls.Add(this.panelMuaHang);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ucTextBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FMuaHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FMuaHang";
             this.Load += new System.EventHandler(this.FMuaHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

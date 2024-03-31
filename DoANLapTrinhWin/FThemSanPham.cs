@@ -12,13 +12,14 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DoANLapTrinhWin
 {
-    public partial class FSanPhamNguoiBan : Form
+    public partial class FThemSanPham : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPhamDAO spDAO = new SanPhamDAO();
-        public FSanPhamNguoiBan()
+        public FThemSanPham(string maNB)
         {
             InitializeComponent();
+            this.lblMaNB.Text = maNB;
         }
 
         private void FSanPhamNguoiBan_Load(object sender, EventArgs e)
@@ -30,7 +31,7 @@ namespace DoANLapTrinhWin
         {
             SanPham sp = new SanPham(ucMaSP.textBox.Text,ucTenSP.textBox.Text, ucGiaBan.textBox.Text, ucGiaGoc.textBox.Text,
     ucXuatXu.textBox.Text, ucTGDSD.textBox.Text,dtpNgayDang.Value, ucMoTaSP.textBox.Text, ucNganhHang.textBox.Text,
-    cbbTinhTrang.Text,ucMaNB.textBox.Text,ucDC.textBox.Text);
+    cbbTinhTrang.Text,ucDC.textBox.Text,lblMaNB.Text,ucSoLuong.textBox.Text);
             spDAO.ThemSanPham(sp);
         }
     }

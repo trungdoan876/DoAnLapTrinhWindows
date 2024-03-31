@@ -11,11 +11,11 @@ using System.Data.SqlClient;
 
 namespace DoANLapTrinhWin
 {
-    public partial class FTatCaSanPham : Form
+    public partial class FDanhSachSanPham : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNB;
-        public FTatCaSanPham(string maNB)
+        public FDanhSachSanPham(string maNB)
         {
             InitializeComponent();
             this.maNB = maNB;
@@ -45,14 +45,15 @@ namespace DoANLapTrinhWin
                     string xuatXu = row["XuatXu"].ToString();
                     string diaChi = row["DiaChi"].ToString() ;
                     string thoiGianSuDung = row["TGDSD"].ToString();
+                    string soLuong = row["SoLuong"].ToString();
                     DateTime ngayDang = DateTime.Now;
-                    SanPham sp = new SanPham(maSP,tenSP,giaTien,giaGoc,xuatXu,thoiGianSuDung,ngayDang,moTaSP,nganhHang,tinhTrang,"", diaChi);
+                    SanPham sp = new SanPham(maSP,tenSP,giaTien,giaGoc,xuatXu,thoiGianSuDung,ngayDang,moTaSP,nganhHang,tinhTrang, diaChi,"",soLuong);
 
                     UCSPBan ucSPBan = new UCSPBan(sp);
                     
                     ucSPBan.Location = new Point(x, y);
                     x += ucSPBan.Width += 5;
-                    if (x == ucSPBan.Width * 3)
+                    if (x == ucSPBan.Width * 4)
                     {
                         x = 0;
                         y += ucSPBan.Height + 5;
@@ -72,7 +73,7 @@ namespace DoANLapTrinhWin
         private void btnThemSP_Click(object sender, EventArgs e)
         {
             this.Hide(); //an form 1
-            FSanPhamNguoiBan form2 = new FSanPhamNguoiBan(); // tao doi tuong form 2
+            FThemSanPham form2 = new FThemSanPham(maNB) ; // tao doi tuong form 2
             form2.ShowDialog();
             form2 = null; //tat form2, tuc la form 2 tro ve null
             this.Show();

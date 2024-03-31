@@ -12,9 +12,11 @@ namespace DoANLapTrinhWin
 {
     public partial class FNguoiMua : Form
     {
-        public FNguoiMua()
+        string tenTK;
+        public FNguoiMua(string tenTK)
         {
             InitializeComponent();
+            this.tenTK = tenTK;
         }
         private Form formconmua;
         private void moFormConMua(Form form)
@@ -38,7 +40,7 @@ namespace DoANLapTrinhWin
         }
         private void btnThongTin_Click_1(object sender, EventArgs e)
         {
-            moFormConMua(new FThongTinNguoiMua());
+            moFormConMua(new FThongTinNguoiMua(tenTK));
             TaoButton(sender);
         }
 
@@ -50,7 +52,7 @@ namespace DoANLapTrinhWin
 
         private void btnGH_Click(object sender, EventArgs e)
         {
-            moFormConMua(new FGioHang());
+            moFormConMua(new FGioHang(tenTK));
             TaoButton(sender);
         }
 
