@@ -37,7 +37,7 @@
             this.txtSL = new System.Windows.Forms.TextBox();
             this.btnCong = new System.Windows.Forms.Button();
             this.btnTru = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSP = new System.Windows.Forms.CheckBox();
             this.lblSoLuong = new System.Windows.Forms.Label();
             this.btnXoaKhoiGioHang = new DoANLapTrinhWin.ButtonTuyChinh();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -131,14 +131,14 @@
             this.btnTru.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnTru.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkBoxSP
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(28, 96);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(22, 21);
-            this.checkBox1.TabIndex = 80;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxSP.AutoSize = true;
+            this.checkBoxSP.Location = new System.Drawing.Point(28, 96);
+            this.checkBoxSP.Name = "checkBoxSP";
+            this.checkBoxSP.Size = new System.Drawing.Size(22, 21);
+            this.checkBoxSP.TabIndex = 80;
+            this.checkBoxSP.UseVisualStyleBackColor = true;
             // 
             // lblSoLuong
             // 
@@ -170,7 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblSoLuong);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxSP);
             this.Controls.Add(this.btnXoaKhoiGioHang);
             this.Controls.Add(this.txtSL);
             this.Controls.Add(this.btnCong);
@@ -199,7 +199,7 @@
         public System.Windows.Forms.Label lblTenSP;
         public System.Windows.Forms.Label lblTinhTrang;
         public System.Windows.Forms.Label lblGiaTien;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxSP;
         public System.Windows.Forms.Label lblSoLuong;
     }
 }

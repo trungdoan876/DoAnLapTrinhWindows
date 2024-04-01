@@ -35,7 +35,7 @@
             this.chuyenKhoanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ghiNoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonTuyChinh1 = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.btnThanhToan = new DoANLapTrinhWin.ButtonTuyChinh();
             this.panelGioHang = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -98,22 +98,23 @@
             this.pictureBox1.TabIndex = 63;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonTuyChinh1
+            // btnThanhToan
             // 
-            this.buttonTuyChinh1.BackColor = System.Drawing.Color.SeaGreen;
-            this.buttonTuyChinh1.FlatAppearance.BorderSize = 0;
-            this.buttonTuyChinh1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTuyChinh1.Font = new System.Drawing.Font("Palatino Linotype", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTuyChinh1.ForeColor = System.Drawing.Color.White;
-            this.buttonTuyChinh1.Image = ((System.Drawing.Image)(resources.GetObject("buttonTuyChinh1.Image")));
-            this.buttonTuyChinh1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTuyChinh1.Location = new System.Drawing.Point(725, 551);
-            this.buttonTuyChinh1.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonTuyChinh1.Name = "buttonTuyChinh1";
-            this.buttonTuyChinh1.Size = new System.Drawing.Size(219, 69);
-            this.buttonTuyChinh1.TabIndex = 64;
-            this.buttonTuyChinh1.Text = "Thanh toán";
-            this.buttonTuyChinh1.UseVisualStyleBackColor = false;
+            this.btnThanhToan.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnThanhToan.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan.Font = new System.Drawing.Font("Palatino Linotype", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btnThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btnThanhToan.Image")));
+            this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThanhToan.Location = new System.Drawing.Point(725, 551);
+            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(219, 69);
+            this.btnThanhToan.TabIndex = 64;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // panelGioHang
             // 
@@ -130,7 +131,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1178, 644);
             this.Controls.Add(this.panelGioHang);
-            this.Controls.Add(this.buttonTuyChinh1);
+            this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ucTextBox6);
@@ -151,7 +152,7 @@
         private UCTextBox ucTextBox6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ButtonTuyChinh buttonTuyChinh1;
+        private ButtonTuyChinh btnThanhToan;
         private System.Windows.Forms.Panel panelGioHang;
 
     }

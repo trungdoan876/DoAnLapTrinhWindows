@@ -69,7 +69,6 @@ namespace DoANLapTrinhWin
                 // Ket noi
                 conn.Open();
                 string sqlStr = string.Format("INSERT INTO GioHang(MaNguoiBan, MaNguoiMua, MaSanPham, soLuongSP, giaBan) VALUES ('{0}', '{1}','{2}','{3}','{4}')", sp.MaNguoiBan,"NM01",sp.MaSP,sp.SoLuong,sp.GiaBan);
-                MessageBox.Show(sp.MaNguoiBan);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 if (cmd.ExecuteNonQuery() > 0)
                     MessageBox.Show("them thanh cong");

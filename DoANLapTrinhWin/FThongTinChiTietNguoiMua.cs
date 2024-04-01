@@ -38,7 +38,6 @@ namespace DoANLapTrinhWin
                     ucSDT.textBox.Text = docDuLieu["SDT"].ToString();
                     //ucDiaChi.textBox.Text = docDuLieu["Diachi"].ToString();
                     ucEmail.textBox.Text = docDuLieu["Email"].ToString();
-                    ucTenTaiKhoan.textBox.Text = docDuLieu["TenTaiKhoan"].ToString();
                 }
             }
             catch (Exception ex)

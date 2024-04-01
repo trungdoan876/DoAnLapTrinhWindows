@@ -47,13 +47,11 @@
             this.ucMaTaiKhoan = new DoANLapTrinhWin.UCTextBox();
             this.ucNgaySinh = new DoANLapTrinhWin.UCTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.ucEmail = new DoANLapTrinhWin.UCTextBox();
             this.ucCCCD = new DoANLapTrinhWin.UCTextBox();
             this.ucHoTen = new DoANLapTrinhWin.UCTextBox();
-            this.ucTenTaiKhoan = new DoANLapTrinhWin.UCTextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.buttonTuyChinh1 = new DoANLapTrinhWin.ButtonTuyChinh();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -314,16 +312,6 @@
             this.label7.TabIndex = 178;
             this.label7.Text = "Email";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label4.Location = new System.Drawing.Point(252, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 20);
-            this.label4.TabIndex = 177;
-            this.label4.Text = "Tên tài khoản";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -401,25 +389,6 @@
             this.ucHoTen.TabIndex = 172;
             this.ucHoTen.Texts = "";
             // 
-            // ucTenTaiKhoan
-            // 
-            this.ucTenTaiKhoan.BackColor = System.Drawing.SystemColors.Window;
-            this.ucTenTaiKhoan.BanKinhKhung = 15;
-            this.ucTenTaiKhoan.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucTenTaiKhoan.ChumoText = "";
-            this.ucTenTaiKhoan.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucTenTaiKhoan.GachChan = false;
-            this.ucTenTaiKhoan.KichThuocKhung = 1;
-            this.ucTenTaiKhoan.Location = new System.Drawing.Point(240, 122);
-            this.ucTenTaiKhoan.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucTenTaiKhoan.Multiline = false;
-            this.ucTenTaiKhoan.Name = "ucTenTaiKhoan";
-            this.ucTenTaiKhoan.Padding = new System.Windows.Forms.Padding(7);
-            this.ucTenTaiKhoan.PasswordChar = false;
-            this.ucTenTaiKhoan.Size = new System.Drawing.Size(285, 40);
-            this.ucTenTaiKhoan.TabIndex = 171;
-            this.ucTenTaiKhoan.Texts = "";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -486,7 +455,7 @@
             this.ucTextBox3.TabIndex = 196;
             this.ucTextBox3.Texts = "";
             // 
-            // FThongTinChiTiet
+            // FThongTinChiTietNguoiMua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -512,18 +481,16 @@
             this.Controls.Add(this.ucMaTaiKhoan);
             this.Controls.Add(this.ucNgaySinh);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.ucEmail);
             this.Controls.Add(this.ucCCCD);
             this.Controls.Add(this.ucHoTen);
-            this.Controls.Add(this.ucTenTaiKhoan);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.buttonTuyChinh1);
             this.Controls.Add(this.pictureBox2);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FThongTinChiTiet";
+            this.Name = "FThongTinChiTietNguoiMua";
             this.Text = "FThongTinChiTiet";
             this.Load += new System.EventHandler(this.FThongTinChiTiet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -554,13 +521,11 @@
         private UCTextBox ucMaTaiKhoan;
         private UCTextBox ucNgaySinh;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private UCTextBox ucEmail;
         private UCTextBox ucCCCD;
         private UCTextBox ucHoTen;
-        private UCTextBox ucTenTaiKhoan;
         private System.Windows.Forms.PictureBox pictureBox3;
         private ButtonTuyChinh buttonTuyChinh1;
         private System.Windows.Forms.PictureBox pictureBox2;
