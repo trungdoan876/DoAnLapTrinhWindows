@@ -23,7 +23,7 @@ namespace DoANLapTrinhWin
         {
             try
             {
-                conn.Open(); //
+                conn.Open(); 
                 string sqlStr = string.Format("SELECT *FROM NguoiMua");
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 SqlDataReader docDuLieu = cmd.ExecuteReader();

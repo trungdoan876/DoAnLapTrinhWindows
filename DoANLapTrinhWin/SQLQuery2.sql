@@ -1,5 +1,6 @@
 ﻿--(localdb)\mssqllocaldb
 --DROP TABLE SanPham
+Create database QuanLyBanHang
 select * from SanPham
 --DELETE FROM SanPham WHERE MaSanPham = 'SP5'
 CREATE TABLE SanPham 

@@ -16,21 +16,33 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
         }
-        int currentImageIndex = 0;
-        private void pictureBox4_Click(object sender, EventArgs e)
+        bool picClick = false;
+        private void picHeart_Click(object sender, EventArgs e)
         {
-            currentImageIndex++;
-
-            // Nếu vị trí hiện tại vượt quá số lượng hình ảnh, quay lại hình ảnh đầu tiên
-            if (currentImageIndex >= imageList1.Images.Count)
+            if (picClick)
             {
-                currentImageIndex = 0;
+                string imagePath = Application.StartupPath + "\\HinhAnh\\timden.png";
+                Image image = Image.FromFile(imagePath);
+                picHeart.Image = image;
+                picClick = false;
             }
+            else
+            {
+                string imagePath = Application.StartupPath + "\\HinhAnh\\timdo.png";
+                Image image = Image.FromFile(imagePath);
+                picHeart.Image = image;
+                picClick = true;
+            }
+        }
 
-            // Đặt hình ảnh mới cho PictureBox
-            pictureBox4.Image = imageList1.Images[currentImageIndex];
-
-
+        private void UCHeart_Load(object sender, EventArgs e)
+        {
+            string imagePath = Application.StartupPath + "\\HinhAnh\\timden.png";
+            if (System.IO.File.Exists(imagePath))
+            {
+                Image image = Image.FromFile(imagePath);
+                picHeart.Image = image;
+            }
         }
     }
 }
