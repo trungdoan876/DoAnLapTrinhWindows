@@ -51,6 +51,7 @@ namespace DoANLapTrinhWin
                     string soLuong = row["SoLuong"].ToString();
                     SanPham sp = new SanPham(maSP, tenSP, giaBan, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, maNB, soLuong);
                     UCSP ucSP = new UCSP(sp);
+                    
                     ucSP.lblMaSP.Text = maSP;
                     ucSP.lblTenSP.Text = tenSP;
                     ucSP.lblGiaBan.Text = giaBan;

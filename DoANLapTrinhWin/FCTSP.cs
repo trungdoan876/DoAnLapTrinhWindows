@@ -17,7 +17,6 @@ namespace DoANLapTrinhWin
     {
         SanPham sp;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        string maNM;
         public FCTSP()
         {
             InitializeComponent();

@@ -32,7 +32,7 @@ namespace DoANLapTrinhWin
             this.diaChi = diaChi;
             this.eMail = eMail;
         }
-       // public string TenTaiKhoan { get => tenTaiKhoan; set => tenTaiKhoan = value; }
+       
         public string Ma { get => ma; set => ma = value; }
         public string Ten1 { get => Ten; set => Ten = value; }
         public string SDT1 { get => SDT; set => SDT = value; }
