@@ -22,8 +22,7 @@ namespace DoANLapTrinhWin
         {
 
         }
-
-        private void FMuaHang_Load(object sender, EventArgs e)
+        private void LoadData()
         {
             try
             {
@@ -40,8 +39,8 @@ namespace DoANLapTrinhWin
                     string maNB = row["MaNguoiBan"].ToString();
                     string maSP = row["MaSanPham"].ToString();
                     string tenSP = row["TenSanPham"].ToString();
-                    string giaBan = "đ" + row["GiaBan"].ToString() ;
-                    string  giaGoc = "đ" + row["GiaGoc"].ToString();
+                    string giaBan = "đ" + row["GiaBan"].ToString();
+                    string giaGoc = "đ" + row["GiaGoc"].ToString();
                     string diaChi = row["DiaChi"].ToString();
                     string xuatXu = row["XuatXu"].ToString();
                     string nganhHang = row["NganhHang"].ToString();
@@ -50,7 +49,7 @@ namespace DoANLapTrinhWin
                     string tinhTrang = row["TinhTrang"].ToString();
                     string thoiGianSuDung = row["TGDSD"].ToString();
                     string soLuong = row["SoLuong"].ToString();
-                    SanPham sp = new SanPham(maSP, tenSP, giaBan, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi,maNB,soLuong);
+                    SanPham sp = new SanPham(maSP, tenSP, giaBan, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, maNB, soLuong);
                     UCSP ucSP = new UCSP(sp);
                     ucSP.lblMaSP.Text = maSP;
                     ucSP.lblTenSP.Text = tenSP;
@@ -76,6 +75,10 @@ namespace DoANLapTrinhWin
             {
                 conn.Close();
             }
+        }
+        private void FMuaHang_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
         bool sidebarExpand = true;
         private void sidebarTimer_Tick(object sender, EventArgs e)

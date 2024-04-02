@@ -18,12 +18,11 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
         }
-
-        private void FThongTinChiTiet_Load(object sender, EventArgs e)
+        private void LoadData()
         {
             try
             {
-                conn.Open(); 
+                conn.Open();
                 string sqlStr = string.Format("SELECT *FROM NguoiMua");
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 SqlDataReader docDuLieu = cmd.ExecuteReader();
@@ -49,7 +48,9 @@ namespace DoANLapTrinhWin
                 conn.Close();
             }
         }
-
-
+        private void FThongTinChiTiet_Load(object sender, EventArgs e)
+        {
+            LoadData();   
+        }
     }
 }

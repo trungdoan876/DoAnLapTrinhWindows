@@ -21,18 +21,18 @@ namespace DoANLapTrinhWin
             this.maNB = maNB;
         }
         //đổ dữ liệu vào user control trong danh sách sản phẩm
-        private void FTatCaSanPham_Load(object sender, EventArgs e)
+        private void LoadData()
         {
             try
             {
                 panelTatCaSP.AutoScroll = true;
                 conn.Open();
-                string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'",maNB);
+                string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'", maNB);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
                 int x = 0;
-                int y  = 0;
+                int y = 0;
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
                     string maSP = row["MaSanPham"].ToString();
@@ -43,14 +43,14 @@ namespace DoANLapTrinhWin
                     string tinhTrang = row["TinhTrang"].ToString();
                     string nganhHang = row["NganhHang"].ToString();
                     string xuatXu = row["XuatXu"].ToString();
-                    string diaChi = row["DiaChi"].ToString() ;
+                    string diaChi = row["DiaChi"].ToString();
                     string thoiGianSuDung = row["TGDSD"].ToString();
                     string soLuong = row["SoLuong"].ToString();
                     DateTime ngayDang = DateTime.Now;
-                    SanPham sp = new SanPham(maSP,tenSP,giaTien,giaGoc,xuatXu,thoiGianSuDung,ngayDang,moTaSP,nganhHang,tinhTrang, diaChi,"",soLuong);
+                    SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", soLuong);
 
                     UCSPBan ucSPBan = new UCSPBan(sp);
-                    
+
                     ucSPBan.Location = new Point(x, y);
                     x += ucSPBan.Width += 5;
                     if (x == ucSPBan.Width * 4)
@@ -67,8 +67,12 @@ namespace DoANLapTrinhWin
             }
             finally
             {
-                conn.Close(); 
+                conn.Close();
             }
+        }
+        private void FTatCaSanPham_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
         private void btnThemSP_Click(object sender, EventArgs e)
         {

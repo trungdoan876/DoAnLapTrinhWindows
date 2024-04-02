@@ -22,13 +22,13 @@ namespace DoANLapTrinhWin
             InitializeComponent();
             this.maTK = tenTaiKhoan;
         }
-        private void FThongTinNguoiBan_Load(object sender, EventArgs e)
+        private void LoadDuLieu()
         {
-            NguoiBan nguoiban = new NguoiBan(ucMaNBan.textBox.Text,ucHoTenNB.textBox.Text,ucSDT.textBox.Text,dtpNgSinh.Value,ucGioiTinh.textBox.Text,ucCCCD.textBox.Text,ucDiaChi.textBox.Text,ucEmail.textBox.Text,ucMoTaShop.textBox.Text);
+            NguoiBan nguoiban = new NguoiBan(ucMaNBan.textBox.Text, ucHoTenNB.textBox.Text, ucSDT.textBox.Text, dtpNgSinh.Value, ucGioiTinh.textBox.Text, ucCCCD.textBox.Text, ucDiaChi.textBox.Text, ucEmail.textBox.Text, ucMoTaShop.textBox.Text);
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT *FROM NguoiBan WHERE MaNguoiBan = '{0}'",maTK);
+                string sqlStr = string.Format("SELECT *FROM NguoiBan WHERE MaNguoiBan = '{0}'", maTK);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 SqlDataReader docDuLieu = cmd.ExecuteReader();
                 if (docDuLieu.Read())
@@ -43,7 +43,7 @@ namespace DoANLapTrinhWin
                     ucSDT.textBox.Text = docDuLieu["SDT"].ToString();
                     ucDiaChi.textBox.Text = docDuLieu["DiaChi"].ToString();
                     ucEmail.textBox.Text = docDuLieu["Email"].ToString();
-                    ucMoTaShop.textBox.Text = docDuLieu["MoTaShop"].ToString();    
+                    ucMoTaShop.textBox.Text = docDuLieu["MoTaShop"].ToString();
                 }
             }
             catch (Exception ex)
@@ -54,6 +54,10 @@ namespace DoANLapTrinhWin
             {
                 conn.Close();
             }
+        }
+        private void FThongTinNguoiBan_Load(object sender, EventArgs e)
+        {
+            LoadDuLieu();
         }
     }
 }

@@ -20,13 +20,12 @@ namespace DoANLapTrinhWin
             InitializeComponent();
             this.maNB = maNB;
         }
-
-        private void FDaDangBan_Load(object sender, EventArgs e)
+        private void LoadData()
         {
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'",maNB,1);
+                string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", maNB, 1);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
@@ -45,7 +44,7 @@ namespace DoANLapTrinhWin
                     string diaChi = row["DiaChi"].ToString();
                     string thoiGianSuDung = row["TGDSD"].ToString();
                     DateTime ngayDang = DateTime.Now;
-                    SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi,"", "");
+                    SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", "");
 
                     UCSPDangBan ucSPBan = new UCSPDangBan(sp);
 
@@ -67,6 +66,10 @@ namespace DoANLapTrinhWin
             {
                 conn.Close();
             }
+        }
+        private void FDaDangBan_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }
