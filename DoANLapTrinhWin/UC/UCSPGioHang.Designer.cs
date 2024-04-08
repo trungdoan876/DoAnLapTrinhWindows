@@ -139,6 +139,7 @@
             this.checkBoxSP.Size = new System.Drawing.Size(22, 21);
             this.checkBoxSP.TabIndex = 80;
             this.checkBoxSP.UseVisualStyleBackColor = true;
+            this.checkBoxSP.CheckedChanged += new System.EventHandler(this.checkBoxSP_CheckedChanged);
             // 
             // lblSoLuong
             // 

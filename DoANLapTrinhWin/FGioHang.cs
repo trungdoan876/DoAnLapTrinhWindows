@@ -74,9 +74,10 @@ namespace DoANLapTrinhWin
             }
         }
 
-        private void btnThanhToan_Click(object sender, EventArgs e)
+        private void btnMuaHang_Click(object sender, EventArgs e)
         {
-            
+            FDatHang fdh = new FDatHang(maNM);
+            fdh.ShowDialog();
         }
     }
 }
