@@ -30,7 +30,8 @@ namespace DoANLapTrinhWin
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("select SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan,SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi from YeuThich,SanPham WHERE YeuThich.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'", tenTK);
+                string sqlStr = string.Format("SELECT SanPham.Hinh as Hinh, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi " +
+                    "FROM YeuThich,SanPham WHERE YeuThich.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'", tenTK);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
@@ -43,13 +44,18 @@ namespace DoANLapTrinhWin
                     string giaBan = "đ" + row["GiaBan"].ToString();
                     string giaGoc = "đ" + row["GiaGoc"].ToString();
                     string diaChi = row["DiaChi"].ToString();
-                    SanPham sp = new SanPham(tenSP, giaBan,giaGoc,diaChi);
-                    UCSP ucSP = new UCSP(sp);
-                    
+                    /*if (row["Hinh"] != null && row["Hinh"] is byte[])
+                    {
+                        hinh = (byte[])row["Hinh"];
+                    }*/
+                    SanPham sp = new SanPham(tenSP, giaBan, giaGoc, diaChi);
+                    UCSP ucSP = new UCSP(sp, tenTK);
+
                     ucSP.lblTenSP.Text = tenSP;
                     ucSP.lblGiaBan.Text = giaBan;
                     ucSP.lblGiaGoc.Text = giaGoc;
                     ucSP.lblDiaChi.Text = diaChi;
+                    //ucSP.picHinh.Image = ByteArrayToImage(hinh);
 
                     //vi tri moi uc
                     ucSP.Location = new Point(x, y);
@@ -64,7 +70,7 @@ namespace DoANLapTrinhWin
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex);
             }
             finally
             {

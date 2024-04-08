@@ -46,7 +46,7 @@ namespace DoANLapTrinhWin
 
         private void btnMH_Click_1(object sender, EventArgs e)
         {
-            moFormConMua(new FMuaHang());
+            moFormConMua(new FMuaHang(tenTK));
             TaoButton(sender);
         }
 

@@ -14,9 +14,12 @@ namespace DoANLapTrinhWin
     public partial class FMuaHang : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        public FMuaHang()
+        string tenTaiKhoan;
+        public FMuaHang(string tenTK)
         {
             InitializeComponent();
+            this.tenTaiKhoan = tenTK;
+
         }
         private void ucsp1_Load(object sender, EventArgs e)
         {
@@ -50,7 +53,7 @@ namespace DoANLapTrinhWin
                     string thoiGianSuDung = row["TGDSD"].ToString();
                     string soLuong = row["SoLuong"].ToString();
                     SanPham sp = new SanPham(maSP, tenSP, giaBan, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, maNB, soLuong);
-                    UCSP ucSP = new UCSP(sp);
+                    UCSP ucSP = new UCSP(sp,tenTaiKhoan);
                     
                     ucSP.lblMaSP.Text = maSP;
                     ucSP.lblTenSP.Text = tenSP;

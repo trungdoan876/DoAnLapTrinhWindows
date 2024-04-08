@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSP));
             this.lblGiaBan = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblGiaGoc = new System.Windows.Forms.Label();
             this.lblDiaChi = new System.Windows.Forms.Label();
             this.lblMaSP = new System.Windows.Forms.Label();
-            this.ucHeart1 = new DoANLapTrinhWin.UCHeart();
+            this.picHeart = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHeart)).BeginInit();
             this.SuspendLayout();
             // 
             // lblGiaBan
@@ -108,19 +110,24 @@
             this.lblMaSP.TabIndex = 30;
             this.lblMaSP.Text = "MSP";
             // 
-            // ucHeart1
+            // picHeart
             // 
-            this.ucHeart1.Location = new System.Drawing.Point(240, 214);
-            this.ucHeart1.Name = "ucHeart1";
-            this.ucHeart1.Size = new System.Drawing.Size(48, 52);
-            this.ucHeart1.TabIndex = 31;
+            this.picHeart.Image = ((System.Drawing.Image)(resources.GetObject("picHeart.Image")));
+            this.picHeart.Location = new System.Drawing.Point(243, 217);
+            this.picHeart.Margin = new System.Windows.Forms.Padding(2);
+            this.picHeart.Name = "picHeart";
+            this.picHeart.Size = new System.Drawing.Size(43, 50);
+            this.picHeart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHeart.TabIndex = 47;
+            this.picHeart.TabStop = false;
+            this.picHeart.Click += new System.EventHandler(this.picHeart_Click);
             // 
             // UCSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.ucHeart1);
+            this.Controls.Add(this.picHeart);
             this.Controls.Add(this.lblMaSP);
             this.Controls.Add(this.lblDiaChi);
             this.Controls.Add(this.lblGiaGoc);
@@ -133,6 +140,7 @@
             this.Load += new System.EventHandler(this.UCSP_Load);
             this.Click += new System.EventHandler(this.UCSP_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHeart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +153,6 @@
         public System.Windows.Forms.Label lblGiaGoc;
         public System.Windows.Forms.Label lblDiaChi;
         public System.Windows.Forms.Label lblMaSP;
-        private UCHeart ucHeart1;
+        private System.Windows.Forms.PictureBox picHeart;
     }
 }
