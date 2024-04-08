@@ -210,6 +210,7 @@
             this.Controls.Add(this.paneldathang);
             this.Controls.Add(this.panel1);
             this.Name = "FDatHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FDatHang";
             this.Load += new System.EventHandler(this.FDatHang_Load);
             this.panel3.ResumeLayout(false);

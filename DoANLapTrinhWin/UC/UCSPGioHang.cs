@@ -29,7 +29,7 @@ namespace DoANLapTrinhWin
             this.lblGiaTien.Text = "đ" + sp.GiaBan;
             this.lblTinhTrang.Text = sp.TinhTrang;
             this.lblSoLuong.Text = sp.SoLuong+" san pham san co";
-            //this.picHinh.Image = ByteArrayToImage(sp.Hinh);
+            this.picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
 
         private void btnXoaKhoiGioHang_Click(object sender, EventArgs e)

@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMuaHang));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMuaHang = new System.Windows.Forms.Panel();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.btnBoLoc = new System.Windows.Forms.Button();
@@ -49,22 +48,11 @@
             this.ucTextBox5 = new DoANLapTrinhWin.UCTextBox();
             this.ucTextBox2 = new DoANLapTrinhWin.UCTextBox();
             this.buttonTuyChinh2 = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.ucTextBox1 = new DoANLapTrinhWin.UCTextBox();
             this.panelBoLoc = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnTimKiem = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.panelBoLoc.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(507, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
             // 
             // panelMuaHang
             // 
@@ -280,25 +268,6 @@
             this.buttonTuyChinh2.Text = "Áp dụng";
             this.buttonTuyChinh2.UseVisualStyleBackColor = false;
             // 
-            // ucTextBox1
-            // 
-            this.ucTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.ucTextBox1.BanKinhKhung = 15;
-            this.ucTextBox1.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucTextBox1.ChumoText = "";
-            this.ucTextBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucTextBox1.GachChan = false;
-            this.ucTextBox1.KichThuocKhung = 1;
-            this.ucTextBox1.Location = new System.Drawing.Point(10, 10);
-            this.ucTextBox1.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucTextBox1.Multiline = false;
-            this.ucTextBox1.Name = "ucTextBox1";
-            this.ucTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.ucTextBox1.PasswordChar = false;
-            this.ucTextBox1.Size = new System.Drawing.Size(492, 40);
-            this.ucTextBox1.TabIndex = 21;
-            this.ucTextBox1.Texts = "";
-            // 
             // panelBoLoc
             // 
             this.panelBoLoc.Controls.Add(this.checkBox15);
@@ -325,32 +294,52 @@
             this.panelBoLoc.Size = new System.Drawing.Size(182, 634);
             this.panelBoLoc.TabIndex = 28;
             // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
+            this.btnTimKiem.Location = new System.Drawing.Point(508, 10);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(47, 40);
+            this.btnTimKiem.TabIndex = 29;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(33, 10);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(469, 39);
+            this.txtTimKiem.TabIndex = 30;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
             // FMuaHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1108, 602);
+            this.Controls.Add(this.txtTimKiem);
+            this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.panelBoLoc);
             this.Controls.Add(this.panelMuaHang);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.ucTextBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FMuaHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FMuaHang";
             this.Load += new System.EventHandler(this.FMuaHang_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelBoLoc.ResumeLayout(false);
             this.panelBoLoc.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private UCTextBox ucTextBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelMuaHang;
         private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.Button btnBoLoc;
@@ -370,5 +359,7 @@
         private UCTextBox ucTextBox2;
         private ButtonTuyChinh buttonTuyChinh2;
         private System.Windows.Forms.Panel panelBoLoc;
+        private ButtonTuyChinh btnTimKiem;
+        private System.Windows.Forms.TextBox txtTimKiem;
     }
 }

@@ -33,7 +33,7 @@ namespace DoANLapTrinhWin
             this.lblMaSP.Text = sp.MaSP;
             this.lblTenSP.Text = sp.TenSP;
             this.lblGiaTien.Text = sp.GiaBan + "VND";
-            //this.picHinh.Image = ByteArrayToImage(sp.Hinh);
+            this.picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
         private void btnGoSp_Click(object sender, EventArgs e)
         {

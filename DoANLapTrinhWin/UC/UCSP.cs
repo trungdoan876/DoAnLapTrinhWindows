@@ -44,7 +44,7 @@ namespace DoANLapTrinhWin
             this.lblGiaBan.Text = "đ" + sp.GiaBan ;
             this.lblGiaGoc.Text = "đ" + sp.GiaGoc ;
             this.lblDiaChi.Text = sp.DiaChi;
-            //this.picHinh.Image = ByteArrayToImage(sp.Hinh);
+            this.picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
         private void UCSP_Click(object sender, EventArgs e)
         {

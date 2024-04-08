@@ -58,7 +58,7 @@ namespace DoANLapTrinhWin
 
         private void btnDH_Click(object sender, EventArgs e)
         {
-            moFormConMua(new FDonHangMua());
+            moFormConMua(new FDonHang());
             TaoButton(sender);
         }
 

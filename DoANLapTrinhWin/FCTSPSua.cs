@@ -45,7 +45,7 @@ namespace DoANLapTrinhWin
             cbTinhTrang.Text = sp.TinhTrang;
             //ucdiachi
             ucSoLuong.textBox.Text = sp.SoLuong;
-            //picHinh.Image = ByteArrayToImage(sp.Hinh);
+            picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
         private void FCTSPSua_Load(object sender, EventArgs e)
         {

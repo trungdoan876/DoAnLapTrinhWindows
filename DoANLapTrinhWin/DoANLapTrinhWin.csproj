@@ -103,12 +103,6 @@
     <Compile Include="FDangNhap.Designer.cs">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="FDonHangMua.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FDonHangMua.Designer.cs">
-      <DependentUpon>FDonHangMua.cs</DependentUpon>
-    </Compile>
     <Compile Include="FDonHangNguoiBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,9 +255,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FDonHang.resx">
       <DependentUpon>FDonHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FDonHangMua.resx">
-      <DependentUpon>FDonHangMua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FDonHangNguoiBan.resx">
       <DependentUpon>FDonHangNguoiBan.cs</DependentUpon>

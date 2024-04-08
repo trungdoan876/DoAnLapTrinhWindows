@@ -43,7 +43,7 @@ namespace DoANLapTrinhWin
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.SoLuong as SL FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'",maNM);
+                string sqlStr = string.Format("SELECT SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.SoLuong as SL FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'",maNM);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
@@ -67,7 +67,7 @@ namespace DoANLapTrinhWin
                     spgh.lblGiaTien.Text = giaBan;
                     spgh.lblTinhTrang.Text = tinhTrang;
                     //spgh.lblMaSP.Text = maSP;
-                    //spgh.picHinh.Image = ByteArrayToImage(hinh);
+                    spgh.picHinh.Image = ByteArrayToImage(hinh);
                     spgh.lblSoLuong.Text = soLuong +" sản phẩm sẵn có";
                     //vi tri moi uc
                     spgh.Location = new Point(0, y);

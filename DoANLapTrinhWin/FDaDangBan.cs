@@ -47,7 +47,7 @@ namespace DoANLapTrinhWin
                     DateTime ngayDang = DateTime.Now;
                     if (row["Hinh"] != DBNull.Value)
                     {
-                        byte[] hinh = (byte[])row["Hinh"];
+                        hinh = (byte[])row["Hinh"];
                     }
                     SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", "",hinh);
 

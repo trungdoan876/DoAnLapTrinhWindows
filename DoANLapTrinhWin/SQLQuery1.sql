@@ -66,7 +66,7 @@ CREATE TABLE NguoiMua
 )
 INSERT INTO NguoiMua VALUES ('NM01',N'Nguyễn Thị B','123456','1990-03-20','Nu','27839293','hcm','0192837283',null,null,null);
 GO
-select *from NguoiMua
+select *from giohang
 GO
 --DROP TABLE GioHang
 CREATE TABLE GioHang
@@ -93,6 +93,7 @@ CREATE TABLE YeuThich
 INSERT INTO YeuThich VALUES ('NB01','NM01','SP1')
 --DROP TABLE GioHang
 select * from GioHang
+SELECT SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.SoLuong as SL FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = 'NM01'
 select SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang
 from GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = 'NM01'
 SELECT * From GioHang WHERE TrangThaiSP = 1 and MaNguoiMua ='NM01'

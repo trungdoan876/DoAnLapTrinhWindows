@@ -42,7 +42,7 @@ namespace DoANLapTrinhWin
             lblTinhTrang.Text = sp.TinhTrang;
             lblTGDSD.Text = sp.ThoiGianDaSuDung;
             lblSoLuong.Text = sp.SoLuong+" sản phẩm sẵn có";
-            //picHinh.Image = ByteArrayToImage(sp.Hinh);
+            picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
         private void FCTSP_Load(object sender, EventArgs e)
         {
@@ -74,8 +74,8 @@ namespace DoANLapTrinhWin
             {
                 // Ket noi
                 conn.Open();
-                //string anh = BitConverter.ToString(sp.Hinh).Replace("-", "");
-                string sqlStr = string.Format("INSERT INTO GioHang(MaNguoiBan, MaNguoiMua, MaSanPham, SoLuong, GiaBan,Hinh) VALUES ('{0}', '{1}','{2}','{3}','{4}')", sp.MaNguoiBan,"NM01",sp.MaSP,sp.SoLuong,sp.GiaBan);
+                string anh = BitConverter.ToString(sp.Hinh).Replace("-", "");
+                string sqlStr = string.Format("INSERT INTO GioHang(MaNguoiBan, MaNguoiMua, MaSanPham, TenSanPham, SoLuong, GiaBan,Hinh) VALUES ('{0}', '{1}','{2}','{3}','{4}','{5}',0x{6})", sp.MaNguoiBan,"NM01",sp.MaSP,sp.TenSP,sp.SoLuong,sp.GiaBan,anh);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 if (cmd.ExecuteNonQuery() > 0)
                     MessageBox.Show("them thanh cong");

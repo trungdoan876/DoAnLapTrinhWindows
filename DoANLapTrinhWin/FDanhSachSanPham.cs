@@ -62,7 +62,7 @@ namespace DoANLapTrinhWin
                     SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", soLuong,hinh);
                    
                     UCSPBan ucSPBan = new UCSPBan(sp);
-                    MessageBox.Show("huhu");
+                    //MessageBox.Show("huhu");
                     ucSPBan.Location = new Point(x, y);
                     x += ucSPBan.Width += 5;
                     if (x == ucSPBan.Width * 4)
