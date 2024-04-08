@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace DoANLapTrinhWin
 {
@@ -15,10 +16,17 @@ namespace DoANLapTrinhWin
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNB;
+        byte[] hinh;
+        Image ByteArrayToImage(byte[] a)
+        {
+            MemoryStream ms = new MemoryStream(a);
+            return Image.FromStream(ms);
+        }
         public FDanhSachSanPham(string maNB)
         {
             InitializeComponent();
             this.maNB = maNB;
+            LoadData();
         }
         //đổ dữ liệu vào user control trong danh sách sản phẩm
         private void LoadData()
@@ -27,7 +35,7 @@ namespace DoANLapTrinhWin
             {
                 panelTatCaSP.AutoScroll = true;
                 conn.Open();
-                string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'", maNB);
+                string sqlStr = string.Format("SELECT * FROM SanPham WHERE MaNguoiBan ='{0}'", maNB);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
@@ -47,10 +55,14 @@ namespace DoANLapTrinhWin
                     string thoiGianSuDung = row["TGDSD"].ToString();
                     string soLuong = row["SoLuong"].ToString();
                     DateTime ngayDang = DateTime.Now;
-                    SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", soLuong);
-
+                    if (row["Hinh"] != DBNull.Value)
+                    {
+                        hinh = (byte[])row["Hinh"];
+                    }
+                    SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", soLuong,hinh);
+                   
                     UCSPBan ucSPBan = new UCSPBan(sp);
-
+                    MessageBox.Show("huhu");
                     ucSPBan.Location = new Point(x, y);
                     x += ucSPBan.Width += 5;
                     if (x == ucSPBan.Width * 4)

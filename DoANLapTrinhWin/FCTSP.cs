@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,11 @@ namespace DoANLapTrinhWin
     public partial class FCTSP : Form
     {
         SanPham sp;
+        System.Drawing.Image ByteArrayToImage(byte[] a)
+        {
+            MemoryStream ms = new MemoryStream(a);
+            return System.Drawing.Image.FromStream(ms);
+        }
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public FCTSP()
         {
@@ -36,6 +42,7 @@ namespace DoANLapTrinhWin
             lblTinhTrang.Text = sp.TinhTrang;
             lblTGDSD.Text = sp.ThoiGianDaSuDung;
             lblSoLuong.Text = sp.SoLuong+" sản phẩm sẵn có";
+            //picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
         private void FCTSP_Load(object sender, EventArgs e)
         {
@@ -49,14 +56,14 @@ namespace DoANLapTrinhWin
             {
                 count--;
             }
-            pictureBox2.Image = imageList1.Images[count];
+            picHinh.Image = imageList1.Images[count];
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
             if(count <2) { 
                 count++;
             }
-            pictureBox2.Image = imageList1.Images[count];
+            picHinh.Image = imageList1.Images[count];
         }
         private void btnThemVaoGio_Click(object sender, EventArgs e)
         {
@@ -67,7 +74,8 @@ namespace DoANLapTrinhWin
             {
                 // Ket noi
                 conn.Open();
-                string sqlStr = string.Format("INSERT INTO GioHang(MaNguoiBan, MaNguoiMua, MaSanPham, SoLuong, GiaBan) VALUES ('{0}', '{1}','{2}','{3}','{4}')", sp.MaNguoiBan,"NM01",sp.MaSP,sp.SoLuong,sp.GiaBan);
+                //string anh = BitConverter.ToString(sp.Hinh).Replace("-", "");
+                string sqlStr = string.Format("INSERT INTO GioHang(MaNguoiBan, MaNguoiMua, MaSanPham, SoLuong, GiaBan,Hinh) VALUES ('{0}', '{1}','{2}','{3}','{4}')", sp.MaNguoiBan,"NM01",sp.MaSP,sp.SoLuong,sp.GiaBan);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 if (cmd.ExecuteNonQuery() > 0)
                     MessageBox.Show("them thanh cong");

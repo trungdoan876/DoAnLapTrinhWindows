@@ -54,6 +54,8 @@
             this.ucMaSP = new DoANLapTrinhWin.UCTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ucSoLuong = new DoANLapTrinhWin.UCTextBox();
+            this.picHinh = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.SuspendLayout();
             // 
             // label12
@@ -412,12 +414,23 @@
             this.ucSoLuong.TabIndex = 246;
             this.ucSoLuong.Texts = "";
             // 
+            // picHinh
+            // 
+            this.picHinh.Location = new System.Drawing.Point(1086, 178);
+            this.picHinh.Name = "picHinh";
+            this.picHinh.Size = new System.Drawing.Size(269, 196);
+            this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHinh.TabIndex = 248;
+            this.picHinh.TabStop = false;
+            this.picHinh.Click += new System.EventHandler(this.picHinh_Click);
+            // 
             // FCTSPSua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1397, 510);
+            this.Controls.Add(this.picHinh);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ucSoLuong);
             this.Controls.Add(this.dtpNgayDang);
@@ -447,6 +460,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCTSPSua";
             this.Load += new System.EventHandler(this.FCTSPSua_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,5 +493,6 @@
         private UCTextBox ucDC;
         private System.Windows.Forms.Label label3;
         private UCTextBox ucSoLuong;
+        private System.Windows.Forms.PictureBox picHinh;
     }
 }

@@ -17,6 +17,11 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNM;
         byte[] hinh;
+        Image ByteArrayToImage(byte[] a)
+        {
+            MemoryStream ms = new MemoryStream(a);
+            return Image.FromStream(ms);
+        }
         public FDatHang(string maNM)
         {
             InitializeComponent();
@@ -39,8 +44,11 @@ namespace DoANLapTrinhWin
                     string tenSP = row["TenSanPham"].ToString();
                     string giaBan = row["GiaBan"].ToString();
                     string soLuong = row["SoLuong"].ToString();
-                    
-                    SanPham sp = new SanPham(maSP, tenSP, giaBan, soLuong);
+                    if (row["Hinh"] != DBNull.Value)
+                    {
+                        hinh = (byte[])row["Hinh"];
+                    }
+                    SanPham sp = new SanPham(maSP, tenSP, giaBan, soLuong,hinh);
                     
                     UCDatHang ucdh = new UCDatHang(sp);
                     
@@ -49,7 +57,7 @@ namespace DoANLapTrinhWin
                     ucdh.lblGiaTien.Text = giaBan;
 
                     ucdh.lblsoluong.Text = soLuong;
-                    //ucdh.picHinh.Image = ByteArrayToImage(hinh);
+                    ucdh.picHinh.Image = ByteArrayToImage(hinh);
                     //vi tri moi uc
                     ucdh.Location = new Point(0, y);
                     y += ucdh.Height += 5;

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,12 @@ namespace DoANLapTrinhWin
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNM;
+        byte[] hinh;
+        System.Drawing.Image ByteArrayToImage(byte[] a)
+        {
+            MemoryStream ms = new MemoryStream(a);
+            return System.Drawing.Image.FromStream(ms);
+        }
         public FGioHang(string tenTK)
         {
             InitializeComponent();
@@ -48,7 +55,11 @@ namespace DoANLapTrinhWin
                     string giaBan = "đ" + row["GiaBan"].ToString();
                     string tinhTrang = row["TinhTrang"].ToString();
                     string soLuong = row["SL"].ToString();
-                    SanPham sp = new SanPham(tenSP, giaBan, tinhTrang,maSP,soLuong);
+                    if (row["Hinh"] != DBNull.Value)
+                    {
+                        hinh = (byte[])row["Hinh"];
+                    }
+                    SanPham sp = new SanPham(tenSP, giaBan, tinhTrang,maSP,soLuong, hinh);
                     UCSPGioHang spgh = new UCSPGioHang(sp);
 
                     //chinh sua public
@@ -56,6 +67,7 @@ namespace DoANLapTrinhWin
                     spgh.lblGiaTien.Text = giaBan;
                     spgh.lblTinhTrang.Text = tinhTrang;
                     //spgh.lblMaSP.Text = maSP;
+                    //spgh.picHinh.Image = ByteArrayToImage(hinh);
                     spgh.lblSoLuong.Text = soLuong +" sản phẩm sẵn có";
                     //vi tri moi uc
                     spgh.Location = new Point(0, y);

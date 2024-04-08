@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,11 @@ namespace DoANLapTrinhWin
     {
         SanPham sp;
         SanPhamDAO spDAO = new SanPhamDAO();
+        Image ByteArrayToImage(byte[] a)
+        {
+            MemoryStream ms = new MemoryStream(a);
+            return Image.FromStream(ms);
+        }
         public UCSPBan()
         {
             InitializeComponent();
@@ -25,6 +31,7 @@ namespace DoANLapTrinhWin
             this.lblMaSP.Text = sp.MaSP;
             this.lblTenSP.Text = sp.TenSP;
             this.lblGiaTien.Text = sp.GiaBan + "VND";
+            this.picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
         private void UCSPBan_Click(object sender, EventArgs e)
         {
@@ -41,7 +48,7 @@ namespace DoANLapTrinhWin
         }
         private void btnXoaSP_Click(object sender, EventArgs e)
         {
-            SanPham sp = new SanPham(lblMaSP.Text,"","","","","",DateTime.Now,"","","","", "", "");
+            SanPham sp = new SanPham(lblMaSP.Text,"","","","","",DateTime.Now,"","","","", "", "",null);
             spDAO.XoaSanPham(sp);
         }
     }

@@ -77,7 +77,8 @@ CREATE TABLE GioHang
 	SoLuong int,
 	MaNguoiMua nchar(10),
 	MaNguoiBan nchar(10),
-	TrangThaiSP bit
+	TrangThaiSP bit,
+	Hinh varbinary(max)
 )
 GO
 --UPDATE SanPham SET DiaChi = N'Đà Nẵng' WHERE MaSanPham= 'SP5'

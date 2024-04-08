@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSPGioHang));
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.picHinh = new System.Windows.Forms.PictureBox();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTinhTrang = new System.Windows.Forms.Label();
@@ -40,19 +40,19 @@
             this.checkBoxSP = new System.Windows.Forms.CheckBox();
             this.lblSoLuong = new System.Windows.Forms.Label();
             this.btnXoaKhoiGioHang = new DoANLapTrinhWin.ButtonTuyChinh();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox5
+            // picHinh
             // 
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Location = new System.Drawing.Point(74, 31);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(149, 166);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 31;
-            this.pictureBox5.TabStop = false;
+            this.picHinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picHinh.Location = new System.Drawing.Point(74, 31);
+            this.picHinh.Margin = new System.Windows.Forms.Padding(2);
+            this.picHinh.Name = "picHinh";
+            this.picHinh.Size = new System.Drawing.Size(149, 166);
+            this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHinh.TabIndex = 31;
+            this.picHinh.TabStop = false;
             // 
             // lblTenSP
             // 
@@ -180,10 +180,10 @@
             this.Controls.Add(this.lblTinhTrang);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTenSP);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.picHinh);
             this.Name = "UCSPGioHang";
             this.Size = new System.Drawing.Size(1037, 239);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,7 +191,7 @@
 
         #endregion
 
-        public System.Windows.Forms.PictureBox pictureBox5;
+        public System.Windows.Forms.PictureBox picHinh;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSL;
         private System.Windows.Forms.Button btnCong;

@@ -31,11 +31,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblMaSP = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.picHinh = new System.Windows.Forms.PictureBox();
             this.lblGiaTien = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.btnGoSp = new DoANLapTrinhWin.ButtonTuyChinh();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -68,15 +68,15 @@
             this.lblMaSP.TabIndex = 41;
             this.lblMaSP.Text = "SPx";
             // 
-            // pictureBox5
+            // picHinh
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(56, 16);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(140, 152);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 37;
-            this.pictureBox5.TabStop = false;
+            this.picHinh.Location = new System.Drawing.Point(56, 16);
+            this.picHinh.Margin = new System.Windows.Forms.Padding(2);
+            this.picHinh.Name = "picHinh";
+            this.picHinh.Size = new System.Drawing.Size(140, 152);
+            this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHinh.TabIndex = 37;
+            this.picHinh.TabStop = false;
             // 
             // lblGiaTien
             // 
@@ -122,12 +122,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMaSP);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.picHinh);
             this.Controls.Add(this.lblGiaTien);
             this.Controls.Add(this.lblTenSP);
             this.Name = "UCSPDangBan";
             this.Size = new System.Drawing.Size(261, 333);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,7 +138,7 @@
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lblMaSP;
-        public System.Windows.Forms.PictureBox pictureBox5;
+        public System.Windows.Forms.PictureBox picHinh;
         public System.Windows.Forms.Label lblGiaTien;
         public System.Windows.Forms.Label lblTenSP;
         private ButtonTuyChinh btnGoSp;

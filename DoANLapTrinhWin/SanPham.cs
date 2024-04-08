@@ -21,23 +21,26 @@ namespace DoANLapTrinhWin
         private string tinhTrang;
         private string maNguoiBan;
         private string diaChi;
-        public SanPham(string tenSP, string giaBan, string tinhTrang,string maSP,string soLuong) //khoi tao dung cho FGioHang
+        private byte[] hinh;
+        public SanPham(string tenSP, string giaBan, string tinhTrang,string maSP,string soLuong,byte[] hinh) //khoi tao dung cho FGioHang
         {
             this.tenSP = tenSP;
             this.giaBan = giaBan;
             this.tinhTrang = tinhTrang;
             this.maSP = maSP;
             this.soLuong = soLuong;
+            this.hinh = hinh;
         }
-        public SanPham(string tenSP, string giaBan,string giaGoc,string diaChi) //khoi tao dung  cho FYeuThich
+        public SanPham(string tenSP, string giaBan,string giaGoc,string diaChi, byte[] hinh) //khoi tao dung  cho FYeuThich
         {
             this.tenSP = tenSP;
             this.giaBan = giaBan;
             this.diaChi = diaChi;
             this.giaGoc = giaGoc;
+            this.hinh = hinh;
         }
         public SanPham(string maSP, string tenSP, string giaBan, string giaGoc, string xuatXu, string thoiGianDaSuDung,DateTime ngayDang, string moTaSanPham,
-            string nganhHang, string tinhTrang, string diaChi, string maNguoiBan, string soLuong)
+            string nganhHang, string tinhTrang, string diaChi, string maNguoiBan, string soLuong,byte[]hinh)
         {
             this.maSP = maSP;
             this.tenSP = tenSP;
@@ -52,6 +55,7 @@ namespace DoANLapTrinhWin
             this.diaChi = diaChi;
             this.maNguoiBan = maNguoiBan;
             this.soLuong = soLuong;
+            this.hinh = hinh;
         }
         public string SoLuong { get => soLuong; set => soLuong = value; }
         public string MaSP { get => maSP; set => maSP = value; }
@@ -66,5 +70,6 @@ namespace DoANLapTrinhWin
         public string TinhTrang { get => tinhTrang; set => tinhTrang = value; }
         public string MaNguoiBan { get => maNguoiBan; set => maNguoiBan = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }
+        public byte[] Hinh { get => hinh; set => hinh = value; }
     }
 }

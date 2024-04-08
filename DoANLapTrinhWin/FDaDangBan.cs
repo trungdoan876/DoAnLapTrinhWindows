@@ -15,6 +15,7 @@ namespace DoANLapTrinhWin
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNB;
+        byte[] hinh;
         public FDaDangBan(string maNB)
         {
             InitializeComponent();
@@ -44,7 +45,11 @@ namespace DoANLapTrinhWin
                     string diaChi = row["DiaChi"].ToString();
                     string thoiGianSuDung = row["TGDSD"].ToString();
                     DateTime ngayDang = DateTime.Now;
-                    SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", "");
+                    if (row["Hinh"] != DBNull.Value)
+                    {
+                        byte[] hinh = (byte[])row["Hinh"];
+                    }
+                    SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", "",hinh);
 
                     UCSPDangBan ucSPBan = new UCSPDangBan(sp);
 

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,12 @@ namespace DoANLapTrinhWin
     public partial class FYeuThich : Form
     {
         public string tenTK;
+        byte[] hinh;
+        Image ByteArrayToImage(byte[] a)
+        {
+            MemoryStream ms = new MemoryStream(a);
+            return Image.FromStream(ms);
+        }
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public FYeuThich(string tenTK)
         {
@@ -44,18 +51,18 @@ namespace DoANLapTrinhWin
                     string giaBan = "đ" + row["GiaBan"].ToString();
                     string giaGoc = "đ" + row["GiaGoc"].ToString();
                     string diaChi = row["DiaChi"].ToString();
-                    /*if (row["Hinh"] != null && row["Hinh"] is byte[])
+                    if (row["Hinh"] != DBNull.Value)
                     {
                         hinh = (byte[])row["Hinh"];
-                    }*/
-                    SanPham sp = new SanPham(tenSP, giaBan, giaGoc, diaChi);
+                    }
+                    SanPham sp = new SanPham(tenSP, giaBan, giaGoc, diaChi, hinh);
                     UCSP ucSP = new UCSP(sp, tenTK);
 
                     ucSP.lblTenSP.Text = tenSP;
                     ucSP.lblGiaBan.Text = giaBan;
                     ucSP.lblGiaGoc.Text = giaGoc;
                     ucSP.lblDiaChi.Text = diaChi;
-                    //ucSP.picHinh.Image = ByteArrayToImage(hinh);
+                    ucSP.picHinh.Image = ByteArrayToImage(hinh);
 
                     //vi tri moi uc
                     ucSP.Location = new Point(x, y);

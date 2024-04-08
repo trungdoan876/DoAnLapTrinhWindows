@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,12 @@ namespace DoANLapTrinhWin
         SanPham sanPham;
         SanPhamDAO spDAO = new SanPhamDAO();
         string tenTK;
+
+        System.Drawing.Image ByteArrayToImage(byte[] a)
+        {
+            MemoryStream ms = new MemoryStream(a);
+            return System.Drawing.Image.FromStream(ms);
+        }
         private void UCSP_Load(object sender, EventArgs e)
         {
 
@@ -37,6 +44,7 @@ namespace DoANLapTrinhWin
             this.lblGiaBan.Text = "đ" + sp.GiaBan ;
             this.lblGiaGoc.Text = "đ" + sp.GiaGoc ;
             this.lblDiaChi.Text = sp.DiaChi;
+            //this.picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
         private void UCSP_Click(object sender, EventArgs e)
         {
@@ -53,8 +61,8 @@ namespace DoANLapTrinhWin
             if (picClick) //=true dang la tim do
             {
                 string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timden.png";
-                /*Image image = Image.FromFile(imagePath);
-                picHeart.Image = image;*/
+                System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
+                picHeart.Image = image;
                 picClick = false;
             }
             //ban dau la false nhan vao la true chuyen thanh mau do

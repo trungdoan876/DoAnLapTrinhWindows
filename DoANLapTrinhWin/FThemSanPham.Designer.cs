@@ -51,15 +51,16 @@
             this.ucMoTaSP = new DoANLapTrinhWin.UCTextBox();
             this.ucNganhHang = new DoANLapTrinhWin.UCTextBox();
             this.ucTenSP = new DoANLapTrinhWin.UCTextBox();
-            this.buttonTuyChinh1 = new DoANLapTrinhWin.ButtonTuyChinh();
             this.btnThem = new DoANLapTrinhWin.ButtonTuyChinh();
             this.ucXuatXu = new DoANLapTrinhWin.UCTextBox();
             this.ucGiaBan = new DoANLapTrinhWin.UCTextBox();
             this.ucMaSP = new DoANLapTrinhWin.UCTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.ucSoLuong = new DoANLapTrinhWin.UCTextBox();
+            this.picHinh = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -106,7 +107,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(-29, 20);
+            this.pictureBox3.Location = new System.Drawing.Point(-29, 248);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(423, 451);
@@ -338,20 +339,6 @@
             this.ucTenSP.TabIndex = 211;
             this.ucTenSP.Texts = "";
             // 
-            // buttonTuyChinh1
-            // 
-            this.buttonTuyChinh1.BackColor = System.Drawing.Color.SeaGreen;
-            this.buttonTuyChinh1.FlatAppearance.BorderSize = 0;
-            this.buttonTuyChinh1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTuyChinh1.ForeColor = System.Drawing.Color.White;
-            this.buttonTuyChinh1.Location = new System.Drawing.Point(90, 407);
-            this.buttonTuyChinh1.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonTuyChinh1.Name = "buttonTuyChinh1";
-            this.buttonTuyChinh1.Size = new System.Drawing.Size(146, 54);
-            this.buttonTuyChinh1.TabIndex = 207;
-            this.buttonTuyChinh1.Text = "Hình ảnh";
-            this.buttonTuyChinh1.UseVisualStyleBackColor = false;
-            // 
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.SeaGreen;
@@ -456,12 +443,23 @@
             this.ucSoLuong.TabIndex = 229;
             this.ucSoLuong.Texts = "";
             // 
+            // picHinh
+            // 
+            this.picHinh.Location = new System.Drawing.Point(79, 110);
+            this.picHinh.Name = "picHinh";
+            this.picHinh.Size = new System.Drawing.Size(195, 194);
+            this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHinh.TabIndex = 231;
+            this.picHinh.TabStop = false;
+            this.picHinh.Click += new System.EventHandler(this.picHinh_Click);
+            // 
             // FThemSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1279, 576);
+            this.Controls.Add(this.picHinh);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ucSoLuong);
             this.Controls.Add(this.lblMaNB);
@@ -481,7 +479,6 @@
             this.Controls.Add(this.ucNganhHang);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.ucTenSP);
-            this.Controls.Add(this.buttonTuyChinh1);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.ucXuatXu);
@@ -496,6 +493,7 @@
             this.Load += new System.EventHandler(this.FSanPhamNguoiBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,7 +508,6 @@
         private UCTextBox ucXuatXu;
         private ButtonTuyChinh btnThem;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private ButtonTuyChinh buttonTuyChinh1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label13;
         private UCTextBox ucMoTaSP;
@@ -531,5 +528,6 @@
         private System.Windows.Forms.Label lblMaNB;
         private System.Windows.Forms.Label label6;
         private UCTextBox ucSoLuong;
+        private System.Windows.Forms.PictureBox picHinh;
     }
 }

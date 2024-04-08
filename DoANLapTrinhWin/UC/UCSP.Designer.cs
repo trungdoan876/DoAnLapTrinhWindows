@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSP));
             this.lblGiaBan = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.picHinh = new System.Windows.Forms.PictureBox();
             this.lblGiaGoc = new System.Windows.Forms.Label();
             this.lblDiaChi = new System.Windows.Forms.Label();
             this.lblMaSP = new System.Windows.Forms.Label();
             this.picHeart = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHeart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,15 +64,15 @@
             this.lblTenSP.TabIndex = 26;
             this.lblTenSP.Text = "tenSP";
             // 
-            // pictureBox5
+            // picHinh
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(71, 2);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(138, 139);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 26;
-            this.pictureBox5.TabStop = false;
+            this.picHinh.Location = new System.Drawing.Point(71, 2);
+            this.picHinh.Margin = new System.Windows.Forms.Padding(2);
+            this.picHinh.Name = "picHinh";
+            this.picHinh.Size = new System.Drawing.Size(138, 139);
+            this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHinh.TabIndex = 26;
+            this.picHinh.TabStop = false;
             // 
             // lblGiaGoc
             // 
@@ -131,7 +131,7 @@
             this.Controls.Add(this.lblMaSP);
             this.Controls.Add(this.lblDiaChi);
             this.Controls.Add(this.lblGiaGoc);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.picHinh);
             this.Controls.Add(this.lblGiaBan);
             this.Controls.Add(this.lblTenSP);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -139,7 +139,7 @@
             this.Size = new System.Drawing.Size(291, 291);
             this.Load += new System.EventHandler(this.UCSP_Load);
             this.Click += new System.EventHandler(this.UCSP_Click);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHeart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -149,7 +149,7 @@
         #endregion
         public System.Windows.Forms.Label lblTenSP;
         public System.Windows.Forms.Label lblGiaBan;
-        public System.Windows.Forms.PictureBox pictureBox5;
+        public System.Windows.Forms.PictureBox picHinh;
         public System.Windows.Forms.Label lblGiaGoc;
         public System.Windows.Forms.Label lblDiaChi;
         public System.Windows.Forms.Label lblMaSP;

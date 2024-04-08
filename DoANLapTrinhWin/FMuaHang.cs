@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,12 @@ namespace DoANLapTrinhWin
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string tenTaiKhoan;
+        byte[] hinh;
+        Image ByteArrayToImage(byte[] a)
+        {
+            MemoryStream ms = new MemoryStream(a);
+            return Image.FromStream(ms);
+        }
         public FMuaHang(string tenTK)
         {
             InitializeComponent();
@@ -52,7 +59,11 @@ namespace DoANLapTrinhWin
                     string tinhTrang = row["TinhTrang"].ToString();
                     string thoiGianSuDung = row["TGDSD"].ToString();
                     string soLuong = row["SoLuong"].ToString();
-                    SanPham sp = new SanPham(maSP, tenSP, giaBan, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, maNB, soLuong);
+                    if (row["Hinh"] != DBNull.Value)
+                    {
+                        hinh = (byte[])row["Hinh"];
+                    }
+                    SanPham sp = new SanPham(maSP, tenSP, giaBan, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, maNB, soLuong, hinh);
                     UCSP ucSP = new UCSP(sp,tenTaiKhoan);
                     
                     ucSP.lblMaSP.Text = maSP;
@@ -60,6 +71,7 @@ namespace DoANLapTrinhWin
                     ucSP.lblGiaBan.Text = giaBan;
                     ucSP.lblGiaGoc.Text = giaGoc;
                     ucSP.lblDiaChi.Text = diaChi;
+                    //ucSP.picHinh.Image = ByteArrayToImage(hinh);
                     //vi tri moi uc
                     ucSP.Location = new Point(x, y);
                     x += ucSP.Width += 5;

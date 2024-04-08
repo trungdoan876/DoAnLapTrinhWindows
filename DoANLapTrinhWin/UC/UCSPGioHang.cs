@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,11 @@ namespace DoANLapTrinhWin
     public partial class UCSPGioHang : UserControl
     {
         SanPham sp;
+        Image ByteArrayToImage(byte[] a)
+        {
+            MemoryStream ms = new MemoryStream(a);
+            return Image.FromStream(ms);
+        }
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public UCSPGioHang(SanPham sp)
         {
@@ -23,6 +29,7 @@ namespace DoANLapTrinhWin
             this.lblGiaTien.Text = "đ" + sp.GiaBan;
             this.lblTinhTrang.Text = sp.TinhTrang;
             this.lblSoLuong.Text = sp.SoLuong+" san pham san co";
+            //this.picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
 
         private void btnXoaKhoiGioHang_Click(object sender, EventArgs e)

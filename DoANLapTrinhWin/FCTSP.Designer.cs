@@ -33,7 +33,7 @@
             this.lblTenSP = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picHinh = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             this.ucTBMTSP = new DoANLapTrinhWin.UCTextBox();
             this.btnThemVaoGio = new DoANLapTrinhWin.ButtonTuyChinh();
             this.btnMuaHang = new DoANLapTrinhWin.ButtonTuyChinh();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTenSP
@@ -92,15 +92,15 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // pictureBox2
+            // picHinh
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(69, 126);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(246, 214);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 50;
-            this.pictureBox2.TabStop = false;
+            this.picHinh.Location = new System.Drawing.Point(69, 126);
+            this.picHinh.Margin = new System.Windows.Forms.Padding(2);
+            this.picHinh.Name = "picHinh";
+            this.picHinh.Size = new System.Drawing.Size(246, 214);
+            this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHinh.TabIndex = 50;
+            this.picHinh.TabStop = false;
             // 
             // btnBack
             // 
@@ -427,7 +427,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.picHinh);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTenSP);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -435,7 +435,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCTSP";
             this.Load += new System.EventHandler(this.FCTSP_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,7 +445,7 @@
         private System.Windows.Forms.Label lblTenSP;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picHinh;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label label5;
