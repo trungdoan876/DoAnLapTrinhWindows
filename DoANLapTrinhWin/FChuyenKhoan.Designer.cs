@@ -58,7 +58,7 @@
             this.ucTextBox7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucTextBox7.GachChan = false;
             this.ucTextBox7.KichThuocKhung = 1;
-            this.ucTextBox7.Location = new System.Drawing.Point(342, 115);
+            this.ucTextBox7.Location = new System.Drawing.Point(405, 115);
             this.ucTextBox7.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucTextBox7.Multiline = false;
             this.ucTextBox7.Name = "ucTextBox7";
@@ -77,7 +77,7 @@
             this.ucTextBox6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucTextBox6.GachChan = false;
             this.ucTextBox6.KichThuocKhung = 1;
-            this.ucTextBox6.Location = new System.Drawing.Point(344, 42);
+            this.ucTextBox6.Location = new System.Drawing.Point(407, 42);
             this.ucTextBox6.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucTextBox6.Multiline = false;
             this.ucTextBox6.Name = "ucTextBox6";
@@ -102,7 +102,7 @@
             this.ucTextBox2.Name = "ucTextBox2";
             this.ucTextBox2.Padding = new System.Windows.Forms.Padding(7);
             this.ucTextBox2.PasswordChar = false;
-            this.ucTextBox2.Size = new System.Drawing.Size(199, 40);
+            this.ucTextBox2.Size = new System.Drawing.Size(253, 40);
             this.ucTextBox2.TabIndex = 56;
             this.ucTextBox2.Texts = "";
             // 
@@ -121,7 +121,7 @@
             this.ucTextBox1.Name = "ucTextBox1";
             this.ucTextBox1.Padding = new System.Windows.Forms.Padding(7);
             this.ucTextBox1.PasswordChar = false;
-            this.ucTextBox1.Size = new System.Drawing.Size(199, 40);
+            this.ucTextBox1.Size = new System.Drawing.Size(250, 40);
             this.ucTextBox1.TabIndex = 55;
             this.ucTextBox1.Texts = "";
             // 
@@ -139,7 +139,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label1.Location = new System.Drawing.Point(356, 32);
+            this.label1.Location = new System.Drawing.Point(419, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 65;
@@ -159,7 +159,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label3.Location = new System.Drawing.Point(354, 107);
+            this.label3.Location = new System.Drawing.Point(417, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 20);
             this.label3.TabIndex = 67;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,11 @@ namespace DoANLapTrinhWin
     public partial class FThanhToan : Form
     {
         SanPham sp;
+        System.Drawing.Image ByteArrayToImage(byte[] a)
+        {
+            MemoryStream ms = new MemoryStream(a);
+            return System.Drawing.Image.FromStream(ms);
+        }
         public FThanhToan()
         {
             InitializeComponent();
@@ -24,6 +30,7 @@ namespace DoANLapTrinhWin
             lblTenSP.Text = sp.TenSP;
             lblGiaBan.Text = sp.GiaBan;
             lblGiaGoc.Text = sp.GiaGoc;
+            picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
         bool menuExpand = false;
         private void menuTransition_Tick(object sender, EventArgs e)

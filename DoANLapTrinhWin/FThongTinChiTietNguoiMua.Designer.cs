@@ -33,8 +33,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.ucTextBox10 = new DoANLapTrinhWin.UCTextBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -66,7 +64,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(53, 154);
+            this.pictureBox1.Location = new System.Drawing.Point(81, 105);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -77,7 +75,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label13.Location = new System.Drawing.Point(250, 410);
+            this.label13.Location = new System.Drawing.Point(311, 383);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(88, 20);
             this.label13.TabIndex = 194;
@@ -87,7 +85,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label12.Location = new System.Drawing.Point(597, 338);
+            this.label12.Location = new System.Drawing.Point(656, 383);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(98, 20);
             this.label12.TabIndex = 193;
@@ -97,40 +95,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label10.Location = new System.Drawing.Point(252, 338);
+            this.label10.Location = new System.Drawing.Point(311, 305);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(119, 20);
             this.label10.TabIndex = 192;
             this.label10.Text = "Thành phố/Tỉnh";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label9.Location = new System.Drawing.Point(597, 410);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 20);
-            this.label9.TabIndex = 191;
-            this.label9.Text = "Địa chỉ nhà";
-            // 
-            // ucTextBox10
-            // 
-            this.ucTextBox10.BackColor = System.Drawing.SystemColors.Window;
-            this.ucTextBox10.BanKinhKhung = 15;
-            this.ucTextBox10.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucTextBox10.ChumoText = "";
-            this.ucTextBox10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucTextBox10.GachChan = false;
-            this.ucTextBox10.KichThuocKhung = 1;
-            this.ucTextBox10.Location = new System.Drawing.Point(585, 420);
-            this.ucTextBox10.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucTextBox10.Multiline = false;
-            this.ucTextBox10.Name = "ucTextBox10";
-            this.ucTextBox10.Padding = new System.Windows.Forms.Padding(7);
-            this.ucTextBox10.PasswordChar = false;
-            this.ucTextBox10.Size = new System.Drawing.Size(285, 42);
-            this.ucTextBox10.TabIndex = 190;
-            this.ucTextBox10.Texts = "";
             // 
             // comboBox3
             // 
@@ -144,7 +113,7 @@
             "b",
             "c",
             "d"});
-            this.comboBox3.Location = new System.Drawing.Point(242, 422);
+            this.comboBox3.Location = new System.Drawing.Point(303, 395);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(284, 40);
@@ -162,7 +131,7 @@
             "b",
             "c",
             "d"});
-            this.comboBox2.Location = new System.Drawing.Point(585, 350);
+            this.comboBox2.Location = new System.Drawing.Point(644, 395);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(284, 40);
@@ -180,7 +149,7 @@
             "b",
             "c",
             "d"});
-            this.comboBox1.Location = new System.Drawing.Point(240, 350);
+            this.comboBox1.Location = new System.Drawing.Point(299, 317);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(284, 40);
@@ -190,7 +159,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label1.Location = new System.Drawing.Point(252, 263);
+            this.label1.Location = new System.Drawing.Point(311, 230);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 186;
@@ -200,7 +169,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(252, 186);
+            this.label2.Location = new System.Drawing.Point(311, 153);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 185;
@@ -210,7 +179,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label3.Location = new System.Drawing.Point(597, 186);
+            this.label3.Location = new System.Drawing.Point(656, 231);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 20);
             this.label3.TabIndex = 184;
@@ -220,7 +189,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label6.Location = new System.Drawing.Point(252, 33);
+            this.label6.Location = new System.Drawing.Point(311, 78);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 20);
             this.label6.TabIndex = 183;
@@ -235,7 +204,7 @@
             this.ucSDT.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucSDT.GachChan = false;
             this.ucSDT.KichThuocKhung = 1;
-            this.ucSDT.Location = new System.Drawing.Point(240, 274);
+            this.ucSDT.Location = new System.Drawing.Point(299, 241);
             this.ucSDT.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucSDT.Multiline = false;
             this.ucSDT.Name = "ucSDT";
@@ -254,7 +223,7 @@
             this.ucGioiTinh.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucGioiTinh.GachChan = false;
             this.ucGioiTinh.KichThuocKhung = 1;
-            this.ucGioiTinh.Location = new System.Drawing.Point(587, 196);
+            this.ucGioiTinh.Location = new System.Drawing.Point(646, 241);
             this.ucGioiTinh.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucGioiTinh.Multiline = false;
             this.ucGioiTinh.Name = "ucGioiTinh";
@@ -273,7 +242,7 @@
             this.ucMaTaiKhoan.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucMaTaiKhoan.GachChan = false;
             this.ucMaTaiKhoan.KichThuocKhung = 1;
-            this.ucMaTaiKhoan.Location = new System.Drawing.Point(240, 44);
+            this.ucMaTaiKhoan.Location = new System.Drawing.Point(299, 89);
             this.ucMaTaiKhoan.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucMaTaiKhoan.Multiline = false;
             this.ucMaTaiKhoan.Name = "ucMaTaiKhoan";
@@ -292,7 +261,7 @@
             this.ucNgaySinh.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucNgaySinh.GachChan = false;
             this.ucNgaySinh.KichThuocKhung = 1;
-            this.ucNgaySinh.Location = new System.Drawing.Point(240, 196);
+            this.ucNgaySinh.Location = new System.Drawing.Point(299, 163);
             this.ucNgaySinh.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucNgaySinh.Multiline = false;
             this.ucNgaySinh.Name = "ucNgaySinh";
@@ -306,7 +275,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label7.Location = new System.Drawing.Point(599, 263);
+            this.label7.Location = new System.Drawing.Point(658, 308);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 20);
             this.label7.TabIndex = 178;
@@ -316,7 +285,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label8.Location = new System.Drawing.Point(599, 108);
+            this.label8.Location = new System.Drawing.Point(658, 153);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 20);
             this.label8.TabIndex = 176;
@@ -326,7 +295,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label11.Location = new System.Drawing.Point(597, 33);
+            this.label11.Location = new System.Drawing.Point(656, 78);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(57, 20);
             this.label11.TabIndex = 175;
@@ -341,7 +310,7 @@
             this.ucEmail.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucEmail.GachChan = false;
             this.ucEmail.KichThuocKhung = 1;
-            this.ucEmail.Location = new System.Drawing.Point(587, 274);
+            this.ucEmail.Location = new System.Drawing.Point(646, 319);
             this.ucEmail.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucEmail.Multiline = false;
             this.ucEmail.Name = "ucEmail";
@@ -360,7 +329,7 @@
             this.ucCCCD.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucCCCD.GachChan = false;
             this.ucCCCD.KichThuocKhung = 1;
-            this.ucCCCD.Location = new System.Drawing.Point(587, 119);
+            this.ucCCCD.Location = new System.Drawing.Point(646, 164);
             this.ucCCCD.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucCCCD.Multiline = false;
             this.ucCCCD.Name = "ucCCCD";
@@ -379,7 +348,7 @@
             this.ucHoTen.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucHoTen.GachChan = false;
             this.ucHoTen.KichThuocKhung = 1;
-            this.ucHoTen.Location = new System.Drawing.Point(587, 44);
+            this.ucHoTen.Location = new System.Drawing.Point(646, 89);
             this.ucHoTen.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucHoTen.Multiline = false;
             this.ucHoTen.Name = "ucHoTen";
@@ -392,7 +361,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(764, 186);
+            this.pictureBox3.Location = new System.Drawing.Point(824, 184);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(319, 448);
@@ -406,7 +375,7 @@
             this.buttonTuyChinh1.FlatAppearance.BorderSize = 0;
             this.buttonTuyChinh1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTuyChinh1.ForeColor = System.Drawing.Color.White;
-            this.buttonTuyChinh1.Location = new System.Drawing.Point(53, 276);
+            this.buttonTuyChinh1.Location = new System.Drawing.Point(81, 227);
             this.buttonTuyChinh1.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTuyChinh1.Name = "buttonTuyChinh1";
             this.buttonTuyChinh1.Size = new System.Drawing.Size(121, 51);
@@ -418,7 +387,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-4, 310);
+            this.pictureBox2.Location = new System.Drawing.Point(7, 331);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(288, 277);
@@ -430,7 +399,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label5.Location = new System.Drawing.Point(252, 491);
+            this.label5.Location = new System.Drawing.Point(310, 478);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 20);
             this.label5.TabIndex = 197;
@@ -445,7 +414,7 @@
             this.ucTextBox3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucTextBox3.GachChan = false;
             this.ucTextBox3.KichThuocKhung = 1;
-            this.ucTextBox3.Location = new System.Drawing.Point(242, 502);
+            this.ucTextBox3.Location = new System.Drawing.Point(300, 489);
             this.ucTextBox3.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucTextBox3.Multiline = false;
             this.ucTextBox3.Name = "ucTextBox3";
@@ -467,8 +436,6 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.ucTextBox10);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -507,8 +474,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private UCTextBox ucTextBox10;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;

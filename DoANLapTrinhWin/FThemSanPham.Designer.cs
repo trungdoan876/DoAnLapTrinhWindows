@@ -67,7 +67,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label9.Location = new System.Drawing.Point(411, 80);
+            this.label9.Location = new System.Drawing.Point(411, 75);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(105, 20);
             this.label9.TabIndex = 186;
@@ -77,7 +77,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label10.Location = new System.Drawing.Point(408, 145);
+            this.label10.Location = new System.Drawing.Point(411, 141);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(108, 20);
             this.label10.TabIndex = 192;
@@ -129,7 +129,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(815, 151);
+            this.label2.Location = new System.Drawing.Point(815, 141);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 214;
@@ -139,7 +139,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label8.Location = new System.Drawing.Point(815, 80);
+            this.label8.Location = new System.Drawing.Point(815, 75);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 20);
             this.label8.TabIndex = 212;
@@ -445,12 +445,14 @@
             // 
             // picHinh
             // 
+            this.picHinh.Image = ((System.Drawing.Image)(resources.GetObject("picHinh.Image")));
             this.picHinh.Location = new System.Drawing.Point(79, 110);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(195, 194);
             this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHinh.TabIndex = 231;
             this.picHinh.TabStop = false;
+            this.picHinh.Tag = "";
             this.picHinh.Click += new System.EventHandler(this.picHinh_Click);
             // 
             // FThemSanPham

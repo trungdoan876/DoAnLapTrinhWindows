@@ -118,6 +118,7 @@
             this.btnCong.Text = "+";
             this.btnCong.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCong.UseVisualStyleBackColor = true;
+            this.btnCong.Click += new System.EventHandler(this.btnCong_Click);
             // 
             // btnTru
             // 
@@ -130,6 +131,7 @@
             this.btnTru.Text = "-";
             this.btnTru.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnTru.UseVisualStyleBackColor = true;
+            this.btnTru.Click += new System.EventHandler(this.btnTru_Click);
             // 
             // checkBoxSP
             // 
@@ -193,7 +195,6 @@
 
         public System.Windows.Forms.PictureBox picHinh;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSL;
         private System.Windows.Forms.Button btnCong;
         private System.Windows.Forms.Button btnTru;
         private ButtonTuyChinh btnXoaKhoiGioHang;
@@ -202,5 +203,6 @@
         public System.Windows.Forms.Label lblGiaTien;
         private System.Windows.Forms.CheckBox checkBoxSP;
         public System.Windows.Forms.Label lblSoLuong;
+        public System.Windows.Forms.TextBox txtSL;
     }
 }

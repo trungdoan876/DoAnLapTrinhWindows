@@ -55,6 +55,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="FChuaDangBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChuaDangBan.Designer.cs">
+      <DependentUpon>FChuaDangBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDatHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,9 @@
     <Compile Include="UC\UCTextBox.Designer.cs">
       <DependentUpon>UCTextBox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FChuaDangBan.resx">
+      <DependentUpon>FChuaDangBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCTSP.resx">
       <DependentUpon>FCTSP.cs</DependentUpon>
     </EmbeddedResource>

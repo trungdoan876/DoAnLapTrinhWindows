@@ -39,7 +39,7 @@ namespace DoANLapTrinhWin
             {
                 panelMuaHang.AutoScroll = true;
                 conn.Open();
-                string sqlStr = string.Format("SELECT *FROM SanPham");
+                string sqlStr = string.Format("SELECT *FROM SanPham WHERE DangBan = '{0}'",1);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);

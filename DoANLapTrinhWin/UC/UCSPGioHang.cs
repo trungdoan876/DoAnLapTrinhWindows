@@ -15,6 +15,7 @@ namespace DoANLapTrinhWin
     public partial class UCSPGioHang : UserControl
     {
         SanPham sp;
+        string slmua ;
         Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -95,5 +96,31 @@ namespace DoANLapTrinhWin
                 }
             }
         }
+
+        private void btnTru_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtSL.Text, out int value))
+            {
+                if (value > 0)
+                {
+                    value--;
+                    txtSL.Text = value.ToString();
+                }
+            }
+        }
+
+        private void btnCong_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtSL.Text, out int value))
+            {
+                int sl = int.Parse(sp.SoLuong);
+                if(value < sl)
+                {
+                    value++;
+                    txtSL.Text = value.ToString();
+                }
+            }
+        }
+
     }
 }

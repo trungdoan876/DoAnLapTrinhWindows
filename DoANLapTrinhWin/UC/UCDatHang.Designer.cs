@@ -54,16 +54,16 @@
             this.lblthanhtien.ForeColor = System.Drawing.Color.Black;
             this.lblthanhtien.Location = new System.Drawing.Point(1110, 76);
             this.lblthanhtien.Name = "lblthanhtien";
-            this.lblthanhtien.Size = new System.Drawing.Size(133, 22);
+            this.lblthanhtien.Size = new System.Drawing.Size(16, 22);
             this.lblthanhtien.TabIndex = 96;
-            this.lblthanhtien.Text = "giatien*soluong";
+            this.lblthanhtien.Text = "-";
             // 
             // lblGiaTien
             // 
             this.lblGiaTien.AutoSize = true;
             this.lblGiaTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGiaTien.ForeColor = System.Drawing.Color.Black;
-            this.lblGiaTien.Location = new System.Drawing.Point(737, 76);
+            this.lblGiaTien.Location = new System.Drawing.Point(659, 76);
             this.lblGiaTien.Name = "lblGiaTien";
             this.lblGiaTien.Size = new System.Drawing.Size(63, 22);
             this.lblGiaTien.TabIndex = 95;

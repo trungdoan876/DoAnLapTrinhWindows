@@ -15,20 +15,50 @@ namespace DoANLapTrinhWin
     public partial class FDatHang : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        string maNM;
+        string maNM,slmua;
         byte[] hinh;
         Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
             return Image.FromStream(ms);
         }
-        public FDatHang(string maNM)
+        public FDatHang(string maNM,string slmua)
         {
             InitializeComponent();
             this.maNM=maNM;
+            this.slmua=slmua;
             LoadData();
+            ThongTin();
         }
-        public void LoadData()
+        public void ThongTin()
+        {
+            try
+            {
+                conn.Open();
+                string sqlStr = string.Format("select GioHang.MaNguoiMua, GioHang.MaSanPham, NguoiMua.TenNguoiMua as ten, NguoiMua.DiaChi as diachi " +
+                    "FROM GioHang, NguoiMua WHERE GioHang.MaNguoiMua = NguoiMua.MaNguoiMua AND NguoiMua.MaNguoiMua = '{0}'", maNM);
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                DataSet dtSet = new DataSet();
+                adapter.Fill(dtSet);
+                foreach (DataRow row in dtSet.Tables[0].Rows)
+                {
+                    string ten = row["ten"].ToString();
+                    string diachi = row["diachi"].ToString();
+                    this.lblTenNguoiNhan.Text = ten;
+                    this.lblDiaChi.Text = diachi;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+         public void LoadData()
         {
             try
             {
@@ -43,7 +73,7 @@ namespace DoANLapTrinhWin
                     string maSP = row["MaSanPham"].ToString();
                     string tenSP = row["TenSanPham"].ToString();
                     string giaBan = row["GiaBan"].ToString();
-                    string soLuong = row["SoLuong"].ToString();
+                    string soLuong = slmua;
                     if (row["Hinh"] != DBNull.Value)
                     {
                         hinh = (byte[])row["Hinh"];
@@ -56,7 +86,7 @@ namespace DoANLapTrinhWin
                     ucdh.lblTenSP.Text = tenSP;
                     ucdh.lblGiaTien.Text = giaBan;
 
-                    ucdh.lblsoluong.Text = soLuong;
+                    ucdh.lblsoluong.Text = slmua;
                     ucdh.picHinh.Image = ByteArrayToImage(hinh);
                     //vi tri moi uc
                     ucdh.Location = new Point(0, y);
@@ -73,6 +103,11 @@ namespace DoANLapTrinhWin
             {
                 conn.Close();
             }
+        }
+
+        private void btnDatHang_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đặt hàng thành công!!!");
         }
 
         private void FDatHang_Load(object sender, EventArgs e)

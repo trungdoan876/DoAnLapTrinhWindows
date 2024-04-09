@@ -51,15 +51,18 @@
             this.panelBoLoc = new System.Windows.Forms.Panel();
             this.btnTimKiem = new DoANLapTrinhWin.ButtonTuyChinh();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelBoLoc.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMuaHang
             // 
             this.panelMuaHang.AutoScroll = true;
-            this.panelMuaHang.Location = new System.Drawing.Point(1, 56);
+            this.panelMuaHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMuaHang.Location = new System.Drawing.Point(0, 150);
             this.panelMuaHang.Name = "panelMuaHang";
-            this.panelMuaHang.Size = new System.Drawing.Size(919, 548);
+            this.panelMuaHang.Size = new System.Drawing.Size(1108, 452);
             this.panelMuaHang.TabIndex = 27;
             // 
             // sidebarTimer
@@ -72,7 +75,7 @@
             this.btnBoLoc.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBoLoc.Image = ((System.Drawing.Image)(resources.GetObject("btnBoLoc.Image")));
             this.btnBoLoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBoLoc.Location = new System.Drawing.Point(3, 3);
+            this.btnBoLoc.Location = new System.Drawing.Point(3, 0);
             this.btnBoLoc.Name = "btnBoLoc";
             this.btnBoLoc.Size = new System.Drawing.Size(180, 40);
             this.btnBoLoc.TabIndex = 43;
@@ -270,8 +273,8 @@
             // 
             // panelBoLoc
             // 
-            this.panelBoLoc.Controls.Add(this.checkBox15);
             this.panelBoLoc.Controls.Add(this.btnBoLoc);
+            this.panelBoLoc.Controls.Add(this.checkBox15);
             this.panelBoLoc.Controls.Add(this.label5);
             this.panelBoLoc.Controls.Add(this.checkBox13);
             this.panelBoLoc.Controls.Add(this.checkBox11);
@@ -286,7 +289,6 @@
             this.panelBoLoc.Controls.Add(this.ucTextBox5);
             this.panelBoLoc.Controls.Add(this.label4);
             this.panelBoLoc.Controls.Add(this.checkBox8);
-            this.panelBoLoc.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelBoLoc.Location = new System.Drawing.Point(926, 0);
             this.panelBoLoc.MaximumSize = new System.Drawing.Size(182, 634);
             this.panelBoLoc.MinimumSize = new System.Drawing.Size(34, 634);
@@ -301,7 +303,7 @@
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
-            this.btnTimKiem.Location = new System.Drawing.Point(508, 10);
+            this.btnTimKiem.Location = new System.Drawing.Point(630, 13);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(47, 40);
             this.btnTimKiem.TabIndex = 29;
@@ -311,11 +313,22 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(33, 10);
+            this.txtTimKiem.Location = new System.Drawing.Point(155, 10);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(469, 39);
             this.txtTimKiem.TabIndex = 30;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.txtTimKiem);
+            this.panel1.Controls.Add(this.btnTimKiem);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1108, 150);
+            this.panel1.TabIndex = 28;
             // 
             // FMuaHang
             // 
@@ -323,10 +336,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1108, 602);
-            this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.panelBoLoc);
             this.Controls.Add(this.panelMuaHang);
+            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FMuaHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -334,8 +346,9 @@
             this.Load += new System.EventHandler(this.FMuaHang_Load);
             this.panelBoLoc.ResumeLayout(false);
             this.panelBoLoc.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -361,5 +374,6 @@
         private System.Windows.Forms.Panel panelBoLoc;
         private ButtonTuyChinh btnTimKiem;
         private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Panel panel1;
     }
 }

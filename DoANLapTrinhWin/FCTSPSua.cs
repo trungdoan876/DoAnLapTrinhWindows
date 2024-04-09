@@ -43,7 +43,7 @@ namespace DoANLapTrinhWin
             ucMoTa.textBox.Text = sp.MoTaSanPham;
             ucThoiGian.textBox.Text = sp.ThoiGianDaSuDung;
             cbTinhTrang.Text = sp.TinhTrang;
-            //ucdiachi
+            ucDC.textBox.Text = sp.DiaChi;
             ucSoLuong.textBox.Text = sp.SoLuong;
             picHinh.Image = ByteArrayToImage(sp.Hinh);
         }

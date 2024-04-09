@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.menuContainer = new System.Windows.Forms.Panel();
+            this.btnTS = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.btnChonPTTT = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.btnCK = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.btnTTKNH = new DoANLapTrinhWin.ButtonTuyChinh();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.lblTGGiaoHang = new System.Windows.Forms.Label();
             this.lblGiaGoc = new System.Windows.Forms.Label();
@@ -39,19 +43,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblTenNN = new System.Windows.Forms.Label();
             this.lblDCGH = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picHinh = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnTru = new System.Windows.Forms.Button();
             this.btnCong = new System.Windows.Forms.Button();
             this.txtSL = new System.Windows.Forms.TextBox();
             this.ucTBDC = new DoANLapTrinhWin.UCTextBox();
             this.ucTBTenNN = new DoANLapTrinhWin.UCTextBox();
-            this.btnTS = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.btnChonPTTT = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.btnCK = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.btnTTKNH = new DoANLapTrinhWin.ButtonTuyChinh();
             this.menuContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.SuspendLayout();
             // 
             // menuTransition
@@ -70,6 +70,70 @@
             this.menuContainer.Name = "menuContainer";
             this.menuContainer.Size = new System.Drawing.Size(173, 68);
             this.menuContainer.TabIndex = 3;
+            // 
+            // btnTS
+            // 
+            this.btnTS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTS.FlatAppearance.BorderSize = 0;
+            this.btnTS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTS.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTS.ForeColor = System.Drawing.Color.White;
+            this.btnTS.Location = new System.Drawing.Point(0, 205);
+            this.btnTS.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTS.Name = "btnTS";
+            this.btnTS.Size = new System.Drawing.Size(173, 67);
+            this.btnTS.TabIndex = 3;
+            this.btnTS.Text = "Chọn Trả Sau";
+            this.btnTS.UseVisualStyleBackColor = false;
+            this.btnTS.Click += new System.EventHandler(this.btnTS_Click);
+            // 
+            // btnChonPTTT
+            // 
+            this.btnChonPTTT.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnChonPTTT.FlatAppearance.BorderSize = 0;
+            this.btnChonPTTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChonPTTT.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChonPTTT.ForeColor = System.Drawing.Color.White;
+            this.btnChonPTTT.Location = new System.Drawing.Point(0, -2);
+            this.btnChonPTTT.Margin = new System.Windows.Forms.Padding(0);
+            this.btnChonPTTT.Name = "btnChonPTTT";
+            this.btnChonPTTT.Size = new System.Drawing.Size(173, 67);
+            this.btnChonPTTT.TabIndex = 0;
+            this.btnChonPTTT.Text = "Chọn phương thức thanh toán";
+            this.btnChonPTTT.UseVisualStyleBackColor = false;
+            this.btnChonPTTT.Click += new System.EventHandler(this.btnChonPTTT_Click);
+            // 
+            // btnCK
+            // 
+            this.btnCK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCK.FlatAppearance.BorderSize = 0;
+            this.btnCK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCK.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCK.ForeColor = System.Drawing.Color.White;
+            this.btnCK.Location = new System.Drawing.Point(0, 138);
+            this.btnCK.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCK.Name = "btnCK";
+            this.btnCK.Size = new System.Drawing.Size(173, 67);
+            this.btnCK.TabIndex = 2;
+            this.btnCK.Text = "Chuyển khoản";
+            this.btnCK.UseVisualStyleBackColor = false;
+            this.btnCK.Click += new System.EventHandler(this.btnCK_Click);
+            // 
+            // btnTTKNH
+            // 
+            this.btnTTKNH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTTKNH.FlatAppearance.BorderSize = 0;
+            this.btnTTKNH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTTKNH.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTTKNH.ForeColor = System.Drawing.Color.White;
+            this.btnTTKNH.Location = new System.Drawing.Point(0, 67);
+            this.btnTTKNH.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTTKNH.Name = "btnTTKNH";
+            this.btnTTKNH.Size = new System.Drawing.Size(173, 71);
+            this.btnTTKNH.TabIndex = 1;
+            this.btnTTKNH.Text = "Thanh toán khi nhận hàng";
+            this.btnTTKNH.UseVisualStyleBackColor = false;
+            this.btnTTKNH.Click += new System.EventHandler(this.btnTTKNH_Click);
             // 
             // lblTenSP
             // 
@@ -153,13 +217,14 @@
             this.lblDCGH.TabIndex = 15;
             this.lblDCGH.Text = "Địa chỉ giao hàng:";
             // 
-            // pictureBox1
+            // picHinh
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(42, 57);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(221, 224);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.picHinh.Location = new System.Drawing.Point(42, 57);
+            this.picHinh.Name = "picHinh";
+            this.picHinh.Size = new System.Drawing.Size(221, 224);
+            this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHinh.TabIndex = 16;
+            this.picHinh.TabStop = false;
             // 
             // label1
             // 
@@ -244,70 +309,6 @@
             this.ucTBTenNN.TabIndex = 12;
             this.ucTBTenNN.Texts = "";
             // 
-            // btnTS
-            // 
-            this.btnTS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTS.FlatAppearance.BorderSize = 0;
-            this.btnTS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTS.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTS.ForeColor = System.Drawing.Color.White;
-            this.btnTS.Location = new System.Drawing.Point(0, 205);
-            this.btnTS.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTS.Name = "btnTS";
-            this.btnTS.Size = new System.Drawing.Size(173, 67);
-            this.btnTS.TabIndex = 3;
-            this.btnTS.Text = "Chọn Trả Sau";
-            this.btnTS.UseVisualStyleBackColor = false;
-            this.btnTS.Click += new System.EventHandler(this.btnTS_Click);
-            // 
-            // btnChonPTTT
-            // 
-            this.btnChonPTTT.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnChonPTTT.FlatAppearance.BorderSize = 0;
-            this.btnChonPTTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChonPTTT.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChonPTTT.ForeColor = System.Drawing.Color.White;
-            this.btnChonPTTT.Location = new System.Drawing.Point(0, -2);
-            this.btnChonPTTT.Margin = new System.Windows.Forms.Padding(0);
-            this.btnChonPTTT.Name = "btnChonPTTT";
-            this.btnChonPTTT.Size = new System.Drawing.Size(173, 67);
-            this.btnChonPTTT.TabIndex = 0;
-            this.btnChonPTTT.Text = "Chọn phương thức thanh toán";
-            this.btnChonPTTT.UseVisualStyleBackColor = false;
-            this.btnChonPTTT.Click += new System.EventHandler(this.btnChonPTTT_Click);
-            // 
-            // btnCK
-            // 
-            this.btnCK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCK.FlatAppearance.BorderSize = 0;
-            this.btnCK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCK.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCK.ForeColor = System.Drawing.Color.White;
-            this.btnCK.Location = new System.Drawing.Point(0, 138);
-            this.btnCK.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCK.Name = "btnCK";
-            this.btnCK.Size = new System.Drawing.Size(173, 67);
-            this.btnCK.TabIndex = 2;
-            this.btnCK.Text = "Chuyển khoản";
-            this.btnCK.UseVisualStyleBackColor = false;
-            this.btnCK.Click += new System.EventHandler(this.btnCK_Click);
-            // 
-            // btnTTKNH
-            // 
-            this.btnTTKNH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTTKNH.FlatAppearance.BorderSize = 0;
-            this.btnTTKNH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTTKNH.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTTKNH.ForeColor = System.Drawing.Color.White;
-            this.btnTTKNH.Location = new System.Drawing.Point(0, 67);
-            this.btnTTKNH.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTTKNH.Name = "btnTTKNH";
-            this.btnTTKNH.Size = new System.Drawing.Size(173, 71);
-            this.btnTTKNH.TabIndex = 1;
-            this.btnTTKNH.Text = "Thanh toán khi nhận hàng";
-            this.btnTTKNH.UseVisualStyleBackColor = false;
-            this.btnTTKNH.Click += new System.EventHandler(this.btnTTKNH_Click);
-            // 
             // FThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -318,7 +319,7 @@
             this.Controls.Add(this.btnCong);
             this.Controls.Add(this.btnTru);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picHinh);
             this.Controls.Add(this.lblDCGH);
             this.Controls.Add(this.ucTBDC);
             this.Controls.Add(this.lblTenNN);
@@ -333,7 +334,7 @@
             this.Name = "FThanhToan";
             this.Text = "FChuyenKhoan";
             this.menuContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,7 +358,7 @@
         private System.Windows.Forms.Label lblTenNN;
         private System.Windows.Forms.Label lblDCGH;
         private UCTextBox ucTBDC;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picHinh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTru;
         private System.Windows.Forms.Button btnCong;

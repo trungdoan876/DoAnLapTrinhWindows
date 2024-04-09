@@ -16,7 +16,7 @@ namespace DoANLapTrinhWin
     public partial class FGioHang : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        string maNM;
+        string maNM,slmua;
         byte[] hinh;
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
@@ -69,6 +69,7 @@ namespace DoANLapTrinhWin
                     //spgh.lblMaSP.Text = maSP;
                     spgh.picHinh.Image = ByteArrayToImage(hinh);
                     spgh.lblSoLuong.Text = soLuong +" sản phẩm sẵn có";
+                    spgh.txtSL.Text = slmua;
                     //vi tri moi uc
                     spgh.Location = new Point(0, y);
                     y += spgh.Height += 5;
@@ -85,10 +86,9 @@ namespace DoANLapTrinhWin
                 conn.Close();
             }
         }
-
         private void btnMuaHang_Click(object sender, EventArgs e)
         {
-            FDatHang fdh = new FDatHang(maNM);
+            FDatHang fdh = new FDatHang(maNM,slmua);
             fdh.ShowDialog();
         }
     }

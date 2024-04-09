@@ -63,7 +63,7 @@
             // 
             this.lblTenSP.AutoSize = true;
             this.lblTenSP.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblTenSP.Location = new System.Drawing.Point(32, 170);
+            this.lblTenSP.Location = new System.Drawing.Point(5, 170);
             this.lblTenSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenSP.Name = "lblTenSP";
             this.lblTenSP.Size = new System.Drawing.Size(53, 20);

@@ -2,40 +2,31 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.IO;
 
 namespace DoANLapTrinhWin
 {
-    public partial class FDanhSachSanPham : Form
+    public partial class FChuaDangBan : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNB;
         byte[] hinh;
-        Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return Image.FromStream(ms);
-        }
-        public FDanhSachSanPham(string maNB)
+        public FChuaDangBan(string maNB)
         {
             InitializeComponent();
             this.maNB = maNB;
-            LoadData();
         }
-        //đổ dữ liệu vào user control trong danh sách sản phẩm
-        private void LoadData()
+        public void LoadData()
         {
             try
             {
-                panelTatCaSP.AutoScroll = true;
                 conn.Open();
-                string sqlStr = string.Format("SELECT * FROM SanPham WHERE MaNguoiBan ='{0}'", maNB);
+                string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", maNB, 0);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
@@ -53,24 +44,23 @@ namespace DoANLapTrinhWin
                     string xuatXu = row["XuatXu"].ToString();
                     string diaChi = row["DiaChi"].ToString();
                     string thoiGianSuDung = row["TGDSD"].ToString();
-                    string soLuong = row["SoLuong"].ToString();
                     DateTime ngayDang = DateTime.Now;
                     if (row["Hinh"] != DBNull.Value)
                     {
                         hinh = (byte[])row["Hinh"];
                     }
-                    SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", soLuong,hinh);
-                   
+                    SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", "", hinh);
+
                     UCSPBan ucSPBan = new UCSPBan(sp);
-                    //MessageBox.Show("huhu");
+
                     ucSPBan.Location = new Point(x, y);
                     x += ucSPBan.Width += 5;
-                    if (x == ucSPBan.Width * 4)
+                    if (x == ucSPBan.Width * 3)
                     {
                         x = 0;
                         y += ucSPBan.Height + 5;
                     }
-                    panelTatCaSP.Controls.Add(ucSPBan);
+                    panelChuaDangBan.Controls.Add(ucSPBan);
                 }
             }
             catch (Exception ex)
@@ -82,17 +72,9 @@ namespace DoANLapTrinhWin
                 conn.Close();
             }
         }
-        private void FTatCaSanPham_Load(object sender, EventArgs e)
+
+        private void FChuaDangBan_Load(object sender, EventArgs e)
         {
-            LoadData();
-        }
-        private void btnThemSP_Click(object sender, EventArgs e)
-        {
-            this.Hide(); //an form 1
-            FThemSanPham form2 = new FThemSanPham(maNB) ; // tao doi tuong form 2
-            form2.ShowDialog();
-            form2 = null; //tat form2, tuc la form 2 tro ve null
-            this.Show();
             LoadData();
         }
     }

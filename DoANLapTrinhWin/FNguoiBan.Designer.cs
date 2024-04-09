@@ -231,9 +231,10 @@
             this.panelThan.Controls.Add(this.label1);
             this.panelThan.Controls.Add(this.pictureBox5);
             this.panelThan.Controls.Add(this.label3);
-            this.panelThan.Location = new System.Drawing.Point(172, 0);
+            this.panelThan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelThan.Location = new System.Drawing.Point(178, 0);
             this.panelThan.Name = "panelThan";
-            this.panelThan.Size = new System.Drawing.Size(1107, 744);
+            this.panelThan.Size = new System.Drawing.Size(1100, 744);
             this.panelThan.TabIndex = 1;
             // 
             // pictureBox1

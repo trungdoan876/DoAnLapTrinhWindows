@@ -68,6 +68,7 @@ namespace DoANLapTrinhWin
         private void btnChuaDangBan_Click(object sender, EventArgs e)
         {
             TaoButton(sender);
+            moFormCon(new FChuaDangBan(maNBan));
         }
     }
 }

@@ -1,13 +1,15 @@
 ﻿--(localdb)\mssqllocaldb
+--PCHOME-HAINT\MYHOANG
 --DROP TABLE SanPham
 select * from SanPham
+
 --DELETE FROM SanPham WHERE MaSanPham = 'SP5'
 CREATE TABLE SanPham 
 (
 	Hinh varbinary(max),
 	MaSanPham nchar(10) PRIMARY KEY,
 	TenSanPham nvarchar(100),
-	GiaBan decimal(8,2),
+	GiaBan decimal(10,3),
 	GiaGoc nvarchar(100),
 	XuatXu nvarchar(100),
 	TGDSD nvarchar(100),
@@ -64,8 +66,11 @@ CREATE TABLE NguoiMua
 	MaDonHang char(10),
 	PRIMARY KEY(MaNguoiMua)
 )
-INSERT INTO NguoiMua VALUES ('NM01',N'Nguyễn Thị B','123456','1990-03-20','Nu','27839293','hcm','0192837283',null,null,null);
+INSERT INTO NguoiMua VALUES ('NM01',N'Nguyễn Thị B','123456','1990-03-20','Nu','27839293',N'484 Lê Văn Việt, phường Tăng Nhơn Phú A, Hồ Chí Minh','0192837283',null,null,null);
 GO
+select * from YeuThich
+delete from yeuthich where MaSanPham ='SP1'
+delete from nguoimua where manguoimua ='NM01'
 select *from giohang
 GO
 --DROP TABLE GioHang

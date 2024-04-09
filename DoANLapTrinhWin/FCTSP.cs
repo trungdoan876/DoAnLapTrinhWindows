@@ -75,7 +75,7 @@ namespace DoANLapTrinhWin
                 // Ket noi
                 conn.Open();
                 string anh = BitConverter.ToString(sp.Hinh).Replace("-", "");
-                string sqlStr = string.Format("INSERT INTO GioHang(MaNguoiBan, MaNguoiMua, MaSanPham, TenSanPham, SoLuong, GiaBan,Hinh) VALUES ('{0}', '{1}','{2}','{3}','{4}','{5}',0x{6})", sp.MaNguoiBan,"NM01",sp.MaSP,sp.TenSP,sp.SoLuong,sp.GiaBan,anh);
+                string sqlStr = string.Format("INSERT INTO GioHang(MaNguoiBan, MaNguoiMua, MaSanPham, TenSanPham, SoLuong, GiaBan,Hinh,TrangThaiSP) VALUES ('{0}', N'{1}',N'{2}',N'{3}',N'{4}',N'{5}',0x{6},'{7}')", sp.MaNguoiBan,"NM01",sp.MaSP,sp.TenSP,sp.SoLuong,sp.GiaBan,anh,1);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 if (cmd.ExecuteNonQuery() > 0)
                     MessageBox.Show("them thanh cong");
