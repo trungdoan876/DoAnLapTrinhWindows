@@ -31,11 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnChuaDangBan = new System.Windows.Forms.Button();
+            this.btnTraHang = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnDaDangBan = new System.Windows.Forms.Button();
+            this.btnDaGiao = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnTatCaSP = new System.Windows.Forms.Button();
+            this.btnDangThucHien = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -66,63 +66,64 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnChuaDangBan);
+            this.panel4.Controls.Add(this.btnTraHang);
             this.panel4.Location = new System.Drawing.Point(354, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(171, 55);
             this.panel4.TabIndex = 3;
             // 
-            // btnChuaDangBan
+            // btnTraHang
             // 
-            this.btnChuaDangBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnChuaDangBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChuaDangBan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnChuaDangBan.Location = new System.Drawing.Point(-16, -15);
-            this.btnChuaDangBan.Name = "btnChuaDangBan";
-            this.btnChuaDangBan.Size = new System.Drawing.Size(205, 87);
-            this.btnChuaDangBan.TabIndex = 4;
-            this.btnChuaDangBan.Text = "Trả hàng/Hoàn tiền";
-            this.btnChuaDangBan.UseVisualStyleBackColor = false;
+            this.btnTraHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTraHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTraHang.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnTraHang.Location = new System.Drawing.Point(-16, -15);
+            this.btnTraHang.Name = "btnTraHang";
+            this.btnTraHang.Size = new System.Drawing.Size(205, 87);
+            this.btnTraHang.TabIndex = 4;
+            this.btnTraHang.Text = "Trả hàng/Hoàn tiền";
+            this.btnTraHang.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnDaDangBan);
+            this.panel3.Controls.Add(this.btnDaGiao);
             this.panel3.Location = new System.Drawing.Point(177, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(171, 55);
             this.panel3.TabIndex = 2;
             // 
-            // btnDaDangBan
+            // btnDaGiao
             // 
-            this.btnDaDangBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDaDangBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDaDangBan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDaDangBan.Location = new System.Drawing.Point(-16, -15);
-            this.btnDaDangBan.Name = "btnDaDangBan";
-            this.btnDaDangBan.Size = new System.Drawing.Size(205, 87);
-            this.btnDaDangBan.TabIndex = 4;
-            this.btnDaDangBan.Text = "Đã giao";
-            this.btnDaDangBan.UseVisualStyleBackColor = false;
+            this.btnDaGiao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDaGiao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDaGiao.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDaGiao.Location = new System.Drawing.Point(-16, -15);
+            this.btnDaGiao.Name = "btnDaGiao";
+            this.btnDaGiao.Size = new System.Drawing.Size(205, 87);
+            this.btnDaGiao.TabIndex = 4;
+            this.btnDaGiao.Text = "Đã giao";
+            this.btnDaGiao.UseVisualStyleBackColor = false;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.btnTatCaSP);
+            this.panel5.Controls.Add(this.btnDangThucHien);
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(171, 55);
             this.panel5.TabIndex = 1;
             // 
-            // btnTatCaSP
+            // btnDangThucHien
             // 
-            this.btnTatCaSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTatCaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTatCaSP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTatCaSP.Location = new System.Drawing.Point(-14, -25);
-            this.btnTatCaSP.Name = "btnTatCaSP";
-            this.btnTatCaSP.Size = new System.Drawing.Size(203, 104);
-            this.btnTatCaSP.TabIndex = 3;
-            this.btnTatCaSP.Text = "Đang thực hiện";
-            this.btnTatCaSP.UseVisualStyleBackColor = false;
+            this.btnDangThucHien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDangThucHien.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangThucHien.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDangThucHien.Location = new System.Drawing.Point(-14, -25);
+            this.btnDangThucHien.Name = "btnDangThucHien";
+            this.btnDangThucHien.Size = new System.Drawing.Size(203, 104);
+            this.btnDangThucHien.TabIndex = 3;
+            this.btnDangThucHien.Text = "Đang thực hiện";
+            this.btnDangThucHien.UseVisualStyleBackColor = false;
+            this.btnDangThucHien.Click += new System.EventHandler(this.btnDangThucHien_Click);
             // 
             // FDonHang
             // 
@@ -146,10 +147,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnChuaDangBan;
+        private System.Windows.Forms.Button btnTraHang;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnDaDangBan;
+        private System.Windows.Forms.Button btnDaGiao;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnTatCaSP;
+        private System.Windows.Forms.Button btnDangThucHien;
     }
 }

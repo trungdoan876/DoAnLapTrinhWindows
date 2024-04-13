@@ -17,6 +17,7 @@ namespace DoANLapTrinhWin
     public partial class FCTSP : Form
     {
         SanPham sp;
+        //string slmua;
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -119,5 +120,6 @@ namespace DoANLapTrinhWin
                 txtSL.Text = value.ToString();
             }
         }
+
     }
 }

@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace DoANLapTrinhWin
 {
-    public partial class FDanhGia : Form
+    public partial class UCTheoNB : UserControl
     {
-        public FDanhGia()
+        string mangban;
+        public UCTheoNB(string mangban)
         {
             InitializeComponent();
+            this.mangban = mangban;
+            this.lbltenNB.Text = mangban;
         }
     }
 }

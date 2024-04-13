@@ -15,17 +15,17 @@ namespace DoANLapTrinhWin
     public partial class UCSPGioHang : UserControl
     {
         SanPham sp;
-        string slmua ;
+        //string slmua ;
         Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
             return Image.FromStream(ms);
         }
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        public UCSPGioHang(SanPham sp)
+        public UCSPGioHang(SanPham sanpham)
         {
             InitializeComponent();
-            this.sp = sp;
+            this.sp = sanpham;
             this.lblTenSP.Text = sp.TenSP;
             this.lblGiaTien.Text = "đ" + sp.GiaBan;
             this.lblTinhTrang.Text = sp.TinhTrang;
@@ -122,5 +122,7 @@ namespace DoANLapTrinhWin
             }
         }
 
+        
     }
+    
 }

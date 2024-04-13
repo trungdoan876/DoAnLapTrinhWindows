@@ -43,7 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dtpNgayDang = new System.Windows.Forms.DateTimePicker();
             this.lblMaNB = new System.Windows.Forms.Label();
             this.ucDC = new DoANLapTrinhWin.UCTextBox();
             this.ucTGDSD = new DoANLapTrinhWin.UCTextBox();
@@ -58,6 +57,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.ucSoLuong = new DoANLapTrinhWin.UCTextBox();
             this.picHinh = new System.Windows.Forms.PictureBox();
+            this.dtpNgayDang = new Guna.UI2.WinForms.Guna2DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
@@ -207,13 +207,6 @@
             this.label5.Size = new System.Drawing.Size(109, 20);
             this.label5.TabIndex = 226;
             this.label5.Text = "Mã người bán:";
-            // 
-            // dtpNgayDang
-            // 
-            this.dtpNgayDang.Location = new System.Drawing.Point(1003, 20);
-            this.dtpNgayDang.Name = "dtpNgayDang";
-            this.dtpNgayDang.Size = new System.Drawing.Size(264, 26);
-            this.dtpNgayDang.TabIndex = 227;
             // 
             // lblMaNB
             // 
@@ -455,17 +448,31 @@
             this.picHinh.Tag = "";
             this.picHinh.Click += new System.EventHandler(this.picHinh_Click);
             // 
+            // dtpNgayDang
+            // 
+            this.dtpNgayDang.Checked = true;
+            this.dtpNgayDang.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.dtpNgayDang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpNgayDang.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpNgayDang.Location = new System.Drawing.Point(1010, 464);
+            this.dtpNgayDang.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpNgayDang.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpNgayDang.Name = "dtpNgayDang";
+            this.dtpNgayDang.Size = new System.Drawing.Size(257, 36);
+            this.dtpNgayDang.TabIndex = 232;
+            this.dtpNgayDang.Value = new System.DateTime(2024, 4, 13, 15, 4, 28, 34);
+            // 
             // FThemSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1279, 576);
+            this.Controls.Add(this.dtpNgayDang);
             this.Controls.Add(this.picHinh);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ucSoLuong);
             this.Controls.Add(this.lblMaNB);
-            this.Controls.Add(this.dtpNgayDang);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ucDC);
@@ -526,10 +533,10 @@
         private System.Windows.Forms.Label label4;
         private UCTextBox ucDC;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dtpNgayDang;
         private System.Windows.Forms.Label lblMaNB;
         private System.Windows.Forms.Label label6;
         private UCTextBox ucSoLuong;
         private System.Windows.Forms.PictureBox picHinh;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayDang;
     }
 }

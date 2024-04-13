@@ -34,10 +34,8 @@
             this.thanhToanKhiNhanHangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chuyenKhoanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ghiNoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMuaHang = new DoANLapTrinhWin.ButtonTuyChinh();
             this.panelGioHang = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -45,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label1.Location = new System.Drawing.Point(66, 479);
+            this.label1.Location = new System.Drawing.Point(73, 526);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(205, 45);
@@ -62,7 +60,7 @@
             this.ucTextBox6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucTextBox6.GachChan = false;
             this.ucTextBox6.KichThuocKhung = 1;
-            this.ucTextBox6.Location = new System.Drawing.Point(273, 486);
+            this.ucTextBox6.Location = new System.Drawing.Point(280, 533);
             this.ucTextBox6.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucTextBox6.Multiline = false;
             this.ucTextBox6.Name = "ucTextBox6";
@@ -87,17 +85,6 @@
             this.ghiNoToolStripMenuItem.Name = "ghiNoToolStripMenuItem";
             this.ghiNoToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(676, 423);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(302, 197);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 63;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnMuaHang
             // 
             this.btnMuaHang.BackColor = System.Drawing.Color.SeaGreen;
@@ -107,7 +94,7 @@
             this.btnMuaHang.ForeColor = System.Drawing.Color.White;
             this.btnMuaHang.Image = ((System.Drawing.Image)(resources.GetObject("btnMuaHang.Image")));
             this.btnMuaHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMuaHang.Location = new System.Drawing.Point(725, 551);
+            this.btnMuaHang.Location = new System.Drawing.Point(717, 517);
             this.btnMuaHang.Margin = new System.Windows.Forms.Padding(2);
             this.btnMuaHang.Name = "btnMuaHang";
             this.btnMuaHang.Size = new System.Drawing.Size(219, 69);
@@ -121,7 +108,7 @@
             this.panelGioHang.AutoScroll = true;
             this.panelGioHang.Location = new System.Drawing.Point(-2, -2);
             this.panelGioHang.Name = "panelGioHang";
-            this.panelGioHang.Size = new System.Drawing.Size(1180, 432);
+            this.panelGioHang.Size = new System.Drawing.Size(1180, 505);
             this.panelGioHang.TabIndex = 65;
             // 
             // FGioHang
@@ -132,14 +119,12 @@
             this.ClientSize = new System.Drawing.Size(1178, 644);
             this.Controls.Add(this.panelGioHang);
             this.Controls.Add(this.btnMuaHang);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ucTextBox6);
             this.ForeColor = System.Drawing.Color.MediumVioletRed;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FGioHang";
             this.Text = "FGioHang";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,7 +136,6 @@
         private System.Windows.Forms.ToolStripMenuItem ghiNoToolStripMenuItem;
         private UCTextBox ucTextBox6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private ButtonTuyChinh btnMuaHang;
         private System.Windows.Forms.Panel panelGioHang;
 

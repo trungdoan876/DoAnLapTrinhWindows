@@ -37,7 +37,7 @@
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(7, 7);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 19);
+            this.textBox1.Size = new System.Drawing.Size(257, 19);
             this.textBox1.TabIndex = 0;
             // 
             // UCTextBox
@@ -48,7 +48,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "UCTextBox";
             this.Padding = new System.Windows.Forms.Padding(7);
-            this.Size = new System.Drawing.Size(270, 40);
+            this.Size = new System.Drawing.Size(271, 31);
             this.Enter += new System.EventHandler(this.UCTextBox_Enter);
             this.Leave += new System.EventHandler(this.UCTextBox_Leave);
             this.ResumeLayout(false);

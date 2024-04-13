@@ -224,6 +224,10 @@
             // 
             // panelThan
             // 
+            this.panelThan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelThan.AutoSize = true;
             this.panelThan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelThan.Controls.Add(this.pictureBox1);
             this.panelThan.Controls.Add(this.label2);
@@ -231,7 +235,6 @@
             this.panelThan.Controls.Add(this.label1);
             this.panelThan.Controls.Add(this.pictureBox5);
             this.panelThan.Controls.Add(this.label3);
-            this.panelThan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelThan.Location = new System.Drawing.Point(178, 0);
             this.panelThan.Name = "panelThan";
             this.panelThan.Size = new System.Drawing.Size(1100, 744);
@@ -333,6 +336,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -35,36 +35,33 @@
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.ucSDT = new DoANLapTrinhWin.UCTextBox();
-            this.ucGioiTinh = new DoANLapTrinhWin.UCTextBox();
-            this.ucMaTaiKhoan = new DoANLapTrinhWin.UCTextBox();
-            this.ucNgaySinh = new DoANLapTrinhWin.UCTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ucTextBox3 = new DoANLapTrinhWin.UCTextBox();
+            this.ucSDT = new DoANLapTrinhWin.UCTextBox();
+            this.ucGioiTinh = new DoANLapTrinhWin.UCTextBox();
+            this.ucMaTaiKhoan = new DoANLapTrinhWin.UCTextBox();
             this.ucEmail = new DoANLapTrinhWin.UCTextBox();
             this.ucCCCD = new DoANLapTrinhWin.UCTextBox();
             this.ucHoTen = new DoANLapTrinhWin.UCTextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.buttonTuyChinh1 = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.ucTextBox3 = new DoANLapTrinhWin.UCTextBox();
+            this.dtpNgSinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(81, 105);
+            this.pictureBox1.Location = new System.Drawing.Point(89, 124);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -137,24 +134,6 @@
             this.comboBox2.Size = new System.Drawing.Size(284, 40);
             this.comboBox2.TabIndex = 188;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "c",
-            "d"});
-            this.comboBox1.Location = new System.Drawing.Point(299, 317);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(284, 40);
-            this.comboBox1.TabIndex = 187;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -191,9 +170,79 @@
             this.label6.ForeColor = System.Drawing.Color.SeaGreen;
             this.label6.Location = new System.Drawing.Point(311, 78);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 20);
+            this.label6.Size = new System.Drawing.Size(109, 20);
             this.label6.TabIndex = 183;
-            this.label6.Text = "Mã số tài khoản";
+            this.label6.Text = "Mã người mua";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label7.Location = new System.Drawing.Point(658, 308);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 20);
+            this.label7.TabIndex = 178;
+            this.label7.Text = "Email";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label8.Location = new System.Drawing.Point(658, 153);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 20);
+            this.label8.TabIndex = 176;
+            this.label8.Text = "CMND/CCCD";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label11.Location = new System.Drawing.Point(656, 78);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 20);
+            this.label11.TabIndex = 175;
+            this.label11.Text = "Họ tên";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(824, 184);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(319, 448);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 170;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label5.Location = new System.Drawing.Point(310, 478);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 20);
+            this.label5.TabIndex = 197;
+            this.label5.Text = "Địa chỉ";
+            // 
+            // ucTextBox3
+            // 
+            this.ucTextBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.ucTextBox3.BanKinhKhung = 15;
+            this.ucTextBox3.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucTextBox3.ChumoText = "";
+            this.ucTextBox3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucTextBox3.GachChan = false;
+            this.ucTextBox3.KichThuocKhung = 1;
+            this.ucTextBox3.Location = new System.Drawing.Point(300, 489);
+            this.ucTextBox3.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucTextBox3.Multiline = false;
+            this.ucTextBox3.Name = "ucTextBox3";
+            this.ucTextBox3.Padding = new System.Windows.Forms.Padding(7);
+            this.ucTextBox3.PasswordChar = false;
+            this.ucTextBox3.Size = new System.Drawing.Size(628, 42);
+            this.ucTextBox3.TabIndex = 196;
+            this.ucTextBox3.Texts = "";
             // 
             // ucSDT
             // 
@@ -252,55 +301,6 @@
             this.ucMaTaiKhoan.TabIndex = 180;
             this.ucMaTaiKhoan.Texts = "";
             // 
-            // ucNgaySinh
-            // 
-            this.ucNgaySinh.BackColor = System.Drawing.SystemColors.Window;
-            this.ucNgaySinh.BanKinhKhung = 15;
-            this.ucNgaySinh.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucNgaySinh.ChumoText = "";
-            this.ucNgaySinh.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucNgaySinh.GachChan = false;
-            this.ucNgaySinh.KichThuocKhung = 1;
-            this.ucNgaySinh.Location = new System.Drawing.Point(299, 163);
-            this.ucNgaySinh.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucNgaySinh.Multiline = false;
-            this.ucNgaySinh.Name = "ucNgaySinh";
-            this.ucNgaySinh.Padding = new System.Windows.Forms.Padding(7);
-            this.ucNgaySinh.PasswordChar = false;
-            this.ucNgaySinh.Size = new System.Drawing.Size(285, 40);
-            this.ucNgaySinh.TabIndex = 179;
-            this.ucNgaySinh.Texts = "";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label7.Location = new System.Drawing.Point(658, 308);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 20);
-            this.label7.TabIndex = 178;
-            this.label7.Text = "Email";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label8.Location = new System.Drawing.Point(658, 153);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 20);
-            this.label8.TabIndex = 176;
-            this.label8.Text = "CMND/CCCD";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label11.Location = new System.Drawing.Point(656, 78);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 20);
-            this.label11.TabIndex = 175;
-            this.label11.Text = "Họ tên";
-            // 
             // ucEmail
             // 
             this.ucEmail.BackColor = System.Drawing.SystemColors.Window;
@@ -358,71 +358,34 @@
             this.ucHoTen.TabIndex = 172;
             this.ucHoTen.Texts = "";
             // 
-            // pictureBox3
+            // dtpNgSinh
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(824, 184);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(319, 448);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 170;
-            this.pictureBox3.TabStop = false;
+            this.dtpNgSinh.Checked = true;
+            this.dtpNgSinh.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.dtpNgSinh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpNgSinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpNgSinh.Location = new System.Drawing.Point(299, 168);
+            this.dtpNgSinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpNgSinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpNgSinh.Name = "dtpNgSinh";
+            this.dtpNgSinh.Size = new System.Drawing.Size(284, 36);
+            this.dtpNgSinh.TabIndex = 198;
+            this.dtpNgSinh.Value = new System.DateTime(2024, 4, 13, 15, 2, 40, 120);
             // 
-            // buttonTuyChinh1
+            // guna2ComboBox1
             // 
-            this.buttonTuyChinh1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.buttonTuyChinh1.FlatAppearance.BorderSize = 0;
-            this.buttonTuyChinh1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTuyChinh1.ForeColor = System.Drawing.Color.White;
-            this.buttonTuyChinh1.Location = new System.Drawing.Point(81, 227);
-            this.buttonTuyChinh1.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonTuyChinh1.Name = "buttonTuyChinh1";
-            this.buttonTuyChinh1.Size = new System.Drawing.Size(121, 51);
-            this.buttonTuyChinh1.TabIndex = 169;
-            this.buttonTuyChinh1.Text = "Cập nhật ";
-            this.buttonTuyChinh1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(7, 331);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(288, 277);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 168;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label5.Location = new System.Drawing.Point(310, 478);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
-            this.label5.TabIndex = 197;
-            this.label5.Text = "Địa chỉ";
-            // 
-            // ucTextBox3
-            // 
-            this.ucTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.ucTextBox3.BanKinhKhung = 15;
-            this.ucTextBox3.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucTextBox3.ChumoText = "";
-            this.ucTextBox3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucTextBox3.GachChan = false;
-            this.ucTextBox3.KichThuocKhung = 1;
-            this.ucTextBox3.Location = new System.Drawing.Point(300, 489);
-            this.ucTextBox3.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucTextBox3.Multiline = false;
-            this.ucTextBox3.Name = "ucTextBox3";
-            this.ucTextBox3.Padding = new System.Windows.Forms.Padding(7);
-            this.ucTextBox3.PasswordChar = false;
-            this.ucTextBox3.Size = new System.Drawing.Size(628, 42);
-            this.ucTextBox3.TabIndex = 196;
-            this.ucTextBox3.Texts = "";
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Location = new System.Drawing.Point(303, 319);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.Size = new System.Drawing.Size(281, 36);
+            this.guna2ComboBox1.TabIndex = 199;
             // 
             // FThongTinChiTietNguoiMua
             // 
@@ -430,15 +393,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1192, 612);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.guna2ComboBox1);
+            this.Controls.Add(this.dtpNgSinh);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ucTextBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -446,7 +410,6 @@
             this.Controls.Add(this.ucSDT);
             this.Controls.Add(this.ucGioiTinh);
             this.Controls.Add(this.ucMaTaiKhoan);
-            this.Controls.Add(this.ucNgaySinh);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label11);
@@ -454,15 +417,13 @@
             this.Controls.Add(this.ucCCCD);
             this.Controls.Add(this.ucHoTen);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.buttonTuyChinh1);
-            this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FThongTinChiTietNguoiMua";
             this.Text = "FThongTinChiTiet";
             this.Load += new System.EventHandler(this.FThongTinChiTiet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -476,7 +437,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -484,7 +444,6 @@
         private UCTextBox ucSDT;
         private UCTextBox ucGioiTinh;
         private UCTextBox ucMaTaiKhoan;
-        private UCTextBox ucNgaySinh;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
@@ -492,9 +451,9 @@
         private UCTextBox ucCCCD;
         private UCTextBox ucHoTen;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private ButtonTuyChinh buttonTuyChinh1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
         private UCTextBox ucTextBox3;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgSinh;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
     }
 }

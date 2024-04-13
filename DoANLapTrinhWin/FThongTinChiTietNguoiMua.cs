@@ -32,7 +32,7 @@ namespace DoANLapTrinhWin
                     ucMaTaiKhoan.textBox.Text = docDuLieu["MaNguoiMua"].ToString();
                     ucHoTen.textBox.Text = docDuLieu["TenNguoiMua"].ToString();
                     ucGioiTinh.textBox.Text = docDuLieu["GioiTinh"].ToString();
-                    ucNgaySinh.textBox.Text = docDuLieu["NgaySinh"].ToString();
+                    dtpNgSinh.Text = docDuLieu["NgaySinh"].ToString();
                     ucCCCD.textBox.Text = docDuLieu["CCCD"].ToString();
                     ucSDT.textBox.Text = docDuLieu["SDT"].ToString();
                     //ucDiaChi.textBox.Text = docDuLieu["Diachi"].ToString();

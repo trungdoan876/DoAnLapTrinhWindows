@@ -30,17 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FThongTinNguoiBan));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtpNgSinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.ucSDT = new DoANLapTrinhWin.UCTextBox();
             this.ucMoTaShop = new DoANLapTrinhWin.UCTextBox();
             this.ucGioiTinh = new DoANLapTrinhWin.UCTextBox();
@@ -49,136 +50,165 @@
             this.ucCCCD = new DoANLapTrinhWin.UCTextBox();
             this.ucHoTenNB = new DoANLapTrinhWin.UCTextBox();
             this.ucDiaChi = new DoANLapTrinhWin.UCTextBox();
-            this.buttonTuyChinh1 = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.dtpNgSinh = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(162, 126);
+            this.pictureBox1.Location = new System.Drawing.Point(111, 182);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabIndex = 192;
             this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(349, 239);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
-            this.label2.TabIndex = 184;
-            this.label2.Text = "Ngày sinh";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label3.Location = new System.Drawing.Point(349, 162);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 20);
-            this.label3.TabIndex = 183;
-            this.label3.Text = "Giới tính";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label6.Location = new System.Drawing.Point(349, 89);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 20);
-            this.label6.TabIndex = 182;
-            this.label6.Text = "Mã số tài khoản";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label7.Location = new System.Drawing.Point(696, 317);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 20);
-            this.label7.TabIndex = 176;
-            this.label7.Text = "Email";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label5.Location = new System.Drawing.Point(696, 239);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
-            this.label5.TabIndex = 175;
-            this.label5.Text = "Địa chỉ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label4.Location = new System.Drawing.Point(696, 162);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 20);
-            this.label4.TabIndex = 174;
-            this.label4.Text = "CMND/CCCD";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label11.Location = new System.Drawing.Point(696, 89);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 20);
-            this.label11.TabIndex = 173;
-            this.label11.Text = "Họ tên";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label1.Location = new System.Drawing.Point(349, 317);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 20);
-            this.label1.TabIndex = 190;
-            this.label1.Text = "Số điện thoại";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label8.Location = new System.Drawing.Point(349, 401);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 20);
-            this.label8.TabIndex = 188;
-            this.label8.Text = "Mô tả shop";
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.White;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(929, 372);
+            this.pictureBox5.Location = new System.Drawing.Point(916, 413);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(151, 169);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 167;
+            this.pictureBox5.TabIndex = 193;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox2
+            // label11
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(97, 317);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(274, 254);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 186;
-            this.pictureBox2.TabStop = false;
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label11.Location = new System.Drawing.Point(692, 146);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 20);
+            this.label11.TabIndex = 198;
+            this.label11.Text = "Họ tên";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label4.Location = new System.Drawing.Point(692, 219);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 20);
+            this.label4.TabIndex = 199;
+            this.label4.Text = "CMND/CCCD";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label5.Location = new System.Drawing.Point(692, 296);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 20);
+            this.label5.TabIndex = 200;
+            this.label5.Text = "Địa chỉ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label7.Location = new System.Drawing.Point(692, 374);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 20);
+            this.label7.TabIndex = 201;
+            this.label7.Text = "Email";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label6.Location = new System.Drawing.Point(345, 146);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 20);
+            this.label6.TabIndex = 204;
+            this.label6.Text = "Mã người bán";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label3.Location = new System.Drawing.Point(345, 219);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 20);
+            this.label3.TabIndex = 205;
+            this.label3.Text = "Giới tính";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label2.Location = new System.Drawing.Point(345, 296);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.TabIndex = 206;
+            this.label2.Text = "Ngày sinh";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label8.Location = new System.Drawing.Point(345, 458);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(88, 20);
+            this.label8.TabIndex = 208;
+            this.label8.Text = "Mô tả shop";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label1.Location = new System.Drawing.Point(345, 374);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 20);
+            this.label1.TabIndex = 210;
+            this.label1.Text = "Số điện thoại";
+            // 
+            // dtpNgSinh
+            // 
+            this.dtpNgSinh.Checked = true;
+            this.dtpNgSinh.FillColor = System.Drawing.Color.DarkSeaGreen;
+            this.dtpNgSinh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpNgSinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpNgSinh.Location = new System.Drawing.Point(333, 319);
+            this.dtpNgSinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpNgSinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpNgSinh.Name = "dtpNgSinh";
+            this.dtpNgSinh.Size = new System.Drawing.Size(285, 36);
+            this.dtpNgSinh.TabIndex = 211;
+            this.dtpNgSinh.Value = new System.DateTime(2024, 4, 13, 14, 51, 21, 641);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dtpNgSinh);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.ucSDT);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.ucMoTaShop);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.ucGioiTinh);
+            this.panel1.Controls.Add(this.ucMaNBan);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.ucEmail);
+            this.panel1.Controls.Add(this.ucCCCD);
+            this.panel1.Controls.Add(this.ucHoTenNB);
+            this.panel1.Controls.Add(this.ucDiaChi);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1178, 744);
+            this.panel1.TabIndex = 0;
             // 
             // ucSDT
             // 
@@ -189,14 +219,14 @@
             this.ucSDT.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucSDT.GachChan = false;
             this.ucSDT.KichThuocKhung = 1;
-            this.ucSDT.Location = new System.Drawing.Point(337, 328);
+            this.ucSDT.Location = new System.Drawing.Point(333, 385);
             this.ucSDT.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucSDT.Multiline = false;
             this.ucSDT.Name = "ucSDT";
             this.ucSDT.Padding = new System.Windows.Forms.Padding(7);
             this.ucSDT.PasswordChar = false;
             this.ucSDT.Size = new System.Drawing.Size(285, 40);
-            this.ucSDT.TabIndex = 189;
+            this.ucSDT.TabIndex = 209;
             this.ucSDT.Texts = "";
             // 
             // ucMoTaShop
@@ -205,17 +235,18 @@
             this.ucMoTaShop.BanKinhKhung = 15;
             this.ucMoTaShop.ChumoColor = System.Drawing.Color.DarkGray;
             this.ucMoTaShop.ChumoText = "";
+            this.ucMoTaShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMoTaShop.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucMoTaShop.GachChan = false;
             this.ucMoTaShop.KichThuocKhung = 1;
-            this.ucMoTaShop.Location = new System.Drawing.Point(337, 409);
+            this.ucMoTaShop.Location = new System.Drawing.Point(333, 466);
             this.ucMoTaShop.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucMoTaShop.Multiline = true;
             this.ucMoTaShop.Name = "ucMoTaShop";
             this.ucMoTaShop.Padding = new System.Windows.Forms.Padding(7);
             this.ucMoTaShop.PasswordChar = false;
-            this.ucMoTaShop.Size = new System.Drawing.Size(632, 132);
-            this.ucMoTaShop.TabIndex = 187;
+            this.ucMoTaShop.Size = new System.Drawing.Size(632, 205);
+            this.ucMoTaShop.TabIndex = 207;
             this.ucMoTaShop.Texts = "";
             // 
             // ucGioiTinh
@@ -227,14 +258,14 @@
             this.ucGioiTinh.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucGioiTinh.GachChan = false;
             this.ucGioiTinh.KichThuocKhung = 1;
-            this.ucGioiTinh.Location = new System.Drawing.Point(337, 173);
+            this.ucGioiTinh.Location = new System.Drawing.Point(333, 230);
             this.ucGioiTinh.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucGioiTinh.Multiline = false;
             this.ucGioiTinh.Name = "ucGioiTinh";
             this.ucGioiTinh.Padding = new System.Windows.Forms.Padding(7);
             this.ucGioiTinh.PasswordChar = false;
             this.ucGioiTinh.Size = new System.Drawing.Size(285, 40);
-            this.ucGioiTinh.TabIndex = 180;
+            this.ucGioiTinh.TabIndex = 203;
             this.ucGioiTinh.Texts = "";
             // 
             // ucMaNBan
@@ -243,17 +274,18 @@
             this.ucMaNBan.BanKinhKhung = 15;
             this.ucMaNBan.ChumoColor = System.Drawing.Color.DarkGray;
             this.ucMaNBan.ChumoText = "";
+            this.ucMaNBan.Enabled = false;
             this.ucMaNBan.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucMaNBan.GachChan = false;
             this.ucMaNBan.KichThuocKhung = 1;
-            this.ucMaNBan.Location = new System.Drawing.Point(337, 98);
+            this.ucMaNBan.Location = new System.Drawing.Point(333, 155);
             this.ucMaNBan.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucMaNBan.Multiline = false;
             this.ucMaNBan.Name = "ucMaNBan";
             this.ucMaNBan.Padding = new System.Windows.Forms.Padding(7);
             this.ucMaNBan.PasswordChar = false;
             this.ucMaNBan.Size = new System.Drawing.Size(285, 40);
-            this.ucMaNBan.TabIndex = 179;
+            this.ucMaNBan.TabIndex = 202;
             this.ucMaNBan.Texts = "";
             // 
             // ucEmail
@@ -265,14 +297,14 @@
             this.ucEmail.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucEmail.GachChan = false;
             this.ucEmail.KichThuocKhung = 1;
-            this.ucEmail.Location = new System.Drawing.Point(684, 328);
+            this.ucEmail.Location = new System.Drawing.Point(680, 385);
             this.ucEmail.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucEmail.Multiline = false;
             this.ucEmail.Name = "ucEmail";
             this.ucEmail.Padding = new System.Windows.Forms.Padding(7);
             this.ucEmail.PasswordChar = false;
             this.ucEmail.Size = new System.Drawing.Size(285, 40);
-            this.ucEmail.TabIndex = 172;
+            this.ucEmail.TabIndex = 197;
             this.ucEmail.Texts = "";
             // 
             // ucCCCD
@@ -284,14 +316,14 @@
             this.ucCCCD.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucCCCD.GachChan = false;
             this.ucCCCD.KichThuocKhung = 1;
-            this.ucCCCD.Location = new System.Drawing.Point(684, 173);
+            this.ucCCCD.Location = new System.Drawing.Point(680, 230);
             this.ucCCCD.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucCCCD.Multiline = false;
             this.ucCCCD.Name = "ucCCCD";
             this.ucCCCD.Padding = new System.Windows.Forms.Padding(7);
             this.ucCCCD.PasswordChar = false;
             this.ucCCCD.Size = new System.Drawing.Size(285, 40);
-            this.ucCCCD.TabIndex = 171;
+            this.ucCCCD.TabIndex = 196;
             this.ucCCCD.Texts = "";
             // 
             // ucHoTenNB
@@ -303,14 +335,14 @@
             this.ucHoTenNB.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucHoTenNB.GachChan = false;
             this.ucHoTenNB.KichThuocKhung = 1;
-            this.ucHoTenNB.Location = new System.Drawing.Point(684, 98);
+            this.ucHoTenNB.Location = new System.Drawing.Point(680, 155);
             this.ucHoTenNB.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucHoTenNB.Multiline = false;
             this.ucHoTenNB.Name = "ucHoTenNB";
             this.ucHoTenNB.Padding = new System.Windows.Forms.Padding(7);
             this.ucHoTenNB.PasswordChar = false;
-            this.ucHoTenNB.Size = new System.Drawing.Size(285, 51);
-            this.ucHoTenNB.TabIndex = 170;
+            this.ucHoTenNB.Size = new System.Drawing.Size(285, 40);
+            this.ucHoTenNB.TabIndex = 195;
             this.ucHoTenNB.Texts = "";
             // 
             // ucDiaChi
@@ -322,36 +354,15 @@
             this.ucDiaChi.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucDiaChi.GachChan = false;
             this.ucDiaChi.KichThuocKhung = 1;
-            this.ucDiaChi.Location = new System.Drawing.Point(684, 250);
+            this.ucDiaChi.Location = new System.Drawing.Point(680, 307);
             this.ucDiaChi.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucDiaChi.Multiline = false;
             this.ucDiaChi.Name = "ucDiaChi";
             this.ucDiaChi.Padding = new System.Windows.Forms.Padding(7);
             this.ucDiaChi.PasswordChar = false;
             this.ucDiaChi.Size = new System.Drawing.Size(285, 40);
-            this.ucDiaChi.TabIndex = 168;
+            this.ucDiaChi.TabIndex = 194;
             this.ucDiaChi.Texts = "";
-            // 
-            // buttonTuyChinh1
-            // 
-            this.buttonTuyChinh1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.buttonTuyChinh1.FlatAppearance.BorderSize = 0;
-            this.buttonTuyChinh1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTuyChinh1.ForeColor = System.Drawing.Color.White;
-            this.buttonTuyChinh1.Location = new System.Drawing.Point(151, 263);
-            this.buttonTuyChinh1.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonTuyChinh1.Name = "buttonTuyChinh1";
-            this.buttonTuyChinh1.Size = new System.Drawing.Size(121, 51);
-            this.buttonTuyChinh1.TabIndex = 29;
-            this.buttonTuyChinh1.Text = "Cập nhật ảnh";
-            this.buttonTuyChinh1.UseVisualStyleBackColor = false;
-            // 
-            // dtpNgSinh
-            // 
-            this.dtpNgSinh.Location = new System.Drawing.Point(337, 262);
-            this.dtpNgSinh.Name = "dtpNgSinh";
-            this.dtpNgSinh.Size = new System.Drawing.Size(285, 26);
-            this.dtpNgSinh.TabIndex = 191;
             // 
             // FThongTinNguoiBan
             // 
@@ -359,62 +370,41 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1178, 744);
-            this.Controls.Add(this.dtpNgSinh);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.ucSDT);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.ucMoTaShop);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.ucGioiTinh);
-            this.Controls.Add(this.ucMaNBan);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.ucEmail);
-            this.Controls.Add(this.ucCCCD);
-            this.Controls.Add(this.ucHoTenNB);
-            this.Controls.Add(this.ucDiaChi);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.buttonTuyChinh1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.Name = "FThongTinNguoiBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FThongTinNguoiBan";
             this.Load += new System.EventHandler(this.FThongTinNguoiBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ButtonTuyChinh buttonTuyChinh1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private UCTextBox ucGioiTinh;
-        private UCTextBox ucMaNBan;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label11;
-        private UCTextBox ucEmail;
-        private UCTextBox ucCCCD;
-        private UCTextBox ucHoTenNB;
-        private UCTextBox ucDiaChi;
-        private System.Windows.Forms.Label label1;
-        private UCTextBox ucSDT;
-        private System.Windows.Forms.Label label8;
-        private UCTextBox ucMoTaShop;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DateTimePicker dtpNgSinh;
+        private UCTextBox ucDiaChi;
+        private UCTextBox ucHoTenNB;
+        private UCTextBox ucCCCD;
+        private UCTextBox ucEmail;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private UCTextBox ucMaNBan;
+        private UCTextBox ucGioiTinh;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private UCTextBox ucMoTaShop;
+        private System.Windows.Forms.Label label8;
+        private UCTextBox ucSDT;
+        private System.Windows.Forms.Label label1;
+        public Guna.UI2.WinForms.Guna2DateTimePicker dtpNgSinh;
+        private System.Windows.Forms.Panel panel1;
     }
 }

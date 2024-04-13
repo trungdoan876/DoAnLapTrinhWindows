@@ -27,7 +27,6 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.tenTaiKhoan = tenTK;
-
         }
         private void ucsp1_Load(object sender, EventArgs e)
         {

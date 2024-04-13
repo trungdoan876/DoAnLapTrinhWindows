@@ -70,7 +70,6 @@ namespace DoANLapTrinhWin
 
         private void picHinh_Click(object sender, EventArgs e)
         {
-            MemoryStream ms;
             OpenFileDialog odlgOpenFile = new OpenFileDialog();
             odlgOpenFile.InitialDirectory = "C:\\";
             odlgOpenFile.Title = "Open File";

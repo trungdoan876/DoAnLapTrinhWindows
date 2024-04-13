@@ -41,8 +41,15 @@ namespace DoANLapTrinhWin
 
         private void btnThongTin_Click(object sender, EventArgs e)
         {
-            moFormCon(new FThongTinNguoiBan(TenTaiKhoan));
+            //moFormCon(new FThongTinNguoiBan(TenTaiKhoan));
             TaoButton(sender);
+            panelThan.Controls.Clear();
+            FThongTinNguoiBan f = new FThongTinNguoiBan(TenTaiKhoan);
+            f.TopLevel = false; // cho phep form duoc nhung
+            f.Dock = DockStyle.Fill;
+            f.FormBorderStyle = FormBorderStyle.None; // bo vien tieu de
+            panelThan.Controls.Add(f);
+            f.Show();
         }
         private void btnSP_Click(object sender, EventArgs e)
         {

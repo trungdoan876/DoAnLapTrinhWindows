@@ -45,7 +45,7 @@
             this.btnThemSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnThemSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemSP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnThemSP.Location = new System.Drawing.Point(456, 514);
+            this.btnThemSP.Location = new System.Drawing.Point(574, 514);
             this.btnThemSP.Name = "btnThemSP";
             this.btnThemSP.Size = new System.Drawing.Size(189, 67);
             this.btnThemSP.TabIndex = 5;
@@ -59,8 +59,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1330, 593);
-            this.Controls.Add(this.panelTatCaSP);
             this.Controls.Add(this.btnThemSP);
+            this.Controls.Add(this.panelTatCaSP);
             this.Name = "FDanhSachSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FTatCaSanPham";

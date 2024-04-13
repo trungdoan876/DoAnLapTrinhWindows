@@ -9,24 +9,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace DoANLapTrinhWin
 {
     public partial class FDatHang : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        string maNM,slmua;
+        SanPham sp;
+        string maNM;
         byte[] hinh;
         Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
             return Image.FromStream(ms);
         }
-        public FDatHang(string maNM,string slmua)
+        public FDatHang(string maNM,SanPham sp)
         {
             InitializeComponent();
+            this.sp = sp;
             this.maNM=maNM;
-            this.slmua=slmua;
             LoadData();
             ThongTin();
         }
@@ -73,7 +75,7 @@ namespace DoANLapTrinhWin
                     string maSP = row["MaSanPham"].ToString();
                     string tenSP = row["TenSanPham"].ToString();
                     string giaBan = row["GiaBan"].ToString();
-                    string soLuong = slmua;
+                    string soLuong = row["SoLuong"].ToString();
                     if (row["Hinh"] != DBNull.Value)
                     {
                         hinh = (byte[])row["Hinh"];
@@ -86,8 +88,10 @@ namespace DoANLapTrinhWin
                     ucdh.lblTenSP.Text = tenSP;
                     ucdh.lblGiaTien.Text = giaBan;
 
-                    ucdh.lblsoluong.Text = slmua;
+                    ucdh.lblsoluong.Text = soLuong;
                     ucdh.picHinh.Image = ByteArrayToImage(hinh);
+                    //tinh tien
+                   
                     //vi tri moi uc
                     ucdh.Location = new Point(0, y);
                     y += ucdh.Height += 5;
@@ -107,7 +111,31 @@ namespace DoANLapTrinhWin
 
         private void btnDatHang_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Đặt hàng thành công!!!");
+            try
+            {
+                conn.Open();
+                string sqlStr = string.Format("INSERT INTO DonHang(MaNguoiBan,MaNguoiMua,MaSanPham,TenSanPham,SoLuongSP,GiaBan,TongTien) " +
+                    "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", sp.MaNguoiBan, maNM, sp.MaSP, sp.TenSP, sp.SoLuong, sp.GiaBan, sp.GiaBan);
+                //List <SanPham> splist = new List <SanPham>();   
+                string sqlStr2 = string.Format("DELETE FROM GioHang WHERE MaSanPham ='{0}'", sp.MaSP);
+                
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                if (cmd.ExecuteNonQuery() > 0)
+                    MessageBox.Show("Dat hang thanh cong");
+
+                SqlCommand cmd2 = new SqlCommand(sqlStr2, conn);
+                cmd2.ExecuteNonQuery();
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Loi"+ex);
+            }
+            finally 
+            { 
+                conn.Close(); 
+            }
+            
         }
 
         private void FDatHang_Load(object sender, EventArgs e)

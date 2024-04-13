@@ -1,10 +1,4 @@
-﻿--(localdb)\mssqllocaldb
---PCHOME-HAINT\MYHOANG
---DROP TABLE SanPham
-select * from SanPham
-
---DELETE FROM SanPham WHERE MaSanPham = 'SP5'
-CREATE TABLE SanPham 
+﻿CREATE TABLE SanPham 
 (
 	Hinh varbinary(max),
 	MaSanPham nchar(10) PRIMARY KEY,
@@ -48,9 +42,6 @@ CREATE TABLE NguoiBan
     Hinh varbinary(max),
 	PRIMARY KEY(MaNguoiBan)
 );
-Select * from NguoiBan
-Select * from SanPham
-GO
 CREATE TABLE NguoiMua
 (
 	MaNguoiMua nchar(10), --ten tai khoan 
@@ -68,11 +59,6 @@ CREATE TABLE NguoiMua
 )
 INSERT INTO NguoiMua VALUES ('NM01',N'Nguyễn Thị B','123456','1990-03-20','Nu','27839293',N'484 Lê Văn Việt, phường Tăng Nhơn Phú A, Hồ Chí Minh','0192837283',null,null,null);
 GO
-select * from YeuThich
-delete from yeuthich where MaSanPham ='SP1'
-delete from nguoimua where manguoimua ='NM01'
-select *from giohang
-GO
 --DROP TABLE GioHang
 CREATE TABLE GioHang
 (
@@ -86,7 +72,6 @@ CREATE TABLE GioHang
 	Hinh varbinary(max)
 )
 GO
---UPDATE SanPham SET DiaChi = N'Đà Nẵng' WHERE MaSanPham= 'SP5'
 CREATE TABLE YeuThich
 (
 	MaNguoiBan nchar(10),
@@ -94,21 +79,30 @@ CREATE TABLE YeuThich
 	MaSanPham nchar(10),
 	PRIMARY KEY(MaNguoiBan,MaNguoiMua)
 )
---DELETE FROM YeuThich WHERE MaSanPham ='SP1';
-INSERT INTO YeuThich VALUES ('NB01','NM01','SP1')
---DROP TABLE GioHang
-select * from GioHang
 SELECT SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.SoLuong as SL FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = 'NM01'
 select SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang
 from GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = 'NM01'
 SELECT * From GioHang WHERE TrangThaiSP = 1 and MaNguoiMua ='NM01'
 --Bang don hang khi mua san pham tao don hang moi
+drop table donhang
 CREATE TABLE DonHang
 (
+	MaDonHang int identity(1,1),
 	MaNguoiBan nchar(10),
 	MaNguoiMua nchar(10),
 	MaSanPham nchar(10),
-	soLuongSP  int, --so luong sp them vao gio hang
-	giaBan nvarchar(100)
+	TenSanPham nvarchar(100),
+	SoLuongSP int, --so luong moi san pham them vao gio hang
+	GiaBan nvarchar(100),
+	TongTien nvarchar(100),
+	primary key (MaDonHang,MaNguoiBan,MaNguoiMua)
 )
 select * from DonHang
+SELECT SanPham.MaNguoiBan,SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as 
+TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.SoLuong as SL 
+FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = 'NM01'
+ 
+SELECT SanPham.MaNguoiBan as maNB,SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.SoLuong as SL 
+FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua ='NM01'
+select * from sanpham
+delete from sanpham where manguoiban ='NB02'

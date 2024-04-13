@@ -16,5 +16,10 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
         }
+
+        private void btnDangThucHien_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -68,7 +68,7 @@ namespace DoANLapTrinhWin
 
         private void btnDanhGia_Click(object sender, EventArgs e)
         {
-            moFormCon(new FDanhGia());
+            //moFormCon(new FDanhGia());
             TaoButton(sender);
         }
 

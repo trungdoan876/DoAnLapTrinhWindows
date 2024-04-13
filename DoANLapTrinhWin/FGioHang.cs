@@ -16,8 +16,9 @@ namespace DoANLapTrinhWin
     public partial class FGioHang : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        string maNM,slmua;
+        string maNM;
         byte[] hinh;
+        SanPham sp;
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -43,13 +44,25 @@ namespace DoANLapTrinhWin
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.SoLuong as SL FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'",maNM);
+                string sqlStr = string.Format("SELECT SanPham.MaNguoiBan as maNB,SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.SoLuong as SL " +
+                    "FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'",maNM);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
                 int y = 0;
+                int yc = 0;
+                
+                List <SanPham> splist = new List<SanPham> ();
+
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
+                    
+                    string maNB = row["maNB"].ToString();
+                    //MessageBox.Show(maNB);
+                    UCTheoNB uc = new UCTheoNB(maNB);
+                    uc.Location = new Point(0, yc);
+                    yc += uc.Height +=  5;
+                    panelGioHang.Controls.Add(uc);
                     string maSP = row["MaSP"].ToString();
                     string tenSP = row["TenSP"].ToString();
                     string giaBan = "đ" + row["GiaBan"].ToString();
@@ -59,22 +72,19 @@ namespace DoANLapTrinhWin
                     {
                         hinh = (byte[])row["Hinh"];
                     }
-                    SanPham sp = new SanPham(tenSP, giaBan, tinhTrang,maSP,soLuong, hinh);
+                    
+                    sp = new SanPham(tenSP, giaBan, tinhTrang,maSP,soLuong, hinh);
+                    
                     UCSPGioHang spgh = new UCSPGioHang(sp);
 
+                    //splist.Add(sp);
                     //chinh sua public
                     spgh.lblTenSP.Text = tenSP;
                     spgh.lblGiaTien.Text = giaBan;
                     spgh.lblTinhTrang.Text = tinhTrang;
-                    //spgh.lblMaSP.Text = maSP;
                     spgh.picHinh.Image = ByteArrayToImage(hinh);
                     spgh.lblSoLuong.Text = soLuong +" sản phẩm sẵn có";
-                    spgh.txtSL.Text = slmua;
-                    //vi tri moi uc
-                    spgh.Location = new Point(0, y);
-                    y += spgh.Height += 5;
-                    
-                    panelGioHang.Controls.Add(spgh);
+                    uc.panelSP.Controls.Add(spgh);
                 }
             }
             catch (Exception ex)
@@ -88,7 +98,7 @@ namespace DoANLapTrinhWin
         }
         private void btnMuaHang_Click(object sender, EventArgs e)
         {
-            FDatHang fdh = new FDatHang(maNM,slmua);
+            FDatHang fdh = new FDatHang(maNM,sp);
             fdh.ShowDialog();
         }
     }

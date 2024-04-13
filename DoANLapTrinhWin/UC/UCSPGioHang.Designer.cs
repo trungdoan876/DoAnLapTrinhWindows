@@ -106,6 +106,7 @@
             this.txtSL.TabIndex = 78;
             this.txtSL.Text = "1";
             this.txtSL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            
             // 
             // btnCong
             // 
