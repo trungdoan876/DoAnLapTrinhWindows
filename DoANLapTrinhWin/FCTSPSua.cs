@@ -57,6 +57,7 @@ namespace DoANLapTrinhWin
             SanPham sp = new SanPham(ucMaSP.textBox.Text, ucTenSP.textBox.Text, ucGiaSP.textBox.Text, ucGiaGoc.textBox.Text,
                     ucXuatXu.textBox.Text, ucThoiGian.textBox.Text, dtpNgayDang.Value, ucMoTa.textBox.Text, ucNganhHang.textBox.Text,
                     cbTinhTrang.Text,ucDC.textBox.Text,"", ucSoLuong.textBox.Text,ImageToByteArray(picHinh.Image));
+          //  MessageBox.Show(ucSoLuong.textBox.Text);
             spDao.CapNhatSanPham(sp);
         }
 

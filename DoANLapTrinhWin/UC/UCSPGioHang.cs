@@ -15,7 +15,7 @@ namespace DoANLapTrinhWin
     public partial class UCSPGioHang : UserControl
     {
         SanPham sp;
-        //string slmua ;
+        string slmua ;
         Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -101,7 +101,7 @@ namespace DoANLapTrinhWin
         {
             if (int.TryParse(txtSL.Text, out int value))
             {
-                if (value > 0)
+                if (value > 1)
                 {
                     value--;
                     txtSL.Text = value.ToString();
@@ -122,7 +122,31 @@ namespace DoANLapTrinhWin
             }
         }
 
-        
+        private void txtSL_TextChanged(object sender, EventArgs e)
+        {
+            string slText = ((System.Windows.Forms.TextBox)sender).Text.Trim();
+            slmua =slText;
+            try
+            {
+                // Ket noi
+                conn.Open();
+
+                string sqlStr = string.Format("UPDATE GioHang SET SoLuong = '{0}' WHERE MaSanPham = '{1}'", slmua, sp.MaSP);
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("them that bai" + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+
     }
     
 }

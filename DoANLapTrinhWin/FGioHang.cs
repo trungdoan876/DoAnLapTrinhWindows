@@ -44,7 +44,7 @@ namespace DoANLapTrinhWin
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT SanPham.MaNguoiBan as maNB,SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.SoLuong as SL " +
+                string sqlStr = string.Format("SELECT SanPham.MaNguoiBan as maNB,SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.SoLuong as SL, GioHang.SoLuong as SLMua " +
                     "FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'",maNM);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
@@ -68,6 +68,7 @@ namespace DoANLapTrinhWin
                     string giaBan = "đ" + row["GiaBan"].ToString();
                     string tinhTrang = row["TinhTrang"].ToString();
                     string soLuong = row["SL"].ToString();
+                    string soLuongMua = row["SLMua"].ToString();
                     if (row["Hinh"] != DBNull.Value)
                     {
                         hinh = (byte[])row["Hinh"];
@@ -84,6 +85,7 @@ namespace DoANLapTrinhWin
                     spgh.lblTinhTrang.Text = tinhTrang;
                     spgh.picHinh.Image = ByteArrayToImage(hinh);
                     spgh.lblSoLuong.Text = soLuong +" sản phẩm sẵn có";
+                    spgh.txtSL.Text = soLuongMua;
                     uc.panelSP.Controls.Add(spgh);
                 }
             }

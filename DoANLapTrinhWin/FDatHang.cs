@@ -91,7 +91,10 @@ namespace DoANLapTrinhWin
                     ucdh.lblsoluong.Text = soLuong;
                     ucdh.picHinh.Image = ByteArrayToImage(hinh);
                     //tinh tien
-                   
+                    string giaban = giaBan.Substring(1); // Loại bỏ ký tự "đ" ở đầu chuỗi
+                    decimal gb = decimal.Parse(giaban); // Chuyển đổi giá trị của giaban thành kiểu decimal
+                    int tien = (int)(gb * int.Parse(soLuong)); // Thực hiện phép nhân và chuyển đổi kết quả thành kiểu int
+                    ucdh.lblthanhtien.Text = "đ" + tien.ToString(); // gán giá trị lên uc
                     //vi tri moi uc
                     ucdh.Location = new Point(0, y);
                     y += ucdh.Height += 5;

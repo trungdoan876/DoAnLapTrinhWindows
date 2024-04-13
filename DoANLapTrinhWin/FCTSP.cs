@@ -17,7 +17,7 @@ namespace DoANLapTrinhWin
     public partial class FCTSP : Form
     {
         SanPham sp;
-        //string slmua;
+        string slmua;
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -45,6 +45,11 @@ namespace DoANLapTrinhWin
             lblSoLuong.Text = sp.SoLuong+" sản phẩm sẵn có";
             picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
+        private void txtSL_TextChanged(object sender, EventArgs e)
+        {
+            string slText = ((System.Windows.Forms.TextBox)sender).Text.Trim();
+            slmua = slText;
+        }
         private void FCTSP_Load(object sender, EventArgs e)
         {
 
@@ -53,7 +58,7 @@ namespace DoANLapTrinhWin
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
-            if (count >0)
+            if (count >1)
             {
                 count--;
             }
@@ -73,10 +78,12 @@ namespace DoANLapTrinhWin
             //them vao bang gio hang
             try
             {
+                if (slmua == null)
+                    slmua = "1";
                 // Ket noi
                 conn.Open();
                 string anh = BitConverter.ToString(sp.Hinh).Replace("-", "");
-                string sqlStr = string.Format("INSERT INTO GioHang(MaNguoiBan, MaNguoiMua, MaSanPham, TenSanPham, SoLuong, GiaBan,Hinh,TrangThaiSP) VALUES ('{0}', N'{1}',N'{2}',N'{3}',N'{4}',N'{5}',0x{6},'{7}')", sp.MaNguoiBan,"NM01",sp.MaSP,sp.TenSP,sp.SoLuong,sp.GiaBan,anh,1);
+                string sqlStr = string.Format("INSERT INTO GioHang(MaNguoiBan, MaNguoiMua, MaSanPham, TenSanPham, SoLuong, GiaBan,Hinh,TrangThaiSP) VALUES ('{0}', N'{1}',N'{2}',N'{3}',N'{4}',N'{5}',0x{6},'{7}')", sp.MaNguoiBan,"NM01",sp.MaSP,sp.TenSP,slmua,sp.GiaBan,anh,1);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 if (cmd.ExecuteNonQuery() > 0)
                     MessageBox.Show("them thanh cong");
@@ -121,5 +128,6 @@ namespace DoANLapTrinhWin
             }
         }
 
+        
     }
 }
