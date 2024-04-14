@@ -111,7 +111,7 @@ namespace DoANLapTrinhWin
         {
             if (int.TryParse(txtSL.Text, out int value))
             {
-                if (value > 0)
+                if (value > 1)
                 {
                     value--;
                     txtSL.Text = value.ToString();
@@ -123,8 +123,12 @@ namespace DoANLapTrinhWin
         {
             if (int.TryParse(txtSL.Text, out int value))
             {
-                value++;
-                txtSL.Text = value.ToString();
+                int sl = int.Parse(sp.SoLuong);
+                if (value < sl)
+                {
+                    value++;
+                    txtSL.Text = value.ToString();
+                }
             }
         }
 

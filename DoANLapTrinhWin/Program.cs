@@ -18,7 +18,7 @@ namespace DoANLapTrinhWin
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FDangNhap());
             Application.Run(new FNguoiMua("NM01"));
-            //Application.Run(new FNguoiBan("NB01"));
+            //Application.Run(new FNguoiBan("NB02"));
             //Application.Run(new FGioHang("NM01"));
         }
     }

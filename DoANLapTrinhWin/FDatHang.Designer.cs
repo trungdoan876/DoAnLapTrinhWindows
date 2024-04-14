@@ -41,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDatHang = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.lblPTTT = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +54,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 514);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1332, 100);
+            this.panel3.Size = new System.Drawing.Size(1594, 100);
             this.panel3.TabIndex = 11;
             // 
             // lblDiaChi
@@ -114,11 +115,12 @@
             this.paneldathang.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneldathang.Location = new System.Drawing.Point(0, 56);
             this.paneldathang.Name = "paneldathang";
-            this.paneldathang.Size = new System.Drawing.Size(1332, 458);
+            this.paneldathang.Size = new System.Drawing.Size(1594, 458);
             this.paneldathang.TabIndex = 7;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblPTTT);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -126,7 +128,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1332, 56);
+            this.panel1.Size = new System.Drawing.Size(1594, 56);
             this.panel1.TabIndex = 6;
             // 
             // label5
@@ -134,7 +136,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(1191, 18);
+            this.label5.Location = new System.Drawing.Point(1090, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 20);
             this.label5.TabIndex = 3;
@@ -145,7 +147,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label4.Location = new System.Drawing.Point(654, 18);
+            this.label4.Location = new System.Drawing.Point(633, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 20);
             this.label4.TabIndex = 2;
@@ -156,7 +158,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(935, 18);
+            this.label3.Location = new System.Drawing.Point(850, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 20);
             this.label3.TabIndex = 1;
@@ -187,12 +189,23 @@
             this.btnDatHang.UseVisualStyleBackColor = false;
             this.btnDatHang.Click += new System.EventHandler(this.btnDatHang_Click);
             // 
+            // lblPTTT
+            // 
+            this.lblPTTT.AutoSize = true;
+            this.lblPTTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPTTT.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblPTTT.Location = new System.Drawing.Point(1288, 18);
+            this.lblPTTT.Name = "lblPTTT";
+            this.lblPTTT.Size = new System.Drawing.Size(202, 20);
+            this.lblPTTT.TabIndex = 4;
+            this.lblPTTT.Text = "Phương thức thanh toán";
+            // 
             // FDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1332, 696);
+            this.ClientSize = new System.Drawing.Size(1594, 696);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnDatHang);
             this.Controls.Add(this.lblTien);
@@ -227,5 +240,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPTTT;
     }
 }

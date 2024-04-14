@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -38,7 +39,7 @@ namespace DoANLapTrinhWin
             {
                 panelMuaHang.AutoScroll = true;
                 conn.Open();
-                string sqlStr = string.Format("SELECT *FROM SanPham WHERE DangBan = '{0}'",1);
+                string sqlStr = string.Format("SELECT* FROM SanPham WHERE DangBan = '{0}'",1);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
@@ -296,7 +297,7 @@ namespace DoANLapTrinhWin
         private void btnSach_Click(object sender, EventArgs e)
         {
             BoLoc(btnSach.Text.Trim());
-;       }
+        }
 
         private void btnThoitrangnu_Click(object sender, EventArgs e)
         {
@@ -308,9 +309,9 @@ namespace DoANLapTrinhWin
             BoLoc(btnDochonam.Text.Trim());
         }
 
-        private void btnDochoivatrochoi_Click(object sender, EventArgs e)
+        private void btnDochoi_Click(object sender, EventArgs e)
         {
-            BoLoc(btnDochoivatrochoi.Text.Trim());
+            BoLoc(btnDochoi.Text.Trim());
         }
 
         private void btnDodungnhacua_Click(object sender, EventArgs e)
@@ -328,9 +329,9 @@ namespace DoANLapTrinhWin
             BoLoc(btnDothethao.Text.Trim());
         }
 
-        private void btnDolamdep_Click(object sender, EventArgs e)
+        private void btndolamdep_Click(object sender, EventArgs e)
         {
-            BoLoc(btnDolamdep.Text.Trim());
+            BoLoc(btndolamdep.Text.Trim());
         }
 
         private void btnKhac_Click(object sender, EventArgs e)

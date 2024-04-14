@@ -153,6 +153,6 @@
         public System.Windows.Forms.Label lblGiaGoc;
         public System.Windows.Forms.Label lblDiaChi;
         public System.Windows.Forms.Label lblMaSP;
-        private System.Windows.Forms.PictureBox picHeart;
+        public System.Windows.Forms.PictureBox picHeart;
     }
 }

@@ -33,6 +33,7 @@
             this.lblGiaTien = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.picHinh = new System.Windows.Forms.PictureBox();
+            this.cmbTrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +42,7 @@
             this.lblsoluong.AutoSize = true;
             this.lblsoluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsoluong.ForeColor = System.Drawing.Color.Black;
-            this.lblsoluong.Location = new System.Drawing.Point(914, 76);
+            this.lblsoluong.Location = new System.Drawing.Point(838, 76);
             this.lblsoluong.Name = "lblsoluong";
             this.lblsoluong.Size = new System.Drawing.Size(73, 22);
             this.lblsoluong.TabIndex = 97;
@@ -52,7 +53,7 @@
             this.lblthanhtien.AutoSize = true;
             this.lblthanhtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblthanhtien.ForeColor = System.Drawing.Color.Black;
-            this.lblthanhtien.Location = new System.Drawing.Point(1110, 76);
+            this.lblthanhtien.Location = new System.Drawing.Point(1056, 76);
             this.lblthanhtien.Name = "lblthanhtien";
             this.lblthanhtien.Size = new System.Drawing.Size(16, 22);
             this.lblthanhtien.TabIndex = 96;
@@ -91,17 +92,36 @@
             this.picHinh.TabIndex = 93;
             this.picHinh.TabStop = false;
             // 
+            // cmbTrangThai
+            // 
+            this.cmbTrangThai.BackColor = System.Drawing.Color.Transparent;
+            this.cmbTrangThai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTrangThai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbTrangThai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbTrangThai.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbTrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbTrangThai.ItemHeight = 30;
+            this.cmbTrangThai.Items.AddRange(new object[] {
+            "Chuyển Khoản ",
+            "Thanh toán khi nhận hàng"});
+            this.cmbTrangThai.Location = new System.Drawing.Point(1178, 62);
+            this.cmbTrangThai.Name = "cmbTrangThai";
+            this.cmbTrangThai.Size = new System.Drawing.Size(315, 36);
+            this.cmbTrangThai.TabIndex = 99;
+            // 
             // UCDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cmbTrangThai);
             this.Controls.Add(this.lblsoluong);
             this.Controls.Add(this.lblthanhtien);
             this.Controls.Add(this.lblGiaTien);
             this.Controls.Add(this.lblTenSP);
             this.Controls.Add(this.picHinh);
             this.Name = "UCDatHang";
-            this.Size = new System.Drawing.Size(1257, 150);
+            this.Size = new System.Drawing.Size(1533, 150);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -115,5 +135,6 @@
         public System.Windows.Forms.Label lblGiaTien;
         public System.Windows.Forms.Label lblTenSP;
         public System.Windows.Forms.PictureBox picHinh;
+        public Guna.UI2.WinForms.Guna2ComboBox cmbTrangThai;
     }
 }

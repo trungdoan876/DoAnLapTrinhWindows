@@ -15,6 +15,7 @@ namespace DoANLapTrinhWin
     public partial class UCDatHang : UserControl
     {
         SanPham sp;
+        string trangthai;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         byte[] hinh;
         Image ByteArrayToImage(byte[] a)

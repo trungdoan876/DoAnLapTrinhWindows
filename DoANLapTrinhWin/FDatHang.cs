@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace DoANLapTrinhWin
 {
@@ -18,6 +19,8 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPham sp;
         string maNM;
+        string maNB;
+        string trangthai,trangThaiDatHang;
         byte[] hinh;
         Image ByteArrayToImage(byte[] a)
         {
@@ -72,6 +75,7 @@ namespace DoANLapTrinhWin
                 int y = 0;
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
+                    maNB = row["MaNguoiBan"].ToString();
                     string maSP = row["MaSanPham"].ToString();
                     string tenSP = row["TenSanPham"].ToString();
                     string giaBan = row["GiaBan"].ToString();
@@ -94,7 +98,7 @@ namespace DoANLapTrinhWin
                     string giaban = giaBan.Substring(1); // Loại bỏ ký tự "đ" ở đầu chuỗi
                     decimal gb = decimal.Parse(giaban); // Chuyển đổi giá trị của giaban thành kiểu decimal
                     int tien = (int)(gb * int.Parse(soLuong)); // Thực hiện phép nhân và chuyển đổi kết quả thành kiểu int
-                    ucdh.lblthanhtien.Text = "đ" + tien.ToString(); // gán giá trị lên uc
+                    ucdh.lblthanhtien.Text = "đ" + tien.ToString() +".000"; // gán giá trị lên uc
                     //vi tri moi uc
                     ucdh.Location = new Point(0, y);
                     y += ucdh.Height += 5;
@@ -118,7 +122,8 @@ namespace DoANLapTrinhWin
             {
                 conn.Open();
                 string sqlStr = string.Format("INSERT INTO DonHang(MaNguoiBan,MaNguoiMua,MaSanPham,TenSanPham,SoLuongSP,GiaBan,TongTien) " +
-                    "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", sp.MaNguoiBan, maNM, sp.MaSP, sp.TenSP, sp.SoLuong, sp.GiaBan, sp.GiaBan);
+                "VALUES ('{0}','{1}','{2}',N'{3}','{4}',N'{5}',N'{6}')", maNB, maNM, sp.MaSP, sp.TenSP, sp.SoLuong, sp.GiaBan, sp.GiaBan);
+
                 //List <SanPham> splist = new List <SanPham>();   
                 string sqlStr2 = string.Format("DELETE FROM GioHang WHERE MaSanPham ='{0}'", sp.MaSP);
                 
@@ -143,6 +148,7 @@ namespace DoANLapTrinhWin
 
         private void FDatHang_Load(object sender, EventArgs e)
         {
+            
             LoadData();
         }
     }

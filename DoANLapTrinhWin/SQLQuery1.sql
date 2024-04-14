@@ -17,6 +17,7 @@
 	SoLuong int, --so luong san pham san co
 )
 GO
+select* from SanPham
 INSERT INTO NguoiBan VALUES('NB01','123', N'Nguyễn Văn A', 093546342, '1999-12-10', N'Nam', 048304000448, N'TPHCM', null, N'Cửa hàng có một loạt các sản phẩm từ các thương hiệu nổi tiếng đến những nhãn hiệu độc lập, mang đến sự đa dạng và lựa chọn cho khách hàng. Bạn có thể tìm thấy từ trang phục hàng ngày đến trang phục dành cho các dịp đặc biệt, từ trang phục công sở đến trang phục dạo phố.', null);
 INSERT INTO NguoiBan VALUES('NB02','123', N'Nguyễn Văn B', 093824641, '1999-12-10', N'Nữ', 048304000498, N'TPHCM', null, N'Ở đây bạn sẽ tìm thấy đủ loại đồ ăn vặt từ khô, chua, ngọt đến mặn, đáp ứng mọi sở thích và khẩu vị của khách hàng. Từ các loại snack truyền thống đến những món ăn vặt mang hơi hướng hiện đại và sáng tạo, có đủ để làm hài lòng cả những người khó tính nhất.', null);
 GO
@@ -60,6 +61,7 @@ CREATE TABLE NguoiMua
 INSERT INTO NguoiMua VALUES ('NM01',N'Nguyễn Thị B','123456','1990-03-20','Nu','27839293',N'484 Lê Văn Việt, phường Tăng Nhơn Phú A, Hồ Chí Minh','0192837283',null,null,null);
 GO
 --DROP TABLE GioHang
+select * from GioHang
 CREATE TABLE GioHang
 (
 	MaSanPham nchar(10),
@@ -72,13 +74,16 @@ CREATE TABLE GioHang
 	Hinh varbinary(max)
 )
 GO
+drop table YeuThich
 CREATE TABLE YeuThich
 (
 	MaNguoiBan nchar(10),
 	MaNguoiMua nchar(10),
 	MaSanPham nchar(10),
+	TrangThai nchar(10) DEFAULT 'Có',
 	PRIMARY KEY(MaNguoiBan,MaNguoiMua)
 )
+select * from YeuThich
 SELECT SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.SoLuong as SL FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = 'NM01'
 select SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang
 from GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = 'NM01'
@@ -95,6 +100,7 @@ CREATE TABLE DonHang
 	SoLuongSP int, --so luong moi san pham them vao gio hang
 	GiaBan nvarchar(100),
 	TongTien nvarchar(100),
+	TrangThai nvarchar(100)
 	primary key (MaDonHang,MaNguoiBan,MaNguoiMua)
 )
 select * from DonHang

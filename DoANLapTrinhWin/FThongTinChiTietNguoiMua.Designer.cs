@@ -207,7 +207,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(824, 184);
+            this.pictureBox3.Location = new System.Drawing.Point(852, 185);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(319, 448);
@@ -219,7 +219,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label5.Location = new System.Drawing.Point(310, 478);
+            this.label5.Location = new System.Drawing.Point(310, 458);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 20);
             this.label5.TabIndex = 197;
@@ -234,7 +234,7 @@
             this.ucTextBox3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucTextBox3.GachChan = false;
             this.ucTextBox3.KichThuocKhung = 1;
-            this.ucTextBox3.Location = new System.Drawing.Point(300, 489);
+            this.ucTextBox3.Location = new System.Drawing.Point(300, 469);
             this.ucTextBox3.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucTextBox3.Multiline = false;
             this.ucTextBox3.Name = "ucTextBox3";
