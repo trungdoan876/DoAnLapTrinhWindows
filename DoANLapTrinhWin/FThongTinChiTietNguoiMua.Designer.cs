@@ -364,7 +364,7 @@
             this.dtpNgSinh.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.dtpNgSinh.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpNgSinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgSinh.Location = new System.Drawing.Point(299, 168);
+            this.dtpNgSinh.Location = new System.Drawing.Point(303, 176);
             this.dtpNgSinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgSinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgSinh.Name = "dtpNgSinh";

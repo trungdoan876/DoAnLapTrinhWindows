@@ -59,7 +59,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(111, 182);
+            this.pictureBox1.Location = new System.Drawing.Point(113, 207);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -102,7 +102,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label5.Location = new System.Drawing.Point(692, 296);
+            this.label5.Location = new System.Drawing.Point(692, 304);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 20);
             this.label5.TabIndex = 200;
@@ -142,7 +142,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(345, 296);
+            this.label2.Location = new System.Drawing.Point(334, 296);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 206;
@@ -354,7 +354,7 @@
             this.ucDiaChi.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ucDiaChi.GachChan = false;
             this.ucDiaChi.KichThuocKhung = 1;
-            this.ucDiaChi.Location = new System.Drawing.Point(680, 307);
+            this.ucDiaChi.Location = new System.Drawing.Point(680, 315);
             this.ucDiaChi.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ucDiaChi.Multiline = false;
             this.ucDiaChi.Name = "ucDiaChi";
