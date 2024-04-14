@@ -46,7 +46,7 @@
             this.btnMuaHang = new DoANLapTrinhWin.ButtonTuyChinh();
             this.btnBanHang = new DoANLapTrinhWin.ButtonTuyChinh();
             this.btnDangNhap = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -265,10 +265,9 @@
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // gunaElipse1
+            // guna2Elipse1
             // 
-            this.gunaElipse1.Radius = 30;
-            this.gunaElipse1.TargetControl = this;
+            this.guna2Elipse1.BorderRadius = 50;
             // 
             // FDangNhap
             // 
@@ -323,7 +322,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private ButtonTuyChinh btnThoat;
         private ButtonTuyChinh btnDangNhap;
-        private Guna.UI.WinForms.GunaElipse gunaElipse1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
 
