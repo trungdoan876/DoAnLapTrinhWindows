@@ -21,6 +21,7 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.maTK = tenTaiKhoan;
+            this.WindowState = FormWindowState.Maximized;
         }
         private void LoadDuLieu()
         {

@@ -19,6 +19,7 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.tenTK = tenTK;
+            this.WindowState = FormWindowState.Maximized;
         }
         private Form formconmua;
         private void moFormConMua(Form form)

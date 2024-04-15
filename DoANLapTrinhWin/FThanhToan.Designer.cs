@@ -314,7 +314,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1123, 454);
+            this.ClientSize = new System.Drawing.Size(1160, 487);
             this.Controls.Add(this.txtSL);
             this.Controls.Add(this.btnCong);
             this.Controls.Add(this.btnTru);

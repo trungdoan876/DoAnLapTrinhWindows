@@ -47,7 +47,7 @@
             this.picHinh = new System.Windows.Forms.PictureBox();
             this.txtMoTa = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnThem = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.btnThemSP = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -349,7 +349,7 @@
             this.txtMaSanPham.HoverState.FillColor = System.Drawing.Color.White;
             this.txtMaSanPham.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMaSanPham.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtMaSanPham.IconLeft")));
-            this.txtMaSanPham.Location = new System.Drawing.Point(119, 104);
+            this.txtMaSanPham.Location = new System.Drawing.Point(113, 104);
             this.txtMaSanPham.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMaSanPham.Name = "txtMaSanPham";
             this.txtMaSanPham.PasswordChar = '\0';
@@ -357,12 +357,11 @@
             this.txtMaSanPham.SelectedText = "";
             this.txtMaSanPham.Size = new System.Drawing.Size(214, 41);
             this.txtMaSanPham.TabIndex = 271;
-            this.txtMaSanPham.TextChanged += new System.EventHandler(this.txtMaSanPham_TextChanged);
             // 
             // picHinh
             // 
             this.picHinh.Image = ((System.Drawing.Image)(resources.GetObject("picHinh.Image")));
-            this.picHinh.Location = new System.Drawing.Point(140, 153);
+            this.picHinh.Location = new System.Drawing.Point(127, 153);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(181, 196);
             this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -407,23 +406,20 @@
             this.pictureBox2.TabIndex = 286;
             this.pictureBox2.TabStop = false;
             // 
-            // btnThem
+            // btnThemSP
             // 
-            this.btnThem.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(149, 441);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(172, 63);
-            this.btnThem.TabIndex = 202;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThemSP.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnThemSP.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSP.Image")));
+            this.btnThemSP.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnThemSP.ImageRotate = 0F;
+            this.btnThemSP.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnThemSP.Location = new System.Drawing.Point(179, 470);
+            this.btnThemSP.Name = "btnThemSP";
+            this.btnThemSP.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnThemSP.Size = new System.Drawing.Size(64, 54);
+            this.btnThemSP.TabIndex = 287;
+            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
             // 
             // FThemSanPham
             // 
@@ -431,6 +427,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1393, 695);
+            this.Controls.Add(this.btnThemSP);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTinhTrang);
@@ -449,7 +446,6 @@
             this.Controls.Add(this.txtMaSanPham);
             this.Controls.Add(this.picHinh);
             this.Controls.Add(this.lblMaNB);
-            this.Controls.Add(this.btnThem);
             this.Name = "FThemSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FSanPhamNguoiBan_Load);
@@ -462,7 +458,6 @@
         }
 
         #endregion
-        private ButtonTuyChinh btnThem;
         private System.Windows.Forms.Label lblMaNB;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTinhTrang;
@@ -481,5 +476,6 @@
         private System.Windows.Forms.PictureBox picHinh;
         private Guna.UI2.WinForms.Guna2TextBox txtMoTa;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2ImageButton btnThemSP;
     }
 }

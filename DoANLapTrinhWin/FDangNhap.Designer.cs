@@ -30,101 +30,168 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDangNhap));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnThoat = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnBanHang = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtDangNhap = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnThoat = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.btnMuaHang = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.btnBanHang = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.btnDangNhap = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.ucMatKhau = new DoANLapTrinhWin.UCTextBox();
-            this.ucDangNhap = new DoANLapTrinhWin.UCTextBox();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.btnMuaHang = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDangNhap = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // bunifuElipse1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 55);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this;
             // 
-            // panel1
+            // guna2Panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.ucDangNhap);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(236, 290);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(418, 92);
-            this.panel1.TabIndex = 5;
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(577, 710);
+            this.guna2Panel1.TabIndex = 33;
             // 
-            // panel2
+            // guna2PictureBox1
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Window;
-            this.panel2.Controls.Add(this.ucMatKhau);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(236, 379);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(418, 89);
-            this.panel2.TabIndex = 6;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 22);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(597, 676);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // btnThoat
             // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 13);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 42);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(699, 239);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(458, 341);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
+            this.btnThoat.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnThoat.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.btnThoat.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnThoat.ImageRotate = 0F;
+            this.btnThoat.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnThoat.Location = new System.Drawing.Point(172, 529);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnThoat.Size = new System.Drawing.Size(70, 46);
+            this.btnThoat.TabIndex = 28;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(275, 74);
+            this.label2.Location = new System.Drawing.Point(69, 118);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(375, 63);
             this.label2.TabIndex = 17;
             this.label2.Text = "tiệm trao đổi đồ";
             // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.Animated = true;
+            this.txtMatKhau.BackColor = System.Drawing.Color.White;
+            this.txtMatKhau.BorderRadius = 15;
+            this.txtMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMatKhau.DefaultText = "";
+            this.txtMatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMatKhau.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.txtMatKhau.ForeColor = System.Drawing.Color.Black;
+            this.txtMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMatKhau.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtMatKhau.IconLeft")));
+            this.txtMatKhau.IconLeftSize = new System.Drawing.Size(30, 30);
+            this.txtMatKhau.Location = new System.Drawing.Point(44, 397);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtMatKhau.PlaceholderText = "Mật khẩu\r\n";
+            this.txtMatKhau.SelectedText = "";
+            this.txtMatKhau.Size = new System.Drawing.Size(376, 60);
+            this.txtMatKhau.TabIndex = 26;
+            // 
+            // btnBanHang
+            // 
+            this.btnBanHang.Animated = true;
+            this.btnBanHang.BorderRadius = 10;
+            this.btnBanHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBanHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBanHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBanHang.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBanHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBanHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnBanHang.FillColor2 = System.Drawing.Color.Gray;
+            this.btnBanHang.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold);
+            this.btnBanHang.ForeColor = System.Drawing.Color.White;
+            this.btnBanHang.HoverState.FillColor = System.Drawing.Color.Orange;
+            this.btnBanHang.HoverState.FillColor2 = System.Drawing.Color.Gold;
+            this.btnBanHang.HoverState.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBanHang.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnBanHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnBanHang.Location = new System.Drawing.Point(44, 203);
+            this.btnBanHang.Name = "btnBanHang";
+            this.btnBanHang.Size = new System.Drawing.Size(154, 61);
+            this.btnBanHang.TabIndex = 30;
+            this.btnBanHang.Text = "Bán hàng";
+            this.btnBanHang.Click += new System.EventHandler(this.btnBanHang_Click);
+            // 
+            // txtDangNhap
+            // 
+            this.txtDangNhap.Animated = true;
+            this.txtDangNhap.BackColor = System.Drawing.Color.White;
+            this.txtDangNhap.BorderRadius = 15;
+            this.txtDangNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDangNhap.DefaultText = "";
+            this.txtDangNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDangNhap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDangNhap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDangNhap.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.txtDangNhap.ForeColor = System.Drawing.Color.Black;
+            this.txtDangNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDangNhap.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtDangNhap.IconLeft")));
+            this.txtDangNhap.IconLeftSize = new System.Drawing.Size(30, 30);
+            this.txtDangNhap.Location = new System.Drawing.Point(44, 308);
+            this.txtDangNhap.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDangNhap.Name = "txtDangNhap";
+            this.txtDangNhap.PasswordChar = '\0';
+            this.txtDangNhap.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtDangNhap.PlaceholderText = "Tên đăng nhập";
+            this.txtDangNhap.SelectedText = "";
+            this.txtDangNhap.Size = new System.Drawing.Size(376, 60);
+            this.txtDangNhap.TabIndex = 25;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 60F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label3.Location = new System.Drawing.Point(755, 54);
+            this.label3.Location = new System.Drawing.Point(527, 93);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(402, 160);
@@ -134,7 +201,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(673, 96);
+            this.pictureBox5.Location = new System.Drawing.Point(448, 143);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(93, 110);
@@ -142,22 +209,10 @@
             this.pictureBox5.TabIndex = 20;
             this.pictureBox5.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(952, 196);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 29);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Sending sweet things";
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1109, 77);
+            this.pictureBox4.Location = new System.Drawing.Point(889, 116);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(67, 65);
@@ -165,110 +220,97 @@
             this.pictureBox4.TabIndex = 19;
             this.pictureBox4.TabStop = false;
             // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnThoat.FlatAppearance.BorderSize = 0;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(370, 551);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(125, 40);
-            this.btnThoat.TabIndex = 24;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
             // btnMuaHang
             // 
-            this.btnMuaHang.BackColor = System.Drawing.Color.DimGray;
-            this.btnMuaHang.FlatAppearance.BorderSize = 0;
-            this.btnMuaHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMuaHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMuaHang.Animated = true;
+            this.btnMuaHang.BorderRadius = 10;
+            this.btnMuaHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMuaHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMuaHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMuaHang.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMuaHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMuaHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnMuaHang.FillColor2 = System.Drawing.Color.Gray;
+            this.btnMuaHang.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold);
             this.btnMuaHang.ForeColor = System.Drawing.Color.White;
-            this.btnMuaHang.Location = new System.Drawing.Point(482, 196);
+            this.btnMuaHang.HoverState.FillColor = System.Drawing.Color.Orange;
+            this.btnMuaHang.HoverState.FillColor2 = System.Drawing.Color.Gold;
+            this.btnMuaHang.HoverState.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMuaHang.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnMuaHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnMuaHang.Location = new System.Drawing.Point(253, 203);
             this.btnMuaHang.Name = "btnMuaHang";
-            this.btnMuaHang.Size = new System.Drawing.Size(136, 57);
-            this.btnMuaHang.TabIndex = 22;
+            this.btnMuaHang.Size = new System.Drawing.Size(154, 61);
+            this.btnMuaHang.TabIndex = 31;
             this.btnMuaHang.Text = "Mua hàng";
-            this.btnMuaHang.UseVisualStyleBackColor = false;
-            this.btnMuaHang.Click += new System.EventHandler(this.btnMuaHang_Click);
+            this.btnMuaHang.Click += new System.EventHandler(this.btnMuaHang_Click_1);
             // 
-            // btnBanHang
+            // label1
             // 
-            this.btnBanHang.BackColor = System.Drawing.Color.DimGray;
-            this.btnBanHang.FlatAppearance.BorderSize = 0;
-            this.btnBanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBanHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBanHang.ForeColor = System.Drawing.Color.White;
-            this.btnBanHang.Location = new System.Drawing.Point(295, 196);
-            this.btnBanHang.Name = "btnBanHang";
-            this.btnBanHang.Size = new System.Drawing.Size(132, 57);
-            this.btnBanHang.TabIndex = 21;
-            this.btnBanHang.Text = "Bán hàng";
-            this.btnBanHang.UseVisualStyleBackColor = false;
-            this.btnBanHang.Click += new System.EventHandler(this.btnBanHang_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(658, 235);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(217, 29);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Sending sweet things";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(455, 279);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(458, 341);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnDangNhap);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnMuaHang);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtDangNhap);
+            this.panel1.Controls.Add(this.btnBanHang);
+            this.panel1.Controls.Add(this.txtMatKhau);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnThoat);
+            this.panel1.Location = new System.Drawing.Point(555, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1079, 676);
+            this.panel1.TabIndex = 32;
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnDangNhap.FlatAppearance.BorderSize = 0;
-            this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.Animated = true;
+            this.btnDangNhap.BorderRadius = 10;
+            this.btnDangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDangNhap.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDangNhap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDangNhap.FillColor2 = System.Drawing.Color.Gray;
+            this.btnDangNhap.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold);
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(350, 474);
+            this.btnDangNhap.HoverState.FillColor = System.Drawing.Color.Orange;
+            this.btnDangNhap.HoverState.FillColor2 = System.Drawing.Color.Gold;
+            this.btnDangNhap.HoverState.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.Image")));
+            this.btnDangNhap.Location = new System.Drawing.Point(111, 465);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(161, 58);
-            this.btnDangNhap.TabIndex = 7;
+            this.btnDangNhap.Size = new System.Drawing.Size(192, 61);
+            this.btnDangNhap.TabIndex = 32;
             this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.UseVisualStyleBackColor = false;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
-            // 
-            // ucMatKhau
-            // 
-            this.ucMatKhau.BackColor = System.Drawing.SystemColors.Window;
-            this.ucMatKhau.BanKinhKhung = 10;
-            this.ucMatKhau.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucMatKhau.ChumoText = "Mật khẩu";
-            this.ucMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucMatKhau.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucMatKhau.GachChan = false;
-            this.ucMatKhau.KichThuocKhung = 2;
-            this.ucMatKhau.Location = new System.Drawing.Point(44, 13);
-            this.ucMatKhau.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucMatKhau.Multiline = false;
-            this.ucMatKhau.Name = "ucMatKhau";
-            this.ucMatKhau.Padding = new System.Windows.Forms.Padding(7);
-            this.ucMatKhau.PasswordChar = true;
-            this.ucMatKhau.Size = new System.Drawing.Size(359, 56);
-            this.ucMatKhau.TabIndex = 21;
-            this.ucMatKhau.Texts = "";
-            // 
-            // ucDangNhap
-            // 
-            this.ucDangNhap.BackColor = System.Drawing.SystemColors.Window;
-            this.ucDangNhap.BanKinhKhung = 10;
-            this.ucDangNhap.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucDangNhap.ChumoText = "Tên đăng nhập";
-            this.ucDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucDangNhap.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucDangNhap.GachChan = false;
-            this.ucDangNhap.KichThuocKhung = 2;
-            this.ucDangNhap.Location = new System.Drawing.Point(44, 10);
-            this.ucDangNhap.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucDangNhap.Multiline = false;
-            this.ucDangNhap.Name = "ucDangNhap";
-            this.ucDangNhap.Padding = new System.Windows.Forms.Padding(7);
-            this.ucDangNhap.PasswordChar = false;
-            this.ucDangNhap.Size = new System.Drawing.Size(359, 55);
-            this.ucDangNhap.TabIndex = 21;
-            this.ucDangNhap.Texts = "";
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 50;
-            this.bunifuElipse1.TargetControl = this;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click_1);
             // 
             // FDangNhap
             // 
@@ -276,54 +318,42 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1441, 676);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnMuaHang);
-            this.Controls.Add(this.btnBanHang);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.btnDangNhap);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1844, 710);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FDangNhap";
             this.Load += new System.EventHandler(this.FDangNhap_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private UCTextBox ucDangNhap;
-        private UCTextBox ucMatKhau;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private ButtonTuyChinh btnBanHang;
-        private ButtonTuyChinh btnMuaHang;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private ButtonTuyChinh btnThoat;
-        private ButtonTuyChinh btnDangNhap;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnMuaHang;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox txtDangNhap;
+        private Guna.UI2.WinForms.Guna2GradientButton btnBanHang;
+        private Guna.UI2.WinForms.Guna2TextBox txtMatKhau;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2ImageButton btnThoat;
+        private Guna.UI2.WinForms.Guna2GradientButton btnDangNhap;
     }
 }
 

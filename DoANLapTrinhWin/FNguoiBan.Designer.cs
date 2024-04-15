@@ -33,6 +33,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnThongTin = new Guna.UI2.WinForms.Guna2Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btnDonHang = new Guna.UI2.WinForms.Guna2Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnSanPham = new Guna.UI2.WinForms.Guna2Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
             this.panelThan = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,28 +51,18 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.btnThongTin = new Guna.UI2.WinForms.Guna2Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.btnSanPham = new Guna.UI2.WinForms.Guna2Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.btnDonHang = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel8.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.panelThan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel8.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,7 +78,7 @@
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(178, 744);
+            this.panel1.Size = new System.Drawing.Size(178, 908);
             this.panel1.TabIndex = 0;
             // 
             // panel7
@@ -100,98 +100,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // panelThan
-            // 
-            this.panelThan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelThan.AutoSize = true;
-            this.panelThan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panelThan.Controls.Add(this.pictureBox1);
-            this.panelThan.Controls.Add(this.label2);
-            this.panelThan.Controls.Add(this.pictureBox3);
-            this.panelThan.Controls.Add(this.label1);
-            this.panelThan.Controls.Add(this.pictureBox5);
-            this.panelThan.Controls.Add(this.label3);
-            this.panelThan.Location = new System.Drawing.Point(178, 0);
-            this.panelThan.Name = "panelThan";
-            this.panelThan.Size = new System.Drawing.Size(1150, 744);
-            this.panelThan.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(488, 192);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(93, 104);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(324, 324);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(326, 128);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "SHOP";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(595, 192);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(412, 285);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 28;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(104, 396);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 29);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Sending sweet things";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(107, 238);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(93, 104);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 26;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label3.Location = new System.Drawing.Point(196, 214);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(319, 128);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "panda";
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 45;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // panel8
             // 
@@ -246,6 +154,36 @@
             this.btnThongTin.TabIndex = 37;
             this.btnThongTin.Text = "Thông tin";
             this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click_1);
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.btnDonHang);
+            this.panel13.Location = new System.Drawing.Point(12, 258);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(166, 60);
+            this.panel13.TabIndex = 40;
+            // 
+            // btnDonHang
+            // 
+            this.btnDonHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDonHang.Animated = true;
+            this.btnDonHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDonHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDonHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDonHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDonHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDonHang.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDonHang.ForeColor = System.Drawing.Color.White;
+            this.btnDonHang.HoverState.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnDonHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.Image")));
+            this.btnDonHang.Location = new System.Drawing.Point(-16, -10);
+            this.btnDonHang.Name = "btnDonHang";
+            this.btnDonHang.Size = new System.Drawing.Size(182, 79);
+            this.btnDonHang.TabIndex = 39;
+            this.btnDonHang.Text = "Đơn hàng";
+            this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click_1);
             // 
             // panel11
             // 
@@ -304,42 +242,101 @@
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click_1);
             // 
-            // panel13
+            // panelThan
             // 
-            this.panel13.Controls.Add(this.btnDonHang);
-            this.panel13.Location = new System.Drawing.Point(12, 258);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(166, 60);
-            this.panel13.TabIndex = 40;
+            this.panelThan.AutoSize = true;
+            this.panelThan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelThan.Controls.Add(this.pictureBox1);
+            this.panelThan.Controls.Add(this.label2);
+            this.panelThan.Controls.Add(this.pictureBox3);
+            this.panelThan.Controls.Add(this.label1);
+            this.panelThan.Controls.Add(this.pictureBox5);
+            this.panelThan.Controls.Add(this.label3);
+            this.panelThan.Location = new System.Drawing.Point(178, 0);
+            this.panelThan.Name = "panelThan";
+            this.panelThan.Size = new System.Drawing.Size(1455, 905);
+            this.panelThan.TabIndex = 1;
             // 
-            // btnDonHang
+            // pictureBox1
             // 
-            this.btnDonHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDonHang.Animated = true;
-            this.btnDonHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDonHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDonHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDonHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDonHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDonHang.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDonHang.ForeColor = System.Drawing.Color.White;
-            this.btnDonHang.HoverState.FillColor = System.Drawing.Color.LimeGreen;
-            this.btnDonHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.Image")));
-            this.btnDonHang.Location = new System.Drawing.Point(-16, -10);
-            this.btnDonHang.Name = "btnDonHang";
-            this.btnDonHang.Size = new System.Drawing.Size(182, 79);
-            this.btnDonHang.TabIndex = 39;
-            this.btnDonHang.Text = "Đơn hàng";
-            this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click_1);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(519, 232);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(93, 104);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label2.Location = new System.Drawing.Point(355, 364);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(326, 128);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "SHOP";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(626, 232);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(412, 285);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 28;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(135, 436);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(217, 29);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Sending sweet things";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(138, 278);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(93, 104);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 26;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label3.Location = new System.Drawing.Point(227, 254);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(319, 128);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "panda";
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 45;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // FNguoiBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1278, 744);
+            this.ClientSize = new System.Drawing.Size(1636, 908);
             this.Controls.Add(this.panelThan);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -351,16 +348,16 @@
             this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
             this.panelThan.ResumeLayout(false);
             this.panelThan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

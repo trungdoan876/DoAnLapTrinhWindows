@@ -34,16 +34,6 @@ namespace DoANLapTrinhWin
 
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            byte[] b = ImageToByteArray(picHinh.Image);
-            //string anh = BitConverter.ToString(b).Replace("-", "");
-            SanPham sp = new SanPham(txtMaSanPham.Text, txtTenSP.Text, txtGiaBan.Text, txtGiaGoc.Text,
-                    txtXuatXu.Text, txtTGSD.Text, dtp.Value, txtMoTa.Text, txtNganhHang.Text,
-                    lblTinhTrang.Text, txtDiaChi.Text, lblMaNB.Text, txtSoLuonSanCo.Text, b);
-            spDAO.ThemSanPham(sp);
-        }
-
         private void tinhTrang_Scroll(object sender, ScrollEventArgs e)
         {
             int value = tinhTrang.Value;
@@ -71,9 +61,14 @@ namespace DoANLapTrinhWin
             }
         }
 
-        private void txtMaSanPham_TextChanged(object sender, EventArgs e)
+        private void btnThemSP_Click(object sender, EventArgs e)
         {
-
+            byte[] b = ImageToByteArray(picHinh.Image);
+            //string anh = BitConverter.ToString(b).Replace("-", "");
+            SanPham sp = new SanPham(txtMaSanPham.Text, txtTenSP.Text, txtGiaBan.Text, txtGiaGoc.Text,
+                    txtXuatXu.Text, txtTGSD.Text, dtp.Value, txtMoTa.Text, txtNganhHang.Text,
+                    lblTinhTrang.Text, txtDiaChi.Text, lblMaNB.Text, txtSoLuonSanCo.Text, b);
+            spDAO.ThemSanPham(sp);
         }
     }
 }

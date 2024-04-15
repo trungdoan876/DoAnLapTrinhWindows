@@ -17,6 +17,7 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.TenTaiKhoan = tenTaiKhoan;
+            this.WindowState = FormWindowState.Maximized;
         }
         private Form formcon;
         private void moFormCon(Form form)
