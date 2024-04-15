@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
+using System.Drawing;
 
 namespace DoANLapTrinhWin
 {
@@ -29,8 +31,8 @@ namespace DoANLapTrinhWin
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
-            panel8.Controls.Add(form);
-            panel8.Tag = form;
+            panelThan.Controls.Add(form);
+            panelThan.Tag = form;
             form.BringToFront();
             form.Show();
         }
@@ -38,47 +40,48 @@ namespace DoANLapTrinhWin
         {
 
         }
-        private void btnThongTin_Click_1(object sender, EventArgs e)
+        private Guna2Button btnOK;
+        private void TaoButton(Guna2Button button)
         {
-            moFormConMua(new FThongTinNguoiMua(tenTK));
-            TaoButton(sender);
-        }
-
-        private void btnMH_Click_1(object sender, EventArgs e)
-        {
-            moFormConMua(new FMuaHang(tenTK));
-            TaoButton(sender);
-        }
-
-        private void btnGH_Click(object sender, EventArgs e)
-        {
-            moFormConMua(new FGioHang(tenTK));
-            TaoButton(sender);
-        }
-
-        private void btnDH_Click(object sender, EventArgs e)
-        {
-            moFormConMua(new FDonHang());
-            TaoButton(sender);
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        private Button btnOK;
-        private void TaoButton(object button)
-        {
-            var btn = (Button)button;
-
-            btn.BackColor = Color.SeaGreen;
-            btn.ForeColor = Color.White;
-            if (btnOK != null && btnOK != btn)
+            button.BackColor = Color.SeaGreen;
+            button.ForeColor = Color.White;
+            if (btnOK != null && btnOK != button)
             {
                 btnOK.BackColor = Color.FromArgb(64, 64, 64);
                 btnOK.ForeColor = Color.White;
             }
-            btnOK = btn;
+            btnOK = button;
+        }
+
+        private void btnThongTin_Click(object sender, EventArgs e)
+        {
+            moFormConMua(new FThongTinChiTietNguoiMua());
+            TaoButton(btn);
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMuaHang_Click(object sender, EventArgs e)
+        {
+            moFormConMua(new FMuaHang(tenTK));
+        }
+
+        private void btnGioHang_Click(object sender, EventArgs e)
+        {
+            moFormConMua(new FGioHang(tenTK));
+        }
+
+        private void btnDonHang_Click(object sender, EventArgs e)
+        {
+            moFormConMua(new FDonHang());
+        }
+
+        private void btnYeuThich_Click(object sender, EventArgs e)
+        {
+            moFormConMua(new FYeuThich(tenTK));
         }
     }
 }

@@ -34,38 +34,6 @@ namespace DoANLapTrinhWin
             form.BringToFront();
             form.Show();
         }
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnThongTin_Click(object sender, EventArgs e)
-        {
-            //moFormCon(new FThongTinNguoiBan(TenTaiKhoan));
-            TaoButton(sender);
-            panelThan.Controls.Clear();
-            FThongTinNguoiBan f = new FThongTinNguoiBan(TenTaiKhoan);
-            f.TopLevel = false; // cho phep form duoc nhung
-            f.Dock = DockStyle.Fill;
-            f.FormBorderStyle = FormBorderStyle.None; // bo vien tieu de
-            panelThan.Controls.Add(f);
-            f.Show();
-        }
-        private void btnSP_Click(object sender, EventArgs e)
-        {
-            moFormCon(new FSanPham(TenTaiKhoan));
-            TaoButton(sender);
-        }
-        private void btnDonHang_Click(object sender, EventArgs e)
-        {
-            moFormCon(new FDonHangNguoiBan());
-            TaoButton(sender);
-        }
-        private void btnThongKe_Click(object sender, EventArgs e)
-        {
-            moFormCon(new FThongKeNguoiBan());
-            TaoButton(sender);
-        }
         private void FNguoiBan_Load(object sender, EventArgs e)
         {
 
@@ -85,5 +53,29 @@ namespace DoANLapTrinhWin
             btnOK = btn;
         }
 
+        private void btnThongTin_Click_1(object sender, EventArgs e)
+        {
+            moFormCon(new FThongTinNguoiBan(TenTaiKhoan));
+        }
+
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+            moFormCon(new FSanPham(TenTaiKhoan));
+        }
+
+        private void btnDonHang_Click_1(object sender, EventArgs e)
+        {
+            moFormCon(new FDonHangNguoiBan());
+        }
+
+        private void btnThongKe_Click_1(object sender, EventArgs e)
+        {
+            moFormCon(new FThongKeNguoiBan());
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

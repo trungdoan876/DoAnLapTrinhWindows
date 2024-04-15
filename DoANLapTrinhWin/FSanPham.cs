@@ -53,21 +53,19 @@ namespace DoANLapTrinhWin
             }
             btnOK = btn;
         }
+
         private void btnTatCaSP_Click(object sender, EventArgs e)
         {
             moFormCon(new FDanhSachSanPham(maNBan));
-            TaoButton(sender);
         }
 
         private void btnDaDangBan_Click(object sender, EventArgs e)
         {
-            TaoButton(sender);
             moFormCon(new FDaDangBan(maNBan));
         }
 
         private void btnChuaDangBan_Click(object sender, EventArgs e)
         {
-            TaoButton(sender);
             moFormCon(new FChuaDangBan(maNBan));
         }
     }

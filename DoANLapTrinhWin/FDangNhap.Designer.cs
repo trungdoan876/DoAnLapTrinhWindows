@@ -32,9 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDangNhap));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ucDangNhap = new DoANLapTrinhWin.UCTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ucMatKhau = new DoANLapTrinhWin.UCTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,7 +44,9 @@
             this.btnMuaHang = new DoANLapTrinhWin.ButtonTuyChinh();
             this.btnBanHang = new DoANLapTrinhWin.ButtonTuyChinh();
             this.btnDangNhap = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.ucMatKhau = new DoANLapTrinhWin.UCTextBox();
+            this.ucDangNhap = new DoANLapTrinhWin.UCTextBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -76,26 +76,6 @@
             this.panel1.Size = new System.Drawing.Size(418, 92);
             this.panel1.TabIndex = 5;
             // 
-            // ucDangNhap
-            // 
-            this.ucDangNhap.BackColor = System.Drawing.SystemColors.Window;
-            this.ucDangNhap.BanKinhKhung = 10;
-            this.ucDangNhap.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucDangNhap.ChumoText = "Tên đăng nhập";
-            this.ucDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucDangNhap.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucDangNhap.GachChan = false;
-            this.ucDangNhap.KichThuocKhung = 2;
-            this.ucDangNhap.Location = new System.Drawing.Point(44, 10);
-            this.ucDangNhap.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucDangNhap.Multiline = false;
-            this.ucDangNhap.Name = "ucDangNhap";
-            this.ucDangNhap.Padding = new System.Windows.Forms.Padding(7);
-            this.ucDangNhap.PasswordChar = false;
-            this.ucDangNhap.Size = new System.Drawing.Size(359, 55);
-            this.ucDangNhap.TabIndex = 21;
-            this.ucDangNhap.Texts = "";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Window;
@@ -105,26 +85,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(418, 89);
             this.panel2.TabIndex = 6;
-            // 
-            // ucMatKhau
-            // 
-            this.ucMatKhau.BackColor = System.Drawing.SystemColors.Window;
-            this.ucMatKhau.BanKinhKhung = 10;
-            this.ucMatKhau.ChumoColor = System.Drawing.Color.DarkGray;
-            this.ucMatKhau.ChumoText = "Mật khẩu";
-            this.ucMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucMatKhau.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ucMatKhau.GachChan = false;
-            this.ucMatKhau.KichThuocKhung = 2;
-            this.ucMatKhau.Location = new System.Drawing.Point(44, 13);
-            this.ucMatKhau.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ucMatKhau.Multiline = false;
-            this.ucMatKhau.Name = "ucMatKhau";
-            this.ucMatKhau.Padding = new System.Windows.Forms.Padding(7);
-            this.ucMatKhau.PasswordChar = true;
-            this.ucMatKhau.Size = new System.Drawing.Size(359, 56);
-            this.ucMatKhau.TabIndex = 21;
-            this.ucMatKhau.Texts = "";
             // 
             // pictureBox2
             // 
@@ -265,9 +225,50 @@
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // guna2Elipse1
+            // ucMatKhau
             // 
-            this.guna2Elipse1.BorderRadius = 50;
+            this.ucMatKhau.BackColor = System.Drawing.SystemColors.Window;
+            this.ucMatKhau.BanKinhKhung = 10;
+            this.ucMatKhau.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucMatKhau.ChumoText = "Mật khẩu";
+            this.ucMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMatKhau.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucMatKhau.GachChan = false;
+            this.ucMatKhau.KichThuocKhung = 2;
+            this.ucMatKhau.Location = new System.Drawing.Point(44, 13);
+            this.ucMatKhau.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucMatKhau.Multiline = false;
+            this.ucMatKhau.Name = "ucMatKhau";
+            this.ucMatKhau.Padding = new System.Windows.Forms.Padding(7);
+            this.ucMatKhau.PasswordChar = true;
+            this.ucMatKhau.Size = new System.Drawing.Size(359, 56);
+            this.ucMatKhau.TabIndex = 21;
+            this.ucMatKhau.Texts = "";
+            // 
+            // ucDangNhap
+            // 
+            this.ucDangNhap.BackColor = System.Drawing.SystemColors.Window;
+            this.ucDangNhap.BanKinhKhung = 10;
+            this.ucDangNhap.ChumoColor = System.Drawing.Color.DarkGray;
+            this.ucDangNhap.ChumoText = "Tên đăng nhập";
+            this.ucDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucDangNhap.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ucDangNhap.GachChan = false;
+            this.ucDangNhap.KichThuocKhung = 2;
+            this.ucDangNhap.Location = new System.Drawing.Point(44, 10);
+            this.ucDangNhap.MauKhung = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ucDangNhap.Multiline = false;
+            this.ucDangNhap.Name = "ucDangNhap";
+            this.ucDangNhap.Padding = new System.Windows.Forms.Padding(7);
+            this.ucDangNhap.PasswordChar = false;
+            this.ucDangNhap.Size = new System.Drawing.Size(359, 55);
+            this.ucDangNhap.TabIndex = 21;
+            this.ucDangNhap.Texts = "";
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // FDangNhap
             // 
@@ -322,7 +323,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private ButtonTuyChinh btnThoat;
         private ButtonTuyChinh btnDangNhap;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
 

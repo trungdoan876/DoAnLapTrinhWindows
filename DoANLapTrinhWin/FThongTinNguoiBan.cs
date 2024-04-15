@@ -24,7 +24,7 @@ namespace DoANLapTrinhWin
         }
         private void LoadDuLieu()
         {
-            NguoiBan nguoiban = new NguoiBan(ucMaNBan.textBox.Text, ucHoTenNB.textBox.Text, ucSDT.textBox.Text, dtpNgSinh.Value, ucGioiTinh.textBox.Text, ucCCCD.textBox.Text, ucDiaChi.textBox.Text, ucEmail.textBox.Text, ucMoTaShop.textBox.Text);
+            //NguoiBan nguoiban = new NguoiBan(txtMaTaiKhoan.Text, txtHoTen.Text, ucSDT.textBox.Text, dtpNgSinh.Value, ucGioiTinh.textBox.Text, ucCCCD.textBox.Text, ucDiaChi.textBox.Text, ucEmail.textBox.Text, ucMoTaShop.textBox.Text);
             try
             {
                 conn.Open();
@@ -34,16 +34,16 @@ namespace DoANLapTrinhWin
                 if (docDuLieu.Read())
                 {
                     // Đưa dữ liệu vào TextBox
-                    ucMaNBan.textBox.Text = docDuLieu["MaNguoiBan"].ToString();
-                    ucHoTenNB.textBox.Text = docDuLieu["Ten"].ToString();
-                    ucGioiTinh.textBox.Text = docDuLieu["GioiTinh"].ToString();
+                    txtMaTaiKhoan.Text = docDuLieu["MaNguoiBan"].ToString();
+                    txtHoTen.Text = docDuLieu["Ten"].ToString();
+                    txtGioiTinh.Text = docDuLieu["GioiTinh"].ToString();
                     dtpNgSinh.Text = docDuLieu["NgaySinh"].ToString();
                     //ucNgSinh.textBox.Text = docDuLieu["NgaySinh"].ToString();
-                    ucCCCD.textBox.Text = docDuLieu["CCCD"].ToString();
-                    ucSDT.textBox.Text = docDuLieu["SDT"].ToString();
-                    ucDiaChi.textBox.Text = docDuLieu["DiaChi"].ToString();
-                    ucEmail.textBox.Text = docDuLieu["Email"].ToString();
-                    ucMoTaShop.textBox.Text = docDuLieu["MoTaShop"].ToString();
+                    txtCCCD.Text = docDuLieu["CCCD"].ToString();
+                    txtSDT.Text = docDuLieu["SDT"].ToString();
+                    txtDiaChi.Text = docDuLieu["DiaChi"].ToString();
+                    txtEmail.Text = docDuLieu["Email"].ToString();
+                    txtMoTa.Text = docDuLieu["MoTaShop"].ToString();
                 }
             }
             catch (Exception ex)

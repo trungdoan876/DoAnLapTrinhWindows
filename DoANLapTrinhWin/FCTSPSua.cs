@@ -34,39 +34,33 @@ namespace DoANLapTrinhWin
         public FCTSPSua(SanPham sp)
         {
             InitializeComponent();
-            ucMaSP.textBox.Text = sp.MaSP;
-            ucTenSP.textBox.Text = sp.TenSP;
-            ucGiaSP.textBox.Text = sp.GiaBan;
-            ucGiaGoc.textBox.Text = sp.GiaGoc;
-            ucXuatXu.textBox.Text = sp.XuatXu;
-            ucNganhHang.textBox.Text = sp.NganhHang;
-            ucMoTa.textBox.Text = sp.MoTaSanPham;
-            ucThoiGian.textBox.Text = sp.ThoiGianDaSuDung;
-            cbTinhTrang.Text = sp.TinhTrang;
-            ucDC.textBox.Text = sp.DiaChi;
-            ucSoLuong.textBox.Text = sp.SoLuong;
+            txtMaSanPham.Text = sp.MaSP;
+            txtTenSP.Text = sp.TenSP;
+            txtGiaBan.Text = sp.GiaBan;
+            txtGiaGoc.Text = sp.GiaGoc;
+            txtXuatXu.Text = sp.XuatXu;
+            txtNganhHang.Text = sp.NganhHang;
+            txtMoTa.Text = sp.MoTaSanPham;
+            txtTGSD.Text = sp.ThoiGianDaSuDung;
+            //bỏ vô cái %
+            lblTinhTrang.Text = sp.TinhTrang;
+            //xóa cái chữ % cuối cùng chuỗi
+            string str = sp.TinhTrang.Substring(0, sp.TinhTrang.Length - 1);
+            int tt = int.Parse(str);
+            tinhTrang.Value = tt;
+            //cho cái label di chuyển theo cái %
+            float percent = (float)tt / (float)tinhTrang.Maximum;
+            int newPosition = (int)(percent * (tinhTrang.Width - lblTinhTrang.Width)) + tinhTrang.Left;
+            // Cập nhật vị trí mới của Label
+            lblTinhTrang.Left = newPosition;
+
+            txtDiaChi.Text = sp.DiaChi;
+            txtSoLuonSanCo.Text = sp.SoLuong;
             picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
         private void FCTSPSua_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnCapNhat_Click(object sender, EventArgs e)
-        {
-            SanPham sp = new SanPham(ucMaSP.textBox.Text, ucTenSP.textBox.Text, ucGiaSP.textBox.Text, ucGiaGoc.textBox.Text,
-                    ucXuatXu.textBox.Text, ucThoiGian.textBox.Text, dtpNgayDang.Value, ucMoTa.textBox.Text, ucNganhHang.textBox.Text,
-                    cbTinhTrang.Text,ucDC.textBox.Text,"", ucSoLuong.textBox.Text,ImageToByteArray(picHinh.Image));
-          //  MessageBox.Show(ucSoLuong.textBox.Text);
-            spDao.CapNhatSanPham(sp);
-        }
-
-        private void btnDangBan_Click(object sender, EventArgs e)
-        {
-            SanPham sp = new SanPham(ucMaSP.textBox.Text, ucTenSP.textBox.Text, ucGiaSP.textBox.Text, ucGiaGoc.textBox.Text,
-                    ucXuatXu.textBox.Text, ucThoiGian.textBox.Text, dtpNgayDang.Value, ucMoTa.textBox.Text, ucNganhHang.textBox.Text,
-                    cbTinhTrang.Text,ucDC.textBox.Text,"",ucSoLuong.textBox.Text, ImageToByteArray(picHinh.Image));
-            spDao.CapNhatDangBan(sp);
         }
 
         private void picHinh_Click(object sender, EventArgs e)
@@ -80,6 +74,40 @@ namespace DoANLapTrinhWin
                 picHinh.Image = Image.FromFile(odlgOpenFile.FileName);
                 this.Text = odlgOpenFile.FileName;
             }
+        }
+
+        private void btnSuaSanPham_Click(object sender, EventArgs e)
+        {
+            SanPham sp = new SanPham(txtMaSanPham.Text, txtTenSP.Text,  txtGiaBan.Text, txtGiaGoc.Text,
+                    txtXuatXu.Text, txtTGSD.Text, dtp.Value, txtMoTa.Text, txtNganhHang.Text,
+                    lblTinhTrang.Text, txtDiaChi.Text, "",txtSoLuonSanCo.Text, ImageToByteArray(picHinh.Image));
+            spDao.CapNhatSanPham(sp);
+        }
+
+        private void btnDangBan_Click(object sender, EventArgs e)
+        {
+            SanPham sp = new SanPham(txtMaSanPham.Text, txtTenSP.Text, txtGiaBan.Text, txtGiaGoc.Text,
+                    txtXuatXu.Text, txtTGSD.Text, dtp.Value, txtMoTa.Text, txtNganhHang.Text,
+                   lblTinhTrang.Text, txtDiaChi.Text, "", txtSoLuonSanCo.Text, ImageToByteArray(picHinh.Image));
+            spDao.CapNhatDangBan(sp);
+        }
+
+        private void btnQuaylai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tinhTrang_Scroll(object sender, ScrollEventArgs e)
+        {
+            int value = tinhTrang.Value;
+            lblTinhTrang.Text = value.ToString() +"%"; // Hiển thị giá trị của TrackBar trong Label
+
+            // Tính toán vị trí mới của Label dựa trên giá trị của TrackBar và kích thước của thanh kéo
+            float percent = (float)value / (float)tinhTrang.Maximum;
+            int newPosition = (int)(percent * (tinhTrang.Width - lblTinhTrang.Width)) + tinhTrang.Left;
+
+            // Cập nhật vị trí mới của Label
+            lblTinhTrang.Left = newPosition;
         }
     }
 }

@@ -38,13 +38,26 @@ namespace DoANLapTrinhWin
         {
             byte[] b = ImageToByteArray(picHinh.Image);
             //string anh = BitConverter.ToString(b).Replace("-", "");
-            SanPham sp = new SanPham(ucMaSP.textBox.Text,ucTenSP.textBox.Text, ucGiaBan.textBox.Text, ucGiaGoc.textBox.Text,
-    ucXuatXu.textBox.Text, ucTGDSD.textBox.Text,dtpNgayDang.Value, ucMoTaSP.textBox.Text, ucNganhHang.textBox.Text,
-    cbbTinhTrang.Text,ucDC.textBox.Text,lblMaNB.Text,ucSoLuong.textBox.Text, b);
+            SanPham sp = new SanPham(txtMaSanPham.Text, txtTenSP.Text, txtGiaBan.Text, txtGiaGoc.Text,
+                    txtXuatXu.Text, txtTGSD.Text, dtp.Value, txtMoTa.Text, txtNganhHang.Text,
+                    lblTinhTrang.Text, txtDiaChi.Text, lblMaNB.Text, txtSoLuonSanCo.Text, b);
             spDAO.ThemSanPham(sp);
         }
 
-        private void picHinh_Click(object sender, EventArgs e)
+        private void tinhTrang_Scroll(object sender, ScrollEventArgs e)
+        {
+            int value = tinhTrang.Value;
+            lblTinhTrang.Text = value.ToString() + "%"; // Hiển thị giá trị của TrackBar trong Label
+
+            // Tính toán vị trí mới của Label dựa trên giá trị của TrackBar và kích thước của thanh kéo
+            float percent = (float)value / (float)tinhTrang.Maximum;
+            int newPosition = (int)(percent * (tinhTrang.Width - lblTinhTrang.Width)) + tinhTrang.Left;
+
+            // Cập nhật vị trí mới của Label
+            lblTinhTrang.Left = newPosition;
+        }
+
+        private void picHinh_Click_1(object sender, EventArgs e)
         {
             MemoryStream ms;
             OpenFileDialog odlgOpenFile = new OpenFileDialog();
@@ -56,6 +69,11 @@ namespace DoANLapTrinhWin
                 picHinh.Image = Image.FromFile(odlgOpenFile.FileName);
                 this.Text = odlgOpenFile.FileName;
             }
+        }
+
+        private void txtMaSanPham_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

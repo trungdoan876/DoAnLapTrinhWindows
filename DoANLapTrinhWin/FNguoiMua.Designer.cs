@@ -30,133 +30,57 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FNguoiMua));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnYeuThich = new Guna.UI2.WinForms.Guna2Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn = new Guna.UI2.WinForms.Guna2Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnMuaHang = new Guna.UI2.WinForms.Guna2Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnDonHang = new Guna.UI2.WinForms.Guna2Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnGioHang = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panelThan = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnThongTin = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnDH = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnMH = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnGH = new System.Windows.Forms.Button();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel8.SuspendLayout();
+            this.panelThan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Controls.Add(this.pictureBox1);
-            this.panel8.Controls.Add(this.label2);
-            this.panel8.Controls.Add(this.pictureBox3);
-            this.panel8.Controls.Add(this.label1);
-            this.panel8.Controls.Add(this.pictureBox5);
-            this.panel8.Controls.Add(this.label3);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1307, 658);
-            this.panel8.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(639, 181);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(93, 110);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(475, 322);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(326, 128);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "SHOP";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(746, 181);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(412, 304);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 34;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(255, 399);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 29);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Sending sweet things";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(61, 227);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(93, 110);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 32;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label3.Location = new System.Drawing.Point(347, 205);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(319, 128);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "panda";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -165,29 +89,32 @@
             this.panel1.Size = new System.Drawing.Size(178, 658);
             this.panel1.TabIndex = 4;
             // 
-            // panel6
+            // panel9
             // 
-            this.panel6.Controls.Add(this.btnThoat);
-            this.panel6.Location = new System.Drawing.Point(9, 409);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(166, 60);
-            this.panel6.TabIndex = 8;
+            this.panel9.Controls.Add(this.btnDangXuat);
+            this.panel9.Location = new System.Drawing.Point(9, 472);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(166, 60);
+            this.panel9.TabIndex = 37;
             // 
-            // btnThoat
+            // btnDangXuat
             // 
-            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(-12, -10);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnThoat.Size = new System.Drawing.Size(224, 86);
-            this.btnThoat.TabIndex = 7;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.btnDangXuat.Animated = true;
+            this.btnDangXuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangXuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangXuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDangXuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDangXuat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.HoverState.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Image")));
+            this.btnDangXuat.Location = new System.Drawing.Point(-4, -11);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(170, 80);
+            this.btnDangXuat.TabIndex = 38;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // panel7
             // 
@@ -204,113 +131,260 @@
             this.pictureBox2.Location = new System.Drawing.Point(-27, 8);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(180, 118);
+            this.pictureBox2.Size = new System.Drawing.Size(180, 126);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnYeuThich);
+            this.panel6.Location = new System.Drawing.Point(9, 406);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(166, 60);
+            this.panel6.TabIndex = 8;
+            // 
+            // btnYeuThich
+            // 
+            this.btnYeuThich.Animated = true;
+            this.btnYeuThich.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnYeuThich.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnYeuThich.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnYeuThich.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnYeuThich.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnYeuThich.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnYeuThich.ForeColor = System.Drawing.Color.White;
+            this.btnYeuThich.HoverState.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnYeuThich.Image = ((System.Drawing.Image)(resources.GetObject("btnYeuThich.Image")));
+            this.btnYeuThich.Location = new System.Drawing.Point(-4, -11);
+            this.btnYeuThich.Name = "btnYeuThich";
+            this.btnYeuThich.Size = new System.Drawing.Size(170, 80);
+            this.btnYeuThich.TabIndex = 38;
+            this.btnYeuThich.Text = "Yêu thích";
+            this.btnYeuThich.Click += new System.EventHandler(this.btnYeuThich_Click);
+            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnThongTin);
-            this.panel2.Location = new System.Drawing.Point(9, 145);
+            this.panel2.Controls.Add(this.btn);
+            this.panel2.Location = new System.Drawing.Point(9, 142);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(166, 60);
             this.panel2.TabIndex = 1;
             // 
-            // btnThongTin
+            // btn
             // 
-            this.btnThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnThongTin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongTin.ForeColor = System.Drawing.Color.White;
-            this.btnThongTin.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTin.Image")));
-            this.btnThongTin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongTin.Location = new System.Drawing.Point(-15, -12);
-            this.btnThongTin.Name = "btnThongTin";
-            this.btnThongTin.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnThongTin.Size = new System.Drawing.Size(227, 86);
-            this.btnThongTin.TabIndex = 0;
-            this.btnThongTin.Text = "Thông tin";
-            this.btnThongTin.UseVisualStyleBackColor = false;
-            this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click_1);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnDH);
-            this.panel4.Location = new System.Drawing.Point(9, 342);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(166, 60);
-            this.panel4.TabIndex = 5;
-            // 
-            // btnDH
-            // 
-            this.btnDH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDH.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDH.Image = ((System.Drawing.Image)(resources.GetObject("btnDH.Image")));
-            this.btnDH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDH.Location = new System.Drawing.Point(-15, -12);
-            this.btnDH.Name = "btnDH";
-            this.btnDH.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnDH.Size = new System.Drawing.Size(227, 86);
-            this.btnDH.TabIndex = 6;
-            this.btnDH.Text = "Đơn hàng";
-            this.btnDH.UseVisualStyleBackColor = false;
-            this.btnDH.Click += new System.EventHandler(this.btnDH_Click);
+            this.btn.Animated = true;
+            this.btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn.ForeColor = System.Drawing.Color.White;
+            this.btn.HoverState.FillColor = System.Drawing.Color.Lime;
+            this.btn.Image = ((System.Drawing.Image)(resources.GetObject("btn.Image")));
+            this.btn.Location = new System.Drawing.Point(-4, -9);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(170, 79);
+            this.btn.TabIndex = 37;
+            this.btn.Text = "Thông tin";
+            this.btn.Click += new System.EventHandler(this.btnThongTin_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnMH);
-            this.panel3.Location = new System.Drawing.Point(9, 211);
+            this.panel3.Controls.Add(this.btnMuaHang);
+            this.panel3.Location = new System.Drawing.Point(9, 208);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(166, 60);
             this.panel3.TabIndex = 2;
             // 
-            // btnMH
+            // btnMuaHang
             // 
-            this.btnMH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnMH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMH.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMH.Image = ((System.Drawing.Image)(resources.GetObject("btnMH.Image")));
-            this.btnMH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMH.Location = new System.Drawing.Point(-15, -11);
-            this.btnMH.Name = "btnMH";
-            this.btnMH.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnMH.Size = new System.Drawing.Size(227, 86);
-            this.btnMH.TabIndex = 0;
-            this.btnMH.Text = "Mua hàng";
-            this.btnMH.UseVisualStyleBackColor = false;
-            this.btnMH.Click += new System.EventHandler(this.btnMH_Click_1);
+            this.btnMuaHang.Animated = true;
+            this.btnMuaHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMuaHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMuaHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMuaHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMuaHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMuaHang.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMuaHang.ForeColor = System.Drawing.Color.White;
+            this.btnMuaHang.HoverState.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnMuaHang.Image = ((System.Drawing.Image)(resources.GetObject("btnMuaHang.Image")));
+            this.btnMuaHang.Location = new System.Drawing.Point(-4, -9);
+            this.btnMuaHang.Name = "btnMuaHang";
+            this.btnMuaHang.Size = new System.Drawing.Size(170, 79);
+            this.btnMuaHang.TabIndex = 38;
+            this.btnMuaHang.Text = "Mua hàng";
+            this.btnMuaHang.Click += new System.EventHandler(this.btnMuaHang_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnDonHang);
+            this.panel4.Location = new System.Drawing.Point(9, 339);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(166, 60);
+            this.panel4.TabIndex = 5;
+            // 
+            // btnDonHang
+            // 
+            this.btnDonHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDonHang.Animated = true;
+            this.btnDonHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDonHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDonHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDonHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDonHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDonHang.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDonHang.ForeColor = System.Drawing.Color.White;
+            this.btnDonHang.HoverState.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnDonHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.Image")));
+            this.btnDonHang.Location = new System.Drawing.Point(-12, -11);
+            this.btnDonHang.Name = "btnDonHang";
+            this.btnDonHang.Size = new System.Drawing.Size(182, 84);
+            this.btnDonHang.TabIndex = 40;
+            this.btnDonHang.Text = "Đơn hàng";
+            this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click);
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.btnGH);
-            this.panel5.Location = new System.Drawing.Point(9, 277);
+            this.panel5.Controls.Add(this.btnGioHang);
+            this.panel5.Location = new System.Drawing.Point(9, 274);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(166, 60);
             this.panel5.TabIndex = 4;
             // 
-            // btnGH
+            // btnGioHang
             // 
-            this.btnGH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnGH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGH.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGH.Image = ((System.Drawing.Image)(resources.GetObject("btnGH.Image")));
-            this.btnGH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGH.Location = new System.Drawing.Point(-12, -14);
-            this.btnGH.Name = "btnGH";
-            this.btnGH.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnGH.Size = new System.Drawing.Size(224, 86);
-            this.btnGH.TabIndex = 3;
-            this.btnGH.Text = "Giỏ hàng";
-            this.btnGH.UseVisualStyleBackColor = false;
-            this.btnGH.Click += new System.EventHandler(this.btnGH_Click);
+            this.btnGioHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGioHang.Animated = true;
+            this.btnGioHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGioHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGioHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGioHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGioHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGioHang.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGioHang.ForeColor = System.Drawing.Color.White;
+            this.btnGioHang.HoverState.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnGioHang.Image = ((System.Drawing.Image)(resources.GetObject("btnGioHang.Image")));
+            this.btnGioHang.Location = new System.Drawing.Point(-16, -10);
+            this.btnGioHang.Name = "btnGioHang";
+            this.btnGioHang.Size = new System.Drawing.Size(182, 79);
+            this.btnGioHang.TabIndex = 39;
+            this.btnGioHang.Text = "Giỏ hàng";
+            this.btnGioHang.Click += new System.EventHandler(this.btnGioHang_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(61, 227);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(93, 110);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 32;
+            this.pictureBox5.TabStop = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.panelThan);
+            this.panel8.Controls.Add(this.pictureBox5);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1307, 658);
+            this.panel8.TabIndex = 3;
+            // 
+            // panelThan
+            // 
+            this.panelThan.BorderRadius = 50;
+            this.panelThan.Controls.Add(this.pictureBox1);
+            this.panelThan.Controls.Add(this.label2);
+            this.panelThan.Controls.Add(this.pictureBox3);
+            this.panelThan.Controls.Add(this.label1);
+            this.panelThan.Controls.Add(this.pictureBox4);
+            this.panelThan.Controls.Add(this.label3);
+            this.panelThan.Location = new System.Drawing.Point(174, 0);
+            this.panelThan.Name = "panelThan";
+            this.panelThan.Size = new System.Drawing.Size(1133, 655);
+            this.panelThan.TabIndex = 33;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(521, 199);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(93, 104);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 36;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label2.Location = new System.Drawing.Point(357, 331);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(326, 128);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "SHOP";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(628, 199);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(412, 285);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 34;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10.875F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(137, 403);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(217, 29);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Sending sweet things";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(140, 245);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(93, 104);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 32;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label3.Location = new System.Drawing.Point(229, 221);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(319, 128);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "panda";
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 60;
+            this.bunifuElipse1.ElipseRadius = 45;
             this.bunifuElipse1.TargetControl = this;
             // 
             // FNguoiMua
@@ -326,44 +400,51 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FNguoiMua";
             this.Load += new System.EventHandler(this.FNguoiMua_Load);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel6.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panelThan.ResumeLayout(false);
+            this.panelThan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnThongTin;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnDH;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnMH;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnGH;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel panel8;
+        private Guna.UI2.WinForms.Guna2Panel panelThan;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Guna.UI2.WinForms.Guna2Button btn;
+        private Guna.UI2.WinForms.Guna2Button btnMuaHang;
+        private Guna.UI2.WinForms.Guna2Button btnGioHang;
+        private Guna.UI2.WinForms.Guna2Button btnDonHang;
+        private Guna.UI2.WinForms.Guna2Button btnYeuThich;
+        private System.Windows.Forms.Panel panel9;
+        private Guna.UI2.WinForms.Guna2Button btnDangXuat;
     }
 }

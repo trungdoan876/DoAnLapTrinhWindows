@@ -29,14 +29,14 @@ namespace DoANLapTrinhWin
                 if (docDuLieu.Read())
                 {
                     // Đưa dữ liệu vào TextBox
-                    ucMaTaiKhoan.textBox.Text = docDuLieu["MaNguoiMua"].ToString();
-                    ucHoTen.textBox.Text = docDuLieu["TenNguoiMua"].ToString();
-                    ucGioiTinh.textBox.Text = docDuLieu["GioiTinh"].ToString();
+                    txtMaTaiKhoan.Text = docDuLieu["MaNguoiMua"].ToString();
+                    txtHoTen.Text = docDuLieu["TenNguoiMua"].ToString();
+                    txtGioiTinh.Text = docDuLieu["GioiTinh"].ToString();
                     dtpNgSinh.Text = docDuLieu["NgaySinh"].ToString();
-                    ucCCCD.textBox.Text = docDuLieu["CCCD"].ToString();
-                    ucSDT.textBox.Text = docDuLieu["SDT"].ToString();
-                    //ucDiaChi.textBox.Text = docDuLieu["Diachi"].ToString();
-                    ucEmail.textBox.Text = docDuLieu["Email"].ToString();
+                    txtCCCD.Text = docDuLieu["CCCD"].ToString();
+                    txtSDT.Text = docDuLieu["SDT"].ToString();
+                    txtDiaChi.Text = docDuLieu["Diachi"].ToString();
+                    txtEmail.Text = docDuLieu["Email"].ToString();
                 }
             }
             catch (Exception ex)

@@ -99,11 +99,6 @@ namespace DoANLapTrinhWin
         }
         bool sidebarExpand = true;
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             try

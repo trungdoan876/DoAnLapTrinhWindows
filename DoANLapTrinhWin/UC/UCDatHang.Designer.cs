@@ -40,44 +40,44 @@
             // lblsoluong
             // 
             this.lblsoluong.AutoSize = true;
-            this.lblsoluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsoluong.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsoluong.ForeColor = System.Drawing.Color.Black;
             this.lblsoluong.Location = new System.Drawing.Point(838, 76);
             this.lblsoluong.Name = "lblsoluong";
-            this.lblsoluong.Size = new System.Drawing.Size(73, 22);
+            this.lblsoluong.Size = new System.Drawing.Size(71, 24);
             this.lblsoluong.TabIndex = 97;
             this.lblsoluong.Text = "soluong";
             // 
             // lblthanhtien
             // 
             this.lblthanhtien.AutoSize = true;
-            this.lblthanhtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblthanhtien.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblthanhtien.ForeColor = System.Drawing.Color.Black;
             this.lblthanhtien.Location = new System.Drawing.Point(1056, 76);
             this.lblthanhtien.Name = "lblthanhtien";
-            this.lblthanhtien.Size = new System.Drawing.Size(16, 22);
+            this.lblthanhtien.Size = new System.Drawing.Size(16, 24);
             this.lblthanhtien.TabIndex = 96;
             this.lblthanhtien.Text = "-";
             // 
             // lblGiaTien
             // 
             this.lblGiaTien.AutoSize = true;
-            this.lblGiaTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiaTien.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGiaTien.ForeColor = System.Drawing.Color.Black;
             this.lblGiaTien.Location = new System.Drawing.Point(659, 76);
             this.lblGiaTien.Name = "lblGiaTien";
-            this.lblGiaTien.Size = new System.Drawing.Size(63, 22);
+            this.lblGiaTien.Size = new System.Drawing.Size(63, 24);
             this.lblGiaTien.TabIndex = 95;
             this.lblGiaTien.Text = "giatien";
             // 
             // lblTenSP
             // 
             this.lblTenSP.AutoSize = true;
-            this.lblTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSP.ForeColor = System.Drawing.Color.SeaGreen;
+            this.lblTenSP.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenSP.ForeColor = System.Drawing.Color.Black;
             this.lblTenSP.Location = new System.Drawing.Point(188, 76);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(71, 22);
+            this.lblTenSP.Size = new System.Drawing.Size(69, 24);
             this.lblTenSP.TabIndex = 94;
             this.lblTenSP.Text = "Tên SP";
             // 

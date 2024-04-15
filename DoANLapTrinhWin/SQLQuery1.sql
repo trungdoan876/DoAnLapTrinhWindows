@@ -16,6 +16,7 @@
 	DiaChi NVARCHAR(100),
 	SoLuong int, --so luong san pham san co
 )
+UpDAte SanPham set TinhTrang = '56%'  Where MaSanPham = 'SP10' 
 GO
 select* from SanPham
 INSERT INTO NguoiBan VALUES('NB01','123', N'Nguyễn Văn A', 093546342, '1999-12-10', N'Nam', 048304000448, N'TPHCM', null, N'Cửa hàng có một loạt các sản phẩm từ các thương hiệu nổi tiếng đến những nhãn hiệu độc lập, mang đến sự đa dạng và lựa chọn cho khách hàng. Bạn có thể tìm thấy từ trang phục hàng ngày đến trang phục dành cho các dịp đặc biệt, từ trang phục công sở đến trang phục dạo phố.', null);

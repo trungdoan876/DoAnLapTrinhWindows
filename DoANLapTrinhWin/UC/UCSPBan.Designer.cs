@@ -34,14 +34,13 @@
             this.lblTenSP = new System.Windows.Forms.Label();
             this.lblMaSP = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnXoaSP = new DoANLapTrinhWin.ButtonTuyChinh();
+            this.btnXoaSP = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.SuspendLayout();
             // 
             // picHinh
             // 
-            this.picHinh.Location = new System.Drawing.Point(53, 19);
+            this.picHinh.Location = new System.Drawing.Point(72, 19);
             this.picHinh.Margin = new System.Windows.Forms.Padding(2);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(138, 139);
@@ -52,82 +51,78 @@
             // lblGiaTien
             // 
             this.lblGiaTien.AutoSize = true;
-            this.lblGiaTien.Location = new System.Drawing.Point(68, 205);
+            this.lblGiaTien.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiaTien.Location = new System.Drawing.Point(103, 219);
             this.lblGiaTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGiaTien.Name = "lblGiaTien";
-            this.lblGiaTien.Size = new System.Drawing.Size(64, 20);
+            this.lblGiaTien.Size = new System.Drawing.Size(91, 29);
             this.lblGiaTien.TabIndex = 32;
             this.lblGiaTien.Text = "Giá tiền";
             // 
             // lblTenSP
             // 
             this.lblTenSP.AutoSize = true;
+            this.lblTenSP.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.ForeColor = System.Drawing.Color.IndianRed;
             this.lblTenSP.Location = new System.Drawing.Point(5, 170);
             this.lblTenSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(53, 20);
+            this.lblTenSP.Size = new System.Drawing.Size(71, 29);
             this.lblTenSP.TabIndex = 31;
             this.lblTenSP.Text = "tenSP";
             // 
             // lblMaSP
             // 
             this.lblMaSP.AutoSize = true;
-            this.lblMaSP.Location = new System.Drawing.Point(109, 256);
+            this.lblMaSP.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaSP.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblMaSP.Location = new System.Drawing.Point(5, 267);
             this.lblMaSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaSP.Name = "lblMaSP";
-            this.lblMaSP.Size = new System.Drawing.Size(37, 20);
+            this.lblMaSP.Size = new System.Drawing.Size(49, 29);
             this.lblMaSP.TabIndex = 34;
             this.lblMaSP.Text = "SPx";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 205);
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(2, 219);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 20);
+            this.label1.Size = new System.Drawing.Size(97, 29);
             this.label1.TabIndex = 35;
             this.label1.Text = "Giá tiền:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 256);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 20);
-            this.label2.TabIndex = 36;
-            this.label2.Text = "Mã sản phẩm:";
-            // 
             // btnXoaSP
             // 
-            this.btnXoaSP.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnXoaSP.FlatAppearance.BorderSize = 0;
-            this.btnXoaSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaSP.ForeColor = System.Drawing.Color.White;
+            this.btnXoaSP.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnXoaSP.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnXoaSP.HoverState.ImageSize = new System.Drawing.Size(37, 37);
             this.btnXoaSP.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaSP.Image")));
-            this.btnXoaSP.Location = new System.Drawing.Point(204, 247);
+            this.btnXoaSP.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnXoaSP.ImageRotate = 0F;
+            this.btnXoaSP.ImageSize = new System.Drawing.Size(37, 37);
+            this.btnXoaSP.Location = new System.Drawing.Point(212, 258);
             this.btnXoaSP.Name = "btnXoaSP";
-            this.btnXoaSP.Size = new System.Drawing.Size(40, 39);
-            this.btnXoaSP.TabIndex = 33;
-            this.btnXoaSP.UseVisualStyleBackColor = false;
-            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
+            this.btnXoaSP.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnXoaSP.Size = new System.Drawing.Size(64, 54);
+            this.btnXoaSP.TabIndex = 36;
+            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click_1);
             // 
             // UCSPBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnXoaSP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMaSP);
-            this.Controls.Add(this.btnXoaSP);
             this.Controls.Add(this.picHinh);
             this.Controls.Add(this.lblGiaTien);
             this.Controls.Add(this.lblTenSP);
             this.Name = "UCSPBan";
-            this.Size = new System.Drawing.Size(247, 289);
+            this.Size = new System.Drawing.Size(279, 324);
             this.Load += new System.EventHandler(this.UCSPBan_Load);
             this.Click += new System.EventHandler(this.UCSPBan_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
@@ -140,9 +135,8 @@
         public System.Windows.Forms.PictureBox picHinh;
         public System.Windows.Forms.Label lblGiaTien;
         public System.Windows.Forms.Label lblTenSP;
-        private ButtonTuyChinh btnXoaSP;
         public System.Windows.Forms.Label lblMaSP;
         public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2ImageButton btnXoaSP;
     }
 }
