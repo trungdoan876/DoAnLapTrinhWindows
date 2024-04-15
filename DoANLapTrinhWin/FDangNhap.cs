@@ -8,31 +8,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI.WinForms;
+using Guna.UI2.WinForms;
 
 namespace DoANLapTrinhWin
 {
     public partial class FDangNhap : Form
     {
-        private Button btnOK;
+        private Guna2GradientButton btnOK;
         private string selctecOption = null;
         public FDangNhap()
         {
             InitializeComponent();
             this.Size = new Size(1005, 500);
-           /* btnBanHang.BackColor = Color.SeaGreen;
-            btnMuaHang.BackColor = Color.DimGray;*/
+            btnBanHang.FillColor = Color.DeepSkyBlue;
+            btnBanHang.FillColor2 = Color.Violet;
         }
         private void TaoButton(object button)
         {
-            var btn = (Button)button;
-            
-            btn.BackColor = Color.SeaGreen;
-            btn.ForeColor = Color.White;
-            if(btnOK != null && btnOK !=btn)
+            var btn = (Guna2GradientButton)button;
+
+            btn.FillColor = Color.DeepSkyBlue;
+            btn.FillColor2 = Color.Violet;
+
+            if (btnOK != null && btnOK != btn)
             {
-                btnOK.BackColor = Color.DimGray;
-                btnOK.ForeColor = Color.White;
+                btnOK.FillColor = Color.FromArgb(255, 128, 128);
+                btnOK.FillColor2 = Color.Gray;
             }
+
             btnOK = btn;
         }
         private void FDangNhap_Load(object sender, EventArgs e)
@@ -46,17 +50,20 @@ namespace DoANLapTrinhWin
 
         private void btnBanHang_Click(object sender, EventArgs e)
         {
+            TaoButton(btnBanHang);
             selctecOption = "Bán hàng";
-           /* btnBanHang.BackColor = Color.SeaGreen;
-            btnMuaHang.BackColor = Color.DimGray;*/
+            btnBanHang.FillColor = Color.DeepSkyBlue;
+            btnBanHang.FillColor2 = Color.Violet;
         }
 
         private void btnMuaHang_Click_1(object sender, EventArgs e)
         {
-            // TaoButton(sender);
+            TaoButton(sender);
             selctecOption = "Mua hàng";
-            /*btnMuaHang.BackColor = Color.SeaGreen;
-            btnBanHang.BackColor = Color.DimGray;*/
+            btnMuaHang.FillColor = Color.DeepSkyBlue;
+            btnMuaHang.FillColor2 = Color.Violet;
+            btnBanHang.FillColor = Color.FromArgb(255, 128, 128);
+            btnBanHang.FillColor2 = Color.Gray;
         }
 
         private void btnDangNhap_Click_1(object sender, EventArgs e)

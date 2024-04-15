@@ -147,8 +147,8 @@
             this.btnBanHang.FillColor2 = System.Drawing.Color.Gray;
             this.btnBanHang.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold);
             this.btnBanHang.ForeColor = System.Drawing.Color.White;
-            this.btnBanHang.HoverState.FillColor = System.Drawing.Color.Orange;
-            this.btnBanHang.HoverState.FillColor2 = System.Drawing.Color.Gold;
+            this.btnBanHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnBanHang.HoverState.FillColor2 = System.Drawing.Color.Gray;
             this.btnBanHang.HoverState.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBanHang.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnBanHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
@@ -233,8 +233,8 @@
             this.btnMuaHang.FillColor2 = System.Drawing.Color.Gray;
             this.btnMuaHang.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold);
             this.btnMuaHang.ForeColor = System.Drawing.Color.White;
-            this.btnMuaHang.HoverState.FillColor = System.Drawing.Color.Orange;
-            this.btnMuaHang.HoverState.FillColor2 = System.Drawing.Color.Gold;
+            this.btnMuaHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnMuaHang.HoverState.FillColor2 = System.Drawing.Color.Gray;
             this.btnMuaHang.HoverState.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMuaHang.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnMuaHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));

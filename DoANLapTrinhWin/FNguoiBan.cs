@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,43 +40,48 @@ namespace DoANLapTrinhWin
         {
 
         }
-        private Button btnOK;
+        private Guna2Button btnOK;
         private void TaoButton(object button)
         {
-            var btn = (Button)button;
+            var btn = (Guna2Button)button;
 
-            btn.BackColor = Color.SeaGreen;
-            btn.ForeColor = Color.White;
+            btn.FillColor = Color.Gold;
+
             if (btnOK != null && btnOK != btn)
             {
-                btnOK.BackColor = Color.FromArgb(64, 64, 64);
-                btnOK.ForeColor = Color.White;
+                btnOK.FillColor = Color.FromArgb(64, 64, 64);
             }
+
             btnOK = btn;
         }
 
         private void btnThongTin_Click_1(object sender, EventArgs e)
         {
+            TaoButton(btnThongTin);
             moFormCon(new FThongTinNguoiBan(TenTaiKhoan));
         }
 
         private void btnSanPham_Click(object sender, EventArgs e)
         {
+            TaoButton(btnSanPham);
             moFormCon(new FSanPham(TenTaiKhoan));
         }
 
         private void btnDonHang_Click_1(object sender, EventArgs e)
         {
+            TaoButton(btnDonHang);
             moFormCon(new FDonHangNguoiBan());
         }
 
         private void btnThongKe_Click_1(object sender, EventArgs e)
         {
+            TaoButton(btnThongKe);
             moFormCon(new FThongKeNguoiBan());
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
+            TaoButton(btnThoat);
             this.Close();
         }
     }

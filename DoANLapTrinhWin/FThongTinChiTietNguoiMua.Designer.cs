@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FThongTinChiTietNguoiMua));
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -44,9 +43,10 @@
             this.txtGioiTinh = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ColorTransition1 = new Guna.UI2.WinForms.Guna2ColorTransition(this.components);
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.lblGioiThieu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label13.Location = new System.Drawing.Point(489, 459);
+            this.label13.Location = new System.Drawing.Point(466, 575);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(88, 20);
             this.label13.TabIndex = 194;
@@ -64,7 +64,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label12.Location = new System.Drawing.Point(834, 459);
+            this.label12.Location = new System.Drawing.Point(463, 644);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(98, 20);
             this.label12.TabIndex = 193;
@@ -74,7 +74,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label10.Location = new System.Drawing.Point(489, 381);
+            this.label10.Location = new System.Drawing.Point(466, 497);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(119, 20);
             this.label10.TabIndex = 192;
@@ -92,10 +92,10 @@
             "b",
             "c",
             "d"});
-            this.comboBox3.Location = new System.Drawing.Point(481, 471);
+            this.comboBox3.Location = new System.Drawing.Point(458, 587);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(284, 40);
+            this.comboBox3.Size = new System.Drawing.Size(418, 40);
             this.comboBox3.TabIndex = 189;
             // 
             // comboBox2
@@ -110,10 +110,10 @@
             "b",
             "c",
             "d"});
-            this.comboBox2.Location = new System.Drawing.Point(822, 471);
+            this.comboBox2.Location = new System.Drawing.Point(458, 655);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(284, 40);
+            this.comboBox2.Size = new System.Drawing.Size(418, 40);
             this.comboBox2.TabIndex = 188;
             // 
             // dtpNgSinh
@@ -122,11 +122,11 @@
             this.dtpNgSinh.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.dtpNgSinh.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpNgSinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgSinh.Location = new System.Drawing.Point(481, 244);
+            this.dtpNgSinh.Location = new System.Drawing.Point(468, 287);
             this.dtpNgSinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgSinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgSinh.Name = "dtpNgSinh";
-            this.dtpNgSinh.Size = new System.Drawing.Size(284, 36);
+            this.dtpNgSinh.Size = new System.Drawing.Size(418, 77);
             this.dtpNgSinh.TabIndex = 198;
             this.dtpNgSinh.Value = new System.DateTime(2024, 4, 13, 15, 2, 40, 120);
             // 
@@ -140,9 +140,9 @@
             this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(481, 395);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(458, 511);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(281, 36);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(415, 36);
             this.guna2ComboBox1.TabIndex = 199;
             // 
             // txtMaTaiKhoan
@@ -163,13 +163,13 @@
             this.txtMaTaiKhoan.HoverState.FillColor = System.Drawing.Color.White;
             this.txtMaTaiKhoan.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMaTaiKhoan.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtMaTaiKhoan.IconLeft")));
-            this.txtMaTaiKhoan.Location = new System.Drawing.Point(476, 164);
+            this.txtMaTaiKhoan.Location = new System.Drawing.Point(468, 166);
             this.txtMaTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMaTaiKhoan.Name = "txtMaTaiKhoan";
             this.txtMaTaiKhoan.PasswordChar = '\0';
             this.txtMaTaiKhoan.PlaceholderText = "";
             this.txtMaTaiKhoan.SelectedText = "";
-            this.txtMaTaiKhoan.Size = new System.Drawing.Size(286, 41);
+            this.txtMaTaiKhoan.Size = new System.Drawing.Size(420, 82);
             this.txtMaTaiKhoan.TabIndex = 200;
             // 
             // txtHoTen
@@ -191,13 +191,13 @@
             this.txtHoTen.HoverState.FillColor = System.Drawing.Color.White;
             this.txtHoTen.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtHoTen.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtHoTen.IconLeft")));
-            this.txtHoTen.Location = new System.Drawing.Point(823, 164);
+            this.txtHoTen.Location = new System.Drawing.Point(985, 166);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.PasswordChar = '\0';
             this.txtHoTen.PlaceholderText = "";
             this.txtHoTen.SelectedText = "";
-            this.txtHoTen.Size = new System.Drawing.Size(286, 41);
+            this.txtHoTen.Size = new System.Drawing.Size(420, 82);
             this.txtHoTen.TabIndex = 201;
             // 
             // txtCCCD
@@ -217,13 +217,13 @@
             this.txtCCCD.HoverState.FillColor = System.Drawing.Color.White;
             this.txtCCCD.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtCCCD.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtCCCD.IconLeft")));
-            this.txtCCCD.Location = new System.Drawing.Point(824, 239);
+            this.txtCCCD.Location = new System.Drawing.Point(985, 297);
             this.txtCCCD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.PasswordChar = '\0';
             this.txtCCCD.PlaceholderText = "";
             this.txtCCCD.SelectedText = "";
-            this.txtCCCD.Size = new System.Drawing.Size(286, 41);
+            this.txtCCCD.Size = new System.Drawing.Size(420, 82);
             this.txtCCCD.TabIndex = 202;
             // 
             // txtSDT
@@ -243,13 +243,13 @@
             this.txtSDT.HoverState.FillColor = System.Drawing.Color.White;
             this.txtSDT.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSDT.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSDT.IconLeft")));
-            this.txtSDT.Location = new System.Drawing.Point(476, 317);
+            this.txtSDT.Location = new System.Drawing.Point(463, 404);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderText = "";
             this.txtSDT.SelectedText = "";
-            this.txtSDT.Size = new System.Drawing.Size(289, 41);
+            this.txtSDT.Size = new System.Drawing.Size(423, 82);
             this.txtSDT.TabIndex = 203;
             // 
             // txtGioiTinh
@@ -269,13 +269,13 @@
             this.txtGioiTinh.HoverState.FillColor = System.Drawing.Color.White;
             this.txtGioiTinh.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtGioiTinh.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtGioiTinh.IconLeft")));
-            this.txtGioiTinh.Location = new System.Drawing.Point(824, 317);
+            this.txtGioiTinh.Location = new System.Drawing.Point(985, 415);
             this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGioiTinh.Name = "txtGioiTinh";
             this.txtGioiTinh.PasswordChar = '\0';
             this.txtGioiTinh.PlaceholderText = "";
             this.txtGioiTinh.SelectedText = "";
-            this.txtGioiTinh.Size = new System.Drawing.Size(286, 41);
+            this.txtGioiTinh.Size = new System.Drawing.Size(420, 82);
             this.txtGioiTinh.TabIndex = 204;
             // 
             // txtEmail
@@ -295,13 +295,13 @@
             this.txtEmail.HoverState.FillColor = System.Drawing.Color.White;
             this.txtEmail.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtEmail.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtEmail.IconLeft")));
-            this.txtEmail.Location = new System.Drawing.Point(824, 390);
+            this.txtEmail.Location = new System.Drawing.Point(985, 529);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(286, 41);
+            this.txtEmail.Size = new System.Drawing.Size(420, 82);
             this.txtEmail.TabIndex = 205;
             // 
             // txtDiaChi
@@ -321,21 +321,14 @@
             this.txtDiaChi.HoverState.FillColor = System.Drawing.Color.White;
             this.txtDiaChi.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDiaChi.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtDiaChi.IconLeft")));
-            this.txtDiaChi.Location = new System.Drawing.Point(481, 542);
+            this.txtDiaChi.Location = new System.Drawing.Point(463, 725);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "";
             this.txtDiaChi.SelectedText = "";
-            this.txtDiaChi.Size = new System.Drawing.Size(629, 41);
+            this.txtDiaChi.Size = new System.Drawing.Size(942, 82);
             this.txtDiaChi.TabIndex = 206;
-            // 
-            // guna2ColorTransition1
-            // 
-            this.guna2ColorTransition1.ColorArray = new System.Drawing.Color[] {
-        System.Drawing.Color.Red,
-        System.Drawing.Color.Blue,
-        System.Drawing.Color.Orange};
             // 
             // guna2GradientButton1
             // 
@@ -353,9 +346,9 @@
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton1.Image")));
             this.guna2GradientButton1.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2GradientButton1.Location = new System.Drawing.Point(253, 351);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(141, 474);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(148, 59);
+            this.guna2GradientButton1.Size = new System.Drawing.Size(205, 73);
             this.guna2GradientButton1.TabIndex = 207;
             // 
             // guna2CirclePictureBox1
@@ -364,20 +357,51 @@
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.InitialImage = null;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(270, 204);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(163, 259);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(122, 119);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(183, 181);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 208;
             this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // guna2CircleProgressBar1
+            // 
+            this.guna2CircleProgressBar1.Animated = true;
+            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.Gray;
+            this.guna2CircleProgressBar1.FillThickness = 20;
+            this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(323, 29);
+            this.guna2CircleProgressBar1.Minimum = 0;
+            this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
+            this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.LightGreen;
+            this.guna2CircleProgressBar1.ProgressColor2 = System.Drawing.Color.Yellow;
+            this.guna2CircleProgressBar1.ProgressThickness = 15;
+            this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(84, 84);
+            this.guna2CircleProgressBar1.TabIndex = 209;
+            this.guna2CircleProgressBar1.Value = 70;
+            // 
+            // lblGioiThieu
+            // 
+            this.lblGioiThieu.BackColor = System.Drawing.Color.Transparent;
+            this.lblGioiThieu.Font = new System.Drawing.Font("Palatino Linotype", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGioiThieu.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblGioiThieu.Location = new System.Drawing.Point(468, 45);
+            this.lblGioiThieu.Name = "lblGioiThieu";
+            this.lblGioiThieu.Size = new System.Drawing.Size(14, 46);
+            this.lblGioiThieu.TabIndex = 210;
+            this.lblGioiThieu.Text = "-";
             // 
             // FThongTinChiTietNguoiMua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1496, 796);
+            this.ClientSize = new System.Drawing.Size(1790, 893);
+            this.Controls.Add(this.lblGioiThieu);
+            this.Controls.Add(this.guna2CircleProgressBar1);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.guna2GradientButton1);
             this.Controls.Add(this.txtDiaChi);
@@ -394,7 +418,7 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FThongTinChiTietNguoiMua";
             this.Text = "FThongTinChiTiet";
@@ -420,8 +444,9 @@
         private Guna.UI2.WinForms.Guna2TextBox txtGioiTinh;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2TextBox txtDiaChi;
-        private Guna.UI2.WinForms.Guna2ColorTransition guna2ColorTransition1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblGioiThieu;
     }
 }

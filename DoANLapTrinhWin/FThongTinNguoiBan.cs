@@ -59,6 +59,7 @@ namespace DoANLapTrinhWin
         private void FThongTinNguoiBan_Load(object sender, EventArgs e)
         {
             LoadDuLieu();
+            lblGioiThieu.Text = "Xin chào người bán,  " + txtHoTen.Text;
         }
     }
 }

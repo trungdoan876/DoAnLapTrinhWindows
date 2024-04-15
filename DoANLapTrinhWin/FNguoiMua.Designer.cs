@@ -38,7 +38,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnYeuThich = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThongTin = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMuaHang = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -165,30 +165,30 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btn);
+            this.panel2.Controls.Add(this.btnThongTin);
             this.panel2.Location = new System.Drawing.Point(9, 142);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(166, 60);
             this.panel2.TabIndex = 1;
             // 
-            // btn
+            // btnThongTin
             // 
-            this.btn.Animated = true;
-            this.btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn.ForeColor = System.Drawing.Color.White;
-            this.btn.HoverState.FillColor = System.Drawing.Color.Lime;
-            this.btn.Image = ((System.Drawing.Image)(resources.GetObject("btn.Image")));
-            this.btn.Location = new System.Drawing.Point(-4, -9);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(170, 79);
-            this.btn.TabIndex = 37;
-            this.btn.Text = "Thông tin";
-            this.btn.Click += new System.EventHandler(this.btnThongTin_Click);
+            this.btnThongTin.Animated = true;
+            this.btnThongTin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongTin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongTin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongTin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThongTin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnThongTin.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongTin.ForeColor = System.Drawing.Color.White;
+            this.btnThongTin.HoverState.FillColor = System.Drawing.Color.Lime;
+            this.btnThongTin.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTin.Image")));
+            this.btnThongTin.Location = new System.Drawing.Point(-4, -9);
+            this.btnThongTin.Name = "btnThongTin";
+            this.btnThongTin.Size = new System.Drawing.Size(170, 79);
+            this.btnThongTin.TabIndex = 37;
+            this.btnThongTin.Text = "Thông tin";
+            this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click);
             // 
             // panel3
             // 
@@ -439,7 +439,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Button btn;
+        private Guna.UI2.WinForms.Guna2Button btnThongTin;
         private Guna.UI2.WinForms.Guna2Button btnMuaHang;
         private Guna.UI2.WinForms.Guna2Button btnGioHang;
         private Guna.UI2.WinForms.Guna2Button btnDonHang;

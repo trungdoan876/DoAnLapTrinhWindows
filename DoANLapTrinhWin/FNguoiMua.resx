@@ -121,7 +121,7 @@
   <data name="btnDangXuat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC2wSURBVHhe7d15
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC2wSURBVHhe7d15
         lJ1Vme/xIypqoy5XX7v7Lu/1utZd3nVJUgmhEQXsthFBAbtJwhDmeQgXRAVpQGRsBcIgDYqICAjKYIBG
         QjNLJpVGNGCDmKQGQhhiGJKap1SdU/u+73HHLiq/VKres89z3nP297vW5x9Jar/nuNazn6RSVQUiIiIi
         IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi
@@ -1136,7 +1136,7 @@
   <data name="btnYeuThich.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGmfSURBVHhe7Z0H
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGmfSURBVHhe7Z0H
         dFVV1sd9SQiBEHoJHRTMIEVFgQFEQBGQYkFRUUEdAUVQ0VEsg6BYQFFBGB3FQtFBQRDUEaQHCCUxCT0Y
         Qg2QBEhCCISSdr+9n8dPjBvIu+++9275/9b6rTXr+zDvnH3Pbeees/dlAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1590,7 +1590,7 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAabjssv8Dp752FiP14qkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnThongTin.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGWxSURBVHhe7b0J
@@ -2034,7 +2034,7 @@
   <data name="btnMuaHang.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFjUSURBVHhe7Z0J
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFjUSURBVHhe7Z0J
         mFxVnb7DIoLCiPwVUFDUGXXo7vSSBkKqKkknSABZhHRVku4QNhUVFUdRlFEZXFlcWRRRSMy+70knnaT3
         NensoZO+das7QBK2kISwhix9/ud0n4bk1qnqW1W37j3nnu97nvdxnpkxXXep3/fWck4NQBBErsRigXNj
         sVAx5WrTDI6PRkM/iEaDvzaMwN+i0cAM+j/PocyjrGZsbB+8fk5D3j7G3IaBr86rH7iLMb+xwFzYXLBh
@@ -2420,7 +2420,7 @@
   <data name="btnDonHang.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGhdSURBVHhe7d0H
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGhdSURBVHhe7d0H
         dBXV1gfwl4SQ0CH03lsoIl1EVARsWOgIIqKigkgRG4p0EEQFBRR7bwh2QEXFDgJ2ASuidBJ6EtCn73zn
         5Ht5BvLn3n1n5s6dmfvfa/3Wt74nMHPmZJ99cu/Mnn9FIepp12vLte+0PZoiIvKxA9qP2gvaZVoxjcFg
         /DdO01ZpKHmIiILE/GIzUSusMRhxG+W01zWUJEREQfaZVktjMOIummqbNJQYRETxYK/WSWMw4iZM8Tff
@@ -2872,7 +2872,7 @@
   <data name="btnGioHang.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAD+WSURBVHhe7Z0J
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAD+WSURBVHhe7Z0J
         mFxVnbcjIJ+AjsvM982M24wkQTESSFV1QliSQjHp6q6qhKVIugOKoIyiLOnqQAZRbycsgSA7alBAAQUi
         iIAbAoKAIiAKhACB7Btk7a7qgLIk9zu3OWhy65/kdlfdc7f3fZ73SYhJ9ckx9fv9u+qeW4MAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgYMwt

@@ -50,7 +50,8 @@ namespace DoANLapTrinhWin
         }
         private void FThongTinChiTiet_Load(object sender, EventArgs e)
         {
-            LoadData();   
+            LoadData();
+            lblGioiThieu.Text = "Xin chào khách hàng,   " + txtHoTen.Text;
         }
     }
 }

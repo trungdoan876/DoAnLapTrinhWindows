@@ -42,46 +42,53 @@ namespace DoANLapTrinhWin
 
         }
         private Guna2Button btnOK;
-        private void TaoButton(Guna2Button button)
+        private void TaoButton(object button)
         {
-            button.BackColor = Color.SeaGreen;
-            button.ForeColor = Color.White;
-            if (btnOK != null && btnOK != button)
+            var btn = (Guna2Button)button;
+
+            btn.FillColor = Color.Gold;
+
+            if (btnOK != null && btnOK != btn)
             {
-                btnOK.BackColor = Color.FromArgb(64, 64, 64);
-                btnOK.ForeColor = Color.White;
+                btnOK.FillColor = Color.FromArgb(64, 64, 64);
             }
-            btnOK = button;
+
+            btnOK = btn;
         }
 
         private void btnThongTin_Click(object sender, EventArgs e)
         {
-            moFormConMua(new FThongTinChiTietNguoiMua());
-            TaoButton(btn);
+            TaoButton(btnThongTin);
+            moFormConMua(new FThongTinChiTietNguoiMua());    
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
+            TaoButton(btnDangXuat);
             this.Close();
         }
 
         private void btnMuaHang_Click(object sender, EventArgs e)
         {
+            TaoButton(btnMuaHang);
             moFormConMua(new FMuaHang(tenTK));
         }
 
         private void btnGioHang_Click(object sender, EventArgs e)
         {
+            TaoButton(btnGioHang);
             moFormConMua(new FGioHang(tenTK));
         }
 
         private void btnDonHang_Click(object sender, EventArgs e)
         {
+            TaoButton(btnDonHang);
             moFormConMua(new FDonHang());
         }
 
         private void btnYeuThich_Click(object sender, EventArgs e)
         {
+            TaoButton(btnYeuThich);
             moFormConMua(new FYeuThich(tenTK));
         }
     }

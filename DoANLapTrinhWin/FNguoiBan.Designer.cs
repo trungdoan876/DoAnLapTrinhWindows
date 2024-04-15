@@ -87,13 +87,13 @@
             this.panel7.Controls.Add(this.pictureBox2);
             this.panel7.Location = new System.Drawing.Point(23, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(177, 127);
+            this.panel7.Size = new System.Drawing.Size(177, 117);
             this.panel7.TabIndex = 9;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-29, 8);
+            this.pictureBox2.Location = new System.Drawing.Point(-39, 8);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(180, 110);
@@ -148,9 +148,9 @@
             this.btnThongTin.ForeColor = System.Drawing.Color.White;
             this.btnThongTin.HoverState.FillColor = System.Drawing.Color.Lime;
             this.btnThongTin.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTin.Image")));
-            this.btnThongTin.Location = new System.Drawing.Point(-4, -9);
+            this.btnThongTin.Location = new System.Drawing.Point(-4, 0);
             this.btnThongTin.Name = "btnThongTin";
-            this.btnThongTin.Size = new System.Drawing.Size(170, 79);
+            this.btnThongTin.Size = new System.Drawing.Size(170, 70);
             this.btnThongTin.TabIndex = 37;
             this.btnThongTin.Text = "Thông tin";
             this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click_1);
@@ -252,9 +252,10 @@
             this.panelThan.Controls.Add(this.label1);
             this.panelThan.Controls.Add(this.pictureBox5);
             this.panelThan.Controls.Add(this.label3);
+            this.panelThan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelThan.Location = new System.Drawing.Point(178, 0);
             this.panelThan.Name = "panelThan";
-            this.panelThan.Size = new System.Drawing.Size(1455, 905);
+            this.panelThan.Size = new System.Drawing.Size(1458, 908);
             this.panelThan.TabIndex = 1;
             // 
             // pictureBox1
