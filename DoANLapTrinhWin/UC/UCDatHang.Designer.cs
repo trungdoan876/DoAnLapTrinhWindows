@@ -33,95 +33,77 @@
             this.lblGiaTien = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.picHinh = new System.Windows.Forms.PictureBox();
-            this.cmbTrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.SuspendLayout();
             // 
             // lblsoluong
             // 
             this.lblsoluong.AutoSize = true;
-            this.lblsoluong.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsoluong.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsoluong.ForeColor = System.Drawing.Color.Black;
-            this.lblsoluong.Location = new System.Drawing.Point(838, 76);
+            this.lblsoluong.Location = new System.Drawing.Point(635, 80);
             this.lblsoluong.Name = "lblsoluong";
-            this.lblsoluong.Size = new System.Drawing.Size(71, 24);
+            this.lblsoluong.Size = new System.Drawing.Size(75, 25);
             this.lblsoluong.TabIndex = 97;
             this.lblsoluong.Text = "soluong";
             // 
             // lblthanhtien
             // 
             this.lblthanhtien.AutoSize = true;
-            this.lblthanhtien.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblthanhtien.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblthanhtien.ForeColor = System.Drawing.Color.Black;
-            this.lblthanhtien.Location = new System.Drawing.Point(1056, 76);
+            this.lblthanhtien.Location = new System.Drawing.Point(828, 80);
             this.lblthanhtien.Name = "lblthanhtien";
-            this.lblthanhtien.Size = new System.Drawing.Size(16, 24);
+            this.lblthanhtien.Size = new System.Drawing.Size(19, 25);
             this.lblthanhtien.TabIndex = 96;
             this.lblthanhtien.Text = "-";
             // 
             // lblGiaTien
             // 
             this.lblGiaTien.AutoSize = true;
-            this.lblGiaTien.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiaTien.ForeColor = System.Drawing.Color.Black;
-            this.lblGiaTien.Location = new System.Drawing.Point(659, 76);
+            this.lblGiaTien.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiaTien.ForeColor = System.Drawing.Color.Red;
+            this.lblGiaTien.Location = new System.Drawing.Point(447, 80);
             this.lblGiaTien.Name = "lblGiaTien";
-            this.lblGiaTien.Size = new System.Drawing.Size(63, 24);
+            this.lblGiaTien.Size = new System.Drawing.Size(67, 25);
             this.lblGiaTien.TabIndex = 95;
             this.lblGiaTien.Text = "giatien";
             // 
             // lblTenSP
             // 
             this.lblTenSP.AutoSize = true;
-            this.lblTenSP.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenSP.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.ForeColor = System.Drawing.Color.Black;
-            this.lblTenSP.Location = new System.Drawing.Point(188, 76);
+            this.lblTenSP.Location = new System.Drawing.Point(202, 67);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(69, 24);
+            this.lblTenSP.Size = new System.Drawing.Size(106, 38);
             this.lblTenSP.TabIndex = 94;
             this.lblTenSP.Text = "Tên SP";
             // 
             // picHinh
             // 
             this.picHinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picHinh.Location = new System.Drawing.Point(20, 18);
-            this.picHinh.Margin = new System.Windows.Forms.Padding(2);
+            this.picHinh.Location = new System.Drawing.Point(17, 21);
+            this.picHinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picHinh.Name = "picHinh";
-            this.picHinh.Size = new System.Drawing.Size(108, 120);
+            this.picHinh.Size = new System.Drawing.Size(108, 138);
             this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHinh.TabIndex = 93;
             this.picHinh.TabStop = false;
             // 
-            // cmbTrangThai
-            // 
-            this.cmbTrangThai.BackColor = System.Drawing.Color.Transparent;
-            this.cmbTrangThai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTrangThai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbTrangThai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbTrangThai.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbTrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbTrangThai.ItemHeight = 30;
-            this.cmbTrangThai.Items.AddRange(new object[] {
-            "Chuyển Khoản ",
-            "Thanh toán khi nhận hàng"});
-            this.cmbTrangThai.Location = new System.Drawing.Point(1178, 62);
-            this.cmbTrangThai.Name = "cmbTrangThai";
-            this.cmbTrangThai.Size = new System.Drawing.Size(315, 36);
-            this.cmbTrangThai.TabIndex = 99;
-            // 
             // UCDatHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.cmbTrangThai);
             this.Controls.Add(this.lblsoluong);
             this.Controls.Add(this.lblthanhtien);
             this.Controls.Add(this.lblGiaTien);
             this.Controls.Add(this.lblTenSP);
             this.Controls.Add(this.picHinh);
+            this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UCDatHang";
-            this.Size = new System.Drawing.Size(1533, 150);
+            this.Size = new System.Drawing.Size(1186, 176);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,6 +117,5 @@
         public System.Windows.Forms.Label lblGiaTien;
         public System.Windows.Forms.Label lblTenSP;
         public System.Windows.Forms.PictureBox picHinh;
-        public Guna.UI2.WinForms.Guna2ComboBox cmbTrangThai;
     }
 }

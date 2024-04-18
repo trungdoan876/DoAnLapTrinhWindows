@@ -33,9 +33,10 @@
             // 
             // panelYeuThich
             // 
+            this.panelYeuThich.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelYeuThich.Location = new System.Drawing.Point(0, 0);
             this.panelYeuThich.Name = "panelYeuThich";
-            this.panelYeuThich.Size = new System.Drawing.Size(800, 449);
+            this.panelYeuThich.Size = new System.Drawing.Size(800, 450);
             this.panelYeuThich.TabIndex = 0;
             // 
             // FYeuThich

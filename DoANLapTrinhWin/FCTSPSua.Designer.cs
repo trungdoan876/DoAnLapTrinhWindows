@@ -49,6 +49,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.lblTinhTrang = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnThemHinh = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +62,6 @@
             this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHinh.TabIndex = 248;
             this.picHinh.TabStop = false;
-            this.picHinh.Click += new System.EventHandler(this.picHinh_Click);
             // 
             // btnSuaSanPham
             // 
@@ -70,7 +70,7 @@
             this.btnSuaSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaSanPham.Image")));
             this.btnSuaSanPham.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnSuaSanPham.ImageRotate = 0F;
-            this.btnSuaSanPham.Location = new System.Drawing.Point(71, 472);
+            this.btnSuaSanPham.Location = new System.Drawing.Point(59, 491);
             this.btnSuaSanPham.Name = "btnSuaSanPham";
             this.btnSuaSanPham.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnSuaSanPham.Size = new System.Drawing.Size(130, 97);
@@ -84,7 +84,7 @@
             this.btnDangBan.Image = ((System.Drawing.Image)(resources.GetObject("btnDangBan.Image")));
             this.btnDangBan.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnDangBan.ImageRotate = 0F;
-            this.btnDangBan.Location = new System.Drawing.Point(207, 472);
+            this.btnDangBan.Location = new System.Drawing.Point(195, 491);
             this.btnDangBan.Name = "btnDangBan";
             this.btnDangBan.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnDangBan.Size = new System.Drawing.Size(130, 97);
@@ -357,7 +357,7 @@
             // 
             this.tinhTrang.Location = new System.Drawing.Point(454, 373);
             this.tinhTrang.Name = "tinhTrang";
-            this.tinhTrang.Size = new System.Drawing.Size(300, 34);
+            this.tinhTrang.Size = new System.Drawing.Size(710, 34);
             this.tinhTrang.TabIndex = 262;
             this.tinhTrang.ThumbColor = System.Drawing.Color.SeaGreen;
             this.tinhTrang.Value = 0;
@@ -366,16 +366,16 @@
             // dtp
             // 
             this.dtp.AutoRoundedCorners = true;
-            this.dtp.BorderRadius = 17;
+            this.dtp.BorderRadius = 23;
             this.dtp.Checked = true;
-            this.dtp.FillColor = System.Drawing.Color.Lavender;
-            this.dtp.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dtp.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtp.Location = new System.Drawing.Point(824, 371);
+            this.dtp.Location = new System.Drawing.Point(1007, 12);
             this.dtp.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp.Name = "dtp";
-            this.dtp.Size = new System.Drawing.Size(340, 36);
+            this.dtp.Size = new System.Drawing.Size(229, 49);
             this.dtp.TabIndex = 263;
             this.dtp.Value = new System.DateTime(2024, 4, 14, 18, 10, 43, 259);
             // 
@@ -419,12 +419,30 @@
             this.pictureBox1.TabIndex = 267;
             this.pictureBox1.TabStop = false;
             // 
+            // btnThemHinh
+            // 
+            this.btnThemHinh.BorderRadius = 10;
+            this.btnThemHinh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemHinh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemHinh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThemHinh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThemHinh.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemHinh.ForeColor = System.Drawing.Color.White;
+            this.btnThemHinh.Image = ((System.Drawing.Image)(resources.GetObject("btnThemHinh.Image")));
+            this.btnThemHinh.Location = new System.Drawing.Point(129, 365);
+            this.btnThemHinh.Name = "btnThemHinh";
+            this.btnThemHinh.Size = new System.Drawing.Size(143, 51);
+            this.btnThemHinh.TabIndex = 289;
+            this.btnThemHinh.Text = "Thêm hình";
+            this.btnThemHinh.Click += new System.EventHandler(this.btnThemHinh_Click);
+            // 
             // FCTSPSua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1268, 699);
+            this.Controls.Add(this.btnThemHinh);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTinhTrang);
             this.Controls.Add(this.btnQuaylai);
@@ -475,5 +493,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTinhTrang;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btnThemHinh;
     }
 }

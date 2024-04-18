@@ -83,12 +83,12 @@ namespace DoANLapTrinhWin
 
         private void btnCK_Click(object sender, EventArgs e)
         {
-            TaoButton(sender);
+/*            TaoButton(sender);
             this.Hide();
             FChuyenKhoan form2 = new FChuyenKhoan(sp);
             form2.ShowDialog();
             form2 = null; //tat form2, tuc la form 2 tro ve null
-            this.Show();
+            this.Show();*/
         }
 
         private void btnTS_Click(object sender, EventArgs e)

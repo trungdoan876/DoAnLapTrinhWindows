@@ -37,18 +37,20 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.lbltenNB);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1054, 72);
+            this.panel1.Size = new System.Drawing.Size(1533, 72);
             this.panel1.TabIndex = 0;
             // 
             // lbltenNB
             // 
             this.lbltenNB.AutoSize = true;
-            this.lbltenNB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltenNB.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltenNB.ForeColor = System.Drawing.Color.DimGray;
             this.lbltenNB.Location = new System.Drawing.Point(19, 24);
             this.lbltenNB.Name = "lbltenNB";
-            this.lbltenNB.Size = new System.Drawing.Size(71, 25);
+            this.lbltenNB.Size = new System.Drawing.Size(84, 32);
             this.lbltenNB.TabIndex = 0;
             this.lbltenNB.Text = "tenNB";
             // 
@@ -56,9 +58,10 @@
             // 
             this.panelSP.AutoScroll = true;
             this.panelSP.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelSP.Location = new System.Drawing.Point(3, 81);
+            this.panelSP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSP.Location = new System.Drawing.Point(0, 72);
             this.panelSP.Name = "panelSP";
-            this.panelSP.Size = new System.Drawing.Size(1054, 190);
+            this.panelSP.Size = new System.Drawing.Size(1533, 251);
             this.panelSP.TabIndex = 1;
             // 
             // UCTheoNB
@@ -68,7 +71,7 @@
             this.Controls.Add(this.panelSP);
             this.Controls.Add(this.panel1);
             this.Name = "UCTheoNB";
-            this.Size = new System.Drawing.Size(1060, 287);
+            this.Size = new System.Drawing.Size(1533, 323);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

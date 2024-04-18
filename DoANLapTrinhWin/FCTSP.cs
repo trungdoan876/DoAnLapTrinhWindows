@@ -17,7 +17,7 @@ namespace DoANLapTrinhWin
     public partial class FCTSP : Form
     {
         SanPham sp;
-        string slmua;
+        string maSP;
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -31,62 +31,47 @@ namespace DoANLapTrinhWin
         public FCTSP(SanPham sp)
         {
             InitializeComponent();
+            this.Size = new Size(1000, 500);
             this.sp = sp;
-            ucTBMTSP.textBox.Text = sp.MoTaSanPham;
+            this.maSP = maSP;
+            this.lblRating.Text= DanhGia.Value.ToString();
+            txtMota.Text = sp.MoTaSanPham;
             lblDiaChi.Text = sp.DiaChi;
             lblGiaBan.Text = sp.GiaBan;
             lblGiaGoc.Text = sp.GiaGoc;
-            lblNganhHang.Text = sp.NganhHang;
-            lblNgayDang.Text = sp.NgayDang.ToShortDateString();
+            btnNganhHang.Text = sp.NganhHang;
+            dtpngaydang.Value = sp.NgayDang;
             lblTenSP.Text = sp.TenSP;
             lblXuatxu.Text = sp.XuatXu;
-            lblTinhTrang.Text = sp.TinhTrang;
-            lblTGDSD.Text = sp.ThoiGianDaSuDung;
+            lbltinhtrang.Text = sp.TinhTrang;
+            //xoa chu % cuoi cung
+            string str = sp.TinhTrang.Substring(0, sp.TinhTrang.Length - 1);
+            int tt = int.Parse(str);
+            vongtrontt.Value = tt;
+            lblThoigiandasd.Text = sp.ThoiGianDaSuDung;
             lblSoLuong.Text = sp.SoLuong+" sản phẩm sẵn có";
             picHinh.Image = ByteArrayToImage(sp.Hinh);
-        }
-        private void txtSL_TextChanged(object sender, EventArgs e)
+        }    
+        private void btnQuaylai_Click(object sender, EventArgs e)
         {
-            string slText = ((System.Windows.Forms.TextBox)sender).Text.Trim();
-            slmua = slText;
+            this.Close();
         }
-        private void FCTSP_Load(object sender, EventArgs e)
-        {
 
-        }
-        int count = -1;
-
-        private void btnBack_Click_1(object sender, EventArgs e)
-        {
-            if (count >1)
-            {
-                count--;
-            }
-            picHinh.Image = imageList1.Images[count];
-        }
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            if(count <2) { 
-                count++;
-            }
-            picHinh.Image = imageList1.Images[count];
-        }
-        private void btnThemVaoGio_Click(object sender, EventArgs e)
+        private void btnThemVaoGio_Click_1(object sender, EventArgs e)
         {
             //bang gio hang: maNB,maNM,maSP,soluongSP,giaban
             //hien len uc: ten, dia chi, tinh trang, gia tien, so luong
             //them vao bang gio hang
             try
             {
-                if (slmua == null)
-                    slmua = "1";
+                string slmua = soluongmua.Value.ToString();
                 // Ket noi
                 conn.Open();
                 string anh = BitConverter.ToString(sp.Hinh).Replace("-", "");
-                string sqlStr = string.Format("INSERT INTO GioHang(MaNguoiBan, MaNguoiMua, MaSanPham, TenSanPham, SoLuong, GiaBan,Hinh,TrangThaiSP) VALUES ('{0}', N'{1}',N'{2}',N'{3}',N'{4}',N'{5}',0x{6},'{7}')", sp.MaNguoiBan,"NM01",sp.MaSP,sp.TenSP,slmua,sp.GiaBan,anh,1);
+                string sqlStr = string.Format("INSERT INTO GioHang(MaNguoiBan, MaNguoiMua, MaSanPham, TenSanPham, SoLuong, GiaBan,Hinh,TrangThaiSP) VALUES ('{0}', N'{1}',N'{2}',N'{3}',N'{4}',N'{5}',0x{6},'{7}')", sp.MaNguoiBan, "NM01", sp.MaSP, sp.TenSP, slmua, sp.GiaBan, anh, 1);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("them thanh cong");
+                    MessageBox.Show("Thêm thành công");
             }
             catch (Exception ex)
             {
@@ -98,7 +83,7 @@ namespace DoANLapTrinhWin
             }
         }
 
-        private void btnMuaHang_Click(object sender, EventArgs e)
+        private void btnMuaNgay_Click(object sender, EventArgs e)
         {
             this.Hide();
             FThanhToan form2 = new FThanhToan(sp);
@@ -107,31 +92,10 @@ namespace DoANLapTrinhWin
             this.Show();
         }
 
-        private void btnTru_Click(object sender, EventArgs e)
+        private void soluongmua_ValueChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(txtSL.Text, out int value))
-            {
-                if (value > 1)
-                {
-                    value--;
-                    txtSL.Text = value.ToString();
-                }
-            }
+            soluongmua.Maximum = int.Parse(sp.SoLuong);
+            soluongmua.Minimum = 1;
         }
-
-        private void btnCong_Click(object sender, EventArgs e)
-        {
-            if (int.TryParse(txtSL.Text, out int value))
-            {
-                int sl = int.Parse(sp.SoLuong);
-                if (value < sl)
-                {
-                    value++;
-                    txtSL.Text = value.ToString();
-                }
-            }
-        }
-
-        
     }
 }

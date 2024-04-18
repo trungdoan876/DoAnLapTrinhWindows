@@ -30,28 +30,13 @@ namespace DoANLapTrinhWin
             this.lblGiaTien.Text = "đ" + sp.GiaBan;
             this.lblTinhTrang.Text = sp.TinhTrang;
             this.lblSoLuong.Text = sp.SoLuong+" san pham san co";
+            this.lblgia.Text = "đ" + sp.GiaGoc;
+            this.lblDiaChi.Text = sp.DiaChi;
+            //xoa chu %
+            string str = sp.TinhTrang.Substring(0, sp.TinhTrang.Length - 1);
+            int tt = int.Parse(str);
+            this.vongtrontt.Value = tt;
             this.picHinh.Image = ByteArrayToImage(sp.Hinh);
-        }
-
-        private void btnXoaKhoiGioHang_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // Ket noi
-                conn.Open();
-                string sqlStr = string.Format("DELETE FROM GioHang WHERE MaSanPham = '{0}'", sp.MaSP);
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("xoa thanh cong");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("xoa that bai" + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
         }
         bool check = false;
         private void checkBoxSP_CheckedChanged(object sender, EventArgs e)
@@ -61,7 +46,6 @@ namespace DoANLapTrinhWin
                 check = true;
                 try
                 {
-
                     conn.Open();
                     string sqlStr = string.Format("UPDATE GioHang SET TrangThaiSP = '{0}' WHERE MaSanPham = '{1}'", 1, sp.MaSP);
                     SqlCommand cmd = new SqlCommand(sqlStr, conn);
@@ -96,36 +80,11 @@ namespace DoANLapTrinhWin
                 }
             }
         }
-
-        private void btnTru_Click(object sender, EventArgs e)
+        private void soluongmuaGH_ValueChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(txtSL.Text, out int value))
-            {
-                if (value > 1)
-                {
-                    value--;
-                    txtSL.Text = value.ToString();
-                }
-            }
-        }
-
-        private void btnCong_Click(object sender, EventArgs e)
-        {
-            if (int.TryParse(txtSL.Text, out int value))
-            {
-                int sl = int.Parse(sp.SoLuong);
-                if(value < sl)
-                {
-                    value++;
-                    txtSL.Text = value.ToString();
-                }
-            }
-        }
-
-        private void txtSL_TextChanged(object sender, EventArgs e)
-        {
-            string slText = ((System.Windows.Forms.TextBox)sender).Text.Trim();
-            slmua =slText;
+            soluongmuaGH.Minimum = 1;
+            soluongmuaGH.Maximum = int.Parse(sp.SoLuong);
+            slmua = soluongmuaGH.Value.ToString();
             try
             {
                 // Ket noi
@@ -146,6 +105,26 @@ namespace DoANLapTrinhWin
             }
         }
 
+        private void btnXoaKhoiGioHang_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                // Ket noi
+                conn.Open();
+                string sqlStr = string.Format("DELETE FROM GioHang WHERE MaSanPham = '{0}'", sp.MaSP);
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                if (cmd.ExecuteNonQuery() > 0)
+                    MessageBox.Show("xoa thanh cong");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("xoa that bai" + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
 
     }
     

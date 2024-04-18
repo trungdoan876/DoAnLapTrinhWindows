@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSP));
             this.lblGiaBan = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
             this.lblMaSP = new System.Windows.Forms.Label();
             this.picHeart = new System.Windows.Forms.PictureBox();
             this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHeart)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +69,7 @@
             // 
             // picHinh
             // 
-            this.picHinh.Location = new System.Drawing.Point(61, 2);
+            this.picHinh.Location = new System.Drawing.Point(68, 11);
             this.picHinh.Margin = new System.Windows.Forms.Padding(2);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(138, 139);
@@ -79,7 +81,7 @@
             // 
             this.lblGiaGoc.AutoSize = true;
             this.lblGiaGoc.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiaGoc.Location = new System.Drawing.Point(182, 205);
+            this.lblGiaGoc.Location = new System.Drawing.Point(142, 205);
             this.lblGiaGoc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGiaGoc.Name = "lblGiaGoc";
             this.lblGiaGoc.Size = new System.Drawing.Size(79, 27);
@@ -133,10 +135,16 @@
             this.guna2RatingStar1.TabIndex = 48;
             this.guna2RatingStar1.Value = 4.5F;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // UCSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.guna2RatingStar1);
             this.Controls.Add(this.picHeart);
@@ -146,10 +154,10 @@
             this.Controls.Add(this.picHinh);
             this.Controls.Add(this.lblGiaBan);
             this.Controls.Add(this.lblTenSP);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "UCSP";
-            this.Size = new System.Drawing.Size(272, 325);
-            this.Load += new System.EventHandler(this.UCSP_Load);
+            this.Size = new System.Drawing.Size(275, 325);
+            this.Load += new System.EventHandler(this.UCSP_Load_1);
             this.Click += new System.EventHandler(this.UCSP_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHeart)).EndInit();
@@ -167,5 +175,7 @@
         public System.Windows.Forms.Label lblMaSP;
         public System.Windows.Forms.PictureBox picHeart;
         private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private UCHeart ucHeart1;
     }
 }

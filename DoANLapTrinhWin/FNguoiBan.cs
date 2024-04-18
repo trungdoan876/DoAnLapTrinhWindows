@@ -17,8 +17,8 @@ namespace DoANLapTrinhWin
         public FNguoiBan(string tenTaiKhoan)
         {
             InitializeComponent();
+            this.Size = new Size(1200, 600);
             this.TenTaiKhoan = tenTaiKhoan;
-            this.WindowState = FormWindowState.Maximized;
         }
         private Form formcon;
         private void moFormCon(Form form)

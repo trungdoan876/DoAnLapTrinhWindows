@@ -22,6 +22,22 @@ namespace DoANLapTrinhWin
             MemoryStream ms = new MemoryStream(a);
             return Image.FromStream(ms);
         }
+        private Form formcon;
+        private void moFormCon(Form form)
+        {
+            if (formcon != null)
+            {
+                formcon.Close();
+            }
+            formcon = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panelTatCaSP.Controls.Add(form);
+            panelTatCaSP.Tag = form;
+            form.BringToFront();
+            form.Show();
+        }
         public FDanhSachSanPham(string maNB)
         {
             InitializeComponent();
@@ -39,7 +55,7 @@ namespace DoANLapTrinhWin
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
-                int x = 0;
+                int x = panelThem.Width + 5;
                 int y = 0;
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
@@ -63,7 +79,7 @@ namespace DoANLapTrinhWin
                    
                     UCSPBan ucSPBan = new UCSPBan(sp);
                     ucSPBan.Location = new Point(x, y);
-                    x += ucSPBan.Width += 5;
+                    x += ucSPBan.Width  + 5;
                     if (x == ucSPBan.Width * 4)
                     {
                         x = 0;
@@ -85,14 +101,17 @@ namespace DoANLapTrinhWin
         {
             LoadData();
         }
-        private void btnThemSP_Click(object sender, EventArgs e)
+
+        private void btnThemSanPham_Click(object sender, EventArgs e)
         {
-            this.Hide(); //an form 1
-            FThemSanPham form2 = new FThemSanPham(maNB) ; // tao doi tuong form 2
-            form2.ShowDialog();
-            form2 = null; //tat form2, tuc la form 2 tro ve null
-            this.Show();
-            LoadData();
+            /*  this.Hide(); //an form 1
+              FThemSanPham form2 = new FThemSanPham(maNB); // tao doi tuong form 2
+              form2.ShowDialog();
+              form2 = null; //tat form2, tuc la form 2 tro ve null
+              this.Show();
+              LoadData();
+              panelTatCaSP*/
+            moFormCon(new FThemSanPham(maNB));
         }
     }
 }

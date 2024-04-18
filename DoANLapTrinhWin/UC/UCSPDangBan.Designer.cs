@@ -132,6 +132,7 @@
             this.Controls.Add(this.picHinh);
             this.Controls.Add(this.lblGiaTien);
             this.Controls.Add(this.lblTenSP);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UCSPDangBan";
             this.Size = new System.Drawing.Size(261, 333);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();

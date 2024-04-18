@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelDangBan = new System.Windows.Forms.Panel();
+            this.panelDangBan = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // panelDangBan
             // 
-            this.panelDangBan.AutoScroll = true;
-            this.panelDangBan.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panelDangBan.Location = new System.Drawing.Point(2, 0);
+            this.panelDangBan.BackColor = System.Drawing.Color.White;
+            this.panelDangBan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDangBan.Location = new System.Drawing.Point(0, 0);
             this.panelDangBan.Name = "panelDangBan";
-            this.panelDangBan.Size = new System.Drawing.Size(1293, 548);
+            this.panelDangBan.Size = new System.Drawing.Size(1295, 544);
             this.panelDangBan.TabIndex = 0;
             // 
             // FDaDangBan
@@ -55,6 +55,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panelDangBan;
+        private System.Windows.Forms.FlowLayoutPanel panelDangBan;
     }
 }

@@ -27,6 +27,7 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.lblMaNB.Text = maNB;
+            cmbNganhHang.DisplayMember = "Text";
         }
 
         private void FSanPhamNguoiBan_Load(object sender, EventArgs e)
@@ -47,7 +48,17 @@ namespace DoANLapTrinhWin
             lblTinhTrang.Left = newPosition;
         }
 
-        private void picHinh_Click_1(object sender, EventArgs e)
+        private void btnThemSP_Click(object sender, EventArgs e)
+        { 
+            byte[] b = ImageToByteArray(picHinh.Image);
+            //string anh = BitConverter.ToString(b).Replace("-", "");
+            SanPham sp = new SanPham(txtMaSanPham.Text, txtTenSP.Text, txtGiaBan.Text, txtGiaGoc.Text,
+                    txtXuatXu.Text, txtTGSD.Text, dtp.Value, txtMoTa.Text, cmbNganhHang.Text,
+                    lblTinhTrang.Text, txtDiaChi.Text, lblMaNB.Text, txtSoLuonSanCo.Text, b);
+            spDAO.ThemSanPham(sp);
+        }
+
+        private void btnThemHinh_Click(object sender, EventArgs e)
         {
             MemoryStream ms;
             OpenFileDialog odlgOpenFile = new OpenFileDialog();
@@ -61,14 +72,10 @@ namespace DoANLapTrinhWin
             }
         }
 
-        private void btnThemSP_Click(object sender, EventArgs e)
+        private void btnQuaylai_Click(object sender, EventArgs e)
         {
-            byte[] b = ImageToByteArray(picHinh.Image);
-            //string anh = BitConverter.ToString(b).Replace("-", "");
-            SanPham sp = new SanPham(txtMaSanPham.Text, txtTenSP.Text, txtGiaBan.Text, txtGiaGoc.Text,
-                    txtXuatXu.Text, txtTGSD.Text, dtp.Value, txtMoTa.Text, txtNganhHang.Text,
-                    lblTinhTrang.Text, txtDiaChi.Text, lblMaNB.Text, txtSoLuonSanCo.Text, b);
-            spDAO.ThemSanPham(sp);
+            this.Close();
         }
+
     }
 }

@@ -37,8 +37,8 @@ namespace DoANLapTrinhWin
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT SanPham.Hinh as Hinh, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi " +
-                    "FROM YeuThich,SanPham WHERE YeuThich.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'", tenTK);
+                string sqlStr = string.Format("SELECT SanPham.Hinh as Hinh, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi, " +
+                    "YeuThich.MaSanPham as MaSP FROM YeuThich,SanPham WHERE YeuThich.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'", tenTK);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
@@ -46,7 +46,7 @@ namespace DoANLapTrinhWin
                 int y = 0;
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
-                    //string maSP = row["MaSanPham"].ToString();
+                    string maSP = row["MaSP"].ToString();
                     string tenSP = row["TenSP"].ToString();
                     string giaBan = "đ" + row["GiaBan"].ToString();
                     string giaGoc = "đ" + row["GiaGoc"].ToString();
@@ -55,7 +55,7 @@ namespace DoANLapTrinhWin
                     {
                         hinh = (byte[])row["Hinh"];
                     }
-                    SanPham sp = new SanPham(tenSP, giaBan, giaGoc, diaChi, hinh);
+                    SanPham sp = new SanPham(maSP,tenSP, giaBan, giaGoc, diaChi, hinh);
                     UCSP ucSP = new UCSP(sp, tenTK);
 
                     ucSP.lblTenSP.Text = tenSP;
@@ -63,7 +63,6 @@ namespace DoANLapTrinhWin
                     ucSP.lblGiaGoc.Text = giaGoc;
                     ucSP.lblDiaChi.Text = diaChi;
                     ucSP.picHinh.Image = ByteArrayToImage(hinh);
-
                     //vi tri moi uc
                     ucSP.Location = new Point(x, y);
                     x += ucSP.Width += 5;

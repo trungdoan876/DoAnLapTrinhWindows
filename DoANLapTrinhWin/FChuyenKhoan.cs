@@ -13,26 +13,33 @@ namespace DoANLapTrinhWin
     public partial class FChuyenKhoan : Form
     {
         SanPham sp;
+        string maNM,ten,diachi;
+        int tongtien;
         public FChuyenKhoan()
         {
             InitializeComponent();
         }
-        public FChuyenKhoan(SanPham sp)
+        public FChuyenKhoan(string maNM, SanPham sp, int tongtien, string ten, string diachi)
         {
             this.sp = sp;
+            this.maNM = maNM;
+            this.tongtien = tongtien;
+            this.ten = ten;
+            this.diachi = diachi;
             InitializeComponent();
-            lblTongTien.Text = sp.GiaBan;
+            lblTongTien.Text = "đ" + tongtien.ToString()+".000";
+            txtTen.Text = ten;
+            lblDiaChi.Text = diachi;
         }
 
-
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnQuaylai_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnThanhToan_Click(object sender, EventArgs e)
+        private void btnThanhToan_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Thanh toán thành công");
+            MessageBox.Show("Thanh toán thành công \r\n Cảm ơn quý khách đã tin tưởng PandaShop");
         }
     }
 }

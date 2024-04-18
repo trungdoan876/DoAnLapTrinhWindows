@@ -18,8 +18,8 @@ namespace DoANLapTrinhWin
         public FNguoiMua(string tenTK)
         {
             InitializeComponent();
+            this.Size = new Size(1200, 600);
             this.tenTK = tenTK;
-            this.WindowState = FormWindowState.Maximized;
         }
         private Form formconmua;
         private void moFormConMua(Form form)

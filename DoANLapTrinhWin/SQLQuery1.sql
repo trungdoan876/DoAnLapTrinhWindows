@@ -12,10 +12,11 @@
 	NganhHang nvarchar (100),
 	TinhTrang varchar(10),
 	DangBan bit,
-	MaNguoiBan nchar(10) REFERENCES NguoiBan (MaNguoiBan),
+	MaNguoiBan nchar(10) REFERENCES NguoiBan (Ma),
 	DiaChi NVARCHAR(100),
 	SoLuong int, --so luong san pham san co
 )
+drop table SanPham
 UpDAte SanPham set TinhTrang = '56%'  Where MaSanPham = 'SP10' 
 GO
 select* from SanPham
@@ -31,7 +32,7 @@ GO
 --DROP TABLE NguoiBan
 CREATE TABLE NguoiBan
 (
-	MaNguoiBan nchar(10), --ten tai khoan
+	Ma nchar(10), --ten tai khoan
 	MatKhau nchar(100),
     Ten NVARCHAR(100),
     SDT char(10),
@@ -42,12 +43,13 @@ CREATE TABLE NguoiBan
     Email NVARCHAR(100),
     MoTaShop NVARCHAR(1000),
     Hinh varbinary(max),
-	PRIMARY KEY(MaNguoiBan)
+	PRIMARY KEY(Ma)
 );
+select * from NguoiBan
 CREATE TABLE NguoiMua
 (
-	MaNguoiMua nchar(10), --ten tai khoan 
-	TenNguoiMua nvarchar(100),
+	Ma nchar(10), --ten tai khoan 
+	Ten nvarchar(100),
 	MatKhau varchar(100),
 	NgaySinh DATE,
 	GioiTinh nchar(10),
@@ -57,10 +59,12 @@ CREATE TABLE NguoiMua
 	Email varchar(50),
 	Hinh varbinary(max),
 	MaDonHang char(10),
-	PRIMARY KEY(MaNguoiMua)
+	PRIMARY KEY(Ma)
 )
 INSERT INTO NguoiMua VALUES ('NM01',N'Nguyễn Thị B','123456','1990-03-20','Nu','27839293',N'484 Lê Văn Việt, phường Tăng Nhơn Phú A, Hồ Chí Minh','0192837283',null,null,null);
 GO
+select * from NguoiMua
+--DROP TABLE NguoiMua
 --DROP TABLE GioHang
 select * from GioHang
 CREATE TABLE GioHang
@@ -75,14 +79,14 @@ CREATE TABLE GioHang
 	Hinh varbinary(max)
 )
 GO
-drop table YeuThich
+--drop table YeuThich
 CREATE TABLE YeuThich
 (
 	MaNguoiBan nchar(10),
 	MaNguoiMua nchar(10),
 	MaSanPham nchar(10),
-	TrangThai nchar(10) DEFAULT 'Có',
-	PRIMARY KEY(MaNguoiBan,MaNguoiMua)
+	TrangThai nchar(10) ,
+	PRIMARY KEY(MaNguoiMua,MaSanPham)
 )
 select * from YeuThich
 SELECT SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.SoLuong as SL FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = 'NM01'
@@ -90,7 +94,7 @@ select SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang 
 from GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = 'NM01'
 SELECT * From GioHang WHERE TrangThaiSP = 1 and MaNguoiMua ='NM01'
 --Bang don hang khi mua san pham tao don hang moi
-drop table donhang
+--drop table donhang
 CREATE TABLE DonHang
 (
 	MaDonHang int identity(1,1),
@@ -112,4 +116,10 @@ FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua
 SELECT SanPham.MaNguoiBan as maNB,SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.SoLuong as SL 
 FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua ='NM01'
 select * from sanpham
-delete from sanpham where manguoiban ='NB01'
+--delete from sanpham where manguoiban ='NB01'
+SELECT SanPham.Hinh as Hinh, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi, YeuThich.MaSanPham as MaSP FROM YeuThich,SanPham WHERE YeuThich.MaSanPham = SanPham.MaSanPham and MaNguoiMua = 'NM01'
+
+SELECT SanPham.Hinh as Hinh, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi, YeuThich.MaSanPham as MaSP
+                    FROM YeuThich,SanPham WHERE YeuThich.MaSanPham = SanPham.MaSanPham and MaNguoiMua = 'NM01'
+SELECT SanPham.MaNguoiBan as maNB,SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi, SanPham.SoLuong as SL, GioHang.SoLuong as SLMua, GioHang.TrangThaiSP as TrangThai FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = 'NM01'
+select GioHang.MaNguoiMua, GioHang.MaSanPham, NguoiMua.TenNguoiMua as ten, NguoiMua.DiaChi as diachi FROM GioHang, NguoiMua WHERE GioHang.MaNguoiMua = NguoiMua.MaNguoiMua AND NguoiMua.MaNguoiMua ='NM01'

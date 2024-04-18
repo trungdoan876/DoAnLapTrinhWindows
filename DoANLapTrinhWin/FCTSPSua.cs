@@ -30,6 +30,7 @@ namespace DoANLapTrinhWin
         public FCTSPSua()
         {
             InitializeComponent();
+            
         }
         public FCTSPSua(SanPham sp)
         {
@@ -61,19 +62,6 @@ namespace DoANLapTrinhWin
         private void FCTSPSua_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void picHinh_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog odlgOpenFile = new OpenFileDialog();
-            odlgOpenFile.InitialDirectory = "C:\\";
-            odlgOpenFile.Title = "Open File";
-            odlgOpenFile.Filter = "Image files (*.jpg)|*.jpg|All files (*.*)|*.*";
-            if (odlgOpenFile.ShowDialog() == DialogResult.OK)
-            {
-                picHinh.Image = Image.FromFile(odlgOpenFile.FileName);
-                this.Text = odlgOpenFile.FileName;
-            }
         }
 
         private void btnSuaSanPham_Click(object sender, EventArgs e)
@@ -108,6 +96,19 @@ namespace DoANLapTrinhWin
 
             // Cập nhật vị trí mới của Label
             lblTinhTrang.Left = newPosition;
+        }
+
+        private void btnThemHinh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog odlgOpenFile = new OpenFileDialog();
+            odlgOpenFile.InitialDirectory = "C:\\";
+            odlgOpenFile.Title = "Open File";
+            odlgOpenFile.Filter = "Image files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            if (odlgOpenFile.ShowDialog() == DialogResult.OK)
+            {
+                picHinh.Image = Image.FromFile(odlgOpenFile.FileName);
+                this.Text = odlgOpenFile.FileName;
+            }
         }
     }
 }

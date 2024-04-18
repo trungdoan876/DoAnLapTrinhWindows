@@ -18,6 +18,7 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNM;
         byte[] hinh;
+        int tongtien = 0;
         SanPham sp;
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
@@ -29,23 +30,14 @@ namespace DoANLapTrinhWin
             InitializeComponent();
             this.maNM = tenTK;
             LoadGioHang(maNM);
-        }  
-        private void chuyenKhoanToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide(); //an form 1
-            FChuyenKhoan form2 = new FChuyenKhoan(); // tao doi tuong form 2
-            form2.ShowDialog(); //show la thao tac dong thoi 2 form
-                                //ShowDialog thi khi tat form2 thi moi tro lai thao tac tren form1
-            form2 = null; //tat form2, tuc la form 2 tro ve null
-            this.Show();
         }
         public void LoadGioHang(string maNM)
         {
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT SanPham.MaNguoiBan as maNB,SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.SoLuong as SL, GioHang.SoLuong as SLMua " +
-                    "FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'",maNM);
+                string sqlStr = string.Format("SELECT SanPham.MaNguoiBan as maNB,SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi, SanPham.SoLuong as SL, GioHang.SoLuong as SLMua, GioHang.TrangThaiSP as TrangThai FROM GioHang, " +
+                    "SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'", maNM);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
@@ -66,27 +58,45 @@ namespace DoANLapTrinhWin
                     string maSP = row["MaSP"].ToString();
                     string tenSP = row["TenSP"].ToString();
                     string giaBan = "đ" + row["GiaBan"].ToString();
+                    string giaGoc = "đ" + row["GiaGoc"].ToString();
                     string tinhTrang = row["TinhTrang"].ToString();
                     string soLuong = row["SL"].ToString();
                     string soLuongMua = row["SLMua"].ToString();
+                    string diaChi = row["DiaChi"].ToString();
+                    string trangthai = row["TrangThai"].ToString();
                     if (row["Hinh"] != DBNull.Value)
                     {
                         hinh = (byte[])row["Hinh"];
                     }
                     
-                    sp = new SanPham(tenSP, giaBan, tinhTrang,maSP,soLuong, hinh);
+                    sp = new SanPham(tenSP, giaBan, giaGoc, tinhTrang,maSP,soLuong, hinh, diaChi);
                     
                     UCSPGioHang spgh = new UCSPGioHang(sp);
-
                     //splist.Add(sp);
                     //chinh sua public
                     spgh.lblTenSP.Text = tenSP;
                     spgh.lblGiaTien.Text = giaBan;
                     spgh.lblTinhTrang.Text = tinhTrang;
+                    string str = sp.TinhTrang.Substring(0, sp.TinhTrang.Length - 1);
+                    int tt = int.Parse(str);
+                    spgh.vongtrontt.Value = tt;
                     spgh.picHinh.Image = ByteArrayToImage(hinh);
                     spgh.lblSoLuong.Text = soLuong +" sản phẩm sẵn có";
-                    spgh.txtSL.Text = soLuongMua;
+                    spgh.soluongmuaGH.Value = int.Parse(soLuongMua);
+                    spgh.lblgia.Text = giaGoc;
+                    spgh.lblDiaChi.Text = diaChi;
                     uc.panelSP.Controls.Add(spgh);
+                    spgh.lblTrangThai.Text = trangthai;
+
+                    if (spgh.lblTrangThai.Text == "True")
+                    {
+                        spgh.checkBoxSP.Checked = true;
+                        string giaban = spgh.lblGiaTien.Text.Substring(1); // Loại bỏ ký tự "đ" ở đầu chuỗi
+                        decimal gb = decimal.Parse(giaban); // Chuyển đổi giá trị của giaban thành kiểu decimal
+                        int tien = (int)(gb * spgh.soluongmuaGH.Value); // Thực hiện phép nhân và chuyển đổi kết quả thành kiểu int
+                        tongtien += tien;
+                        lblTongTien.Text = "đ" + tongtien.ToString() + ".000";
+                    }
                 }
             }
             catch (Exception ex)
@@ -98,9 +108,10 @@ namespace DoANLapTrinhWin
                 conn.Close();
             }
         }
-        private void btnMuaHang_Click(object sender, EventArgs e)
+
+        private void btnMuaHang_Click_1(object sender, EventArgs e)
         {
-            FDatHang fdh = new FDatHang(maNM,sp);
+            FDatHang fdh = new FDatHang(maNM, sp,tongtien);
             fdh.ShowDialog();
         }
     }

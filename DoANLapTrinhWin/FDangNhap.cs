@@ -76,7 +76,7 @@ namespace DoANLapTrinhWin
                     conn.Open();
                     string tenTK = txtDangNhap.Text; //tenTK = ma
                     string matKhau = txtMatKhau.Text;
-                    string sql = "Select * from NguoiMua WHERE MaNguoiMua='" + tenTK + "' and MatKhau='" + matKhau + "'";
+                    string sql = "Select * from NguoiMua WHERE Ma='" + tenTK + "' and MatKhau='" + matKhau + "'";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     SqlDataReader dta = cmd.ExecuteReader();
                     if (dta.Read() == true)
@@ -111,7 +111,7 @@ namespace DoANLapTrinhWin
                     conn.Open();
                     string tenTK = txtDangNhap.Text; //tenTK = ma
                     string matKhau = txtMatKhau.Text;
-                    string sql = "Select * from NguoiBan where MaNguoiBan='" + tenTK + "' and MatKhau='" + matKhau + "'";
+                    string sql = "Select * from NguoiBan where Ma='" + tenTK + "' and MatKhau='" + matKhau + "'";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     SqlDataReader dta = cmd.ExecuteReader();
                     if (dta.Read() == true)

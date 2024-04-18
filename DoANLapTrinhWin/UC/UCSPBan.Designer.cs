@@ -40,7 +40,7 @@
             // 
             // picHinh
             // 
-            this.picHinh.Location = new System.Drawing.Point(72, 19);
+            this.picHinh.Location = new System.Drawing.Point(87, 18);
             this.picHinh.Margin = new System.Windows.Forms.Padding(2);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(138, 139);
@@ -121,6 +121,7 @@
             this.Controls.Add(this.picHinh);
             this.Controls.Add(this.lblGiaTien);
             this.Controls.Add(this.lblTenSP);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UCSPBan";
             this.Size = new System.Drawing.Size(279, 324);
             this.Load += new System.EventHandler(this.UCSPBan_Load);
