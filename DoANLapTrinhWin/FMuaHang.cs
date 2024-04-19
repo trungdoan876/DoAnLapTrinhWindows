@@ -44,7 +44,7 @@ namespace DoANLapTrinhWin
 
             btnOK = btn;
         }
-        private void LoadData()
+        public void LoadData()
         {
             try
             {
@@ -77,7 +77,6 @@ namespace DoANLapTrinhWin
                     }
                     SanPham sp = new SanPham(maSP, tenSP, giaBan, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, maNB, soLuong, hinh);
                     UCSP ucSP = new UCSP(sp,tenTaiKhoan);
-                    
                     ucSP.lblMaSP.Text = maSP;
                     ucSP.lblTenSP.Text = tenSP;
                     ucSP.lblGiaBan.Text = giaBan;
@@ -87,7 +86,7 @@ namespace DoANLapTrinhWin
                     //vi tri moi uc
                     ucSP.Location = new Point(x, y);
                     x += ucSP.Width + 5;
-                    if (x == ucSP.Width * 3)
+                    if (x == ucSP.Width * 4)
                     {
                         x = 0;
                         y += ucSP.Height + 5;

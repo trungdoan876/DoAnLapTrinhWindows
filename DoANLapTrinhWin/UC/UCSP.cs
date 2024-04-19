@@ -51,21 +51,20 @@ namespace DoANLapTrinhWin
         private void UCSP_Click(object sender, EventArgs e)
         {
             this.Hide(); //an form 1
-            FCTSP formCTSP = new FCTSP(sanPham);
+            FCTSP formCTSP = new FCTSP(sanPham,picClick,tenTK);
             formCTSP.ShowDialog();
             formCTSP = null;
-            this.Show();
+            this.Show();  
         }
-        bool picClick ;
+        bool picClick;
         private void traitim()
         {
             //false la chua them
             if (picClick) //=true dang la tim do
             {
-              /*  string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timden.png";
+                string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timden.png";
                 System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
                 picHeart.Image = image;
-                picClick = false;*/
                 try
                 {
                     conn.Open();
@@ -79,7 +78,6 @@ namespace DoANLapTrinhWin
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi \n" + ex);
-                    //MessageBox.Show("Đã thêm vào yêu thích");
                 }
                 finally
                 {
@@ -89,14 +87,13 @@ namespace DoANLapTrinhWin
             //ban dau la false nhan vao la true chuyen thanh mau do
             else
             {
-               /* string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timdo.png";
+                string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timdo.png";
                 System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
                 picHeart.Image = image;
-                picClick = true;*/
                 try
                 {
                     conn.Open();
-                    string sqlStr = string.Format("INSERT INTO YeuThich (MaSanPham , MaNguoiMua, MaNguoiBan, TrangThai) VALUES ('{0}', '{1}','{2}','{3}')", sanPham.MaSP, tenTK, sanPham.MaNguoiBan,"Có");
+                    string sqlStr = string.Format("INSERT INTO YeuThich (MaSanPham , MaNguoiMua, MaNguoiBan, TrangThai) VALUES ('{0}', '{1}','{2}','{3}')", sanPham.MaSP, tenTK, sanPham.MaNguoiBan, "Có");
                     SqlCommand cmd = new SqlCommand(sqlStr, conn);
 
                     if (cmd.ExecuteNonQuery() > 0)
@@ -106,7 +103,6 @@ namespace DoANLapTrinhWin
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi \n" + ex);
-                    //MessageBox.Show("Đã thêm vào yêu thích");
                 }
                 finally
                 {
@@ -162,6 +158,7 @@ namespace DoANLapTrinhWin
             {
                 conn.Close();
             }
+            
         }
     }
 }

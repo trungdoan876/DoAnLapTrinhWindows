@@ -139,13 +139,13 @@
             // 
             this.bunifuElipse1.ElipseRadius = 50;
             this.bunifuElipse1.TargetControl = this;
+
             // 
             // UCSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LavenderBlush;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.Controls.Add(this.guna2RatingStar1);
             this.Controls.Add(this.picHeart);
             this.Controls.Add(this.lblMaSP);
@@ -154,9 +154,10 @@
             this.Controls.Add(this.picHinh);
             this.Controls.Add(this.lblGiaBan);
             this.Controls.Add(this.lblTenSP);
-            this.Margin = new System.Windows.Forms.Padding(10);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Margin = new System.Windows.Forms.Padding(20);
             this.Name = "UCSP";
-            this.Size = new System.Drawing.Size(275, 325);
+            this.Size = new System.Drawing.Size(277, 327);
             this.Load += new System.EventHandler(this.UCSP_Load_1);
             this.Click += new System.EventHandler(this.UCSP_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
@@ -176,6 +177,5 @@
         public System.Windows.Forms.PictureBox picHeart;
         private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private UCHeart ucHeart1;
     }
 }

@@ -18,6 +18,8 @@ namespace DoANLapTrinhWin
     {
         SanPham sp;
         string maSP;
+        bool picClick;
+        string tenTK;
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -28,12 +30,13 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
         }
-        public FCTSP(SanPham sp)
+        public FCTSP(SanPham sp,bool picClick,string tenTK)
         {
             InitializeComponent();
             this.Size = new Size(1000, 500);
             this.sp = sp;
-            this.maSP = maSP;
+            this.picClick = picClick;
+            this.tenTK = tenTK;
             this.lblRating.Text= DanhGia.Value.ToString();
             txtMota.Text = sp.MoTaSanPham;
             lblDiaChi.Text = sp.DiaChi;
@@ -51,10 +54,25 @@ namespace DoANLapTrinhWin
             lblThoigiandasd.Text = sp.ThoiGianDaSuDung;
             lblSoLuong.Text = sp.SoLuong+" sản phẩm sẵn có";
             picHinh.Image = ByteArrayToImage(sp.Hinh);
+            if (picClick == true)
+            {
+                string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timdo.png";
+                System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
+                picHeart.Image = image;
+                picClick = false;
+            }
+            else
+            {
+                string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timden.png";
+                System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
+                picHeart.Image = image;
+                picClick = true;
+            }
         }    
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
 
         private void btnThemVaoGio_Click_1(object sender, EventArgs e)
@@ -97,5 +115,64 @@ namespace DoANLapTrinhWin
             soluongmua.Maximum = int.Parse(sp.SoLuong);
             soluongmua.Minimum = 1;
         }
+        private void traitim()
+        {
+            //false la chua them
+            if (picClick) //=true dang la tim do
+            {
+                string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timden.png";
+                System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
+                picHeart.Image = image;
+                try
+                {
+                    conn.Open();
+                    string sqlStr = string.Format("DELETE FROM YeuThich WHERE MaSanPham ='{0}'", sp.MaSP);
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+
+                    if (cmd.ExecuteNonQuery() > 0)
+                        MessageBox.Show("Xoa khoi yeu thich thanh cong");
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi \n" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            //ban dau la false nhan vao la true chuyen thanh mau do
+            else
+            {
+                string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timdo.png";
+                System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
+                picHeart.Image = image;
+                try
+                {
+                    conn.Open();
+                    string sqlStr = string.Format("INSERT INTO YeuThich (MaSanPham , MaNguoiMua, MaNguoiBan, TrangThai) VALUES ('{0}', '{1}','{2}','{3}')", sp.MaSP, tenTK, sp.MaNguoiBan, "Có");
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+
+                    if (cmd.ExecuteNonQuery() > 0)
+                        MessageBox.Show("Them vao yeu thich thanh cong");
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi \n" + ex);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+        private void picHeart_Click(object sender, EventArgs e)
+        {
+            traitim();
+
+        }
+
     }
 }

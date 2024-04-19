@@ -500,6 +500,7 @@
             this.picHeart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHeart.TabIndex = 288;
             this.picHeart.TabStop = false;
+            this.picHeart.Click += new System.EventHandler(this.picHeart_Click);
             // 
             // FCTSP
             // 
