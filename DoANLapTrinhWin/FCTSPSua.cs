@@ -35,6 +35,7 @@ namespace DoANLapTrinhWin
         public FCTSPSua(SanPham sp)
         {
             InitializeComponent();
+            this.Size = new Size(1100,550);
             txtMaSanPham.Text = sp.MaSP;
             txtTenSP.Text = sp.TenSP;
             txtGiaBan.Text = sp.GiaBan;

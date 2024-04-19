@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FThemSanPham));
             this.lblMaNB = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -49,10 +48,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnThemSP = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnThemHinh = new Guna.UI2.WinForms.Guna2Button();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.cmbNganhHang = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -64,7 +64,7 @@
             this.lblMaNB.AutoSize = true;
             this.lblMaNB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaNB.ForeColor = System.Drawing.Color.SeaGreen;
-            this.lblMaNB.Location = new System.Drawing.Point(249, 44);
+            this.lblMaNB.Location = new System.Drawing.Point(400, 40);
             this.lblMaNB.Name = "lblMaNB";
             this.lblMaNB.Size = new System.Drawing.Size(59, 25);
             this.lblMaNB.TabIndex = 228;
@@ -73,7 +73,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(478, 399);
+            this.pictureBox1.Location = new System.Drawing.Point(593, 405);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(59, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -83,8 +83,8 @@
             // lblTinhTrang
             // 
             this.lblTinhTrang.BackColor = System.Drawing.Color.Transparent;
-            this.lblTinhTrang.ForeColor = System.Drawing.Color.Green;
-            this.lblTinhTrang.Location = new System.Drawing.Point(543, 376);
+            this.lblTinhTrang.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lblTinhTrang.Location = new System.Drawing.Point(658, 382);
             this.lblTinhTrang.Name = "lblTinhTrang";
             this.lblTinhTrang.Size = new System.Drawing.Size(26, 22);
             this.lblTinhTrang.TabIndex = 284;
@@ -115,7 +115,7 @@
             this.dtp.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.dtp.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtp.Location = new System.Drawing.Point(1152, 12);
+            this.dtp.Location = new System.Drawing.Point(1267, 18);
             this.dtp.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp.Name = "dtp";
@@ -125,11 +125,14 @@
             // 
             // tinhTrang
             // 
-            this.tinhTrang.Location = new System.Drawing.Point(543, 399);
+            this.tinhTrang.FillColor = System.Drawing.Color.Gold;
+            this.tinhTrang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.tinhTrang.HoverState.ThumbColor = System.Drawing.Color.DodgerBlue;
+            this.tinhTrang.Location = new System.Drawing.Point(658, 405);
             this.tinhTrang.Name = "tinhTrang";
             this.tinhTrang.Size = new System.Drawing.Size(708, 43);
             this.tinhTrang.TabIndex = 281;
-            this.tinhTrang.ThumbColor = System.Drawing.Color.SeaGreen;
+            this.tinhTrang.ThumbColor = System.Drawing.Color.LimeGreen;
             this.tinhTrang.Value = 0;
             this.tinhTrang.Scroll += new System.Windows.Forms.ScrollEventHandler(this.tinhTrang_Scroll);
             // 
@@ -150,7 +153,7 @@
             this.txtSoLuonSanCo.HoverState.FillColor = System.Drawing.Color.White;
             this.txtSoLuonSanCo.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSoLuonSanCo.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSoLuonSanCo.IconLeft")));
-            this.txtSoLuonSanCo.Location = new System.Drawing.Point(886, 318);
+            this.txtSoLuonSanCo.Location = new System.Drawing.Point(1001, 324);
             this.txtSoLuonSanCo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSoLuonSanCo.Name = "txtSoLuonSanCo";
             this.txtSoLuonSanCo.PasswordChar = '\0';
@@ -176,7 +179,7 @@
             this.txtDiaChi.HoverState.FillColor = System.Drawing.Color.White;
             this.txtDiaChi.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDiaChi.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtDiaChi.IconLeft")));
-            this.txtDiaChi.Location = new System.Drawing.Point(886, 243);
+            this.txtDiaChi.Location = new System.Drawing.Point(1001, 249);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
@@ -202,7 +205,7 @@
             this.txtGiaGoc.HoverState.FillColor = System.Drawing.Color.White;
             this.txtGiaGoc.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtGiaGoc.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtGiaGoc.IconLeft")));
-            this.txtGiaGoc.Location = new System.Drawing.Point(886, 165);
+            this.txtGiaGoc.Location = new System.Drawing.Point(1001, 171);
             this.txtGiaGoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGiaGoc.Name = "txtGiaGoc";
             this.txtGiaGoc.PasswordChar = '\0';
@@ -228,7 +231,7 @@
             this.txtTGSD.HoverState.FillColor = System.Drawing.Color.White;
             this.txtTGSD.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTGSD.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtTGSD.IconLeft")));
-            this.txtTGSD.Location = new System.Drawing.Point(476, 318);
+            this.txtTGSD.Location = new System.Drawing.Point(591, 324);
             this.txtTGSD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTGSD.Name = "txtTGSD";
             this.txtTGSD.PasswordChar = '\0';
@@ -254,7 +257,7 @@
             this.txtXuatXu.HoverState.FillColor = System.Drawing.Color.White;
             this.txtXuatXu.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtXuatXu.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtXuatXu.IconLeft")));
-            this.txtXuatXu.Location = new System.Drawing.Point(476, 243);
+            this.txtXuatXu.Location = new System.Drawing.Point(591, 249);
             this.txtXuatXu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtXuatXu.Name = "txtXuatXu";
             this.txtXuatXu.PasswordChar = '\0';
@@ -280,7 +283,7 @@
             this.txtGiaBan.HoverState.FillColor = System.Drawing.Color.White;
             this.txtGiaBan.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtGiaBan.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtGiaBan.IconLeft")));
-            this.txtGiaBan.Location = new System.Drawing.Point(476, 165);
+            this.txtGiaBan.Location = new System.Drawing.Point(591, 171);
             this.txtGiaBan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGiaBan.Name = "txtGiaBan";
             this.txtGiaBan.PasswordChar = '\0';
@@ -306,7 +309,7 @@
             this.txtTenSP.HoverState.FillColor = System.Drawing.Color.White;
             this.txtTenSP.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTenSP.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtTenSP.IconLeft")));
-            this.txtTenSP.Location = new System.Drawing.Point(476, 80);
+            this.txtTenSP.Location = new System.Drawing.Point(591, 86);
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.PasswordChar = '\0';
@@ -332,7 +335,7 @@
             this.txtMaSanPham.HoverState.FillColor = System.Drawing.Color.White;
             this.txtMaSanPham.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMaSanPham.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtMaSanPham.IconLeft")));
-            this.txtMaSanPham.Location = new System.Drawing.Point(113, 104);
+            this.txtMaSanPham.Location = new System.Drawing.Point(296, 103);
             this.txtMaSanPham.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMaSanPham.Name = "txtMaSanPham";
             this.txtMaSanPham.PasswordChar = '\0';
@@ -344,7 +347,7 @@
             // picHinh
             // 
             this.picHinh.Image = ((System.Drawing.Image)(resources.GetObject("picHinh.Image")));
-            this.picHinh.Location = new System.Drawing.Point(127, 153);
+            this.picHinh.Location = new System.Drawing.Point(310, 152);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(181, 196);
             this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -369,7 +372,7 @@
             this.txtMoTa.HoverState.FillColor = System.Drawing.Color.White;
             this.txtMoTa.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMoTa.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtMoTa.IconLeft")));
-            this.txtMoTa.Location = new System.Drawing.Point(476, 483);
+            this.txtMoTa.Location = new System.Drawing.Point(591, 489);
             this.txtMoTa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
@@ -382,7 +385,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(169, 28);
+            this.pictureBox2.Location = new System.Drawing.Point(320, 24);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(74, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -398,7 +401,7 @@
             this.btnThemSP.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnThemSP.ImageRotate = 0F;
             this.btnThemSP.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnThemSP.Location = new System.Drawing.Point(217, 558);
+            this.btnThemSP.Location = new System.Drawing.Point(429, 560);
             this.btnThemSP.Name = "btnThemSP";
             this.btnThemSP.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnThemSP.Size = new System.Drawing.Size(110, 82);
@@ -415,23 +418,18 @@
             this.btnThemHinh.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemHinh.ForeColor = System.Drawing.Color.White;
             this.btnThemHinh.Image = ((System.Drawing.Image)(resources.GetObject("btnThemHinh.Image")));
-            this.btnThemHinh.Location = new System.Drawing.Point(127, 383);
+            this.btnThemHinh.Location = new System.Drawing.Point(287, 382);
             this.btnThemHinh.Name = "btnThemHinh";
-            this.btnThemHinh.Size = new System.Drawing.Size(171, 59);
+            this.btnThemHinh.Size = new System.Drawing.Size(232, 53);
             this.btnThemHinh.TabIndex = 288;
-            this.btnThemHinh.Text = "Thêm hình";
+            this.btnThemHinh.Text = "Thêm ảnh chính";
             this.btnThemHinh.Click += new System.EventHandler(this.btnThemHinh_Click);
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 0;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(82, 521);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(294, 523);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(178, 34);
             this.bunifuCustomLabel1.TabIndex = 290;
@@ -441,7 +439,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(149, 558);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(361, 560);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(77, 46);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -472,7 +470,7 @@
             "Khác"});
             this.cmbNganhHang.ItemsAppearance.BackColor = System.Drawing.Color.White;
             this.cmbNganhHang.ItemsAppearance.SelectedBackColor = System.Drawing.Color.SkyBlue;
-            this.cmbNganhHang.Location = new System.Drawing.Point(886, 80);
+            this.cmbNganhHang.Location = new System.Drawing.Point(1001, 86);
             this.cmbNganhHang.Name = "cmbNganhHang";
             this.cmbNganhHang.Size = new System.Drawing.Size(353, 31);
             this.cmbNganhHang.StartIndex = 0;
@@ -480,12 +478,37 @@
             this.cmbNganhHang.Tag = "";
             this.cmbNganhHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.Location = new System.Drawing.Point(49, 602);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(174, 51);
+            this.guna2Button1.TabIndex = 294;
+            this.guna2Button1.Text = "Thêm ảnh";
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(22, 86);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(234, 491);
+            this.panel1.TabIndex = 293;
+            // 
             // FThemSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1555, 695);
+            this.ClientSize = new System.Drawing.Size(1561, 739);
+            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmbNganhHang);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.bunifuCustomLabel1);
@@ -542,9 +565,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2ImageButton btnThemSP;
         private Guna.UI2.WinForms.Guna2Button btnThemHinh;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbNganhHang;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
