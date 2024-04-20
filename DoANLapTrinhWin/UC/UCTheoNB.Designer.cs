@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbltenNB = new System.Windows.Forms.Label();
-            this.panelSP = new System.Windows.Forms.Panel();
+            this.panelSP = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +40,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1533, 72);
+            this.panel1.Size = new System.Drawing.Size(1513, 72);
             this.panel1.TabIndex = 0;
             // 
             // lbltenNB
@@ -61,17 +61,18 @@
             this.panelSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSP.Location = new System.Drawing.Point(0, 72);
             this.panelSP.Name = "panelSP";
-            this.panelSP.Size = new System.Drawing.Size(1533, 251);
+            this.panelSP.Size = new System.Drawing.Size(1513, 338);
             this.panelSP.TabIndex = 1;
             // 
             // UCTheoNB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.panelSP);
             this.Controls.Add(this.panel1);
             this.Name = "UCTheoNB";
-            this.Size = new System.Drawing.Size(1533, 323);
+            this.Size = new System.Drawing.Size(1513, 410);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -82,6 +83,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbltenNB;
-        public System.Windows.Forms.Panel panelSP;
+        public System.Windows.Forms.FlowLayoutPanel panelSP;
     }
 }

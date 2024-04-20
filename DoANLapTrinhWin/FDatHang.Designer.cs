@@ -31,18 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDatHang));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbThanhToan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnDatHang = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblDiaChi = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.lblTenNguoiNhan = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.paneldathang = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnQuaylai = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblPTTT = new System.Windows.Forms.Label();
@@ -51,8 +52,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label11 = new System.Windows.Forms.Label();
-            this.cmbThanhToan = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.paneldathang = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,8 +71,31 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 523);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1701, 173);
+            this.panel3.Size = new System.Drawing.Size(1540, 173);
             this.panel3.TabIndex = 11;
+            // 
+            // cmbThanhToan
+            // 
+            this.cmbThanhToan.BackColor = System.Drawing.Color.Transparent;
+            this.cmbThanhToan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.cmbThanhToan.BorderRadius = 10;
+            this.cmbThanhToan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbThanhToan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbThanhToan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbThanhToan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbThanhToan.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbThanhToan.ForeColor = System.Drawing.Color.Black;
+            this.cmbThanhToan.ItemHeight = 30;
+            this.cmbThanhToan.Items.AddRange(new object[] {
+            "Chuyển khoản",
+            "Thanh toán khi nhận hàng",
+            "Trả sau"});
+            this.cmbThanhToan.ItemsAppearance.BackColor = System.Drawing.Color.White;
+            this.cmbThanhToan.ItemsAppearance.SelectedBackColor = System.Drawing.Color.SkyBlue;
+            this.cmbThanhToan.Location = new System.Drawing.Point(848, 92);
+            this.cmbThanhToan.Name = "cmbThanhToan";
+            this.cmbThanhToan.Size = new System.Drawing.Size(336, 36);
+            this.cmbThanhToan.TabIndex = 71;
             // 
             // label6
             // 
@@ -86,9 +109,21 @@
             this.label6.Text = "Tên người nhận:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.Location = new System.Drawing.Point(591, 105);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(251, 28);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Phương thức thanh toán:";
+            // 
             // btnDatHang
             // 
             this.btnDatHang.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnDatHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDatHang.HoverState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnDatHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDatHang.Image")));
             this.btnDatHang.ImageOffset = new System.Drawing.Point(0, 0);
@@ -145,15 +180,6 @@
             this.label1.TabIndex = 67;
             this.label1.Text = "Tổng thanh toán:";
             // 
-            // paneldathang
-            // 
-            this.paneldathang.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.paneldathang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.paneldathang.Location = new System.Drawing.Point(0, 56);
-            this.paneldathang.Name = "paneldathang";
-            this.paneldathang.Size = new System.Drawing.Size(1701, 640);
-            this.paneldathang.TabIndex = 7;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
@@ -165,7 +191,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1701, 56);
+            this.panel1.Size = new System.Drawing.Size(1540, 56);
             this.panel1.TabIndex = 6;
             // 
             // panel2
@@ -178,7 +204,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1701, 56);
+            this.panel2.Size = new System.Drawing.Size(1540, 56);
             this.panel2.TabIndex = 7;
             // 
             // btnQuaylai
@@ -196,17 +222,6 @@
             this.btnQuaylai.TabIndex = 284;
             this.btnQuaylai.Click += new System.EventHandler(this.btnQuaylai_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(591, 105);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(251, 28);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Phương thức thanh toán:";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -217,6 +232,17 @@
             this.label8.Size = new System.Drawing.Size(114, 28);
             this.label8.TabIndex = 3;
             this.label8.Text = "Thành tiền";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label11.Location = new System.Drawing.Point(310, 18);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(107, 28);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Sản phẩm";
             // 
             // label9
             // 
@@ -300,54 +326,27 @@
             this.bunifuElipse1.ElipseRadius = 50;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // label11
+            // paneldathang
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label11.Location = new System.Drawing.Point(310, 18);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(107, 28);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Sản phẩm";
-            // 
-            // cmbThanhToan
-            // 
-            this.cmbThanhToan.BackColor = System.Drawing.Color.Transparent;
-            this.cmbThanhToan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.cmbThanhToan.BorderRadius = 10;
-            this.cmbThanhToan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbThanhToan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbThanhToan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbThanhToan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbThanhToan.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbThanhToan.ForeColor = System.Drawing.Color.Black;
-            this.cmbThanhToan.ItemHeight = 30;
-            this.cmbThanhToan.Items.AddRange(new object[] {
-            "Chuyển khoản",
-            "Thanh toán khi nhận hàng",
-            "Trả sau"});
-            this.cmbThanhToan.ItemsAppearance.BackColor = System.Drawing.Color.White;
-            this.cmbThanhToan.ItemsAppearance.SelectedBackColor = System.Drawing.Color.SkyBlue;
-            this.cmbThanhToan.Location = new System.Drawing.Point(848, 92);
-            this.cmbThanhToan.Name = "cmbThanhToan";
-            this.cmbThanhToan.Size = new System.Drawing.Size(336, 36);
-            this.cmbThanhToan.TabIndex = 71;
+            this.paneldathang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneldathang.Location = new System.Drawing.Point(0, 56);
+            this.paneldathang.Name = "paneldathang";
+            this.paneldathang.Size = new System.Drawing.Size(1540, 467);
+            this.paneldathang.TabIndex = 12;
             // 
             // FDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1701, 696);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(1540, 696);
             this.Controls.Add(this.paneldathang);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FDatHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FDatHang";
-            this.Load += new System.EventHandler(this.FDatHang_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -363,7 +362,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblDiaChi;
         private System.Windows.Forms.Label lblTenNguoiNhan;
-        private System.Windows.Forms.Panel paneldathang;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -383,5 +381,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2ComboBox cmbThanhToan;
+        public System.Windows.Forms.Panel paneldathang;
     }
 }

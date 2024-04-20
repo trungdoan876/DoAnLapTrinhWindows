@@ -33,10 +33,10 @@
             this.thanhToanKhiNhanHangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chuyenKhoanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ghiNoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelGioHang = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMuaHang = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblTongTien = new System.Windows.Forms.Label();
+            this.panelGioHang = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,15 +67,6 @@
             this.ghiNoToolStripMenuItem.Name = "ghiNoToolStripMenuItem";
             this.ghiNoToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
-            // panelGioHang
-            // 
-            this.panelGioHang.AutoScroll = true;
-            this.panelGioHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelGioHang.Location = new System.Drawing.Point(0, 0);
-            this.panelGioHang.Name = "panelGioHang";
-            this.panelGioHang.Size = new System.Drawing.Size(1710, 282);
-            this.panelGioHang.TabIndex = 65;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnMuaHang);
@@ -90,6 +81,7 @@
             // btnMuaHang
             // 
             this.btnMuaHang.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnMuaHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMuaHang.HoverState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnMuaHang.Image = ((System.Drawing.Image)(resources.GetObject("btnMuaHang.Image")));
             this.btnMuaHang.ImageOffset = new System.Drawing.Point(0, 0);
@@ -112,6 +104,14 @@
             this.lblTongTien.Size = new System.Drawing.Size(60, 45);
             this.lblTongTien.TabIndex = 66;
             this.lblTongTien.Text = "0đ";
+            // 
+            // panelGioHang
+            // 
+            this.panelGioHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelGioHang.Location = new System.Drawing.Point(0, 0);
+            this.panelGioHang.Name = "panelGioHang";
+            this.panelGioHang.Size = new System.Drawing.Size(1710, 282);
+            this.panelGioHang.TabIndex = 1;
             // 
             // FGioHang
             // 
@@ -136,9 +136,9 @@
         private System.Windows.Forms.ToolStripMenuItem chuyenKhoanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ghiNoToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panelGioHang;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2ImageButton btnMuaHang;
         private System.Windows.Forms.Label lblTongTien;
+        public System.Windows.Forms.Panel panelGioHang;
     }
 }

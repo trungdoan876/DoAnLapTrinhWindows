@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Collections.Generic;
 using System.Security.Cryptography;
 
 namespace DoANLapTrinhWin
@@ -25,6 +24,9 @@ namespace DoANLapTrinhWin
         string ten;
         string trangthai;
         byte[] hinh;
+        DateTime ngayhientai = DateTime.Now;
+        List<SanPham> listsp = new List<SanPham>();
+        
         Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -74,11 +76,16 @@ namespace DoANLapTrinhWin
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT * From GioHang WHERE TrangThaiSP = '{0}' and MaNguoiMua ='{1}'", 1, maNM);
+                string sqlStr = string.Format("SELECT * From GioHang WHERE TrangThaiSP = '{0}' " +
+                    "and MaNguoiMua ='{1}'", 1, maNM);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
+                int yc = 0;
                 int y = 0;
+
+                Dictionary<string, UCTheoNB> dictUCTheoNB = new Dictionary<string, UCTheoNB>();
+
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
                     maNB = row["MaNguoiBan"].ToString();
@@ -90,29 +97,46 @@ namespace DoANLapTrinhWin
                     {
                         hinh = (byte[])row["Hinh"];
                     }
-                    SanPham sp = new SanPham(maSP, tenSP, giaBan, soLuong,hinh);
-                    
-                    UCDatHang ucdh = new UCDatHang(sp);
-                    
-                    //chinh sua public
+
+                    sp = new SanPham(maNB, maSP, tenSP, giaBan, hinh);
+                    listsp.Add(sp);
+
+                    UCTheoNB uc;
+                    if (!dictUCTheoNB.ContainsKey(maNB))
+                    {
+                        uc = new UCTheoNB(maNB);
+                        uc.Location = new Point(0, yc);
+                        yc += uc.Height + 5;
+                        paneldathang.Controls.Add(uc);
+                        dictUCTheoNB.Add(maNB, uc); //them 1 uc theo ma nguoi ban
+                    }
+                    else
+                    {
+                        uc = dictUCTheoNB[maNB];
+                    }
+
+                    //uc thong tin moi san pham
+                    UCDatHang ucdh = new UCDatHang(sp); 
                     ucdh.lblTenSP.Text = tenSP;
                     ucdh.lblGiaTien.Text = giaBan;
                     ucdh.lblsoluong.Text = soLuong;
                     ucdh.picHinh.Image = ByteArrayToImage(hinh);
+
                     //tinh tien
                     string giaban = giaBan.Substring(1); // Loại bỏ ký tự "đ" ở đầu chuỗi
                     decimal gb = decimal.Parse(giaban); // Chuyển đổi giá trị của giaban thành kiểu decimal
                     int tien = (int)(gb * int.Parse(soLuong)); // Thực hiện phép nhân và chuyển đổi kết quả thành kiểu int
-                    ucdh.lblthanhtien.Text = "đ" + tien.ToString() +".000"; // gán giá trị lên uc
+                    ucdh.lblthanhtien.Text = "đ" + tien.ToString(); // gán giá trị lên uc
+
                     //vi tri moi uc
                     ucdh.Location = new Point(0, y);
                     y += ucdh.Height += 5;
-                    paneldathang.Controls.Add(ucdh);
+                    uc.panelSP.Controls.Add(ucdh);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("" + ex);
             }
             finally
             {
@@ -123,7 +147,12 @@ namespace DoANLapTrinhWin
         {
             this.Close();
         }
-
+        int ma = 0;
+        public string TaoMaDonHangTuDong()
+        {
+            ma++;
+            return "DH" + ma.ToString();
+        }
         private void btnDatHang_Click_1(object sender, EventArgs e)
         {
             if(cmbThanhToan.Text =="Chuyển khoản")
@@ -139,19 +168,28 @@ namespace DoANLapTrinhWin
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("INSERT INTO DonHang(MaNguoiBan,MaNguoiMua,MaSanPham,TenSanPham,SoLuongSP,GiaBan,TongTien,TrangThai) " +
-                "VALUES ('{0}','{1}','{2}',N'{3}','{4}',N'{5}',N'{6}',N'{7}')", maNB, maNM, sp.MaSP, sp.TenSP, sp.SoLuong, sp.GiaBan, sp.GiaBan,trangthai);
-
-                //List <SanPham> splist = new List <SanPham>();   
-                string sqlStr2 = string.Format("DELETE FROM GioHang WHERE MaSanPham ='{0}'", sp.MaSP);
-
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Dat hang thanh cong");
-
-                SqlCommand cmd2 = new SqlCommand(sqlStr2, conn);
-                cmd2.ExecuteNonQuery();
-
+                var nguoiBanGroup = listsp.GroupBy(sp => sp.MaNguoiBan); //nhom nguoi ban lai de tao thanh 1 don hang
+                foreach (var grp in nguoiBanGroup)
+                {
+                    string maDonHang = TaoMaDonHangTuDong();
+                    //MessageBox.Show($"Mã người bán: {grp.Key}");
+                    string sql = string.Format("INSERT INTO DonHang(MaDonHang,MaNguoiMua,MaNguoiBan,TongTien,NgayDatHang,TrangThaiDonHang) " +
+                    "VALUES('{0}','{1}','{2}','{3}','{4}',N'{5}')", maDonHang, maNM, grp.Key, "", ngayhientai, "Đang chờ xác nhận");
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    foreach (var sanPham in grp)
+                    {
+                        //MessageBox.Show($"Mã sản phẩm: {sanPham.MaSP}, Giá bán: {sanPham.GiaBan}");
+                        string sqlstr = string.Format("INSERT INTO ChiTietDonHang(MaDonHang,MaSanPham)" +
+                    "VALUES('{0}','{1}')", maDonHang, sanPham.MaSP);
+                        string sqlstr2 = string.Format("DELETE GioHang WHERE MaSanPham ='{0}' ", sanPham.MaSP);
+                        SqlCommand cmdn = new SqlCommand(sqlstr2, conn);
+                        SqlCommand cmdm = new SqlCommand(sqlstr, conn);
+                        cmdm.ExecuteNonQuery();
+                        cmdn.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("Dat hang thanh cong!");
             }
             catch (Exception ex)
             {
@@ -161,11 +199,6 @@ namespace DoANLapTrinhWin
             {
                 conn.Close();
             }
-        }
-
-        private void FDatHang_Load(object sender, EventArgs e)
-        {
-            LoadData();
         }
     }
 }

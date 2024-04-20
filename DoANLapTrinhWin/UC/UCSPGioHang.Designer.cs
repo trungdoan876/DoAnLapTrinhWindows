@@ -84,6 +84,7 @@
             // checkBoxSP
             // 
             this.checkBoxSP.AutoSize = true;
+            this.checkBoxSP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBoxSP.Location = new System.Drawing.Point(61, 103);
             this.checkBoxSP.Name = "checkBoxSP";
             this.checkBoxSP.Size = new System.Drawing.Size(22, 21);
@@ -147,12 +148,13 @@
             // btnXoaKhoiGioHang
             // 
             this.btnXoaKhoiGioHang.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnXoaKhoiGioHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoaKhoiGioHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnXoaKhoiGioHang.HoverState.ImageSize = new System.Drawing.Size(70, 70);
             this.btnXoaKhoiGioHang.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaKhoiGioHang.Image")));
             this.btnXoaKhoiGioHang.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnXoaKhoiGioHang.ImageRotate = 0F;
-            this.btnXoaKhoiGioHang.Location = new System.Drawing.Point(1182, 59);
+            this.btnXoaKhoiGioHang.Location = new System.Drawing.Point(1461, 53);
             this.btnXoaKhoiGioHang.Name = "btnXoaKhoiGioHang";
             this.btnXoaKhoiGioHang.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnXoaKhoiGioHang.Size = new System.Drawing.Size(135, 118);
@@ -241,7 +243,7 @@
             this.Controls.Add(this.lblTrangThai);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UCSPGioHang";
-            this.Size = new System.Drawing.Size(1387, 239);
+            this.Size = new System.Drawing.Size(1599, 239);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soluongmuaGH)).EndInit();
             this.vongtrontt.ResumeLayout(false);

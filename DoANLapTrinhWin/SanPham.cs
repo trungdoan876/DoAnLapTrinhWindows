@@ -22,6 +22,20 @@ namespace DoANLapTrinhWin
         private string maNguoiBan;
         private string diaChi;
         private byte[] hinh;
+        public SanPham(string tenSP, byte[] hinh) //khoi tao dung cho quan ly don hang
+        {
+            this.tenSP = tenSP;
+            this.hinh = hinh;
+        }
+        public SanPham(string maNB, string maSP, string tenSP, string giaBan,byte[] hinh) // dung cho dat hang
+        {
+            this.maNguoiBan = maNB;
+            this.MaSP = maSP;
+            this.tenSP = tenSP;
+            this.giaBan = giaBan;
+            this.hinh= hinh;
+        }
+        
         public SanPham(string tenSP, string giaBan, string giaGoc, string tinhTrang,string maSP,string soLuong,byte[] hinh, string diaChi) //khoi tao dung cho FGioHang
         {
             this.tenSP = tenSP;
@@ -42,14 +56,14 @@ namespace DoANLapTrinhWin
             this.giaGoc = giaGoc;
             this.hinh = hinh;
         }
-        public SanPham(string maSP, string tenSP, string giaBan, string diaChi, byte[] hinh) //khoi tao dung  cho FYeuThich
+/*        public SanPham(string maSP, string tenSP, string giaBan, string diaChi, byte[] hinh) //khoi tao dung  cho FYeuThich
         {
             this.maSP = maSP;
             this.tenSP = tenSP;
             this.giaBan = giaBan;
             this.diaChi = diaChi;
             this.hinh = hinh;
-        }
+        }*/
         public SanPham(string maSP, string tenSP, string giaBan, string giaGoc, string xuatXu, string thoiGianDaSuDung,DateTime ngayDang, string moTaSanPham,
             string nganhHang, string tinhTrang, string diaChi, string maNguoiBan, string soLuong,byte[]hinh)
         {

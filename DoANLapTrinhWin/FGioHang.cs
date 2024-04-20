@@ -43,18 +43,18 @@ namespace DoANLapTrinhWin
                 adapter.Fill(dtSet);
                 int y = 0;
                 int yc = 0;
-                
-                List <SanPham> splist = new List<SanPham> ();
+
+                Dictionary<string, UCTheoNB> dictUCTheoNB = new Dictionary<string, UCTheoNB>();
 
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
-                    
+
                     string maNB = row["maNB"].ToString();
                     //MessageBox.Show(maNB);
-                    UCTheoNB uc = new UCTheoNB(maNB);
+                    /*UCTheoNB uc = new UCTheoNB(maNB);
                     uc.Location = new Point(0, yc);
-                    yc += uc.Height +=  5;
-                    panelGioHang.Controls.Add(uc);
+                    yc += uc.Height += 5;
+                    panelGioHang.Controls.Add(uc);*/
                     string maSP = row["MaSP"].ToString();
                     string tenSP = row["TenSP"].ToString();
                     string giaBan = "đ" + row["GiaBan"].ToString();
@@ -68,11 +68,24 @@ namespace DoANLapTrinhWin
                     {
                         hinh = (byte[])row["Hinh"];
                     }
-                    
-                    sp = new SanPham(tenSP, giaBan, giaGoc, tinhTrang,maSP,soLuong, hinh, diaChi);
-                    
+
+                    UCTheoNB ucnb = new UCTheoNB(maNB);
+
+                    if (dictUCTheoNB.ContainsKey(maNB))
+                    {
+                        ucnb = dictUCTheoNB[maNB];
+                    }
+                    else
+                    {
+                        ucnb = new UCTheoNB(maNB);
+                        ucnb.Location = new Point(0, yc);
+                        yc += ucnb.Height += 5;
+                        panelGioHang.Controls.Add(ucnb);
+                        dictUCTheoNB.Add(maNB, ucnb);
+                    }
+                    sp = new SanPham(tenSP, giaBan, giaGoc, tinhTrang, maSP, soLuong, hinh, diaChi);
                     UCSPGioHang spgh = new UCSPGioHang(sp);
-                    //splist.Add(sp);
+
                     //chinh sua public
                     spgh.lblTenSP.Text = tenSP;
                     spgh.lblGiaTien.Text = giaBan;
@@ -81,11 +94,14 @@ namespace DoANLapTrinhWin
                     int tt = int.Parse(str);
                     spgh.vongtrontt.Value = tt;
                     spgh.picHinh.Image = ByteArrayToImage(hinh);
-                    spgh.lblSoLuong.Text = soLuong +" sản phẩm sẵn có";
+                    spgh.lblSoLuong.Text = soLuong + " sản phẩm sẵn có";
                     spgh.soluongmuaGH.Value = int.Parse(soLuongMua);
                     spgh.lblgia.Text = giaGoc;
                     spgh.lblDiaChi.Text = diaChi;
-                    uc.panelSP.Controls.Add(spgh);
+                    spgh.Location = new Point(0, y);
+                    y += spgh.Height += 5;
+                    ucnb.panelSP.Controls.Add(spgh);
+
                     spgh.lblTrangThai.Text = trangthai;
 
                     if (spgh.lblTrangThai.Text == "True")
@@ -108,7 +124,6 @@ namespace DoANLapTrinhWin
                 conn.Close();
             }
         }
-
         private void btnMuaHang_Click_1(object sender, EventArgs e)
         {
             FDatHang fdh = new FDatHang(maNM, sp,tongtien);

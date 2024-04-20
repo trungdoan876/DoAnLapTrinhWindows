@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Guna.UI.WinForms;
 using Guna.UI2.WinForms;
 
 namespace DoANLapTrinhWin
