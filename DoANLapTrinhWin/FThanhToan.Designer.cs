@@ -48,8 +48,8 @@
             this.btnTru = new System.Windows.Forms.Button();
             this.btnCong = new System.Windows.Forms.Button();
             this.txtSL = new System.Windows.Forms.TextBox();
-            this.ucTBDC = new DoANLapTrinhWin.UCTextBox();
-            this.ucTBTenNN = new DoANLapTrinhWin.UCTextBox();
+            //this.ucTBDC = new DoANLapTrinhWin.UCTextBox();
+            //this.ucTBTenNN = new DoANLapTrinhWin.UCTextBox();
             this.menuContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.SuspendLayout();
@@ -273,7 +273,7 @@
             // 
             // ucTBDC
             // 
-            this.ucTBDC.BackColor = System.Drawing.SystemColors.Window;
+            /*this.ucTBDC.BackColor = System.Drawing.SystemColors.Window;
             this.ucTBDC.BanKinhKhung = 0;
             this.ucTBDC.ChumoColor = System.Drawing.Color.DarkGray;
             this.ucTBDC.ChumoText = "";
@@ -288,11 +288,11 @@
             this.ucTBDC.PasswordChar = false;
             this.ucTBDC.Size = new System.Drawing.Size(390, 38);
             this.ucTBDC.TabIndex = 14;
-            this.ucTBDC.Texts = "";
+            this.ucTBDC.Texts = "";*/
             // 
             // ucTBTenNN
             // 
-            this.ucTBTenNN.BackColor = System.Drawing.SystemColors.Window;
+            /*this.ucTBTenNN.BackColor = System.Drawing.SystemColors.Window;
             this.ucTBTenNN.BanKinhKhung = 0;
             this.ucTBTenNN.ChumoColor = System.Drawing.Color.DarkGray;
             this.ucTBTenNN.ChumoText = "";
@@ -307,7 +307,7 @@
             this.ucTBTenNN.PasswordChar = false;
             this.ucTBTenNN.Size = new System.Drawing.Size(390, 38);
             this.ucTBTenNN.TabIndex = 12;
-            this.ucTBTenNN.Texts = "";
+            this.ucTBTenNN.Texts = "";*/
             // 
             // FThanhToan
             // 
@@ -321,9 +321,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.picHinh);
             this.Controls.Add(this.lblDCGH);
-            this.Controls.Add(this.ucTBDC);
+            /*this.Controls.Add(this.ucTBDC);
             this.Controls.Add(this.lblTenNN);
-            this.Controls.Add(this.ucTBTenNN);
+            this.Controls.Add(this.ucTBTenNN);*/
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblGiaBan);
@@ -354,10 +354,8 @@
         private System.Windows.Forms.Label lblGiaBan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private UCTextBox ucTBTenNN;
         private System.Windows.Forms.Label lblTenNN;
         private System.Windows.Forms.Label lblDCGH;
-        private UCTextBox ucTBDC;
         private System.Windows.Forms.PictureBox picHinh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTru;

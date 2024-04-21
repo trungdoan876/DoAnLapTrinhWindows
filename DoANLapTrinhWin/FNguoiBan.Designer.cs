@@ -112,6 +112,7 @@
             // btnThoat
             // 
             this.btnThoat.Animated = true;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -139,6 +140,7 @@
             // btnThongTin
             // 
             this.btnThongTin.Animated = true;
+            this.btnThongTin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThongTin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThongTin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThongTin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -169,6 +171,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDonHang.Animated = true;
+            this.btnDonHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDonHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDonHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDonHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -196,6 +199,7 @@
             // btnSanPham
             // 
             this.btnSanPham.Animated = true;
+            this.btnSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -226,6 +230,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThongKe.Animated = true;
+            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

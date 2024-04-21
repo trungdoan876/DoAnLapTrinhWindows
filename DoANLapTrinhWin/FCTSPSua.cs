@@ -34,8 +34,9 @@ namespace DoANLapTrinhWin
         }
         public FCTSPSua(SanPham sp)
         {
-            InitializeComponent();
-            this.Size = new Size(1100,550);
+            InitializeComponent(); 
+            this.Size = new Size(1100,550); //tao size moi cho form
+            //thông tin hiện lên của sản phẩm
             txtMaSanPham.Text = sp.MaSP;
             txtTenSP.Text = sp.TenSP;
             txtGiaBan.Text = sp.GiaBan;
@@ -60,11 +61,7 @@ namespace DoANLapTrinhWin
             txtSoLuonSanCo.Text = sp.SoLuong;
             picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
-        private void FCTSPSua_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        //chỉnh sửa sản phẩm
         private void btnSuaSanPham_Click(object sender, EventArgs e)
         {
             SanPham sp = new SanPham(txtMaSanPham.Text, txtTenSP.Text,  txtGiaBan.Text, txtGiaGoc.Text,
@@ -72,7 +69,7 @@ namespace DoANLapTrinhWin
                     lblTinhTrang.Text, txtDiaChi.Text, "",txtSoLuonSanCo.Text, ImageToByteArray(picHinh.Image));
             spDao.CapNhatSanPham(sp);
         }
-
+        //đăng bán sản phẩm
         private void btnDangBan_Click(object sender, EventArgs e)
         {
             SanPham sp = new SanPham(txtMaSanPham.Text, txtTenSP.Text, txtGiaBan.Text, txtGiaGoc.Text,
@@ -80,12 +77,12 @@ namespace DoANLapTrinhWin
                    lblTinhTrang.Text, txtDiaChi.Text, "", txtSoLuonSanCo.Text, ImageToByteArray(picHinh.Image));
             spDao.CapNhatDangBan(sp);
         }
-
+        //nút back
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        //điều chỉnh giá trị tình trạng sản phẩm
         private void tinhTrang_Scroll(object sender, ScrollEventArgs e)
         {
             int value = tinhTrang.Value;
@@ -98,7 +95,7 @@ namespace DoANLapTrinhWin
             // Cập nhật vị trí mới của Label
             lblTinhTrang.Left = newPosition;
         }
-
+        //thêm hình ảnh
         private void btnThemHinh_Click(object sender, EventArgs e)
         {
             OpenFileDialog odlgOpenFile = new OpenFileDialog();

@@ -183,6 +183,7 @@
             // btnMuaNgay
             // 
             this.btnMuaNgay.BorderRadius = 20;
+            this.btnMuaNgay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMuaNgay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnMuaNgay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnMuaNgay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -205,6 +206,7 @@
             // btnThemVaoGio
             // 
             this.btnThemVaoGio.BorderRadius = 20;
+            this.btnThemVaoGio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemVaoGio.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThemVaoGio.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThemVaoGio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -420,6 +422,7 @@
             // btnQuaylai
             // 
             this.btnQuaylai.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnQuaylai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuaylai.HoverState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnQuaylai.Image = ((System.Drawing.Image)(resources.GetObject("btnQuaylai.Image")));
             this.btnQuaylai.ImageOffset = new System.Drawing.Point(0, 0);

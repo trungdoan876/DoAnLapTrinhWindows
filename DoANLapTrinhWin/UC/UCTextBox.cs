@@ -31,42 +31,42 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
         }
-       
+
         //properties
         public Color MauKhung
         {
-            get 
-            { 
-                return mauKhung; 
+            get
+            {
+                return mauKhung;
             }
-            set 
-            { 
-                mauKhung = value; 
+            set
+            {
+                mauKhung = value;
                 this.Invalidate();
             }
         }
-        public int KichThuocKhung 
+        public int KichThuocKhung
         {
-            get 
-            { 
-                return kichThuocKhung; 
-            } 
-            set 
-            { 
-                kichThuocKhung = value; 
-                this.Invalidate(); 
+            get
+            {
+                return kichThuocKhung;
+            }
+            set
+            {
+                kichThuocKhung = value;
+                this.Invalidate();
             }
         }
         public bool GachChan
         {
-            get 
-            { 
-                return gachChan; 
+            get
+            {
+                return gachChan;
             }
-            set 
-            { 
-                gachChan = value; 
-                this.Invalidate ();
+            set
+            {
+                gachChan = value;
+                this.Invalidate();
             }
         }
         public int BanKinhKhung
@@ -93,8 +93,11 @@ namespace DoANLapTrinhWin
         public bool PasswordChar
         {
             get { return ismatkhau; }
-            set { ismatkhau = value;
-                textBox1.UseSystemPasswordChar = value; }
+            set
+            {
+                ismatkhau = value;
+                textBox1.UseSystemPasswordChar = value;
+            }
         }
 
         public string Texts
@@ -111,35 +114,37 @@ namespace DoANLapTrinhWin
             }
         }
 
-        public Color ChumoColor { 
-            get => chumoColor; 
-            set 
+        public Color ChumoColor
+        {
+            get => chumoColor;
+            set
             {
                 chumoColor = value;
-                if(ismatkhau) textBox1.ForeColor = value;
-            } 
+                if (ismatkhau) textBox1.ForeColor = value;
+            }
         }
 
-        public string ChumoText 
-        { get => chumoText; 
+        public string ChumoText
+        {
+            get => chumoText;
             set
-            { 
+            {
                 chumoText = value;
-                textBox1.Text ="";
+                textBox1.Text = "";
                 Setischumo();
             }
-                
+
         }
         private void Setischumo()
         {
-            if(string.IsNullOrWhiteSpace(textBox1.Text) && chumoText != "") 
+            if (string.IsNullOrWhiteSpace(textBox1.Text) && chumoText != "")
             {
                 ischumo = true;
                 textBox1.Text = chumoText;
-                textBox1.ForeColor = chumoColor;    
-                if(ismatkhau)
+                textBox1.ForeColor = chumoColor;
+                if (ismatkhau)
                 {
-                    textBox1.UseSystemPasswordChar= false;
+                    textBox1.UseSystemPasswordChar = false;
                 }
             }
         }
@@ -235,7 +240,7 @@ namespace DoANLapTrinhWin
         {
             get { return textBox1; }
         }
-    
+
 
 
         private void UCTextBox_Enter(object sender, EventArgs e)

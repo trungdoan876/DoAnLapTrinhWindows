@@ -108,6 +108,7 @@
             // btnGoDangBan
             // 
             this.btnGoDangBan.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnGoDangBan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGoDangBan.HoverState.ImageSize = new System.Drawing.Size(30, 30);
             this.btnGoDangBan.Image = ((System.Drawing.Image)(resources.GetObject("btnGoDangBan.Image")));
             this.btnGoDangBan.ImageOffset = new System.Drawing.Point(0, 0);

@@ -31,12 +31,10 @@ namespace DoANLapTrinhWin
             txtTen.Text = ten;
             lblDiaChi.Text = diachi;
         }
-
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void btnThanhToan_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("Thanh toán thành công \r\n Cảm ơn quý khách đã tin tưởng PandaShop");

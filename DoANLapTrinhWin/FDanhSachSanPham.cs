@@ -17,11 +17,6 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNB;
         byte[] hinh;
-        Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return Image.FromStream(ms);
-        }
         private Form formcon;
         private void moFormCon(Form form)
         {
@@ -37,6 +32,11 @@ namespace DoANLapTrinhWin
             panelTatCaSP.Tag = form;
             form.BringToFront();
             form.Show();
+        }
+        Image ByteArrayToImage(byte[] a)
+        {
+            MemoryStream ms = new MemoryStream(a);
+            return Image.FromStream(ms);
         }
         public FDanhSachSanPham(string maNB)
         {
@@ -90,7 +90,7 @@ namespace DoANLapTrinhWin
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {
@@ -104,13 +104,7 @@ namespace DoANLapTrinhWin
 
         private void btnThemSanPham_Click(object sender, EventArgs e)
         {
-            /*  this.Hide(); //an form 1
-              FThemSanPham form2 = new FThemSanPham(maNB); // tao doi tuong form 2
-              form2.ShowDialog();
-              form2 = null; //tat form2, tuc la form 2 tro ve null
-              this.Show();
-              LoadData();
-              panelTatCaSP*/
+            //Global.MoFormCon(new FThemSanPham(maNB),panelTatCaSP);
             moFormCon(new FThemSanPham(maNB));
         }
     }

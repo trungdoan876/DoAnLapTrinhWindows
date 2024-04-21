@@ -68,6 +68,7 @@
             // btnSuaSanPham
             // 
             this.btnSuaSanPham.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnSuaSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSuaSanPham.HoverState.ImageSize = new System.Drawing.Size(75, 75);
             this.btnSuaSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaSanPham.Image")));
             this.btnSuaSanPham.ImageOffset = new System.Drawing.Point(0, 0);
@@ -82,6 +83,7 @@
             // btnDangBan
             // 
             this.btnDangBan.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnDangBan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangBan.HoverState.ImageSize = new System.Drawing.Size(75, 75);
             this.btnDangBan.Image = ((System.Drawing.Image)(resources.GetObject("btnDangBan.Image")));
             this.btnDangBan.ImageOffset = new System.Drawing.Point(0, 0);
@@ -357,6 +359,7 @@
             // 
             // tinhTrang
             // 
+            this.tinhTrang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tinhTrang.FillColor = System.Drawing.Color.Pink;
             this.tinhTrang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.tinhTrang.HoverState.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -387,6 +390,7 @@
             // btnQuaylai
             // 
             this.btnQuaylai.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnQuaylai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuaylai.HoverState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnQuaylai.Image = ((System.Drawing.Image)(resources.GetObject("btnQuaylai.Image")));
             this.btnQuaylai.ImageOffset = new System.Drawing.Point(0, 0);
@@ -427,6 +431,7 @@
             // btnThemHinh
             // 
             this.btnThemHinh.BorderRadius = 10;
+            this.btnThemHinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemHinh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThemHinh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThemHinh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -451,6 +456,7 @@
             // guna2Button1
             // 
             this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -495,7 +501,6 @@
             this.Name = "FCTSPSua";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FChiTietSua";
-            this.Load += new System.EventHandler(this.FCTSPSua_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

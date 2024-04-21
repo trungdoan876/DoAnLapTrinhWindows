@@ -21,6 +21,7 @@ namespace DoANLapTrinhWin
             InitializeComponent();
             this.maNB = maNB;
         }
+        //Trong bảng SanPham DangBan = 1 -> đã đăng bán
         private void LoadData()
         {
             try
@@ -34,6 +35,7 @@ namespace DoANLapTrinhWin
                 int y = 0;
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
+                    //lấy thông tin sản phẩm từ dataset
                     string maSP = row["MaSanPham"].ToString();
                     string tenSP = row["TenSanPham"].ToString();
                     string giaTien = row["GiaBan"].ToString();
@@ -49,6 +51,7 @@ namespace DoANLapTrinhWin
                     {
                         hinh = (byte[])row["Hinh"];
                     }
+                    //khởi tạo đối tượng để truyền vào UCSPDangBan
                     SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", "",hinh);
 
                     UCSPDangBan ucSPBan = new UCSPDangBan(sp);
@@ -65,7 +68,7 @@ namespace DoANLapTrinhWin
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {

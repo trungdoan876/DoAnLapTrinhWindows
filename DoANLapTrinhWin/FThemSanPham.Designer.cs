@@ -93,6 +93,7 @@
             // btnQuaylai
             // 
             this.btnQuaylai.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnQuaylai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuaylai.HoverState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnQuaylai.Image = ((System.Drawing.Image)(resources.GetObject("btnQuaylai.Image")));
             this.btnQuaylai.ImageOffset = new System.Drawing.Point(0, 0);
@@ -125,6 +126,7 @@
             // 
             // tinhTrang
             // 
+            this.tinhTrang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tinhTrang.FillColor = System.Drawing.Color.Gold;
             this.tinhTrang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.tinhTrang.HoverState.ThumbColor = System.Drawing.Color.DodgerBlue;
@@ -395,6 +397,7 @@
             // btnThemSP
             // 
             this.btnThemSP.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnThemSP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemSP.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnThemSP.HoverState.ImageSize = new System.Drawing.Size(55, 55);
             this.btnThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSP.Image")));
@@ -411,6 +414,7 @@
             // btnThemHinh
             // 
             this.btnThemHinh.BorderRadius = 10;
+            this.btnThemHinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemHinh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThemHinh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThemHinh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -451,6 +455,7 @@
             this.cmbNganhHang.BackColor = System.Drawing.Color.Transparent;
             this.cmbNganhHang.BorderColor = System.Drawing.Color.Black;
             this.cmbNganhHang.BorderRadius = 10;
+            this.cmbNganhHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbNganhHang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbNganhHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNganhHang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -472,7 +477,7 @@
             this.cmbNganhHang.ItemsAppearance.SelectedBackColor = System.Drawing.Color.SkyBlue;
             this.cmbNganhHang.Location = new System.Drawing.Point(1001, 86);
             this.cmbNganhHang.Name = "cmbNganhHang";
-            this.cmbNganhHang.Size = new System.Drawing.Size(353, 31);
+            this.cmbNganhHang.Size = new System.Drawing.Size(365, 31);
             this.cmbNganhHang.StartIndex = 0;
             this.cmbNganhHang.TabIndex = 292;
             this.cmbNganhHang.Tag = "";
@@ -481,6 +486,7 @@
             // guna2Button1
             // 
             this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

@@ -21,6 +21,7 @@ namespace DoANLapTrinhWin
             InitializeComponent();
             this.maNB = maNB;
         }
+        //DangBan trong bang SP = 0 -> chua dang ban
         public void LoadData()
         {
             try
@@ -65,7 +66,7 @@ namespace DoANLapTrinhWin
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {

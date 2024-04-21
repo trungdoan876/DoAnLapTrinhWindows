@@ -74,6 +74,7 @@
             // 
             this.btnSua.Animated = true;
             this.btnSua.BorderRadius = 10;
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -100,7 +101,7 @@
             this.lblGioiThieu.BackColor = System.Drawing.Color.Transparent;
             this.lblGioiThieu.Font = new System.Drawing.Font("Palatino Linotype", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGioiThieu.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblGioiThieu.Location = new System.Drawing.Point(677, 41);
+            this.lblGioiThieu.Location = new System.Drawing.Point(636, 41);
             this.lblGioiThieu.Name = "lblGioiThieu";
             this.lblGioiThieu.Size = new System.Drawing.Size(14, 46);
             this.lblGioiThieu.TabIndex = 227;
@@ -113,7 +114,7 @@
             this.guna2CircleProgressBar1.FillThickness = 20;
             this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(523, 23);
+            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(504, 23);
             this.guna2CircleProgressBar1.Minimum = 0;
             this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
             this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.SkyBlue;
@@ -148,7 +149,7 @@
             this.txtMoTa.PasswordChar = '\0';
             this.txtMoTa.PlaceholderText = "";
             this.txtMoTa.SelectedText = "";
-            this.txtMoTa.Size = new System.Drawing.Size(843, 249);
+            this.txtMoTa.Size = new System.Drawing.Size(848, 249);
             this.txtMoTa.TabIndex = 225;
             // 
             // picHinh
@@ -170,6 +171,7 @@
             this.btnThemAnh.Animated = true;
             this.btnThemAnh.BorderRadius = 10;
             this.btnThemAnh.BorderThickness = 1;
+            this.btnThemAnh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemAnh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThemAnh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThemAnh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -204,13 +206,13 @@
             this.txtDiaChi.HoverState.FillColor = System.Drawing.Color.White;
             this.txtDiaChi.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDiaChi.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtDiaChi.IconLeft")));
-            this.txtDiaChi.Location = new System.Drawing.Point(523, 452);
+            this.txtDiaChi.Location = new System.Drawing.Point(518, 452);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "";
             this.txtDiaChi.SelectedText = "";
-            this.txtDiaChi.Size = new System.Drawing.Size(380, 53);
+            this.txtDiaChi.Size = new System.Drawing.Size(848, 53);
             this.txtDiaChi.TabIndex = 222;
             // 
             // txtEmail
@@ -230,13 +232,13 @@
             this.txtEmail.HoverState.FillColor = System.Drawing.Color.White;
             this.txtEmail.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtEmail.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtEmail.IconLeft")));
-            this.txtEmail.Location = new System.Drawing.Point(988, 452);
+            this.txtEmail.Location = new System.Drawing.Point(984, 338);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(373, 53);
+            this.txtEmail.Size = new System.Drawing.Size(382, 53);
             this.txtEmail.TabIndex = 221;
             // 
             // txtGioiTinh
@@ -256,7 +258,7 @@
             this.txtGioiTinh.HoverState.FillColor = System.Drawing.Color.White;
             this.txtGioiTinh.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtGioiTinh.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtGioiTinh.IconLeft")));
-            this.txtGioiTinh.Location = new System.Drawing.Point(988, 341);
+            this.txtGioiTinh.Location = new System.Drawing.Point(518, 245);
             this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGioiTinh.Name = "txtGioiTinh";
             this.txtGioiTinh.PasswordChar = '\0';
@@ -282,13 +284,13 @@
             this.txtSDT.HoverState.FillColor = System.Drawing.Color.White;
             this.txtSDT.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSDT.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSDT.IconLeft")));
-            this.txtSDT.Location = new System.Drawing.Point(518, 341);
+            this.txtSDT.Location = new System.Drawing.Point(518, 338);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderText = "";
             this.txtSDT.SelectedText = "";
-            this.txtSDT.Size = new System.Drawing.Size(380, 53);
+            this.txtSDT.Size = new System.Drawing.Size(373, 53);
             this.txtSDT.TabIndex = 219;
             // 
             // txtCCCD
@@ -314,7 +316,7 @@
             this.txtCCCD.PasswordChar = '\0';
             this.txtCCCD.PlaceholderText = "";
             this.txtCCCD.SelectedText = "";
-            this.txtCCCD.Size = new System.Drawing.Size(373, 53);
+            this.txtCCCD.Size = new System.Drawing.Size(378, 53);
             this.txtCCCD.TabIndex = 218;
             // 
             // txtHoTen
@@ -335,7 +337,7 @@
             this.txtHoTen.HoverState.FillColor = System.Drawing.Color.White;
             this.txtHoTen.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtHoTen.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtHoTen.IconLeft")));
-            this.txtHoTen.Location = new System.Drawing.Point(988, 149);
+            this.txtHoTen.Location = new System.Drawing.Point(518, 145);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.PasswordChar = '\0';
@@ -362,13 +364,13 @@
             this.txtMaTaiKhoan.HoverState.FillColor = System.Drawing.Color.White;
             this.txtMaTaiKhoan.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMaTaiKhoan.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtMaTaiKhoan.IconLeft")));
-            this.txtMaTaiKhoan.Location = new System.Drawing.Point(518, 149);
+            this.txtMaTaiKhoan.Location = new System.Drawing.Point(133, 133);
             this.txtMaTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMaTaiKhoan.Name = "txtMaTaiKhoan";
             this.txtMaTaiKhoan.PasswordChar = '\0';
             this.txtMaTaiKhoan.PlaceholderText = "";
             this.txtMaTaiKhoan.SelectedText = "";
-            this.txtMaTaiKhoan.Size = new System.Drawing.Size(385, 53);
+            this.txtMaTaiKhoan.Size = new System.Drawing.Size(231, 53);
             this.txtMaTaiKhoan.TabIndex = 216;
             // 
             // dtpNgSinh
@@ -378,11 +380,11 @@
             this.dtpNgSinh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dtpNgSinh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgSinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgSinh.Location = new System.Drawing.Point(518, 245);
+            this.dtpNgSinh.Location = new System.Drawing.Point(984, 145);
             this.dtpNgSinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgSinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgSinh.Name = "dtpNgSinh";
-            this.dtpNgSinh.Size = new System.Drawing.Size(385, 53);
+            this.dtpNgSinh.Size = new System.Drawing.Size(382, 53);
             this.dtpNgSinh.TabIndex = 214;
             this.dtpNgSinh.Value = new System.DateTime(2024, 4, 13, 15, 2, 40, 120);
             // 

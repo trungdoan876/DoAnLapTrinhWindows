@@ -123,3 +123,20 @@ SELECT SanPham.Hinh as Hinh, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaB
                     FROM YeuThich,SanPham WHERE YeuThich.MaSanPham = SanPham.MaSanPham and MaNguoiMua = 'NM01'
 SELECT SanPham.MaNguoiBan as maNB,SanPham.Hinh,SanPham.MaSanPham as MaSP, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi, SanPham.SoLuong as SL, GioHang.SoLuong as SLMua, GioHang.TrangThaiSP as TrangThai FROM GioHang, SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = 'NM01'
 select GioHang.MaNguoiMua, GioHang.MaSanPham, NguoiMua.TenNguoiMua as ten, NguoiMua.DiaChi as diachi FROM GioHang, NguoiMua WHERE GioHang.MaNguoiMua = NguoiMua.MaNguoiMua AND NguoiMua.MaNguoiMua ='NM01'
+GO
+CREATE TABLE DonHang
+(
+	MaDonHang char(20),
+	MaNguoiBan nchar(10),
+	MaNguoiMua nchar(10),
+	TongTien nvarchar(100),
+	NgayDatHang DateTime,
+	TrangThaiDonHang nvarchar(100), --da xac nhan,...
+)
+Create table ChiTietDonHang
+(
+	MaDonHang char(10),
+	MaSanPham nchar(10),
+	--so luong sp
+	GiaTien char(10)
+)

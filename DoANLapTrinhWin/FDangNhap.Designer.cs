@@ -138,6 +138,7 @@
             // 
             this.btnBanHang.Animated = true;
             this.btnBanHang.BorderRadius = 10;
+            this.btnBanHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBanHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBanHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBanHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -224,6 +225,7 @@
             // 
             this.btnMuaHang.Animated = true;
             this.btnMuaHang.BorderRadius = 10;
+            this.btnMuaHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMuaHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnMuaHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnMuaHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -291,6 +293,7 @@
             // 
             this.btnDangNhap.Animated = true;
             this.btnDangNhap.BorderRadius = 10;
+            this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDangNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

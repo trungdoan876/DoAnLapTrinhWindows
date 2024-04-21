@@ -46,14 +46,15 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnTatCaSP);
-            this.panel2.Location = new System.Drawing.Point(12, 3);
+            this.panel2.Location = new System.Drawing.Point(8, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(219, 70);
+            this.panel2.Size = new System.Drawing.Size(505, 70);
             this.panel2.TabIndex = 1;
             // 
             // btnTatCaSP
             // 
             this.btnTatCaSP.Animated = true;
+            this.btnTatCaSP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTatCaSP.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTatCaSP.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTatCaSP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -65,7 +66,7 @@
             this.btnTatCaSP.Image = ((System.Drawing.Image)(resources.GetObject("btnTatCaSP.Image")));
             this.btnTatCaSP.Location = new System.Drawing.Point(0, 0);
             this.btnTatCaSP.Name = "btnTatCaSP";
-            this.btnTatCaSP.Size = new System.Drawing.Size(219, 70);
+            this.btnTatCaSP.Size = new System.Drawing.Size(505, 70);
             this.btnTatCaSP.TabIndex = 38;
             this.btnTatCaSP.Text = "Tất cả sản phẩm";
             this.btnTatCaSP.Click += new System.EventHandler(this.btnTatCaSP_Click);
@@ -73,14 +74,15 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.btnChuaDangBan);
-            this.panel4.Location = new System.Drawing.Point(462, 3);
+            this.panel4.Location = new System.Drawing.Point(1030, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(219, 70);
+            this.panel4.Size = new System.Drawing.Size(505, 70);
             this.panel4.TabIndex = 3;
             // 
             // btnChuaDangBan
             // 
             this.btnChuaDangBan.Animated = true;
+            this.btnChuaDangBan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChuaDangBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnChuaDangBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnChuaDangBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -92,7 +94,7 @@
             this.btnChuaDangBan.Image = ((System.Drawing.Image)(resources.GetObject("btnChuaDangBan.Image")));
             this.btnChuaDangBan.Location = new System.Drawing.Point(0, -4);
             this.btnChuaDangBan.Name = "btnChuaDangBan";
-            this.btnChuaDangBan.Size = new System.Drawing.Size(222, 74);
+            this.btnChuaDangBan.Size = new System.Drawing.Size(505, 74);
             this.btnChuaDangBan.TabIndex = 40;
             this.btnChuaDangBan.Text = "Chưa đăng bán";
             this.btnChuaDangBan.Click += new System.EventHandler(this.btnChuaDangBan_Click);
@@ -107,20 +109,21 @@
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1478, 80);
+            this.panel1.Size = new System.Drawing.Size(1573, 80);
             this.panel1.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnDaDangBan);
-            this.panel3.Location = new System.Drawing.Point(237, 3);
+            this.panel3.Location = new System.Drawing.Point(519, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(219, 70);
+            this.panel3.Size = new System.Drawing.Size(505, 70);
             this.panel3.TabIndex = 41;
             // 
             // btnDaDangBan
             // 
             this.btnDaDangBan.Animated = true;
+            this.btnDaDangBan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDaDangBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDaDangBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDaDangBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -132,7 +135,7 @@
             this.btnDaDangBan.Image = ((System.Drawing.Image)(resources.GetObject("btnDaDangBan.Image")));
             this.btnDaDangBan.Location = new System.Drawing.Point(0, 0);
             this.btnDaDangBan.Name = "btnDaDangBan";
-            this.btnDaDangBan.Size = new System.Drawing.Size(219, 70);
+            this.btnDaDangBan.Size = new System.Drawing.Size(505, 70);
             this.btnDaDangBan.TabIndex = 39;
             this.btnDaDangBan.Text = "Đã đăng bán";
             this.btnDaDangBan.Click += new System.EventHandler(this.btnDaDangBan_Click);
@@ -142,7 +145,7 @@
             this.panelThanSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelThanSP.Location = new System.Drawing.Point(0, 80);
             this.panelThanSP.Name = "panelThanSP";
-            this.panelThanSP.Size = new System.Drawing.Size(1478, 864);
+            this.panelThanSP.Size = new System.Drawing.Size(1573, 864);
             this.panelThanSP.TabIndex = 1;
             // 
             // FSanPham
@@ -150,7 +153,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1478, 944);
+            this.ClientSize = new System.Drawing.Size(1573, 944);
             this.Controls.Add(this.panelThanSP);
             this.Controls.Add(this.panel1);
             this.Name = "FSanPham";

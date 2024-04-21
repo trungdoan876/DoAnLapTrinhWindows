@@ -14,81 +14,52 @@ namespace DoANLapTrinhWin
     public partial class FNguoiMua : Form
     {
         string tenTK;
+        Global gl = new Global();
         public FNguoiMua(string tenTK)
         {
             InitializeComponent();
             this.Size = new Size(1200, 600);
             this.tenTK = tenTK;
         }
-        private Form formconmua;
-        private void moFormConMua(Form form)
-        {
-            if (formconmua != null)
-            {
-                formconmua.Close();
-            }
-            formconmua = form;
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            panelThan.Controls.Add(form);
-            panelThan.Tag = form;
-            form.BringToFront();
-            form.Show();
-        }
         private void FNguoiMua_Load(object sender, EventArgs e)
         {
 
         }
-        private Guna2Button btnOK;
-        private void TaoButton(object button)
-        {
-            var btn = (Guna2Button)button;
-
-            btn.FillColor = Color.Gold;
-
-            if (btnOK != null && btnOK != btn)
-            {
-                btnOK.FillColor = Color.FromArgb(64, 64, 64);
-            }
-
-            btnOK = btn;
-        }
 
         private void btnThongTin_Click(object sender, EventArgs e)
         {
-            TaoButton(btnThongTin);
-            moFormConMua(new FThongTinChiTietNguoiMua());    
+            Global.TaoButton(btnThongTin, ref gl.btnOK);
+            Global.MoFormCon(new FThongTinChiTietNguoiMua(), panelThan);    
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            TaoButton(btnDangXuat);
+            Global.TaoButton(btnDangXuat, ref gl.btnOK);
             this.Close();
         }
 
         private void btnMuaHang_Click(object sender, EventArgs e)
         {
-            TaoButton(btnMuaHang);
-            moFormConMua(new FMuaHang(tenTK));
+            Global.TaoButton(btnMuaHang, ref gl.btnOK);
+            Global.MoFormCon(new FMuaHang(tenTK), panelThan);
         }
 
         private void btnGioHang_Click(object sender, EventArgs e)
         {
-            TaoButton(btnGioHang);
-            moFormConMua(new FGioHang(tenTK));
+            Global.TaoButton(btnGioHang, ref gl.btnOK);
+            Global.MoFormCon(new FGioHang(tenTK), panelThan);
         }
 
         private void btnDonHang_Click(object sender, EventArgs e)
         {
-            TaoButton(btnDonHang);
-            moFormConMua(new FDonHang());
+            Global.TaoButton(btnDonHang, ref gl.btnOK);
+            Global.MoFormCon(new FDonHangNguoiMua(tenTK), panelThan);
         }
 
         private void btnYeuThich_Click(object sender, EventArgs e)
         {
-            TaoButton(btnYeuThich);
-            moFormConMua(new FYeuThich(tenTK));
+            Global.TaoButton(btnYeuThich, ref gl.btnOK);
+            Global.MoFormCon(new FYeuThich(tenTK), panelThan);
         }
     }
 }

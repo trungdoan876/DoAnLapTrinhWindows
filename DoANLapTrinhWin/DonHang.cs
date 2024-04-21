@@ -31,12 +31,11 @@ namespace DoANLapTrinhWin
             this.trangThaiDonHang = TrangThaiDonHang;
         }
 
-        public string MaDonHang { get => MaDonHang; set => MaDonHang = value; }
-        public string MaNguoiBan { get => MaNguoiBan; set => MaNguoiBan = value; }
-        public string MaNguoiMua { get => MaNguoiMua; set => MaNguoiMua = value; }
-        public string TongTien { get => TongTien; set => TongTien = value; }
-        public DateTime NgayDatHang { get => NgayDatHang; set => NgayDatHang = value; }
-        public string TrangThaiDonHang { get => TrangThaiDonHang; set => TrangThaiDonHang = value; }
+        public string MaDonHang { get => maDonHang; set => maDonHang = value; }
+        public string MaNguoiBan { get => maNguoiBan; set => maNguoiBan = value; }
+        public string MaNguoiMua { get => maNguoiMua; set => maNguoiMua = value; }
+        public string TongTien { get => tongTien; set => tongTien = value; }
+        public DateTime NgayDatHang { get => ngayDatHang; set => ngayDatHang = value; }
+        public string TrangThaiDonHang { get => trangThaiDonHang; set => trangThaiDonHang = value; }
     }
-}
 }

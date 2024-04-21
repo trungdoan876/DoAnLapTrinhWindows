@@ -77,6 +77,7 @@
             // 
             this.btnKhac.BorderColor = System.Drawing.Color.Tomato;
             this.btnKhac.BorderRadius = 20;
+            this.btnKhac.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKhac.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKhac.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKhac.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -100,6 +101,7 @@
             // 
             this.btndolamdep.BorderColor = System.Drawing.Color.Tomato;
             this.btndolamdep.BorderRadius = 20;
+            this.btndolamdep.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btndolamdep.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btndolamdep.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btndolamdep.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -123,6 +125,7 @@
             // 
             this.btnDothethao.BorderColor = System.Drawing.Color.Tomato;
             this.btnDothethao.BorderRadius = 20;
+            this.btnDothethao.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDothethao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDothethao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDothethao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -146,6 +149,7 @@
             // 
             this.btnThietbidientu.BorderColor = System.Drawing.Color.Tomato;
             this.btnThietbidientu.BorderRadius = 20;
+            this.btnThietbidientu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThietbidientu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThietbidientu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThietbidientu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -169,6 +173,7 @@
             // 
             this.btnDodungnhacua.BorderColor = System.Drawing.Color.Tomato;
             this.btnDodungnhacua.BorderRadius = 20;
+            this.btnDodungnhacua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDodungnhacua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDodungnhacua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDodungnhacua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -192,6 +197,7 @@
             // 
             this.btnDochoi.BorderColor = System.Drawing.Color.Tomato;
             this.btnDochoi.BorderRadius = 20;
+            this.btnDochoi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDochoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDochoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDochoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -215,6 +221,7 @@
             // 
             this.btnDochonam.BorderColor = System.Drawing.Color.Tomato;
             this.btnDochonam.BorderRadius = 20;
+            this.btnDochonam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDochonam.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDochonam.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDochonam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -238,6 +245,7 @@
             // 
             this.btnThoitrangnu.BorderColor = System.Drawing.Color.Tomato;
             this.btnThoitrangnu.BorderRadius = 20;
+            this.btnThoitrangnu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoitrangnu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThoitrangnu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThoitrangnu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -261,6 +269,7 @@
             // 
             this.btnSach.BorderColor = System.Drawing.Color.Tomato;
             this.btnSach.BorderRadius = 20;
+            this.btnSach.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

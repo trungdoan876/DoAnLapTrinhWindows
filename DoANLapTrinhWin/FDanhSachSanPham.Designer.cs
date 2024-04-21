@@ -75,6 +75,7 @@
             // btnThemSanPham
             // 
             this.btnThemSanPham.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnThemSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemSanPham.HoverState.ImageSize = new System.Drawing.Size(150, 150);
             this.btnThemSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSanPham.Image")));
             this.btnThemSanPham.ImageOffset = new System.Drawing.Point(0, 0);

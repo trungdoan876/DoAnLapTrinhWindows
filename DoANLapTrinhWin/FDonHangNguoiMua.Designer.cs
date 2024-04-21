@@ -1,6 +1,6 @@
 ﻿namespace DoANLapTrinhWin
 {
-    partial class FDonHangNguoiBan
+    partial class FDonHangNguoiMua
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDonHangNguoiBan));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDonHangNguoiMua));
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnDangThucHien = new Guna.UI2.WinForms.Guna2Button();
@@ -36,33 +37,41 @@
             this.btnDaGiao = new Guna.UI2.WinForms.Guna2Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnDaHuy = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 78);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1537, 741);
+            this.panel1.TabIndex = 8;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panel8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1553, 78);
-            this.panel2.TabIndex = 4;
+            this.panel2.Size = new System.Drawing.Size(1537, 78);
+            this.panel2.TabIndex = 7;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.btnDangThucHien);
-            this.panel7.Location = new System.Drawing.Point(2, 3);
+            this.panel7.Location = new System.Drawing.Point(3, 5);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(487, 70);
-            this.panel7.TabIndex = 45;
+            this.panel7.TabIndex = 42;
             // 
             // btnDangThucHien
             // 
@@ -84,14 +93,15 @@
             this.btnDangThucHien.Size = new System.Drawing.Size(487, 70);
             this.btnDangThucHien.TabIndex = 38;
             this.btnDangThucHien.Text = "Đang thực hiện";
+            this.btnDangThucHien.Click += new System.EventHandler(this.btnDangThucHien_Click);
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.btnDaGiao);
-            this.panel6.Location = new System.Drawing.Point(495, 3);
+            this.panel6.Location = new System.Drawing.Point(496, 5);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(487, 70);
-            this.panel6.TabIndex = 47;
+            this.panel6.TabIndex = 44;
             // 
             // btnDaGiao
             // 
@@ -116,10 +126,10 @@
             // panel8
             // 
             this.panel8.Controls.Add(this.btnDaHuy);
-            this.panel8.Location = new System.Drawing.Point(988, 3);
+            this.panel8.Location = new System.Drawing.Point(989, 5);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(487, 70);
-            this.panel8.TabIndex = 46;
+            this.panel8.TabIndex = 43;
             // 
             // btnDaHuy
             // 
@@ -142,24 +152,15 @@
             this.btnDaHuy.TabIndex = 40;
             this.btnDaHuy.Text = "Đơn đã hủy";
             // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 78);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1553, 546);
-            this.guna2Panel1.TabIndex = 5;
-            // 
-            // FDonHangNguoiBan
+            // FDonHangNguoiMua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1553, 624);
-            this.Controls.Add(this.guna2Panel1);
+            this.ClientSize = new System.Drawing.Size(1537, 819);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "FDonHangNguoiBan";
-            this.Text = "FDonHangNguoiBan";
+            this.Name = "FDonHangNguoiMua";
+            this.Text = "FDonHang";
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -170,13 +171,13 @@
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel6;
+        private Guna.UI2.WinForms.Guna2Button btnDaGiao;
         private System.Windows.Forms.Panel panel7;
         private Guna.UI2.WinForms.Guna2Button btnDangThucHien;
         private System.Windows.Forms.Panel panel8;
         private Guna.UI2.WinForms.Guna2Button btnDaHuy;
-        private System.Windows.Forms.Panel panel6;
-        private Guna.UI2.WinForms.Guna2Button btnDaGiao;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

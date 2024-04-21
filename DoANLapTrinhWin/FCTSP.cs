@@ -16,6 +16,7 @@ namespace DoANLapTrinhWin
 {
     public partial class FCTSP : Form
     {
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPham sp;
         string maSP;
         bool picClick;
@@ -25,7 +26,6 @@ namespace DoANLapTrinhWin
             MemoryStream ms = new MemoryStream(a);
             return System.Drawing.Image.FromStream(ms);
         }
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public FCTSP()
         {
             InitializeComponent();
@@ -74,7 +74,7 @@ namespace DoANLapTrinhWin
             this.Close();
             
         }
-
+        //thêm sản phẩm vào giỏ hàng
         private void btnThemVaoGio_Click_1(object sender, EventArgs e)
         {
             //bang gio hang: maNB,maNM,maSP,soluongSP,giaban
@@ -93,14 +93,14 @@ namespace DoANLapTrinhWin
             }
             catch (Exception ex)
             {
-                MessageBox.Show("them that bai" + ex);
+                MessageBox.Show("Thêm thất bại" + ex);
             }
             finally
             {
                 conn.Close();
             }
         }
-
+        //mua ngay
         private void btnMuaNgay_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -171,7 +171,6 @@ namespace DoANLapTrinhWin
         private void picHeart_Click(object sender, EventArgs e)
         {
             traitim();
-
         }
 
     }

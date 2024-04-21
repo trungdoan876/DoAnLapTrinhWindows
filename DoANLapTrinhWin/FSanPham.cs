@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,9 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.maNBan = maNB;
+            //Global.MoFormCon(new FDanhSachSanPham(maNB),panelThanSP);
             moFormCon(new FDanhSachSanPham(maNB));
+
         }
         private Form formcon;
         private void moFormCon(Form form)
@@ -39,10 +42,10 @@ namespace DoANLapTrinhWin
         {
 
         }
-        private Button btnOK;
+        private Guna2Button btnOK;
         private void TaoButton(object button)
         {
-            var btn = (Button)button;
+            var btn = (Guna2Button)button;
 
             btn.BackColor = Color.SeaGreen;
             btn.ForeColor = Color.White;
@@ -56,6 +59,7 @@ namespace DoANLapTrinhWin
 
         private void btnTatCaSP_Click(object sender, EventArgs e)
         {
+            TaoButton(btnTatCaSP);
             moFormCon(new FDanhSachSanPham(maNBan));
         }
 

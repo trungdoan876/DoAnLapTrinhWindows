@@ -139,7 +139,6 @@
             // 
             this.bunifuElipse1.ElipseRadius = 50;
             this.bunifuElipse1.TargetControl = this;
-
             // 
             // UCSP
             // 
@@ -154,6 +153,7 @@
             this.Controls.Add(this.picHinh);
             this.Controls.Add(this.lblGiaBan);
             this.Controls.Add(this.lblTenSP);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(20);
             this.Name = "UCSP";
