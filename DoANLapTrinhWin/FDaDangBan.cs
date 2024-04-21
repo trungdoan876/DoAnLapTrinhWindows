@@ -16,6 +16,7 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNB;
         byte[] hinh;
+        SanPhamDAO spDao = new SanPhamDAO();
         public FDaDangBan(string maNB)
         {
             InitializeComponent();
@@ -24,16 +25,10 @@ namespace DoANLapTrinhWin
         //Trong bảng SanPham DangBan = 1 -> đã đăng bán
         private void LoadData()
         {
-            try
-            {
-                conn.Open();
-                string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", maNB, 1);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
-                adapter.Fill(dtSet);
+                DataSet dt = spDao.LoadDaDangBan(maNB);
                 int x = 0;
                 int y = 0;
-                foreach (DataRow row in dtSet.Tables[0].Rows)
+                foreach (DataRow row in dt.Tables[0].Rows)
                 {
                     //lấy thông tin sản phẩm từ dataset
                     string maSP = row["MaSanPham"].ToString();
@@ -65,15 +60,6 @@ namespace DoANLapTrinhWin
                     }
                     panelDangBan.Controls.Add(ucSPBan);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
         }
         private void FDaDangBan_Load(object sender, EventArgs e)
         {

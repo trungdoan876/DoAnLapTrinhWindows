@@ -73,5 +73,27 @@ namespace DoANLapTrinhWin
             }
             return null;
         }
+        public DataSet LoadDaDangBan(string maNB)
+        {
+
+            try
+            {
+                conn.Open();
+                string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", maNB, 1);
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                DataSet dt = new DataSet();
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
     }
 }
