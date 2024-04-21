@@ -13,22 +13,22 @@ using System.Windows.Forms;
 
 namespace DoANLapTrinhWin
 {
-    public partial class FDHDangThucHienNM : Form
+    public partial class FDHDangThucHienNB : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        string maNM;
+        string maNB;
         byte[] hinh;
-        public FDHDangThucHienNM(string maNM)
+        public FDHDangThucHienNB(string maNB)
         {
             InitializeComponent();
-            this.maNM = maNM;
+            this.maNB = maNB;
             LoadData();
         }
-        /*Image ByteArrayToImage(byte[] a)
+        Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
             return Image.FromStream(ms);
-        }*/
+        }
         public void LoadData()
         {
             try
@@ -38,8 +38,8 @@ namespace DoANLapTrinhWin
                 "TrangThaiDonHang as TrangThaiDonHang, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
                  "FROM DonHang, SanPham, ChiTietDonHang " +
                 "WHERE MaNguoiMua = '{0}' AND DonHang.MaDonHang = ChiTietDonHang.MaDonHang " +
-                "AND SanPham.MaSanPham = ChiTietDonHang.MaSanPham", maNM);
-                
+                "AND SanPham.MaSanPham = ChiTietDonHang.MaSanPham", maNB);
+
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
@@ -59,11 +59,11 @@ namespace DoANLapTrinhWin
                     SanPham sp = new SanPham(tenSP, hinh);
 
                     UCDonHang uc = new UCDonHang(dh, sp);
-                    
+                    //uc.lblTrangThai.Enabled = true;
 
                     uc.Location = new Point(0, y);
                     y += uc.Height + 5;
-                    panelDonHang.Controls.Add(uc);
+                    panelDangThucHien.Controls.Add(uc);
                 }
             }
             catch (Exception ex)

@@ -16,67 +16,50 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNB;
         byte[] hinh;
+        SanPhamDAO spDao = new SanPhamDAO();
         public FChuaDangBan(string maNB)
         {
             InitializeComponent();
             this.maNB = maNB;
+            LoadData();
         }
         //DangBan trong bang SP = 0 -> chua dang ban
         public void LoadData()
         {
-            try
+            DataSet dt = spDao.LoadChuaDangBan(maNB);
+            int x = 0;
+            int y = 0;
+            foreach (DataRow row in dt.Tables[0].Rows)
             {
-                conn.Open();
-                string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", maNB, 0);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
-                adapter.Fill(dtSet);
-                int x = 0;
-                int y = 0;
-                foreach (DataRow row in dtSet.Tables[0].Rows)
+                string maSP = row["MaSanPham"].ToString();
+                string tenSP = row["TenSanPham"].ToString();
+                string giaTien = row["GiaBan"].ToString();
+                string giaGoc = row["GiaGoc"].ToString();
+                string moTaSP = row["MoTaSanPham"].ToString();
+                string tinhTrang = row["TinhTrang"].ToString();
+                string nganhHang = row["NganhHang"].ToString();
+                string xuatXu = row["XuatXu"].ToString();
+                string diaChi = row["DiaChi"].ToString();
+                string thoiGianSuDung = row["TGDSD"].ToString();
+                DateTime ngayDang = DateTime.Now;
+                if (row["Hinh"] != DBNull.Value)
                 {
-                    string maSP = row["MaSanPham"].ToString();
-                    string tenSP = row["TenSanPham"].ToString();
-                    string giaTien = row["GiaBan"].ToString();
-                    string giaGoc = row["GiaGoc"].ToString();
-                    string moTaSP = row["MoTaSanPham"].ToString();
-                    string tinhTrang = row["TinhTrang"].ToString();
-                    string nganhHang = row["NganhHang"].ToString();
-                    string xuatXu = row["XuatXu"].ToString();
-                    string diaChi = row["DiaChi"].ToString();
-                    string thoiGianSuDung = row["TGDSD"].ToString();
-                    DateTime ngayDang = DateTime.Now;
-                    if (row["Hinh"] != DBNull.Value)
-                    {
-                        hinh = (byte[])row["Hinh"];
-                    }
-                    SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", "", hinh);
-
-                    UCSPBan ucSPBan = new UCSPBan(sp);
-
-                    ucSPBan.Location = new Point(x, y);
-                    x += ucSPBan.Width += 5;
-                    if (x == ucSPBan.Width * 3)
-                    {
-                        x = 0;
-                        y += ucSPBan.Height + 5;
-                    }
-                    panelChuaDangBan.Controls.Add(ucSPBan);
+                    hinh = (byte[])row["Hinh"];
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
+                SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", "", hinh);
 
-        private void FChuaDangBan_Load(object sender, EventArgs e)
-        {
-            LoadData();
+                UCSPBan ucSPBan = new UCSPBan(sp);
+
+                ucSPBan.Location = new Point(x, y);
+                x += ucSPBan.Width += 5;
+                if (x == ucSPBan.Width * 3)
+                {
+                     x = 0;
+                     y += ucSPBan.Height + 5;
+                }
+                panelChuaDangBan.Controls.Add(ucSPBan);
+            }
         }
     }
 }
+

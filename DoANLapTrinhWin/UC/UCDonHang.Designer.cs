@@ -43,6 +43,7 @@
             // lblTrangThai
             // 
             this.lblTrangThai.AutoSize = true;
+            this.lblTrangThai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblTrangThai.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrangThai.ForeColor = System.Drawing.Color.Black;
             this.lblTrangThai.Location = new System.Drawing.Point(1407, 94);
@@ -67,7 +68,7 @@
             this.lblMaDH.AutoSize = true;
             this.lblMaDH.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaDH.ForeColor = System.Drawing.Color.Silver;
-            this.lblMaDH.Location = new System.Drawing.Point(98, 21);
+            this.lblMaDH.Location = new System.Drawing.Point(97, 13);
             this.lblMaDH.Name = "lblMaDH";
             this.lblMaDH.Size = new System.Drawing.Size(78, 32);
             this.lblMaDH.TabIndex = 98;
@@ -86,7 +87,7 @@
             this.lblTenSP.AutoSize = true;
             this.lblTenSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.ForeColor = System.Drawing.Color.Black;
-            this.lblTenSP.Location = new System.Drawing.Point(234, 94);
+            this.lblTenSP.Location = new System.Drawing.Point(233, 86);
             this.lblTenSP.Name = "lblTenSP";
             this.lblTenSP.Size = new System.Drawing.Size(55, 25);
             this.lblTenSP.TabIndex = 103;
@@ -95,7 +96,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(55, 48);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(162, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -111,12 +112,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LavenderBlush;
+            this.BackColor = System.Drawing.Color.OldLace;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTenSP);
             this.Controls.Add(this.lblTrangThai);
             this.Controls.Add(this.lblTongTien);
             this.Controls.Add(this.lblMaDH);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "UCDonHang";
             this.Size = new System.Drawing.Size(1618, 200);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();

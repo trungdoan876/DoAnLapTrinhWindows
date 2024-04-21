@@ -1,6 +1,6 @@
 ﻿namespace DoANLapTrinhWin
 {
-    partial class FChuaDangBan
+    partial class FDHDangThucHienNB
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelChuaDangBan = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelDangThucHien = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // panelChuaDangBan
+            // panelDangThucHien
             // 
-            this.panelChuaDangBan.BackColor = System.Drawing.Color.White;
-            this.panelChuaDangBan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChuaDangBan.Location = new System.Drawing.Point(0, 0);
-            this.panelChuaDangBan.Name = "panelChuaDangBan";
-            this.panelChuaDangBan.Size = new System.Drawing.Size(1130, 591);
-            this.panelChuaDangBan.TabIndex = 0;
+            this.panelDangThucHien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDangThucHien.Location = new System.Drawing.Point(0, 0);
+            this.panelDangThucHien.Name = "panelDangThucHien";
+            this.panelDangThucHien.Size = new System.Drawing.Size(1159, 516);
+            this.panelDangThucHien.TabIndex = 0;
             // 
-            // FChuaDangBan
+            // FDHDangThucHienNB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1130, 591);
-            this.Controls.Add(this.panelChuaDangBan);
-            this.Name = "FChuaDangBan";
-            this.Text = "FChuaDangBan";
-
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(1159, 516);
+            this.Controls.Add(this.panelDangThucHien);
+            this.Name = "FDHDangThucHienNB";
+            this.Text = "FDHDangThucHienNB";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel panelChuaDangBan;
+        private System.Windows.Forms.Panel panelDangThucHien;
     }
 }

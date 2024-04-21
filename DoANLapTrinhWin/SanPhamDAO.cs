@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace DoANLapTrinhWin
 {
@@ -47,6 +50,28 @@ namespace DoANLapTrinhWin
         {
             string sqlStr = string.Format("UPDATE SanPham SET DangBan = '{0}'WHERE MaSanPham ='{1}'", 0, sp.MaSP);
             tt.ThucThi(sqlStr);
+        }
+        public DataSet LoadChuaDangBan(string maNB)
+        {
+            
+            try
+            {
+                conn.Open();
+                string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'",maNB, 0);
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                DataSet dt = new DataSet();
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
         }
     }
 }
