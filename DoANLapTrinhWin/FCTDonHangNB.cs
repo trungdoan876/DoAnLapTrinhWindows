@@ -22,6 +22,7 @@ namespace DoANLapTrinhWin
             InitializeComponent();
             this.Size = new Size(1200, 600);
             this.maDH = maDH;
+            this.lblMaDH.Text = maDH;
             LoadData();
         }
         int y = 0;
@@ -51,7 +52,12 @@ namespace DoANLapTrinhWin
                     SanPham sp = new SanPham(tenSP, giaTien, soLuong, hinh);
 
                     UCDatHang uc = new UCDatHang(sp);
-                    //uc.Size = new Size(1000,uc.Height);
+
+                    int sl = int.Parse(soLuong);
+                    decimal giatien = decimal.Parse(giaTien);
+                    decimal thanhTien = giatien * sl;
+                    uc.lblthanhtien.Text = thanhTien.ToString();
+
                     uc.Location = new Point(0, y);
                     y += uc.Height += 10;
                     panelDH.Controls.Add(uc);
