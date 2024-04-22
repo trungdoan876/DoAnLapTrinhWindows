@@ -51,8 +51,8 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.cmbNganhHang = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThemNhieuHinh = new Guna.UI2.WinForms.Guna2Button();
+            this.panelThemNhieuHinh = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -483,29 +483,32 @@
             this.cmbNganhHang.Tag = "";
             this.cmbNganhHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // guna2Button1
+            // btnThemNhieuHinh
             // 
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.Location = new System.Drawing.Point(49, 602);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(174, 51);
-            this.guna2Button1.TabIndex = 294;
-            this.guna2Button1.Text = "Thêm ảnh";
+            this.btnThemNhieuHinh.BorderRadius = 10;
+            this.btnThemNhieuHinh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThemNhieuHinh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemNhieuHinh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemNhieuHinh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThemNhieuHinh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThemNhieuHinh.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemNhieuHinh.ForeColor = System.Drawing.Color.White;
+            this.btnThemNhieuHinh.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNhieuHinh.Image")));
+            this.btnThemNhieuHinh.Location = new System.Drawing.Point(39, 676);
+            this.btnThemNhieuHinh.Name = "btnThemNhieuHinh";
+            this.btnThemNhieuHinh.Size = new System.Drawing.Size(174, 51);
+            this.btnThemNhieuHinh.TabIndex = 294;
+            this.btnThemNhieuHinh.Text = "Thêm ảnh";
+            this.btnThemNhieuHinh.Click += new System.EventHandler(this.btnThemNhieuHinh_Click);
             // 
-            // panel1
+            // panelThemNhieuHinh
             // 
-            this.panel1.Location = new System.Drawing.Point(22, 86);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(234, 491);
-            this.panel1.TabIndex = 293;
+            this.panelThemNhieuHinh.AllowDrop = true;
+            this.panelThemNhieuHinh.AutoScroll = true;
+            this.panelThemNhieuHinh.Location = new System.Drawing.Point(22, 86);
+            this.panelThemNhieuHinh.Name = "panelThemNhieuHinh";
+            this.panelThemNhieuHinh.Size = new System.Drawing.Size(234, 584);
+            this.panelThemNhieuHinh.TabIndex = 293;
             // 
             // FThemSanPham
             // 
@@ -513,8 +516,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1561, 739);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnThemNhieuHinh);
+            this.Controls.Add(this.panelThemNhieuHinh);
             this.Controls.Add(this.cmbNganhHang);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.bunifuCustomLabel1);
@@ -574,7 +577,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbNganhHang;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Button btnThemNhieuHinh;
+        private System.Windows.Forms.Panel panelThemNhieuHinh;
     }
 }

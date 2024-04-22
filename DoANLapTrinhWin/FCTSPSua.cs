@@ -14,6 +14,8 @@ namespace DoANLapTrinhWin
 {
     public partial class FCTSPSua : Form
     {
+        private List<byte[]> byteImage = new List<byte[]>();
+        private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPhamDAO spDao= new SanPhamDAO();
         byte[] ImageToByteArray(Image img)
@@ -60,10 +62,72 @@ namespace DoANLapTrinhWin
             txtDiaChi.Text = sp.DiaChi;
             txtSoLuonSanCo.Text = sp.SoLuong;
             picHinh.Image = ByteArrayToImage(sp.Hinh);
+            LoadImagesFromDatabase(txtMaSanPham.Text);
+        }
+        //hien nhieu hinh
+        private void LoadImagesFromDatabase(string masp)
+        {
+            try
+            {
+                conn.Open();
+                string sql = "SELECT Hinh FROM HinhAnh WHERE MaSanPham = @id";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", masp); // Đặt giá trị id của bạn tại đây
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        byte[] imageBytes = (byte[])reader["Hinh"];
+                        byteImage.Add(imageBytes);
+                    }
+                }
+
+                foreach (byte[] imageBytes in byteImage)
+                {
+                    using (MemoryStream mss = new MemoryStream(imageBytes))
+                    {
+                        System.Drawing.Image image = System.Drawing.Image.FromStream(mss);
+                        PictureBox pic = CreatePictureBox(image);
+                        panelThemNhieuHinh.Controls.Add(pic);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
         //chỉnh sửa sản phẩm
         private void btnSuaSanPham_Click(object sender, EventArgs e)
         {
+            try
+            {
+                conn.Open();
+                foreach (System.Drawing.Image image in arrPicture)
+                {
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        image.Save(ms, image.RawFormat);
+                        byte[] imageBytes = ms.ToArray();
+                        string sql = "INSERT INTO HinhAnh (MaSanPham, Hinh) VALUES (@id, @hinh)";
+                        SqlCommand cmd = new SqlCommand(sql, conn);
+                        cmd.Parameters.AddWithValue("@hinh", imageBytes);
+                        cmd.Parameters.AddWithValue("@id", txtMaSanPham.Text);
+                        if (cmd.ExecuteNonQuery() > 0)
+                            MessageBox.Show("đã lưu");
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
             SanPham sp = new SanPham(txtMaSanPham.Text, txtTenSP.Text,  txtGiaBan.Text, txtGiaGoc.Text,
                     txtXuatXu.Text, txtTGSD.Text, dtp.Value, txtMoTa.Text, txtNganhHang.Text,
                     lblTinhTrang.Text, txtDiaChi.Text, "",txtSoLuonSanCo.Text, ImageToByteArray(picHinh.Image));
@@ -106,6 +170,45 @@ namespace DoANLapTrinhWin
             {
                 picHinh.Image = Image.FromFile(odlgOpenFile.FileName);
                 this.Text = odlgOpenFile.FileName;
+            }
+        }
+        private PictureBox CreatePictureBox(System.Drawing.Image image)
+        {
+            PictureBox pic = new PictureBox();
+            pic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pic.Size = new Size(100, 100);
+            pic.Dock = DockStyle.Top;
+            pic.Image = image;
+            pic.SizeMode = PictureBoxSizeMode.Zoom;
+            pic.Cursor = Cursors.Hand;
+            pic.Click += PictureBox_Click;
+            return pic;
+        }
+        private void PictureBox_Click(object sender, EventArgs e)
+        {
+            PictureBox ptb = (PictureBox)sender;
+            picHinh.Image = ptb.Image;
+        }
+        private void btnThemNhieuHinh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog odlgOpenFile = new OpenFileDialog();
+            odlgOpenFile.InitialDirectory = "D:\\HeQTCSDL\\AnhBia\\";
+            odlgOpenFile.Title = "Open File";
+            odlgOpenFile.Filter = "Image files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            try
+            {
+                if (odlgOpenFile.ShowDialog() == DialogResult.OK)
+                {
+                    System.Drawing.Image image = System.Drawing.Image.FromFile(odlgOpenFile.FileName);
+                    // picAnhBia.Image = image;
+                    PictureBox pic = CreatePictureBox(image);
+                    panelThemNhieuHinh.Controls.Add(pic);
+                    arrPicture.Add(image);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
     }

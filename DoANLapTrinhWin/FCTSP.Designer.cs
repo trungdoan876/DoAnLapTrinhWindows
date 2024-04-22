@@ -60,7 +60,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnQuaylai = new Guna.UI2.WinForms.Guna2ImageButton();
             this.txtMota = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelThemNhieuHinh = new System.Windows.Forms.Panel();
             this.soluongmua = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.picHeart = new System.Windows.Forms.PictureBox();
@@ -94,10 +94,10 @@
             // 
             // picHinh
             // 
-            this.picHinh.Location = new System.Drawing.Point(451, 75);
+            this.picHinh.Location = new System.Drawing.Point(440, 71);
             this.picHinh.Margin = new System.Windows.Forms.Padding(2);
             this.picHinh.Name = "picHinh";
-            this.picHinh.Size = new System.Drawing.Size(543, 359);
+            this.picHinh.Size = new System.Drawing.Size(626, 359);
             this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHinh.TabIndex = 50;
             this.picHinh.TabStop = false;
@@ -147,7 +147,7 @@
             // 
             this.lblSoLuong.AutoSize = true;
             this.lblSoLuong.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblSoLuong.Location = new System.Drawing.Point(852, 466);
+            this.lblSoLuong.Location = new System.Drawing.Point(906, 453);
             this.lblSoLuong.Name = "lblSoLuong";
             this.lblSoLuong.Size = new System.Drawing.Size(16, 20);
             this.lblSoLuong.TabIndex = 77;
@@ -458,19 +458,21 @@
             this.txtMota.Size = new System.Drawing.Size(912, 272);
             this.txtMota.TabIndex = 285;
             // 
-            // panel3
+            // panelThemNhieuHinh
             // 
-            this.panel3.Location = new System.Drawing.Point(12, 75);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(241, 712);
-            this.panel3.TabIndex = 286;
+            this.panelThemNhieuHinh.AllowDrop = true;
+            this.panelThemNhieuHinh.AutoScroll = true;
+            this.panelThemNhieuHinh.Location = new System.Drawing.Point(12, 75);
+            this.panelThemNhieuHinh.Name = "panelThemNhieuHinh";
+            this.panelThemNhieuHinh.Size = new System.Drawing.Size(278, 712);
+            this.panelThemNhieuHinh.TabIndex = 286;
             // 
             // soluongmua
             // 
             this.soluongmua.BackColor = System.Drawing.Color.Transparent;
             this.soluongmua.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.soluongmua.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.soluongmua.Location = new System.Drawing.Point(717, 453);
+            this.soluongmua.Location = new System.Drawing.Point(771, 440);
             this.soluongmua.Margin = new System.Windows.Forms.Padding(8);
             this.soluongmua.Name = "soluongmua";
             this.soluongmua.Size = new System.Drawing.Size(112, 33);
@@ -488,7 +490,7 @@
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel7.Image = ((System.Drawing.Image)(resources.GetObject("bunifuCustomLabel7.Image")));
             this.bunifuCustomLabel7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(588, 453);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(642, 440);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(151, 33);
             this.bunifuCustomLabel7.TabIndex = 80;
@@ -497,7 +499,7 @@
             // picHeart
             // 
             this.picHeart.Image = ((System.Drawing.Image)(resources.GetObject("picHeart.Image")));
-            this.picHeart.Location = new System.Drawing.Point(999, 384);
+            this.picHeart.Location = new System.Drawing.Point(1097, 380);
             this.picHeart.Name = "picHeart";
             this.picHeart.Size = new System.Drawing.Size(66, 50);
             this.picHeart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -514,7 +516,7 @@
             this.ClientSize = new System.Drawing.Size(1757, 1076);
             this.Controls.Add(this.picHeart);
             this.Controls.Add(this.soluongmua);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelThemNhieuHinh);
             this.Controls.Add(this.txtMota);
             this.Controls.Add(this.btnQuaylai);
             this.Controls.Add(this.panel1);
@@ -573,7 +575,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnThemVaoGio;
         private Guna.UI2.WinForms.Guna2TextBox txtMota;
         private Guna.UI2.WinForms.Guna2NumericUpDown soluongmua;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelThemNhieuHinh;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private System.Windows.Forms.PictureBox picHeart;
     }

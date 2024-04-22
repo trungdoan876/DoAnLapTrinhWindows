@@ -85,7 +85,6 @@ CREATE TABLE YeuThich
 	MaNguoiBan nchar(10),
 	MaNguoiMua nchar(10),
 	MaSanPham nchar(10),
-	TrangThai nchar(10) ,
 	PRIMARY KEY(MaNguoiMua,MaSanPham)
 )
 select * from YeuThich
@@ -139,4 +138,10 @@ Create table ChiTietDonHang
 	MaSanPham nchar(10),
 	--so luong sp
 	GiaTien char(10)
+)
+CREATE TABLE HinhAnh
+(
+	id int identity(1,1),
+	MaSanPham nchar(10),
+	Hinh varbinary(max)
 )
