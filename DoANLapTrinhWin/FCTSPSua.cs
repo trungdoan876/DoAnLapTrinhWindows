@@ -105,33 +105,11 @@ namespace DoANLapTrinhWin
         //chỉnh sửa sản phẩm
         private void btnSuaSanPham_Click(object sender, EventArgs e)
         {
-            try
-            {
-                conn.Open();
-                foreach (System.Drawing.Image image in arrPicture)
-                {
-                    using (MemoryStream ms = new MemoryStream())
-                    {
-                        image.Save(ms, image.RawFormat);
-                        byte[] imageBytes = ms.ToArray();
-                        string sql = "INSERT INTO HinhAnh (MaSanPham, Hinh) VALUES (@id, @hinh)";
-                        SqlCommand cmd = new SqlCommand(sql, conn);
-                        cmd.Parameters.AddWithValue("@hinh", imageBytes);
-                        cmd.Parameters.AddWithValue("@id", txtMaSanPham.Text);
-                        if (cmd.ExecuteNonQuery() > 0)
-                            MessageBox.Show("đã lưu");
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
             SanPham sp = new SanPham(txtMaSanPham.Text, txtTenSP.Text,  txtGiaBan.Text, txtGiaGoc.Text,
                     txtXuatXu.Text, txtTGSD.Text, dtp.Value, txtMoTa.Text, txtNganhHang.Text,
                     lblTinhTrang.Text, txtDiaChi.Text, "",txtSoLuonSanCo.Text, ImageToByteArray(picHinh.Image));
             spDao.CapNhatSanPham(sp);
+            spDao.ThemNhieuHinh(txtMaSanPham.Text, arrPicture);
         }
         //đăng bán sản phẩm
         private void btnDangBan_Click(object sender, EventArgs e)

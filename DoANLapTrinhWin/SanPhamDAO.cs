@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,26 @@ namespace DoANLapTrinhWin
             string sqlStr = string.Format("UPDATE SanPham SET DangBan = '{0}'WHERE MaSanPham ='{1}'", 0, sp.MaSP);
             tt.ThucThi(sqlStr);
         }
+        public void XoaNhieuHinh(SanPham sp)
+        {
+            string sqlStr = string.Format("DELETE FROM HinhAnh WHERE MaSanPham = '{0}'", sp.MaSP);
+            tt.ThucThi(sqlStr);
+        }
+        public void ThemNhieuHinh(string maSP, List<System.Drawing.Image> arrPicture)
+        {
+            foreach (System.Drawing.Image image in arrPicture)
+            {
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    image.Save(ms, image.RawFormat);
+                    byte[] imageBytes = ms.ToArray();
+                    string anh = BitConverter.ToString(imageBytes).Replace("-", "");
+                    string sql = string.Format("INSERT INTO HinhAnh (MaSanPham, Hinh) VALUES ('{0}', 0x{1})",maSP, anh);
+                    tt.ThucThiKhong(sql);
+                }
+            }
+        }
+
         public DataSet LoadChuaDangBan(string maNB)
         {
             

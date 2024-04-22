@@ -53,5 +53,24 @@ namespace DoANLapTrinhWin
                 conn.Close();
             }
         }
+        public void ThucThiKhong(string sqlStr)
+        {
+            try
+            {
+                // Ket noi
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("That bai" + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

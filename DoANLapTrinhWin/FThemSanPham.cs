@@ -52,35 +52,13 @@ namespace DoANLapTrinhWin
 
         private void btnThemSP_Click(object sender, EventArgs e)
         {
-            try
-            {
-                conn.Open();
-                foreach (System.Drawing.Image image in arrPicture)
-                {
-                    using (MemoryStream ms = new MemoryStream())
-                    {
-                        image.Save(ms, image.RawFormat);
-                        byte[] imageBytes = ms.ToArray();
-                        string sql = "INSERT INTO HinhAnh (MaSanPham, Hinh) VALUES (@id, @hinh)";
-                        SqlCommand cmd = new SqlCommand(sql, conn);
-                        cmd.Parameters.AddWithValue("@hinh", imageBytes);
-                        cmd.Parameters.AddWithValue("@id", txtMaSanPham.Text);
-                        if (cmd.ExecuteNonQuery() > 0)
-                            MessageBox.Show("đã lưu");
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
             byte[] b = ImageToByteArray(picHinh.Image);
             //string anh = BitConverter.ToString(b).Replace("-", "");
             SanPham sp = new SanPham(txtMaSanPham.Text, txtTenSP.Text, txtGiaBan.Text, txtGiaGoc.Text,
                     txtXuatXu.Text, txtTGSD.Text, dtp.Value, txtMoTa.Text, cmbNganhHang.Text,
                     lblTinhTrang.Text, txtDiaChi.Text, lblMaNB.Text, txtSoLuonSanCo.Text, b);
             spDAO.ThemSanPham(sp);
+            spDAO.ThemNhieuHinh(txtMaSanPham.Text, arrPicture);
         }
 
         private void btnThemHinh_Click(object sender, EventArgs e)

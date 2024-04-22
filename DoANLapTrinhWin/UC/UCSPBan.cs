@@ -51,6 +51,7 @@ namespace DoANLapTrinhWin
         {
             SanPham sp = new SanPham(lblMaSP.Text, "", "", "", "", "", DateTime.Now, "", "", "", "", "", "", null);
             spDAO.XoaSanPham(sp);
+            spDAO.XoaNhieuHinh(sp);
         }
     }
 }

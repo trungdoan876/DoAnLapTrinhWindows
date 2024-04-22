@@ -145,3 +145,4 @@ CREATE TABLE HinhAnh
 	MaSanPham nchar(10),
 	Hinh varbinary(max)
 )
+select * from HinhAnh
