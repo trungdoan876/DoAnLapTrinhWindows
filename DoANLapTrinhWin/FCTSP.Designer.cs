@@ -94,7 +94,7 @@
             // 
             // picHinh
             // 
-            this.picHinh.Location = new System.Drawing.Point(345, 71);
+            this.picHinh.Location = new System.Drawing.Point(451, 75);
             this.picHinh.Margin = new System.Windows.Forms.Padding(2);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(543, 359);
@@ -108,7 +108,7 @@
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Location = new System.Drawing.Point(34, 479);
+            this.label10.Location = new System.Drawing.Point(305, 482);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(201, 28);
             this.label10.TabIndex = 58;
@@ -147,7 +147,7 @@
             // 
             this.lblSoLuong.AutoSize = true;
             this.lblSoLuong.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblSoLuong.Location = new System.Drawing.Point(746, 462);
+            this.lblSoLuong.Location = new System.Drawing.Point(852, 466);
             this.lblSoLuong.Name = "lblSoLuong";
             this.lblSoLuong.Size = new System.Drawing.Size(16, 20);
             this.lblSoLuong.TabIndex = 77;
@@ -175,9 +175,9 @@
             this.panel1.Controls.Add(this.lblGiaGoc);
             this.panel1.Controls.Add(this.lblGiaBan);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(972, 0);
+            this.panel1.Location = new System.Drawing.Point(1251, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(506, 992);
+            this.panel1.Size = new System.Drawing.Size(506, 1076);
             this.panel1.TabIndex = 78;
             // 
             // btnMuaNgay
@@ -448,7 +448,7 @@
             this.txtMota.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMota.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMota.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMota.Location = new System.Drawing.Point(39, 512);
+            this.txtMota.Location = new System.Drawing.Point(310, 515);
             this.txtMota.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMota.Multiline = true;
             this.txtMota.Name = "txtMota";
@@ -460,9 +460,9 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(75, 71);
+            this.panel3.Location = new System.Drawing.Point(12, 75);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(244, 359);
+            this.panel3.Size = new System.Drawing.Size(241, 712);
             this.panel3.TabIndex = 286;
             // 
             // soluongmua
@@ -470,7 +470,7 @@
             this.soluongmua.BackColor = System.Drawing.Color.Transparent;
             this.soluongmua.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.soluongmua.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.soluongmua.Location = new System.Drawing.Point(611, 449);
+            this.soluongmua.Location = new System.Drawing.Point(717, 453);
             this.soluongmua.Margin = new System.Windows.Forms.Padding(8);
             this.soluongmua.Name = "soluongmua";
             this.soluongmua.Size = new System.Drawing.Size(112, 33);
@@ -488,7 +488,7 @@
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel7.Image = ((System.Drawing.Image)(resources.GetObject("bunifuCustomLabel7.Image")));
             this.bunifuCustomLabel7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(482, 449);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(588, 453);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(151, 33);
             this.bunifuCustomLabel7.TabIndex = 80;
@@ -497,7 +497,7 @@
             // picHeart
             // 
             this.picHeart.Image = ((System.Drawing.Image)(resources.GetObject("picHeart.Image")));
-            this.picHeart.Location = new System.Drawing.Point(893, 380);
+            this.picHeart.Location = new System.Drawing.Point(999, 384);
             this.picHeart.Name = "picHeart";
             this.picHeart.Size = new System.Drawing.Size(66, 50);
             this.picHeart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -511,7 +511,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1478, 992);
+            this.ClientSize = new System.Drawing.Size(1757, 1076);
             this.Controls.Add(this.picHeart);
             this.Controls.Add(this.soluongmua);
             this.Controls.Add(this.panel3);

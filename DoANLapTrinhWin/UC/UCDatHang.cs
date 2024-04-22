@@ -30,7 +30,7 @@ namespace DoANLapTrinhWin
             this.lblTenSP.Text = sp.TenSP;
             this.lblGiaTien.Text = sp.GiaBan;
             this.lblsoluong.Text = sp.SoLuong;
-            //this.picHinh.Image = ByteArrayToImage(sp.Hinh);
+            this.picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
 
     }

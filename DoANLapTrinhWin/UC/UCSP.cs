@@ -93,7 +93,7 @@ namespace DoANLapTrinhWin
                 try
                 {
                     conn.Open();
-                    string sqlStr = string.Format("INSERT INTO YeuThich (MaSanPham , MaNguoiMua, MaNguoiBan, TrangThai) VALUES ('{0}', '{1}','{2}','{3}')", sanPham.MaSP, tenTK, sanPham.MaNguoiBan, "Có");
+                    string sqlStr = string.Format("INSERT INTO YeuThich (MaSanPham , MaNguoiMua, MaNguoiBan) VALUES ('{0}', '{1}','{2}')", sanPham.MaSP, tenTK, sanPham.MaNguoiBan);
                     SqlCommand cmd = new SqlCommand(sqlStr, conn);
 
                     if (cmd.ExecuteNonQuery() > 0)

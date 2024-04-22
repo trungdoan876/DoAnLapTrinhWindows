@@ -54,6 +54,7 @@
             // btnTatCaSP
             // 
             this.btnTatCaSP.Animated = true;
+            this.btnTatCaSP.BorderRadius = 15;
             this.btnTatCaSP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTatCaSP.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTatCaSP.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -82,6 +83,7 @@
             // btnChuaDangBan
             // 
             this.btnChuaDangBan.Animated = true;
+            this.btnChuaDangBan.BorderRadius = 15;
             this.btnChuaDangBan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChuaDangBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnChuaDangBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -92,9 +94,9 @@
             this.btnChuaDangBan.ForeColor = System.Drawing.Color.White;
             this.btnChuaDangBan.HoverState.FillColor = System.Drawing.Color.Lime;
             this.btnChuaDangBan.Image = ((System.Drawing.Image)(resources.GetObject("btnChuaDangBan.Image")));
-            this.btnChuaDangBan.Location = new System.Drawing.Point(0, -4);
+            this.btnChuaDangBan.Location = new System.Drawing.Point(0, -1);
             this.btnChuaDangBan.Name = "btnChuaDangBan";
-            this.btnChuaDangBan.Size = new System.Drawing.Size(505, 74);
+            this.btnChuaDangBan.Size = new System.Drawing.Size(505, 71);
             this.btnChuaDangBan.TabIndex = 40;
             this.btnChuaDangBan.Text = "Chưa đăng bán";
             this.btnChuaDangBan.Click += new System.EventHandler(this.btnChuaDangBan_Click);
@@ -123,6 +125,7 @@
             // btnDaDangBan
             // 
             this.btnDaDangBan.Animated = true;
+            this.btnDaDangBan.BorderRadius = 15;
             this.btnDaDangBan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDaDangBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDaDangBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

@@ -77,11 +77,11 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -92,14 +92,15 @@
             // panel9
             // 
             this.panel9.Controls.Add(this.btnDangXuat);
-            this.panel9.Location = new System.Drawing.Point(9, 472);
+            this.panel9.Location = new System.Drawing.Point(0, 519);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(166, 60);
+            this.panel9.Size = new System.Drawing.Size(205, 69);
             this.panel9.TabIndex = 37;
             // 
             // btnDangXuat
             // 
             this.btnDangXuat.Animated = true;
+            this.btnDangXuat.BorderRadius = 22;
             this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangXuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDangXuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -110,9 +111,10 @@
             this.btnDangXuat.ForeColor = System.Drawing.Color.White;
             this.btnDangXuat.HoverState.FillColor = System.Drawing.Color.LimeGreen;
             this.btnDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Image")));
-            this.btnDangXuat.Location = new System.Drawing.Point(-4, -11);
+            this.btnDangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 0);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(170, 80);
+            this.btnDangXuat.Size = new System.Drawing.Size(223, 69);
             this.btnDangXuat.TabIndex = 38;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
@@ -140,14 +142,15 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.btnYeuThich);
-            this.panel6.Location = new System.Drawing.Point(9, 406);
+            this.panel6.Location = new System.Drawing.Point(0, 445);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(166, 60);
+            this.panel6.Size = new System.Drawing.Size(205, 69);
             this.panel6.TabIndex = 8;
             // 
             // btnYeuThich
             // 
             this.btnYeuThich.Animated = true;
+            this.btnYeuThich.BorderRadius = 22;
             this.btnYeuThich.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYeuThich.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnYeuThich.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -158,9 +161,10 @@
             this.btnYeuThich.ForeColor = System.Drawing.Color.White;
             this.btnYeuThich.HoverState.FillColor = System.Drawing.Color.LimeGreen;
             this.btnYeuThich.Image = ((System.Drawing.Image)(resources.GetObject("btnYeuThich.Image")));
-            this.btnYeuThich.Location = new System.Drawing.Point(-4, -11);
+            this.btnYeuThich.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnYeuThich.Location = new System.Drawing.Point(0, 0);
             this.btnYeuThich.Name = "btnYeuThich";
-            this.btnYeuThich.Size = new System.Drawing.Size(170, 80);
+            this.btnYeuThich.Size = new System.Drawing.Size(223, 69);
             this.btnYeuThich.TabIndex = 38;
             this.btnYeuThich.Text = "Yêu thích";
             this.btnYeuThich.Click += new System.EventHandler(this.btnYeuThich_Click);
@@ -168,14 +172,15 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnThongTin);
-            this.panel2.Location = new System.Drawing.Point(9, 142);
+            this.panel2.Location = new System.Drawing.Point(0, 145);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(166, 60);
+            this.panel2.Size = new System.Drawing.Size(205, 69);
             this.panel2.TabIndex = 1;
             // 
             // btnThongTin
             // 
             this.btnThongTin.Animated = true;
+            this.btnThongTin.BorderRadius = 22;
             this.btnThongTin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThongTin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThongTin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -186,9 +191,10 @@
             this.btnThongTin.ForeColor = System.Drawing.Color.White;
             this.btnThongTin.HoverState.FillColor = System.Drawing.Color.Lime;
             this.btnThongTin.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTin.Image")));
-            this.btnThongTin.Location = new System.Drawing.Point(-4, -9);
+            this.btnThongTin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThongTin.Location = new System.Drawing.Point(0, 0);
             this.btnThongTin.Name = "btnThongTin";
-            this.btnThongTin.Size = new System.Drawing.Size(170, 79);
+            this.btnThongTin.Size = new System.Drawing.Size(223, 69);
             this.btnThongTin.TabIndex = 37;
             this.btnThongTin.Text = "Thông tin";
             this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click);
@@ -196,14 +202,15 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btnMuaHang);
-            this.panel3.Location = new System.Drawing.Point(9, 208);
+            this.panel3.Location = new System.Drawing.Point(0, 220);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(166, 60);
+            this.panel3.Size = new System.Drawing.Size(205, 69);
             this.panel3.TabIndex = 2;
             // 
             // btnMuaHang
             // 
             this.btnMuaHang.Animated = true;
+            this.btnMuaHang.BorderRadius = 22;
             this.btnMuaHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMuaHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnMuaHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -214,9 +221,10 @@
             this.btnMuaHang.ForeColor = System.Drawing.Color.White;
             this.btnMuaHang.HoverState.FillColor = System.Drawing.Color.LimeGreen;
             this.btnMuaHang.Image = ((System.Drawing.Image)(resources.GetObject("btnMuaHang.Image")));
-            this.btnMuaHang.Location = new System.Drawing.Point(-4, -9);
+            this.btnMuaHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMuaHang.Location = new System.Drawing.Point(0, 0);
             this.btnMuaHang.Name = "btnMuaHang";
-            this.btnMuaHang.Size = new System.Drawing.Size(170, 79);
+            this.btnMuaHang.Size = new System.Drawing.Size(227, 69);
             this.btnMuaHang.TabIndex = 38;
             this.btnMuaHang.Text = "Mua hàng";
             this.btnMuaHang.Click += new System.EventHandler(this.btnMuaHang_Click);
@@ -224,9 +232,9 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.btnDonHang);
-            this.panel4.Location = new System.Drawing.Point(9, 339);
+            this.panel4.Location = new System.Drawing.Point(0, 370);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(166, 60);
+            this.panel4.Size = new System.Drawing.Size(205, 69);
             this.panel4.TabIndex = 5;
             // 
             // btnDonHang
@@ -235,6 +243,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDonHang.Animated = true;
+            this.btnDonHang.BorderRadius = 22;
             this.btnDonHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDonHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDonHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -245,9 +254,10 @@
             this.btnDonHang.ForeColor = System.Drawing.Color.White;
             this.btnDonHang.HoverState.FillColor = System.Drawing.Color.LimeGreen;
             this.btnDonHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.Image")));
-            this.btnDonHang.Location = new System.Drawing.Point(-12, -11);
+            this.btnDonHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDonHang.Location = new System.Drawing.Point(0, 0);
             this.btnDonHang.Name = "btnDonHang";
-            this.btnDonHang.Size = new System.Drawing.Size(182, 84);
+            this.btnDonHang.Size = new System.Drawing.Size(221, 69);
             this.btnDonHang.TabIndex = 40;
             this.btnDonHang.Text = "Đơn hàng";
             this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click);
@@ -255,9 +265,9 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.btnGioHang);
-            this.panel5.Location = new System.Drawing.Point(9, 274);
+            this.panel5.Location = new System.Drawing.Point(0, 295);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(166, 60);
+            this.panel5.Size = new System.Drawing.Size(205, 69);
             this.panel5.TabIndex = 4;
             // 
             // btnGioHang
@@ -266,6 +276,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGioHang.Animated = true;
+            this.btnGioHang.BorderRadius = 22;
             this.btnGioHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGioHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnGioHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -276,9 +287,10 @@
             this.btnGioHang.ForeColor = System.Drawing.Color.White;
             this.btnGioHang.HoverState.FillColor = System.Drawing.Color.LimeGreen;
             this.btnGioHang.Image = ((System.Drawing.Image)(resources.GetObject("btnGioHang.Image")));
-            this.btnGioHang.Location = new System.Drawing.Point(-16, -10);
+            this.btnGioHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnGioHang.Location = new System.Drawing.Point(0, 0);
             this.btnGioHang.Name = "btnGioHang";
-            this.btnGioHang.Size = new System.Drawing.Size(182, 79);
+            this.btnGioHang.Size = new System.Drawing.Size(218, 69);
             this.btnGioHang.TabIndex = 39;
             this.btnGioHang.Text = "Giỏ hàng";
             this.btnGioHang.Click += new System.EventHandler(this.btnGioHang_Click);

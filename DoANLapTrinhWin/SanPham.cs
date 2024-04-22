@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,13 +28,21 @@ namespace DoANLapTrinhWin
             this.tenSP = tenSP;
             this.hinh = hinh;
         }
-        public SanPham(string maNB, string maSP, string tenSP, string giaBan,byte[] hinh) // dung cho dat hang
+        public SanPham(string tenSP, string giaTien, string soLuong, byte[]hinh)
+        {
+            this.tenSP= tenSP;
+            this.giaBan = giaTien;
+            this.soLuong = soLuong;
+            this.hinh = hinh;
+        }
+        public SanPham(string maNB, string maSP, string tenSP, string giaBan,byte[] hinh,string soLuong) // dung cho dat hang
         {
             this.maNguoiBan = maNB;
             this.MaSP = maSP;
             this.tenSP = tenSP;
             this.giaBan = giaBan;
             this.hinh= hinh;
+            this.soLuong = soLuong;
         }
         
         public SanPham(string tenSP, string giaBan, string giaGoc, string tinhTrang,string maSP,string soLuong,byte[] hinh, string diaChi) //khoi tao dung cho FGioHang
@@ -56,14 +65,6 @@ namespace DoANLapTrinhWin
             this.giaGoc = giaGoc;
             this.hinh = hinh;
         }
-/*        public SanPham(string maSP, string tenSP, string giaBan, string diaChi, byte[] hinh) //khoi tao dung  cho FYeuThich
-        {
-            this.maSP = maSP;
-            this.tenSP = tenSP;
-            this.giaBan = giaBan;
-            this.diaChi = diaChi;
-            this.hinh = hinh;
-        }*/
         public SanPham(string maSP, string tenSP, string giaBan, string giaGoc, string xuatXu, string thoiGianDaSuDung,DateTime ngayDang, string moTaSanPham,
             string nganhHang, string tinhTrang, string diaChi, string maNguoiBan, string soLuong,byte[]hinh)
         {

@@ -33,7 +33,7 @@ namespace DoANLapTrinhWin
         public FCTSP(SanPham sp,bool picClick,string tenTK)
         {
             InitializeComponent();
-            this.Size = new Size(1000, 500);
+            this.Size = new Size(1200, 600);
             this.sp = sp;
             this.picClick = picClick;
             this.tenTK = tenTK;

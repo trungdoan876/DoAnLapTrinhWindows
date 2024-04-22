@@ -35,9 +35,9 @@ namespace DoANLapTrinhWin
             {
                 conn.Open();
                 string sqlStr = string.Format("SELECT TOP 1 DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat, " +
-                "TrangThaiDonHang as TrangThaiDonHang, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
+                "TrangThaiDonHangNB as TrangThaiDonHang, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
                  "FROM DonHang, SanPham, ChiTietDonHang " +
-                "WHERE MaNguoiMua = '{0}' AND DonHang.MaDonHang = ChiTietDonHang.MaDonHang " +
+                "WHERE DonHang.MaNguoiBan = '{0}' AND DonHang.MaDonHang = ChiTietDonHang.MaDonHang " +
                 "AND SanPham.MaSanPham = ChiTietDonHang.MaSanPham", maNB);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
@@ -47,7 +47,7 @@ namespace DoANLapTrinhWin
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
                     string maDH = row["MaDonHang"].ToString();
-                    string tongTien = row["TenSP"].ToString();
+                    string tongTien = row["TongTien"].ToString();
                     DateTime NgDat = (DateTime)row["NgDat"];
                     string TTDH = row["TrangThaiDonHang"].ToString();
                     string tenSP = row["TenSP"].ToString();
@@ -58,8 +58,7 @@ namespace DoANLapTrinhWin
                     DonHang dh = new DonHang(maDH, tongTien, NgDat, TTDH);
                     SanPham sp = new SanPham(tenSP, hinh);
 
-                    UCDonHang uc = new UCDonHang(dh, sp);
-                    //uc.lblTrangThai.Enabled = true;
+                    UCDonHangNB uc = new UCDonHangNB(dh, sp);
 
                     uc.Location = new Point(0, y);
                     y += uc.Height + 5;

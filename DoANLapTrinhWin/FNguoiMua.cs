@@ -25,7 +25,6 @@ namespace DoANLapTrinhWin
         {
 
         }
-
         private void btnThongTin_Click(object sender, EventArgs e)
         {
             Global.TaoButton(btnThongTin, ref gl.btnOK);

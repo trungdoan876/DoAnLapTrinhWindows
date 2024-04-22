@@ -24,18 +24,13 @@ namespace DoANLapTrinhWin
             this.maNM = maNM;
             LoadData();
         }
-        /*Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return Image.FromStream(ms);
-        }*/
         public void LoadData()
         {
             try
             {
                 conn.Open();
                 string sqlStr = string.Format("SELECT TOP 1 DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat, " +
-                "TrangThaiDonHang as TrangThaiDonHang, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
+                "TrangThaiDonHangNM as TrangThaiDonHangNM, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
                  "FROM DonHang, SanPham, ChiTietDonHang " +
                 "WHERE MaNguoiMua = '{0}' AND DonHang.MaDonHang = ChiTietDonHang.MaDonHang " +
                 "AND SanPham.MaSanPham = ChiTietDonHang.MaSanPham", maNM);
@@ -47,9 +42,9 @@ namespace DoANLapTrinhWin
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
                     string maDH = row["MaDonHang"].ToString();
-                    string tongTien = row["TenSP"].ToString();
+                    string tongTien = row["TongTien"].ToString();
                     DateTime NgDat = (DateTime)row["NgDat"];
-                    string TTDH = row["TrangThaiDonHang"].ToString();
+                    string TTDH = row["TrangThaiDonHangNM"].ToString();
                     string tenSP = row["TenSP"].ToString();
                     if (row["Hinh"] != DBNull.Value)
                     {
@@ -58,7 +53,7 @@ namespace DoANLapTrinhWin
                     DonHang dh = new DonHang(maDH, tongTien, NgDat, TTDH);
                     SanPham sp = new SanPham(tenSP, hinh);
 
-                    UCDonHang uc = new UCDonHang(dh, sp);
+                    UCDonHangNM uc = new UCDonHangNM(dh, sp);
                     
 
                     uc.Location = new Point(0, y);

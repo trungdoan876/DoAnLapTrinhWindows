@@ -12,10 +12,10 @@ namespace DoANLapTrinhWin
     public class Global
     {
         //tạo mã đơn hàng
-        int ma=0;
-        public string TaoMaDonHangTuDong()
+        public static int ma = 0;
+        public static string TaoMaDonHangTuDong()
         {
-            ma++;
+            Global.ma++;
             return "DH" + ma.ToString();
         }
         //mo form con
@@ -23,10 +23,10 @@ namespace DoANLapTrinhWin
 
         public static void MoFormCon(Form form, Panel panel)
         {
-            if (formcon != null)
+            /*if (formcon != null)
             {
                 formcon.Close();
-            }
+            }*/
             formcon = form;
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;

@@ -13,30 +13,18 @@ namespace DoANLapTrinhWin
     public partial class FDonHangNguoiBan : Form
     {
         string maNB;
+        Global gl = new Global();
         public FDonHangNguoiBan(string maNB)
         {
             InitializeComponent();
             this.maNB = maNB;
-        }
-        private Form formcon;
-        private void moFormCon(Form form)
-        {
-            if (formcon != null)
-            {
-                formcon.Close();
-            }
-            formcon = form;
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            panelThan.Controls.Add(form);
-            panelThan.Tag = form;
-            form.BringToFront();
-            form.Show();
+            Global.MoFormCon(new FDHDangThucHienNB(maNB), panelThan);
+            Global.TaoButton(btnDangThucHien, ref gl.btnOK);
         }
         private void btnDangThucHien_Click(object sender, EventArgs e)
         {
-            moFormCon(new FDHDangThucHienNB(maNB));
+            Global.TaoButton(btnDangThucHien, ref gl.btnOK);
+            Global.MoFormCon(new FDHDangThucHienNB(maNB), panelThan);
         }
     }
 }

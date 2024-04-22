@@ -76,6 +76,7 @@
             // btnDangThucHien
             // 
             this.btnDangThucHien.Animated = true;
+            this.btnDangThucHien.BorderRadius = 15;
             this.btnDangThucHien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangThucHien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDangThucHien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -106,6 +107,7 @@
             // btnDaGiao
             // 
             this.btnDaGiao.Animated = true;
+            this.btnDaGiao.BorderRadius = 15;
             this.btnDaGiao.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDaGiao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDaGiao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -134,6 +136,7 @@
             // btnDaHuy
             // 
             this.btnDaHuy.Animated = true;
+            this.btnDaHuy.BorderRadius = 15;
             this.btnDaHuy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDaHuy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDaHuy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

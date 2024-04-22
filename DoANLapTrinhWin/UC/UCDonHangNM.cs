@@ -13,15 +13,15 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DoANLapTrinhWin.UC
 {
-    public partial class UCDonHang : UserControl
+    public partial class UCDonHangNM : UserControl
     {
         DonHang dh;
         SanPham sp;
-        public UCDonHang()
+        public UCDonHangNM()
         {
             InitializeComponent();
         }
-        public UCDonHang(DonHang dhh, SanPham spp)
+        public UCDonHangNM(DonHang dhh, SanPham spp)
         {
             InitializeComponent();
             this.dh = dhh;
@@ -30,13 +30,26 @@ namespace DoANLapTrinhWin.UC
             this.lblTenSP.Text = sp.TenSP.ToString();
             //this.lblNgayDatHang.Text = dh.NgayDatHang.ToString();
             this.lblTongTien.Text = dh.TongTien.ToString();
-            this.lblTrangThai.Text = dh.TrangThaiDonHang.ToString();
+            this.lblTrangThai.Text = dh.TrangThaiDonHangNM.ToString();
             this.pictureBox1.Image = ByteArrayToImage(sp.Hinh);
         }
+
         Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
             return Image.FromStream(ms);
+        }
+
+        private void UCDonHang_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UCDonHang_Click(object sender, EventArgs e)
+        {
+            FChiTietDonHangNguoiMua fdh = new FChiTietDonHangNguoiMua(lblMaDH.Text);
+            fdh.ShowDialog();
+            
         }
     }
 }

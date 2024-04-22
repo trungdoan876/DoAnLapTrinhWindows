@@ -69,11 +69,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel10);
-            this.panel1.Controls.Add(this.panel13);
-            this.panel1.Controls.Add(this.panel11);
+            this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel12);
+            this.panel1.Controls.Add(this.panel11);
+            this.panel1.Controls.Add(this.panel13);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -103,15 +103,16 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.btnThoat);
-            this.panel8.Location = new System.Drawing.Point(12, 390);
+            this.panel8.Controls.Add(this.btnThongKe);
+            this.panel8.Location = new System.Drawing.Point(0, 345);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(166, 60);
+            this.panel8.Size = new System.Drawing.Size(190, 67);
             this.panel8.TabIndex = 42;
             // 
             // btnThoat
             // 
             this.btnThoat.Animated = true;
+            this.btnThoat.BorderRadius = 22;
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -122,9 +123,10 @@
             this.btnThoat.ForeColor = System.Drawing.Color.White;
             this.btnThoat.HoverState.FillColor = System.Drawing.Color.LimeGreen;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(-37, -11);
+            this.btnThoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThoat.Location = new System.Drawing.Point(0, 0);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(203, 80);
+            this.btnThoat.Size = new System.Drawing.Size(207, 67);
             this.btnThoat.TabIndex = 38;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -132,14 +134,15 @@
             // panel10
             // 
             this.panel10.Controls.Add(this.btnThongTin);
-            this.panel10.Location = new System.Drawing.Point(12, 126);
+            this.panel10.Location = new System.Drawing.Point(0, 126);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(166, 60);
+            this.panel10.Size = new System.Drawing.Size(190, 67);
             this.panel10.TabIndex = 38;
             // 
             // btnThongTin
             // 
             this.btnThongTin.Animated = true;
+            this.btnThongTin.BorderRadius = 22;
             this.btnThongTin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThongTin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThongTin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -150,9 +153,10 @@
             this.btnThongTin.ForeColor = System.Drawing.Color.White;
             this.btnThongTin.HoverState.FillColor = System.Drawing.Color.Lime;
             this.btnThongTin.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTin.Image")));
-            this.btnThongTin.Location = new System.Drawing.Point(-4, 0);
+            this.btnThongTin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThongTin.Location = new System.Drawing.Point(0, 0);
             this.btnThongTin.Name = "btnThongTin";
-            this.btnThongTin.Size = new System.Drawing.Size(170, 70);
+            this.btnThongTin.Size = new System.Drawing.Size(207, 67);
             this.btnThongTin.TabIndex = 37;
             this.btnThongTin.Text = "Thông tin";
             this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click_1);
@@ -160,9 +164,9 @@
             // panel13
             // 
             this.panel13.Controls.Add(this.btnDonHang);
-            this.panel13.Location = new System.Drawing.Point(12, 258);
+            this.panel13.Location = new System.Drawing.Point(0, 272);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(166, 60);
+            this.panel13.Size = new System.Drawing.Size(190, 67);
             this.panel13.TabIndex = 40;
             // 
             // btnDonHang
@@ -171,6 +175,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDonHang.Animated = true;
+            this.btnDonHang.BorderRadius = 22;
             this.btnDonHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDonHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDonHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -181,9 +186,10 @@
             this.btnDonHang.ForeColor = System.Drawing.Color.White;
             this.btnDonHang.HoverState.FillColor = System.Drawing.Color.LimeGreen;
             this.btnDonHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.Image")));
-            this.btnDonHang.Location = new System.Drawing.Point(-16, -10);
+            this.btnDonHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDonHang.Location = new System.Drawing.Point(0, 0);
             this.btnDonHang.Name = "btnDonHang";
-            this.btnDonHang.Size = new System.Drawing.Size(182, 79);
+            this.btnDonHang.Size = new System.Drawing.Size(207, 67);
             this.btnDonHang.TabIndex = 39;
             this.btnDonHang.Text = "Đơn hàng";
             this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click_1);
@@ -191,14 +197,15 @@
             // panel11
             // 
             this.panel11.Controls.Add(this.btnSanPham);
-            this.panel11.Location = new System.Drawing.Point(12, 192);
+            this.panel11.Location = new System.Drawing.Point(0, 199);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(166, 60);
+            this.panel11.Size = new System.Drawing.Size(190, 67);
             this.panel11.TabIndex = 39;
             // 
             // btnSanPham
             // 
             this.btnSanPham.Animated = true;
+            this.btnSanPham.BorderRadius = 20;
             this.btnSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -209,19 +216,20 @@
             this.btnSanPham.ForeColor = System.Drawing.Color.White;
             this.btnSanPham.HoverState.FillColor = System.Drawing.Color.LimeGreen;
             this.btnSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btnSanPham.Image")));
-            this.btnSanPham.Location = new System.Drawing.Point(-4, -9);
+            this.btnSanPham.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSanPham.Location = new System.Drawing.Point(0, 0);
             this.btnSanPham.Name = "btnSanPham";
-            this.btnSanPham.Size = new System.Drawing.Size(170, 79);
+            this.btnSanPham.Size = new System.Drawing.Size(207, 67);
             this.btnSanPham.TabIndex = 38;
             this.btnSanPham.Text = "Sản phẩm";
             this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.btnThongKe);
-            this.panel12.Location = new System.Drawing.Point(12, 323);
+            this.panel12.Controls.Add(this.btnThoat);
+            this.panel12.Location = new System.Drawing.Point(0, 418);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(166, 60);
+            this.panel12.Size = new System.Drawing.Size(190, 67);
             this.panel12.TabIndex = 41;
             // 
             // btnThongKe
@@ -230,6 +238,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThongKe.Animated = true;
+            this.btnThongKe.BorderRadius = 22;
             this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -240,9 +249,10 @@
             this.btnThongKe.ForeColor = System.Drawing.Color.White;
             this.btnThongKe.HoverState.FillColor = System.Drawing.Color.LimeGreen;
             this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
-            this.btnThongKe.Location = new System.Drawing.Point(-12, -11);
+            this.btnThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThongKe.Location = new System.Drawing.Point(0, 0);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(182, 84);
+            this.btnThongKe.Size = new System.Drawing.Size(207, 67);
             this.btnThongKe.TabIndex = 40;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click_1);

@@ -13,13 +13,18 @@ namespace DoANLapTrinhWin
         private string maNguoiMua;
         private string tongTien;
         private DateTime ngayDatHang;
-        private string trangThaiDonHang;
+        private string trangThaiDonHangNM;
+        private string trangThaiDonHangNB;
+        public DonHang(string MaDonHang)
+        {
+            this.maDonHang = MaDonHang;
+        }
         public DonHang(string MaDonHang, string TongTien, DateTime NgayDatHang, string TrangThaiDonHang)
         {
             this.maDonHang = MaDonHang;
             this.tongTien = TongTien;
             this.ngayDatHang = NgayDatHang;
-            this.trangThaiDonHang = TrangThaiDonHang;
+            this.trangThaiDonHangNM = TrangThaiDonHang;
         }
         public DonHang(string MaDonHang, string MaNguoiBan, string MaNguoiMua, string TongTien, DateTime NgayDatHang, string TrangThaiDonHang)
         {
@@ -28,7 +33,7 @@ namespace DoANLapTrinhWin
             this.maNguoiMua = MaNguoiMua;
             this.tongTien = TongTien;
             this.ngayDatHang = NgayDatHang;
-            this.trangThaiDonHang = TrangThaiDonHang;
+            this.trangThaiDonHangNM = TrangThaiDonHang;
         }
 
         public string MaDonHang { get => maDonHang; set => maDonHang = value; }
@@ -36,6 +41,7 @@ namespace DoANLapTrinhWin
         public string MaNguoiMua { get => maNguoiMua; set => maNguoiMua = value; }
         public string TongTien { get => tongTien; set => tongTien = value; }
         public DateTime NgayDatHang { get => ngayDatHang; set => ngayDatHang = value; }
-        public string TrangThaiDonHang { get => trangThaiDonHang; set => trangThaiDonHang = value; }
+        public string TrangThaiDonHangNM { get => trangThaiDonHangNM; set => trangThaiDonHangNM = value; }
+        public string TrangThaiDonHangNB { get => trangThaiDonHangNB; set => trangThaiDonHangNB = value; }
     }
 }
