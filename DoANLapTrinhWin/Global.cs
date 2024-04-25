@@ -48,7 +48,18 @@ namespace DoANLapTrinhWin
             {
                 btnOK.FillColor = Color.FromArgb(64, 64, 64);
             }
+            btnOK = btn;
+        }
+        public static void TaoButtonTimKiem(object button, ref Guna2Button btnOK)
+        {
+            var btn = (Guna2Button)button; //chuyển đổi biến button từ kiểu object sang kiểu Guna2Button
 
+            btn.FillColor = Color.Gold;
+
+            if (btnOK != null && btnOK != btn)
+            {
+                btnOK.FillColor = Color.PowderBlue;
+            }
             btnOK = btn;
         }
     }

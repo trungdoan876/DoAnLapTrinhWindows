@@ -1,6 +1,6 @@
 ﻿namespace DoANLapTrinhWin
 {
-    partial class FChiTietDonHangNguoiMua
+    partial class FCTDonHangNM
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FChiTietDonHangNguoiMua));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCTDonHangNM));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -154,6 +154,7 @@
             // 
             this.lblNgayGiao.AutoSize = true;
             this.lblNgayGiao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayGiao.ForeColor = System.Drawing.Color.Chocolate;
             this.lblNgayGiao.Location = new System.Drawing.Point(304, 20);
             this.lblNgayGiao.Name = "lblNgayGiao";
             this.lblNgayGiao.Size = new System.Drawing.Size(77, 25);
@@ -175,7 +176,8 @@
             // 
             this.lbltongtienDH.AutoSize = true;
             this.lbltongtienDH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltongtienDH.Location = new System.Drawing.Point(1229, 20);
+            this.lbltongtienDH.ForeColor = System.Drawing.Color.Chocolate;
+            this.lbltongtienDH.Location = new System.Drawing.Point(1227, 20);
             this.lbltongtienDH.Name = "lbltongtienDH";
             this.lbltongtienDH.Size = new System.Drawing.Size(47, 25);
             this.lbltongtienDH.TabIndex = 1;
@@ -200,7 +202,7 @@
             this.panelDH.Size = new System.Drawing.Size(1321, 473);
             this.panelDH.TabIndex = 5;
             // 
-            // FChiTietDonHangNguoiMua
+            // FCTDonHangNM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -211,7 +213,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FChiTietDonHangNguoiMua";
+            this.Name = "FCTDonHangNM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FChiTietDonHang";
             this.panel1.ResumeLayout(false);

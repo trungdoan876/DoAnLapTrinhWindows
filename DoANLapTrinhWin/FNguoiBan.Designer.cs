@@ -33,16 +33,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnThongTin = new Guna.UI2.WinForms.Guna2Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.btnDonHang = new Guna.UI2.WinForms.Guna2Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnSanPham = new Guna.UI2.WinForms.Guna2Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btnDonHang = new Guna.UI2.WinForms.Guna2Button();
             this.panelThan = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,11 +54,11 @@
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panelThan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -101,36 +101,6 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.btnThongKe);
-            this.panel8.Location = new System.Drawing.Point(0, 345);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(190, 67);
-            this.panel8.TabIndex = 42;
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Animated = true;
-            this.btnThoat.BorderRadius = 22;
-            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThoat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnThoat.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.HoverState.FillColor = System.Drawing.Color.LimeGreen;
-            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThoat.Location = new System.Drawing.Point(0, 0);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(207, 67);
-            this.btnThoat.TabIndex = 38;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
             // panel10
             // 
             this.panel10.Controls.Add(this.btnThongTin);
@@ -160,6 +130,99 @@
             this.btnThongTin.TabIndex = 37;
             this.btnThongTin.Text = "Thông tin";
             this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click_1);
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btnThongKe);
+            this.panel8.Location = new System.Drawing.Point(0, 345);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(190, 67);
+            this.panel8.TabIndex = 42;
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThongKe.Animated = true;
+            this.btnThongKe.BorderRadius = 22;
+            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThongKe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.ForeColor = System.Drawing.Color.White;
+            this.btnThongKe.HoverState.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
+            this.btnThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThongKe.Location = new System.Drawing.Point(0, 0);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(207, 67);
+            this.btnThongKe.TabIndex = 40;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click_1);
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.btnThoat);
+            this.panel12.Location = new System.Drawing.Point(0, 418);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(190, 67);
+            this.panel12.TabIndex = 41;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Animated = true;
+            this.btnThoat.BorderRadius = 22;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThoat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnThoat.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.HoverState.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThoat.Location = new System.Drawing.Point(0, 0);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(207, 67);
+            this.btnThoat.TabIndex = 38;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.btnSanPham);
+            this.panel11.Location = new System.Drawing.Point(0, 199);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(190, 67);
+            this.panel11.TabIndex = 39;
+            // 
+            // btnSanPham
+            // 
+            this.btnSanPham.Animated = true;
+            this.btnSanPham.BorderRadius = 20;
+            this.btnSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSanPham.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSanPham.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSanPham.ForeColor = System.Drawing.Color.White;
+            this.btnSanPham.HoverState.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btnSanPham.Image")));
+            this.btnSanPham.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSanPham.Location = new System.Drawing.Point(0, 0);
+            this.btnSanPham.Name = "btnSanPham";
+            this.btnSanPham.Size = new System.Drawing.Size(207, 67);
+            this.btnSanPham.TabIndex = 38;
+            this.btnSanPham.Text = "Sản phẩm";
+            this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
             // panel13
             // 
@@ -193,69 +256,6 @@
             this.btnDonHang.TabIndex = 39;
             this.btnDonHang.Text = "Đơn hàng";
             this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click_1);
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.btnSanPham);
-            this.panel11.Location = new System.Drawing.Point(0, 199);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(190, 67);
-            this.panel11.TabIndex = 39;
-            // 
-            // btnSanPham
-            // 
-            this.btnSanPham.Animated = true;
-            this.btnSanPham.BorderRadius = 20;
-            this.btnSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSanPham.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSanPham.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnSanPham.HoverState.FillColor = System.Drawing.Color.LimeGreen;
-            this.btnSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btnSanPham.Image")));
-            this.btnSanPham.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSanPham.Location = new System.Drawing.Point(0, 0);
-            this.btnSanPham.Name = "btnSanPham";
-            this.btnSanPham.Size = new System.Drawing.Size(207, 67);
-            this.btnSanPham.TabIndex = 38;
-            this.btnSanPham.Text = "Sản phẩm";
-            this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.btnThoat);
-            this.panel12.Location = new System.Drawing.Point(0, 418);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(190, 67);
-            this.panel12.TabIndex = 41;
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThongKe.Animated = true;
-            this.btnThongKe.BorderRadius = 22;
-            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThongKe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.HoverState.FillColor = System.Drawing.Color.LimeGreen;
-            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
-            this.btnThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 0);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(207, 67);
-            this.btnThongKe.TabIndex = 40;
-            this.btnThongKe.Text = "Thống kê";
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click_1);
             // 
             // panelThan
             // 
@@ -364,11 +364,11 @@
             this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel8.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
             this.panelThan.ResumeLayout(false);
             this.panelThan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

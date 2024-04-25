@@ -37,7 +37,7 @@
             this.lblTenSP = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btnNhanHang = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDaNhanHang = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,8 +47,8 @@
             this.lblTrangThai.AutoSize = true;
             this.lblTrangThai.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lblTrangThai.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrangThai.ForeColor = System.Drawing.Color.Black;
-            this.lblTrangThai.Location = new System.Drawing.Point(1308, 86);
+            this.lblTrangThai.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblTrangThai.Location = new System.Drawing.Point(1270, 149);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.Size = new System.Drawing.Size(86, 25);
             this.lblTrangThai.TabIndex = 101;
@@ -59,7 +59,7 @@
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongTien.ForeColor = System.Drawing.Color.Red;
-            this.lblTongTien.Location = new System.Drawing.Point(1088, 86);
+            this.lblTongTien.Location = new System.Drawing.Point(1136, 86);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(104, 25);
             this.lblTongTien.TabIndex = 99;
@@ -110,31 +110,36 @@
             this.bunifuElipse1.ElipseRadius = 40;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // btnNhanHang
+            // btnDaNhanHang
             // 
-            this.btnNhanHang.Animated = true;
-            this.btnNhanHang.BorderRadius = 10;
-            this.btnNhanHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNhanHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhanHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhanHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNhanHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNhanHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnNhanHang.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanHang.ForeColor = System.Drawing.Color.Black;
-            this.btnNhanHang.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanHang.Image")));
-            this.btnNhanHang.Location = new System.Drawing.Point(1442, 129);
-            this.btnNhanHang.Name = "btnNhanHang";
-            this.btnNhanHang.Size = new System.Drawing.Size(173, 45);
-            this.btnNhanHang.TabIndex = 105;
-            this.btnNhanHang.Text = "Đã nhận hàng";
+            this.btnDaNhanHang.BorderRadius = 14;
+            this.btnDaNhanHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDaNhanHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDaNhanHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDaNhanHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDaNhanHang.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDaNhanHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDaNhanHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnDaNhanHang.FillColor2 = System.Drawing.Color.Salmon;
+            this.btnDaNhanHang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDaNhanHang.ForeColor = System.Drawing.Color.Black;
+            this.btnDaNhanHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDaNhanHang.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnDaNhanHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDaNhanHang.Image")));
+            this.btnDaNhanHang.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnDaNhanHang.Location = new System.Drawing.Point(1417, 77);
+            this.btnDaNhanHang.Name = "btnDaNhanHang";
+            this.btnDaNhanHang.Size = new System.Drawing.Size(180, 45);
+            this.btnDaNhanHang.TabIndex = 106;
+            this.btnDaNhanHang.Text = "Đã nhận hàng";
+            this.btnDaNhanHang.Click += new System.EventHandler(this.btnDaNhanHang_Click);
             // 
             // UCDonHangNM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.Controls.Add(this.btnNhanHang);
+            this.Controls.Add(this.btnDaNhanHang);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTenSP);
             this.Controls.Add(this.lblTrangThai);
@@ -162,6 +167,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picHinh;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Guna.UI2.WinForms.Guna2Button btnNhanHang;
+        private Guna.UI2.WinForms.Guna2GradientButton btnDaNhanHang;
     }
 }

@@ -82,6 +82,7 @@
             // btnThoat
             // 
             this.btnThoat.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btnThoat.HoverState.ImageSize = new System.Drawing.Size(30, 30);
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));

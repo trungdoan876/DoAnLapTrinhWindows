@@ -1,25 +1,22 @@
-﻿using DoANLapTrinhWin.UC;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace DoANLapTrinhWin
 {
-    public partial class FDHDangThucHienNM : Form
+    public partial class FDaGiaoNM : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        string maNM;
         byte[] hinh;
-        public FDHDangThucHienNM(string maNM)
+        string maNM;
+        public FDaGiaoNM(string maNM)
         {
             InitializeComponent();
             this.maNM = maNM;
@@ -30,13 +27,12 @@ namespace DoANLapTrinhWin
             try
             {
                 conn.Open();
-                // chonj 1 sanr phaamr de hien len uc 
                 string sqlStr = string.Format("select DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat," +
-                    "TrangThaiDonHangNM as TrangThaiDonHangNM, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
+                    "TrangThaiDonHangNB as TrangThaiDonHang, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
                     "FROM DonHang, (SELECT MaDonHang, MIN(MaSanPham) AS MaSanPham FROM ChiTietDonHang GROUP BY MaDonHang) Q, SanPham " +
-                    "WHERE MaNguoiMua = '{0}' AND DonHang.MaDonHang = Q.MaDonHang AND SanPham.MaSanPham = Q.MaSanPham " +
-                    " AND TrangThaiDonHangNM = N'{1}'", maNM, "Đặt hàng thành công");
-                
+                    "WHERE DonHang.MaNguoiMua = '{0}' AND DonHang.MaDonHang = Q.MaDonHang AND SanPham.MaSanPham = Q.MaSanPham AND TrangThaiDonHangNB='{1}'",
+                    maNM, "Giao hàng thành công");
+
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
@@ -46,7 +42,7 @@ namespace DoANLapTrinhWin
                     string maDH = row["MaDonHang"].ToString();
                     string tongTien = row["TongTien"].ToString();
                     DateTime NgDat = (DateTime)row["NgDat"];
-                    string TTDH = row["TrangThaiDonHangNM"].ToString();
+                    string TTDH = row["TrangThaiDonHang"].ToString();
                     string tenSP = row["TenSP"].ToString();
                     if (row["Hinh"] != DBNull.Value)
                     {
@@ -55,11 +51,9 @@ namespace DoANLapTrinhWin
                     DonHang dh = new DonHang(maDH, tongTien, NgDat, TTDH);
                     SanPham sp = new SanPham(tenSP, hinh);
 
-                    UCDonHangNM uc = new UCDonHangNM(dh, sp);
-                    
-                    uc.Location = new Point(0, y);
-                    y = y + uc.Height + uc.Height;
-                    panelDonHang.Controls.Add(uc);
+                    UCDonHangNB uc = new UCDonHangNB(dh, sp);
+
+                    panelDaGiao.Controls.Add(uc);
                 }
             }
             catch (Exception ex)

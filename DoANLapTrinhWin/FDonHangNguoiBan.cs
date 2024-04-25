@@ -26,5 +26,11 @@ namespace DoANLapTrinhWin
             Global.TaoButton(btnDangThucHien, ref gl.btnOK);
             Global.MoFormCon(new FDHDangThucHienNB(maNB), panelThan);
         }
+
+        private void btnDaGiao_Click(object sender, EventArgs e)
+        {
+            Global.TaoButton(btnDaGiao, ref gl.btnOK);
+            Global.MoFormCon(new FDaGiaoNB(maNB), panelThan);
+        }
     }
 }

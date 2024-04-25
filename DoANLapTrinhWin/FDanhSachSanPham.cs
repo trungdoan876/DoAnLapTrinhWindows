@@ -17,22 +17,6 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNB;
         byte[] hinh;
-        private Form formcon;
-        private void moFormCon(Form form)
-        {
-            if (formcon != null)
-            {
-                formcon.Close();
-            }
-            formcon = form;
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            panelTatCaSP.Controls.Add(form);
-            panelTatCaSP.Tag = form;
-            form.BringToFront();
-            form.Show();
-        }
         Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -104,8 +88,7 @@ namespace DoANLapTrinhWin
 
         private void btnThemSanPham_Click(object sender, EventArgs e)
         {
-            //Global.MoFormCon(new FThemSanPham(maNB),panelTatCaSP);
-            moFormCon(new FThemSanPham(maNB));
+            Global.MoFormCon(new FThemSanPham(maNB),panelTatCaSP);
         }
     }
 }

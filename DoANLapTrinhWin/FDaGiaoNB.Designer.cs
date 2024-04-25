@@ -1,6 +1,6 @@
 ﻿namespace DoANLapTrinhWin
 {
-    partial class FDHDangThucHienNM
+    partial class FDaGiaoNB
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelDonHang = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelDaGiao = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // panelDonHang
+            // panelDaGiao
             // 
-            this.panelDonHang.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDonHang.Location = new System.Drawing.Point(0, 0);
-            this.panelDonHang.Name = "panelDonHang";
-            this.panelDonHang.Size = new System.Drawing.Size(1186, 555);
-            this.panelDonHang.TabIndex = 0;
+            this.panelDaGiao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelDaGiao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDaGiao.Location = new System.Drawing.Point(0, 0);
+            this.panelDaGiao.Name = "panelDaGiao";
+            this.panelDaGiao.Size = new System.Drawing.Size(1495, 698);
+            this.panelDaGiao.TabIndex = 0;
             // 
-            // FDHDangThucHienNM
+            // FDaGiaoNB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 555);
-            this.Controls.Add(this.panelDonHang);
-            this.Name = "FDHDangThucHienNM";
-            this.Text = "FDHDangThucHienNM";
+            this.ClientSize = new System.Drawing.Size(1495, 698);
+            this.Controls.Add(this.panelDaGiao);
+            this.Name = "FDaGiaoNB";
+            this.Text = "FDaGiaoNB";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel panelDonHang;
+        private System.Windows.Forms.FlowLayoutPanel panelDaGiao;
     }
 }

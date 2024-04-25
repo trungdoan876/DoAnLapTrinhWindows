@@ -35,7 +35,7 @@ namespace DoANLapTrinhWin
         public FDatHang(string maNM,SanPham sp, int tongtien)
         {
             InitializeComponent();
-            this.Size = new Size(950, 700);
+            this.Size = new Size(1200, 600);
             this.sp = sp;
             this.maNM=maNM;
             this.tongtien=tongtien;
@@ -63,7 +63,7 @@ namespace DoANLapTrinhWin
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {

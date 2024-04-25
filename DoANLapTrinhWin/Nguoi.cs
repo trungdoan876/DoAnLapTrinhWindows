@@ -11,7 +11,6 @@ namespace DoANLapTrinhWin
 {
     class Nguoi
     {
-        //private string tenTaiKhoan;
         byte[] hinh;
         private string ma;
         private string Ten;
@@ -25,7 +24,6 @@ namespace DoANLapTrinhWin
         // dung cho nguoi mua
         public Nguoi(byte[] hinh,string ma, string Ten, string SDT, DateTime ngaySinh, string gioiTinh, string CCCD, string diaChi, string eMail)
         {
-            //this.tenTaiKhoan = tenTaiKhoan;
             this.hinh = hinh;
             this.ma = ma;
             this.Ten = Ten;
@@ -39,7 +37,6 @@ namespace DoANLapTrinhWin
         //dung cho nguoi ban
         public Nguoi(byte[] hinh, string ma, string Ten, string SDT, DateTime ngaySinh, string gioiTinh, string CCCD, string diaChi, string eMail,string moTa)
         {
-            //this.tenTaiKhoan = tenTaiKhoan;
             this.hinh= hinh;
             this.ma = ma;
             this.Ten = Ten;

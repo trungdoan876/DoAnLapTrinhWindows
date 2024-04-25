@@ -65,7 +65,7 @@
             this.lblTrangThai.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lblTrangThai.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrangThai.ForeColor = System.Drawing.Color.Black;
-            this.lblTrangThai.Location = new System.Drawing.Point(1432, 97);
+            this.lblTrangThai.Location = new System.Drawing.Point(1406, 97);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.Size = new System.Drawing.Size(86, 25);
             this.lblTrangThai.TabIndex = 108;
@@ -76,7 +76,7 @@
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongTien.ForeColor = System.Drawing.Color.Red;
-            this.lblTongTien.Location = new System.Drawing.Point(1145, 97);
+            this.lblTongTien.Location = new System.Drawing.Point(1132, 97);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(104, 25);
             this.lblTongTien.TabIndex = 107;

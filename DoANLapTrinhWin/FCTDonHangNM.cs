@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace DoANLapTrinhWin
 {
-    public partial class FChiTietDonHangNguoiMua : Form
+    public partial class FCTDonHangNM : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maDH;
         byte[] hinh;
-        public FChiTietDonHangNguoiMua(string madh)
+        public FCTDonHangNM(string madh)
         {
             InitializeComponent();
             this.Size = new Size(1200,600);

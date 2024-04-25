@@ -40,7 +40,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelDH = new System.Windows.Forms.Panel();
+            this.btnGiaoHang = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -116,6 +118,7 @@
             // btnQuaylai
             // 
             this.btnQuaylai.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnQuaylai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuaylai.HoverState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnQuaylai.Image = ((System.Drawing.Image)(resources.GetObject("btnQuaylai.Image")));
             this.btnQuaylai.ImageOffset = new System.Drawing.Point(0, 0);
@@ -131,6 +134,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.btnGiaoHang);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 644);
             this.panel2.Name = "panel2";
@@ -151,6 +155,28 @@
             this.panelDH.Size = new System.Drawing.Size(1417, 560);
             this.panelDH.TabIndex = 300;
             // 
+            // btnGiaoHang
+            // 
+            this.btnGiaoHang.Animated = true;
+            this.btnGiaoHang.BorderColor = System.Drawing.Color.Silver;
+            this.btnGiaoHang.BorderRadius = 15;
+            this.btnGiaoHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGiaoHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGiaoHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGiaoHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGiaoHang.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGiaoHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGiaoHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnGiaoHang.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiaoHang.ForeColor = System.Drawing.Color.Black;
+            this.btnGiaoHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnGiaoHang.Location = new System.Drawing.Point(1159, 19);
+            this.btnGiaoHang.Name = "btnGiaoHang";
+            this.btnGiaoHang.Size = new System.Drawing.Size(246, 56);
+            this.btnGiaoHang.TabIndex = 0;
+            this.btnGiaoHang.Text = "Giao hàng";
+            this.btnGiaoHang.Click += new System.EventHandler(this.btnGiaoHang_Click);
+            // 
             // FCTDonHangNB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -165,6 +191,7 @@
             this.Text = "FCTDonHangNB";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -181,5 +208,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnQuaylai;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panelDH;
+        private Guna.UI2.WinForms.Guna2GradientButton btnGiaoHang;
     }
 }

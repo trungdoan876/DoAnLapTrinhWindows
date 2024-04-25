@@ -66,11 +66,11 @@
     </Compile>
     <Compile Include="DBConnection.cs" />
     <Compile Include="DonHang.cs" />
-    <Compile Include="FChiTietDonHangNguoiMua.cs">
+    <Compile Include="FCTDonHangNM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FChiTietDonHangNguoiMua.Designer.cs">
-      <DependentUpon>FChiTietDonHangNguoiMua.cs</DependentUpon>
+    <Compile Include="FCTDonHangNM.Designer.cs">
+      <DependentUpon>FCTDonHangNM.cs</DependentUpon>
     </Compile>
     <Compile Include="FChuaDangBan.cs">
       <SubType>Form</SubType>
@@ -83,6 +83,18 @@
     </Compile>
     <Compile Include="FCTDonHangNB.Designer.cs">
       <DependentUpon>FCTDonHangNB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDaGiaoNB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDaGiaoNB.Designer.cs">
+      <DependentUpon>FDaGiaoNB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDaGiaoNM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDaGiaoNM.Designer.cs">
+      <DependentUpon>FDaGiaoNM.cs</DependentUpon>
     </Compile>
     <Compile Include="FDatHang.cs">
       <SubType>Form</SubType>
@@ -192,12 +204,6 @@
     <Compile Include="FChuyenKhoan.Designer.cs">
       <DependentUpon>FChuyenKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FThongKeNguoiBan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FThongKeNguoiBan.Designer.cs">
-      <DependentUpon>FThongKeNguoiBan.cs</DependentUpon>
-    </Compile>
     <Compile Include="FThongTinChiTietNguoiMua.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,8 +293,8 @@
     <Compile Include="UC\UCSPBan.Designer.cs">
       <DependentUpon>UCSPBan.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FChiTietDonHangNguoiMua.resx">
-      <DependentUpon>FChiTietDonHangNguoiMua.cs</DependentUpon>
+    <EmbeddedResource Include="FCTDonHangNM.resx">
+      <DependentUpon>FCTDonHangNM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FChuaDangBan.resx">
       <DependentUpon>FChuaDangBan.cs</DependentUpon>
@@ -304,6 +310,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FDaDangBan.resx">
       <DependentUpon>FDaDangBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDaGiaoNB.resx">
+      <DependentUpon>FDaGiaoNB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDaGiaoNM.resx">
+      <DependentUpon>FDaGiaoNM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
@@ -349,9 +361,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThanhToan.resx">
       <DependentUpon>FThanhToan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FThongKeNguoiBan.resx">
-      <DependentUpon>FThongKeNguoiBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThongTinChiTietNguoiMua.resx">
       <DependentUpon>FThongTinChiTietNguoiMua.cs</DependentUpon>

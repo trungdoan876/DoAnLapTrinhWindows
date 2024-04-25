@@ -34,12 +34,11 @@ namespace DoANLapTrinhWin
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT TOP 1 DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat, " +
-                "TrangThaiDonHangNB as TrangThaiDonHang, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
-                 "FROM DonHang, SanPham, ChiTietDonHang " +
-                "WHERE DonHang.MaNguoiBan = '{0}' AND DonHang.MaDonHang = ChiTietDonHang.MaDonHang " +
-                "AND SanPham.MaSanPham = ChiTietDonHang.MaSanPham", maNB);
-
+                string sqlStr = string.Format("select DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat," +
+                    "TrangThaiDonHangNB as TrangThaiDonHangNB, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
+                    "FROM DonHang, (SELECT MaDonHang, MIN(MaSanPham) AS MaSanPham FROM ChiTietDonHang GROUP BY MaDonHang) Q, SanPham " +
+                    " WHERE DonHang.MaNguoiBan = '{0}' AND DonHang.MaDonHang = Q.MaDonHang AND SanPham.MaSanPham = Q.MaSanPham" +
+                    " AND DonHang.TrangThaiDonHangNB = N'{1}'", maNB, "Chuẩn bị hàng");
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
@@ -49,7 +48,7 @@ namespace DoANLapTrinhWin
                     string maDH = row["MaDonHang"].ToString();
                     string tongTien = row["TongTien"].ToString();
                     DateTime NgDat = (DateTime)row["NgDat"];
-                    string TTDH = row["TrangThaiDonHang"].ToString();
+                    string TTDH = row["TrangThaiDonHangNB"].ToString();
                     string tenSP = row["TenSP"].ToString();
                     if (row["Hinh"] != DBNull.Value)
                     {

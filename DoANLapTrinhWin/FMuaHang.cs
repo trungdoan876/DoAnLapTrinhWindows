@@ -21,6 +21,7 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string tenTaiKhoan;
         byte[] hinh;
+        Global gl = new Global();
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -30,19 +31,6 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.tenTaiKhoan = tenTK;
-        }
-        private void TaoButton(object button)
-        {
-            var btn = (Guna2Button)button;
-
-            btn.FillColor = Color.Gold;
-
-            if (btnOK != null && btnOK != btn)
-            {
-                btnOK.FillColor = Color.PowderBlue;
-            }
-
-            btnOK = btn;
         }
         public void LoadData()
         {
@@ -174,61 +162,61 @@ namespace DoANLapTrinhWin
         private void btnMenu_Click(object sender, EventArgs e)
         {
             panelMuaHang.Controls.Clear();
-            TaoButton(sender);
+            Global.TaoButtonTimKiem(btnMenu,ref gl.btnOK);
             LoadData();
         }
 
         private void btnSach_Click(object sender, EventArgs e)
         {
-            TaoButton(sender);
+            Global.TaoButtonTimKiem(btnSach, ref gl.btnOK);
             BoLoc(btnSach.Text.Trim());
         }
 
         private void btnThoitrangnu_Click(object sender, EventArgs e)
         {
-            TaoButton(sender);
+            Global.TaoButtonTimKiem(btnThoitrangnu, ref gl.btnOK);
             BoLoc(btnThoitrangnu.Text.Trim());
         }
 
         private void btnDochonam_Click(object sender, EventArgs e)
         {
-            TaoButton(sender);
+            Global.TaoButtonTimKiem(btnDochonam, ref gl.btnOK);
             BoLoc(btnDochonam.Text.Trim());
         }
 
         private void btnDochoi_Click(object sender, EventArgs e)
         {
-            TaoButton(sender);
+            Global.TaoButtonTimKiem(btnDochoi, ref gl.btnOK);
             BoLoc(btnDochoi.Text.Trim());
         }
 
         private void btnDodungnhacua_Click(object sender, EventArgs e)
         {
-            TaoButton(sender);
+            Global.TaoButtonTimKiem(btnDodungnhacua, ref gl.btnOK);
             BoLoc(btnDodungnhacua.Text.Trim());
         }
 
         private void btnThietbidientu_Click(object sender, EventArgs e)
         {
-            TaoButton(sender);
+            Global.TaoButtonTimKiem(btnThietbidientu, ref gl.btnOK);
             BoLoc(btnThietbidientu.Text.Trim());
         }
 
         private void btnDothethao_Click(object sender, EventArgs e)
         {
-            TaoButton(sender);
+            Global.TaoButtonTimKiem(btnDothethao, ref gl.btnOK);
             BoLoc(btnDothethao.Text.Trim());
         }
 
         private void btndolamdep_Click(object sender, EventArgs e)
         {
-            TaoButton(sender);
+            Global.TaoButtonTimKiem(btndolamdep, ref gl.btnOK);
             BoLoc(btndolamdep.Text.Trim());
         }
 
         private void btnKhac_Click(object sender, EventArgs e)
         {
-            TaoButton(sender);
+            Global.TaoButtonTimKiem(btnKhac, ref gl.btnOK);
             BoLoc(btnKhac.Text.Trim());
         }
 

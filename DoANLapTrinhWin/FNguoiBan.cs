@@ -47,7 +47,7 @@ namespace DoANLapTrinhWin
         private void btnThongKe_Click_1(object sender, EventArgs e)
         {
             Global.TaoButton(btnThongKe, ref gl.btnOK);
-            Global.MoFormCon(new FThongKeNguoiBan(), panelThan); 
+            //Global.MoFormCon(new FThongKeNguoiBan(), panelThan); 
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

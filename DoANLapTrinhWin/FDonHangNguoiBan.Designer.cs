@@ -145,6 +145,7 @@
             this.btnDaGiao.Size = new System.Drawing.Size(487, 70);
             this.btnDaGiao.TabIndex = 39;
             this.btnDaGiao.Text = "Đã giao";
+            this.btnDaGiao.Click += new System.EventHandler(this.btnDaGiao_Click);
             // 
             // panelThan
             // 

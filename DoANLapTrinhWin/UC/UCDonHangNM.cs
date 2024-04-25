@@ -15,6 +15,7 @@ namespace DoANLapTrinhWin.UC
 {
     public partial class UCDonHangNM : UserControl
     {
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         DonHang dh;
         SanPham sp;
         public UCDonHangNM()
@@ -47,9 +48,30 @@ namespace DoANLapTrinhWin.UC
 
         private void UCDonHang_Click(object sender, EventArgs e)
         {
-            FChiTietDonHangNguoiMua fdh = new FChiTietDonHangNguoiMua(lblMaDH.Text);
+            FCTDonHangNM fdh = new FCTDonHangNM(lblMaDH.Text);
             fdh.ShowDialog();
             
+        }
+
+        private void btnDaNhanHang_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                string sqlStr = string.Format("UPDATE DonHang SET TrangThaiDonHangNM = N'{0}', TrangThaiDonHangNB = N'{1}' WHERE MaDonHang ='{2}'",
+                    "Giao hàng thành công", "Giao hàng thành công", lblMaDH.Text);
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                if (cmd.ExecuteNonQuery() > 0)
+                    MessageBox.Show("Da nhan hang, hay danh gia don hang cua ban");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }
