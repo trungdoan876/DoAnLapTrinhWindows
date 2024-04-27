@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSPGioHang));
             this.picHinh = new System.Windows.Forms.PictureBox();
             this.lblTenSP = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             this.vongtrontt = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.lblTinhTrang = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTrangThai = new System.Windows.Forms.Label();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soluongmuaGH)).BeginInit();
             this.vongtrontt.SuspendLayout();
@@ -62,11 +64,11 @@
             // lblTenSP
             // 
             this.lblTenSP.AutoSize = true;
-            this.lblTenSP.Font = new System.Drawing.Font("Segoe UI Black", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenSP.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.ForeColor = System.Drawing.Color.Black;
             this.lblTenSP.Location = new System.Drawing.Point(361, 13);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(77, 28);
+            this.lblTenSP.Size = new System.Drawing.Size(134, 48);
             this.lblTenSP.TabIndex = 32;
             this.lblTenSP.Text = "Tên SP";
             // 
@@ -109,7 +111,7 @@
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Black;
             this.bunifuCustomLabel1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuCustomLabel1.Image")));
             this.bunifuCustomLabel1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(361, 76);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(362, 100);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(171, 33);
             this.bunifuCustomLabel1.TabIndex = 83;
@@ -192,7 +194,7 @@
             this.vongtrontt.FillThickness = 8;
             this.vongtrontt.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.vongtrontt.ForeColor = System.Drawing.Color.White;
-            this.vongtrontt.Location = new System.Drawing.Point(519, 53);
+            this.vongtrontt.Location = new System.Drawing.Point(520, 77);
             this.vongtrontt.Minimum = 0;
             this.vongtrontt.Name = "vongtrontt";
             this.vongtrontt.ProgressColor = System.Drawing.Color.HotPink;
@@ -224,10 +226,16 @@
             this.lblTrangThai.TabIndex = 90;
             this.lblTrangThai.Text = "label1";
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // UCSPGioHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.Controls.Add(this.vongtrontt);
             this.Controls.Add(this.lblDiaChi);
             this.Controls.Add(this.bunifuCustomLabel3);
@@ -243,7 +251,7 @@
             this.Controls.Add(this.lblTrangThai);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UCSPGioHang";
-            this.Size = new System.Drawing.Size(1431, 239);
+            this.Size = new System.Drawing.Size(1502, 239);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soluongmuaGH)).EndInit();
             this.vongtrontt.ResumeLayout(false);
@@ -269,5 +277,6 @@
         public Guna.UI2.WinForms.Guna2HtmlLabel lblTinhTrang;
         public System.Windows.Forms.Label lblTrangThai;
         public System.Windows.Forms.CheckBox checkBoxSP;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

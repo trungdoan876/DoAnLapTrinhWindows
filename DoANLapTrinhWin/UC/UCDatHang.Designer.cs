@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblsoluong = new System.Windows.Forms.Label();
             this.lblthanhtien = new System.Windows.Forms.Label();
             this.lblGiaTien = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.picHinh = new System.Windows.Forms.PictureBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             this.lblthanhtien.AutoSize = true;
             this.lblthanhtien.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblthanhtien.ForeColor = System.Drawing.Color.Black;
-            this.lblthanhtien.Location = new System.Drawing.Point(828, 80);
+            this.lblthanhtien.Location = new System.Drawing.Point(1183, 80);
             this.lblthanhtien.Name = "lblthanhtien";
             this.lblthanhtien.Size = new System.Drawing.Size(19, 25);
             this.lblthanhtien.TabIndex = 96;
@@ -91,11 +93,17 @@
             this.picHinh.TabIndex = 93;
             this.picHinh.TabStop = false;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // UCDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Controls.Add(this.lblsoluong);
             this.Controls.Add(this.lblthanhtien);
             this.Controls.Add(this.lblGiaTien);
@@ -104,7 +112,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UCDatHang";
-            this.Size = new System.Drawing.Size(1186, 176);
+            this.Size = new System.Drawing.Size(1378, 176);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -118,5 +126,6 @@
         public System.Windows.Forms.Label lblGiaTien;
         public System.Windows.Forms.Label lblTenSP;
         public System.Windows.Forms.PictureBox picHinh;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

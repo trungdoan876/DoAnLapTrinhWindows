@@ -129,5 +129,20 @@ namespace DoANLapTrinhWin
             FDatHang fdh = new FDatHang(maNM, sp,tongtien);
             fdh.ShowDialog();
         }
+
+        private void FGioHang_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTongTien_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
