@@ -29,26 +29,34 @@ namespace DoANLapTrinhWin
             try
             {
                 conn.Open();
-                /*if (loainguoi == "Bán hàng")
+                if (loainguoi == "Bán hàng")
                 {
-                    string sql = string.Format("INSERT INTO NguoiBan() VALUES());
+                    string maNB = Global.TaoMaNB();
+                    string sql = string.Format("INSERT INTO NguoiBan(Ma,MatKhau,Ten,SDT,NgaySinh,GioiTinh,CCCD, DiaChi) " +
+                        "VALUES('{0}','{1}',N'{2}','{3}','{4}',N'{5}','{6}',N'{7}')",
+                        maNB,txtMK.Text,txtHoTen.Text,sdt,dtpNgSinh.Value,txtGioiTinh.Text,txtCCCD.Text,txtDiaChi.Text);
                     SqlCommand cmd = new SqlCommand(sql, conn);
-                    int count = (int)cmd.ExecuteScalar();
-                    if (count > 0)
-                        MessageBox.Show("Số điện thoại đã được đăng ký!");
-                    else
-                        Global.MoFormCon(new FThongTinDangKy(selctecOption, txtDK.Text), panelDK);
+                    if (cmd.ExecuteNonQuery() > 0)
+                        MessageBox.Show("Tao tai khoan thanh cong");
                 }
-                else if (loainguoi == "Mua hàng")*/
-
-
+                else if (loainguoi == "Mua hàng")
+                {
+                    string maNM = Global.TaoMaNM();
+                    string sql = string.Format("INSERT INTO NguoiMua(Ma,MatKhau,Ten,SDT,NgaySinh,GioiTinh,CCCD, DiaChi) " +
+                        "VALUES('{0}','{1}',N'{2}','{3}','{4}',N'{5}','{6}',N'{7}')",
+                        maNM, txtMK.Text, txtHoTen.Text, sdt, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text);
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    if (cmd.ExecuteNonQuery() > 0)
+                        MessageBox.Show("Tao tai khoan thanh cong");
+                }    
             }
-            catch
-            { 
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {
-                
+                conn.Close();
             }
         }
     }

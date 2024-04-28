@@ -12,11 +12,26 @@ namespace DoANLapTrinhWin
     public class Global
     {
         //tạo mã đơn hàng
-        public static int ma = 1;
+        private static int ma = 0;
         public static string TaoMaDonHangTuDong()
         {
+
             ma++;
-            return "DH" + ma.ToString();
+            return "DH0" + ma.ToString();
+        }
+        private static int manb = 1;
+        public static string TaoMaNB()
+        {
+
+            manb++;
+            return "NB0" + manb.ToString();
+        }
+        private static int manm = 1;
+        public static string TaoMaNM()
+        {
+
+            manm++;
+            return "NM0" + manm.ToString();
         }
         //mo form con
         public static Form formcon;

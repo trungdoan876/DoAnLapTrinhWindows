@@ -36,7 +36,7 @@
             this.dtpNgSinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btnDangKy = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMK = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnDangKy)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,28 +198,28 @@
             this.guna2TextBox2.Size = new System.Drawing.Size(379, 55);
             this.guna2TextBox2.TabIndex = 219;
             // 
-            // guna2TextBox1
+            // txtMK
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(44, 133);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.guna2TextBox1.PlaceholderText = "Nhập mật khẩu";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(379, 55);
-            this.guna2TextBox1.TabIndex = 218;
+            this.txtMK.BorderColor = System.Drawing.Color.Black;
+            this.txtMK.BorderRadius = 10;
+            this.txtMK.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMK.DefaultText = "";
+            this.txtMK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMK.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMK.Location = new System.Drawing.Point(44, 133);
+            this.txtMK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMK.Name = "txtMK";
+            this.txtMK.PasswordChar = '\0';
+            this.txtMK.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtMK.PlaceholderText = "Nhập mật khẩu";
+            this.txtMK.SelectedText = "";
+            this.txtMK.Size = new System.Drawing.Size(379, 55);
+            this.txtMK.TabIndex = 218;
             // 
             // FThongTinDangKy
             // 
@@ -228,7 +228,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(939, 665);
             this.Controls.Add(this.guna2TextBox2);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtMK);
             this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.txtGioiTinh);
@@ -250,6 +250,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgSinh;
         private Guna.UI2.WinForms.Guna2PictureBox btnDangKy;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtMK;
     }
 }
