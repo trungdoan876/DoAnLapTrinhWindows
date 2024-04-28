@@ -16,6 +16,7 @@ namespace DoANLapTrinhWin
         public UCTheoNB(string mangban)
         {
             InitializeComponent();
+            
             this.mangban = mangban;
             this.lbltenNB.Text = mangban;
         }

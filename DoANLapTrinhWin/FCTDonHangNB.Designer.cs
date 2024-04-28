@@ -34,15 +34,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblMaDH = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblMaDH = new System.Windows.Forms.Label();
             this.btnQuaylai = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnGiaoHang = new Guna.UI2.WinForms.Guna2GradientButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelDH = new System.Windows.Forms.Panel();
-            this.btnGiaoHang = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -50,7 +54,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label4.Location = new System.Drawing.Point(667, 56);
+            this.label4.Location = new System.Drawing.Point(686, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 20);
             this.label4.TabIndex = 295;
@@ -61,7 +65,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label3.Location = new System.Drawing.Point(1201, 56);
+            this.label3.Location = new System.Drawing.Point(1597, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 20);
             this.label3.TabIndex = 294;
@@ -72,7 +76,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label2.Location = new System.Drawing.Point(950, 56);
+            this.label2.Location = new System.Drawing.Point(967, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 20);
             this.label2.TabIndex = 293;
@@ -89,31 +93,43 @@
             this.label1.TabIndex = 292;
             this.label1.Text = "Tên sản phẩm";
             // 
-            // lblMaDH
-            // 
-            this.lblMaDH.AutoSize = true;
-            this.lblMaDH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaDH.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblMaDH.Location = new System.Drawing.Point(118, 9);
-            this.lblMaDH.Name = "lblMaDH";
-            this.lblMaDH.Size = new System.Drawing.Size(66, 25);
-            this.lblMaDH.TabIndex = 291;
-            this.lblMaDH.Text = "Madh";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.lblMaDH);
             this.panel1.Controls.Add(this.btnQuaylai);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.lblMaDH);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1417, 84);
+            this.panel1.Size = new System.Drawing.Size(1716, 84);
             this.panel1.TabIndex = 296;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label7.Location = new System.Drawing.Point(107, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(128, 24);
+            this.label7.TabIndex = 298;
+            this.label7.Text = "Mã đơn hàng:";
+            // 
+            // lblMaDH
+            // 
+            this.lblMaDH.AutoSize = true;
+            this.lblMaDH.Font = new System.Drawing.Font("Palatino Linotype", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaDH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblMaDH.Location = new System.Drawing.Point(231, 7);
+            this.lblMaDH.Name = "lblMaDH";
+            this.lblMaDH.Size = new System.Drawing.Size(64, 27);
+            this.lblMaDH.TabIndex = 297;
+            this.lblMaDH.Text = "Madh";
             // 
             // btnQuaylai
             // 
@@ -133,27 +149,26 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.BackColor = System.Drawing.Color.Azure;
             this.panel2.Controls.Add(this.btnGiaoHang);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 644);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1417, 100);
+            this.panel2.Size = new System.Drawing.Size(1716, 100);
             this.panel2.TabIndex = 297;
             // 
-            // bunifuElipse1
+            // label5
             // 
-            this.bunifuElipse1.ElipseRadius = 30;
-            this.bunifuElipse1.TargetControl = this;
-            // 
-            // panelDH
-            // 
-            this.panelDH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelDH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDH.Location = new System.Drawing.Point(0, 84);
-            this.panelDH.Name = "panelDH";
-            this.panelDH.Size = new System.Drawing.Size(1417, 560);
-            this.panelDH.TabIndex = 300;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label5.Location = new System.Drawing.Point(985, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(265, 22);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Bạn đã chuẩn bị hàng xong?";
             // 
             // btnGiaoHang
             // 
@@ -166,22 +181,50 @@
             this.btnGiaoHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnGiaoHang.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnGiaoHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGiaoHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnGiaoHang.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiaoHang.ForeColor = System.Drawing.Color.Black;
+            this.btnGiaoHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnGiaoHang.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnGiaoHang.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnGiaoHang.ForeColor = System.Drawing.Color.White;
             this.btnGiaoHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btnGiaoHang.Location = new System.Drawing.Point(1159, 19);
+            this.btnGiaoHang.Image = ((System.Drawing.Image)(resources.GetObject("btnGiaoHang.Image")));
+            this.btnGiaoHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnGiaoHang.Location = new System.Drawing.Point(1377, 32);
             this.btnGiaoHang.Name = "btnGiaoHang";
             this.btnGiaoHang.Size = new System.Drawing.Size(246, 56);
             this.btnGiaoHang.TabIndex = 0;
             this.btnGiaoHang.Text = "Giao hàng";
             this.btnGiaoHang.Click += new System.EventHandler(this.btnGiaoHang_Click);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 30;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // panelDH
+            // 
+            this.panelDH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelDH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDH.Location = new System.Drawing.Point(0, 84);
+            this.panelDH.Name = "panelDH";
+            this.panelDH.Size = new System.Drawing.Size(1716, 560);
+            this.panelDH.TabIndex = 303;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(1238, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(158, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FCTDonHangNB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1417, 744);
+            this.ClientSize = new System.Drawing.Size(1716, 744);
             this.Controls.Add(this.panelDH);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -192,6 +235,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,12 +247,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblMaDH;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2ImageButton btnQuaylai;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Panel panelDH;
         private Guna.UI2.WinForms.Guna2GradientButton btnGiaoHang;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblMaDH;
+        private System.Windows.Forms.Panel panelDH;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

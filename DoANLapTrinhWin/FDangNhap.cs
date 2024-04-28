@@ -139,5 +139,10 @@ namespace DoANLapTrinhWin
                 }
             }
         }
+
+        private void lblDangKy_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

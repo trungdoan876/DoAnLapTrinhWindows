@@ -33,8 +33,9 @@
             this.lblTenSP = new System.Windows.Forms.Label();
             this.lblTrangThai = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
-            this.lblMaDH = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblMaDH = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,34 +83,48 @@
             this.lblTongTien.TabIndex = 107;
             this.lblTongTien.Text = "tongtienDH";
             // 
-            // lblMaDH
-            // 
-            this.lblMaDH.AutoSize = true;
-            this.lblMaDH.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaDH.ForeColor = System.Drawing.Color.Silver;
-            this.lblMaDH.Location = new System.Drawing.Point(86, 13);
-            this.lblMaDH.Name = "lblMaDH";
-            this.lblMaDH.Size = new System.Drawing.Size(78, 32);
-            this.lblMaDH.TabIndex = 106;
-            this.lblMaDH.Text = "madh";
-            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 20;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label1.Location = new System.Drawing.Point(33, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 24);
+            this.label1.TabIndex = 304;
+            this.label1.Text = "Mã đơn hàng:";
+            // 
+            // lblMaDH
+            // 
+            this.lblMaDH.AutoSize = true;
+            this.lblMaDH.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaDH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblMaDH.Location = new System.Drawing.Point(158, 12);
+            this.lblMaDH.Name = "lblMaDH";
+            this.lblMaDH.Size = new System.Drawing.Size(66, 27);
+            this.lblMaDH.TabIndex = 303;
+            this.lblMaDH.Text = "Madh";
+            // 
             // UCDonHangNB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MistyRose;
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblMaDH);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTenSP);
             this.Controls.Add(this.lblTrangThai);
             this.Controls.Add(this.lblTongTien);
-            this.Controls.Add(this.lblMaDH);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UCDonHangNB";
-            this.Size = new System.Drawing.Size(1609, 203);
+            this.Size = new System.Drawing.Size(1628, 203);
+            this.Load += new System.EventHandler(this.UCDonHangNB_Load);
             this.Click += new System.EventHandler(this.UCDonHangNB_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -123,7 +138,8 @@
         public System.Windows.Forms.Label lblTenSP;
         public System.Windows.Forms.Label lblTrangThai;
         public System.Windows.Forms.Label lblTongTien;
-        public System.Windows.Forms.Label lblMaDH;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMaDH;
     }
 }

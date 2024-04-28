@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoANLapTrinhWin.UC;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,8 +51,8 @@ namespace DoANLapTrinhWin
                     }
                     DonHang dh = new DonHang(maDH, tongTien, NgDat, TTDH);
                     SanPham sp = new SanPham(tenSP, hinh);
-
-                    UCDonHangNB uc = new UCDonHangNB(dh, sp);
+                    
+                    UCDaGiaoNM uc = new UCDaGiaoNM(sp,dh);
 
                     panelDaGiao.Controls.Add(uc);
                 }

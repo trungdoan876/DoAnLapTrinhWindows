@@ -9,17 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DoANLapTrinhWin
+namespace DoANLapTrinhWin.UC
 {
-    public partial class UCDonHangNB : UserControl
+    public partial class UCDaGiaoNM : UserControl
     {
-        DonHang dh;
         SanPham sp;
-        public UCDonHangNB(DonHang dh, SanPham sp)
+        DonHang dh;
+        public UCDaGiaoNM(SanPham sp, DonHang dh)
         {
             InitializeComponent();
-            this.dh = dh;
             this.sp = sp;
+            this.dh = dh;
             this.lblMaDH.Text = dh.MaDonHang.ToString();
             this.lblTenSP.Text = sp.TenSP.ToString();
             //this.lblNgayDatHang.Text = dh.NgayDatHang.ToString();
@@ -31,22 +31,6 @@ namespace DoANLapTrinhWin
         {
             MemoryStream ms = new MemoryStream(a);
             return Image.FromStream(ms);
-        }
-
-        private void UCDonHangNB_Click(object sender, EventArgs e)
-        {
-            FCTDonHangNB fdh = new FCTDonHangNB(lblMaDH.Text);
-            fdh.ShowDialog();
-        }
-
-        private void UCDonHangNB_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblMaDH_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

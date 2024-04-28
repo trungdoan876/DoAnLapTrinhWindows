@@ -27,6 +27,7 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.sp = sp;
+            
             this.lblTenSP.Text = sp.TenSP;
             this.lblGiaTien.Text = sp.GiaBan;
             this.lblsoluong.Text = sp.SoLuong;

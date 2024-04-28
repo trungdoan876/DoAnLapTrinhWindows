@@ -46,6 +46,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDangNhap = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblDangKy = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -100,8 +102,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(69, 118);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(69, 93);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(375, 63);
@@ -273,6 +275,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblDangKy);
+            this.panel1.Controls.Add(this.bunifuCustomLabel1);
             this.panel1.Controls.Add(this.btnDangNhap);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label1);
@@ -287,7 +291,7 @@
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Location = new System.Drawing.Point(555, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1079, 676);
+            this.panel1.Size = new System.Drawing.Size(1103, 723);
             this.panel1.TabIndex = 32;
             // 
             // btnDangNhap
@@ -315,6 +319,29 @@
             this.btnDangNhap.TabIndex = 32;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click_1);
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(28, 593);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(244, 27);
+            this.bunifuCustomLabel1.TabIndex = 33;
+            this.bunifuCustomLabel1.Text = "Bạn mới biết đến Panda?";
+            // 
+            // lblDangKy
+            // 
+            this.lblDangKy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDangKy.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblDangKy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDangKy.Location = new System.Drawing.Point(259, 593);
+            this.lblDangKy.Name = "lblDangKy";
+            this.lblDangKy.Size = new System.Drawing.Size(148, 27);
+            this.lblDangKy.TabIndex = 34;
+            this.lblDangKy.Text = "Đăng ký ngay!";
+            this.lblDangKy.Click += new System.EventHandler(this.lblDangKy_Click);
             // 
             // FDangNhap
             // 
@@ -358,6 +385,8 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ImageButton btnThoat;
         private Guna.UI2.WinForms.Guna2GradientButton btnDangNhap;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblDangKy;
     }
 }
 

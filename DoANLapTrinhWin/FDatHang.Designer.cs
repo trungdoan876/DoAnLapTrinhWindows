@@ -71,7 +71,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 523);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1887, 173);
+            this.panel3.Size = new System.Drawing.Size(1773, 173);
             this.panel3.TabIndex = 11;
             // 
             // cmbThanhToan
@@ -128,7 +128,7 @@
             this.btnDatHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDatHang.Image")));
             this.btnDatHang.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnDatHang.ImageRotate = 0F;
-            this.btnDatHang.Location = new System.Drawing.Point(1405, 6);
+            this.btnDatHang.Location = new System.Drawing.Point(1424, 6);
             this.btnDatHang.Name = "btnDatHang";
             this.btnDatHang.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnDatHang.Size = new System.Drawing.Size(123, 138);
@@ -191,7 +191,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1887, 56);
+            this.panel1.Size = new System.Drawing.Size(1773, 56);
             this.panel1.TabIndex = 6;
             // 
             // panel2
@@ -204,12 +204,13 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1887, 56);
+            this.panel2.Size = new System.Drawing.Size(1773, 56);
             this.panel2.TabIndex = 7;
             // 
             // btnQuaylai
             // 
             this.btnQuaylai.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnQuaylai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuaylai.HoverState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnQuaylai.Image = ((System.Drawing.Image)(resources.GetObject("btnQuaylai.Image")));
             this.btnQuaylai.ImageOffset = new System.Drawing.Point(0, 0);
@@ -227,7 +228,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label8.Location = new System.Drawing.Point(1585, 18);
+            this.label8.Location = new System.Drawing.Point(1586, 25);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 28);
             this.label8.TabIndex = 3;
@@ -238,7 +239,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label11.Location = new System.Drawing.Point(310, 18);
+            this.label11.Location = new System.Drawing.Point(311, 25);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(107, 28);
             this.label11.TabIndex = 0;
@@ -249,7 +250,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label9.Location = new System.Drawing.Point(668, 18);
+            this.label9.Location = new System.Drawing.Point(669, 25);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 28);
             this.label9.TabIndex = 2;
@@ -260,7 +261,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label10.Location = new System.Drawing.Point(988, 18);
+            this.label10.Location = new System.Drawing.Point(989, 25);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(96, 28);
             this.label10.TabIndex = 1;
@@ -328,17 +329,18 @@
             // 
             // paneldathang
             // 
-            this.paneldathang.Location = new System.Drawing.Point(0, 62);
+            this.paneldathang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneldathang.Location = new System.Drawing.Point(0, 56);
             this.paneldathang.Name = "paneldathang";
-            this.paneldathang.Size = new System.Drawing.Size(1817, 442);
-            this.paneldathang.TabIndex = 12;
+            this.paneldathang.Size = new System.Drawing.Size(1773, 467);
+            this.paneldathang.TabIndex = 14;
             // 
             // FDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1887, 696);
+            this.ClientSize = new System.Drawing.Size(1773, 696);
             this.Controls.Add(this.paneldathang);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

@@ -53,7 +53,6 @@ namespace DoANLapTrinhWin
         private void btnThemSP_Click(object sender, EventArgs e)
         {
             byte[] b = ImageToByteArray(picHinh.Image);
-            //string anh = BitConverter.ToString(b).Replace("-", "");
             SanPham sp = new SanPham(txtMaSanPham.Text, txtTenSP.Text, txtGiaBan.Text, txtGiaGoc.Text,
                     txtXuatXu.Text, txtTGSD.Text, dtp.Value, txtMoTa.Text, cmbNganhHang.Text,
                     lblTinhTrang.Text, txtDiaChi.Text, lblMaNB.Text, txtSoLuonSanCo.Text, b);

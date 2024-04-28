@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCTDonHangNM));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,7 +56,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.BackColor = System.Drawing.Color.LightCyan;
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -65,8 +67,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1321, 71);
+            this.panel1.Size = new System.Drawing.Size(1716, 71);
             this.panel1.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label7.Location = new System.Drawing.Point(107, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(128, 24);
+            this.label7.TabIndex = 291;
+            this.label7.Text = "Mã đơn hàng:";
             // 
             // label4
             // 
@@ -84,7 +97,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label3.Location = new System.Drawing.Point(1203, 46);
+            this.label3.Location = new System.Drawing.Point(1598, 46);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 22);
             this.label3.TabIndex = 289;
@@ -115,17 +128,18 @@
             // lblMaDH
             // 
             this.lblMaDH.AutoSize = true;
-            this.lblMaDH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaDH.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblMaDH.Location = new System.Drawing.Point(107, 20);
+            this.lblMaDH.Font = new System.Drawing.Font("Palatino Linotype", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaDH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblMaDH.Location = new System.Drawing.Point(231, 7);
             this.lblMaDH.Name = "lblMaDH";
-            this.lblMaDH.Size = new System.Drawing.Size(66, 25);
+            this.lblMaDH.Size = new System.Drawing.Size(64, 27);
             this.lblMaDH.TabIndex = 286;
             this.lblMaDH.Text = "Madh";
             // 
             // btnQuaylai
             // 
             this.btnQuaylai.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnQuaylai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuaylai.HoverState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnQuaylai.Image = ((System.Drawing.Image)(resources.GetObject("btnQuaylai.Image")));
             this.btnQuaylai.ImageOffset = new System.Drawing.Point(0, 0);
@@ -140,6 +154,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightCyan;
             this.panel2.Controls.Add(this.lblNgayGiao);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.lbltongtienDH);
@@ -147,7 +162,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 544);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1321, 64);
+            this.panel2.Size = new System.Drawing.Size(1716, 64);
             this.panel2.TabIndex = 3;
             // 
             // lblNgayGiao
@@ -199,8 +214,8 @@
             this.panelDH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDH.Location = new System.Drawing.Point(0, 71);
             this.panelDH.Name = "panelDH";
-            this.panelDH.Size = new System.Drawing.Size(1321, 473);
-            this.panelDH.TabIndex = 5;
+            this.panelDH.Size = new System.Drawing.Size(1716, 473);
+            this.panelDH.TabIndex = 7;
             // 
             // FCTDonHangNM
             // 
@@ -208,7 +223,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1321, 608);
+            this.ClientSize = new System.Drawing.Size(1716, 608);
             this.Controls.Add(this.panelDH);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -233,11 +248,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panelDH;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbltongtienDH;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblNgayGiao;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panelDH;
+        private System.Windows.Forms.Label label7;
     }
 }

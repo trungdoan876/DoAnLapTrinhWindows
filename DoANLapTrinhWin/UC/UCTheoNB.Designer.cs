@@ -40,7 +40,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1516, 77);
+            this.panel1.Size = new System.Drawing.Size(1914, 77);
             this.panel1.TabIndex = 0;
             // 
             // lbltenNB
@@ -58,10 +58,11 @@
             // 
             this.panelSP.AutoScroll = true;
             this.panelSP.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelSP.Location = new System.Drawing.Point(0, 72);
+            this.panelSP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSP.Location = new System.Drawing.Point(0, 77);
             this.panelSP.Name = "panelSP";
-            this.panelSP.Size = new System.Drawing.Size(1513, 288);
-            this.panelSP.TabIndex = 1;
+            this.panelSP.Size = new System.Drawing.Size(1914, 333);
+            this.panelSP.TabIndex = 2;
             // 
             // UCTheoNB
             // 
@@ -71,7 +72,7 @@
             this.Controls.Add(this.panelSP);
             this.Controls.Add(this.panel1);
             this.Name = "UCTheoNB";
-            this.Size = new System.Drawing.Size(1516, 410);
+            this.Size = new System.Drawing.Size(1914, 410);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

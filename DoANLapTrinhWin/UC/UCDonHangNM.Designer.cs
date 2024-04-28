@@ -32,12 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDonHangNM));
             this.lblTrangThai = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
-            this.lblMaDH = new System.Windows.Forms.Label();
             this.picHinh = new System.Windows.Forms.PictureBox();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnDaNhanHang = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblMaDH = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,17 +65,6 @@
             this.lblTongTien.Size = new System.Drawing.Size(104, 25);
             this.lblTongTien.TabIndex = 99;
             this.lblTongTien.Text = "tongtienDH";
-            // 
-            // lblMaDH
-            // 
-            this.lblMaDH.AutoSize = true;
-            this.lblMaDH.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaDH.ForeColor = System.Drawing.Color.Silver;
-            this.lblMaDH.Location = new System.Drawing.Point(97, 13);
-            this.lblMaDH.Name = "lblMaDH";
-            this.lblMaDH.Size = new System.Drawing.Size(78, 32);
-            this.lblMaDH.TabIndex = 98;
-            this.lblMaDH.Text = "madh";
             // 
             // picHinh
             // 
@@ -134,18 +124,41 @@
             this.btnDaNhanHang.Text = "Đã nhận hàng";
             this.btnDaNhanHang.Click += new System.EventHandler(this.btnDaNhanHang_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label7.Location = new System.Drawing.Point(42, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(128, 24);
+            this.label7.TabIndex = 302;
+            this.label7.Text = "Mã đơn hàng:";
+            // 
+            // lblMaDH
+            // 
+            this.lblMaDH.AutoSize = true;
+            this.lblMaDH.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaDH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblMaDH.Location = new System.Drawing.Point(167, 9);
+            this.lblMaDH.Name = "lblMaDH";
+            this.lblMaDH.Size = new System.Drawing.Size(66, 27);
+            this.lblMaDH.TabIndex = 301;
+            this.lblMaDH.Text = "Madh";
+            // 
             // UCDonHangNM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblMaDH);
             this.Controls.Add(this.btnDaNhanHang);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTenSP);
             this.Controls.Add(this.lblTrangThai);
             this.Controls.Add(this.lblTongTien);
-            this.Controls.Add(this.lblMaDH);
-            this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UCDonHangNM";
             this.Size = new System.Drawing.Size(1618, 200);
             this.Load += new System.EventHandler(this.UCDonHang_Load);
@@ -161,12 +174,13 @@
 
         public System.Windows.Forms.Label lblTrangThai;
         public System.Windows.Forms.Label lblTongTien;
-        public System.Windows.Forms.Label lblMaDH;
         private System.Windows.Forms.PictureBox hinh;
         public System.Windows.Forms.Label lblTenSP;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picHinh;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Guna.UI2.WinForms.Guna2GradientButton btnDaNhanHang;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblMaDH;
     }
 }

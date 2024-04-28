@@ -117,6 +117,7 @@ namespace DoANLapTrinhWin
 
                     //uc thong tin moi san pham
                     UCDatHang ucdh = new UCDatHang(sp); 
+                    
                     ucdh.lblTenSP.Text = tenSP;
                     ucdh.lblGiaTien.Text = giaBan;
                     ucdh.lblsoluong.Text = soLuong;
@@ -126,7 +127,7 @@ namespace DoANLapTrinhWin
                     string giaban = giaBan.Substring(1); // Loại bỏ ký tự "đ" ở đầu chuỗi
                     decimal gb = decimal.Parse(giaban); // Chuyển đổi giá trị của giaban thành kiểu decimal
                     int tien = (int)(gb * int.Parse(soLuong)); // Thực hiện phép nhân và chuyển đổi kết quả thành kiểu int
-                    ucdh.lblthanhtien.Text = "đ" + tien.ToString(); // gán giá trị lên uc
+                    ucdh.lblthanhtien.Text = "đ" + tien.ToString()+".000            "; // gán giá trị lên uc
 
                     //vi tri moi uc
                     ucdh.Location = new Point(0, y);
@@ -181,7 +182,6 @@ namespace DoANLapTrinhWin
 
                         // Tính giá trị tổng tiền
                         decimal totalValue = soLuong * giatien;
-                        //MessageBox.Show($"Mã sản phẩm: {sanPham.MaSP}, Giá bán: {sanPham.GiaBan}");
 
                         string sqlstr = string.Format("INSERT INTO ChiTietDonHang(MaDonHang, MaSanPham, SoLuong, GiaTien)" +
                     "VALUES('{0}','{1}','{2}','{3}')", maDonHang, sanPham.MaSP, sanPham.SoLuong, totalValue);
