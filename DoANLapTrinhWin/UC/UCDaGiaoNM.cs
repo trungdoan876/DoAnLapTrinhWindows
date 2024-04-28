@@ -32,5 +32,11 @@ namespace DoANLapTrinhWin.UC
             MemoryStream ms = new MemoryStream(a);
             return Image.FromStream(ms);
         }
+
+        private void btnDaNhanHang_Click(object sender, EventArgs e)
+        {
+            FDanhGia fdh = new FDanhGia();
+            fdh.ShowDialog();
+        }
     }
 }

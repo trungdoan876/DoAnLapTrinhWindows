@@ -83,6 +83,7 @@
             this.btnDaNhanHang.Size = new System.Drawing.Size(201, 45);
             this.btnDaNhanHang.TabIndex = 307;
             this.btnDaNhanHang.Text = "Đánh giá";
+            this.btnDaNhanHang.Click += new System.EventHandler(this.btnDaNhanHang_Click);
             // 
             // pictureBox1
             // 

@@ -102,6 +102,12 @@
     <Compile Include="FDangKy.Designer.cs">
       <DependentUpon>FDangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="FDanhGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDanhGia.Designer.cs">
+      <DependentUpon>FDanhGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDatHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanPham.cs" />
     <Compile Include="SanPhamDAO.cs" />
+    <Compile Include="UCDanhGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDanhGia.Designer.cs">
+      <DependentUpon>UCDanhGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCDaGiaoNM.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -335,6 +347,9 @@
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FDanhGia.resx">
+      <DependentUpon>FDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FDatHang.resx">
       <DependentUpon>FDatHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,6 +413,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCDanhGia.resx">
+      <DependentUpon>UCDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCDaGiaoNM.resx">
       <DependentUpon>UCDaGiaoNM.cs</DependentUpon>
     </EmbeddedResource>
