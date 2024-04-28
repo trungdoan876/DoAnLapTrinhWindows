@@ -13,6 +13,7 @@ namespace DoANLapTrinhWin
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public DBConnection() { }
+        //load dữ liệu, trả về dataset
         public DataSet Load(string sqlStr)
         {
             try
@@ -33,6 +34,7 @@ namespace DoANLapTrinhWin
             }
             return null;
         }
+        //thực thi 1 câu lệnh
         public void ThucThi(string sqlStr)
         {
             try
@@ -42,11 +44,11 @@ namespace DoANLapTrinhWin
                
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Thanh cong");
+                    MessageBox.Show("Thực thi thành công!!!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("That bai" + ex);
+                MessageBox.Show("Error: " + ex);
             }
             finally
             {
