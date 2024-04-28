@@ -13,13 +13,13 @@ namespace DoANLapTrinhWin
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public DBConnection() { }
-        public DataTable Load(string sqlStr)
+        public DataSet Load(string sqlStr)
         {
             try
             {
                 conn.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataTable dt = new DataTable();
+                DataSet dt = new DataSet();
                 adapter.Fill(dt);
                 return dt;
             }

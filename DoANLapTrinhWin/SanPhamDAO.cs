@@ -74,47 +74,17 @@ namespace DoANLapTrinhWin
 
         public DataSet LoadChuaDangBan(string maNB)
         {
-            
-            try
-            {
-                conn.Open();
-                string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'",maNB, 0);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dt = new DataSet();
-                adapter.Fill(dt);
-                return dt;
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return null;
+            string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", maNB, 0);
+            DataSet dt = new DataSet();
+            dt=tt.Load(sqlStr);
+            return dt;
         }
         public DataSet LoadDaDangBan(string maNB)
         {
-
-            try
-            {
-                conn.Open();
-                string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", maNB, 1);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dt = new DataSet();
-                adapter.Fill(dt);
-                return dt;
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return null;
+            string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", maNB, 1);
+            DataSet dt = new DataSet();
+            dt = tt.Load(sqlStr);
+            return dt;
         }
     }
 }
