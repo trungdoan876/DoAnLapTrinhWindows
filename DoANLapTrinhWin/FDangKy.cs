@@ -49,11 +49,9 @@ namespace DoANLapTrinhWin
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     int count = (int)cmd.ExecuteScalar();
                     if (count > 0)
-                    {
                         MessageBox.Show("Số điện thoại đã được đăng ký!");
-                    }
                     else
-                        Global.MoFormCon(new FThongTinDangKy(), panelDK);
+                        Global.MoFormCon(new FThongTinDangKy(selctecOption,txtDK.Text), panelDK);
                 }
                 else if (selctecOption == "Mua hàng")
                 {
@@ -61,11 +59,9 @@ namespace DoANLapTrinhWin
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     int count = (int)cmd.ExecuteScalar();
                     if (count > 0)
-                    {
                         MessageBox.Show("Số điện thoại đã được đăng ký!");
-                    }
                     else
-                        Global.MoFormCon(new FThongTinDangKy(), panelDK);
+                        Global.MoFormCon(new FThongTinDangKy(selctecOption, txtDK.Text), panelDK);
                 }    
                 
             }
@@ -96,6 +92,11 @@ namespace DoANLapTrinhWin
             btnMuaHang.FillColor2 = Color.Violet;
             btnBanHang.FillColor = Color.Coral;
             btnBanHang.FillColor2 = Color.LightCoral;
+        }
+
+        private void btnQuayLaiDangNhap_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

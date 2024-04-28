@@ -45,7 +45,7 @@ namespace DoANLapTrinhWin
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            //Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void btnBanHang_Click(object sender, EventArgs e)
