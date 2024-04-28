@@ -39,11 +39,11 @@
             this.lblMaDH = new System.Windows.Forms.Label();
             this.btnQuaylai = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnGiaoHang = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelDH = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -159,17 +159,6 @@
             this.panel2.Size = new System.Drawing.Size(1716, 100);
             this.panel2.TabIndex = 297;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label5.Location = new System.Drawing.Point(985, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(265, 22);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Bạn đã chuẩn bị hàng xong?";
-            // 
             // btnGiaoHang
             // 
             this.btnGiaoHang.Animated = true;
@@ -195,6 +184,28 @@
             this.btnGiaoHang.Text = "Giao hàng";
             this.btnGiaoHang.Click += new System.EventHandler(this.btnGiaoHang_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label5.Location = new System.Drawing.Point(985, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(265, 22);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Bạn đã chuẩn bị hàng xong?";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(1238, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(158, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 30;
@@ -208,17 +219,6 @@
             this.panelDH.Name = "panelDH";
             this.panelDH.Size = new System.Drawing.Size(1716, 560);
             this.panelDH.TabIndex = 303;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(1238, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // FCTDonHangNB
             // 

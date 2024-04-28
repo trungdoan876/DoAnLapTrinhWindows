@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DoANLapTrinhWin
 {
@@ -44,7 +45,7 @@ namespace DoANLapTrinhWin
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
         }
 
         private void btnBanHang_Click(object sender, EventArgs e)
@@ -142,7 +143,11 @@ namespace DoANLapTrinhWin
 
         private void lblDangKy_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FDangKy form2 = new FDangKy();
+            form2.ShowDialog();
+            form2 = null;
+            this.Show();
         }
     }
 }

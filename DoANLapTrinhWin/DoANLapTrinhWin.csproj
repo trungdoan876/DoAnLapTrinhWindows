@@ -96,6 +96,12 @@
     <Compile Include="FDaGiaoNM.Designer.cs">
       <DependentUpon>FDaGiaoNM.cs</DependentUpon>
     </Compile>
+    <Compile Include="FDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDangKy.Designer.cs">
+      <DependentUpon>FDangKy.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDatHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,12 @@
     <Compile Include="FThongTinChiTietNguoiMua.Designer.cs">
       <DependentUpon>FThongTinChiTietNguoiMua.cs</DependentUpon>
     </Compile>
+    <Compile Include="FThongTinDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongTinDangKy.Designer.cs">
+      <DependentUpon>FThongTinDangKy.cs</DependentUpon>
+    </Compile>
     <Compile Include="FThongTinNguoiBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -317,6 +329,9 @@
     <EmbeddedResource Include="FDaGiaoNM.resx">
       <DependentUpon>FDaGiaoNM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FDangKy.resx">
+      <DependentUpon>FDangKy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -364,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThongTinChiTietNguoiMua.resx">
       <DependentUpon>FThongTinChiTietNguoiMua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongTinDangKy.resx">
+      <DependentUpon>FThongTinDangKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThongTinNguoiBan.resx">
       <DependentUpon>FThongTinNguoiBan.cs</DependentUpon>
