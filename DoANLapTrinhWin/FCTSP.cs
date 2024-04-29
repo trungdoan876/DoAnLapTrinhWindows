@@ -23,6 +23,7 @@ namespace DoANLapTrinhWin
         string maSP;
         bool picClick;
         string tenTK;
+        YeuThichDAO ytdao = new YeuThichDAO();
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -181,24 +182,8 @@ namespace DoANLapTrinhWin
                 string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timden.png";
                 System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
                 picHeart.Image = image;
-                try
-                {
-                    conn.Open();
-                    string sqlStr = string.Format("DELETE FROM YeuThich WHERE MaSanPham ='{0}'", sp.MaSP);
-                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
-
-                    if (cmd.ExecuteNonQuery() > 0)
-                        MessageBox.Show("Xoa khoi yeu thich thanh cong");
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi \n" + ex);
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                YeuThich yt = new YeuThich(sp.MaNguoiBan,tenTK,sp.MaSP);
+                ytdao.XoaYeuThich(yt);
             }
             //ban dau la false nhan vao la true chuyen thanh mau do
             else
@@ -206,24 +191,8 @@ namespace DoANLapTrinhWin
                 string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timdo.png";
                 System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
                 picHeart.Image = image;
-                try
-                {
-                    conn.Open();
-                    string sqlStr = string.Format("INSERT INTO YeuThich (MaSanPham , MaNguoiMua, MaNguoiBan) VALUES ('{0}', '{1}','{2}')", sp.MaSP, tenTK, sp.MaNguoiBan);
-                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
-
-                    if (cmd.ExecuteNonQuery() > 0)
-                        MessageBox.Show("Them vao yeu thich thanh cong");
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi \n" + ex);
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                YeuThich yt = new YeuThich(sp.MaNguoiBan, tenTK, sp.MaSP);
+                ytdao.ThemYeuThich(yt);
             }
         }
         private void picHeart_Click(object sender, EventArgs e)
