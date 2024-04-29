@@ -26,6 +26,14 @@ namespace DoANLapTrinhWin
             this.ngayDatHang = NgayDatHang;
             this.trangThaiDonHangNM = TrangThaiDonHang;
         }
+        public DonHang(string MaDonHang, string TongTien, DateTime NgayDatHang, string TrangThaiDonHang, string MaNguoiMua)// khoi tao cho danh gia
+        {
+            this.maDonHang = MaDonHang;
+            this.tongTien = TongTien;
+            this.ngayDatHang = NgayDatHang;
+            this.trangThaiDonHangNM = TrangThaiDonHang;
+            this.maNguoiMua = MaNguoiMua;
+        }
         public DonHang(string MaDonHang, string MaNguoiBan, string MaNguoiMua, string TongTien, DateTime NgayDatHang, string TrangThaiDonHang)
         {
             this.maDonHang = MaDonHang;
