@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDanhGia));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientCircleButton1 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.btnguii = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label4 = new System.Windows.Forms.Label();
             this.btnThoat = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -63,7 +63,7 @@
             // 
             // guna2GradientPanel1
             // 
-            this.guna2GradientPanel1.Controls.Add(this.guna2GradientCircleButton1);
+            this.guna2GradientPanel1.Controls.Add(this.btnguii);
             this.guna2GradientPanel1.Controls.Add(this.guna2ImageButton1);
             this.guna2GradientPanel1.Controls.Add(this.label4);
             this.guna2GradientPanel1.Controls.Add(this.btnThoat);
@@ -73,24 +73,25 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(733, 89);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
-            // guna2GradientCircleButton1
+            // btnguii
             // 
-            this.guna2GradientCircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientCircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientCircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientCircleButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientCircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientCircleButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2GradientCircleButton1.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientCircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientCircleButton1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2GradientCircleButton1.HoverState.FillColor2 = System.Drawing.Color.Orange;
-            this.guna2GradientCircleButton1.Location = new System.Drawing.Point(592, 11);
-            this.guna2GradientCircleButton1.Name = "guna2GradientCircleButton1";
-            this.guna2GradientCircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2GradientCircleButton1.Size = new System.Drawing.Size(80, 65);
-            this.guna2GradientCircleButton1.TabIndex = 287;
-            this.guna2GradientCircleButton1.Text = "Gửi";
+            this.btnguii.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnguii.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnguii.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnguii.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnguii.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnguii.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnguii.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnguii.ForeColor = System.Drawing.Color.White;
+            this.btnguii.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnguii.HoverState.FillColor2 = System.Drawing.Color.Orange;
+            this.btnguii.Location = new System.Drawing.Point(592, 11);
+            this.btnguii.Name = "btnguii";
+            this.btnguii.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnguii.Size = new System.Drawing.Size(80, 65);
+            this.btnguii.TabIndex = 287;
+            this.btnguii.Text = "Gửi";
+            this.btnguii.Click += new System.EventHandler(this.btnguii_Click_1);
             // 
             // guna2ImageButton1
             // 
@@ -229,6 +230,7 @@
             this.picThemHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picThemHinh.TabIndex = 0;
             this.picThemHinh.TabStop = false;
+            this.picThemHinh.Click += new System.EventHandler(this.picThemHinh_Click_1);
             // 
             // lblsao
             // 
@@ -381,7 +383,7 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnThoat;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton1;
+        private Guna.UI2.WinForms.Guna2GradientCircleButton btnguii;
         private UCDanhGia ucDanhGia1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;

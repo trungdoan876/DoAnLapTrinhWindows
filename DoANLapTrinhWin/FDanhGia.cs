@@ -93,9 +93,9 @@ namespace DoANLapTrinhWin
             PictureBox ptb = (PictureBox)sender;
             picThemHinh.Image = ptb.Image;
         }
-        private void picThemHinh_Click(object sender, EventArgs e)
+
+        private void picThemHinh_Click_1(object sender, EventArgs e)
         {
-            //MessageBox.Show(sp.MaSP);
             OpenFileDialog odlgOpenFile = new OpenFileDialog();
             odlgOpenFile.InitialDirectory = "D:\\HeQTCSDL\\AnhBia\\";
             odlgOpenFile.Title = "Open File";
@@ -116,8 +116,7 @@ namespace DoANLapTrinhWin
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
-
-        private void btnguii_Click(object sender, EventArgs e)
+        private void btnguii_Click_1(object sender, EventArgs e)
         {
             try
             {
