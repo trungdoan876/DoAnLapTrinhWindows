@@ -17,6 +17,7 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNB;
         byte[] hinh;
+        SanPhamDAO spDao = new SanPhamDAO();
         Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -31,55 +32,37 @@ namespace DoANLapTrinhWin
         //đổ dữ liệu vào user control trong danh sách sản phẩm
         private void LoadData()
         {
-            try
+            DataSet dt = spDao.LoadDanhSachSanPham(maNB);
+            int x = panelThem.Width + 5;
+            int y = 0;
+            foreach (DataRow row in dt.Tables[0].Rows)
             {
-                panelTatCaSP.AutoScroll = true;
-                conn.Open();
-                string sqlStr = string.Format("SELECT * FROM SanPham WHERE MaNguoiBan ='{0}'", maNB);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
-                adapter.Fill(dtSet);
-                int x = panelThem.Width + 5;
-                int y = 0;
-                foreach (DataRow row in dtSet.Tables[0].Rows)
+                SanPham sp = new SanPham(
+                    row[1].ToString(),
+                    row[2].ToString(),
+                    row[3].ToString(),
+                    row[4].ToString(),
+                    row[5].ToString(),
+                    row[6].ToString(),
+                    (DateTime)row[7],
+                    row[8].ToString(),
+                    row[9].ToString(),
+                    row[10].ToString(),
+                    row[11].ToString(),
+                    row[12].ToString(),
+                    row[13].ToString(),
+                    (byte[])row[0]
+                    ) ;
+                UCSPBan ucSPBan = new UCSPBan(sp);
+                ucSPBan.Location = new Point(x, y);
+                x += ucSPBan.Width  + 5;
+                if (x == ucSPBan.Width * 4)
                 {
-                    string maSP = row["MaSanPham"].ToString();
-                    string tenSP = row["TenSanPham"].ToString();
-                    string giaTien = row["GiaBan"].ToString();
-                    string giaGoc = row["GiaGoc"].ToString();
-                    string moTaSP = row["MoTaSanPham"].ToString();
-                    string tinhTrang = row["TinhTrang"].ToString();
-                    string nganhHang = row["NganhHang"].ToString();
-                    string xuatXu = row["XuatXu"].ToString();
-                    string diaChi = row["DiaChi"].ToString();
-                    string thoiGianSuDung = row["TGDSD"].ToString();
-                    string soLuong = row["SoLuong"].ToString();
-                    DateTime ngayDang = DateTime.Now;
-                    if (row["Hinh"] != DBNull.Value)
-                    {
-                        hinh = (byte[])row["Hinh"];
-                    }
-                    SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", soLuong,hinh);
-                   
-                    UCSPBan ucSPBan = new UCSPBan(sp);
-                    ucSPBan.Location = new Point(x, y);
-                    x += ucSPBan.Width  + 5;
-                    if (x == ucSPBan.Width * 4)
-                    {
-                        x = 0;
-                        y += ucSPBan.Height + 5;
-                    }
-                    panelTatCaSP.Controls.Add(ucSPBan);
+                    x = 0;
+                    y += ucSPBan.Height + 5;
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+                panelTatCaSP.Controls.Add(ucSPBan);
+             }
         }
         private void FTatCaSanPham_Load(object sender, EventArgs e)
         {

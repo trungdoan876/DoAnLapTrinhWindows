@@ -86,5 +86,12 @@ namespace DoANLapTrinhWin
             dt = tt.Load(sqlStr);
             return dt;
         }
+        public DataSet LoadDanhSachSanPham(string maNB)
+        {
+            string sqlStr = string.Format("SELECT * FROM SanPham WHERE MaNguoiBan ='{0}'", maNB);
+            DataSet dt = new DataSet();
+            dt = tt.Load(sqlStr);
+            return dt;
+        }
     }
 }
