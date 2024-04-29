@@ -29,21 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDanhGia));
+            this.picHinh = new Guna.UI2.WinForms.Guna2PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.lblTenSP = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.lblTrangthai = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2PictureBox1
+            // picHinh
             // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(26, 5);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(133, 112);
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
+            this.picHinh.Image = ((System.Drawing.Image)(resources.GetObject("picHinh.Image")));
+            this.picHinh.ImageRotate = 0F;
+            this.picHinh.Location = new System.Drawing.Point(31, 18);
+            this.picHinh.Margin = new System.Windows.Forms.Padding(5);
+            this.picHinh.Name = "picHinh";
+            this.picHinh.Size = new System.Drawing.Size(133, 112);
+            this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picHinh.TabIndex = 0;
+            this.picHinh.TabStop = false;
             // 
             // bunifuElipse1
             // 
@@ -53,33 +57,45 @@
             // lblTenSP
             // 
             this.lblTenSP.AutoSize = true;
-            this.lblTenSP.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSP.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.lblTenSP.Location = new System.Drawing.Point(214, 49);
+            this.lblTenSP.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTenSP.Location = new System.Drawing.Point(256, 57);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(69, 30);
+            this.lblTenSP.Size = new System.Drawing.Size(93, 38);
             this.lblTenSP.TabIndex = 1;
             this.lblTenSP.Text = "tenSP";
+            // 
+            // lblTrangthai
+            // 
+            this.lblTrangthai.AutoSize = true;
+            this.lblTrangthai.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrangthai.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblTrangthai.Location = new System.Drawing.Point(609, 57);
+            this.lblTrangthai.Name = "lblTrangthai";
+            this.lblTrangthai.Size = new System.Drawing.Size(20, 28);
+            this.lblTrangthai.TabIndex = 2;
+            this.lblTrangthai.Text = "-";
             // 
             // UCDanhGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MintCream;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Controls.Add(this.lblTrangthai);
             this.Controls.Add(this.lblTenSP);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.picHinh);
             this.Name = "UCDanhGia";
-            this.Size = new System.Drawing.Size(909, 130);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(713, 130);
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Label lblTenSP;
+        public System.Windows.Forms.Label lblTrangthai;
+        public Guna.UI2.WinForms.Guna2PictureBox picHinh;
+        public System.Windows.Forms.Label lblTenSP;
     }
 }
