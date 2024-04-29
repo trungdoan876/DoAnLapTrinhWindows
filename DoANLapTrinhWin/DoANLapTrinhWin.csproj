@@ -240,6 +240,8 @@
     <Compile Include="FYeuThich.Designer.cs">
       <DependentUpon>FYeuThich.cs</DependentUpon>
     </Compile>
+    <Compile Include="GioHang.cs" />
+    <Compile Include="GioHangDAO.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="Nguoi.cs" />
     <Compile Include="NguoiBan.cs" />

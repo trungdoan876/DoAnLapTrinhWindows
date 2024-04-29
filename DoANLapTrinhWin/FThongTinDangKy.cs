@@ -38,6 +38,7 @@ namespace DoANLapTrinhWin
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     if (cmd.ExecuteNonQuery() > 0)
                         MessageBox.Show("Tao tai khoan thanh cong");
+                    this.Close();
                 }
                 else if (loainguoi == "Mua hàng")
                 {
@@ -48,6 +49,7 @@ namespace DoANLapTrinhWin
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     if (cmd.ExecuteNonQuery() > 0)
                         MessageBox.Show("Tao tai khoan thanh cong");
+                    this.Close();
                 }    
             }
             catch (Exception ex)

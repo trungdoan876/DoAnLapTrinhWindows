@@ -24,6 +24,7 @@ namespace DoANLapTrinhWin
         bool picClick;
         string tenTK;
         YeuThichDAO ytdao = new YeuThichDAO();
+        GioHangDAO ghdao = new GioHangDAO();
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -139,25 +140,9 @@ namespace DoANLapTrinhWin
             //bang gio hang: maNB,maNM,maSP,soluongSP,giaban
             //hien len uc: ten, dia chi, tinh trang, gia tien, so luong
             //them vao bang gio hang
-            try
-            {
-                string slmua = soluongmua.Value.ToString();
-                // Ket noi
-                conn.Open();
-                string anh = BitConverter.ToString(sp.Hinh).Replace("-", "");
-                string sqlStr = string.Format("INSERT INTO GioHang(MaNguoiBan, MaNguoiMua, MaSanPham, TenSanPham, SoLuong, GiaBan,Hinh,TrangThaiSP) VALUES ('{0}', N'{1}',N'{2}',N'{3}',N'{4}',N'{5}',0x{6},'{7}')", sp.MaNguoiBan, "NM01", sp.MaSP, sp.TenSP, slmua, sp.GiaBan, anh, 1);
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Thêm thành công");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Thêm thất bại" + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            string slmua = soluongmua.Value.ToString();
+            GioHang gh = new GioHang(sp.MaSP,sp.TenSP,sp.GiaBan,int.Parse(slmua),sp.MaNguoiBan,tenTK,sp.Hinh);
+            ghdao.ThemVaoGioHang(gh);
         }
         //mua ngay
         private void btnMuaNgay_Click(object sender, EventArgs e)

@@ -50,11 +50,6 @@ namespace DoANLapTrinhWin
                 {
 
                     string maNB = row["maNB"].ToString();
-                    //MessageBox.Show(maNB);
-                    /*UCTheoNB uc = new UCTheoNB(maNB);
-                    uc.Location = new Point(0, yc);
-                    yc += uc.Height += 5;
-                    panelGioHang.Controls.Add(uc);*/
                     string maSP = row["MaSP"].ToString();
                     string tenSP = row["TenSP"].ToString();
                     string giaBan = "đ" + row["GiaBan"].ToString();
@@ -128,21 +123,6 @@ namespace DoANLapTrinhWin
         {
             FDatHang fdh = new FDatHang(maNM, sp,tongtien);
             fdh.ShowDialog();
-        }
-
-        private void FGioHang_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTongTien_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

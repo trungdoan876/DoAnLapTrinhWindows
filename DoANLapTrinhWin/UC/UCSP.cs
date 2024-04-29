@@ -17,10 +17,11 @@ namespace DoANLapTrinhWin
     public partial class UCSP : UserControl
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        SanPham sanPham;
+        SanPham sp;
         SanPhamDAO spDAO = new SanPhamDAO();
+        YeuThichDAO ytdao = new YeuThichDAO();
+        GioHangDAO ghdao = new GioHangDAO();
         string tenTK;
-       // string trangthai;
 
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
@@ -37,7 +38,7 @@ namespace DoANLapTrinhWin
         }
         public UCSP(SanPham sp,string tenTK)
         {
-            this.sanPham = sp;
+            this.sp = sp;
             this.tenTK= tenTK;
             InitializeComponent();
             this.lblMaSP.Text = sp.MaSP;
@@ -51,7 +52,7 @@ namespace DoANLapTrinhWin
         private void UCSP_Click(object sender, EventArgs e)
         {
             this.Hide(); //an form 1
-            FCTSP formCTSP = new FCTSP(sanPham,picClick,tenTK);
+            FCTSP formCTSP = new FCTSP(sp,picClick,tenTK);
             formCTSP.ShowDialog();
             formCTSP = null;
             this.Show();  
@@ -65,24 +66,8 @@ namespace DoANLapTrinhWin
                 string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timden.png";
                 System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
                 picHeart.Image = image;
-                try
-                {
-                    conn.Open();
-                    string sqlStr = string.Format("DELETE FROM YeuThich WHERE MaSanPham ='{0}'", sanPham.MaSP);
-                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
-
-                    if (cmd.ExecuteNonQuery() > 0)
-                        MessageBox.Show("Xoa khoi yeu thich thanh cong");
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi \n" + ex);
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                YeuThich yt = new YeuThich(sp.MaNguoiBan, tenTK, sp.MaSP);
+                ytdao.XoaYeuThich(yt);
             }
             //ban dau la false nhan vao la true chuyen thanh mau do
             else
@@ -90,24 +75,8 @@ namespace DoANLapTrinhWin
                 string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timdo.png";
                 System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
                 picHeart.Image = image;
-                try
-                {
-                    conn.Open();
-                    string sqlStr = string.Format("INSERT INTO YeuThich (MaSanPham , MaNguoiMua, MaNguoiBan) VALUES ('{0}', '{1}','{2}')", sanPham.MaSP, tenTK, sanPham.MaNguoiBan);
-                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
-
-                    if (cmd.ExecuteNonQuery() > 0)
-                        MessageBox.Show("Them vao yeu thich thanh cong");
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi \n" + ex);
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                YeuThich yt = new YeuThich(sp.MaNguoiBan, tenTK, sp.MaSP);
+                ytdao.ThemYeuThich(yt);
             }
         }
 
@@ -135,7 +104,7 @@ namespace DoANLapTrinhWin
                 }
 
                 // Kiểm tra xem sản phẩm hiện tại có trong danh sách yêu thích không
-                if (maSanPhamYeuThich.Contains(sanPham.MaSP))
+                if (maSanPhamYeuThich.Contains(sp.MaSP))
                 {
                     string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timdo.png";
                     System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);

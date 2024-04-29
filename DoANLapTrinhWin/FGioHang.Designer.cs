@@ -51,7 +51,6 @@
             this.label1.Size = new System.Drawing.Size(236, 38);
             this.label1.TabIndex = 61;
             this.label1.Text = "Tổng thanh toán:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // thanhToanKhiNhanHangToolStripMenuItem
             // 
@@ -94,7 +93,6 @@
             this.lblTongTien.Size = new System.Drawing.Size(60, 45);
             this.lblTongTien.TabIndex = 66;
             this.lblTongTien.Text = "0đ";
-            this.lblTongTien.Click += new System.EventHandler(this.lblTongTien_Click);
             // 
             // panelGioHang
             // 
@@ -127,7 +125,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FGioHang";
             this.Text = "FGioHang";
-            this.Load += new System.EventHandler(this.FGioHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
