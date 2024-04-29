@@ -31,23 +31,22 @@ namespace DoANLapTrinhWin
             int y = 0;
             foreach (DataRow row in dt.Tables[0].Rows)
             {
-                string maSP = row["MaSanPham"].ToString();
-                string tenSP = row["TenSanPham"].ToString();
-                string giaTien = row["GiaBan"].ToString();
-                string giaGoc = row["GiaGoc"].ToString();
-                string moTaSP = row["MoTaSanPham"].ToString();
-                string tinhTrang = row["TinhTrang"].ToString();
-                string nganhHang = row["NganhHang"].ToString();
-                string xuatXu = row["XuatXu"].ToString();
-                string diaChi = row["DiaChi"].ToString();
-                string thoiGianSuDung = row["TGDSD"].ToString();
-                DateTime ngayDang = DateTime.Now;
-                if (row["Hinh"] != DBNull.Value)
-                {
-                    hinh = (byte[])row["Hinh"];
-                }
-                SanPham sp = new SanPham(maSP, tenSP, giaTien, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, "", "", hinh);
-
+                SanPham sp = new SanPham(
+                    row[1].ToString(),
+                    row[2].ToString(),
+                    row[3].ToString(),
+                    row[4].ToString(),
+                    row[5].ToString(),
+                    row[6].ToString(),
+                    (DateTime)row[7],
+                    row[8].ToString(),
+                    row[9].ToString(),
+                    row[10].ToString(),
+                    row[11].ToString(),
+                    row[12].ToString(),
+                    row[13].ToString(),
+                    (byte[])row[0]
+                    );
                 UCSPBan ucSPBan = new UCSPBan(sp);
 
                 ucSPBan.Location = new Point(x, y);

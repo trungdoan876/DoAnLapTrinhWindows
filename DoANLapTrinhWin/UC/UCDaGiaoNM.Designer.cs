@@ -63,22 +63,22 @@
             // 
             // btnDaNhanHang
             // 
-            this.btnDaNhanHang.BorderRadius = 14;
+            this.btnDaNhanHang.BorderRadius = 10;
             this.btnDaNhanHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDaNhanHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDaNhanHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDaNhanHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDaNhanHang.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDaNhanHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDaNhanHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnDaNhanHang.FillColor2 = System.Drawing.Color.Salmon;
-            this.btnDaNhanHang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDaNhanHang.FillColor = System.Drawing.Color.LightCoral;
+            this.btnDaNhanHang.FillColor2 = System.Drawing.Color.Coral;
+            this.btnDaNhanHang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnDaNhanHang.ForeColor = System.Drawing.Color.White;
             this.btnDaNhanHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDaNhanHang.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnDaNhanHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDaNhanHang.Image")));
-            this.btnDaNhanHang.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnDaNhanHang.Location = new System.Drawing.Point(1373, 83);
+            this.btnDaNhanHang.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnDaNhanHang.Location = new System.Drawing.Point(1380, 63);
             this.btnDaNhanHang.Name = "btnDaNhanHang";
             this.btnDaNhanHang.Size = new System.Drawing.Size(201, 45);
             this.btnDaNhanHang.TabIndex = 307;
