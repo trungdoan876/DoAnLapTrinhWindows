@@ -27,6 +27,28 @@ namespace DoANLapTrinhWin
         DateTime ngayhientai = DateTime.Now;
         List<SanPham> listsp = new List<SanPham>();
         
+        //tao ma don hang
+        public string TaoMaDonHang()
+        {
+            string sql = string.Format("select * from DonHang");
+            SqlDataAdapter da = new SqlDataAdapter(sql,conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            string ma = "";
+            if (dt.Rows.Count <= 0)
+            {
+                ma = "DH01";
+            }
+            else
+            {
+                int k;
+                ma = "DH0";
+                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 3));
+                k = k + 1;
+                ma = ma + k.ToString();
+            }
+            return ma;
+        }
         Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -166,8 +188,7 @@ namespace DoANLapTrinhWin
                 var nguoiBanGroup = listsp.GroupBy(sp => sp.MaNguoiBan); //nhom nguoi ban lai de tao thanh 1 don hang
                 foreach (var grp in nguoiBanGroup)
                 {
-
-                    string maDonHang = Global.TaoMaDonHangTuDong();
+                    string maDonHang = TaoMaDonHang();
                     string sql = string.Format("INSERT INTO DonHang(MaDonHang,MaNguoiMua,MaNguoiBan,TongTien,NgayDatHang,TrangThaiDonHangNM,TrangThaiDonHangNB) " +
                     "VALUES('{0}','{1}','{2}','{3}','{4}',N'{5}',N'{6}')", maDonHang, maNM, grp.Key, tongtien, ngayhientai, "Đặt hàng thành công","Chuẩn bị hàng");
                     SqlCommand cmd = new SqlCommand(sql, conn);
