@@ -18,6 +18,7 @@ namespace DoANLapTrinhWin.UC
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         DonHang dh;
         SanPham sp;
+        DonHangDAO dhDao=new DonHangDAO();
         public UCDonHangNM()
         {
             InitializeComponent();
@@ -41,37 +42,16 @@ namespace DoANLapTrinhWin.UC
             return Image.FromStream(ms);
         }
 
-        private void UCDonHang_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void UCDonHang_Click(object sender, EventArgs e)
         {
             FCTDonHangNM fdh = new FCTDonHangNM(lblMaDH.Text);
             fdh.ShowDialog();
-            
         }
 
         private void btnDaNhanHang_Click(object sender, EventArgs e)
         {
-            try
-            {
-                conn.Open();
-                string sqlStr = string.Format("UPDATE DonHang SET TrangThaiDonHangNM = N'{0}', TrangThaiDonHangNB = N'{1}' WHERE MaDonHang ='{2}'",
-                    "Giao hàng thành công", "Giao hàng thành công", lblMaDH.Text);
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Da nhan hang, hay danh gia don hang cua ban");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            DonHang dh = new DonHang(lblMaDH.Text);
+            dhDao.CapNhatNhanHang(dh);
         }
     }
 }

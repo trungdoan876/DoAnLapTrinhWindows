@@ -23,6 +23,10 @@ namespace DoANLapTrinhWin
         private string maNguoiBan;
         private string diaChi;
         private byte[] hinh;
+        public SanPham(string maSP) //để xóa sản phẩm 
+        {
+            this.maSP = maSP;
+        }
         public SanPham(string tenSP, byte[] hinh) //khoi tao dung cho quan ly don hang
         {
             this.tenSP = tenSP;

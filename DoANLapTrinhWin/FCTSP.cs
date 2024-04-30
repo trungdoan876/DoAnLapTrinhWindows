@@ -137,9 +137,6 @@ namespace DoANLapTrinhWin
         //thêm sản phẩm vào giỏ hàng
         private void btnThemVaoGio_Click_1(object sender, EventArgs e)
         {
-            //bang gio hang: maNB,maNM,maSP,soluongSP,giaban
-            //hien len uc: ten, dia chi, tinh trang, gia tien, so luong
-            //them vao bang gio hang
             string slmua = soluongmua.Value.ToString();
             GioHang gh = new GioHang(sp.MaSP,sp.TenSP,sp.GiaBan,int.Parse(slmua),sp.MaNguoiBan,tenTK,sp.Hinh);
             ghdao.ThemVaoGioHang(gh);

@@ -16,6 +16,7 @@ namespace DoANLapTrinhWin
     {
         SanPham sp;
         string slmua ;
+        GioHangDAO ghDAO = new GioHangDAO();
         Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -44,40 +45,14 @@ namespace DoANLapTrinhWin
             if (check == false) //tick vao checkbox
             {
                 check = true;
-                try
-                {
-                    conn.Open();
-                    string sqlStr = string.Format("UPDATE GioHang SET TrangThaiSP = '{0}' WHERE MaSanPham = '{1}'", 1, sp.MaSP);
-                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi:" + ex);
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                GioHang gh = new GioHang(sp.MaSP);
+                ghDAO.CapNhatChonSanPham(gh);
             }
             else //nhấn vào checkbox 1 lần nữa
             {
                 check = false;
-                try
-                {
-                    conn.Open();
-                    string sqlStr = string.Format("UPDATE GioHang SET TrangThaiSP = '{0}' WHERE MaSanPham = '{1}'", 0, sp.MaSP);
-                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi:" + ex);
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                GioHang gh = new GioHang(sp.MaSP);
+                ghDAO.CapNhatKhongchon(gh);
             }
         }
         private void soluongmuaGH_ValueChanged(object sender, EventArgs e)
@@ -107,25 +82,8 @@ namespace DoANLapTrinhWin
 
         private void btnXoaKhoiGioHang_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                // Ket noi
-                conn.Open();
-                string sqlStr = string.Format("DELETE FROM GioHang WHERE MaSanPham = '{0}'", sp.MaSP);
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("xoa thanh cong");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("xoa that bai" + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            GioHang gh = new GioHang(sp.MaSP);
+            ghDAO.XoaGioHang(gh);
         }
-
     }
-    
 }

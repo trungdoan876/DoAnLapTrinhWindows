@@ -125,7 +125,6 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UCSPBan";
             this.Size = new System.Drawing.Size(279, 324);
-            this.Load += new System.EventHandler(this.UCSPBan_Load);
             this.Click += new System.EventHandler(this.UCSPBan_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             this.ResumeLayout(false);

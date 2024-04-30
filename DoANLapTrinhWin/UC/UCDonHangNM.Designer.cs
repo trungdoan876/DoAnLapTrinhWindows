@@ -161,7 +161,6 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UCDonHangNM";
             this.Size = new System.Drawing.Size(1618, 200);
-            this.Load += new System.EventHandler(this.UCDonHang_Load);
             this.Click += new System.EventHandler(this.UCDonHang_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

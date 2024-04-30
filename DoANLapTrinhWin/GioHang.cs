@@ -16,6 +16,10 @@ namespace DoANLapTrinhWin
         private string maNM;
         //TrangThaiSP bit,
         private byte[] hinh;
+        public GioHang(string masp)
+        {
+            this.MaSP = masp;
+        }
         public GioHang(string maSP, string tenSP, string giaBan, int soLuong, string maNB, string maNM, byte[] hinh)
         {
             this.MaSP = maSP;

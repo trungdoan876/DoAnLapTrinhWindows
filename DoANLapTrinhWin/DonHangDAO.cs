@@ -17,5 +17,11 @@ namespace DoANLapTrinhWin
                     "Đang giao hàng", "Đang giao hàng", dh.MaDonHang);
             tt.ThucThi(sqlStr);
         }
+        public void CapNhatNhanHang(DonHang dh)
+        {
+            string sqlStr = string.Format("UPDATE DonHang SET TrangThaiDonHangNM = N'{0}', TrangThaiDonHangNB = N'{1}' WHERE MaDonHang ='{2}'",
+                    "Giao hàng thành công", "Giao hàng thành công", dh.MaDonHang);
+            tt.ThucThi(sqlStr);
+        }
     }
 }
