@@ -23,6 +23,7 @@ namespace DoANLapTrinhWin
         string maSP;
         bool picClick;
         string tenTK;
+        byte[] hinh;
         YeuThichDAO ytdao = new YeuThichDAO();
         GioHangDAO ghdao = new GioHangDAO();
         System.Drawing.Image ByteArrayToImage(byte[] a)
@@ -75,6 +76,44 @@ namespace DoANLapTrinhWin
                 picClick = true;
             }
             LoadImagesFromDatabase(sp.MaSP);
+            Load();
+        }
+        private void Load()
+        {
+            try
+            {
+                //MessageBox.Show(sp.MaSP);
+                conn.Open();
+                string sqlStr = string.Format("SELECT NguoiMua.Hinh, NguoiMua.Ten, DanhGia.nhanxet, DanhGia.sao FROM NguoiMua, DanhGia " +
+                    "WHERE NguoiMua.Ma = DanhGia.MaNguoiMua AND DanhGia.MaSanPham ='{0}'", sp.MaSP);
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                DataSet dtSet = new DataSet();
+                adapter.Fill(dtSet);
+
+                foreach (DataRow row in dtSet.Tables[0].Rows)
+                {
+                    string ten = row["Ten"].ToString();
+                    string nx = row["nhanxet"].ToString();
+                    int sosao = int.Parse(row["sao"].ToString());
+                    if (row["Hinh"] != DBNull.Value)
+                    {
+                        hinh = (byte[])row["Hinh"];
+                    }
+                    UCDanhGiaCT uc = new UCDanhGiaCT(ten, nx, sosao, hinh,sp.MaSP);
+                    int dodai = 0;
+                    dodai += uc.Height; 
+                    fpanelDanhGia.Controls.Add(uc);
+                    fpanelDanhGia.Height = dodai; 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
         //hien nhieu hinh
         private void LoadImagesFromDatabase(string masp)

@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace DoANLapTrinhWin
@@ -17,138 +18,128 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPham sp;
         DonHang dh;
+        string maDH;
+        byte[] hinh;
         private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
+        private List<string> maSanPhamList = new List<string>();
+
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
             return System.Drawing.Image.FromStream(ms);
         }
         
-        public FDanhGia(SanPham sp, DonHang dh)
+        public FDanhGia(string maDH, DonHang dh)
         {
             InitializeComponent();
-           // this.ratingsp.Value = 4;
-            this.sp = sp;
+            this.maDH = maDH;
             this.dh = dh;
-            this.ucDanhGia1.lblTenSP.Text = sp.TenSP;
-            this.ucDanhGia1.picHinh.Image = ByteArrayToImage(sp.Hinh);
-            this.ucDanhGia1.lblTrangthai.Text = dh.TrangThaiDonHangNM;
+            LoadData();
         }
-
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        private string tinhtrangsao(double sosao)
-        {
-            string trangthai = "Tuyệt vời"; // Khởi tạo một chuỗi để lưu trạng thái
-            if (sosao == 4 || sosao == 4.5)
-            {
-                trangthai = "Hài lòng";
-            }
-            else if (sosao == 3 || sosao == 3.5)
-            {
-                trangthai = "Bình thường";
-            }
-            else if (sosao == 2 || sosao == 2.5)
-            {
-                trangthai = "Không hài lòng";
-            }
-            else if (sosao == 1 || sosao == 0.5)
-            {
-                trangthai = "Tệ";
-            }
-            return trangthai; // Trả về giá trị trạng thái
-        }
-
-        private void ratingsp_ValueChanged(object sender, EventArgs e)
-        {
-            lblsao.Text = tinhtrangsao(ratingsp.Value); // Gán giá trị trạng thái cho nhãn lblsao
-        }
-
-        private void ratingnguoiban_ValueChanged(object sender, EventArgs e)
-        {
-            lblnguoiban.Text = tinhtrangsao(ratingnguoiban.Value); // Gán giá trị trạng thái cho nhãn lblnguoiban
-        }
-
-        private void ratinggiaohang_ValueChanged(object sender, EventArgs e)
-        {
-            lblgiaohang.Text = tinhtrangsao(ratinggiaohang.Value); // Gán giá trị trạng thái cho nhãn lblgiaohang
-        }
-        private PictureBox CreatePictureBox(System.Drawing.Image image)
-        {
-            PictureBox pic = new PictureBox();
-            // pic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pic.Size = new Size(100, 100);
-            pic.Dock = DockStyle.Left;
-            pic.Image = image;
-            pic.SizeMode = PictureBoxSizeMode.Zoom;
-            pic.Cursor = Cursors.Hand;
-            pic.Click += PictureBox_Click;
-            return pic;
-        }
-        private void PictureBox_Click(object sender, EventArgs e)
-        {
-            PictureBox ptb = (PictureBox)sender;
-            picThemHinh.Image = ptb.Image;
-        }
-
-        private void picThemHinh_Click_1(object sender, EventArgs e)
-        {
-            OpenFileDialog odlgOpenFile = new OpenFileDialog();
-            odlgOpenFile.InitialDirectory = "D:\\HeQTCSDL\\AnhBia\\";
-            odlgOpenFile.Title = "Open File";
-            odlgOpenFile.Filter = "Image files (*.jpg)|*.jpg|All files (*.*)|*.*";
-            try
-            {
-                if (odlgOpenFile.ShowDialog() == DialogResult.OK)
-                {
-                    System.Drawing.Image image = System.Drawing.Image.FromFile(odlgOpenFile.FileName);
-                    // picAnhBia.Image = image;
-                    PictureBox pic = CreatePictureBox(image);
-                    panelThemNhieuHinh.Controls.Add(pic);
-                    arrPicture.Add(image);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-        }
-        private void btnguii_Click_1(object sender, EventArgs e)
+        public void LoadData()
         {
             try
             {
                 conn.Open();
-                string sql = string.Format("INSERT INTO DanhGia(MaNguoiMua,MaSanPham,sao,saonguoiban,saogiaohang,nhanxet) " +
-                "VALUES('{0}','{1}','{2}','{3}','{4}',N'{5}')", dh.MaNguoiMua, sp.MaSP, ratingsp.Value, ratingnguoiban.Value, ratinggiaohang.Value, txtDanhGia.Text);
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Thành công");
-                foreach (System.Drawing.Image image in arrPicture)
+                string sqlStr = string.Format("SELECT MaDonHang, SanPham.MaSanPham,SanPham.TenSanPham, ChiTietDonHang.SoLuong AS slmua, ChiTietDonHang.GiaTien AS gtien, SanPham.Hinh " +
+                                "FROM ChiTietDonHang, SanPham " +
+                                "WHERE SanPham.MaSanPham = ChiTietDonHang.MaSanPham AND ChiTietDonHang.MaDonHang = '{0}'", maDH);
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                DataSet dtSet = new DataSet();
+                adapter.Fill(dtSet);
+
+                foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
-                    using (MemoryStream ms = new MemoryStream())
+                    string maSP = row["MaSanPham"].ToString();
+                    string maDH = row["MaDonHang"].ToString();
+                    string tenSP = row["TenSanPham"].ToString();
+                    string giaTien = row["gtien"].ToString();
+                    string soLuong = row["slmua"].ToString();
+                    if (row["Hinh"] != DBNull.Value)
                     {
-                        image.Save(ms, image.RawFormat);
-                        byte[] imageBytes = ms.ToArray();
-                        string anh = BitConverter.ToString(imageBytes).Replace("-", "");
-                        string sql1 = string.Format("INSERT INTO HinhDanhGia (MaNguoiMua,MaSanPham, Hinh) VALUES ('{0}','{1}', 0x{2})", dh.MaNguoiMua, sp.MaSP, anh);
-                        SqlCommand cmd1 = new SqlCommand(sql1, conn);
-                        cmd1.ExecuteNonQuery();
+                        hinh = (byte[])row["Hinh"];
                     }
+                    SanPham sp = new SanPham(maSP,tenSP, giaTien, soLuong, hinh);
+                    maSanPhamList.Add(maSP);
+                    UCDanhGiaNhieuSP uc = new UCDanhGiaNhieuSP(sp,dh);
+                    fpanelSP.Controls.Add(uc);
 
                 }
             }
-
             catch (Exception ex)
             {
-                MessageBox.Show("Loi" + ex);
+                MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {
                 conn.Close();
             }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btnguii_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                foreach (string maSanPham in maSanPhamList)
+                {
+                    string maSP = maSanPham.ToString();
+                    // Lấy thông tin đánh giá từ UserControl
+                    bool daXuLy = false;
+                    foreach (Control control in fpanelSP.Controls)
+                    {
+                        if (control is UCDanhGiaNhieuSP uc) //xet tung cai uc trong panel de danh gia
+                        {
+                            if (daXuLy==true) //kiem tra neu da xet thi bo qua
+                                continue;
+                            else
+                            {
+                                string maNguoiMua = dh.MaNguoiMua;
+                                double sao = uc.ratingsp.Value;
+                                double saoNguoiBan = uc.ratingnguoiban.Value;
+                                double saoGiaoHang = uc.ratinggiaohang.Value;
+                                string danhGia = uc.txtDanhGia.Text;
+                                arrPicture = uc.arrPicture;
+
+                                // Thực hiện chèn dữ liệu vào cơ sở dữ liệu
+                                string sql = string.Format("INSERT INTO DanhGia (MaSanPham, MaNguoiMua, sao, saonguoiban, saogiaohang, nhanxet) " +
+                                                "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', N'{5}')",maSP, maNguoiMua, sao, saoNguoiBan, saoGiaoHang, danhGia);
+                                SqlCommand cmd = new SqlCommand(sql, conn);
+                                cmd.ExecuteNonQuery();
+                                foreach (System.Drawing.Image image in arrPicture)
+                                {
+                                    using (MemoryStream ms = new MemoryStream())
+                                    {
+                                        image.Save(ms, image.RawFormat);
+                                        byte[] imageBytes = ms.ToArray();
+                                        string anh = BitConverter.ToString(imageBytes).Replace("-", "");
+                                        string sql1 = string.Format("INSERT INTO HinhDanhGia (MaNguoiMua,MaSanPham, Hinh) VALUES ('{0}', '{1}', 0x{2})",maNguoiMua, maSP, anh);
+                                        SqlCommand cmd1 = new SqlCommand(sql1, conn);
+                                        cmd1.ExecuteNonQuery();
+                                    }
+                                }
+                            }
+                            daXuLy = true;
+                        }
+                    }
+                }
+                MessageBox.Show("Đã gửi đánh giá thành công");
+                this.Close(); // Đóng Form sau khi gửi đánh giá
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+
         }
     }
 

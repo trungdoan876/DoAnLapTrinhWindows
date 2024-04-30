@@ -35,8 +35,9 @@ namespace DoANLapTrinhWin.UC
 
         private void btnDaNhanHang_Click(object sender, EventArgs e)
         {
-            FDanhGia fdh = new FDanhGia(sp,dh);
+            FDanhGia fdh = new FDanhGia(dh.MaDonHang.ToString(),dh);
             fdh.ShowDialog();
         }
+
     }
 }

@@ -41,7 +41,7 @@
             // 
             this.picHinh.Image = ((System.Drawing.Image)(resources.GetObject("picHinh.Image")));
             this.picHinh.ImageRotate = 0F;
-            this.picHinh.Location = new System.Drawing.Point(31, 18);
+            this.picHinh.Location = new System.Drawing.Point(32, 5);
             this.picHinh.Margin = new System.Windows.Forms.Padding(5);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(133, 112);

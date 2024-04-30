@@ -28,7 +28,7 @@ namespace DoANLapTrinhWin
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("select DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat," +
+                string sqlStr = string.Format("select DonHang.MaNguoiMua,SanPham.MaSanPham,DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat," +
                     "TrangThaiDonHangNB as TrangThaiDonHang, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
                     "FROM DonHang, (SELECT MaDonHang, MIN(MaSanPham) AS MaSanPham FROM ChiTietDonHang GROUP BY MaDonHang) Q, SanPham " +
                     "WHERE DonHang.MaNguoiMua = '{0}' AND DonHang.MaDonHang = Q.MaDonHang AND SanPham.MaSanPham = Q.MaSanPham AND TrangThaiDonHangNB='{1}'",
@@ -40,6 +40,8 @@ namespace DoANLapTrinhWin
                 int y = 0;
                 foreach (DataRow row in dtSet.Tables[0].Rows)
                 {
+                    string maSP = row["MaSanPham"].ToString();
+                    string maNM = row["MaNguoiMua"].ToString();
                     string maDH = row["MaDonHang"].ToString();
                     string tongTien = row["TongTien"].ToString();
                     DateTime NgDat = (DateTime)row["NgDat"];
@@ -49,8 +51,8 @@ namespace DoANLapTrinhWin
                     {
                         hinh = (byte[])row["Hinh"];
                     }
-                    DonHang dh = new DonHang(maDH, tongTien, NgDat, TTDH);
-                    SanPham sp = new SanPham(tenSP, hinh);
+                    DonHang dh = new DonHang(maDH, tongTien, NgDat, TTDH,maNM);
+                    SanPham sp = new SanPham(tenSP, hinh,maSP);
                     
                     UCDaGiaoNM uc = new UCDaGiaoNM(sp,dh);
 

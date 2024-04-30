@@ -64,6 +64,8 @@
             this.soluongmua = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.picHeart = new System.Windows.Forms.PictureBox();
+            this.fpanelDanhGia = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.panel1.SuspendLayout();
             this.vongtrontt.SuspendLayout();
@@ -464,7 +466,7 @@
             this.panelThemNhieuHinh.AutoScroll = true;
             this.panelThemNhieuHinh.Location = new System.Drawing.Point(12, 75);
             this.panelThemNhieuHinh.Name = "panelThemNhieuHinh";
-            this.panelThemNhieuHinh.Size = new System.Drawing.Size(278, 712);
+            this.panelThemNhieuHinh.Size = new System.Drawing.Size(278, 989);
             this.panelThemNhieuHinh.TabIndex = 286;
             // 
             // soluongmua
@@ -507,6 +509,23 @@
             this.picHeart.TabStop = false;
             this.picHeart.Click += new System.EventHandler(this.picHeart_Click);
             // 
+            // fpanelDanhGia
+            // 
+            this.fpanelDanhGia.Location = new System.Drawing.Point(310, 834);
+            this.fpanelDanhGia.Name = "fpanelDanhGia";
+            this.fpanelDanhGia.Size = new System.Drawing.Size(912, 218);
+            this.fpanelDanhGia.TabIndex = 289;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(322, 803);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(193, 28);
+            this.label1.TabIndex = 80;
+            this.label1.Text = "Đánh giá sản phẩm:";
+            // 
             // FCTSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -514,6 +533,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1757, 1076);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.fpanelDanhGia);
             this.Controls.Add(this.picHeart);
             this.Controls.Add(this.soluongmua);
             this.Controls.Add(this.panelThemNhieuHinh);
@@ -578,5 +599,7 @@
         private System.Windows.Forms.Panel panelThemNhieuHinh;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private System.Windows.Forms.PictureBox picHeart;
+        private System.Windows.Forms.FlowLayoutPanel fpanelDanhGia;
+        private System.Windows.Forms.Label label1;
     }
 }

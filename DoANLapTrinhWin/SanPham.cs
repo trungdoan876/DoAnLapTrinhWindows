@@ -38,9 +38,17 @@ namespace DoANLapTrinhWin
             this.hinh = hinh;
             this.maSP = maSP;
         }
-        public SanPham(string tenSP, string giaTien, string soLuong, byte[]hinh)
+        public SanPham(string maSP,string tenSP, string giaTien, string soLuong, byte[]hinh)//danh gia
         {
+            this.maSP= maSP;
             this.tenSP= tenSP;
+            this.giaBan = giaTien;
+            this.soLuong = soLuong;
+            this.hinh = hinh;
+        }
+        public SanPham(string tenSP, string giaTien, string soLuong, byte[] hinh)
+        {
+            this.tenSP = tenSP;
             this.giaBan = giaTien;
             this.soLuong = soLuong;
             this.hinh = hinh;
