@@ -58,6 +58,8 @@ namespace DoANLapTrinhWin
             lblThoigiandasd.Text = sp.ThoiGianDaSuDung;
             lblSoLuong.Text = sp.SoLuong+" sản phẩm sẵn có";
             picHinh.Image = ByteArrayToImage(sp.Hinh);
+
+
             if (picClick == true)
             {
                 string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timdo.png";

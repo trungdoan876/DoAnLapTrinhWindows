@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,7 @@ namespace DoANLapTrinhWin
     {
         private Guna2GradientButton btnOK;
         private string selctecOption = null;
+        NguoiDAO ngdao = new NguoiDAO();
         public FDangNhap()
         {
             InitializeComponent();
@@ -68,79 +70,49 @@ namespace DoANLapTrinhWin
 
         private void btnDangNhap_Click_1(object sender, EventArgs e)
         {
+            string tenTK = txtDangNhap.Text; //tenTK = ma
+            string matKhau = txtMatKhau.Text;
             if (selctecOption == "Mua hàng")
             {
-                SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-                try
+                Nguoi ng = new Nguoi(tenTK,matKhau);
+                DataTable dt = new DataTable();
+                dt = ngdao.DangNhapNM(ng);
+                if (dt.Rows.Count > 0)
                 {
-                    conn.Open();
-                    string tenTK = txtDangNhap.Text; //tenTK = ma
-                    string matKhau = txtMatKhau.Text;
-                    string sql = "Select * from NguoiMua WHERE Ma='" + tenTK + "' and MatKhau='" + matKhau + "'";
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    SqlDataReader dta = cmd.ExecuteReader();
-                    if (dta.Read() == true)
-                    {
-                        this.Hide(); //an form 1
-                        FNguoiMua form2 = new FNguoiMua(tenTK);
-                        form2.ShowDialog();
-                        form2 = null;
-                        this.Show();
-                        txtDangNhap.Text = null;
-                        txtMatKhau.Text = null;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Khong the dang nhap!");
-                    }
+                    this.Hide(); //an form 1
+                    FNguoiMua form2 = new FNguoiMua(tenTK);
+                    form2.ShowDialog();
+                    form2 = null;
+                    this.Show();
+                    txtDangNhap.Text = null;
+                    txtMatKhau.Text = null;
                 }
-                catch (Exception exc)
+                else
                 {
-                    MessageBox.Show(exc.Message);
-                }
-                finally
-                {
-                    conn.Close();
+                    MessageBox.Show("Khong the dang nhap");
                 }
             }
             else
             {
-                SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-                try
+                Nguoi ng = new Nguoi(tenTK, matKhau);
+                DataTable dt = new DataTable();
+                dt = ngdao.DangNhapNB(ng);
+                if (dt.Rows.Count > 0)
                 {
-                    conn.Open();
-                    string tenTK = txtDangNhap.Text; //tenTK = ma
-                    string matKhau = txtMatKhau.Text;
-                    string sql = "Select * from NguoiBan where Ma='" + tenTK + "' and MatKhau='" + matKhau + "'";
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    SqlDataReader dta = cmd.ExecuteReader();
-                    if (dta.Read() == true)
-                    {
-                        this.Hide();
-                        FNguoiBan form2 = new FNguoiBan(tenTK);
-                        form2.ShowDialog();
-                        form2 = null;
-                        this.Show();
-                        txtDangNhap.Text = null;
-                        txtMatKhau.Text = null;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Khong the dang nhap!");
-                    }
-
+                    this.Hide(); //an form 1
+                    FNguoiBan form2 = new FNguoiBan(tenTK);
+                    form2.ShowDialog();
+                    form2 = null;
+                    this.Show();
+                    txtDangNhap.Text = null;
+                    txtMatKhau.Text = null;
                 }
-                catch (Exception exc)
+                else
                 {
-                    MessageBox.Show(exc.Message);
+                    MessageBox.Show("Khong the dang nhap");
                 }
-                finally
-                {
-                    conn.Close();
-                }
-            }
+            } 
         }
-
         private void lblDangKy_Click(object sender, EventArgs e)
         {
             this.Hide();

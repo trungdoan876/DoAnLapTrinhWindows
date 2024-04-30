@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DoANLapTrinhWin
 {
@@ -14,6 +15,7 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         DBConnection tt = new DBConnection();
         string Table;
+        //này làm j z
         public DataTable Load()
         {
             try
@@ -21,9 +23,9 @@ namespace DoANLapTrinhWin
                 conn.Open();
                 string sqlStr = string.Format("SELECT *FROM {0}", Table);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataTable dtSinhVien = new DataTable();
-                adapter.Fill(dtSinhVien);
-                return dtSinhVien;
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                return dt;
             }
             catch (Exception exc)
             {
@@ -39,9 +41,9 @@ namespace DoANLapTrinhWin
         {
 
             string anh = BitConverter.ToString(nguoi.Hinh).Replace("-", "");
-            string sqlStr = string.Format("UPDATE {0} SET Hinh =0x{1}, Ten = N'{3}', SDT = '{4}', NgaySinh = '{5}', GioiTinh =N'{6}', " +
-                "CCCD = '{7}', DiaChi = N'{8}', Email =N'{9}', MoTaShop = N'{10}' WHERE Ma='{2}'", Table, anh, nguoi.Ma, nguoi.Ten1, nguoi.SDT1, nguoi.NgaySinh, nguoi.GioiTinh, nguoi.CCCD1, 
-                nguoi.DiaChi, nguoi.EMail, nguoi.MoTa);
+            string sqlStr = string.Format("UPDATE {0} SET Hinh = 0x{1}, Ten = N'{3}', SDT = '{4}', NgaySinh = '{5}', GioiTinh = N'{6}', " +
+                "CCCD = '{7}', DiaChi = N'{8}', Email = N'{9}', MoTaShop = N'{10}' WHERE Ma = '{2}'", Table, anh, nguoi.Ma, nguoi.Ten1, 
+                nguoi.SDT, nguoi.NgaySinh, nguoi.GioiTinh, nguoi.CCCD, nguoi.DiaChi, nguoi.EMail, nguoi.MoTa);
             tt.ThucThi(sqlStr);
         }
         public void CapNhatMua(Nguoi nguoi)
@@ -49,7 +51,7 @@ namespace DoANLapTrinhWin
 
             string anh = BitConverter.ToString(nguoi.Hinh).Replace("-", "");
             string sqlStr = string.Format("UPDATE {0} SET Hinh =0x{1}, Ten = N'{3}', SDT = '{4}', NgaySinh = '{5}', GioiTinh =N'{6}', " +
-                "CCCD = '{7}', DiaChi = N'{8}', Email =N'{9}' WHERE Ma='{2}'", Table, anh, nguoi.Ma, nguoi.Ten1, nguoi.SDT1, nguoi.NgaySinh, nguoi.GioiTinh, nguoi.CCCD1,
+                "CCCD = '{7}', DiaChi = N'{8}', Email =N'{9}' WHERE Ma='{2}'", Table, anh, nguoi.Ma, nguoi.Ten1, nguoi.SDT, nguoi.NgaySinh, nguoi.GioiTinh, nguoi.CCCD,
                 nguoi.DiaChi, nguoi.EMail);
             tt.ThucThi(sqlStr);
         }
@@ -57,14 +59,27 @@ namespace DoANLapTrinhWin
         {
             this.Table = Table;
         }
+        public NguoiDAO() { }
+        //load thông tin người lên form thông tin
         public DataTable ThongTinNguoi(Nguoi ng)
         {
-            conn.Open();
-            string sqlStr = string.Format("SELECT *FROM {0} WHERE Ma = '{1}'",Table, ng.Ma);
-            SqlCommand cmd = new SqlCommand(sqlStr, conn);
-            SqlDataReader docDuLieu = cmd.ExecuteReader();
+            string sqlStr = string.Format("SELECT *FROM {0} WHERE Ma = '{1}'", Table, ng.Ma);
             DataTable dt = new DataTable();
-            dt.Load(docDuLieu);
+            dt = tt.DocDuLieu(sqlStr);
+            return dt;
+        }
+        public DataTable DangNhapNM(Nguoi ng)
+        {
+            string sql = string.Format("SELECT * FROM NguoiMua WHERE Ma = '{0}' and MatKhau ='{1}'", ng.Ma,ng.MatKhau);
+            DataTable dt = new DataTable();
+            dt = tt.DocDuLieu(sql);
+            return dt;
+        }
+        public DataTable DangNhapNB(Nguoi ng)
+        {
+            string sql = string.Format("SELECT * FROM NguoiBan WHERE Ma = '{0}' and MatKhau ='{1}'", ng.Ma, ng.MatKhau);
+            DataTable dt = new DataTable();
+            dt = tt.DocDuLieu(sql);
             return dt;
         }
     }

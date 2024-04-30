@@ -17,7 +17,6 @@ namespace DoANLapTrinhWin
     {
         private List<byte[]> byteImage = new List<byte[]>();
         private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPhamDAO spDAO = new SanPhamDAO();
         byte[] ImageToByteArray(Image img)
         {
@@ -62,7 +61,6 @@ namespace DoANLapTrinhWin
 
         private void btnThemHinh_Click(object sender, EventArgs e)
         {
-            //MemoryStream ms;
             OpenFileDialog odlgOpenFile = new OpenFileDialog();
             odlgOpenFile.InitialDirectory = "C:\\";
             odlgOpenFile.Title = "Open File";

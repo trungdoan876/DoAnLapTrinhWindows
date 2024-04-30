@@ -14,7 +14,6 @@ namespace DoANLapTrinhWin
 {
     public partial class FThongTinChiTietNguoiMua : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         byte[] hinh;
         NguoiMuaDAO nguoiDao = new NguoiMuaDAO();
         string maNM;
@@ -56,38 +55,6 @@ namespace DoANLapTrinhWin
                 }
                 picHinh.Image = ByteArrayToImage(hinh);
             }
-            /*try
-            {
-                conn.Open();
-                string sqlStr = string.Format("SELECT *FROM NguoiMua WHERE Ma='{0}'",maNM);
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                SqlDataReader docDuLieu = cmd.ExecuteReader();
-                if (docDuLieu.Read())
-                {
-                    // Đưa dữ liệu vào TextBox
-                    txtMaTaiKhoan.Text = docDuLieu["Ma"].ToString();
-                    txtHoTen.Text = docDuLieu["Ten"].ToString();
-                    txtGioiTinh.Text = docDuLieu["GioiTinh"].ToString();
-                    dtpNgSinh.Text = docDuLieu["NgaySinh"].ToString();
-                    txtCCCD.Text = docDuLieu["CCCD"].ToString();
-                    txtSDT.Text = docDuLieu["SDT"].ToString();
-                    txtDiaChi.Text = docDuLieu["Diachi"].ToString();
-                    txtEmail.Text = docDuLieu["Email"].ToString();
-                     if (docDuLieu["Hinh"] != DBNull.Value)
-                    {
-                        hinh = (byte[])docDuLieu["Hinh"];
-                    }
-                    picHinh.Image = ByteArrayToImage(hinh);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error:" + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }*/
         }
         private void FThongTinChiTiet_Load(object sender, EventArgs e)
         {
@@ -103,7 +70,6 @@ namespace DoANLapTrinhWin
 
         private void btnThemHinh_Click(object sender, EventArgs e)
         {
-            MemoryStream ms;
             OpenFileDialog odlgOpenFile = new OpenFileDialog();
             odlgOpenFile.InitialDirectory = "C:\\";
             odlgOpenFile.Title = "Open File";

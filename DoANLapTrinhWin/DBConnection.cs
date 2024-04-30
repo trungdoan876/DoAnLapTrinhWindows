@@ -34,6 +34,28 @@ namespace DoANLapTrinhWin
             }
             return null;
         }
+        public DataTable DocDuLieu(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                SqlDataReader docDuLieu = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(docDuLieu);
+                return dt;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
+        
         //thực thi 1 câu lệnh
         public void ThucThi(string sqlStr)
         {
@@ -55,6 +77,7 @@ namespace DoANLapTrinhWin
                 conn.Close();
             }
         }
+        //thực thi không thông báo
         public void ThucThiKhong(string sqlStr)
         {
             try
@@ -67,7 +90,7 @@ namespace DoANLapTrinhWin
             }
             catch (Exception ex)
             {
-                MessageBox.Show("That bai" + ex);
+                MessageBox.Show("Error: " + ex);
             }
             finally
             {

@@ -17,7 +17,6 @@ namespace DoANLapTrinhWin
     {
         string maTK;
         byte[] hinh;
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         NguoiBanDAO nguoiDao = new NguoiBanDAO();
         public FThongTinNguoiBan(string tenTaiKhoan)
         {
@@ -59,40 +58,6 @@ namespace DoANLapTrinhWin
                 }
                 picHinh.Image = ByteArrayToImage(hinh);
             }
-            /*try
-            {
-                conn.Open();
-                string sqlStr = string.Format("SELECT *FROM NguoiBan WHERE Ma = '{0}'", maTK);
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                SqlDataReader docDuLieu = cmd.ExecuteReader();
-                if (docDuLieu.Read())
-                {
-                    // Đưa dữ liệu vào TextBox
-                    txtMaTaiKhoan.Text = docDuLieu["Ma"].ToString();
-                    txtHoTen.Text = docDuLieu["Ten"].ToString();
-                    txtGioiTinh.Text = docDuLieu["GioiTinh"].ToString();
-                    dtpNgSinh.Text = docDuLieu["NgaySinh"].ToString();
-                    //ucNgSinh.textBox.Text = docDuLieu["NgaySinh"].ToString();
-                    txtCCCD.Text = docDuLieu["CCCD"].ToString();
-                    txtSDT.Text = docDuLieu["SDT"].ToString();
-                    txtDiaChi.Text = docDuLieu["DiaChi"].ToString();
-                    txtEmail.Text = docDuLieu["Email"].ToString();
-                    txtMoTa.Text = docDuLieu["MoTaShop"].ToString();
-                    if (docDuLieu["Hinh"] != DBNull.Value)
-                    {
-                        hinh = (byte[])docDuLieu["Hinh"];
-                    }
-                    picHinh.Image = ByteArrayToImage(hinh);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error:" + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }*/
         }
         private void FThongTinNguoiBan_Load(object sender, EventArgs e)
         {

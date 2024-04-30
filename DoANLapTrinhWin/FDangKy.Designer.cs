@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDangKy));
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelDK = new System.Windows.Forms.Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnQuayLaiDangNhap = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,19 +42,18 @@
             this.txtDK = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnNext = new Guna.UI2.WinForms.Guna2PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelDK.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnQuayLaiDangNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-5, -1);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-5, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(549, 692);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -63,6 +63,7 @@
             // panelDK
             // 
             this.panelDK.Controls.Add(this.guna2PictureBox2);
+            this.panelDK.Controls.Add(this.guna2PictureBox1);
             this.panelDK.Controls.Add(this.bunifuCustomLabel1);
             this.panelDK.Controls.Add(this.btnQuayLaiDangNhap);
             this.panelDK.Controls.Add(this.label1);
@@ -71,16 +72,28 @@
             this.panelDK.Controls.Add(this.btnBanHang);
             this.panelDK.Controls.Add(this.txtDK);
             this.panelDK.Controls.Add(this.btnNext);
-            this.panelDK.Location = new System.Drawing.Point(541, -1);
+            this.panelDK.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDK.Location = new System.Drawing.Point(0, 0);
             this.panelDK.Name = "panelDK";
-            this.panelDK.Size = new System.Drawing.Size(929, 695);
+            this.panelDK.Size = new System.Drawing.Size(1472, 697);
             this.panelDK.TabIndex = 2;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(950, 3);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(511, 708);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 34;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(124, 453);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(651, 457);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(244, 27);
             this.bunifuCustomLabel1.TabIndex = 39;
@@ -91,7 +104,7 @@
             this.btnQuayLaiDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuayLaiDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnQuayLaiDangNhap.Image")));
             this.btnQuayLaiDangNhap.ImageRotate = 0F;
-            this.btnQuayLaiDangNhap.Location = new System.Drawing.Point(156, 492);
+            this.btnQuayLaiDangNhap.Location = new System.Drawing.Point(683, 496);
             this.btnQuayLaiDangNhap.Name = "btnQuayLaiDangNhap";
             this.btnQuayLaiDangNhap.Size = new System.Drawing.Size(130, 78);
             this.btnQuayLaiDangNhap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -102,7 +115,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 417);
+            this.label1.Location = new System.Drawing.Point(550, 421);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 20);
             this.label1.TabIndex = 37;
@@ -111,7 +124,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(223, 417);
+            this.label2.Location = new System.Drawing.Point(750, 421);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 20);
             this.label2.TabIndex = 36;
@@ -136,7 +149,7 @@
             this.btnMuaHang.HoverState.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMuaHang.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnMuaHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btnMuaHang.Location = new System.Drawing.Point(248, 179);
+            this.btnMuaHang.Location = new System.Drawing.Point(775, 183);
             this.btnMuaHang.Name = "btnMuaHang";
             this.btnMuaHang.Size = new System.Drawing.Size(154, 61);
             this.btnMuaHang.TabIndex = 33;
@@ -162,7 +175,7 @@
             this.btnBanHang.HoverState.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBanHang.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnBanHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.btnBanHang.Location = new System.Drawing.Point(39, 179);
+            this.btnBanHang.Location = new System.Drawing.Point(566, 183);
             this.btnBanHang.Name = "btnBanHang";
             this.btnBanHang.Size = new System.Drawing.Size(154, 61);
             this.btnBanHang.TabIndex = 32;
@@ -184,7 +197,7 @@
             this.txtDK.ForeColor = System.Drawing.Color.Black;
             this.txtDK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDK.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtDK.IconLeft")));
-            this.txtDK.Location = new System.Drawing.Point(77, 273);
+            this.txtDK.Location = new System.Drawing.Point(604, 277);
             this.txtDK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDK.Name = "txtDK";
             this.txtDK.PasswordChar = '\0';
@@ -199,7 +212,7 @@
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageRotate = 0F;
-            this.btnNext.Location = new System.Drawing.Point(156, 323);
+            this.btnNext.Location = new System.Drawing.Point(683, 327);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(130, 97);
             this.btnNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,17 +225,6 @@
             this.bunifuElipse1.ElipseRadius = 50;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(423, 3);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(511, 708);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 34;
-            this.guna2PictureBox2.TabStop = false;
-            // 
             // FDangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -230,7 +232,6 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1472, 697);
             this.Controls.Add(this.panelDK);
-            this.Controls.Add(this.guna2PictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FDangKy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -238,9 +239,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panelDK.ResumeLayout(false);
             this.panelDK.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnQuayLaiDangNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
