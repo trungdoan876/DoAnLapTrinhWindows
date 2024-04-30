@@ -42,10 +42,6 @@ namespace DoANLapTrinhWin
 
             btnOK = btn;
         }
-        private void FDangNhap_Load(object sender, EventArgs e)
-        {
-         
-        }
         private void btnThoat_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
