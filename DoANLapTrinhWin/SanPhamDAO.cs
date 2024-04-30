@@ -71,7 +71,6 @@ namespace DoANLapTrinhWin
                 }
             }
         }
-
         public DataSet LoadChuaDangBan(string maNB)
         {
             string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", maNB, 0);

@@ -13,7 +13,6 @@ namespace DoANLapTrinhWin
 {
     public partial class FChuaDangBan : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNB;
         byte[] hinh;
         SanPhamDAO spDao = new SanPhamDAO();

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelDangThucHien = new System.Windows.Forms.Panel();
+            this.panelDangThucHien = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // panelDangThucHien
@@ -54,6 +54,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panelDangThucHien;
+        private System.Windows.Forms.FlowLayoutPanel panelDangThucHien;
     }
 }

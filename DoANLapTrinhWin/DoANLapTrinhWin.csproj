@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="DBConnection.cs" />
     <Compile Include="DonHang.cs" />
+    <Compile Include="DonHangDAO.cs" />
     <Compile Include="FCTDonHangNM.cs">
       <SubType>Form</SubType>
     </Compile>

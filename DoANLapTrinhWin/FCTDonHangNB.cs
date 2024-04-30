@@ -16,6 +16,7 @@ namespace DoANLapTrinhWin
     public partial class FCTDonHangNB : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        DonHangDAO dhDao = new DonHangDAO();
         string maDH;
         byte[] hinh;
         public FCTDonHangNB(string maDH)
@@ -81,23 +82,8 @@ namespace DoANLapTrinhWin
 
         private void btnGiaoHang_Click(object sender, EventArgs e)
         {
-            try 
-            { 
-                conn.Open();
-                string sqlStr = string.Format("UPDATE DonHang SET TrangThaiDonHangNM = N'{0}', TrangThaiDonHangNB = N'{1}' WHERE MaDonHang ='{2}'", 
-                    "Đang giao hàng", "Đang giao hàng",maDH);
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Giao hang thanh cong");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            DonHang dh = new DonHang(maDH);
+            dhDao.CapNhatGiaoHangNB(dh);
         }
     }
 }
