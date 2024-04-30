@@ -16,10 +16,12 @@ namespace DoANLapTrinhWin
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         byte[] hinh;
-        NguoiMuaDAO nguoimuaDao = new NguoiMuaDAO();
-        public FThongTinChiTietNguoiMua()
+        NguoiMuaDAO nguoiDao = new NguoiMuaDAO();
+        string maNM;
+        public FThongTinChiTietNguoiMua(string maNM)
         {
             InitializeComponent();
+            this.maNM = maNM;
         }
         byte[] ImageToByteArray(Image img)
         {
@@ -34,10 +36,30 @@ namespace DoANLapTrinhWin
         }
         private void LoadData()
         {
-            try
+            Nguoi ng = new Nguoi(maNM);
+
+            DataTable dt = nguoiDao.ThongTinNguoi(ng);
+            foreach (DataRow row in dt.Rows)
+            {
+                // Đưa dữ liệu vào TextBox
+                txtMaTaiKhoan.Text = row[0].ToString();
+                txtHoTen.Text = row[1].ToString();
+                dtpNgSinh.Text = row[3].ToString();
+                txtGioiTinh.Text = row[4].ToString();
+                txtCCCD.Text = row[5].ToString();
+                txtDiaChi.Text = row[6].ToString();
+                txtSDT.Text = row[7].ToString();
+                txtEmail.Text = row[8].ToString();
+                if (row[9] != DBNull.Value)
+                {
+                    hinh = (byte[])row[9];
+                }
+                picHinh.Image = ByteArrayToImage(hinh);
+            }
+            /*try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT *FROM NguoiMua");
+                string sqlStr = string.Format("SELECT *FROM NguoiMua WHERE Ma='{0}'",maNM);
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 SqlDataReader docDuLieu = cmd.ExecuteReader();
                 if (docDuLieu.Read())
@@ -65,7 +87,7 @@ namespace DoANLapTrinhWin
             finally
             {
                 conn.Close();
-            }
+            }*/
         }
         private void FThongTinChiTiet_Load(object sender, EventArgs e)
         {
@@ -76,7 +98,7 @@ namespace DoANLapTrinhWin
         private void btnSua_Click(object sender, EventArgs e)
         {
             NguoiMua nguoimua = new NguoiMua(ImageToByteArray(picHinh.Image), txtMaTaiKhoan.Text, txtHoTen.Text, txtSDT.Text, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, txtEmail.Text);
-            nguoimuaDao.CapNhatMua(nguoimua);
+            nguoiDao.CapNhatMua(nguoimua);
         }
 
         private void btnThemHinh_Click(object sender, EventArgs e)

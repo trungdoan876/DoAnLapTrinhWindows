@@ -14,7 +14,6 @@ namespace DoANLapTrinhWin
 {
     public partial class FDanhSachSanPham : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNB;
         byte[] hinh;
         SanPhamDAO spDao = new SanPhamDAO();

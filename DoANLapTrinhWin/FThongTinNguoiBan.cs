@@ -37,8 +37,29 @@ namespace DoANLapTrinhWin
         }
         private void LoadDuLieu()
         {
-            //NguoiBan nguoiban = new NguoiBan(txtMaTaiKhoan.Text, txtHoTen.Text, ucSDT.textBox.Text, dtpNgSinh.Value, ucGioiTinh.textBox.Text, ucCCCD.textBox.Text, ucDiaChi.textBox.Text, ucEmail.textBox.Text, ucMoTaShop.textBox.Text);
-            try
+            Nguoi ng = new Nguoi(maTK);
+
+            DataTable dt = nguoiDao.ThongTinNguoi(ng);
+            foreach (DataRow row in dt.Rows)
+            {
+                // Đưa dữ liệu vào TextBox
+                txtMaTaiKhoan.Text = row[0].ToString();
+                txtHoTen.Text = row[2].ToString();
+                txtGioiTinh.Text = row[5].ToString();
+                dtpNgSinh.Text = row[4].ToString();
+                //ucNgSinh.textBox.Text = docDuLieu["NgaySinh"].ToString();
+                txtCCCD.Text = row[6].ToString();
+                txtSDT.Text = row[3].ToString();
+                txtDiaChi.Text = row[7].ToString();
+                txtEmail.Text = row[8].ToString();
+                txtMoTa.Text = row[9].ToString();
+                if (row[10] != DBNull.Value)
+                {
+                    hinh = (byte[])row[10];
+                }
+                picHinh.Image = ByteArrayToImage(hinh);
+            }
+            /*try
             {
                 conn.Open();
                 string sqlStr = string.Format("SELECT *FROM NguoiBan WHERE Ma = '{0}'", maTK);
@@ -71,7 +92,7 @@ namespace DoANLapTrinhWin
             finally
             {
                 conn.Close();
-            }
+            }*/
         }
         private void FThongTinNguoiBan_Load(object sender, EventArgs e)
         {
@@ -87,7 +108,6 @@ namespace DoANLapTrinhWin
 
         private void btnThemAnh_Click(object sender, EventArgs e)
         {
-            MemoryStream ms;
             OpenFileDialog odlgOpenFile = new OpenFileDialog();
             odlgOpenFile.InitialDirectory = "C:\\";
             odlgOpenFile.Title = "Open File";

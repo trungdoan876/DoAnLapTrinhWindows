@@ -28,7 +28,7 @@ namespace DoANLapTrinhWin
         private void btnThongTin_Click(object sender, EventArgs e)
         {
             Global.TaoButton(btnThongTin, ref gl.btnOK);
-            Global.MoFormCon(new FThongTinChiTietNguoiMua(), panelThan);    
+            Global.MoFormCon(new FThongTinChiTietNguoiMua(tenTK), panelThan);    
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)

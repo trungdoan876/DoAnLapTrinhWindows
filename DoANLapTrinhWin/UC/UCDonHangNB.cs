@@ -38,15 +38,5 @@ namespace DoANLapTrinhWin
             FCTDonHangNB fdh = new FCTDonHangNB(lblMaDH.Text);
             fdh.ShowDialog();
         }
-
-        private void UCDonHangNB_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblMaDH_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

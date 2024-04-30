@@ -53,12 +53,19 @@ namespace DoANLapTrinhWin
                 nguoi.DiaChi, nguoi.EMail);
             tt.ThucThi(sqlStr);
         }
-        public void DangNhap(Nguoi nguoi)
-        { 
-        }
         public NguoiDAO(string Table)
         {
             this.Table = Table;
+        }
+        public DataTable ThongTinNguoi(Nguoi ng)
+        {
+            conn.Open();
+            string sqlStr = string.Format("SELECT *FROM {0} WHERE Ma = '{1}'",Table, ng.Ma);
+            SqlCommand cmd = new SqlCommand(sqlStr, conn);
+            SqlDataReader docDuLieu = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(docDuLieu);
+            return dt;
         }
     }
 }

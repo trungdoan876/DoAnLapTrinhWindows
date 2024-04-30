@@ -22,6 +22,10 @@ namespace DoANLapTrinhWin
         private string eMail;
         private string moTa;
         // dung cho nguoi mua
+        public Nguoi(string ma)
+        {
+            this.ma = ma;
+        }
         public Nguoi(byte[] hinh,string ma, string Ten, string SDT, DateTime ngaySinh, string gioiTinh, string CCCD, string diaChi, string eMail)
         {
             this.hinh = hinh;

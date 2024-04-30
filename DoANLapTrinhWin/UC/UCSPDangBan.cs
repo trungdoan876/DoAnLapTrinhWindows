@@ -37,7 +37,7 @@ namespace DoANLapTrinhWin
         }
         private void btnGoDangBan_Click_1(object sender, EventArgs e)
         {
-            SanPham sp = new SanPham(lblMaSP.Text, "", "", "", "", "", DateTime.Now, "", "", "", "", "", "", null);
+            SanPham sp = new SanPham(lblMaSP.Text);
             spDAO.GoSanPham(sp);
         }
     }

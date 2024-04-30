@@ -22,6 +22,7 @@ namespace DoANLapTrinhWin
         string tenTaiKhoan;
         byte[] hinh;
         Global gl = new Global();
+        SanPhamDAO spdao = new SanPhamDAO();    
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -34,62 +35,41 @@ namespace DoANLapTrinhWin
         }
         public void LoadData()
         {
-            try
+            DataSet dt = spdao.TatCaSanPham();
+
+            panelMuaHang.AutoScroll = true;
+            int x = 0;
+            int y = 0;
+            foreach (DataRow row in dt.Tables[0].Rows)
             {
-                panelMuaHang.AutoScroll = true;
-                conn.Open();
-                string sqlStr = string.Format("SELECT* FROM SanPham WHERE DangBan = '{0}'",1);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
-                adapter.Fill(dtSet);
-                int x = 0;
-                int y = 0;
-                foreach (DataRow row in dtSet.Tables[0].Rows)
+                SanPham sp = new SanPham
+                (
+                    row[1].ToString(),
+                    row[2].ToString(),
+                    row[3].ToString(),
+                    row[4].ToString(),
+                    row[5].ToString(),
+                    row[6].ToString(),
+                    (DateTime)row[7],
+                    row[8].ToString(),
+                    row[9].ToString(),
+                    row[10].ToString(),
+                    row[11].ToString(),
+                    row[12].ToString(),
+                    row[13].ToString(),
+                    (byte[])row[0]
+                );
+                UCSP ucSP = new UCSP(sp,tenTaiKhoan);
+                //vi tri moi uc
+                ucSP.Location = new Point(x, y);
+                x += ucSP.Width + 5;
+                if (x == ucSP.Width * 4)
                 {
-                    string maNB = row["MaNguoiBan"].ToString();
-                    string maSP = row["MaSanPham"].ToString();
-                    string tenSP = row["TenSanPham"].ToString();
-                    string giaBan = "đ" + row["GiaBan"].ToString();
-                    string giaGoc = "đ" + row["GiaGoc"].ToString();
-                    string diaChi = row["DiaChi"].ToString();
-                    string xuatXu = row["XuatXu"].ToString();
-                    string nganhHang = row["NganhHang"].ToString();
-                    DateTime ngayDang = DateTime.Now;
-                    string moTaSP = row["MoTaSanPham"].ToString();
-                    string tinhTrang = row["TinhTrang"].ToString();
-                    string thoiGianSuDung = row["TGDSD"].ToString();
-                    string soLuong = row["SoLuong"].ToString();
-                    if (row["Hinh"] != DBNull.Value)
-                    {
-                        hinh = (byte[])row["Hinh"];
-                    }
-                    SanPham sp = new SanPham(maSP, tenSP, giaBan, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, maNB, soLuong, hinh);
-                    UCSP ucSP = new UCSP(sp,tenTaiKhoan);
-                    ucSP.lblMaSP.Text = maSP;
-                    ucSP.lblTenSP.Text = tenSP;
-                    ucSP.lblGiaBan.Text = giaBan;
-                    ucSP.lblGiaGoc.Text = giaGoc;
-                    ucSP.lblDiaChi.Text = diaChi;
-                    ucSP.picHinh.Image = ByteArrayToImage(hinh);
-                    //vi tri moi uc
-                    ucSP.Location = new Point(x, y);
-                    x += ucSP.Width + 5;
-                    if (x == ucSP.Width * 4)
-                    {
-                        x = 0;
-                        y += ucSP.Height + 5;
-                    }
-                    panelMuaHang.Controls.Add(ucSP);
+                    x = 0;
+                    y += ucSP.Height + 5;
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+                panelMuaHang.Controls.Add(ucSP);
+            }  
         }
         private void FMuaHang_Load(object sender, EventArgs e)
         {
@@ -131,12 +111,6 @@ namespace DoANLapTrinhWin
                     }
                     SanPham sp = new SanPham(maSP, tenSP, giaBan, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, maNB, soLuong, hinh);
                     UCSP ucSP = new UCSP(sp, tenTaiKhoan);
-
-                    ucSP.lblMaSP.Text = maSP;
-                    ucSP.lblTenSP.Text = tenSP;
-                    ucSP.lblGiaBan.Text = giaBan;
-                    ucSP.lblGiaGoc.Text = giaGoc;
-                    ucSP.lblDiaChi.Text = diaChi;
                      //vi tri moi uc
                     ucSP.Location = new Point(x, y);
                     x = x + ucSP.Width + 5;
@@ -257,11 +231,6 @@ namespace DoANLapTrinhWin
                     SanPham sp = new SanPham(maSP, tenSP, giaBan, giaGoc, xuatXu, thoiGianSuDung, ngayDang, moTaSP, nganhHang, tinhTrang, diaChi, maNB, soLuong, hinh);
                     UCSP ucSP = new UCSP(sp, tenTaiKhoan);
 
-                    ucSP.lblMaSP.Text = maSP;
-                    ucSP.lblTenSP.Text = tenSP;
-                    ucSP.lblGiaBan.Text = giaBan;
-                    ucSP.lblGiaGoc.Text = giaGoc;
-                    ucSP.lblDiaChi.Text = diaChi;
                     //vi tri moi uc
                     ucSP.Location = new Point(x, y);
                     x += ucSP.Width + 5;
