@@ -66,14 +66,14 @@ namespace DoANLapTrinhWin
                 string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timdo.png";
                 System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
                 picHeart.Image = image;
-                picClick = false;
+               // picClick = false;
             }
             else
             {
                 string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timden.png";
                 System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
                 picHeart.Image = image;
-                picClick = true;
+                //picClick = true;
             }
             LoadImagesFromDatabase(sp.MaSP);
             Load();
