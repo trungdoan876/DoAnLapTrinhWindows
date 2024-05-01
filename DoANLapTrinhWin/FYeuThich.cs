@@ -14,6 +14,7 @@ namespace DoANLapTrinhWin
 {
     public partial class FYeuThich : Form
     {
+        SanPhamDAO spDao = new SanPhamDAO();
         public string tenTK;
         byte[] hinh;
         Image ByteArrayToImage(byte[] a)
@@ -28,13 +29,36 @@ namespace DoANLapTrinhWin
             this.tenTK = tenTK;
             LoadYeuThich();
         }
-        private void FYeuThich_Load(object sender, EventArgs e)
-        {
-        }
 
         public void LoadYeuThich()
         {
-            try
+            DataSet ds = new DataSet();
+            ds = spDao.SanPhamYeuThich(tenTK);
+            int x = 0;
+            int y = 0;
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                SanPham sp = new SanPham(
+                    row[5].ToString(), //masp
+                    row[1].ToString(), //ten
+                    row[2].ToString(), //giaban
+                    row[3].ToString(), //gia goc
+                    row[4].ToString(), //diachi
+                    (byte[])row[0] //hinh
+                    );
+                UCSP ucSP = new UCSP(sp, tenTK);
+
+                //vi tri moi uc
+                ucSP.Location = new Point(x, y);
+                x += ucSP.Width += 5;
+                if (x == ucSP.Width * 3)
+                {
+                    x = 0;
+                    y += ucSP.Height + 5;
+                }
+                panelYeuThich.Controls.Add(ucSP);
+            }
+            /*try
             {
                 conn.Open();
                 string sqlStr = string.Format("SELECT SanPham.Hinh as Hinh, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi, " +
@@ -58,11 +82,6 @@ namespace DoANLapTrinhWin
                     SanPham sp = new SanPham(maSP,tenSP, giaBan, giaGoc, diaChi, hinh);
                     UCSP ucSP = new UCSP(sp, tenTK);
 
-                    ucSP.lblTenSP.Text = tenSP;
-                    ucSP.lblGiaBan.Text = giaBan;
-                    ucSP.lblGiaGoc.Text = giaGoc;
-                    ucSP.lblDiaChi.Text = diaChi;
-                    ucSP.picHinh.Image = ByteArrayToImage(hinh);
                     //vi tri moi uc
                     ucSP.Location = new Point(x, y);
                     x += ucSP.Width += 5;
@@ -81,7 +100,7 @@ namespace DoANLapTrinhWin
             finally
             {
                 conn.Close();
-            }
+            }*/
         }
     }
 }

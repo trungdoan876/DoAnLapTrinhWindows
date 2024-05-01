@@ -54,6 +54,7 @@
             // 
             // btnguii
             // 
+            this.btnguii.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnguii.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnguii.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnguii.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -99,6 +100,7 @@
             // btnThoat
             // 
             this.btnThoat.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.HoverState.ImageSize = new System.Drawing.Size(80, 80);
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageOffset = new System.Drawing.Point(0, 0);

@@ -13,7 +13,7 @@ namespace DoANLapTrinhWin
 {
     public partial class FDaGiaoNB : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        DonHangDAO dhDao = new DonHangDAO();
         byte[] hinh;
         string maNB;
         public FDaGiaoNB(string maNB)
@@ -21,49 +21,19 @@ namespace DoANLapTrinhWin
             InitializeComponent();
             this.maNB = maNB;
             LoadData();
-            
         }
         public void LoadData()
         {
-            try
+            DataSet dt = new DataSet();
+            dt = dhDao.CapNhatGHThanhCongNB(maNB); //them manb de hien len theo manb
+            foreach (DataRow row in dt.Tables[0].Rows)
             {
-                conn.Open();
-                string sqlStr = string.Format("select DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat," +
-                    "TrangThaiDonHangNB as TrangThaiDonHang, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
-                    "FROM DonHang, (SELECT MaDonHang, MIN(MaSanPham) AS MaSanPham FROM ChiTietDonHang GROUP BY MaDonHang) Q, SanPham " +
-                    "WHERE DonHang.MaNguoiBan = '{0}' AND DonHang.MaDonHang = Q.MaDonHang AND SanPham.MaSanPham = Q.MaSanPham AND TrangThaiDonHangNB='{1}'", 
-                    maNB, "Giao hàng thành công");
+                DonHang dh = new DonHang(row[0].ToString(), row[1].ToString(), (DateTime)row[2], row[3].ToString());
+                SanPham sp = new SanPham(row[4].ToString(), (byte[])row[5]);
 
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
-                adapter.Fill(dtSet);
-                int y = 0;
-                foreach (DataRow row in dtSet.Tables[0].Rows)
-                {
-                    string maDH = row["MaDonHang"].ToString();
-                    string tongTien = row["TongTien"].ToString();
-                    DateTime NgDat = (DateTime)row["NgDat"];
-                    string TTDH = row["TrangThaiDonHang"].ToString();
-                    string tenSP = row["TenSP"].ToString();
-                    if (row["Hinh"] != DBNull.Value)
-                    {
-                        hinh = (byte[])row["Hinh"];
-                    }
-                    DonHang dh = new DonHang(maDH, tongTien, NgDat, TTDH);
-                    SanPham sp = new SanPham(tenSP, hinh);
+                UCDonHangNB uc = new UCDonHangNB(dh, sp);
 
-                    UCDonHangNB uc = new UCDonHangNB(dh, sp);
-
-                    panelDaGiao.Controls.Add(uc);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                panelDaGiao.Controls.Add(uc);
             }
         }
     }

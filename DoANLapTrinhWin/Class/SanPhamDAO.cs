@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DoANLapTrinhWin
 {
@@ -95,6 +96,14 @@ namespace DoANLapTrinhWin
         public DataSet TatCaSanPham()
         {
             string sqlStr = string.Format("SELECT* FROM SanPham WHERE DangBan = '{0}'", 1);
+            DataSet dt = new DataSet();
+            dt = tt.Load(sqlStr);
+            return dt;
+        }
+        public DataSet SanPhamYeuThich(string maNM)
+        {
+            string sqlStr = string.Format("SELECT SanPham.Hinh as Hinh, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi, " +
+                    "YeuThich.MaSanPham as MaSP FROM YeuThich, SanPham WHERE YeuThich.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'", maNM);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;

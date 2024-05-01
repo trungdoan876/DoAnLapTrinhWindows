@@ -22,11 +22,6 @@ namespace DoANLapTrinhWin
             Global.MoFormCon(new FDanhSachSanPham(maNBan),panelThanSP);
             Global.TaoButton(btnTatCaSP, ref gl.btnOK);
         }
-        private void FSanPham_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnTatCaSP_Click(object sender, EventArgs e)
         {
             Global.MoFormCon(new FDanhSachSanPham(maNBan), panelThanSP);

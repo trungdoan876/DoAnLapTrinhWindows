@@ -17,6 +17,7 @@ namespace DoANLapTrinhWin
     public partial class FDHDangThucHienNM : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        DonHangDAO dhDao = new DonHangDAO();
         string maNM;
         byte[] hinh;
         public FDHDangThucHienNM(string maNM)
@@ -28,94 +29,56 @@ namespace DoANLapTrinhWin
         }
         public void LoadData1()
         {
-            try
+            DataSet ds = new DataSet();
+            ds = dhDao.DatHangThanhCong(maNM);
+            int y = 0;
+            foreach (DataRow row in ds.Tables[0].Rows)
             {
-                conn.Open();
-                // chonj 1 sanr phaamr de hien len uc 
-                string sqlStr = string.Format("select DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat," +
-                    "TrangThaiDonHangNM as TrangThaiDonHangNM, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
-                    "FROM DonHang, (SELECT MaDonHang, MIN(MaSanPham) AS MaSanPham FROM ChiTietDonHang GROUP BY MaDonHang) Q, SanPham " +
-                    "WHERE MaNguoiMua = '{0}' AND DonHang.MaDonHang = Q.MaDonHang AND SanPham.MaSanPham = Q.MaSanPham " +
-                    " AND TrangThaiDonHangNM = N'{1}'", maNM, "Đặt hàng thành công");
+                DonHang dh = new DonHang
+                (
+                    row[0].ToString(),
+                    row[1].ToString(),
+                    (DateTime)row[2],
+                    row[3].ToString()
+                );
+                SanPham sp = new SanPham
+                (
+                    row[4].ToString(),
+                    (byte[])row[5]
+                );
 
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
-                adapter.Fill(dtSet);
-                int y = 0;
-                foreach (DataRow row in dtSet.Tables[0].Rows)
-                {
-                    string maDH = row["MaDonHang"].ToString();
-                    string tongTien = row["TongTien"].ToString();
-                    DateTime NgDat = (DateTime)row["NgDat"];
-                    string TTDH = row["TrangThaiDonHangNM"].ToString();
-                    string tenSP = row["TenSP"].ToString();
-                    if (row["Hinh"] != DBNull.Value)
-                    {
-                        hinh = (byte[])row["Hinh"];
-                    }
-                    DonHang dh = new DonHang(maDH, tongTien, NgDat, TTDH);
-                    SanPham sp = new SanPham(tenSP, hinh);
+                UCDonHangNM uc = new UCDonHangNM(dh, sp);
 
-                    UCDonHangNM uc = new UCDonHangNM(dh, sp);
-
-                    uc.Location = new Point(0, y);
-                    y = y + uc.Height + uc.Height;
-                    panelDonHang.Controls.Add(uc);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                uc.Location = new Point(0, y);
+                y += uc.Height + 5;
+                panelDonHang.Controls.Add(uc);
             }
         }
         public void LoadData2()
         {
-            try
+            DataSet ds = new DataSet();
+            ds = dhDao.DangGiaoHangNM(maNM);
+            int y = 0;
+            foreach (DataRow row in ds.Tables[0].Rows)
             {
-                conn.Open();
-                // chonj 1 sanr phaamr de hien len uc 
-                string sqlStr = string.Format("select DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat," +
-                    "TrangThaiDonHangNM as TrangThaiDonHangNM, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
-                    "FROM DonHang, (SELECT MaDonHang, MIN(MaSanPham) AS MaSanPham FROM ChiTietDonHang GROUP BY MaDonHang) Q, SanPham " +
-                    "WHERE MaNguoiMua = '{0}' AND DonHang.MaDonHang = Q.MaDonHang AND SanPham.MaSanPham = Q.MaSanPham " +
-                    " AND TrangThaiDonHangNM = N'{1}'", maNM, "Đang giao hàng");
+                DonHang dh = new DonHang
+                (
+                    row[0].ToString(),
+                    row[1].ToString(),
+                    (DateTime)row[2],
+                    row[3].ToString()
+                );
+                SanPham sp = new SanPham
+                (
+                    row[4].ToString(),
+                    (byte[])row[5]
+                );
 
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
-                adapter.Fill(dtSet);
-                int y = 0;
-                foreach (DataRow row in dtSet.Tables[0].Rows)
-                {
-                    string maDH = row["MaDonHang"].ToString();
-                    string tongTien = row["TongTien"].ToString();
-                    DateTime NgDat = (DateTime)row["NgDat"];
-                    string TTDH = row["TrangThaiDonHangNM"].ToString();
-                    string tenSP = row["TenSP"].ToString();
-                    if (row["Hinh"] != DBNull.Value)
-                    {
-                        hinh = (byte[])row["Hinh"];
-                    }
-                    DonHang dh = new DonHang(maDH, tongTien, NgDat, TTDH);
-                    SanPham sp = new SanPham(tenSP, hinh);
+                UCDonHangNM uc = new UCDonHangNM(dh, sp);
 
-                    UCDonHangNM uc = new UCDonHangNM(dh, sp);
-
-                    uc.Location = new Point(0, y);
-                    y = y + uc.Height + uc.Height;
-                    panelDonHang.Controls.Add(uc);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                uc.Location = new Point(0, y);
+                y += uc.Height + 5;
+                panelDonHang.Controls.Add(uc);
             }
         }
     }

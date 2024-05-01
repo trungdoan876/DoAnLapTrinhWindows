@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoANLapTrinhWin.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,7 @@ namespace DoANLapTrinhWin
         byte[] hinh;
         YeuThichDAO ytdao = new YeuThichDAO();
         GioHangDAO ghdao = new GioHangDAO();
+        DanhGiaDAO dgdao = new DanhGiaDAO();
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -75,12 +77,27 @@ namespace DoANLapTrinhWin
                 picHeart.Image = image;
                 //picClick = true;
             }
-            LoadImagesFromDatabase(sp.MaSP);
-            Load();
+            LoadHinh(sp.MaSP);
+            LoadDanhGia();
         }
-        private void Load()
+        private void LoadDanhGia()
         {
-            try
+            //nguoimua: hinh,ten
+            //danh gia: nhanxet,sao
+            DataSet ds = new DataSet();
+            ds = dgdao.HienDanhGia(sp);
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                NguoiMua ngmua = new NguoiMua((byte[])row[0], row[1].ToString());
+                DanhGia dg = new DanhGia(row[2].ToString(), (int)row[3]);
+
+                UCDanhGiaCT uc = new UCDanhGiaCT(ngmua,dg,sp.MaSP);
+                int dodai = 0;
+                dodai += uc.Height;
+                fpanelDanhGia.Controls.Add(uc);
+                fpanelDanhGia.Height = dodai;
+            }
+            /*try
             {
                 //MessageBox.Show(sp.MaSP);
                 conn.Open();
@@ -113,10 +130,10 @@ namespace DoANLapTrinhWin
             finally
             {
                 conn.Close();
-            }
+            }*/
         }
         //hien nhieu hinh
-        private void LoadImagesFromDatabase(string masp)
+        private void LoadHinh(string masp)
         {
             try
             {

@@ -54,9 +54,9 @@ namespace DoANLapTrinhWin
                     row[8].ToString(),
                     row[9].ToString(),
                     row[10].ToString(),
-                    row[11].ToString(),
-                    row[12].ToString(),
                     row[13].ToString(),
+                    row[12].ToString(),
+                    row[14].ToString(),
                     (byte[])row[0]
                 );
                 UCSP ucSP = new UCSP(sp,tenTaiKhoan);

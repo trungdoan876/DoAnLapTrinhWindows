@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoANLapTrinhWin.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,23 +22,25 @@ namespace DoANLapTrinhWin
         private List<byte[]> byteImage = new List<byte[]>();
         private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        NguoiMua ngmua;
+        DanhGia dg;
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
             return System.Drawing.Image.FromStream(ms);
         }
-        public UCDanhGiaCT(string ten, string nx,int sao, byte[] hinh, string masp)
+        public UCDanhGiaCT(NguoiMua ng, DanhGia dg,string masp)
         {
             InitializeComponent();
-            this.ten = ten;
-            this.nx = nx;
-            this.sao = sao;
-            this.hinh = hinh;
+            this.ten = ng.Ten1;
+            this.nx = dg.NhanXet;
+            this.sao = dg.Sao1;
+            this.hinh = ngmua.Hinh;
             this.masp = masp;
-            this.picHinhNM.Image = ByteArrayToImage(hinh);
-            this.lblnhanxet.Text = nx;
-            this.lblTenNM.Text = ten;
-            this.ratingsao.Value = sao;
+            this.picHinhNM.Image = ByteArrayToImage(ng.Hinh);
+            this.lblnhanxet.Text = dg.NhanXet;
+            this.lblTenNM.Text = ngmua.Ten1;
+            this.ratingsao.Value = dg.Sao1;
             LoadImagesFromDatabase(masp);
         }
         private PictureBox CreatePictureBox(System.Drawing.Image image)

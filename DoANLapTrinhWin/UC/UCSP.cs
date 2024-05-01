@@ -43,11 +43,10 @@ namespace DoANLapTrinhWin
             InitializeComponent();
             this.lblMaSP.Text = sp.MaSP;
             this.lblTenSP.Text = sp.TenSP;
-            this.lblGiaBan.Text = "đ" + sp.GiaBan ;
-            this.lblGiaGoc.Text = "đ" + sp.GiaGoc ;
+            this.lblGiaBan.Text =  sp.GiaBan ;
+            this.lblGiaGoc.Text =  sp.GiaGoc ;
             this.lblDiaChi.Text = sp.DiaChi;
             this.picHinh.Image = ByteArrayToImage(sp.Hinh);
-            MessageBox.Show(sp.DiaChi);
         }
         private void UCSP_Click(object sender, EventArgs e)
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoANLapTrinhWin.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,7 @@ namespace DoANLapTrinhWin
     public partial class UCDatHang : UserControl
     {
         SanPham sp;
-        string trangthai;
+        ChiTietDonHang ct;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         byte[] hinh;
         Image ByteArrayToImage(byte[] a)
@@ -33,6 +34,24 @@ namespace DoANLapTrinhWin
             this.lblsoluong.Text = sp.SoLuong;
             this.picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
-
+        public UCDatHang(ChiTietDonHang ct)
+        {
+            InitializeComponent();
+            this.ct = ct;
+            this.lblTenSP.Text = ct.TenSP;
+            this.lblGiaTien.Text = ct.GiaTien;
+            this.lblsoluong.Text = ct.SoLuong;
+            this.picHinh.Image = ByteArrayToImage(ct.Hinh);
+            this.lblthanhtien.Text = TinhTienMoiSanPham(lblsoluong.Text, lblGiaTien.Text);
+            
+        }
+        public string TinhTienMoiSanPham(string soLuong, string giaTien)
+        {
+            int sl = int.Parse(soLuong);
+            decimal giatien = decimal.Parse(giaTien);
+            decimal thanhTien = giatien * sl;
+            return thanhTien.ToString();
+            //uc.lblthanhtien.Text = thanhTien.ToString();
+        }
     }
 }

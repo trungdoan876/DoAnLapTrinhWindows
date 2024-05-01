@@ -64,9 +64,13 @@
     <Compile Include="ButtonTuyChinh.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Class\ChiTietDonHang.cs" />
+    <Compile Include="Class\ChiTietDonHangDAO.cs" />
+    <Compile Include="Class\DanhGia.cs" />
+    <Compile Include="Class\DanhGiaDAO.cs" />
     <Compile Include="DBConnection.cs" />
-    <Compile Include="DonHang.cs" />
-    <Compile Include="DonHangDAO.cs" />
+    <Compile Include="Class\DonHang.cs" />
+    <Compile Include="Class\DonHangDAO.cs" />
     <Compile Include="FCTDonHangNM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,29 +245,29 @@
     <Compile Include="FYeuThich.Designer.cs">
       <DependentUpon>FYeuThich.cs</DependentUpon>
     </Compile>
-    <Compile Include="GioHang.cs" />
-    <Compile Include="GioHangDAO.cs" />
+    <Compile Include="Class\GioHang.cs" />
+    <Compile Include="Class\GioHangDAO.cs" />
     <Compile Include="Global.cs" />
-    <Compile Include="Nguoi.cs" />
-    <Compile Include="NguoiBan.cs" />
-    <Compile Include="NguoiBanDAO.cs" />
-    <Compile Include="NguoiDAO.cs" />
-    <Compile Include="NguoiMua.cs" />
-    <Compile Include="NguoiMuaDAO.cs" />
+    <Compile Include="Class\Nguoi.cs" />
+    <Compile Include="Class\NguoiBan.cs" />
+    <Compile Include="Class\NguoiBanDAO.cs" />
+    <Compile Include="Class\NguoiDAO.cs" />
+    <Compile Include="Class\NguoiMua.cs" />
+    <Compile Include="Class\NguoiMuaDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SanPham.cs" />
-    <Compile Include="SanPhamDAO.cs" />
-    <Compile Include="UCDanhGiaCT.cs">
+    <Compile Include="Class\SanPham.cs" />
+    <Compile Include="Class\SanPhamDAO.cs" />
+    <Compile Include="UC\UCDanhGiaCT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCDanhGiaCT.Designer.cs">
+    <Compile Include="UC\UCDanhGiaCT.Designer.cs">
       <DependentUpon>UCDanhGiaCT.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCDanhGiaNhieuSP.cs">
+    <Compile Include="UC\UCDanhGiaNhieuSP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCDanhGiaNhieuSP.Designer.cs">
+    <Compile Include="UC\UCDanhGiaNhieuSP.Designer.cs">
       <DependentUpon>UCDanhGiaNhieuSP.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCDanhGia.cs">
@@ -332,8 +336,8 @@
     <Compile Include="UC\UCSPBan.Designer.cs">
       <DependentUpon>UCSPBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="YeuThich.cs" />
-    <Compile Include="YeuThichDAO.cs" />
+    <Compile Include="Class\YeuThich.cs" />
+    <Compile Include="Class\YeuThichDAO.cs" />
     <EmbeddedResource Include="FCTDonHangNM.resx">
       <DependentUpon>FCTDonHangNM.cs</DependentUpon>
     </EmbeddedResource>
@@ -430,10 +434,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UCDanhGiaCT.resx">
+    <EmbeddedResource Include="UC\UCDanhGiaCT.resx">
       <DependentUpon>UCDanhGiaCT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCDanhGiaNhieuSP.resx">
+    <EmbeddedResource Include="UC\UCDanhGiaNhieuSP.resx">
       <DependentUpon>UCDanhGiaNhieuSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCDanhGia.resx">

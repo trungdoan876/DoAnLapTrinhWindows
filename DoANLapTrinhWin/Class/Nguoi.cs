@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 
 namespace DoANLapTrinhWin
 {
-    class Nguoi
+    public class Nguoi
     {
         byte[] hinh;
         private string ma;
@@ -32,6 +32,12 @@ namespace DoANLapTrinhWin
         {
             this.ma=ma;
             this.matKhau = matkhau;
+        }
+        //dung cho danh gia
+        public Nguoi(byte[]hinh, string ten)
+        {
+            this.hinh = hinh;
+            this.Ten=ten;
         }
         public Nguoi(byte[] hinh,string ma, string Ten, string SDT, DateTime ngaySinh, string gioiTinh, string CCCD, string diaChi, string eMail)
         {

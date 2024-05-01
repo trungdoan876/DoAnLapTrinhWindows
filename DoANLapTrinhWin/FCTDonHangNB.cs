@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoANLapTrinhWin.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,8 @@ namespace DoANLapTrinhWin
 {
     public partial class FCTDonHangNB : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         DonHangDAO dhDao = new DonHangDAO();
+        ChiTietDonHangDAO ctdhDao = new ChiTietDonHangDAO();
         string maDH;
         byte[] hinh;
         public FCTDonHangNB(string maDH)
@@ -30,51 +31,25 @@ namespace DoANLapTrinhWin
         int y = 0;
         public void LoadData()
         {
-            try
+            ChiTietDonHang ctdh = new ChiTietDonHang(maDH);
+            DataSet dt = new DataSet();
+            dt = ctdhDao.HienChiTietDonHang(ctdh);
+            foreach (DataRow row in dt.Tables[0].Rows)
             {
-                conn.Open();
-                string sqlStr = string.Format("SELECT MaDonHang, SanPham.TenSanPham, ChiTietDonHang.SoLuong AS slmua, ChiTietDonHang.GiaTien AS gtien, SanPham.Hinh " +
-                                "FROM ChiTietDonHang, SanPham " +
-                                "WHERE SanPham.MaSanPham = ChiTietDonHang.MaSanPham AND ChiTietDonHang.MaDonHang = '{0}'", maDH);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
-                adapter.Fill(dtSet);
+                ChiTietDonHang ct = new ChiTietDonHang(
+                    row[0].ToString(),
+                    row[3].ToString(),
+                    row[4].ToString(),
+                    row[2].ToString(),
+                    (byte[])row[5]
+                    );
 
-                foreach (DataRow row in dtSet.Tables[0].Rows)
-                {
-                    string maDH = row["MaDonHang"].ToString();
-                    string tenSP = row["TenSanPham"].ToString();
-                    string giaTien = row["gtien"].ToString();
-                    string soLuong = row["slmua"].ToString();
-
-                    if (row["Hinh"] != DBNull.Value)
-                    {
-                        hinh = (byte[])row["Hinh"];
-                    }
-                    SanPham sp = new SanPham(tenSP, giaTien, soLuong, hinh);
-
-                    UCDatHang uc = new UCDatHang(sp);
-
-                    int sl = int.Parse(soLuong);
-                    decimal giatien = decimal.Parse(giaTien);
-                    decimal thanhTien = giatien * sl;
-                    uc.lblthanhtien.Text = thanhTien.ToString();
-
-                    uc.Location = new Point(0, y);
-                    y += uc.Height += 10;
-                    panelDH.Controls.Add(uc);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                UCDatHang uc = new UCDatHang(ct);
+                uc.Location = new Point(0, y);
+                y += uc.Height += 10;
+                panelDH.Controls.Add(uc);
             }
         }
-
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
             this.Close();

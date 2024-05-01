@@ -162,7 +162,6 @@
             this.Name = "FSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FSanPham";
-            this.Load += new System.EventHandler(this.FSanPham_Load);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
