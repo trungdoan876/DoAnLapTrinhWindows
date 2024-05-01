@@ -35,11 +35,11 @@ namespace DoANLapTrinhWin
             this.ten = ng.Ten1;
             this.nx = dg.NhanXet;
             this.sao = dg.Sao1;
-            this.hinh = ngmua.Hinh;
+            this.hinh = ng.Hinh;
             this.masp = masp;
             this.picHinhNM.Image = ByteArrayToImage(ng.Hinh);
             this.lblnhanxet.Text = dg.NhanXet;
-            this.lblTenNM.Text = ngmua.Ten1;
+            this.lblTenNM.Text = ng.Ten1;
             this.ratingsao.Value = dg.Sao1;
             LoadImagesFromDatabase(masp);
         }
