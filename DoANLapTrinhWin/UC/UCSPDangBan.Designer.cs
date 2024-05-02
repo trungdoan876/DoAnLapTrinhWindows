@@ -35,8 +35,9 @@
             this.picHinh = new System.Windows.Forms.PictureBox();
             this.lblGiaTien = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
-            this.btnGoDangBan = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.GoDangBan = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GoDangBan)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -105,28 +106,23 @@
             this.lblTenSP.TabIndex = 38;
             this.lblTenSP.Text = "tenSP";
             // 
-            // btnGoDangBan
+            // GoDangBan
             // 
-            this.btnGoDangBan.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnGoDangBan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGoDangBan.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnGoDangBan.Image = ((System.Drawing.Image)(resources.GetObject("btnGoDangBan.Image")));
-            this.btnGoDangBan.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnGoDangBan.ImageRotate = 0F;
-            this.btnGoDangBan.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnGoDangBan.Location = new System.Drawing.Point(198, 276);
-            this.btnGoDangBan.Name = "btnGoDangBan";
-            this.btnGoDangBan.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnGoDangBan.Size = new System.Drawing.Size(64, 54);
-            this.btnGoDangBan.TabIndex = 45;
-            this.btnGoDangBan.Click += new System.EventHandler(this.btnGoDangBan_Click_1);
+            this.GoDangBan.Image = ((System.Drawing.Image)(resources.GetObject("GoDangBan.Image")));
+            this.GoDangBan.Location = new System.Drawing.Point(195, 255);
+            this.GoDangBan.Name = "GoDangBan";
+            this.GoDangBan.Size = new System.Drawing.Size(63, 75);
+            this.GoDangBan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GoDangBan.TabIndex = 46;
+            this.GoDangBan.TabStop = false;
+            this.GoDangBan.Click += new System.EventHandler(this.GoDangBan_Click);
             // 
             // UCSPDangBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.btnGoDangBan);
+            this.Controls.Add(this.GoDangBan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMaSP);
@@ -137,6 +133,7 @@
             this.Name = "UCSPDangBan";
             this.Size = new System.Drawing.Size(261, 333);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GoDangBan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,6 +147,6 @@
         public System.Windows.Forms.PictureBox picHinh;
         public System.Windows.Forms.Label lblGiaTien;
         public System.Windows.Forms.Label lblTenSP;
-        private Guna.UI2.WinForms.Guna2ImageButton btnGoDangBan;
+        private System.Windows.Forms.PictureBox GoDangBan;
     }
 }

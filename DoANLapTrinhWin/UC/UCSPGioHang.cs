@@ -30,14 +30,17 @@ namespace DoANLapTrinhWin
             this.lblTenSP.Text = sp.TenSP;
             this.lblGiaTien.Text = "đ" + sp.GiaBan;
             this.lblTinhTrang.Text = sp.TinhTrang;
-            this.lblSoLuong.Text = sp.SoLuong+" san pham san co";
+            this.lblSoLuong.Text = sp.SoLuong+" sản phẩm sẵn có";
             this.lblgia.Text = "đ" + sp.GiaGoc;
             this.lblDiaChi.Text = sp.DiaChi;
-            //xoa chu %
-            string str = sp.TinhTrang.Substring(0, sp.TinhTrang.Length - 1);
-            int tt = int.Parse(str);
-            this.vongtrontt.Value = tt;
+            this.vongtrontt.Value = TinhTinhTrang();
             this.picHinh.Image = ByteArrayToImage(sp.Hinh);
+        }
+        public int TinhTinhTrang()
+        {
+            string str = sp.TinhTrang.Substring(0, sp.TinhTrang.Length - 1); //xoa chu %
+            int tt = int.Parse(str);
+            return tt;
         }
         bool check = false;
         private void checkBoxSP_CheckedChanged(object sender, EventArgs e)

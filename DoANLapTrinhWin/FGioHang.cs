@@ -19,6 +19,7 @@ namespace DoANLapTrinhWin
         string maNM;
         byte[] hinh;
         int tongtien = 0;
+        GioHangDAO ghdao = new GioHangDAO();
         SanPham sp;
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
@@ -29,100 +30,70 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.maNM = tenTK;
-            LoadGioHang(maNM);
+            LoadGioHang();
         }
-        public void LoadGioHang(string maNM)
+        public void LoadGioHang()
         {
-            try
+            DataSet ds = new DataSet();
+            ds = ghdao.HienGioHang(maNM);
+            Dictionary<string, UCTheoNB> dictUCTheoNB = new Dictionary<string, UCTheoNB>();
+            int y = 0;
+            int yc = 0;
+            foreach (DataRow row in ds.Tables[0].Rows)
             {
-                conn.Open();
-                string sqlStr = string.Format("SELECT SanPham.MaNguoiBan as maNB,SanPham.Hinh,SanPham.MaSanPham as MaSP, " +
-                    "SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi, SanPham.SoLuong as SL, GioHang.SoLuong as SLMua, GioHang.TrangThaiSP as TrangThai FROM GioHang, " +
-                    "SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'", maNM);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
-                adapter.Fill(dtSet);
-                int y = 0;
-                int yc = 0;
 
-                Dictionary<string, UCTheoNB> dictUCTheoNB = new Dictionary<string, UCTheoNB>();
+                string maNB = row["maNB"].ToString();
+                UCTheoNB ucnb = new UCTheoNB(maNB);
 
-                foreach (DataRow row in dtSet.Tables[0].Rows)
+                if (dictUCTheoNB.ContainsKey(maNB))
                 {
-
-                    string maNB = row["maNB"].ToString();
-                    string maSP = row["MaSP"].ToString();
-                    string tenSP = row["TenSP"].ToString();
-                    string giaBan = "đ" + row["GiaBan"].ToString();
-                    string giaGoc = "đ" + row["GiaGoc"].ToString();
-                    string tinhTrang = row["TinhTrang"].ToString();
-                    string soLuong = row["SL"].ToString();
-                    string soLuongMua = row["SLMua"].ToString();
-                    string diaChi = row["DiaChi"].ToString();
-                    string trangthai = row["TrangThai"].ToString();
-                    if (row["Hinh"] != DBNull.Value)
-                    {
-                        hinh = (byte[])row["Hinh"];
-                    }
-
-                    UCTheoNB ucnb = new UCTheoNB(maNB);
-
-                    if (dictUCTheoNB.ContainsKey(maNB))
-                    {
-                        ucnb = dictUCTheoNB[maNB];
-                    }
-                    else
-                    {
-                        ucnb = new UCTheoNB(maNB);
-                        ucnb.Location = new Point(0, yc);
-                        yc += ucnb.Height += 5;
-                        panelGioHang.Controls.Add(ucnb);
-                        dictUCTheoNB.Add(maNB, ucnb);
-                    }
-                    sp = new SanPham(tenSP, giaBan, giaGoc, tinhTrang, maSP, soLuong, hinh, diaChi);
-                    UCSPGioHang spgh = new UCSPGioHang(sp);
-
-                    //chinh sua public
-                    spgh.lblTenSP.Text = tenSP;
-                    spgh.lblGiaTien.Text = giaBan;
-                    spgh.lblTinhTrang.Text = tinhTrang;
-                    string str = sp.TinhTrang.Substring(0, sp.TinhTrang.Length - 1);
-                    int tt = int.Parse(str);
-                    spgh.vongtrontt.Value = tt;
-                    spgh.picHinh.Image = ByteArrayToImage(hinh);
-                    spgh.lblSoLuong.Text = soLuong + " sản phẩm sẵn có";
-                    spgh.soluongmuaGH.Value = int.Parse(soLuongMua);
-                    spgh.lblgia.Text = giaGoc;
-                    spgh.lblDiaChi.Text = diaChi;
-                    spgh.Location = new Point(0, y);
-                    y += spgh.Height += 5;
-                    ucnb.panelSP.Controls.Add(spgh);
-
-                    spgh.lblTrangThai.Text = trangthai;
-
-                    if (spgh.lblTrangThai.Text == "True")
-                    {
-                        spgh.checkBoxSP.Checked = true;
-                        string giaban = spgh.lblGiaTien.Text.Substring(1); // Loại bỏ ký tự "đ" ở đầu chuỗi
-                        decimal gb = decimal.Parse(giaban); // Chuyển đổi giá trị của giaban thành kiểu decimal
-                        int tien = (int)(gb * spgh.soluongmuaGH.Value); // Thực hiện phép nhân và chuyển đổi kết quả thành kiểu int
-                        tongtien += tien;
-                        lblTongTien.Text = "đ" + tongtien.ToString() + ".000";
-                    }
+                    ucnb = dictUCTheoNB[maNB];
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                else
+                {
+                    ucnb = new UCTheoNB(maNB);
+                    ucnb.Location = new Point(0, yc);
+                    yc += ucnb.Height += 5;
+                    panelGioHang.Controls.Add(ucnb);
+                    dictUCTheoNB.Add(maNB, ucnb);
+                }
+                string soLuongMua = row["SLMua"].ToString();
+                sp = new SanPham
+                (
+                    row[3].ToString(),
+                    row[4].ToString(),
+                    row[6].ToString(),
+                    row[5].ToString(),
+                    row[2].ToString(),
+                    row[8].ToString(),
+                    (byte[])row[1],
+                    row[7].ToString()
+                );
+
+                UCSPGioHang spgh = new UCSPGioHang(sp);
+
+                //vị trí uc
+                spgh.Location = new Point(0, y);
+                y += spgh.Height += 5;
+                ucnb.panelSP.Controls.Add(spgh);
+
+                spgh.lblTrangThai.Text = row[10].ToString(); //có được chọn để mua hay không
+                spgh.soluongmuaGH.Value = int.Parse(soLuongMua); //số lượng thêm vào giỏ
+
+                lblTongTien.Text = ThanhTien(spgh.lblTrangThai.Text, spgh.lblGiaTien.Text, int.Parse(soLuongMua));
             }
         }
-        private void btnMuaHang_Click_1(object sender, EventArgs e)
+        public string ThanhTien(string TrangThai,string giaTien,int soluongmua)
         {
-            FDatHang fdh = new FDatHang(maNM, sp,tongtien);
+            string giaban = giaTien.Substring(1); // Loại bỏ ký tự "đ" ở đầu chuỗi
+            decimal gb = decimal.Parse(giaban); // Chuyển đổi giá trị của giaban thành kiểu decimal
+            int tien = (int)(gb * soluongmua); // Thực hiện phép nhân và chuyển đổi kết quả thành kiểu int
+            tongtien += tien;
+            return tongtien.ToString();
+        }
+        private void MuaHang_Click(object sender, EventArgs e)
+        {
+            FDatHang fdh = new FDatHang(maNM, sp, tongtien);
             fdh.ShowDialog();
         }
     }

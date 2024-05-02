@@ -35,7 +35,8 @@ namespace DoANLapTrinhWin
             this.lblGiaTien.Text = sp.GiaBan + "VND";
             this.picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
-        private void btnGoDangBan_Click_1(object sender, EventArgs e)
+
+        private void GoDangBan_Click(object sender, EventArgs e)
         {
             SanPham sp = new SanPham(lblMaSP.Text);
             spDAO.GoSanPham(sp);

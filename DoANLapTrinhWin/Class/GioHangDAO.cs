@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,15 @@ namespace DoANLapTrinhWin
         {
             string sqlStr = string.Format("DELETE FROM GioHang WHERE MaSanPham = '{0}'", gh.MaSP);
             tt.ThucThi(sqlStr);
+        }
+        public DataSet HienGioHang(string maNM)
+        {
+            string sqlStr = string.Format("SELECT SanPham.MaNguoiBan as maNB,SanPham.Hinh,SanPham.MaSanPham as MaSP, " +
+                    "SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi, SanPham.SoLuong as SL, GioHang.SoLuong as SLMua, GioHang.TrangThaiSP as TrangThai FROM GioHang, " +
+                    "SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'", maNM);
+            DataSet dt = new DataSet();
+            dt = tt.Load(sqlStr);
+            return dt;
         }
     }
 }
