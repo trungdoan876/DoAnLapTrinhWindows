@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -23,5 +24,12 @@ namespace DoANLapTrinhWin
                 , yt.MaSP, yt.MaNM, yt.MaNB);
             tt.ThucThi(sqlStr);
         }
+/*        public DataSet HienYeuThich()
+        {
+            string sqlStr = "SELECT MaSanPham FROM YeuThich";
+            DataSet ds = new DataSet();
+            ds = tt.Load(sqlStr);
+            return ds;
+        }*/
     }
 }

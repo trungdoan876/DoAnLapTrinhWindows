@@ -59,7 +59,7 @@
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(974, 133);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(974, 158);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
             // ucDanhGia1
@@ -68,7 +68,7 @@
             this.ucDanhGia1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucDanhGia1.Location = new System.Drawing.Point(0, 0);
             this.ucDanhGia1.Name = "ucDanhGia1";
-            this.ucDanhGia1.Size = new System.Drawing.Size(974, 133);
+            this.ucDanhGia1.Size = new System.Drawing.Size(974, 158);
             this.ucDanhGia1.TabIndex = 0;
             // 
             // guna2GradientPanel2
@@ -81,9 +81,9 @@
             this.guna2GradientPanel2.Controls.Add(this.ratingsp);
             this.guna2GradientPanel2.Controls.Add(this.label5);
             this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 133);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 158);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(974, 467);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(974, 451);
             this.guna2GradientPanel2.TabIndex = 1;
             // 
             // guna2PictureBox5

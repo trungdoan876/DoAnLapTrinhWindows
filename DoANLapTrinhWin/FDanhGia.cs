@@ -21,14 +21,7 @@ namespace DoANLapTrinhWin
         string maDH;
         byte[] hinh;
         private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
-        private List<string> maSanPhamList = new List<string>();
-
-        System.Drawing.Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return System.Drawing.Image.FromStream(ms);
-        }
-        
+        private List<string> maSanPhamList = new List<string>(); 
         public FDanhGia(string maDH, DonHang dh)
         {
             InitializeComponent();
@@ -63,7 +56,6 @@ namespace DoANLapTrinhWin
                     maSanPhamList.Add(maSP);
                     UCDanhGiaNhieuSP uc = new UCDanhGiaNhieuSP(sp,dh);
                     fpanelSP.Controls.Add(uc);
-
                 }
             }
             catch (Exception ex)
@@ -104,10 +96,12 @@ namespace DoANLapTrinhWin
                                 double saoGiaoHang = uc.ratinggiaohang.Value;
                                 string danhGia = uc.txtDanhGia.Text;
                                 arrPicture = uc.arrPicture;
-
                                 // Thực hiện chèn dữ liệu vào cơ sở dữ liệu
-                                string sql = string.Format("INSERT INTO DanhGia (MaSanPham, MaNguoiMua, sao, saonguoiban, saogiaohang, nhanxet) " +
-                                                "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', N'{5}')",maSP, maNguoiMua, sao, saoNguoiBan, saoGiaoHang, danhGia);
+                                string sql = string.Format("INSERT INTO DanhGia (MaSanPham, MaNguoiMua, sao, saonguoiban, saogiaohang, nhanxet, ngaydg) " +
+                                "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', N'{5}', '{6}')",
+                                maSP, maNguoiMua, sao, saoNguoiBan, saoGiaoHang, danhGia, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+
+                                //MessageBox.Show(ngay);
                                 SqlCommand cmd = new SqlCommand(sql, conn);
                                 cmd.ExecuteNonQuery();
                                 foreach (System.Drawing.Image image in arrPicture)
@@ -117,7 +111,7 @@ namespace DoANLapTrinhWin
                                         image.Save(ms, image.RawFormat);
                                         byte[] imageBytes = ms.ToArray();
                                         string anh = BitConverter.ToString(imageBytes).Replace("-", "");
-                                        string sql1 = string.Format("INSERT INTO HinhDanhGia (MaNguoiMua,MaSanPham, Hinh) VALUES ('{0}', '{1}', 0x{2})",maNguoiMua, maSP, anh);
+                                        string sql1 = string.Format("INSERT INTO HinhDanhGia (MaNguoiMua,MaSanPham, Hinh,Ngaydg) VALUES ('{0}', '{1}', 0x{2}, '{3}')",maNguoiMua, maSP, anh, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                         SqlCommand cmd1 = new SqlCommand(sql1, conn);
                                         cmd1.ExecuteNonQuery();
                                     }

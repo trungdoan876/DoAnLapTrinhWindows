@@ -34,10 +34,11 @@ namespace DoANLapTrinhWin
             this.matKhau = matkhau;
         }
         //dung cho danh gia
-        public Nguoi(byte[]hinh, string ten)
+        public Nguoi(byte[]hinh, string ten, string ma)
         {
             this.hinh = hinh;
             this.Ten = ten;
+            this.ma = ma;
         }
         //dùng cho đăng kí
         public Nguoi(string ma, string mk,string ten, string sdt,  DateTime ngaySinh,string gt, string cccd, string diachi, byte[]hinh)

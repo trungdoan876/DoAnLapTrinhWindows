@@ -50,11 +50,6 @@ namespace DoANLapTrinhWin
             }
             return ma;
         }
-        Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return Image.FromStream(ms);
-        }
         public FDatHang(string maNM,SanPham sp, int tongtien)
         {
             InitializeComponent();
@@ -78,7 +73,6 @@ namespace DoANLapTrinhWin
                 diachi = row["diachi"].ToString();
             }
         }
-
          public void LoadData()
          {
             DataSet ds = new DataSet();

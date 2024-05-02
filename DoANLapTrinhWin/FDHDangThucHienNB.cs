@@ -26,11 +26,6 @@ namespace DoANLapTrinhWin
             LoadData();
             LoadData2();
         }
-        Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return Image.FromStream(ms);
-        }
         public void LoadData()
         {
             DataSet ds = new DataSet();

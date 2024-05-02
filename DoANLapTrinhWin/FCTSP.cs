@@ -22,18 +22,14 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         YeuThichDAO ytdao = new YeuThichDAO();
         GioHangDAO ghdao = new GioHangDAO();
+        SanPhamDAO spdao = new SanPhamDAO();
         DanhGiaDAO dgdao = new DanhGiaDAO();
         SanPham sp;
+        Global gl = new Global();
         string maSP;
         bool picClick;
         string tenTK;
         byte[] hinh;
-        
-        System.Drawing.Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return System.Drawing.Image.FromStream(ms);
-        }
         public FCTSP()
         {
             InitializeComponent();
@@ -66,24 +62,14 @@ namespace DoANLapTrinhWin
             vongtrontt.Value = tinhTrang();
             this.lblThoigiandasd.Text = sp.ThoiGianDaSuDung;
             this.lblSoLuong.Text = sp.SoLuong + " sản phẩm sẵn có";
-            this.picHinh.Image = ByteArrayToImage(sp.Hinh);
+            this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
         }
         private void LoadPicClick()
         {
             if (picClick == true)
-            {
-                string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timdo.png";
-                System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
-                picHeart.Image = image;
-                // picClick = false;
-            }
+                Global.TimDo(picHeart);
             else
-            {
-                string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timden.png";
-                System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
-                picHeart.Image = image;
-                //picClick = true;
-            }
+                Global.TimDen(picHeart);
         }
         private int tinhTrang()
         {
@@ -99,68 +85,28 @@ namespace DoANLapTrinhWin
             ds = dgdao.HienDanhGia(sp);
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-                NguoiMua ngmua = new NguoiMua((byte[])row[0], row[1].ToString());
-                DanhGia dg = new DanhGia(row[2].ToString(), (int)row[3]);
-
-                UCDanhGiaCT uc = new UCDanhGiaCT(ngmua,dg,sp.MaSP,tenTK);
-                int dodai = 0;
-                //dodai += uc.Height;
+                NguoiMua ngmua = new NguoiMua((byte[])row[0], row[1].ToString(), row[2].ToString());
+                DanhGia dg = new DanhGia(row[3].ToString(), (int)row[4], DateTime.Parse(row[5].ToString()));
+                UCDanhGiaCT uc = new UCDanhGiaCT(ngmua,dg,sp.MaSP);
                 fpanelDanhGia.Controls.Add(uc);
             }
         }
         //hien nhieu hinh
         private void LoadHinh(string masp)
         {
-            try
+            DataSet dt = new DataSet();
+            dt = spdao.LayHinhAnhTheoMaSanPham(masp);
+            foreach (DataRow row in dt.Tables[0].Rows)
             {
-                conn.Open();
-                string sql = "SELECT Hinh FROM HinhAnh WHERE MaSanPham = @id";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@id", masp); // Đặt giá trị id của bạn tại đây
-
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                byte[] imageBytes = (byte[])row["Hinh"];
+                using (MemoryStream mss = new MemoryStream(imageBytes))
                 {
-                    while (reader.Read())
-                    {
-                        byte[] imageBytes = (byte[])reader["Hinh"];
-                        byteImage.Add(imageBytes);
-                    }
-                }
-
-                foreach (byte[] imageBytes in byteImage)
-                {
-                    using (MemoryStream mss = new MemoryStream(imageBytes))
-                    {
-                        System.Drawing.Image image = System.Drawing.Image.FromStream(mss);
-                        PictureBox pic = CreatePictureBox(image);
-                        panelThemNhieuHinh.Controls.Add(pic);
-                    }
+                    System.Drawing.Image image = System.Drawing.Image.FromStream(mss);
+                    PictureBox pic = Global.CreatePictureBox(image,picHinh);
+                    panelThemNhieuHinh.Controls.Add(pic);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-        private PictureBox CreatePictureBox(System.Drawing.Image image)
-        {
-            PictureBox pic = new PictureBox();
-            pic.Size = new Size(100, 100);
-            pic.Dock = DockStyle.Top;
-            pic.Image = image;
-            pic.SizeMode = PictureBoxSizeMode.Zoom;
-            pic.Cursor = Cursors.Hand;
-            pic.Click += PictureBox_Click;
-            return pic;
-        }
-        private void PictureBox_Click(object sender, EventArgs e)
-        {
-            PictureBox ptb = (PictureBox)sender;
-            picHinh.Image = ptb.Image;
+            
         }
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
@@ -194,18 +140,14 @@ namespace DoANLapTrinhWin
             //false la chua them
             if (picClick) //=true dang la tim do
             {
-                string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timden.png";
-                System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
-                picHeart.Image = image;
+                Global.TimDen(picHeart);
                 YeuThich yt = new YeuThich(sp.MaNguoiBan,tenTK,sp.MaSP);
                 ytdao.XoaYeuThich(yt);
             }
             //ban dau la false nhan vao la true chuyen thanh mau do
             else
             {
-                string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timdo.png";
-                System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
-                picHeart.Image = image;
+                Global.TimDo(picHeart);
                 YeuThich yt = new YeuThich(sp.MaNguoiBan, tenTK, sp.MaSP);
                 ytdao.ThemYeuThich(yt);
             }

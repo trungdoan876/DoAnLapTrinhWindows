@@ -179,7 +179,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(1225, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(506, 1486);
+            this.panel1.Size = new System.Drawing.Size(506, 1726);
             this.panel1.TabIndex = 78;
             // 
             // btnMuaNgay
@@ -514,7 +514,7 @@
             this.fpanelDanhGia.AutoScroll = true;
             this.fpanelDanhGia.Location = new System.Drawing.Point(310, 834);
             this.fpanelDanhGia.Name = "fpanelDanhGia";
-            this.fpanelDanhGia.Size = new System.Drawing.Size(912, 652);
+            this.fpanelDanhGia.Size = new System.Drawing.Size(912, 892);
             this.fpanelDanhGia.TabIndex = 289;
             // 
             // label2

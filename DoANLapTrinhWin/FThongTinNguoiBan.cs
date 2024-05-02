@@ -18,21 +18,11 @@ namespace DoANLapTrinhWin
         string maTK;
         byte[] hinh;
         NguoiBanDAO nguoiDao = new NguoiBanDAO();
+        Global gt = new Global();
         public FThongTinNguoiBan(string tenTaiKhoan)
         {
             InitializeComponent();
             this.maTK = tenTaiKhoan;
-        }
-        byte[] ImageToByteArray(Image img)
-        {
-            MemoryStream m = new MemoryStream();
-            img.Save(m, System.Drawing.Imaging.ImageFormat.Png);
-            return m.ToArray();
-        }
-        Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return Image.FromStream(ms);
         }
         private void LoadDuLieu()
         {
@@ -56,7 +46,7 @@ namespace DoANLapTrinhWin
                 {
                     hinh = (byte[])row[10];
                 }
-                picHinh.Image = ByteArrayToImage(hinh);
+                picHinh.Image = Global.ByteArrayToImage(hinh);
             }
         }
         private void FThongTinNguoiBan_Load(object sender, EventArgs e)
@@ -67,16 +57,13 @@ namespace DoANLapTrinhWin
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            NguoiBan nguoiban = new NguoiBan(ImageToByteArray(picHinh.Image), txtMaTaiKhoan.Text, txtHoTen.Text, txtSDT.Text, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, txtEmail.Text, txtMoTa.Text);
+            NguoiBan nguoiban = new NguoiBan(Global.ImageToByteArray(picHinh.Image), txtMaTaiKhoan.Text, txtHoTen.Text, txtSDT.Text, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, txtEmail.Text, txtMoTa.Text);
             nguoiDao.CapNhat(nguoiban);
         }
 
         private void btnThemAnh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog odlgOpenFile = new OpenFileDialog();
-            odlgOpenFile.InitialDirectory = "C:\\";
-            odlgOpenFile.Title = "Open File";
-            odlgOpenFile.Filter = "Image files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            OpenFileDialog odlgOpenFile = Global.CreateOpenFileDialog();
             if (odlgOpenFile.ShowDialog() == DialogResult.OK)
             {
                 picHinh.Image = Image.FromFile(odlgOpenFile.FileName);

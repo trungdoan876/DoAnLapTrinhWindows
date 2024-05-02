@@ -14,10 +14,12 @@ namespace DoANLapTrinhWin.Class
         private int saoNB;
         private int saoGiaoHang;
         private string nhanXet;
-        public DanhGia(string nhanxet, int sao)
+        private DateTime ngaydg;
+        public DanhGia(string nhanxet, int sao, DateTime ngaydg)
         {
             this.nhanXet = nhanxet;
             this.Sao = sao;
+            this.Ngaydg = ngaydg;
         }
 
         public string MaNM { get => maNM; set => maNM = value; }
@@ -26,5 +28,6 @@ namespace DoANLapTrinhWin.Class
         public int SaoNB { get => saoNB; set => saoNB = value; }
         public int SaoGiaoHang { get => saoGiaoHang; set => saoGiaoHang = value; }
         public string NhanXet { get => nhanXet; set => nhanXet = value; }
+        public DateTime Ngaydg { get => ngaydg; set => ngaydg = value; }
     }
 }

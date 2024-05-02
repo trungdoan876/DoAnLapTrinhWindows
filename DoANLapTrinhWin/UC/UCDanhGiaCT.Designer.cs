@@ -33,6 +33,7 @@
             this.lblnhanxet = new System.Windows.Forms.Label();
             this.panelHinh = new System.Windows.Forms.Panel();
             this.picHinhNM = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.dtpNgayDG = new Guna.UI2.WinForms.Guna2DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNM)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,9 +69,9 @@
             // panelHinh
             // 
             this.panelHinh.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelHinh.Location = new System.Drawing.Point(0, 257);
+            this.panelHinh.Location = new System.Drawing.Point(0, 176);
             this.panelHinh.Name = "panelHinh";
-            this.panelHinh.Size = new System.Drawing.Size(782, 110);
+            this.panelHinh.Size = new System.Drawing.Size(782, 129);
             this.panelHinh.TabIndex = 3;
             // 
             // picHinhNM
@@ -84,17 +85,33 @@
             this.picHinhNM.TabIndex = 4;
             this.picHinhNM.TabStop = false;
             // 
+            // dtpNgayDG
+            // 
+            this.dtpNgayDG.BorderRadius = 10;
+            this.dtpNgayDG.Checked = true;
+            this.dtpNgayDG.FillColor = System.Drawing.Color.HotPink;
+            this.dtpNgayDG.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpNgayDG.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpNgayDG.Location = new System.Drawing.Point(505, 15);
+            this.dtpNgayDG.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpNgayDG.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpNgayDG.Name = "dtpNgayDG";
+            this.dtpNgayDG.Size = new System.Drawing.Size(256, 39);
+            this.dtpNgayDG.TabIndex = 5;
+            this.dtpNgayDG.Value = new System.DateTime(2024, 5, 3, 3, 56, 24, 586);
+            // 
             // UCDanhGiaCT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dtpNgayDG);
             this.Controls.Add(this.picHinhNM);
             this.Controls.Add(this.panelHinh);
             this.Controls.Add(this.lblnhanxet);
             this.Controls.Add(this.ratingsao);
             this.Controls.Add(this.lblTenNM);
             this.Name = "UCDanhGiaCT";
-            this.Size = new System.Drawing.Size(782, 367);
+            this.Size = new System.Drawing.Size(782, 305);
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -108,5 +125,6 @@
         private System.Windows.Forms.Label lblnhanxet;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picHinhNM;
         public System.Windows.Forms.Panel panelHinh;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayDG;
     }
 }

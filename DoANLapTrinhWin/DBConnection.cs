@@ -12,6 +12,7 @@ namespace DoANLapTrinhWin
     internal class DBConnection
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        
         public DBConnection() { }
         //load dữ liệu, trả về dataset
         public DataSet Load(string sqlStr)
@@ -34,6 +35,37 @@ namespace DoANLapTrinhWin
             }
             return null;
         }
+        //truyen tham so
+        public DataSet LoadHinh(string sqlStr, params SqlParameter[] param)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+
+                // Thêm các tham số vào câu lệnh SQL
+                if (param != null)
+                {
+                    foreach (SqlParameter p in param)
+                        cmd.Parameters.Add(p);
+                }
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataSet dt = new DataSet();
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
+
         public DataTable DocDuLieu(string sqlStr)
         {
             try

@@ -19,12 +19,7 @@ namespace DoANLapTrinhWin
         string sdt;
         NguoiBanDAO ngdao = new NguoiBanDAO();
         NguoiMuaDAO ngmuadao = new NguoiMuaDAO();
-        byte[] ImageToByteArray(Image img)
-        {
-            MemoryStream ms = new MemoryStream();
-            img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-            return ms.ToArray();
-        }
+        Global gt =new Global();
         public string TaoMaNB()
         {
             string sql = string.Format("select * from NguoiBan");
@@ -76,7 +71,7 @@ namespace DoANLapTrinhWin
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            byte[] b = ImageToByteArray(picHinh.Image);
+            byte[] b = Global.ImageToByteArray(picHinh.Image);
             if (loainguoi == "Bán hàng")
             {
                 string maNB = TaoMaNB();
@@ -92,10 +87,7 @@ namespace DoANLapTrinhWin
         }
         private void btnThemHinh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog odlgOpenFile = new OpenFileDialog();
-            odlgOpenFile.InitialDirectory = "C:\\";
-            odlgOpenFile.Title = "Open File";
-            odlgOpenFile.Filter = "Image files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            OpenFileDialog odlgOpenFile = Global.CreateOpenFileDialog();
             if (odlgOpenFile.ShowDialog() == DialogResult.OK)
             {
                 picHinh.Image = Image.FromFile(odlgOpenFile.FileName);

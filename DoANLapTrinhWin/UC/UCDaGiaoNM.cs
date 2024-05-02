@@ -15,6 +15,7 @@ namespace DoANLapTrinhWin.UC
     {
         SanPham sp;
         DonHang dh;
+        Global gt = new Global();
         public UCDaGiaoNM(SanPham sp, DonHang dh)
         {
             InitializeComponent();
@@ -25,12 +26,7 @@ namespace DoANLapTrinhWin.UC
             //this.lblNgayDatHang.Text = dh.NgayDatHang.ToString();
             this.lblTongTien.Text = dh.TongTien.ToString();
             this.lblTrangThai.Text = dh.TrangThaiDonHangNM.ToString();
-            this.pictureBox1.Image = ByteArrayToImage(sp.Hinh);
-        }
-        Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return Image.FromStream(ms);
+            this.pictureBox1.Image = Global.ByteArrayToImage(sp.Hinh);
         }
 
         private void btnDaNhanHang_Click(object sender, EventArgs e)

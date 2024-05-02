@@ -17,11 +17,6 @@ namespace DoANLapTrinhWin
         string maNB;
         byte[] hinh;
         SanPhamDAO spDao = new SanPhamDAO();
-        Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return Image.FromStream(ms);
-        }
         public FDanhSachSanPham(string maNB)
         {
             InitializeComponent();

@@ -100,6 +100,21 @@ namespace DoANLapTrinhWin
             dt = tt.Load(sqlStr);
             return dt;
         }
+        public DataSet BoLocSanPham(string nganhhang)
+        {
+            string sqlStr = string.Format("SELECT *FROM SanPham WHERE NganhHang = N'{0}' AND DangBan = '{1}'", nganhhang, 1);
+            DataSet dt = new DataSet();
+            dt = tt.Load(sqlStr);
+            return dt;
+        }
+        public DataSet TimKiemSanPham(string timkiem)
+        {
+            string sqlStr = string.Format("SELECT *FROM SanPham WHERE TenSanPham LIKE '%{0}%' AND DangBan = '{1}'", timkiem, 1);
+            DataSet dt = new DataSet();
+            dt = tt.Load(sqlStr);
+            return dt;
+        }
+
         public DataSet SanPhamYeuThich(string maNM)
         {
             string sqlStr = string.Format("SELECT SanPham.Hinh as Hinh, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi, " +
@@ -107,6 +122,14 @@ namespace DoANLapTrinhWin
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
+        }
+        //Lay Hinh 
+        public DataSet LayHinhAnhTheoMaSanPham(string masp)
+        {
+            string sqlStr = "SELECT Hinh FROM HinhAnh WHERE MaSanPham = @id";
+            DataSet ds = new DataSet();
+            ds = tt.LoadHinh(sqlStr, new SqlParameter("@id", masp));
+            return ds;
         }
     }
 }

@@ -21,13 +21,8 @@ namespace DoANLapTrinhWin
         SanPhamDAO spDAO = new SanPhamDAO();
         YeuThichDAO ytdao = new YeuThichDAO();
         GioHangDAO ghdao = new GioHangDAO();
+        Global gl = new Global();
         string tenTK;
-
-        System.Drawing.Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return System.Drawing.Image.FromStream(ms);
-        }
         private void UCSP_Load(object sender, EventArgs e)
         {
 
@@ -46,7 +41,7 @@ namespace DoANLapTrinhWin
             this.lblGiaBan.Text =  sp.GiaBan ;
             this.lblGiaGoc.Text =  sp.GiaGoc ;
             this.lblDiaChi.Text = sp.DiaChi;
-            this.picHinh.Image = ByteArrayToImage(sp.Hinh);
+            this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
         }
         private void UCSP_Click(object sender, EventArgs e)
         {
@@ -62,18 +57,14 @@ namespace DoANLapTrinhWin
             //false la chua them
             if (picClick) //=true dang la tim do
             {
-                string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timden.png";
-                System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
-                picHeart.Image = image;
+                Global.TimDen(picHeart);
                 YeuThich yt = new YeuThich(sp.MaNguoiBan, tenTK, sp.MaSP);
                 ytdao.XoaYeuThich(yt);
             }
             //ban dau la false nhan vao la true chuyen thanh mau do
             else
             {
-                string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timdo.png";
-                System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
-                picHeart.Image = image;
+                Global.TimDo(picHeart);
                 YeuThich yt = new YeuThich(sp.MaNguoiBan, tenTK, sp.MaSP);
                 ytdao.ThemYeuThich(yt);
             }
@@ -105,16 +96,12 @@ namespace DoANLapTrinhWin
                 // Kiểm tra xem sản phẩm hiện tại có trong danh sách yêu thích không
                 if (maSanPhamYeuThich.Contains(sp.MaSP))
                 {
-                    string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timdo.png";
-                    System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
-                    picHeart.Image = image;
+                    Global.TimDo(picHeart);
                     picClick = true;
                 }
                 else
                 {
-                    string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timden.png";
-                    System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
-                    picHeart.Image = image;
+                    Global.TimDen(picHeart);
                     picClick = false;
                 }
             }

@@ -17,15 +17,9 @@ namespace DoANLapTrinhWin
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNM;
-        byte[] hinh;
         int tongtien = 0;
         GioHangDAO ghdao = new GioHangDAO();
         SanPham sp;
-        System.Drawing.Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return System.Drawing.Image.FromStream(ms);
-        }
         public FGioHang(string tenTK)
         {
             InitializeComponent();
@@ -81,7 +75,7 @@ namespace DoANLapTrinhWin
                 spgh.lblTrangThai.Text = row[10].ToString(); //có được chọn để mua hay không
                 spgh.soluongmuaGH.Value = int.Parse(soLuongMua); //số lượng thêm vào giỏ
 
-                lblTongTien.Text = ThanhTien(spgh.lblTrangThai.Text, spgh.lblGiaTien.Text, int.Parse(soLuongMua));
+                lblTongTien.Text = "đ"+ThanhTien(spgh.lblTrangThai.Text, spgh.lblGiaTien.Text, int.Parse(soLuongMua))+".000";
             }
         }
         public string ThanhTien(string TrangThai,string giaTien,int soluongmua)

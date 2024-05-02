@@ -29,7 +29,7 @@ namespace DoANLapTrinhWin
             : base (hinh,ma, Ten, SDT, ngaySinh, gioiTinh, CCCD, diaChi, eMail)
         {
         }
-        public NguoiMua(byte[]hinh,string ten) : base(hinh,ten)
+        public NguoiMua(byte[]hinh,string ten,string ma) : base(hinh,ten,ma)
         { 
         }
     }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,6 +55,82 @@ namespace DoANLapTrinhWin
                 btnOK.FillColor = Color.PowderBlue;
             }
             btnOK = btn;
+        }
+        //Bỏ nhiều hình
+        public static PictureBox CreatePictureBoxNoClickTo(System.Drawing.Image image)
+        {
+            PictureBox pic = new PictureBox();
+            pic.Size = new Size(100, 100);
+            pic.Dock = DockStyle.Left;
+            pic.Image = image;
+            pic.SizeMode = PictureBoxSizeMode.Zoom;
+            pic.Cursor = Cursors.Hand;
+            return pic;
+        }
+        public static PictureBox CreatePictureBoxNoClick(System.Drawing.Image image)
+        {
+            PictureBox pic = new PictureBox();
+            pic.Size = new Size(50, 50);
+            pic.Dock = DockStyle.Left;
+            pic.Image = image;
+            pic.SizeMode = PictureBoxSizeMode.Zoom;
+            pic.Cursor = Cursors.Hand;
+            return pic;
+        }
+        public static PictureBox CreatePictureBox(System.Drawing.Image image, PictureBox picHinh)
+        {
+            PictureBox pic = new PictureBox();
+            pic.Size = new Size(100, 100);
+            pic.Dock = DockStyle.Top;
+            pic.Image = image;
+            pic.SizeMode = PictureBoxSizeMode.Zoom;
+            pic.Cursor = Cursors.Hand;
+            pic.Click += (sender, e) => PictureBox_Click(sender, e, picHinh);
+            return pic;
+        }
+
+        private static void PictureBox_Click(object sender, EventArgs e, PictureBox picHinh)
+        {
+            PictureBox ptb = (PictureBox)sender;
+            picHinh.Image = ptb.Image;
+        }
+        //chuyển từ Hình sang Byte
+        public static byte[] ImageToByteArray(Image img)
+        {
+            using (MemoryStream m = new MemoryStream())
+            {
+                img.Save(m, System.Drawing.Imaging.ImageFormat.Png);
+                return m.ToArray();
+            }
+        }
+        //chuyển Byte thành Hình
+        public static Image ByteArrayToImage(byte[] a)
+        {
+            using (MemoryStream ms = new MemoryStream(a))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+        //thêm hình vào giao diện
+        public static OpenFileDialog CreateOpenFileDialog()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = "C:\\";
+            openFileDialog.Title = "Open File";
+            openFileDialog.Filter = "Image files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            return openFileDialog;
+        }
+        public static void TimDo(PictureBox picHeart)
+        {
+            string imagePath = Application.StartupPath + "\\HinhAnh\\timdo.png";
+            Image image = Image.FromFile(imagePath);
+            picHeart.Image = image;
+        }
+        public static void TimDen(PictureBox picHeart)
+        {
+            string imagePath = Application.StartupPath + "\\HinhAnh\\timden.png";
+            Image image = Image.FromFile(imagePath);
+            picHeart.Image = image;
         }
     }
 }
