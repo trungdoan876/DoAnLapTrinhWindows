@@ -39,6 +39,11 @@ namespace DoANLapTrinhWin
             InitializeComponent(); 
             this.Size = new Size(1100,550); //tao size moi cho form
             //thông tin hiện lên của sản phẩm
+            ThongTin(sp);
+            LoadImagesFromDatabase(txtMaSanPham.Text);
+        }
+        private void ThongTin(SanPham sp)
+        {
             txtMaSanPham.Text = sp.MaSP;
             txtTenSP.Text = sp.TenSP;
             txtGiaBan.Text = sp.GiaBan;
@@ -47,22 +52,23 @@ namespace DoANLapTrinhWin
             txtNganhHang.Text = sp.NganhHang;
             txtMoTa.Text = sp.MoTaSanPham;
             txtTGSD.Text = sp.ThoiGianDaSuDung;
-            //bỏ vô cái %
             lblTinhTrang.Text = sp.TinhTrang;
+            // Cập nhật vị trí mới của Label
+            lblTinhTrang.Left = ViTriTinhTrang();
+            txtDiaChi.Text = sp.DiaChi;
+            txtSoLuonSanCo.Text = sp.SoLuong;
+            picHinh.Image = ByteArrayToImage(sp.Hinh);
+        }
+        private int ViTriTinhTrang()
+        {
             //xóa cái chữ % cuối cùng chuỗi
-            string str = sp.TinhTrang.Substring(0, sp.TinhTrang.Length - 1);
+            string str = lblTinhTrang.Text.Substring(0, lblTinhTrang.Text.Length - 1);
             int tt = int.Parse(str);
             tinhTrang.Value = tt;
             //cho cái label di chuyển theo cái %
             float percent = (float)tt / (float)tinhTrang.Maximum;
             int newPosition = (int)(percent * (tinhTrang.Width - lblTinhTrang.Width)) + tinhTrang.Left;
-            // Cập nhật vị trí mới của Label
-            lblTinhTrang.Left = newPosition;
-
-            txtDiaChi.Text = sp.DiaChi;
-            txtSoLuonSanCo.Text = sp.SoLuong;
-            picHinh.Image = ByteArrayToImage(sp.Hinh);
-            LoadImagesFromDatabase(txtMaSanPham.Text);
+            return newPosition;
         }
         //hien nhieu hinh
         private void LoadImagesFromDatabase(string masp)

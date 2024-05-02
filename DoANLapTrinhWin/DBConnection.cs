@@ -97,5 +97,26 @@ namespace DoANLapTrinhWin
                 conn.Close();
             }
         }
+        public int KetQuaDuyNhat(string sqlStr)
+        {
+            try
+            {
+                // Ket noi
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                int a =(int)cmd.ExecuteScalar();
+                return a;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return 0;
+        }
     }
 }

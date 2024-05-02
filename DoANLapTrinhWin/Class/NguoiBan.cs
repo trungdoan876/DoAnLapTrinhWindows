@@ -12,6 +12,11 @@ namespace DoANLapTrinhWin
      class NguoiBan : Nguoi
     {
         private string moTaShop;
+        //dùng để đăng kí
+        public NguoiBan (string sdt):base(sdt)
+        {
+
+        }
         public NguoiBan(string ma, string mk, string ten, string sdt, DateTime ngaySinh, string gt, string cccd, string diachi, byte[] hinh)
             : base(ma, mk, ten, sdt, ngaySinh, gt, cccd, diachi ,hinh)
         {

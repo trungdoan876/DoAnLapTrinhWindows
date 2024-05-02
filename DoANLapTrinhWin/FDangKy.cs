@@ -18,6 +18,8 @@ namespace DoANLapTrinhWin
         Global gl = new Global();
         private Guna2GradientButton btnOK;
         private string selctecOption = null;
+        NguoiBanDAO ngbandao = new NguoiBanDAO();
+        NguoiMuaDAO ngmuadao = new NguoiMuaDAO();
         public FDangKy()
         {
             InitializeComponent();
@@ -40,6 +42,24 @@ namespace DoANLapTrinhWin
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
+            /*if (selctecOption == "Bán hàng")
+            {
+                NguoiBan ngban = new NguoiBan(this.txtDK.Text);
+                int kt = ngbandao.KiemTraDangKy(ngban);
+                if (kt > 0)
+                    MessageBox.Show("Số điện thoại đã được đăng ký!");
+                else
+                    Global.MoFormCon(new FThongTinDangKy(selctecOption, txtDK.Text), panelDK);
+            }
+            else
+            {
+                NguoiMua ngmua = new NguoiMua(txtDK.Text);
+                int kt = ngbandao.KiemTraDangKy(ngmua);
+                if (kt > 0)
+                    MessageBox.Show("Số điện thoại đã được đăng ký!");
+                else
+                    //Global.MoFormCon(new FThongTinDangKy(selctecOption, txtDK.Text), panelDK);
+            }*/
             try
             {
                 conn.Open();
@@ -73,7 +93,7 @@ namespace DoANLapTrinhWin
             {
                 conn.Close();
             }
-            
+
         }
 
         private void btnBanHang_Click(object sender, EventArgs e)

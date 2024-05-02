@@ -16,6 +16,10 @@ namespace DoANLapTrinhWin
         {
 
         }
+        public NguoiMua (string sdt) :base(sdt)
+        {
+
+        }
         public NguoiMua(string ma, string mk, string ten, string sdt, DateTime ngaySinh, string gt, string cccd, string diachi, byte[] hinh)
             : base(ma, mk, ten, sdt, ngaySinh, gt, cccd, diachi, hinh)
         {

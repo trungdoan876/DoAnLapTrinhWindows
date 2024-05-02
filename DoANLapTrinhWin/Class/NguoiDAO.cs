@@ -83,5 +83,10 @@ namespace DoANLapTrinhWin
                         ng.Ma, ng.MatKhau, ng.Ten1, ng.SDT, ng.NgaySinh, ng.GioiTinh, ng.CCCD, ng.DiaChi, anh);
             tt.ThucThi(sql);
         }
+        public int KiemTraDangKy(Nguoi ng)
+        {
+            string sql = string.Format("Select count(*) from {0} WHERE SDT='{1}'", Table,ng.SDT);
+            return tt.KetQuaDuyNhat(sql);
+        }
     }
 }
