@@ -68,9 +68,9 @@
             // panelHinh
             // 
             this.panelHinh.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelHinh.Location = new System.Drawing.Point(0, 173);
+            this.panelHinh.Location = new System.Drawing.Point(0, 257);
             this.panelHinh.Name = "panelHinh";
-            this.panelHinh.Size = new System.Drawing.Size(951, 110);
+            this.panelHinh.Size = new System.Drawing.Size(782, 110);
             this.panelHinh.TabIndex = 3;
             // 
             // picHinhNM
@@ -94,7 +94,7 @@
             this.Controls.Add(this.ratingsao);
             this.Controls.Add(this.lblTenNM);
             this.Name = "UCDanhGiaCT";
-            this.Size = new System.Drawing.Size(951, 283);
+            this.Size = new System.Drawing.Size(782, 367);
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

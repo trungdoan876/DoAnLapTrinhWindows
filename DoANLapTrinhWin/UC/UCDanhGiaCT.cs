@@ -49,7 +49,6 @@ namespace DoANLapTrinhWin
         private PictureBox CreatePictureBox(System.Drawing.Image image)
         {
             PictureBox pic = new PictureBox();
-            // pic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             pic.Size = new Size(30, 30);
             pic.Dock = DockStyle.Left;
             pic.Image = image;
@@ -68,6 +67,11 @@ namespace DoANLapTrinhWin
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@ngmua", manm);
                 cmd.Parameters.AddWithValue("@id", masp); // Đặt giá trị id của bạn tại đây
+                MessageBox.Show(sql);
+                /*masp = masp.Trim();
+                 string sql = string.Format("SELECT Hinh FROM HinhDanhGia WHERE MaSanPham = '{0}' AND MaNguoiMua = '{1}'",manm,masp);
+                 SqlCommand cmd = new SqlCommand(sql, conn);*/
+                
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {

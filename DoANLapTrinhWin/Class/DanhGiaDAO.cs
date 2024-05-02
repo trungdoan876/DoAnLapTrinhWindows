@@ -10,9 +10,9 @@ namespace DoANLapTrinhWin.Class
 {
     public class DanhGiaDAO
     {
-        //hiện đánh giá lên FCTSP
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         DBConnection tt = new DBConnection();
+        //hiện đánh giá lên FCTSP
         public DataSet HienDanhGia(SanPham sp)
         {
             string sqlStr = string.Format("SELECT NguoiMua.Hinh, NguoiMua.Ten, DanhGia.nhanxet, DanhGia.sao FROM NguoiMua, DanhGia " +

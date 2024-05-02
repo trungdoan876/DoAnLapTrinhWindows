@@ -20,14 +20,15 @@ namespace DoANLapTrinhWin
         private List<byte[]> byteImage = new List<byte[]>();
         private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        YeuThichDAO ytdao = new YeuThichDAO();
+        GioHangDAO ghdao = new GioHangDAO();
+        DanhGiaDAO dgdao = new DanhGiaDAO();
         SanPham sp;
         string maSP;
         bool picClick;
         string tenTK;
         byte[] hinh;
-        YeuThichDAO ytdao = new YeuThichDAO();
-        GioHangDAO ghdao = new GioHangDAO();
-        DanhGiaDAO dgdao = new DanhGiaDAO();
+        
         System.Drawing.Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);
@@ -59,7 +60,7 @@ namespace DoANLapTrinhWin
             int tt = int.Parse(str);
             vongtrontt.Value = tt;
             lblThoigiandasd.Text = sp.ThoiGianDaSuDung;
-            lblSoLuong.Text = sp.SoLuong+" sản phẩm sẵn có";
+            lblSoLuong.Text = sp.SoLuong + " sản phẩm sẵn có";
             picHinh.Image = ByteArrayToImage(sp.Hinh);
 
 
@@ -95,42 +96,7 @@ namespace DoANLapTrinhWin
                 int dodai = 0;
                 //dodai += uc.Height;
                 fpanelDanhGia.Controls.Add(uc);
-                //fpanelDanhGia.Height = dodai;
             }
-            /*try
-            {
-                //MessageBox.Show(sp.MaSP);
-                conn.Open();
-                string sqlStr = string.Format("SELECT NguoiMua.Hinh, NguoiMua.Ten, DanhGia.nhanxet, DanhGia.sao FROM NguoiMua, DanhGia " +
-                    "WHERE NguoiMua.Ma = DanhGia.MaNguoiMua AND DanhGia.MaSanPham ='{0}'", sp.MaSP);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
-                adapter.Fill(dtSet);
-
-                foreach (DataRow row in dtSet.Tables[0].Rows)
-                {
-                    string ten = row["Ten"].ToString();
-                    string nx = row["nhanxet"].ToString();
-                    int sosao = int.Parse(row["sao"].ToString());
-                    if (row["Hinh"] != DBNull.Value)
-                    {
-                        hinh = (byte[])row["Hinh"];
-                    }
-                    UCDanhGiaCT uc = new UCDanhGiaCT(ten, nx, sosao, hinh,sp.MaSP);
-                    int dodai = 0;
-                    dodai += uc.Height; 
-                    fpanelDanhGia.Controls.Add(uc);
-                    fpanelDanhGia.Height = dodai; 
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }*/
         }
         //hien nhieu hinh
         private void LoadHinh(string masp)
@@ -173,7 +139,6 @@ namespace DoANLapTrinhWin
         private PictureBox CreatePictureBox(System.Drawing.Image image)
         {
             PictureBox pic = new PictureBox();
-            // pic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             pic.Size = new Size(100, 100);
             pic.Dock = DockStyle.Top;
             pic.Image = image;
