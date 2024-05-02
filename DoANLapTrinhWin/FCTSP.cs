@@ -45,31 +45,37 @@ namespace DoANLapTrinhWin
             this.sp = sp;
             this.picClick = picClick;
             this.tenTK = tenTK;
-            this.lblRating.Text= DanhGia.Value.ToString();
-            txtMota.Text = sp.MoTaSanPham;
-            lblDiaChi.Text = sp.DiaChi;
-            lblGiaBan.Text = sp.GiaBan;
-            lblGiaGoc.Text = sp.GiaGoc;
-            btnNganhHang.Text = sp.NganhHang;
-            dtpngaydang.Value = sp.NgayDang;
-            lblTenSP.Text = sp.TenSP;
-            lblXuatxu.Text = sp.XuatXu;
-            lbltinhtrang.Text = sp.TinhTrang;
+            LoadThongTin();
+            LoadPicClick();
+            LoadHinh(sp.MaSP);
+            LoadDanhGia();
+        }
+        private void LoadThongTin()
+        {
+            this.lblRating.Text = DanhGia.Value.ToString();
+            this.txtMota.Text = sp.MoTaSanPham;
+            this.lblDiaChi.Text = sp.DiaChi;
+            this.lblGiaBan.Text = sp.GiaBan;
+            this.lblGiaGoc.Text = sp.GiaGoc;
+            this.btnNganhHang.Text = sp.NganhHang;
+            this.dtpngaydang.Value = sp.NgayDang;
+            this.lblTenSP.Text = sp.TenSP;
+            this.lblXuatxu.Text = sp.XuatXu;
+            this.lbltinhtrang.Text = sp.TinhTrang;
             //xoa chu % cuoi cung
-            string str = sp.TinhTrang.Substring(0, sp.TinhTrang.Length - 1);
-            int tt = int.Parse(str);
-            vongtrontt.Value = tt;
-            lblThoigiandasd.Text = sp.ThoiGianDaSuDung;
-            lblSoLuong.Text = sp.SoLuong + " sản phẩm sẵn có";
-            picHinh.Image = ByteArrayToImage(sp.Hinh);
-
-
+            vongtrontt.Value = tinhTrang();
+            this.lblThoigiandasd.Text = sp.ThoiGianDaSuDung;
+            this.lblSoLuong.Text = sp.SoLuong + " sản phẩm sẵn có";
+            this.picHinh.Image = ByteArrayToImage(sp.Hinh);
+        }
+        private void LoadPicClick()
+        {
             if (picClick == true)
             {
                 string imagePath = System.Windows.Forms.Application.StartupPath + "\\HinhAnh\\timdo.png";
                 System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
                 picHeart.Image = image;
-               // picClick = false;
+                // picClick = false;
             }
             else
             {
@@ -78,8 +84,12 @@ namespace DoANLapTrinhWin
                 picHeart.Image = image;
                 //picClick = true;
             }
-            LoadHinh(sp.MaSP);
-            LoadDanhGia();
+        }
+        private int tinhTrang()
+        {
+            string str = sp.TinhTrang.Substring(0, sp.TinhTrang.Length - 1);
+            int tt = int.Parse(str);
+            return tt;
         }
         private void LoadDanhGia()
         {

@@ -26,11 +26,12 @@ namespace DoANLapTrinhWin
         byte[] hinh;
         DateTime ngayhientai = DateTime.Now;
         List<SanPham> listsp = new List<SanPham>();
+        GioHangDAO ghDao = new GioHangDAO();
         
         //tao ma don hang
         public string TaoMaDonHang()
         {
-            string sql = string.Format("select * from DonHang");
+            string sql = string.Format("Select * from DonHang");
             SqlDataAdapter da = new SqlDataAdapter(sql,conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -59,111 +60,69 @@ namespace DoANLapTrinhWin
             InitializeComponent();
             this.Size = new Size(1200, 600);
             this.sp = sp;
-            this.maNM=maNM;
-            this.tongtien=tongtien;
-            lblTongTien.Text = "đ"+ tongtien.ToString()+".000";
-            LoadData();
+            this.maNM = maNM;
+            this.tongtien = tongtien;
+            this.lblTongTien.Text = "đ" + tongtien.ToString() + ".000";
             ThongTin();
+            this.lblTenNguoiNhan.Text = ten;
+            this.lblDiaChi.Text = diachi;
+            LoadData();
         }
         public void ThongTin()
         {
-            try
+            DataSet ds = new DataSet();
+            ds = ghDao.LoadThongTinNguoiMuaTrongGioHang(maNM);
+            foreach (DataRow row in ds.Tables[0].Rows)
             {
-                conn.Open();
-                string sqlStr = string.Format("select GioHang.MaNguoiMua, GioHang.MaSanPham, NguoiMua.Ten as ten, NguoiMua.DiaChi as diachi " +
-                    "FROM GioHang, NguoiMua WHERE GioHang.MaNguoiMua = NguoiMua.Ma AND NguoiMua.Ma = '{0}'", maNM);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
-                adapter.Fill(dtSet);
-                foreach (DataRow row in dtSet.Tables[0].Rows)
-                {
-                    ten = row["ten"].ToString();
-                    diachi = row["diachi"].ToString();
-                    this.lblTenNguoiNhan.Text = ten;
-                    this.lblDiaChi.Text = diachi;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                ten = row["ten"].ToString();
+                diachi = row["diachi"].ToString();
             }
         }
 
          public void LoadData()
-        {
-            try
+         {
+            DataSet ds = new DataSet();
+            ds = ghDao.LoadDatHang(maNM);
+            int yc = 0;
+            int y = 0;
+
+            Dictionary<string, UCTheoNB> dictUCTheoNB = new Dictionary<string, UCTheoNB>();
+
+            foreach (DataRow row in ds.Tables[0].Rows)
             {
-                conn.Open();
-                string sqlStr = string.Format("SELECT * From GioHang WHERE TrangThaiSP = '{0}' " +
-                    "and MaNguoiMua ='{1}'", 1, maNM);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
-                adapter.Fill(dtSet);
-                int yc = 0;
-                int y = 0;
-
-                Dictionary<string, UCTheoNB> dictUCTheoNB = new Dictionary<string, UCTheoNB>();
-
-                foreach (DataRow row in dtSet.Tables[0].Rows)
+                maNB = row["MaNguoiBan"].ToString();
+                UCTheoNB uc;
+                if (!dictUCTheoNB.ContainsKey(maNB))
                 {
-                    maNB = row["MaNguoiBan"].ToString();
-                    string maSP = row["MaSanPham"].ToString();
-                    string tenSP = row["TenSanPham"].ToString();
-                    string giaBan = row["GiaBan"].ToString();
-                    string soLuong = row["SoLuong"].ToString();
-                    if (row["Hinh"] != DBNull.Value)
-                    {
-                        hinh = (byte[])row["Hinh"];
-                    }
-
-                    sp = new SanPham(maNB, maSP, tenSP, giaBan, hinh, soLuong);
-                    listsp.Add(sp);
-
-                    UCTheoNB uc;
-                    if (!dictUCTheoNB.ContainsKey(maNB))
-                    {
-                        uc = new UCTheoNB(maNB);
-                        uc.Location = new Point(0, yc);
-                        yc += uc.Height + 5;
-                        paneldathang.Controls.Add(uc);
-                        dictUCTheoNB.Add(maNB, uc); //them 1 uc theo ma nguoi ban
-                    }
-                    else
-                    {
-                        uc = dictUCTheoNB[maNB];
-                    }
-
-                    //uc thong tin moi san pham
-                    UCDatHang ucdh = new UCDatHang(sp); 
-                    
-                    ucdh.lblTenSP.Text = tenSP;
-                    ucdh.lblGiaTien.Text = giaBan;
-                    ucdh.lblsoluong.Text = soLuong;
-                    ucdh.picHinh.Image = ByteArrayToImage(hinh);
-
-                    //tinh tien
-                    string giaban = giaBan.Substring(1); // Loại bỏ ký tự "đ" ở đầu chuỗi
-                    decimal gb = decimal.Parse(giaban); // Chuyển đổi giá trị của giaban thành kiểu decimal
-                    int tien = (int)(gb * int.Parse(soLuong)); // Thực hiện phép nhân và chuyển đổi kết quả thành kiểu int
-                    ucdh.lblthanhtien.Text = "đ" + tien.ToString()+".000            "; // gán giá trị lên uc
-
-                    //vi tri moi uc
-                    ucdh.Location = new Point(0, y);
-                    y += ucdh.Height += 5;
-                    uc.panelSP.Controls.Add(ucdh);
+                    uc = new UCTheoNB(maNB);
+                    uc.Location = new Point(0, yc);
+                    yc += uc.Height + 5;
+                    paneldathang.Controls.Add(uc);
+                    dictUCTheoNB.Add(maNB, uc); //them 1 uc theo ma nguoi ban
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("" + ex);
-            }
-            finally
-            {
-                conn.Close();
+                else
+                {
+                    uc = dictUCTheoNB[maNB];
+                }
+                string maSP = row["MaSanPham"].ToString();
+                string tenSP = row["TenSanPham"].ToString();
+                string giaBan = row["GiaBan"].ToString();
+                string soLuong = row["SoLuong"].ToString();
+                if (row["Hinh"] != DBNull.Value)
+                {
+                    hinh = (byte[])row["Hinh"];
+                }
+
+                sp = new SanPham(maNB, maSP, tenSP, giaBan, hinh, soLuong);
+                listsp.Add(sp);
+
+                //uc thong tin moi san pham
+                UCDatHang ucdh = new UCDatHang(sp);
+
+                //vi tri moi uc
+                ucdh.Location = new Point(0, y);
+                y += ucdh.Height += 5;
+                uc.panelSP.Controls.Add(ucdh);
             }
         }
         private void btnQuaylai_Click(object sender, EventArgs e)

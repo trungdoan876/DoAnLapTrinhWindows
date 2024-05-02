@@ -54,7 +54,7 @@
             this.lblthanhtien.AutoSize = true;
             this.lblthanhtien.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblthanhtien.ForeColor = System.Drawing.Color.Black;
-            this.lblthanhtien.Location = new System.Drawing.Point(1082, 64);
+            this.lblthanhtien.Location = new System.Drawing.Point(1077, 63);
             this.lblthanhtien.Name = "lblthanhtien";
             this.lblthanhtien.Size = new System.Drawing.Size(19, 25);
             this.lblthanhtien.TabIndex = 96;

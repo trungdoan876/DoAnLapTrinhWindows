@@ -22,7 +22,6 @@ namespace DoANLapTrinhWin
             MemoryStream ms = new MemoryStream(a);
             return Image.FromStream(ms);
         }
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public UCSPGioHang(SanPham sanpham)
         {
             InitializeComponent();
@@ -63,24 +62,8 @@ namespace DoANLapTrinhWin
             soluongmuaGH.Minimum = 1;
             soluongmuaGH.Maximum = int.Parse(sp.SoLuong);
             slmua = soluongmuaGH.Value.ToString();
-            try
-            {
-                // Ket noi
-                conn.Open();
-
-                string sqlStr = string.Format("UPDATE GioHang SET SoLuong = '{0}' WHERE MaSanPham = '{1}'", slmua, sp.MaSP);
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                cmd.ExecuteNonQuery();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("them that bai" + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            SanPham spham = new SanPham(sp.MaSP);
+            ghDAO.CapNhatSoLuong(spham,slmua);
         }
 
         private void btnXoaKhoiGioHang_Click_1(object sender, EventArgs e)

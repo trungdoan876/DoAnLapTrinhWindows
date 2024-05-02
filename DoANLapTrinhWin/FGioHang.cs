@@ -32,6 +32,7 @@ namespace DoANLapTrinhWin
             this.maNM = tenTK;
             LoadGioHang();
         }
+        //đoạn này mình thấy mình làm vẫn chưa đẹp lắm ý
         public void LoadGioHang()
         {
             DataSet ds = new DataSet();

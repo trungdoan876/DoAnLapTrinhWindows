@@ -28,10 +28,10 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.sp = sp;
-            
             this.lblTenSP.Text = sp.TenSP;
             this.lblGiaTien.Text = sp.GiaBan;
             this.lblsoluong.Text = sp.SoLuong;
+            this.lblthanhtien.Text = TinhTienMoiSanPham(lblsoluong.Text, lblGiaTien.Text);
             this.picHinh.Image = ByteArrayToImage(sp.Hinh);
         }
         public UCDatHang(ChiTietDonHang ct)
@@ -42,16 +42,16 @@ namespace DoANLapTrinhWin
             this.lblGiaTien.Text = ct.GiaTien;
             this.lblsoluong.Text = ct.SoLuong;
             this.picHinh.Image = ByteArrayToImage(ct.Hinh);
-            this.lblthanhtien.Text = TinhTienMoiSanPham(lblsoluong.Text, lblGiaTien.Text);
-            
+            this.lblthanhtien.Text = TinhTienMoiSanPham(lblsoluong.Text, lblGiaTien.Text);  
         }
         public string TinhTienMoiSanPham(string soLuong, string giaTien)
         {
             int sl = int.Parse(soLuong);
             decimal giatien = decimal.Parse(giaTien);
+            MessageBox.Show(giaTien);
             decimal thanhTien = giatien * sl;
+            MessageBox.Show(thanhTien.ToString());
             return thanhTien.ToString();
-            //uc.lblthanhtien.Text = thanhTien.ToString();
         }
     }
 }
