@@ -37,7 +37,20 @@ namespace DoANLapTrinhWin
         public Nguoi(byte[]hinh, string ten)
         {
             this.hinh = hinh;
-            this.Ten=ten;
+            this.Ten = ten;
+        }
+        //dùng cho đăng kí
+        public Nguoi(string ma, string mk,string ten, string sdt,  DateTime ngaySinh,string gt, string cccd, string diachi, byte[]hinh)
+        {
+            this.ma = ma;
+            this.matKhau = mk;
+            this.Ten = ten;
+            this.sDT = sdt;
+            this.ngaySinh = ngaySinh;
+            this.gioiTinh = gt;
+            this.cccd = cccd;
+            this.diaChi = diachi;
+            this.hinh=hinh;
         }
         public Nguoi(byte[] hinh,string ma, string Ten, string SDT, DateTime ngaySinh, string gioiTinh, string CCCD, string diaChi, string eMail)
         {

@@ -247,7 +247,7 @@
     </Compile>
     <Compile Include="Class\GioHang.cs" />
     <Compile Include="Class\GioHangDAO.cs" />
-    <Compile Include="Global.cs" />
+    <Compile Include="Class\Global.cs" />
     <Compile Include="Class\Nguoi.cs" />
     <Compile Include="Class\NguoiBan.cs" />
     <Compile Include="Class\NguoiBanDAO.cs" />

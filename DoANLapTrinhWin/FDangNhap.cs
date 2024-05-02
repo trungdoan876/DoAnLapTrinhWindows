@@ -19,7 +19,8 @@ namespace DoANLapTrinhWin
     {
         private Guna2GradientButton btnOK;
         private string selctecOption = null;
-        NguoiDAO ngdao = new NguoiDAO();
+        NguoiBanDAO ngbandao = new NguoiBanDAO();
+        NguoiMuaDAO ngmuadao = new NguoiMuaDAO();
         public FDangNhap()
         {
             InitializeComponent();
@@ -71,9 +72,9 @@ namespace DoANLapTrinhWin
             string matKhau = txtMatKhau.Text;
             if (selctecOption == "Mua hàng")
             {
-                Nguoi ng = new Nguoi(tenTK,matKhau);
+                NguoiMua ng = new NguoiMua(tenTK,matKhau);
                 DataTable dt = new DataTable();
-                dt = ngdao.DangNhapNM(ng);
+                dt = ngmuadao.DangNhap(ng);
                 if (dt.Rows.Count > 0)
                 {
                     this.Hide(); //an form 1
@@ -91,9 +92,9 @@ namespace DoANLapTrinhWin
             }
             else
             {
-                Nguoi ng = new Nguoi(tenTK, matKhau);
+                NguoiBan ng = new NguoiBan(tenTK, matKhau);
                 DataTable dt = new DataTable();
-                dt = ngdao.DangNhapNB(ng);
+                dt = ngbandao.DangNhap(ng);
                 if (dt.Rows.Count > 0)
                 {
                     this.Hide(); //an form 1

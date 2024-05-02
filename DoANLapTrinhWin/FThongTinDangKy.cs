@@ -17,6 +17,14 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string loainguoi;
         string sdt;
+        NguoiBanDAO ngdao = new NguoiBanDAO();
+        NguoiMuaDAO ngmuadao = new NguoiMuaDAO();
+        byte[] ImageToByteArray(Image img)
+        {
+            MemoryStream ms = new MemoryStream();
+            img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            return ms.ToArray();
+        }
         public string TaoMaNB()
         {
             string sql = string.Format("select * from NguoiBan");
@@ -68,42 +76,19 @@ namespace DoANLapTrinhWin
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            try
+            byte[] b = ImageToByteArray(picHinh.Image);
+            if (loainguoi == "Bán hàng")
             {
-                conn.Open();
-                if (loainguoi == "Bán hàng")
-                {
-                    byte[] b = ImageToByteArray(picHinh.Image);
-                    string maNB = TaoMaNB();
-                    string sql = string.Format("INSERT INTO NguoiBan(Ma, MatKhau, Ten, SDT, NgaySinh, GioiTinh, CCCD, DiaChi, Hinh) " +
-                        "VALUES('{0}','{1}',N'{2}','{3}','{4}',N'{5}','{6}',N'{7}',0x{8})",
-                        maNB,txtMK.Text,txtHoTen.Text,sdt,dtpNgSinh.Value,txtGioiTinh.Text,txtCCCD.Text,txtDiaChi.Text,b);
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    if (cmd.ExecuteNonQuery() > 0)
-                        MessageBox.Show("Tao tai khoan thanh cong");
-                    this.Close();
-                }
-                else if (loainguoi == "Mua hàng")
-                {
-                    byte[] b = ImageToByteArray(picHinh.Image);
-                    string maNM = TaoMaNM();
-                    string sql = string.Format("INSERT INTO NguoiMua(Ma, MatKhau, Ten, SDT, NgaySinh, GioiTinh, CCCD, DiaChi, Hinh) " +
-                        "VALUES('{0}','{1}',N'{2}','{3}','{4}',N'{5}','{6}',N'{7}',0x{8})",
-                        maNM, txtMK.Text, txtHoTen.Text, sdt, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text,b);
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    if (cmd.ExecuteNonQuery() > 0)
-                        MessageBox.Show("Tao tai khoan thanh cong");
-                    this.Close();
-                }    
+                string maNB = TaoMaNB();
+                NguoiBan ngban = new NguoiBan(maNB, txtMK.Text, txtHoTen.Text, sdt, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, b);
+                ngdao.DangKy(ngban);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+                string maNM = TaoMaNM();
+                NguoiMua ng = new NguoiMua(maNM, txtMK.Text, txtHoTen.Text, sdt, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, b);
+                ngmuadao.DangKy(ng);
+            } 
         }
         private void btnThemHinh_Click(object sender, EventArgs e)
         {
@@ -115,14 +100,7 @@ namespace DoANLapTrinhWin
             {
                 picHinh.Image = Image.FromFile(odlgOpenFile.FileName);
                 this.Text = odlgOpenFile.FileName;
-
             }
-        }
-        byte[] ImageToByteArray(Image img)
-        {
-            MemoryStream m = new MemoryStream();
-            img.Save(m, System.Drawing.Imaging.ImageFormat.Png);
-            return m.ToArray();
         }
     }
 }
