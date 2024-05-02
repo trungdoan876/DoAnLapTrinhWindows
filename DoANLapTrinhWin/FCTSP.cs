@@ -91,11 +91,11 @@ namespace DoANLapTrinhWin
                 NguoiMua ngmua = new NguoiMua((byte[])row[0], row[1].ToString());
                 DanhGia dg = new DanhGia(row[2].ToString(), (int)row[3]);
 
-                UCDanhGiaCT uc = new UCDanhGiaCT(ngmua,dg,sp.MaSP);
+                UCDanhGiaCT uc = new UCDanhGiaCT(ngmua,dg,sp.MaSP,tenTK);
                 int dodai = 0;
-                dodai += uc.Height;
+                //dodai += uc.Height;
                 fpanelDanhGia.Controls.Add(uc);
-                fpanelDanhGia.Height = dodai;
+                //fpanelDanhGia.Height = dodai;
             }
             /*try
             {

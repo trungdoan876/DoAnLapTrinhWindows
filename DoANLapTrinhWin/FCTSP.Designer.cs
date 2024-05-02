@@ -511,9 +511,10 @@
             // 
             // fpanelDanhGia
             // 
+            this.fpanelDanhGia.AutoScroll = true;
             this.fpanelDanhGia.Location = new System.Drawing.Point(310, 834);
             this.fpanelDanhGia.Name = "fpanelDanhGia";
-            this.fpanelDanhGia.Size = new System.Drawing.Size(912, 218);
+            this.fpanelDanhGia.Size = new System.Drawing.Size(912, 230);
             this.fpanelDanhGia.TabIndex = 289;
             // 
             // label2

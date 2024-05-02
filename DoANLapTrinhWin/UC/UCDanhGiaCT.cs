@@ -19,6 +19,7 @@ namespace DoANLapTrinhWin
         int sao;
         byte[] hinh;
         string masp;
+        string manm;
         private List<byte[]> byteImage = new List<byte[]>();
         private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
@@ -29,8 +30,9 @@ namespace DoANLapTrinhWin
             MemoryStream ms = new MemoryStream(a);
             return System.Drawing.Image.FromStream(ms);
         }
-        public UCDanhGiaCT(NguoiMua ng, DanhGia dg,string masp)
+        public UCDanhGiaCT(NguoiMua ng, DanhGia dg,string masp, string manm)
         {
+            MessageBox.Show(manm);
             InitializeComponent();
             this.ten = ng.Ten1;
             this.nx = dg.NhanXet;
@@ -41,7 +43,8 @@ namespace DoANLapTrinhWin
             this.lblnhanxet.Text = dg.NhanXet;
             this.lblTenNM.Text = ng.Ten1;
             this.ratingsao.Value = dg.Sao1;
-            LoadImagesFromDatabase(masp);
+            LoadImagesFromDatabase(masp, manm);
+            this.manm = manm;
         }
         private PictureBox CreatePictureBox(System.Drawing.Image image)
         {
@@ -56,13 +59,14 @@ namespace DoANLapTrinhWin
             return pic;
         }
 
-        private void LoadImagesFromDatabase(string masp)
+        private void LoadImagesFromDatabase(string masp,string manm)
         {
             try
             {
                 conn.Open();
-                string sql = "SELECT Hinh FROM HinhDanhGia WHERE MaSanPham = @id";
+                string sql = "SELECT Hinh FROM HinhDanhGia WHERE MaSanPham = @id AND MaNguoiMua = @ngmua";
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@ngmua", manm);
                 cmd.Parameters.AddWithValue("@id", masp); // Đặt giá trị id của bạn tại đây
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
