@@ -53,44 +53,6 @@ namespace DoANLapTrinhWin
             }
             btnOK = btn;
         }
-        //Bỏ nhiều hình
-        public static PictureBox CreatePictureBoxNoClickTo(System.Drawing.Image image)
-        {
-            PictureBox pic = new PictureBox();
-            pic.Size = new Size(100, 100);
-            pic.Dock = DockStyle.Left;
-            pic.Image = image;
-            pic.SizeMode = PictureBoxSizeMode.Zoom;
-            pic.Cursor = Cursors.Hand;
-            return pic;
-        }
-        public static PictureBox CreatePictureBoxNoClick(System.Drawing.Image image)
-        {
-            PictureBox pic = new PictureBox();
-            pic.Size = new Size(50, 50);
-            pic.Dock = DockStyle.Left;
-            pic.Image = image;
-            pic.SizeMode = PictureBoxSizeMode.Zoom;
-            pic.Cursor = Cursors.Hand;
-            return pic;
-        }
-        public static PictureBox CreatePictureBox(System.Drawing.Image image, PictureBox picHinh)
-        {
-            PictureBox pic = new PictureBox();
-            pic.Size = new Size(100, 100);
-            pic.Dock = DockStyle.Top;
-            pic.Image = image;
-            pic.SizeMode = PictureBoxSizeMode.Zoom;
-            pic.Cursor = Cursors.Hand;
-            pic.Click += (sender, e) => PictureBox_Click(sender, e, picHinh);
-            return pic;
-        }
-
-        private static void PictureBox_Click(object sender, EventArgs e, PictureBox picHinh)
-        {
-            PictureBox ptb = (PictureBox)sender;
-            picHinh.Image = ptb.Image;
-        }
         //chuyển từ Hình sang Byte
         public static byte[] ImageToByteArray(Image img)
         {
@@ -108,8 +70,45 @@ namespace DoANLapTrinhWin
                 return Image.FromStream(ms);
             }
         }
+        //Bỏ nhiều hình
+        public static PictureBox CreatePictureBoxNoClickTo(Image image) // khong click to
+        {
+            PictureBox pic = new PictureBox();
+            pic.Size = new Size(100, 100);
+            pic.Dock = DockStyle.Left;
+            pic.Image = image;
+            pic.SizeMode = PictureBoxSizeMode.Zoom;
+            pic.Cursor = Cursors.Hand;
+            return pic;
+        }
+        public static PictureBox CreatePictureBoxNoClick(Image image) //khong click
+        {
+            PictureBox pic = new PictureBox();
+            pic.Size = new Size(50, 50);
+            pic.Dock = DockStyle.Left;
+            pic.Image = image;
+            pic.SizeMode = PictureBoxSizeMode.Zoom;
+            pic.Cursor = Cursors.Hand;
+            return pic;
+        }
+        public static PictureBox CreatePictureBox(System.Drawing.Image image, PictureBox picHinh) // co click
+        {
+            PictureBox pic = new PictureBox();
+            pic.Size = new Size(100, 100);
+            pic.Dock = DockStyle.Top;
+            pic.Image = image;
+            pic.SizeMode = PictureBoxSizeMode.Zoom;
+            pic.Cursor = Cursors.Hand;
+            pic.Click += (sender, e) => PictureBox_Click(sender, e, picHinh);
+            return pic;
+        }
+        private static void PictureBox_Click(object sender, EventArgs e, PictureBox picHinh)
+        {
+            PictureBox ptb = (PictureBox)sender;
+            picHinh.Image = ptb.Image;
+        }
         //thêm hình vào giao diện
-        public static Image CreateOpenFileDialog(PictureBox picHinh)
+        public static Image CreateOpenFileDialog(PictureBox picHinh) //bo 1 hinh vai picturebox
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = "C:\\";
@@ -119,7 +118,8 @@ namespace DoANLapTrinhWin
                 picHinh.Image = Image.FromFile(openFileDialog.FileName);
             return picHinh.Image;
         }
-        public static List<Image> CreateOpenFileDialogMore(PictureBox picHinh,Panel panel, List<Image> arrPicture)
+        //bo nhieu hinh vao panel khong click
+        public static List<Image> CreateOpenFileDialogMoreNoClick(Panel panel, List<Image> arrPicture)
         {
             OpenFileDialog odlgOpenFile = new OpenFileDialog();
             odlgOpenFile.InitialDirectory = "C:\\";
@@ -128,7 +128,23 @@ namespace DoANLapTrinhWin
             if (odlgOpenFile.ShowDialog() == DialogResult.OK)
             {
                 Image image = Image.FromFile(odlgOpenFile.FileName);
-                PictureBox pic = Global.CreatePictureBox(image, picHinh);
+                PictureBox pic = CreatePictureBoxNoClick(image);
+                panel.Controls.Add(pic);
+                arrPicture.Add(image);
+            }
+            return arrPicture;
+        }
+        //bo nhieu hinh (to) vao panel khong click
+        public static List<Image> CreateOpenFileDialogMoreNoClickTo(Panel panel, List<Image> arrPicture)
+        {
+            OpenFileDialog odlgOpenFile = new OpenFileDialog();
+            odlgOpenFile.InitialDirectory = "C:\\";
+            odlgOpenFile.Title = "Open File";
+            odlgOpenFile.Filter = "Image files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            if (odlgOpenFile.ShowDialog() == DialogResult.OK)
+            {
+                Image image = Image.FromFile(odlgOpenFile.FileName);
+                PictureBox pic = CreatePictureBoxNoClickTo(image);
                 panel.Controls.Add(pic);
                 arrPicture.Add(image);
             }

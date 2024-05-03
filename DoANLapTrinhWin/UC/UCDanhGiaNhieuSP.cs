@@ -17,7 +17,7 @@ namespace DoANLapTrinhWin
     {
         SanPham sp;
         DonHang dh;
-        public List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
+        public List<Image> arrPicture = new List<Image>();
         Global gt = new Global();
         public UCDanhGiaNhieuSP(SanPham sp,DonHang dh)
         {
@@ -30,7 +30,7 @@ namespace DoANLapTrinhWin
         }
         private void picThemHinh_Click(object sender, EventArgs e)
         {
-            picThemHinh.Image = Global.CreateOpenFileDialog(picThemHinh);
+            arrPicture = Global.CreateOpenFileDialogMoreNoClickTo(panelThemNhieuHinh,arrPicture);
         }
 
         private void ratingsp_ValueChanged_1(object sender, EventArgs e)
