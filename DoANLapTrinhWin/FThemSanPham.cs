@@ -15,7 +15,7 @@ namespace DoANLapTrinhWin
 {
     public partial class FThemSanPham : Form
     {
-        private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();  
+        private List<Image> arrPicture = new List<Image>();  
         SanPhamDAO spDAO = new SanPhamDAO();
         Global gl = new Global(); 
         public FThemSanPham(string maNB)
@@ -55,12 +55,7 @@ namespace DoANLapTrinhWin
 
         private void btnThemHinh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog odlgOpenFile = Global.CreateOpenFileDialog();
-            if (odlgOpenFile.ShowDialog() == DialogResult.OK)
-            {
-                picHinh.Image = Image.FromFile(odlgOpenFile.FileName);
-                this.Text = odlgOpenFile.FileName;
-            }
+            picHinh.Image = Global.CreateOpenFileDialog(picHinh);
         }
 
         private void btnQuaylai_Click(object sender, EventArgs e)
@@ -69,14 +64,7 @@ namespace DoANLapTrinhWin
         }
         private void btnThemNhieuHinh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog odlgOpenFile = Global.CreateOpenFileDialog();
-            if (odlgOpenFile.ShowDialog() == DialogResult.OK)
-            {
-                Image image = Image.FromFile(odlgOpenFile.FileName);
-                PictureBox pic = Global.CreatePictureBox(image,picHinh);
-                panelThemNhieuHinh.Controls.Add(pic);
-                arrPicture.Add(image);
-            }
+            arrPicture = Global.CreateOpenFileDialogMore(picHinh,panelThemNhieuHinh,arrPicture);
         }
     }
 }

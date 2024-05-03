@@ -49,14 +49,7 @@ namespace DoANLapTrinhWin
         }
         private void picThemHinh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog odlgOpenFile = Global.CreateOpenFileDialog();
-            if (odlgOpenFile.ShowDialog() == DialogResult.OK)
-            {
-                System.Drawing.Image image = System.Drawing.Image.FromFile(odlgOpenFile.FileName);
-                PictureBox pic = Global.CreatePictureBoxNoClickTo(image);
-                panelThemNhieuHinh.Controls.Add(pic);
-                arrPicture.Add(image);
-            }
+            picThemHinh.Image = Global.CreateOpenFileDialog(picThemHinh);
         }
 
         private void ratingsp_ValueChanged_1(object sender, EventArgs e)

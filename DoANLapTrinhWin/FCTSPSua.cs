@@ -115,23 +115,11 @@ namespace DoANLapTrinhWin
         //thêm hình ảnh
         private void btnThemHinh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog odlgOpenFile = Global.CreateOpenFileDialog();
-            if (odlgOpenFile.ShowDialog() == DialogResult.OK)
-            {
-                picHinh.Image = Image.FromFile(odlgOpenFile.FileName);
-                this.Text = odlgOpenFile.FileName;
-            }
+            picHinh.Image = Global.CreateOpenFileDialog(picHinh);
         }
         private void btnThemNhieuHinh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog odlgOpenFile = Global.CreateOpenFileDialog();
-            if (odlgOpenFile.ShowDialog() == DialogResult.OK)
-            {
-                System.Drawing.Image image = System.Drawing.Image.FromFile(odlgOpenFile.FileName);
-                PictureBox pic = Global.CreatePictureBox(image,picHinh);
-                panelThemNhieuHinh.Controls.Add(pic);
-                arrPicture.Add(image);
-            }
+            arrPicture = Global.CreateOpenFileDialogMore(picHinh, panelThemNhieuHinh, arrPicture);  
         }
     }
 }

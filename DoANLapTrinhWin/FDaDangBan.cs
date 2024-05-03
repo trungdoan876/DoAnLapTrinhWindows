@@ -13,7 +13,6 @@ namespace DoANLapTrinhWin
 {
     public partial class FDaDangBan : Form
     {
-        byte[] hinh;
         NguoiBan ngBan;
         SanPhamDAO spDao = new SanPhamDAO();
         public FDaDangBan(NguoiBan ng)

@@ -17,7 +17,6 @@ namespace DoANLapTrinhWin
     {
         DonHangDAO dhDao = new DonHangDAO();
         string maNB;
-        byte[] hinh;
         public FDHDangThucHienNB(string maNB)
         {
             InitializeComponent();

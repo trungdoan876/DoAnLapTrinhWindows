@@ -14,7 +14,6 @@ namespace DoANLapTrinhWin
     public partial class FDaGiaoNB : Form
     {
         DonHangDAO dhDao = new DonHangDAO();
-        byte[] hinh;
         string maNB;
         public FDaGiaoNB(string maNB)
         {

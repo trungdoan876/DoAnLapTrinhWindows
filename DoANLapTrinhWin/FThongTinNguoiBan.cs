@@ -62,12 +62,7 @@ namespace DoANLapTrinhWin
 
         private void btnThemAnh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog odlgOpenFile = Global.CreateOpenFileDialog();
-            if (odlgOpenFile.ShowDialog() == DialogResult.OK)
-            {
-                picHinh.Image = Image.FromFile(odlgOpenFile.FileName);
-                this.Text = odlgOpenFile.FileName;
-            }
+            picHinh.Image = Global.CreateOpenFileDialog(picHinh);
         }
     }
 }

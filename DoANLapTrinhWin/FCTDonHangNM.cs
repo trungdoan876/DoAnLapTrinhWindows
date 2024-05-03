@@ -18,7 +18,6 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         ChiTietDonHangDAO ctdhDao = new ChiTietDonHangDAO();
         string maDH;
-        byte[] hinh;
         public FCTDonHangNM(string madh)
         {
             InitializeComponent();

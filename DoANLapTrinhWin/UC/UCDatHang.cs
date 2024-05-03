@@ -18,7 +18,6 @@ namespace DoANLapTrinhWin
         SanPham sp;
         ChiTietDonHang ct;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        byte[] hinh;
         Image ByteArrayToImage(byte[] a)
         {
             MemoryStream ms = new MemoryStream(a);

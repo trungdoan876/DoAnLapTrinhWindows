@@ -16,7 +16,6 @@ namespace DoANLapTrinhWin
     public partial class FDanhGia : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        SanPham sp;
         DonHang dh;
         string maDH;
         byte[] hinh;

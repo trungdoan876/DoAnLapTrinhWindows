@@ -109,14 +109,32 @@ namespace DoANLapTrinhWin
             }
         }
         //thêm hình vào giao diện
-        public static OpenFileDialog CreateOpenFileDialog()
+        public static Image CreateOpenFileDialog(PictureBox picHinh)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = "C:\\";
             openFileDialog.Title = "Open File";
             openFileDialog.Filter = "Image files (*.jpg)|*.jpg|All files (*.*)|*.*";
-            return openFileDialog;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+                picHinh.Image = Image.FromFile(openFileDialog.FileName);
+            return picHinh.Image;
         }
+        public static List<Image> CreateOpenFileDialogMore(PictureBox picHinh,Panel panel, List<Image> arrPicture)
+        {
+            OpenFileDialog odlgOpenFile = new OpenFileDialog();
+            odlgOpenFile.InitialDirectory = "C:\\";
+            odlgOpenFile.Title = "Open File";
+            odlgOpenFile.Filter = "Image files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            if (odlgOpenFile.ShowDialog() == DialogResult.OK)
+            {
+                Image image = Image.FromFile(odlgOpenFile.FileName);
+                PictureBox pic = Global.CreatePictureBox(image, picHinh);
+                panel.Controls.Add(pic);
+                arrPicture.Add(image);
+            }
+            return arrPicture;
+        }
+
         public static void TimDo(PictureBox picHeart)
         {
             string imagePath = Application.StartupPath + "\\HinhAnh\\timdo.png";
