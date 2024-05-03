@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTenNM = new System.Windows.Forms.Label();
             this.ratingsao = new Guna.UI2.WinForms.Guna2RatingStar();
             this.lblnhanxet = new System.Windows.Forms.Label();
             this.panelHinh = new System.Windows.Forms.Panel();
             this.picHinhNM = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.dtpNgayDG = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNM)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             this.lblnhanxet.AutoSize = true;
             this.lblnhanxet.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnhanxet.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblnhanxet.Location = new System.Drawing.Point(27, 114);
+            this.lblnhanxet.Location = new System.Drawing.Point(17, 108);
             this.lblnhanxet.Name = "lblnhanxet";
             this.lblnhanxet.Size = new System.Drawing.Size(51, 21);
             this.lblnhanxet.TabIndex = 2;
@@ -68,10 +70,9 @@
             // 
             // panelHinh
             // 
-            this.panelHinh.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelHinh.Location = new System.Drawing.Point(0, 176);
+            this.panelHinh.Location = new System.Drawing.Point(31, 174);
             this.panelHinh.Name = "panelHinh";
-            this.panelHinh.Size = new System.Drawing.Size(782, 129);
+            this.panelHinh.Size = new System.Drawing.Size(790, 96);
             this.panelHinh.TabIndex = 3;
             // 
             // picHinhNM
@@ -89,10 +90,11 @@
             // 
             this.dtpNgayDG.BorderRadius = 10;
             this.dtpNgayDG.Checked = true;
+            this.dtpNgayDG.Enabled = false;
             this.dtpNgayDG.FillColor = System.Drawing.Color.HotPink;
             this.dtpNgayDG.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpNgayDG.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgayDG.Location = new System.Drawing.Point(505, 15);
+            this.dtpNgayDG.Location = new System.Drawing.Point(588, 4);
             this.dtpNgayDG.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayDG.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgayDG.Name = "dtpNgayDG";
@@ -100,10 +102,16 @@
             this.dtpNgayDG.TabIndex = 5;
             this.dtpNgayDG.Value = new System.DateTime(2024, 5, 3, 3, 56, 24, 586);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // UCDanhGiaCT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.Controls.Add(this.dtpNgayDG);
             this.Controls.Add(this.picHinhNM);
             this.Controls.Add(this.panelHinh);
@@ -111,7 +119,7 @@
             this.Controls.Add(this.ratingsao);
             this.Controls.Add(this.lblTenNM);
             this.Name = "UCDanhGiaCT";
-            this.Size = new System.Drawing.Size(782, 305);
+            this.Size = new System.Drawing.Size(861, 286);
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -126,5 +134,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox picHinhNM;
         public System.Windows.Forms.Panel panelHinh;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayDG;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

@@ -22,10 +22,9 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         NguoiMua ngmua;
         DanhGia dg;
-        SanPham sp;
         DanhGiaDAO dgdao = new DanhGiaDAO();
         Global gt = new Global();
-        public UCDanhGiaCT(NguoiMua ng, DanhGia dg,string masp)
+        public UCDanhGiaCT(NguoiMua ng, DanhGia dg)
         {
             InitializeComponent();
             this.ngmua = ng;
@@ -33,19 +32,19 @@ namespace DoANLapTrinhWin
             this.nx = dg.NhanXet;
             this.sao = dg.Sao1;
             this.hinh = ng.Hinh;
-            this.masp = masp;
+            this.masp = dg.MaSP;
             this.picHinhNM.Image = Global.ByteArrayToImage(ng.Hinh);
             this.lblnhanxet.Text = dg.NhanXet;
             this.lblTenNM.Text = ng.Ten1;
             this.ratingsao.Value = dg.Sao1;
             this.dtpNgayDG.Text = dg.Ngaydg.ToString().Trim();
-            LoadImagesFromDatabase(masp,ng.Ma,dg.Ngaydg);
+            LoadImagesFromDatabase(ng,dg);
         }
 
-        private void LoadImagesFromDatabase(string masp, string manm, DateTime ngaydg)
+        private void LoadImagesFromDatabase(NguoiMua ng,DanhGia dg)
         {
             DataSet dt = new DataSet();
-            dt = dgdao.LayHinhAnhTheoMaSPvaMaNM(masp,manm,ngaydg);
+            dt = dgdao.LayHinhAnhTheoMaSPvaMaNM(ng,dg);
             foreach (DataRow row in dt.Tables[0].Rows)
             {
                 byte[] imageBytes = (byte[])row["Hinh"];

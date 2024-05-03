@@ -15,11 +15,12 @@ namespace DoANLapTrinhWin.Class
         private int saoGiaoHang;
         private string nhanXet;
         private DateTime ngaydg;
-        public DanhGia(string nhanxet, int sao, DateTime ngaydg)
+        public DanhGia(string nhanxet, int sao, DateTime ngaydg, string masp)
         {
             this.nhanXet = nhanxet;
             this.Sao = sao;
             this.ngaydg = ngaydg;
+            this.maSP = masp;
         }
 
         public string MaNM { get => maNM; set => maNM = value; }

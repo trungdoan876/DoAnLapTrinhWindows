@@ -79,13 +79,12 @@ namespace DoANLapTrinhWin
         {
             //nguoimua: hinh,ten
             //danh gia: nhanxet,sao
-            DataSet ds = new DataSet();
-            ds = dgdao.HienDanhGia(sp);
+            DataSet ds = dgdao.HienDanhGia(sp);
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                 NguoiMua ngmua = new NguoiMua((byte[])row[0], row[1].ToString(), row[2].ToString());
-                DanhGia dg = new DanhGia(row[3].ToString(), (int)row[4], (DateTime)row[5]);
-                UCDanhGiaCT uc = new UCDanhGiaCT(ngmua,dg,sp.MaSP);
+                DanhGia dg = new DanhGia(row[3].ToString(), (int)row[4], (DateTime)row[5], row[6].ToString());
+                UCDanhGiaCT uc = new UCDanhGiaCT(ngmua,dg);
                 fpanelDanhGia.Controls.Add(uc);
             }
         }
