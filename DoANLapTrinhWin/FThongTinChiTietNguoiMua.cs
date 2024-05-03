@@ -15,19 +15,18 @@ namespace DoANLapTrinhWin
     public partial class FThongTinChiTietNguoiMua : Form
     {
         byte[] hinh;
-        NguoiMuaDAO nguoiDao = new NguoiMuaDAO();
+        NguoiMuaDAO nguoimuaDao = new NguoiMuaDAO();
         Global gt = new Global();
-        string maNM;
-        public FThongTinChiTietNguoiMua(string maNM)
+        NguoiMua ngMua;
+        public FThongTinChiTietNguoiMua(NguoiMua ng)
         {
             InitializeComponent();
-            this.maNM = maNM;
+            this.ngMua = ng;
+            LoadData();
         }
         private void LoadData()
         {
-            Nguoi ng = new Nguoi(maNM);
-
-            DataTable dt = nguoiDao.ThongTinNguoi(ng);
+            DataTable dt = nguoimuaDao.ThongTinNguoi(ngMua);
             foreach (DataRow row in dt.Rows)
             {
                 // Đưa dữ liệu vào TextBox
@@ -55,7 +54,7 @@ namespace DoANLapTrinhWin
         private void btnSua_Click(object sender, EventArgs e)
         {
             NguoiMua nguoimua = new NguoiMua(Global.ImageToByteArray(picHinh.Image), txtMaTaiKhoan.Text, txtHoTen.Text, txtSDT.Text, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, txtEmail.Text);
-            nguoiDao.CapNhatMua(nguoimua);
+            nguoimuaDao.CapNhatMua(nguoimua);
         }
 
         private void btnThemHinh_Click(object sender, EventArgs e)

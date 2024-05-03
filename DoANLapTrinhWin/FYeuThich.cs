@@ -32,12 +32,20 @@ namespace DoANLapTrinhWin
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                 SanPham sp = new SanPham(
-                    row[5].ToString(), //masp
-                    row[1].ToString(), //ten
-                    "đ"+row[2].ToString(), //giaban
-                    "đ"+row[3].ToString(), //gia goc
-                    row[4].ToString(), //diachi
-                    (byte[])row[0] //hinh
+                    row[1].ToString(),
+                    row[2].ToString(),
+                    "đ" + row[3].ToString(),
+                    "đ" + row[4].ToString(),
+                    row[5].ToString(),
+                    row[6].ToString(),
+                    (DateTime)row[7],
+                    row[8].ToString(),
+                    row[9].ToString(),
+                    row[10].ToString(),
+                    row[13].ToString(),
+                    row[12].ToString(),
+                    row[14].ToString(),
+                    (byte[])row[0]
                     );
                 UCSP ucSP = new UCSP(sp, tenTK);
 

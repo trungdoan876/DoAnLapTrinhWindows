@@ -324,12 +324,6 @@
     <Compile Include="UC\UCSPDangBan.Designer.cs">
       <DependentUpon>UCSPDangBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCHeart.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UCHeart.Designer.cs">
-      <DependentUpon>UCHeart.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC\UCSP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -469,9 +463,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCSPGioHang.resx">
       <DependentUpon>UCSPGioHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCHeart.resx">
-      <DependentUpon>UCHeart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCSP.resx">
       <DependentUpon>UCSP.cs</DependentUpon>

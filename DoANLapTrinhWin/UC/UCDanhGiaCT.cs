@@ -42,29 +42,17 @@ namespace DoANLapTrinhWin
 
         private void LoadImagesFromDatabase(string masp,string manm,string ngaydg)
         {
-            try
+            DataSet dt = new DataSet();
+            dt = dgdao.LayHinhAnhTheoMaSPvaMaNM(masp, manm, ngaydg);
+            foreach (DataRow row in dt.Tables[0].Rows)
             {
-                //MessageBox.Show(manm);
-                DataSet dt = new DataSet();
-                dt = dgdao.LayHinhAnhTheoMaSPvaMaNM(masp,manm,ngaydg);
-                foreach (DataRow row in dt.Tables[0].Rows)
+                byte[] imageBytes = (byte[])row["Hinh"];
+                using (MemoryStream mss = new MemoryStream(imageBytes))
                 {
-                    byte[] imageBytes = (byte[])row["Hinh"];
-                    using (MemoryStream mss = new MemoryStream(imageBytes))
-                    {
-                        Image image = Image.FromStream(mss);
-                        PictureBox pic = Global.CreatePictureBoxNoClick(image);
-                        panelHinh.Controls.Add(pic);
-                    }
+                    Image image = Image.FromStream(mss);
+                    PictureBox pic = Global.CreatePictureBoxNoClick(image);
+                    panelHinh.Controls.Add(pic);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
             }
         }
     }

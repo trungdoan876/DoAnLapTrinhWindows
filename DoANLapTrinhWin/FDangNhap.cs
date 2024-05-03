@@ -21,6 +21,7 @@ namespace DoANLapTrinhWin
         private string selctecOption = null;
         NguoiBanDAO ngbandao = new NguoiBanDAO();
         NguoiMuaDAO ngmuadao = new NguoiMuaDAO();
+        
         public FDangNhap()
         {
             InitializeComponent();
@@ -72,13 +73,12 @@ namespace DoANLapTrinhWin
             string matKhau = txtMatKhau.Text;
             if (selctecOption == "Mua hàng")
             {
-                NguoiMua ng = new NguoiMua(tenTK,matKhau);
-                DataTable dt = new DataTable();
-                dt = ngmuadao.DangNhap(ng);
+                NguoiMua ngmua = new NguoiMua(tenTK,matKhau);
+                DataTable dt =  ngmuadao.DangNhap(ngmua);
                 if (dt.Rows.Count > 0)
                 {
                     this.Hide(); //an form 1
-                    FNguoiMua form2 = new FNguoiMua(tenTK);
+                    FNguoiMua form2 = new FNguoiMua(ngmua);
                     form2.ShowDialog();
                     form2 = null;
                     this.Show();
@@ -92,13 +92,12 @@ namespace DoANLapTrinhWin
             }
             else
             {
-                NguoiBan ng = new NguoiBan(tenTK, matKhau);
-                DataTable dt = new DataTable();
-                dt = ngbandao.DangNhap(ng);
+                NguoiBan ngBan = new NguoiBan(tenTK,matKhau);
+                DataTable dt = ngbandao.DangNhap(ngBan);
                 if (dt.Rows.Count > 0)
                 {
                     this.Hide(); //an form 1
-                    FNguoiBan form2 = new FNguoiBan(tenTK);
+                    FNguoiBan form2 = new FNguoiBan(ngBan);
                     form2.ShowDialog();
                     form2 = null;
                     this.Show();

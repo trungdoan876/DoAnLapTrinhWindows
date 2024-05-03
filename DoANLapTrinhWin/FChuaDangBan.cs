@@ -30,7 +30,8 @@ namespace DoANLapTrinhWin
             int y = 0;
             foreach (DataRow row in dt.Tables[0].Rows)
             {
-                SanPham sp = new SanPham(
+                SanPham sp = new SanPham
+                (
                     row[1].ToString(),
                     row[2].ToString(),
                     row[3].ToString(),
@@ -45,7 +46,7 @@ namespace DoANLapTrinhWin
                     row[12].ToString(),
                     row[13].ToString(),
                     (byte[])row[0]
-                    );
+                );
                 UCSPBan ucSPBan = new UCSPBan(sp);
 
                 ucSPBan.Location = new Point(x, y);

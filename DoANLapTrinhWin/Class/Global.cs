@@ -17,10 +17,7 @@ namespace DoANLapTrinhWin
 
         public static void MoFormCon(Form form, Panel panel)
         {
-            /*if (formcon != null)
-            {
-                formcon.Close();
-            }*/
+
             formcon = form;
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;

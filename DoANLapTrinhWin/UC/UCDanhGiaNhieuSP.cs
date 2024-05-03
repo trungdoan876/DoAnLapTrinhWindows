@@ -14,7 +14,6 @@ namespace DoANLapTrinhWin
 {
     public partial class UCDanhGiaNhieuSP : UserControl
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPham sp;
         DonHang dh;
         public List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
@@ -51,19 +50,12 @@ namespace DoANLapTrinhWin
         private void picThemHinh_Click(object sender, EventArgs e)
         {
             OpenFileDialog odlgOpenFile = Global.CreateOpenFileDialog();
-            try
+            if (odlgOpenFile.ShowDialog() == DialogResult.OK)
             {
-                if (odlgOpenFile.ShowDialog() == DialogResult.OK)
-                {
-                    System.Drawing.Image image = System.Drawing.Image.FromFile(odlgOpenFile.FileName);
-                    PictureBox pic = Global.CreatePictureBoxNoClickTo(image);
-                    panelThemNhieuHinh.Controls.Add(pic);
-                    arrPicture.Add(image);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
+                System.Drawing.Image image = System.Drawing.Image.FromFile(odlgOpenFile.FileName);
+                PictureBox pic = Global.CreatePictureBoxNoClickTo(image);
+                panelThemNhieuHinh.Controls.Add(pic);
+                arrPicture.Add(image);
             }
         }
 

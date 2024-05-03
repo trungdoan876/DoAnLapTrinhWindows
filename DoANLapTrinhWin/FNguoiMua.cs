@@ -13,13 +13,13 @@ namespace DoANLapTrinhWin
 {
     public partial class FNguoiMua : Form
     {
-        string tenTK;
+        NguoiMua ngMua;
         Global gl = new Global();
-        public FNguoiMua(string tenTK)
+        public FNguoiMua(NguoiMua ng)
         {
             InitializeComponent();
             this.Size = new Size(1200, 600);
-            this.tenTK = tenTK;
+            this.ngMua = ng;
         }
         private void FNguoiMua_Load(object sender, EventArgs e)
         {
@@ -28,7 +28,7 @@ namespace DoANLapTrinhWin
         private void btnThongTin_Click(object sender, EventArgs e)
         {
             Global.TaoButton(btnThongTin, ref gl.btnOK);
-            Global.MoFormCon(new FThongTinChiTietNguoiMua(tenTK), panelThan);    
+            Global.MoFormCon(new FThongTinChiTietNguoiMua(ngMua), panelThan);    
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
@@ -40,25 +40,25 @@ namespace DoANLapTrinhWin
         private void btnMuaHang_Click(object sender, EventArgs e)
         {
             Global.TaoButton(btnMuaHang, ref gl.btnOK);
-            Global.MoFormCon(new FMuaHang(tenTK), panelThan);
+            Global.MoFormCon(new FMuaHang(ngMua.Ma), panelThan);
         }
 
         private void btnGioHang_Click(object sender, EventArgs e)
         {
             Global.TaoButton(btnGioHang, ref gl.btnOK);
-            Global.MoFormCon(new FGioHang(tenTK), panelThan);
+            Global.MoFormCon(new FGioHang(ngMua.Ma), panelThan);
         }
 
         private void btnDonHang_Click(object sender, EventArgs e)
         {
             Global.TaoButton(btnDonHang, ref gl.btnOK);
-            Global.MoFormCon(new FDonHangNguoiMua(tenTK), panelThan);
+            Global.MoFormCon(new FDonHangNguoiMua(ngMua.Ma), panelThan);
         }
 
         private void btnYeuThich_Click(object sender, EventArgs e)
         {
             Global.TaoButton(btnYeuThich, ref gl.btnOK);
-            Global.MoFormCon(new FYeuThich(tenTK), panelThan);
+            Global.MoFormCon(new FYeuThich(ngMua.Ma), panelThan);
         }
     }
 }

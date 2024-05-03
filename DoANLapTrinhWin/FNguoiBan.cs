@@ -13,13 +13,13 @@ namespace DoANLapTrinhWin
 {
     public partial class FNguoiBan : Form
     {
-        string TenTaiKhoan;
-        Global gl=new Global();
-        public FNguoiBan(string tenTaiKhoan)
+        NguoiBan ngBan;
+        Global gl = new Global();
+        public FNguoiBan(NguoiBan ngban)
         {
             InitializeComponent();
             this.Size = new Size(1200, 600);
-            this.TenTaiKhoan = tenTaiKhoan;
+            this.ngBan = ngban;
         }
         private void FNguoiBan_Load(object sender, EventArgs e)
         {
@@ -29,19 +29,19 @@ namespace DoANLapTrinhWin
         private void btnThongTin_Click_1(object sender, EventArgs e)
         {
             Global.TaoButton(btnThongTin, ref gl.btnOK);
-            Global.MoFormCon(new FThongTinNguoiBan(TenTaiKhoan), panelThan);
+            Global.MoFormCon(new FThongTinNguoiBan(ngBan), panelThan);
         }
 
         private void btnSanPham_Click(object sender, EventArgs e)
         {
             Global.TaoButton(btnSanPham, ref gl.btnOK);
-            Global.MoFormCon(new FSanPham(TenTaiKhoan), panelThan);
+            Global.MoFormCon(new FSanPham(ngBan.Ma), panelThan);
         }
 
         private void btnDonHang_Click_1(object sender, EventArgs e)
         {
             Global.TaoButton(btnDonHang, ref gl.btnOK);
-            Global.MoFormCon(new FDonHangNguoiBan(TenTaiKhoan), panelThan);
+            Global.MoFormCon(new FDonHangNguoiBan(ngBan.Ma), panelThan);
         }
 
         private void btnThongKe_Click_1(object sender, EventArgs e)

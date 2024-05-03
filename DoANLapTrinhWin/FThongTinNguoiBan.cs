@@ -15,20 +15,19 @@ namespace DoANLapTrinhWin
 {
     public partial class FThongTinNguoiBan : Form
     {
-        string maTK;
+        NguoiBan ngBan;
         byte[] hinh;
         NguoiBanDAO nguoiDao = new NguoiBanDAO();
         Global gt = new Global();
-        public FThongTinNguoiBan(string tenTaiKhoan)
+        public FThongTinNguoiBan(NguoiBan nguoiBan)
         {
             InitializeComponent();
-            this.maTK = tenTaiKhoan;
+            this.ngBan = nguoiBan;
+            LoadDuLieu();
         }
         private void LoadDuLieu()
         {
-            Nguoi ng = new Nguoi(maTK);
-
-            DataTable dt = nguoiDao.ThongTinNguoi(ng);
+            DataTable dt = nguoiDao.ThongTinNguoi(ngBan);
             foreach (DataRow row in dt.Rows)
             {
                 // Đưa dữ liệu vào TextBox

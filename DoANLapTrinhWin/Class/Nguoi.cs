@@ -35,7 +35,7 @@ namespace DoANLapTrinhWin
         //dùng cho đăng nhập
         public Nguoi(string ma, string matkhau)
         {
-            this.ma=ma;
+            this.ma = ma;
             this.matKhau = matkhau;
         }
         //dung cho danh gia

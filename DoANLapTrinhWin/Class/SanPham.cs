@@ -84,7 +84,7 @@ namespace DoANLapTrinhWin
             this.hinh = hinh;
         }
         public SanPham(string maSP, string tenSP, string giaBan, string giaGoc, string xuatXu, string thoiGianDaSuDung,DateTime ngayDang, string moTaSanPham,
-            string nganhHang, string tinhTrang, string diaChi, string maNguoiBan, string soLuong,byte[]hinh)
+            string nganhHang, string tinhTrang, string diaChi, string maNguoiBan, string soLuong,byte[]hinh) //data row
         {
             this.maSP = maSP;
             this.tenSP = tenSP;

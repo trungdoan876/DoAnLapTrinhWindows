@@ -9,11 +9,15 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace DoANLapTrinhWin
 {
-     class NguoiBan : Nguoi
-    {
+     public class NguoiBan : Nguoi
+     {
         private string moTaShop;
         //dùng để đăng kí
-        public NguoiBan (string sdt):base(sdt)
+        public NguoiBan(string ma, string matkhau) : base(ma, matkhau)
+        {
+
+        }
+        public NguoiBan (string sdt) : base(sdt)
         {
 
         }
@@ -22,16 +26,11 @@ namespace DoANLapTrinhWin
         {
             
         }
-        public NguoiBan(string ma, string mk) : base(ma, mk)
-        {
-
-        }
         public NguoiBan(byte[]hinh,string ma, string Ten, string SDT, DateTime NgaySinh, string gioiTinh, string CCCD, string diaChi, string eMail, string moTaShop)
                 : base(hinh,ma, Ten, SDT, NgaySinh, gioiTinh, CCCD, diaChi, eMail,moTaShop)
         {
                 // Thuộc tính không được kế thừa từ lớp Nguoi
                 this.moTaShop = moTaShop;
         }
-    }
-
+     }
 }

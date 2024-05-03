@@ -7,12 +7,18 @@ using System.Net.Mail;
 using System.Text.RegularExpressions;
 using System.Runtime.CompilerServices;
 using System.Drawing;
+using System.Web.UI.WebControls.WebParts;
 
 namespace DoANLapTrinhWin
 {
     public class NguoiMua: Nguoi
     {
-        public NguoiMua(string ma,string mk): base(ma, mk)
+        /*public SanPham (Datarow r)
+        {
+            this...= Row []
+        }
+        =new SanPham(row)*/
+        public NguoiMua(string ma, string mk): base(ma, mk)
         {
 
         }

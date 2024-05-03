@@ -9,7 +9,6 @@ namespace DoANLapTrinhWin
     internal class NguoiBanDAO :NguoiDAO
     {
         public NguoiBanDAO() :base("NguoiBan")
-       //public NguoiBanDAO() : base()
         { 
         }
     }
