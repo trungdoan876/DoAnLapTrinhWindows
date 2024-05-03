@@ -14,19 +14,19 @@ namespace DoANLapTrinhWin
 {
     public partial class FDanhSachSanPham : Form
     {
-        string maNB;
         byte[] hinh;
+        NguoiBan ngBan;
         SanPhamDAO spDao = new SanPhamDAO();
-        public FDanhSachSanPham(string maNB)
+        public FDanhSachSanPham(NguoiBan ngban)
         {
             InitializeComponent();
-            this.maNB = maNB;
+            this.ngBan = ngban;
             LoadData();
         }
         //đổ dữ liệu vào user control trong danh sách sản phẩm
         private void LoadData()
         {
-            DataSet dt = spDao.LoadDanhSachSanPham(maNB);
+            DataSet dt = spDao.LoadDanhSachSanPham(ngBan.Ma);
             int x = panelThem.Width + 5;
             int y = 0;
             foreach (DataRow row in dt.Tables[0].Rows)
@@ -65,7 +65,7 @@ namespace DoANLapTrinhWin
 
         private void btnThemSanPham_Click(object sender, EventArgs e)
         {
-            Global.MoFormCon(new FThemSanPham(maNB),panelTatCaSP);
+            Global.MoFormCon(new FThemSanPham(ngBan.Ma),panelTatCaSP);
         }
     }
 }

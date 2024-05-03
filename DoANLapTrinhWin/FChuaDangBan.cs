@@ -13,19 +13,19 @@ namespace DoANLapTrinhWin
 {
     public partial class FChuaDangBan : Form
     {
-        string maNB;
         byte[] hinh;
         SanPhamDAO spDao = new SanPhamDAO();
-        public FChuaDangBan(string maNB)
+        NguoiBan ngBan;
+        public FChuaDangBan(NguoiBan ngBan)
         {
             InitializeComponent();
-            this.maNB = maNB;
+            this.ngBan = ngBan;
             LoadData();
         }
         //DangBan trong bang SP = 0 -> chua dang ban
         public void LoadData()
         {
-            DataSet dt = spDao.LoadChuaDangBan(maNB);
+            DataSet dt = spDao.LoadChuaDangBan(ngBan.Ma);
             int x = 0;
             int y = 0;
             foreach (DataRow row in dt.Tables[0].Rows)

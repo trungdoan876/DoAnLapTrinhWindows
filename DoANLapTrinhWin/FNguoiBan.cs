@@ -35,7 +35,7 @@ namespace DoANLapTrinhWin
         private void btnSanPham_Click(object sender, EventArgs e)
         {
             Global.TaoButton(btnSanPham, ref gl.btnOK);
-            Global.MoFormCon(new FSanPham(ngBan.Ma), panelThan);
+            Global.MoFormCon(new FSanPham(ngBan), panelThan);
         }
 
         private void btnDonHang_Click_1(object sender, EventArgs e)
