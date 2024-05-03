@@ -117,8 +117,10 @@ namespace DoANLapTrinhWin
 
         public DataSet SanPhamYeuThich(string maNM)
         {
-            string sqlStr = string.Format("SELECT SanPham.Hinh as Hinh, SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi, " +
-                    "YeuThich.MaSanPham as MaSP FROM YeuThich, SanPham WHERE YeuThich.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'", maNM);
+            string sqlStr = string.Format("select SanPham.Hinh,YeuThich.MaSanPham ,SanPham.TenSanPham,SanPham.GiaBan,SanPham.GiaGoc,SanPham.XuatXu,SanPham.TGDSD, " +
+            "SanPham.NgayDang, SanPham.MoTaSanPham, SanPham.NganhHang, SanPham.TinhTrang, SanPham.DiaChi, SanPham.MaNguoiBan, SanPham.SoLuong " +
+            "From YeuThich, SanPham " +
+            "WHERE YeuThich.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'", maNM);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
