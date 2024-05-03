@@ -22,11 +22,13 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         NguoiMua ngmua;
         DanhGia dg;
+        SanPham sp;
         DanhGiaDAO dgdao = new DanhGiaDAO();
         Global gt = new Global();
         public UCDanhGiaCT(NguoiMua ng, DanhGia dg,string masp)
         {
             InitializeComponent();
+            this.ngmua = ng;
             this.ten = ng.Ten1;
             this.nx = dg.NhanXet;
             this.sao = dg.Sao1;
@@ -36,14 +38,14 @@ namespace DoANLapTrinhWin
             this.lblnhanxet.Text = dg.NhanXet;
             this.lblTenNM.Text = ng.Ten1;
             this.ratingsao.Value = dg.Sao1;
-            this.dtpNgayDG.Text = dg.Ngaydg.ToString();
-            LoadImagesFromDatabase(masp,ng.Ma,dg.Ngaydg.ToString());
+            this.dtpNgayDG.Text = dg.Ngaydg.ToString().Trim();
+            LoadImagesFromDatabase(masp,ng.Ma,dg.Ngaydg);
         }
 
-        private void LoadImagesFromDatabase(string masp,string manm,string ngaydg)
+        private void LoadImagesFromDatabase(string masp, string manm, DateTime ngaydg)
         {
             DataSet dt = new DataSet();
-            dt = dgdao.LayHinhAnhTheoMaSPvaMaNM(masp, manm, ngaydg);
+            dt = dgdao.LayHinhAnhTheoMaSPvaMaNM(masp,manm,ngaydg);
             foreach (DataRow row in dt.Tables[0].Rows)
             {
                 byte[] imageBytes = (byte[])row["Hinh"];

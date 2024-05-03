@@ -19,7 +19,7 @@ namespace DoANLapTrinhWin.Class
         {
             this.nhanXet = nhanxet;
             this.Sao = sao;
-            this.Ngaydg = ngaydg;
+            this.ngaydg = ngaydg;
         }
 
         public string MaNM { get => maNM; set => maNM = value; }

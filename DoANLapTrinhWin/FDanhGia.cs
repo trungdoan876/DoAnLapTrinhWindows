@@ -96,9 +96,9 @@ namespace DoANLapTrinhWin
                                 string danhGia = uc.txtDanhGia.Text;
                                 arrPicture = uc.arrPicture;
                                 // Thực hiện chèn dữ liệu vào cơ sở dữ liệu
-                                string sql = string.Format("INSERT INTO DanhGia (MaSanPham, MaNguoiMua, sao, saonguoiban, saogiaohang, nhanxet, ngaydg) " +
-                                "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', N'{5}', '{6}')",
-                                maSP, maNguoiMua, sao, saoNguoiBan, saoGiaoHang, danhGia, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                string sql = string.Format("INSERT INTO DanhGia (MaSanPham, MaNguoiMua, Sao, Saonguoiban, Saogiaohang, Nhanxet,Ngaydg) " +
+                                "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', N'{5}','{6}')",
+                                maSP, maNguoiMua, sao, saoNguoiBan, saoGiaoHang, danhGia, DateTime.Now);
 
                                 //MessageBox.Show(ngay);
                                 SqlCommand cmd = new SqlCommand(sql, conn);
@@ -110,7 +110,7 @@ namespace DoANLapTrinhWin
                                         image.Save(ms, image.RawFormat);
                                         byte[] imageBytes = ms.ToArray();
                                         string anh = BitConverter.ToString(imageBytes).Replace("-", "");
-                                        string sql1 = string.Format("INSERT INTO HinhDanhGia (MaNguoiMua,MaSanPham, Hinh,Ngaydg) VALUES ('{0}', '{1}', 0x{2}, '{3}')",maNguoiMua, maSP, anh, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                        string sql1 = string.Format("INSERT INTO HinhDanhGia (MaNguoiMua,MaSanPham, Hinh,Ngaydg) VALUES ('{0}', '{1}', 0x{2},'{3}')",maNguoiMua, maSP, anh, DateTime.Now);
                                         SqlCommand cmd1 = new SqlCommand(sql1, conn);
                                         cmd1.ExecuteNonQuery();
                                     }

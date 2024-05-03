@@ -118,6 +118,22 @@ namespace DoANLapTrinhWin
                 picHinh.Image = Image.FromFile(openFileDialog.FileName);
             return picHinh.Image;
         }
+        //bo hinh vao panel co click
+        public static List<Image> CreateOpenFileDialogMore(PictureBox picHinh,Panel panel, List<Image> arrPicture)
+        {
+            OpenFileDialog odlgOpenFile = new OpenFileDialog();
+            odlgOpenFile.InitialDirectory = "C:\\";
+            odlgOpenFile.Title = "Open File";
+            odlgOpenFile.Filter = "Image files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            if (odlgOpenFile.ShowDialog() == DialogResult.OK)
+            {
+                Image image = Image.FromFile(odlgOpenFile.FileName);
+                PictureBox pic = CreatePictureBox(image,picHinh);
+                panel.Controls.Add(pic);
+                arrPicture.Add(image);
+            }
+            return arrPicture;
+        }
         //bo nhieu hinh vao panel khong click
         public static List<Image> CreateOpenFileDialogMoreNoClick(Panel panel, List<Image> arrPicture)
         {

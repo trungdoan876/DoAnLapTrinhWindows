@@ -17,8 +17,6 @@ namespace DoANLapTrinhWin
 {
     public partial class FCTSP : Form
     {
-        private List<byte[]> byteImage = new List<byte[]>();
-        private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         YeuThichDAO ytdao = new YeuThichDAO();
         GioHangDAO ghdao = new GioHangDAO();
@@ -86,7 +84,7 @@ namespace DoANLapTrinhWin
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                 NguoiMua ngmua = new NguoiMua((byte[])row[0], row[1].ToString(), row[2].ToString());
-                DanhGia dg = new DanhGia(row[3].ToString(), (int)row[4], DateTime.Parse(row[5].ToString()));
+                DanhGia dg = new DanhGia(row[3].ToString(), (int)row[4], (DateTime)row[5]);
                 UCDanhGiaCT uc = new UCDanhGiaCT(ngmua,dg,sp.MaSP);
                 fpanelDanhGia.Controls.Add(uc);
             }
