@@ -65,12 +65,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Class\ChiTietDonHang.cs" />
-    <Compile Include="Class\ChiTietDonHangDAO.cs" />
+    <Compile Include="ClassDAO\ChiTietDonHangDAO.cs" />
     <Compile Include="Class\DanhGia.cs" />
-    <Compile Include="Class\DanhGiaDAO.cs" />
+    <Compile Include="ClassDAO\DanhGiaDAO.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Class\DonHang.cs" />
-    <Compile Include="Class\DonHangDAO.cs" />
+    <Compile Include="ClassDAO\DonHangDAO.cs" />
     <Compile Include="FCTDonHangNM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,14 +246,14 @@
       <DependentUpon>FYeuThich.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\GioHang.cs" />
-    <Compile Include="Class\GioHangDAO.cs" />
+    <Compile Include="ClassDAO\GioHangDAO.cs" />
     <Compile Include="Class\Global.cs" />
     <Compile Include="Class\Nguoi.cs" />
     <Compile Include="Class\NguoiBan.cs" />
-    <Compile Include="Class\NguoiBanDAO.cs" />
-    <Compile Include="Class\NguoiDAO.cs" />
+    <Compile Include="ClassDAO\NguoiBanDAO.cs" />
+    <Compile Include="ClassDAO\NguoiDAO.cs" />
     <Compile Include="Class\NguoiMua.cs" />
-    <Compile Include="Class\NguoiMuaDAO.cs" />
+    <Compile Include="ClassDAO\NguoiMuaDAO.cs" />
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,7 +263,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Class\SanPham.cs" />
-    <Compile Include="Class\SanPhamDAO.cs" />
+    <Compile Include="ClassDAO\SanPhamDAO.cs" />
     <Compile Include="UC\UCDanhGiaCT.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -337,7 +337,7 @@
       <DependentUpon>UCSPBan.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\YeuThich.cs" />
-    <Compile Include="Class\YeuThichDAO.cs" />
+    <Compile Include="ClassDAO\YeuThichDAO.cs" />
     <EmbeddedResource Include="FCTDonHangNM.resx">
       <DependentUpon>FCTDonHangNM.cs</DependentUpon>
     </EmbeddedResource>
