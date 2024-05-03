@@ -147,5 +147,21 @@ namespace DoANLapTrinhWin
             Image image = Image.FromFile(imagePath);
             picHeart.Image = image;
         }
+        //hiện tình trạng sao đánh giá
+        public static string tinhtrangsao(double sosao)
+        {
+            if (sosao >= 0 && sosao < 1)
+                return "Tệ";
+            else if (sosao >= 1 && sosao < 2)
+                return "Không hài lòng";
+            else if (sosao >= 2 && sosao < 3)
+                return "Bình thường";
+            else if (sosao >= 3 && sosao < 4)
+                return "Hài lòng";
+            else if (sosao >= 4 && sosao <= 5)
+                return "Tuyệt vời";
+            return "";
+        }
+
     }
 }
