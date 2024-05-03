@@ -35,7 +35,6 @@ namespace DoANLapTrinhWin.Class
             this.tenSP = tenSP;
             this.hinh = hinh;
         }
-
         public string MaDonHang { get => maDonHang; set => maDonHang = value; }
         public string MaSP { get => maSP; set => maSP = value; }
         public string SoLuong { get => soLuong; set => soLuong = value; }

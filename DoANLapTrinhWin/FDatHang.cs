@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using DoANLapTrinhWin.Class;
 
 namespace DoANLapTrinhWin
 {
@@ -27,6 +28,8 @@ namespace DoANLapTrinhWin
         DateTime ngayhientai = DateTime.Now;
         List<SanPham> listsp = new List<SanPham>();
         GioHangDAO ghDao = new GioHangDAO();
+        DonHangDAO dhDao = new DonHangDAO();
+        ChiTietDonHangDAO ctdhDao = new ChiTietDonHangDAO();
         
         //tao ma don hang
         public string TaoMaDonHang()
@@ -135,47 +138,34 @@ namespace DoANLapTrinhWin
             {
                 trangthai = "Chưa thanh toán";
             }
-            try
+            var NhomNguoiBan = listsp.GroupBy(sp => sp.MaNguoiBan); //nhom nguoi ban lai de tao thanh 1 don hang
+            foreach (var i in NhomNguoiBan)
             {
-                conn.Open();
-                var nguoiBanGroup = listsp.GroupBy(sp => sp.MaNguoiBan); //nhom nguoi ban lai de tao thanh 1 don hang
-                foreach (var grp in nguoiBanGroup)
+                string maDonHang = TaoMaDonHang();
+                DonHang dh = new DonHang(maDonHang,i.Key, maNM, tongtien.ToString(), ngayhientai,"Đặt hàng thành công","Chuẩn bị hàng");
+                dhDao.TaoDonHang(dh);
+                foreach (var sanPham in i)
                 {
-                    string maDonHang = TaoMaDonHang();
-                    string sql = string.Format("INSERT INTO DonHang(MaDonHang,MaNguoiMua,MaNguoiBan,TongTien,NgayDatHang,TrangThaiDonHangNM,TrangThaiDonHangNB) " +
-                    "VALUES('{0}','{1}','{2}','{3}','{4}',N'{5}',N'{6}')", maDonHang, maNM, grp.Key, tongtien, ngayhientai, "Đặt hàng thành công","Chuẩn bị hàng");
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    cmd.ExecuteNonQuery();
-                    foreach (var sanPham in grp)
-                    {
-                        string soluong = sanPham.SoLuong.Trim();
-                        int soLuong = int.Parse(sanPham.SoLuong);
+                    decimal totalValue = tinhTien(sanPham);
+                    ChiTietDonHang ct = new ChiTietDonHang(maDonHang,sanPham.MaSP,sanPham.SoLuong, totalValue.ToString(),sanPham.TenSP,sanPham.Hinh);
+                    ctdhDao.ThemVaoChiTiet(ct);
 
-                        string giaban = sanPham.GiaBan.Substring(1);
-                        decimal giatien = decimal.Parse(giaban);
-
-                        // Tính giá trị tổng tiền
-                        decimal totalValue = soLuong * giatien;
-
-                        string sqlstr = string.Format("INSERT INTO ChiTietDonHang(MaDonHang, MaSanPham, SoLuong, GiaTien)" +
-                    "VALUES('{0}','{1}','{2}','{3}')", maDonHang, sanPham.MaSP, sanPham.SoLuong, totalValue);
-                        string sqlstr2 = string.Format("DELETE GioHang WHERE MaSanPham ='{0}' ", sanPham.MaSP);
-                        SqlCommand cmdn = new SqlCommand(sqlstr2, conn);
-                        SqlCommand cmdm = new SqlCommand(sqlstr, conn);
-                        cmdm.ExecuteNonQuery();
-                        cmdn.ExecuteNonQuery();
-                    }
+                    GioHang gh = new GioHang(sanPham.MaSP);
+                    ghDao.XoaGioHang(gh);
                 }
-                MessageBox.Show("Dat hang thanh cong!");
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Loi" + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
+        }
+        private decimal tinhTien(SanPham sanPham)
+        {
+            string soluong = sanPham.SoLuong.Trim();
+            int soLuong = int.Parse(sanPham.SoLuong);
+
+            string giaban = sanPham.GiaBan.Substring(1);
+            decimal giatien = decimal.Parse(giaban);
+
+            // Tính giá trị tổng tiền
+            decimal totalValue = soLuong * giatien;
+            return totalValue;
         }
     }
 }

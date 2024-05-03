@@ -15,8 +15,7 @@ namespace DoANLapTrinhWin
     public partial class FYeuThich : Form
     {
         SanPhamDAO spDao = new SanPhamDAO();
-        public string tenTK;
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        string tenTK;
         public FYeuThich(string tenTK)
         {
             InitializeComponent();

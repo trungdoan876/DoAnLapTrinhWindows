@@ -14,7 +14,6 @@ namespace DoANLapTrinhWin
 {
     public partial class FDangKy : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         Global gl = new Global();
         private Guna2GradientButton btnOK;
         private string selctecOption = null;
@@ -42,9 +41,9 @@ namespace DoANLapTrinhWin
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
-            /*if (selctecOption == "Bán hàng")
+            if (selctecOption == "Bán hàng")
             {
-                NguoiBan ngban = new NguoiBan(this.txtDK.Text);
+                NguoiBan ngban = new NguoiBan(txtDK.Text);
                 int kt = ngbandao.KiemTraDangKy(ngban);
                 if (kt > 0)
                     MessageBox.Show("Số điện thoại đã được đăng ký!");
@@ -58,42 +57,9 @@ namespace DoANLapTrinhWin
                 if (kt > 0)
                     MessageBox.Show("Số điện thoại đã được đăng ký!");
                 else
-                    //Global.MoFormCon(new FThongTinDangKy(selctecOption, txtDK.Text), panelDK);
-            }*/
-            try
-            {
-                conn.Open();
-                if (selctecOption == "Bán hàng")
-                {
-                    string sql = string.Format("Select count(*) from NguoiBan WHERE SDT='{0}'",txtDK.Text);
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    int count = (int)cmd.ExecuteScalar();
-                    if (count > 0)
-                        MessageBox.Show("Số điện thoại đã được đăng ký!");
-                    else
-                        Global.MoFormCon(new FThongTinDangKy(selctecOption,txtDK.Text), panelDK);
-                }
-                else if (selctecOption == "Mua hàng")
-                {
-                    string sql = string.Format("Select count(*) from NguoiMua WHERE SDT='{0}'", txtDK.Text);
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    int count = (int)cmd.ExecuteScalar();
-                    if (count > 0)
-                        MessageBox.Show("Số điện thoại đã được đăng ký!");
-                    else
-                        Global.MoFormCon(new FThongTinDangKy(selctecOption, txtDK.Text), panelDK);
-                }    
-                
+                    Global.MoFormCon(new FThongTinDangKy(selctecOption, txtDK.Text), panelDK);
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
+            
         }
 
         private void btnBanHang_Click(object sender, EventArgs e)

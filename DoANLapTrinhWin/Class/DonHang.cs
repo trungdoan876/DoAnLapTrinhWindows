@@ -43,7 +43,17 @@ namespace DoANLapTrinhWin
             this.ngayDatHang = NgayDatHang;
             this.trangThaiDonHangNM = TrangThaiDonHang;
         }
-
+        //dùng cho FDatHang -> thêm vào đơn hàng
+        public DonHang (string MaDonHang,string MaNguoiBan,string MaNguoiMua,string TongTien,DateTime NgayDatHang,string TrangThaiDonHangNM,string TrangThaiDonHangNB)
+        {
+            this.MaDonHang = MaDonHang;
+            this.maNguoiBan= MaNguoiBan;
+            this.maNguoiMua= MaNguoiMua;
+            this.tongTien= TongTien;
+            this.ngayDatHang= NgayDatHang;
+            this.trangThaiDonHangNB = TrangThaiDonHangNB;
+            this.trangThaiDonHangNM= TrangThaiDonHangNM;
+        }
         public string MaDonHang { get => maDonHang; set => maDonHang = value; }
         public string MaNguoiBan { get => maNguoiBan; set => maNguoiBan = value; }
         public string MaNguoiMua { get => maNguoiMua; set => maNguoiMua = value; }

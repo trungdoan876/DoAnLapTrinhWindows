@@ -17,7 +17,6 @@ namespace DoANLapTrinhWin
 {
     public partial class FMuaHang : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string tenTaiKhoan;
         Global gl = new Global();
         SanPhamDAO spdao = new SanPhamDAO();    

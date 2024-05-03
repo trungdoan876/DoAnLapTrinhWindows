@@ -87,7 +87,7 @@ namespace DoANLapTrinhWin
                 }
                 else
                 {
-                    MessageBox.Show("Khong the dang nhap");
+                    MessageBox.Show("Không thể đăng nhập!");
                 }
             }
             else
@@ -107,7 +107,7 @@ namespace DoANLapTrinhWin
                 }
                 else
                 {
-                    MessageBox.Show("Khong the dang nhap");
+                    MessageBox.Show("Không thể đăng nhập!");
                 }
             } 
         }

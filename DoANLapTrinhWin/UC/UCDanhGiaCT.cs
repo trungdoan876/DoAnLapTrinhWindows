@@ -36,7 +36,7 @@ namespace DoANLapTrinhWin
             this.lblnhanxet.Text = dg.NhanXet;
             this.lblTenNM.Text = ng.Ten1;
             this.ratingsao.Value = dg.Sao1;
-             this.dtpNgayDG.Text = dg.Ngaydg.ToString();
+            this.dtpNgayDG.Text = dg.Ngaydg.ToString();
             LoadImagesFromDatabase(masp,ng.Ma,dg.Ngaydg.ToString());
         }
 

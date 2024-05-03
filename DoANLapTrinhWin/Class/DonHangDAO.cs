@@ -90,5 +90,12 @@ namespace DoANLapTrinhWin
             dt = tt.Load(sqlStr);
             return dt;
         }
+        //FDatHang -> tạo đơn hàng mới
+        public void TaoDonHang(DonHang dh)
+        {
+            string sql = string.Format("INSERT INTO DonHang (MaDonHang, MaNguoiMua, MaNguoiBan, TongTien, NgayDatHang, TrangThaiDonHangNM, TrangThaiDonHangNB) " +
+                    "VALUES('{0}','{1}','{2}','{3}','{4}',N'{5}',N'{6}')", dh.MaDonHang,dh.MaNguoiMua,dh.MaNguoiBan,dh.TongTien,dh.NgayDatHang,dh.TrangThaiDonHangNM,dh.TrangThaiDonHangNB);
+            tt.ThucThiKhong(sql);
+        }
     }
 }

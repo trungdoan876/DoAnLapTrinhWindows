@@ -16,7 +16,6 @@ namespace DoANLapTrinhWin
 {
     public partial class FDHDangThucHienNM : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         DonHangDAO dhDao = new DonHangDAO();
         string maNM;
         byte[] hinh;

@@ -21,5 +21,11 @@ namespace DoANLapTrinhWin.Class
             dt = tt.Load(sqlStr);
             return dt;
         }
+        public void ThemVaoChiTiet(ChiTietDonHang ctdh)
+        {
+            string sqlstr = string.Format("INSERT INTO ChiTietDonHang(MaDonHang, MaSanPham, SoLuong, GiaTien, TenSanPham) " +
+                "VALUES('{0}','{1}','{2}','{3}',N'{4}')", ctdh.MaDonHang,ctdh.MaSP,ctdh.SoLuong,ctdh.GiaTien,ctdh.TenSP);
+            tt.ThucThiKhong(sqlstr);
+        }
     }
 }

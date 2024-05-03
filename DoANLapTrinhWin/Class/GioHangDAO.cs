@@ -33,7 +33,7 @@ namespace DoANLapTrinhWin
         public void XoaGioHang(GioHang gh)
         {
             string sqlStr = string.Format("DELETE FROM GioHang WHERE MaSanPham = '{0}'", gh.MaSP);
-            tt.ThucThi(sqlStr);
+            tt.ThucThiKhong(sqlStr);
         }
         public DataSet HienGioHang(string maNM)
         {

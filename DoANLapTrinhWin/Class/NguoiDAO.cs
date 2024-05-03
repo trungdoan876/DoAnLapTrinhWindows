@@ -85,7 +85,7 @@ namespace DoANLapTrinhWin
         }
         public int KiemTraDangKy(Nguoi ng)
         {
-            string sql = string.Format("Select count(*) from {0} WHERE SDT='{1}'", Table,ng.SDT);
+            string sql = string.Format("Select count(*) from {0} WHERE SDT = '{1}' ", Table,ng.SDT);
             return tt.KetQuaDuyNhat(sql);
         }
     }

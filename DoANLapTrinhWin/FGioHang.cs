@@ -15,7 +15,6 @@ namespace DoANLapTrinhWin
 {
     public partial class FGioHang : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string maNM;
         int tongtien = 0;
         GioHangDAO ghdao = new GioHangDAO();

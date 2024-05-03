@@ -23,9 +23,14 @@ namespace DoANLapTrinhWin
         private string eMail;
         private string moTa;
         // dung cho nguoi mua
-        public Nguoi(string ma)
+/*        public Nguoi(string ma)
         {
             this.ma = ma;
+        }*/
+        //dùng cho đăng kí
+        public Nguoi(string sdt)
+        {
+            this.sDT = sdt;
         }
         //dùng cho đăng nhập
         public Nguoi(string ma, string matkhau)
@@ -40,7 +45,7 @@ namespace DoANLapTrinhWin
             this.Ten = ten;
             this.ma = ma;
         }
-        //dùng cho đăng kí
+        //dùng cho thông tin đăng kí
         public Nguoi(string ma, string mk,string ten, string sdt,  DateTime ngaySinh,string gt, string cccd, string diachi, byte[]hinh)
         {
             this.ma = ma;
