@@ -346,7 +346,7 @@
             this.dtpngaydang.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpngaydang.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpngaydang.Name = "dtpngaydang";
-            this.dtpngaydang.Size = new System.Drawing.Size(226, 36);
+            this.dtpngaydang.Size = new System.Drawing.Size(240, 36);
             this.dtpngaydang.TabIndex = 69;
             this.dtpngaydang.Value = new System.DateTime(2024, 4, 18, 9, 58, 34, 604);
             // 
@@ -515,6 +515,7 @@
             // 
             // picHeart
             // 
+            this.picHeart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picHeart.Image = ((System.Drawing.Image)(resources.GetObject("picHeart.Image")));
             this.picHeart.Location = new System.Drawing.Point(1097, 369);
             this.picHeart.Name = "picHeart";
@@ -633,6 +634,7 @@
             // btnShop
             // 
             this.btnShop.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnShop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShop.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnShop.HoverState.ImageSize = new System.Drawing.Size(50, 50);
             this.btnShop.Image = ((System.Drawing.Image)(resources.GetObject("btnShop.Image")));

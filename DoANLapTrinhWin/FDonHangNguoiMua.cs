@@ -12,24 +12,24 @@ namespace DoANLapTrinhWin
 {
     public partial class FDonHangNguoiMua : Form
     {
-        string maNM;
+        NguoiMua ngmua;
         Global gl = new Global();
-        public FDonHangNguoiMua(string maNM)
+        public FDonHangNguoiMua(NguoiMua ngMua)
         {
             InitializeComponent();
-            this.maNM = maNM;
-            Global.MoFormCon(new FDHDangThucHienNM(maNM), panel1);
+            this.ngmua = ngMua;
+            Global.MoFormCon(new FDHDangThucHienNM(ngmua), panel1);
             Global.TaoButton(btnDangThucHien, ref gl.btnOK);
         }
         private void btnDangThucHien_Click(object sender, EventArgs e)
         {
-            Global.MoFormCon(new FDHDangThucHienNM(maNM),panel1);
+            Global.MoFormCon(new FDHDangThucHienNM(ngmua),panel1);
             Global.TaoButton(btnDangThucHien, ref gl.btnOK);
         }
 
         private void btnDaGiao_Click(object sender, EventArgs e)
         {
-            Global.MoFormCon(new FDaGiaoNM(maNM), panel1);
+            Global.MoFormCon(new FDaGiaoNM(ngmua), panel1);
             Global.TaoButton(btnDaGiao, ref gl.btnOK);
         }
     }

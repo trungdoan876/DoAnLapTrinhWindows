@@ -17,7 +17,6 @@ namespace DoANLapTrinhWin
 {
     public partial class FCTSP : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         YeuThichDAO ytdao = new YeuThichDAO();
         GioHangDAO ghdao = new GioHangDAO();
         SanPhamDAO spdao = new SanPhamDAO();
@@ -28,7 +27,6 @@ namespace DoANLapTrinhWin
         SanPham sp;
         string maSP;
         bool picClick;
-        //string tenTK;
         byte[] hinh;
         public FCTSP()
         {

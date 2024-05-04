@@ -79,7 +79,6 @@ namespace DoANLapTrinhWin
         }
         private void LoadTT()
         {
-            MessageBox.Show("huhu");
             DataSet dtSet = ytdao.HienYeuThich();
             foreach (DataRow row in dtSet.Tables[0].Rows)
             {

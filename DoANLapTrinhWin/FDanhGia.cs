@@ -18,16 +18,15 @@ namespace DoANLapTrinhWin
     public partial class FDanhGia : Form
     {
         DonHang dh;
-        string maDH;
         byte[] hinh;
         private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
         private List<string> maSanPhamList = new List<string>();
         DanhGiaDAO dgdao = new DanhGiaDAO();
         HinhDanhGiaDAO hdgdao = new HinhDanhGiaDAO();
-        public FDanhGia(string maDH, DonHang dh)
+        public FDanhGia(DonHang dh)
         {
             InitializeComponent();
-            this.maDH = maDH;
+            this.Size = new Size(1000,600);
             this.dh = dh;
             LoadData();
         }

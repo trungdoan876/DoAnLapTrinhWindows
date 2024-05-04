@@ -57,35 +57,35 @@ namespace DoANLapTrinhWin
             dt = tt.Load(sqlStr);
             return dt;
         }
-        public DataSet DatHangThanhCong(string maNM)
+        public DataSet DatHangThanhCong(NguoiMua ngmua)
         {
             string sqlStr = string.Format("select DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat," +
                     "TrangThaiDonHangNM as TrangThaiDonHangNM, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
                     "FROM DonHang, (SELECT MaDonHang, MIN(MaSanPham) AS MaSanPham FROM ChiTietDonHang GROUP BY MaDonHang) Q, SanPham " +
                     "WHERE MaNguoiMua = '{0}' AND DonHang.MaDonHang = Q.MaDonHang AND SanPham.MaSanPham = Q.MaSanPham " +
-                    " AND TrangThaiDonHangNM = N'{1}'", maNM, "Đặt hàng thành công");
+                    " AND TrangThaiDonHangNM = N'{1}'", ngmua.Ma, "Đặt hàng thành công");
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
         }
-        public DataSet DangGiaoHangNM(string maNM)
+        public DataSet DangGiaoHangNM(NguoiMua ngmua)
         {
             string sqlStr = string.Format("select DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat," +
                     "TrangThaiDonHangNM as TrangThaiDonHangNM, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
                     "FROM DonHang, (SELECT MaDonHang, MIN(MaSanPham) AS MaSanPham FROM ChiTietDonHang GROUP BY MaDonHang) Q, SanPham " +
                     "WHERE MaNguoiMua = '{0}' AND DonHang.MaDonHang = Q.MaDonHang AND SanPham.MaSanPham = Q.MaSanPham " +
-                    " AND TrangThaiDonHangNM = N'{1}'", maNM, "Đang giao hàng");
+                    " AND TrangThaiDonHangNM = N'{1}'", ngmua.Ma, "Đang giao hàng");
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
         }
-        public DataSet DaGiaoNM(string maNM)
+        public DataSet DaGiaoNM(NguoiMua ngmua)
         {
             string sqlStr = string.Format("select DonHang.MaNguoiMua,SanPham.MaSanPham,DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat," +
                    "TrangThaiDonHangNB as TrangThaiDonHang, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
                    "FROM DonHang, (SELECT MaDonHang, MIN(MaSanPham) AS MaSanPham FROM ChiTietDonHang GROUP BY MaDonHang) Q, SanPham " +
                    "WHERE DonHang.MaNguoiMua = '{0}' AND DonHang.MaDonHang = Q.MaDonHang AND SanPham.MaSanPham = Q.MaSanPham AND TrangThaiDonHangNB='{1}'",
-                   maNM, "Giao hàng thành công");
+                   ngmua.Ma, "Giao hàng thành công");
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
@@ -96,6 +96,13 @@ namespace DoANLapTrinhWin
             string sql = string.Format("INSERT INTO DonHang (MaDonHang, MaNguoiMua, MaNguoiBan, TongTien, NgayDatHang, TrangThaiDonHangNM, TrangThaiDonHangNB) " +
                     "VALUES('{0}','{1}','{2}','{3}','{4}',N'{5}',N'{6}')", dh.MaDonHang,dh.MaNguoiMua,dh.MaNguoiBan,dh.TongTien,dh.NgayDatHang,dh.TrangThaiDonHangNM,dh.TrangThaiDonHangNB);
             tt.ThucThiKhong(sql);
+        }
+        public DataSet TaoMaDonHang()
+        {
+            string sql = string.Format("Select * from DonHang");
+            DataSet dt = new DataSet();
+            dt = tt.Load(sql);
+            return dt;
         }
     }
 }

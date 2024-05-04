@@ -35,11 +35,11 @@ namespace DoANLapTrinhWin
             string sqlStr = string.Format("DELETE FROM GioHang WHERE MaSanPham = '{0}'", gh.MaSP);
             tt.ThucThiKhong(sqlStr);
         }
-        public DataSet HienGioHang(string maNM)
+        public DataSet HienGioHang(NguoiMua ngmua)
         {
             string sqlStr = string.Format("SELECT SanPham.MaNguoiBan as maNB,SanPham.Hinh,SanPham.MaSanPham as MaSP, " +
                     "SanPham.TenSanPham as TenSP, SanPham.GiaBan as GiaBan, SanPham.TinhTrang as TinhTrang, SanPham.GiaGoc as GiaGoc, SanPham.DiaChi as DiaChi, SanPham.SoLuong as SL, GioHang.SoLuong as SLMua, GioHang.TrangThaiSP as TrangThai FROM GioHang, " +
-                    "SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'", maNM);
+                    "SanPham WHERE GioHang.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'", ngmua.Ma);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
@@ -50,18 +50,18 @@ namespace DoANLapTrinhWin
             string sqlStr = string.Format("UPDATE GioHang SET SoLuong = '{0}' WHERE MaSanPham = '{1}'", slmua, sp.MaSP);
             tt.ThucThiKhong(sqlStr);
         }
-        public DataSet LoadDatHang(string maNM)
+        public DataSet LoadDatHang(NguoiMua ngmua)
         {
             string sqlStr = string.Format("SELECT * From GioHang WHERE TrangThaiSP = '{0}' " +
-                    "and MaNguoiMua ='{1}'", 1, maNM);
+                    "and MaNguoiMua ='{1}'", 1, ngmua.Ma);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
         }
-        public DataSet LoadThongTinNguoiMuaTrongGioHang(string maNM)
+        public DataSet LoadThongTinNguoiMuaTrongGioHang(NguoiMua ngmua)
         {
             string sqlStr = string.Format("Select GioHang.MaNguoiMua, GioHang.MaSanPham, NguoiMua.Ten as ten, NguoiMua.DiaChi as diachi " +
-                    "FROM GioHang, NguoiMua WHERE GioHang.MaNguoiMua = NguoiMua.Ma AND NguoiMua.Ma = '{0}'", maNM);
+                    "FROM GioHang, NguoiMua WHERE GioHang.MaNguoiMua = NguoiMua.Ma AND NguoiMua.Ma = '{0}'", ngmua.Ma);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;

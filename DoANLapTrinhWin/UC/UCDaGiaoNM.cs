@@ -29,7 +29,7 @@ namespace DoANLapTrinhWin.UC
 
         private void btnDaNhanHang_Click(object sender, EventArgs e)
         {
-            FDanhGia fdh = new FDanhGia(dh.MaDonHang.ToString(),dh);
+            FDanhGia fdh = new FDanhGia(dh);
             fdh.ShowDialog();
         }
 

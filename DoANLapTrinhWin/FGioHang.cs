@@ -15,21 +15,21 @@ namespace DoANLapTrinhWin
 {
     public partial class FGioHang : Form
     {
-        string maNM;
         int tongtien = 0;
         GioHangDAO ghdao = new GioHangDAO();
         SanPham sp;
-        public FGioHang(string tenTK)
+        NguoiMua ngMua;
+        public FGioHang(NguoiMua ngmua)
         {
             InitializeComponent();
-            this.maNM = tenTK;
+            this.ngMua = ngmua;
             LoadGioHang();
         }
         //đoạn này mình thấy mình làm vẫn chưa đẹp lắm ý
         public void LoadGioHang()
         {
             DataSet ds = new DataSet();
-            ds = ghdao.HienGioHang(maNM);
+            ds = ghdao.HienGioHang(ngMua);
             Dictionary<string, UCTheoNB> dictUCTheoNB = new Dictionary<string, UCTheoNB>();
             int y = 0;
             int yc = 0;
@@ -87,7 +87,7 @@ namespace DoANLapTrinhWin
         }
         private void MuaHang_Click(object sender, EventArgs e)
         {
-            FDatHang fdh = new FDatHang(maNM, sp, tongtien);
+            FDatHang fdh = new FDatHang(ngMua, sp, tongtien);
             fdh.ShowDialog();
         }
     }
