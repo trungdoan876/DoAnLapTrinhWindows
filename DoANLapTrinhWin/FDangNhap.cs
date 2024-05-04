@@ -78,10 +78,12 @@ namespace DoANLapTrinhWin
                 if (dt.Rows.Count > 0)
                 {
                     this.Hide(); //an form 1
-                    FNguoiMua form2 = new FNguoiMua(ngmua);
+                    Loading load = new Loading(ngmua);
+                    load.Show();
+                    /*FNguoiMua form2 = new FNguoiMua(ngmua);
                     form2.ShowDialog();
                     form2 = null;
-                    this.Show();
+                    this.Show();*/
                     txtDangNhap.Text = null;
                     txtMatKhau.Text = null;
                 }
