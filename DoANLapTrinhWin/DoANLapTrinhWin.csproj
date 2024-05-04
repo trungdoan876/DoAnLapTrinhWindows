@@ -137,6 +137,12 @@
     <Compile Include="FDonHangNguoiMua.Designer.cs">
       <DependentUpon>FDonHangNguoiMua.cs</DependentUpon>
     </Compile>
+    <Compile Include="FSPNB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSPNB.Designer.cs">
+      <DependentUpon>FSPNB.cs</DependentUpon>
+    </Compile>
     <Compile Include="FThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -400,6 +406,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FSanPham.resx">
       <DependentUpon>FSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSPNB.resx">
+      <DependentUpon>FSPNB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThemSanPham.resx">
       <DependentUpon>FThemSanPham.cs</DependentUpon>

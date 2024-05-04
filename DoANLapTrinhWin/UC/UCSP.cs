@@ -21,6 +21,7 @@ namespace DoANLapTrinhWin
         SanPham sp;
         YeuThichDAO ytdao = new YeuThichDAO();
         Global gl = new Global();
+        NguoiBan ngban;
         string tenTK;
         private void UCSP_Load(object sender, EventArgs e)
         {

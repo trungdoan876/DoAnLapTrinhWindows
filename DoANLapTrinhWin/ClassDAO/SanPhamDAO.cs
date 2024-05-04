@@ -93,9 +93,17 @@ namespace DoANLapTrinhWin
             dt = tt.Load(sqlStr);
             return dt;
         }
+        public DataSet TatCaSanPhamNB(SanPham sp)
+        {
+            string sqlStr = string.Format("select * from SanPham WHERE MaNguoiBan = '{0}' AND DangBan ='{1}'", sp.MaNguoiBan,1);
+            //string sqlStr = string.Format("SELECT* FROM SanPham WHERE DangBan = '{0}'", 1);
+            DataSet dt = new DataSet();
+            dt = tt.Load(sqlStr);
+            return dt;
+        }
         public DataSet TatCaSanPham()
         {
-            string sqlStr = string.Format("select * from SanPham left join TimKiem on SanPham.NganhHang Like TimKiem.NganhHang " 
+            string sqlStr = string.Format("select * from SanPham left join TimKiem on SanPham.NganhHang Like TimKiem.NganhHang "
                 + "where DangBan = '{0}' order by TanSuatTimKiem desc", 1);
             //string sqlStr = string.Format("SELECT* FROM SanPham WHERE DangBan = '{0}'", 1);
             DataSet dt = new DataSet();

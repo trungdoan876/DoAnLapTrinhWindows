@@ -22,6 +22,8 @@ namespace DoANLapTrinhWin
         GioHangDAO ghdao = new GioHangDAO();
         SanPhamDAO spdao = new SanPhamDAO();
         DanhGiaDAO dgdao = new DanhGiaDAO();
+        NguoiBanDAO ngbandao = new NguoiBanDAO();
+        NguoiBan ngban;
         SanPham sp;
         Global gl = new Global();
         string maSP;
@@ -44,6 +46,7 @@ namespace DoANLapTrinhWin
             LoadHinh(sp.MaSP);
             LoadDanhGia();
             LoadSPChungNH(sp.NganhHang,sp.MaSP);
+            LoadNB(sp.MaNguoiBan);
         }
         public void LoadSPChungNH(string nganhhang,string masp)
         {
@@ -90,6 +93,20 @@ namespace DoANLapTrinhWin
             this.lblThoigiandasd.Text = sp.ThoiGianDaSuDung;
             this.lblSoLuong.Text = sp.SoLuong + " sản phẩm sẵn có";
             this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
+        }
+        private void LoadNB(string mnb)
+        {
+            DataTable dt = ngbandao.ThongTinNguoiBan(mnb);
+            foreach (DataRow row in dt.Rows)
+            {
+                lbltenNB.Text = row[2].ToString();
+                lblDiaChiNB.Text = row[7].ToString();
+                if (row[9] != DBNull.Value)
+                {
+                    hinh = (byte[])row[9];
+                }
+                picHinhNB.Image = Global.ByteArrayToImage(hinh);
+            }
         }
         private void LoadPicClick()
         {
@@ -181,6 +198,12 @@ namespace DoANLapTrinhWin
         private void picHeart_Click(object sender, EventArgs e)
         {
             traitim();
+        }
+
+        private void btnShop_Click(object sender, EventArgs e)
+        {
+            FSPNB form2 = new FSPNB(sp,sp.MaNguoiBan);
+            form2.ShowDialog();
         }
     }
 }

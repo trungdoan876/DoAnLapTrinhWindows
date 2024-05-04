@@ -66,36 +66,42 @@
             this.picHeart = new System.Windows.Forms.PictureBox();
             this.fpanelDanhGia = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.lblDiaChiNB = new System.Windows.Forms.Label();
-            this.btnShop = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lbltenNB = new System.Windows.Forms.Label();
             this.picHinhNB = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.fpanelSPChungNH = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnShop = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.panel1.SuspendLayout();
             this.vongtrontt.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.soluongmua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHeart)).BeginInit();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTenSP
             // 
-            this.lblTenSP.AutoSize = true;
+            this.lblTenSP.AutoEllipsis = true;
             this.lblTenSP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTenSP.Font = new System.Drawing.Font("Segoe UI Black", 26F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenSP.Font = new System.Drawing.Font("Segoe UI Black", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblTenSP.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.lblTenSP.Location = new System.Drawing.Point(0, 0);
             this.lblTenSP.Margin = new System.Windows.Forms.Padding(50);
+            this.lblTenSP.MaximumSize = new System.Drawing.Size(2000, 0);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(187, 70);
+            this.lblTenSP.Size = new System.Drawing.Size(506, 124);
             this.lblTenSP.TabIndex = 31;
             this.lblTenSP.Text = "TenSP";
+            this.lblTenSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // imageList1
             // 
@@ -105,7 +111,7 @@
             // 
             // picHinh
             // 
-            this.picHinh.Location = new System.Drawing.Point(440, 71);
+            this.picHinh.Location = new System.Drawing.Point(434, 60);
             this.picHinh.Margin = new System.Windows.Forms.Padding(2);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(626, 359);
@@ -158,7 +164,7 @@
             // 
             this.lblSoLuong.AutoSize = true;
             this.lblSoLuong.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblSoLuong.Location = new System.Drawing.Point(906, 453);
+            this.lblSoLuong.Location = new System.Drawing.Point(898, 442);
             this.lblSoLuong.Name = "lblSoLuong";
             this.lblSoLuong.Size = new System.Drawing.Size(16, 20);
             this.lblSoLuong.TabIndex = 77;
@@ -483,7 +489,7 @@
             this.soluongmua.BackColor = System.Drawing.Color.Transparent;
             this.soluongmua.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.soluongmua.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.soluongmua.Location = new System.Drawing.Point(771, 440);
+            this.soluongmua.Location = new System.Drawing.Point(763, 429);
             this.soluongmua.Margin = new System.Windows.Forms.Padding(8);
             this.soluongmua.Name = "soluongmua";
             this.soluongmua.Size = new System.Drawing.Size(112, 33);
@@ -501,7 +507,7 @@
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel7.Image = ((System.Drawing.Image)(resources.GetObject("bunifuCustomLabel7.Image")));
             this.bunifuCustomLabel7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(642, 440);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(634, 429);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(151, 33);
             this.bunifuCustomLabel7.TabIndex = 80;
@@ -510,7 +516,7 @@
             // picHeart
             // 
             this.picHeart.Image = ((System.Drawing.Image)(resources.GetObject("picHeart.Image")));
-            this.picHeart.Location = new System.Drawing.Point(1097, 380);
+            this.picHeart.Location = new System.Drawing.Point(1097, 369);
             this.picHeart.Name = "picHeart";
             this.picHeart.Size = new System.Drawing.Size(66, 50);
             this.picHeart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -539,48 +545,22 @@
             this.label2.TabIndex = 290;
             this.label2.Text = "    Đánh giá sản phẩm: ";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel3.Controls.Add(this.lblDiaChiNB);
-            this.panel3.Controls.Add(this.btnShop);
-            this.panel3.Controls.Add(this.lbltenNB);
-            this.panel3.Controls.Add(this.picHinhNB);
-            this.panel3.Location = new System.Drawing.Point(301, 502);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(912, 69);
-            this.panel3.TabIndex = 291;
-            // 
             // lblDiaChiNB
             // 
             this.lblDiaChiNB.AutoSize = true;
             this.lblDiaChiNB.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiaChiNB.ForeColor = System.Drawing.Color.Gray;
-            this.lblDiaChiNB.Location = new System.Drawing.Point(573, 21);
+            this.lblDiaChiNB.Location = new System.Drawing.Point(533, 21);
             this.lblDiaChiNB.Name = "lblDiaChiNB";
             this.lblDiaChiNB.Size = new System.Drawing.Size(64, 28);
             this.lblDiaChiNB.TabIndex = 3;
             this.lblDiaChiNB.Text = "label1";
             // 
-            // btnShop
-            // 
-            this.btnShop.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnShop.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnShop.Image = ((System.Drawing.Image)(resources.GetObject("btnShop.Image")));
-            this.btnShop.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnShop.ImageRotate = 0F;
-            this.btnShop.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnShop.Location = new System.Drawing.Point(824, 9);
-            this.btnShop.Name = "btnShop";
-            this.btnShop.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnShop.Size = new System.Drawing.Size(64, 57);
-            this.btnShop.TabIndex = 2;
-            // 
             // lbltenNB
             // 
             this.lbltenNB.AutoSize = true;
             this.lbltenNB.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltenNB.Location = new System.Drawing.Point(109, 21);
+            this.lbltenNB.Location = new System.Drawing.Point(154, 21);
             this.lbltenNB.Name = "lbltenNB";
             this.lbltenNB.Size = new System.Drawing.Size(64, 28);
             this.lbltenNB.TabIndex = 1;
@@ -589,10 +569,11 @@
             // picHinhNB
             // 
             this.picHinhNB.ImageRotate = 0F;
-            this.picHinhNB.Location = new System.Drawing.Point(23, 2);
+            this.picHinhNB.Location = new System.Drawing.Point(37, 2);
             this.picHinhNB.Name = "picHinhNB";
             this.picHinhNB.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.picHinhNB.Size = new System.Drawing.Size(64, 64);
+            this.picHinhNB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHinhNB.TabIndex = 0;
             this.picHinhNB.TabStop = false;
             // 
@@ -615,6 +596,68 @@
             this.label1.TabIndex = 293;
             this.label1.Text = "    Có thể bạn cũng thích: ";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(1109, 446);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 28);
+            this.label3.TabIndex = 294;
+            this.label3.Text = "Xem shop";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(1160, 476);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(27, 24);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 4;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.btnShop);
+            this.panel3.Controls.Add(this.lblDiaChiNB);
+            this.panel3.Controls.Add(this.lbltenNB);
+            this.panel3.Controls.Add(this.picHinhNB);
+            this.panel3.Location = new System.Drawing.Point(301, 502);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(912, 69);
+            this.panel3.TabIndex = 291;
+            // 
+            // btnShop
+            // 
+            this.btnShop.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnShop.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnShop.HoverState.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnShop.Image = ((System.Drawing.Image)(resources.GetObject("btnShop.Image")));
+            this.btnShop.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnShop.ImageRotate = 0F;
+            this.btnShop.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnShop.Location = new System.Drawing.Point(832, 4);
+            this.btnShop.Name = "btnShop";
+            this.btnShop.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnShop.Size = new System.Drawing.Size(64, 62);
+            this.btnShop.TabIndex = 4;
+            this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.Location = new System.Drawing.Point(319, 462);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 28);
+            this.label4.TabIndex = 295;
+            this.label4.Text = "    Shop: ";
+            // 
             // FCTSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -622,6 +665,9 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1757, 1106);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fpanelSPChungNH);
             this.Controls.Add(this.panel3);
@@ -648,12 +694,12 @@
             this.vongtrontt.ResumeLayout(false);
             this.vongtrontt.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.soluongmua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHeart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinhNB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHinhNB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -696,12 +742,15 @@
         private System.Windows.Forms.PictureBox picHeart;
         private System.Windows.Forms.FlowLayoutPanel fpanelDanhGia;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lbltenNB;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picHinhNB;
-        private Guna.UI2.WinForms.Guna2ImageButton btnShop;
         private System.Windows.Forms.Label lblDiaChiNB;
         private System.Windows.Forms.FlowLayoutPanel fpanelSPChungNH;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2ImageButton btnShop;
     }
 }
