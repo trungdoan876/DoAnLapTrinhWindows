@@ -54,7 +54,7 @@
             // 
             // guna2CircleProgressBar1
             // 
-            this.guna2CircleProgressBar1.AnimationSpeed = 1.5F;
+            this.guna2CircleProgressBar1.AnimationSpeed = 40F;
             this.guna2CircleProgressBar1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CircleProgressBar1.Controls.Add(this.label4);
             this.guna2CircleProgressBar1.Controls.Add(this.label_val);
@@ -69,8 +69,8 @@
             this.guna2CircleProgressBar1.Location = new System.Drawing.Point(30, -500);
             this.guna2CircleProgressBar1.Minimum = 0;
             this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
-            this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.LightCoral;
-            this.guna2CircleProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.Gold;
+            this.guna2CircleProgressBar1.ProgressColor2 = System.Drawing.Color.MediumTurquoise;
             this.guna2CircleProgressBar1.ProgressThickness = 550;
             this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleProgressBar1.Size = new System.Drawing.Size(2000, 2000);
@@ -96,11 +96,11 @@
             this.label_val.BackColor = System.Drawing.Color.Transparent;
             this.label_val.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_val.ForeColor = System.Drawing.Color.DarkGray;
-            this.label_val.Location = new System.Drawing.Point(951, 1065);
+            this.label_val.Location = new System.Drawing.Point(944, 1065);
             this.label_val.Name = "label_val";
-            this.label_val.Size = new System.Drawing.Size(45, 58);
+            this.label_val.Size = new System.Drawing.Size(65, 58);
             this.label_val.TabIndex = 12;
-            this.label_val.Text = "0";
+            this.label_val.Text = "50";
             // 
             // label3
             // 

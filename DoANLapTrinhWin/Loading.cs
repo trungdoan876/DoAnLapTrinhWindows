@@ -13,22 +13,48 @@ namespace DoANLapTrinhWin
     public partial class Loading : Form
     {
         NguoiMua ngmua;
-        public Loading(NguoiMua ngmua)
+        Nguoi ng;
+        string luachon;
+        NguoiBan ngban;
+
+        public Loading(NguoiMua ngmua,string luaChon)
         {
             InitializeComponent();
             this.Size = new Size(1200,600);
             this.ngmua = ngmua;
+            this.luachon = luaChon; 
         }
-
+       public Loading(NguoiBan ngban,string luaChon)
+        {
+            InitializeComponent();
+            this.Size = new Size(1200, 600);
+            this.ngban = ngban;
+            this.luachon = luaChon;
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (guna2CircleProgressBar1.Value == 100)
             {
                 timer1.Stop();
-
-                FNguoiMua form2 = new FNguoiMua(ngmua);
-                form2.ShowDialog();
-                this.Hide();
+                if (luachon == "Mua hàng")
+                {
+                    FNguoiMua form2 = new FNguoiMua(ngmua);
+                    form2.ShowDialog();
+                    this.Hide();
+                    form2 = null;
+                    FDangNhap dn = new FDangNhap();
+                    dn.ShowDialog();
+                }
+                else
+                {
+                    FNguoiBan form = new FNguoiBan(ngban);
+                    form.ShowDialog();
+                    this.Hide();
+                    form = null;
+                    FDangNhap dn = new FDangNhap();
+                    dn.ShowDialog();
+                } 
+                
             }
             else
             {
