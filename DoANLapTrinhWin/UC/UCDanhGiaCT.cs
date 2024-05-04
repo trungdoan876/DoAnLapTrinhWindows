@@ -19,7 +19,6 @@ namespace DoANLapTrinhWin
         string sao;
         byte[] hinh;
         string masp;
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         NguoiMua ngmua;
         DanhGia dg;
         DanhGiaDAO dgdao = new DanhGiaDAO();

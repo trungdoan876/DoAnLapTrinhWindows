@@ -16,7 +16,6 @@ namespace DoANLapTrinhWin
 {
     public partial class FDatHang : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPham sp;
         NguoiMua ngmua;
         string maNB;

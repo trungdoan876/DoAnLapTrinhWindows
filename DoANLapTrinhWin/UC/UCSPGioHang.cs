@@ -17,11 +17,6 @@ namespace DoANLapTrinhWin
         SanPham sp;
         string slmua ;
         GioHangDAO ghDAO = new GioHangDAO();
-        Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return Image.FromStream(ms);
-        }
         public UCSPGioHang(SanPham sanpham)
         {
             InitializeComponent();
@@ -33,7 +28,7 @@ namespace DoANLapTrinhWin
             this.lblgia.Text = "đ" + sp.GiaGoc;
             this.lblDiaChi.Text = sp.DiaChi;
             this.vongtrontt.Value = TinhTinhTrang();
-            this.picHinh.Image = ByteArrayToImage(sp.Hinh);
+            this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
         }
         public int TinhTinhTrang()
         {

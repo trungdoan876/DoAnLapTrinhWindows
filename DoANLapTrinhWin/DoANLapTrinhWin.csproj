@@ -61,9 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ButtonTuyChinh.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="ClassDAO\HinhDanhGiaDAO.cs" />
     <Compile Include="Class\ChiTietDonHang.cs" />
     <Compile Include="ClassDAO\ChiTietDonHangDAO.cs" />

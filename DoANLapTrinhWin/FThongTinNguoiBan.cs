@@ -18,7 +18,6 @@ namespace DoANLapTrinhWin
         NguoiBan ngBan;
         byte[] hinh;
         NguoiBanDAO nguoiDao = new NguoiBanDAO();
-        Global gt = new Global();
         public FThongTinNguoiBan(NguoiBan nguoiBan)
         {
             InitializeComponent();

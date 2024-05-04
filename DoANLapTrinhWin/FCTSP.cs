@@ -93,7 +93,7 @@ namespace DoANLapTrinhWin
             this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
         }
         //private void LoadNB(string mnb) -mnb???
-            private void LoadNB()
+        private void LoadNB()
         {
             DataTable dt = ngbandao.ThongTinNguoiBan(sp.MaNguoiBan);
             foreach (DataRow row in dt.Rows)

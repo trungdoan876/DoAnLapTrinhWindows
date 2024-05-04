@@ -16,7 +16,6 @@ namespace DoANLapTrinhWin
     {
         byte[] hinh;
         NguoiMuaDAO nguoimuaDao = new NguoiMuaDAO();
-        Global gt = new Global();
         NguoiMua ngMua;
         public FThongTinChiTietNguoiMua(NguoiMua ng)
         {
