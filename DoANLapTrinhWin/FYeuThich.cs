@@ -15,18 +15,18 @@ namespace DoANLapTrinhWin
     public partial class FYeuThich : Form
     {
         SanPhamDAO spDao = new SanPhamDAO();
-        string tenTK;
-        public FYeuThich(string tenTK)
+        NguoiMua ngmua;
+        public FYeuThich(NguoiMua ngmua)
         {
             InitializeComponent();
-            this.tenTK = tenTK;
+            this.ngmua = ngmua;
             LoadYeuThich();
         }
 
         public void LoadYeuThich()
         {
             DataSet ds = new DataSet();
-            ds = spDao.SanPhamYeuThich(tenTK);
+            ds = spDao.SanPhamYeuThich(ngmua.Ma);
             int x = 0;
             int y = 0;
             foreach (DataRow row in ds.Tables[0].Rows)
@@ -47,7 +47,7 @@ namespace DoANLapTrinhWin
                     row[13].ToString(),//sl
                     (byte[])row[0]//hinh
                     );
-                UCSP ucSP = new UCSP(sp, tenTK);
+                UCSP ucSP = new UCSP(sp, ngmua);
 
                 //vi tri moi uc
                 ucSP.Location = new Point(x, y);

@@ -53,16 +53,16 @@ namespace DoANLapTrinhWin
                     row[14].ToString(),
                     (byte[])row[0]
                 );
-                UCSP ucSP = new UCSP(sp, manb);
+                //UCSP ucSP = new UCSP(sp, manb);
                 //vi tri moi uc
-                ucSP.Location = new Point(x, y);
+                /*ucSP.Location = new Point(x, y);
                 x += ucSP.Width + 5;
                 if (x == ucSP.Width * 4)
                 {
                     x = 0;
                     y += ucSP.Height + 5;
                 }
-                panelSPNB.Controls.Add(ucSP);
+                panelSPNB.Controls.Add(ucSP);*/
             }
         }
 

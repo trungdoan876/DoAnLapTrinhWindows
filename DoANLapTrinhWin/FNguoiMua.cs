@@ -40,7 +40,7 @@ namespace DoANLapTrinhWin
         private void btnMuaHang_Click(object sender, EventArgs e)
         {
             Global.TaoButton(btnMuaHang, ref gl.btnOK);
-            Global.MoFormCon(new FMuaHang(ngMua.Ma), panelThan);
+            Global.MoFormCon(new FMuaHang(ngMua), panelThan);
         }
 
         private void btnGioHang_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace DoANLapTrinhWin
         private void btnYeuThich_Click(object sender, EventArgs e)
         {
             Global.TaoButton(btnYeuThich, ref gl.btnOK);
-            Global.MoFormCon(new FYeuThich(ngMua.Ma), panelThan);
+            Global.MoFormCon(new FYeuThich(ngMua), panelThan);
         }
     }
 }

@@ -24,23 +24,24 @@ namespace DoANLapTrinhWin
         DanhGiaDAO dgdao = new DanhGiaDAO();
         NguoiBanDAO ngbandao = new NguoiBanDAO();
         NguoiBan ngban;
+        NguoiMua ngmua;
         SanPham sp;
         Global gl = new Global();
         string maSP;
         bool picClick;
-        string tenTK;
+        //string tenTK;
         byte[] hinh;
         public FCTSP()
         {
             InitializeComponent();
         }
-        public FCTSP(SanPham sp,bool picClick,string tenTK)
+        public FCTSP(SanPham sp,bool picClick,NguoiMua ngmua)
         {
             InitializeComponent();
             this.Size = new Size(1200, 600);
             this.sp = sp;
             this.picClick = picClick;
-            this.tenTK = tenTK;
+            this.ngmua = ngmua;
             LoadThongTin();
             LoadPicClick();
             LoadHinh(sp.MaSP);
@@ -72,7 +73,7 @@ namespace DoANLapTrinhWin
                     row[14].ToString(),
                     (byte[])row[0]
                 );
-                UCSP ucSP = new UCSP(sp, tenTK);
+                UCSP ucSP = new UCSP(sp, ngmua);
                 fpanelSPChungNH.Controls.Add(ucSP);
             }
         }
@@ -160,7 +161,7 @@ namespace DoANLapTrinhWin
         private void btnThemVaoGio_Click_1(object sender, EventArgs e)
         {
             string slmua = soluongmua.Value.ToString();
-            GioHang gh = new GioHang(sp.MaSP,sp.TenSP,sp.GiaBan,int.Parse(slmua),sp.MaNguoiBan,tenTK,sp.Hinh);
+            GioHang gh = new GioHang(sp.MaSP,sp.TenSP,sp.GiaBan,int.Parse(slmua),sp.MaNguoiBan,ngmua.Ma,sp.Hinh);
             ghdao.ThemVaoGioHang(gh);
         }
         //mua ngay
@@ -184,14 +185,14 @@ namespace DoANLapTrinhWin
             if (picClick) //=true dang la tim do
             {
                 Global.TimDen(picHeart);
-                YeuThich yt = new YeuThich(sp.MaNguoiBan,tenTK,sp.MaSP);
+                YeuThich yt = new YeuThich(sp.MaNguoiBan,ngmua.Ma,sp.MaSP);
                 ytdao.XoaYeuThich(yt);
             }
             //ban dau la false nhan vao la true chuyen thanh mau do
             else
             {
                 Global.TimDo(picHeart);
-                YeuThich yt = new YeuThich(sp.MaNguoiBan, tenTK, sp.MaSP);
+                YeuThich yt = new YeuThich(sp.MaNguoiBan, ngmua.Ma, sp.MaSP);
                 ytdao.ThemYeuThich(yt);
             }
         }

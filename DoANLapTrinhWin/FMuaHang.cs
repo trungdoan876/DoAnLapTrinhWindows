@@ -18,14 +18,14 @@ namespace DoANLapTrinhWin
     public partial class FMuaHang : Form
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        string tenTaiKhoan;
         Global gl = new Global();
-        SanPhamDAO spdao = new SanPhamDAO();    
-        public FMuaHang(string tenTK)
+        SanPhamDAO spdao = new SanPhamDAO();
+        NguoiMua ngmua;
+        public FMuaHang(NguoiMua ngmua)
         {
             InitializeComponent();
             panelThongTin.Hide();
-            this.tenTaiKhoan = tenTK;
+            this.ngmua = ngmua;
         }
         public void LoadData()
         {
@@ -53,7 +53,7 @@ namespace DoANLapTrinhWin
                     row[14].ToString(),
                     (byte[])row[0]
                 );
-                UCSP ucSP = new UCSP(sp,tenTaiKhoan);
+                UCSP ucSP = new UCSP(sp,ngmua);
                 //vi tri moi uc
                 ucSP.Location = new Point(x, y);
                 x += ucSP.Width + 5;
@@ -91,7 +91,7 @@ namespace DoANLapTrinhWin
                     row[14].ToString(),
                     (byte[])row[0]
                 );
-                UCSP ucSP = new UCSP(sp, tenTaiKhoan);
+                UCSP ucSP = new UCSP(sp, ngmua);
                 //vi tri moi uc
                 ucSP.Location = new Point(x, y);
                 x += ucSP.Width + 5;
@@ -128,7 +128,7 @@ namespace DoANLapTrinhWin
                     row[14].ToString(),
                     (byte[])row[0]
                 );
-                UCSP ucSP = new UCSP(sp, tenTaiKhoan);
+                UCSP ucSP = new UCSP(sp, ngmua);
                 //vi tri moi uc
                 ucSP.Location = new Point(x, y);
                 x += ucSP.Width + 5;
@@ -260,13 +260,13 @@ namespace DoANLapTrinhWin
                 reader1.Close();
                 if(tanSuat == 0)
                 {
-                    string sqlStr = string.Format("INSERT INTO TimKiem (MaNguoiMua,TanSuatTimKiem,NganhHang) VALUES ('{0}','{1}',N'{2}')", tenTaiKhoan, 1, nganhHang);
+                    string sqlStr = string.Format("INSERT INTO TimKiem (MaNguoiMua,TanSuatTimKiem,NganhHang) VALUES ('{0}','{1}',N'{2}')", ngmua.Ma , 1, nganhHang);
                     SqlCommand cmd2 = new SqlCommand(sqlStr, conn);
                     cmd2.ExecuteNonQuery();
                 }
                 else //nếu đã có, cập nhật tuần suất lên 1
                 {
-                    string sqlStr = string.Format("UPDATE TimKiem SET TanSuatTimKiem ='{0}' WHERE MaNguoiMua ='{1}'and NganhHang =N'{2}'",tanSuat+1,tenTaiKhoan,nganhHang);
+                    string sqlStr = string.Format("UPDATE TimKiem SET TanSuatTimKiem ='{0}' WHERE MaNguoiMua ='{1}'and NganhHang =N'{2}'",tanSuat+1, ngmua.Ma,nganhHang);
                     SqlCommand cmd3 = new SqlCommand(sqlStr, conn);
                     cmd3.ExecuteNonQuery();
                 } 

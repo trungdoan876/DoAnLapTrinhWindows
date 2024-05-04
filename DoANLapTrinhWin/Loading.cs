@@ -13,7 +13,6 @@ namespace DoANLapTrinhWin
     public partial class Loading : Form
     {
         NguoiMua ngmua;
-        Nguoi ng;
         string luachon;
         NguoiBan ngban;
 
@@ -24,7 +23,7 @@ namespace DoANLapTrinhWin
             this.ngmua = ngmua;
             this.luachon = luaChon; 
         }
-       public Loading(NguoiBan ngban,string luaChon)
+        public Loading(NguoiBan ngban,string luaChon)
         {
             InitializeComponent();
             this.Size = new Size(1200, 600);

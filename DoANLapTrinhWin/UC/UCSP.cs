@@ -22,7 +22,7 @@ namespace DoANLapTrinhWin
         YeuThichDAO ytdao = new YeuThichDAO();
         Global gl = new Global();
         NguoiBan ngban;
-        string tenTK;
+        NguoiMua ngmua;
         private void UCSP_Load(object sender, EventArgs e)
         {
 
@@ -31,10 +31,10 @@ namespace DoANLapTrinhWin
         {
                InitializeComponent();
         }
-        public UCSP(SanPham sp,string tenTK)
+        public UCSP(SanPham sp,NguoiMua ngmua)
         {
             this.sp = sp;
-            this.tenTK= tenTK;
+            this.ngmua = ngmua;
             InitializeComponent();
             this.lblMaSP.Text = sp.MaSP;
             this.lblTenSP.Text = sp.TenSP;
@@ -46,7 +46,7 @@ namespace DoANLapTrinhWin
         private void UCSP_Click(object sender, EventArgs e)
         {
             this.Hide(); //an form 1
-            FCTSP formCTSP = new FCTSP(sp,picClick,tenTK);
+            FCTSP formCTSP = new FCTSP(sp,picClick,ngmua);
             formCTSP.ShowDialog();
             formCTSP = null;
             this.Show();  
@@ -58,14 +58,14 @@ namespace DoANLapTrinhWin
             if (picClick) //=true dang la tim do
             {
                 Global.TimDen(picHeart);
-                YeuThich yt = new YeuThich(sp.MaNguoiBan, tenTK, sp.MaSP);
+                YeuThich yt = new YeuThich(sp.MaNguoiBan, ngmua.Ma, sp.MaSP);
                 ytdao.XoaYeuThich(yt);
             }
             //ban dau la false nhan vao la true chuyen thanh mau do
             else
             {
                 Global.TimDo(picHeart);
-                YeuThich yt = new YeuThich(sp.MaNguoiBan, tenTK, sp.MaSP);
+                YeuThich yt = new YeuThich(sp.MaNguoiBan, ngmua.Ma, sp.MaSP);
                 ytdao.ThemYeuThich(yt);
             }
         }
@@ -79,7 +79,7 @@ namespace DoANLapTrinhWin
             DataSet dtSet = ytdao.HienYeuThich();
             foreach (DataRow row in dtSet.Tables[0].Rows)
             {
-                if (row[0].ToString() == sp.MaSP && row[1].ToString().Trim() == tenTK.Trim())
+                if (row[0].ToString() == sp.MaSP && row[1].ToString().Trim() == ngmua.Ma.Trim())
                 {
                     Global.TimDo(picHeart);
                     picClick = true;
