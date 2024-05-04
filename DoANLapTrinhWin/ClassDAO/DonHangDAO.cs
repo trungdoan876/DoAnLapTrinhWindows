@@ -24,35 +24,35 @@ namespace DoANLapTrinhWin
                     "Giao hàng thành công", "Giao hàng thành công", dh.MaDonHang);
             tt.ThucThi(sqlStr);
         }
-        public DataSet CapNhatGHThanhCongNB(string maNB)
+        public DataSet CapNhatGHThanhCongNB(NguoiBan ngban)
         {
             string sqlStr = string.Format("select DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat," +
                         "TrangThaiDonHangNB as TrangThaiDonHang, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
                         "FROM DonHang, (SELECT MaDonHang, MIN(MaSanPham) AS MaSanPham FROM ChiTietDonHang GROUP BY MaDonHang) Q, SanPham " +
                         "WHERE DonHang.MaNguoiBan = '{0}' AND DonHang.MaDonHang = Q.MaDonHang AND SanPham.MaSanPham = Q.MaSanPham AND TrangThaiDonHangNB='{1}'",
-                       maNB, "Giao hàng thành công");
+                       ngban.Ma, "Giao hàng thành công");
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
         }
-        public DataSet DangThucHienNB(string maNB)
+        public DataSet DangThucHienNB(NguoiBan ngban)
         {
             string sqlStr = string.Format("Select DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat," +
                     "TrangThaiDonHangNB as TrangThaiDonHangNB, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
                     "FROM DonHang, (SELECT MaDonHang, MIN(MaSanPham) AS MaSanPham FROM ChiTietDonHang GROUP BY MaDonHang) Q, SanPham " +
                     " WHERE DonHang.MaNguoiBan = '{0}' AND DonHang.MaDonHang = Q.MaDonHang AND SanPham.MaSanPham = Q.MaSanPham" +
-                    " AND DonHang.TrangThaiDonHangNB = N'{1}'", maNB, "Chuẩn bị hàng");
+                    " AND DonHang.TrangThaiDonHangNB = N'{1}'", ngban.Ma, "Chuẩn bị hàng");
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
         }
-        public DataSet DangGiaoHangNB(string maNB)
+        public DataSet DangGiaoHangNB(NguoiBan ngban)
         {
             string sqlStr = string.Format("select DonHang.MaDonHang as MaDonHang, TongTien as TongTien, NgayDatHang as NgDat," +
                     "TrangThaiDonHangNB as TrangThaiDonHangNB, SanPham.TenSanPham as TenSP, SanPham.Hinh as Hinh " +
                     "FROM DonHang, (SELECT MaDonHang, MIN(MaSanPham) AS MaSanPham FROM ChiTietDonHang GROUP BY MaDonHang) Q, SanPham " +
                     " WHERE DonHang.MaNguoiBan = '{0}' AND DonHang.MaDonHang = Q.MaDonHang AND SanPham.MaSanPham = Q.MaSanPham" +
-                    " AND DonHang.TrangThaiDonHangNB = N'{1}'", maNB, "Đang giao hàng");
+                    " AND DonHang.TrangThaiDonHangNB = N'{1}'", ngban.Ma, "Đang giao hàng");
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;

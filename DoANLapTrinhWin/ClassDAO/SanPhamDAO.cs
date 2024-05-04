@@ -72,23 +72,23 @@ namespace DoANLapTrinhWin
                 }
             }
         }
-        public DataSet LoadChuaDangBan(string maNB)
+        public DataSet LoadChuaDangBan(NguoiBan ngban)
         {
-            string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", maNB, 0);
+            string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", ngban.Ma, 0);
             DataSet dt = new DataSet();
             dt=tt.Load(sqlStr);
             return dt;
         }
-        public DataSet LoadDaDangBan(string maNB)
+        public DataSet LoadDaDangBan(NguoiBan ngban)
         {
-            string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", maNB, 1);
+            string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", ngban.Ma, 1);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
         }
-        public DataSet LoadDanhSachSanPham(string maNB)
+        public DataSet LoadDanhSachSanPham(NguoiBan ngban)
         {
-            string sqlStr = string.Format("SELECT * FROM SanPham WHERE MaNguoiBan ='{0}'", maNB);
+            string sqlStr = string.Format("SELECT * FROM SanPham WHERE MaNguoiBan ='{0}'", ngban.Ma);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
@@ -149,6 +149,14 @@ namespace DoANLapTrinhWin
             DataSet ds = new DataSet();
             ds = tt.LoadHinh(sqlStr, new SqlParameter("@id", masp));
             return ds;
+        }
+        //để tạo mã sản phẩm trong FThemSanPham
+        public DataSet TaoMaSP(string Table)
+        {
+            string sql = string.Format("select * from {0}", Table);
+            DataSet dt = new DataSet();
+            dt = tt.Load(sql);
+            return dt;
         }
     }
 }

@@ -23,7 +23,7 @@ namespace DoANLapTrinhWin
         //Trong bảng SanPham DangBan = 1 -> đã đăng bán
         private void LoadData()
         {
-            DataSet dt = spDao.LoadDaDangBan(ngBan.Ma);
+            DataSet dt = spDao.LoadDaDangBan(ngBan);
             int x = 0;
             int y = 0;
             foreach (DataRow row in dt.Tables[0].Rows)

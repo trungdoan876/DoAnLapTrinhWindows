@@ -17,7 +17,6 @@ namespace DoANLapTrinhWin
 {
     public partial class UCSP : UserControl
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPham sp;
         YeuThichDAO ytdao = new YeuThichDAO();
         Global gl = new Global();

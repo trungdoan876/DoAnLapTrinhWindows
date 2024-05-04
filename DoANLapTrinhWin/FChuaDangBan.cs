@@ -24,7 +24,7 @@ namespace DoANLapTrinhWin
         //DangBan trong bang SP = 0 -> chua dang ban
         public void LoadData()
         {
-            DataSet dt = spDao.LoadChuaDangBan(ngBan.Ma);
+            DataSet dt = spDao.LoadChuaDangBan(ngBan);
             int x = 0;
             int y = 0;
             foreach (DataRow row in dt.Tables[0].Rows)

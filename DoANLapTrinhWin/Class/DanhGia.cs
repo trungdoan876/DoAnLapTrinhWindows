@@ -10,24 +10,36 @@ namespace DoANLapTrinhWin.Class
     {
         private string maNM;
         private string maSP;
-        private int Sao;
-        private int saoNB;
-        private int saoGiaoHang;
+        private string sao;
+        private string saoNB;
+        private string saoGiaoHang;
         private string nhanXet;
         private DateTime ngaydg;
-        public DanhGia(string nhanxet, int sao, DateTime ngaydg, string masp)
+        private byte[] hinh;
+        //FCTSP
+        public DanhGia(string nhanxet, string sao, DateTime ngaydg, string masp)
         {
             this.nhanXet = nhanxet;
-            this.Sao = sao;
+            this.sao = sao;
             this.ngaydg = ngaydg;
             this.maSP = masp;
         }
-
+        //FDanhGia
+        public DanhGia(string maNM, string maSP, string sao, string saoNB, string saoGiaoHang, string nhanXet, DateTime ngaydg)
+        {
+            this.maNM = maNM;
+            this.maSP = maSP;
+            this.sao = sao;
+            this.saoNB = saoNB;
+            this.saoGiaoHang = saoGiaoHang;
+            this.nhanXet = nhanXet;
+            this.ngaydg = ngaydg;
+        }
         public string MaNM { get => maNM; set => maNM = value; }
         public string MaSP { get => maSP; set => maSP = value; }
-        public int Sao1 { get => Sao; set => Sao = value; }
-        public int SaoNB { get => saoNB; set => saoNB = value; }
-        public int SaoGiaoHang { get => saoGiaoHang; set => saoGiaoHang = value; }
+        public string Sao { get => sao; set => sao = value; }
+        public string SaoNB { get => saoNB; set => saoNB = value; }
+        public string SaoGiaoHang { get => saoGiaoHang; set => saoGiaoHang = value; }
         public string NhanXet { get => nhanXet; set => nhanXet = value; }
         public DateTime Ngaydg { get => ngaydg; set => ngaydg = value; }
     }

@@ -14,73 +14,47 @@ namespace DoANLapTrinhWin
 {
     public partial class FThongTinDangKy : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string loainguoi;
         string sdt;
         NguoiBanDAO ngdao = new NguoiBanDAO();
         NguoiMuaDAO ngmuadao = new NguoiMuaDAO();
-        Global gt =new Global();
-        public string TaoMaNB()
-        {
-            string sql = string.Format("select * from NguoiBan");
-            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            string ma = "";
-            if (dt.Rows.Count <= 0)
-            {
-                ma = "NB01";
-            }
-            else
-            {
-                int k;
-                ma = "NB0";
-                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 3));
-                k = k + 1;
-                ma = ma + k.ToString();
-            }
-            return ma;
-        }
-        public string TaoMaNM()
-        {
-            string sql = string.Format("select * from NguoiMua");
-            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            string ma = "";
-            if (dt.Rows.Count <= 0)
-            {
-                ma = "NM01";
-            }
-            else
-            {
-                int k;
-                ma = "NM0";
-                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 3));
-                k = k + 1;
-                ma = ma + k.ToString();
-            }
-            return ma;
-        }
+        NguoiDAO nguoidao = new NguoiDAO();
         public FThongTinDangKy(string loainguoi, string sdt)
         {
             InitializeComponent();
             this.loainguoi = loainguoi;
             this.sdt = sdt;
         }
-
+        public string TaoMa(string Table, string maBanDau)
+        {
+            DataSet dt = nguoidao.TaoMa(Table);
+            string ma = "";
+            if (dt.Tables[0].Rows.Count <= 0)
+            {
+                ma = maBanDau + "1";
+            }
+            else
+            {
+                int k;
+                ma = maBanDau; //="NB01"
+                k = Convert.ToInt32(dt.Tables[0].Rows[dt.Tables[0].Rows.Count - 1][0].ToString().Substring(2));
+                k = k + 1;
+                ma = ma + k.ToString();
+            }
+            return ma;
+        }
         private void btnDangKy_Click(object sender, EventArgs e)
         {
             byte[] b = Global.ImageToByteArray(picHinh.Image);
             if (loainguoi == "Bán hàng")
             {
-                string maNB = TaoMaNB();
+                string maNB = TaoMa("NguoiBan", "NB0");
                 NguoiBan ngban = new NguoiBan(maNB, txtMK.Text, txtHoTen.Text, sdt, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, b);
                 ngdao.DangKy(ngban);
             }
             else
             {
-                string maNM = TaoMaNM();
+                string maNM = TaoMa("NguoiMua", "NM0");
                 NguoiMua ng = new NguoiMua(maNM, txtMK.Text, txtHoTen.Text, sdt, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, b);
                 ngmuadao.DangKy(ng);
             } 
