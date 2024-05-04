@@ -78,10 +78,8 @@ namespace DoANLapTrinhWin
                 if (dt.Rows.Count > 0)
                 {
                     this.Hide(); //an form 1
-                    FNguoiMua form2 = new FNguoiMua(ngmua);
-                    form2.ShowDialog();
-                    form2 = null;
-                    this.Show();
+                    Loading load = new Loading(ngmua,selctecOption);
+                    load.Show();
                     txtDangNhap.Text = null;
                     txtMatKhau.Text = null;
                 }
@@ -97,10 +95,8 @@ namespace DoANLapTrinhWin
                 if (dt.Rows.Count > 0)
                 {
                     this.Hide(); //an form 1
-                    FNguoiBan form2 = new FNguoiBan(ngBan);
-                    form2.ShowDialog();
-                    form2 = null;
-                    this.Show();
+                    Loading load = new Loading(ngBan,selctecOption);
+                    load.Show();
                     txtDangNhap.Text = null;
                     txtMatKhau.Text = null;
                 }

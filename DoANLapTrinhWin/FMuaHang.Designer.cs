@@ -63,7 +63,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 29);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 30);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(64, 55);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -107,7 +107,7 @@
             this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimKiem.IconRight = ((System.Drawing.Image)(resources.GetObject("txtTimKiem.IconRight")));
             this.txtTimKiem.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.txtTimKiem.Location = new System.Drawing.Point(305, 27);
+            this.txtTimKiem.Location = new System.Drawing.Point(268, 27);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(6);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
@@ -404,9 +404,9 @@
             // 
             this.panelChiTiet.Controls.Add(this.panelThongTin);
             this.panelChiTiet.Controls.Add(this.pictureBox2);
-            this.panelChiTiet.Location = new System.Drawing.Point(1221, 0);
+            this.panelChiTiet.Location = new System.Drawing.Point(1111, 0);
             this.panelChiTiet.Name = "panelChiTiet";
-            this.panelChiTiet.Size = new System.Drawing.Size(445, 110);
+            this.panelChiTiet.Size = new System.Drawing.Size(499, 116);
             this.panelChiTiet.TabIndex = 35;
             this.panelChiTiet.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelChiTiet_MouseMove_1);
             // 
@@ -457,9 +457,9 @@
             // 
             this.panelThongTin.Controls.Add(this.btnThongTin);
             this.panelThongTin.Controls.Add(this.btnDonHang);
-            this.panelThongTin.Location = new System.Drawing.Point(242, 3);
+            this.panelThongTin.Location = new System.Drawing.Point(269, 3);
             this.panelThongTin.Name = "panelThongTin";
-            this.panelThongTin.Size = new System.Drawing.Size(228, 113);
+            this.panelThongTin.Size = new System.Drawing.Size(201, 113);
             this.panelThongTin.TabIndex = 37;
             this.panelThongTin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelThongTin_MouseDown);
             this.panelThongTin.MouseLeave += new System.EventHandler(this.panelThongTin_MouseLeave);
