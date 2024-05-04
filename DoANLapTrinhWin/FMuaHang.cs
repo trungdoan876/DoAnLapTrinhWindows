@@ -226,7 +226,7 @@ namespace DoANLapTrinhWin
                 }
                 conn.Open();
                 //lấy ngành hàng
-                string sql = string.Format("select distinct NganhHang From SanPham where TenSanPham LIKE N'%{0}%'",txtTimKiem.Text);
+                string sql = string.Format("select distinct NganhHang From SanPham where TenSanPham LIKE N'%{0}%'",txtTimKiem.Text.Trim());
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 string nganhHang = "";
@@ -242,7 +242,7 @@ namespace DoANLapTrinhWin
                 }
                 reader.Close();
                 //một lần tìm kiếm sẽ insert vào bảng nếu chưa có trong bảng
-                string sql1 = string.Format("Select TanSuatTimKiem From TimKiem where NganhHang =N'{0}'",nganhHang);
+                string sql1 = string.Format("Select TanSuatTimKiem From TimKiem where NganhHang like N'{0}'",nganhHang);
                 SqlCommand cmd1 = new SqlCommand(sql1, conn);
                 SqlDataReader reader1 = cmd1.ExecuteReader();
                 int tanSuat;
