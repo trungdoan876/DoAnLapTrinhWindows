@@ -76,6 +76,11 @@ namespace DoANLapTrinhWin
         }
         private void UCSP_Load_1(object sender, EventArgs e)
         {
+            LoadTT();
+        }
+        private void LoadTT()
+        {
+            MessageBox.Show("huhu");
             DataSet dtSet = ytdao.HienYeuThich();
             foreach (DataRow row in dtSet.Tables[0].Rows)
             {
