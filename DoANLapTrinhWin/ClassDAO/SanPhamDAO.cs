@@ -107,6 +107,13 @@ namespace DoANLapTrinhWin
             dt = tt.Load(sqlStr);
             return dt;
         }
+        public DataSet SanPhamChungNH(string nganhhang,string masp)
+        {
+            string sqlStr = string.Format("SELECT *FROM SanPham WHERE NganhHang = N'{0}' AND DangBan = '{1}' AND MaSanPham !='{2}'", nganhhang, 1,masp);
+            DataSet dt = new DataSet();
+            dt = tt.Load(sqlStr);
+            return dt;
+        }
         public DataSet TimKiemSanPham(string timkiem)
         {
             string sqlStr = string.Format("SELECT *FROM SanPham WHERE TenSanPham LIKE '%{0}%' AND DangBan = '{1}'", timkiem, 1);

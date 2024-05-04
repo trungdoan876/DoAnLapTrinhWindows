@@ -30,7 +30,7 @@ namespace DoANLapTrinhWin
         }
         private void picThemHinh_Click(object sender, EventArgs e)
         {
-            arrPicture = Global.CreateOpenFileDialogMoreNoClickTo(panelThemNhieuHinh,arrPicture);
+            arrPicture = Global.CreateOpenFileDialogMoreNoClick(panelThemNhieuHinh,arrPicture);
         }
 
         private void ratingsp_ValueChanged_1(object sender, EventArgs e)

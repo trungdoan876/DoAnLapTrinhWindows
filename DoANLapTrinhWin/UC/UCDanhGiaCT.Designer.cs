@@ -42,19 +42,19 @@
             // lblTenNM
             // 
             this.lblTenNM.AutoSize = true;
-            this.lblTenNM.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNM.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenNM.Location = new System.Drawing.Point(115, 15);
             this.lblTenNM.Name = "lblTenNM";
-            this.lblTenNM.Size = new System.Drawing.Size(64, 28);
+            this.lblTenNM.Size = new System.Drawing.Size(84, 32);
             this.lblTenNM.TabIndex = 0;
             this.lblTenNM.Text = "label1";
             // 
             // ratingsao
             // 
-            this.ratingsao.Location = new System.Drawing.Point(141, 58);
+            this.ratingsao.Location = new System.Drawing.Point(143, 55);
             this.ratingsao.Name = "ratingsao";
             this.ratingsao.RatingColor = System.Drawing.Color.Gold;
-            this.ratingsao.Size = new System.Drawing.Size(225, 37);
+            this.ratingsao.Size = new System.Drawing.Size(262, 40);
             this.ratingsao.TabIndex = 1;
             // 
             // lblnhanxet
@@ -70,9 +70,9 @@
             // 
             // panelHinh
             // 
-            this.panelHinh.Location = new System.Drawing.Point(31, 174);
+            this.panelHinh.Location = new System.Drawing.Point(21, 173);
             this.panelHinh.Name = "panelHinh";
-            this.panelHinh.Size = new System.Drawing.Size(790, 96);
+            this.panelHinh.Size = new System.Drawing.Size(852, 100);
             this.panelHinh.TabIndex = 3;
             // 
             // picHinhNM
@@ -94,7 +94,7 @@
             this.dtpNgayDG.FillColor = System.Drawing.Color.HotPink;
             this.dtpNgayDG.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpNgayDG.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgayDG.Location = new System.Drawing.Point(588, 4);
+            this.dtpNgayDG.Location = new System.Drawing.Point(627, 15);
             this.dtpNgayDG.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayDG.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgayDG.Name = "dtpNgayDG";
@@ -119,7 +119,7 @@
             this.Controls.Add(this.ratingsao);
             this.Controls.Add(this.lblTenNM);
             this.Name = "UCDanhGiaCT";
-            this.Size = new System.Drawing.Size(861, 286);
+            this.Size = new System.Drawing.Size(902, 286);
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

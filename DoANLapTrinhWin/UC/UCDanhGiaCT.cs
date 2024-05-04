@@ -51,7 +51,7 @@ namespace DoANLapTrinhWin
                 using (MemoryStream mss = new MemoryStream(imageBytes))
                 {
                     Image image = Image.FromStream(mss);
-                    PictureBox pic = Global.CreatePictureBoxNoClick(image);
+                    PictureBox pic = Global.CreatePictureBoxNoClickTo(image);
                     panelHinh.Controls.Add(pic);
                 }
             }

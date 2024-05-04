@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace DoANLapTrinhWin
@@ -18,12 +19,9 @@ namespace DoANLapTrinhWin
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPham sp;
-        SanPhamDAO spDAO = new SanPhamDAO();
         YeuThichDAO ytdao = new YeuThichDAO();
-        GioHangDAO ghdao = new GioHangDAO();
         Global gl = new Global();
         string tenTK;
-        string maNM;
         private void UCSP_Load(object sender, EventArgs e)
         {
 
@@ -75,62 +73,23 @@ namespace DoANLapTrinhWin
         {
             traitim();
         }
-        //tao class YeuThich
-        //phai sua lai bun ngu qua di ngu mai nho sua 
-        public class YeuThichItem
-        {
-            public string MaSanPham { get; set; }
-            public string MaNguoiMua { get; set; }
-
-            public YeuThichItem(string maSanPham, string maNguoiMua)
-            {
-                MaSanPham = maSanPham;
-                MaNguoiMua = maNguoiMua;
-            }
-        }
-
         private void UCSP_Load_1(object sender, EventArgs e)
         {
-            try
+            DataSet dtSet = ytdao.HienYeuThich();
+            foreach (DataRow row in dtSet.Tables[0].Rows)
             {
-                conn.Open();
-                string sqlStr = "SELECT MaSanPham, MaNguoiMua FROM YeuThich";
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
-                adapter.Fill(dtSet);
-
-                // Tạo một danh sách chứa các cặp (mã sản phẩm, mã người mua) từ kết quả truy vấn SQL
-                List<YeuThichItem> yeuThichList = new List<YeuThichItem>();
-                foreach (DataRow row in dtSet.Tables[0].Rows)
-                {
-                    string maSP = row["MaSanPham"].ToString();
-                    string maNM = row["MaNguoiMua"].ToString();
-                    yeuThichList.Add(new YeuThichItem(maSP, maNM));
-                }
-
-                // Kiểm tra xem cặp (mã sản phẩm hiện tại, mã người mua hiện tại) có trong danh sách yêu thích không
-                if (yeuThichList.Any(item => item.MaSanPham == sp.MaSP && item.MaNguoiMua.Trim() == tenTK.Trim()))
+                if (row[0].ToString() == sp.MaSP && row[1].ToString().Trim() == tenTK.Trim())
                 {
                     Global.TimDo(picHeart);
                     picClick = true;
+                    break;
                 }
                 else
                 {
                     Global.TimDen(picHeart);
                     picClick = false;
                 }
-
-
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            
         }
     }
 }

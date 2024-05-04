@@ -24,12 +24,11 @@ namespace DoANLapTrinhWin
                 , yt.MaSP, yt.MaNM, yt.MaNB);
             tt.ThucThi(sqlStr);
         }
-/*        public DataSet HienYeuThich()
+        public DataSet HienYeuThich()
         {
-            string sqlStr = "SELECT MaSanPham FROM YeuThich";
-            DataSet ds = new DataSet();
-            ds = tt.Load(sqlStr);
+            string sqlStr = "SELECT MaSanPham,MaNguoiMua FROM YeuThich";
+            DataSet ds = tt.Load(sqlStr);
             return ds;
-        }*/
+        }
     }
 }

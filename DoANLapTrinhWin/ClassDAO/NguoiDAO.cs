@@ -88,5 +88,12 @@ namespace DoANLapTrinhWin
             string sql = string.Format("Select Count(*) from {0} WHERE SDT = '{1}' ", Table,ng.SDT);
             return tt.KetQuaDuyNhat(sql);
         }
+        public DataTable HienNguoiBan(Nguoi ng)
+        {
+            string sql = string.Format("SELECT * FROM {0} WHERE Ma = '{1}' and MatKhau ='{2}'", Table, ng.Ma, ng.MatKhau);
+            DataTable dt = new DataTable();
+            dt = tt.DocDuLieu(sql);
+            return dt;
+        }
     }
 }

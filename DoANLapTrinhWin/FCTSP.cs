@@ -43,6 +43,35 @@ namespace DoANLapTrinhWin
             LoadPicClick();
             LoadHinh(sp.MaSP);
             LoadDanhGia();
+            LoadSPChungNH(sp.NganhHang,sp.MaSP);
+        }
+        public void LoadSPChungNH(string nganhhang,string masp)
+        {
+            DataSet dt = spdao.SanPhamChungNH(nganhhang,masp);
+
+            fpanelSPChungNH.AutoScroll = true;
+            foreach (DataRow row in dt.Tables[0].Rows)
+            {
+                SanPham sp = new SanPham
+                (
+                    row[1].ToString(),
+                    row[2].ToString(),
+                    "đ" + row[3].ToString(),
+                    "đ" + row[4].ToString(),
+                    row[5].ToString(),
+                    row[6].ToString(),
+                    (DateTime)row[7],
+                    row[8].ToString(),
+                    row[9].ToString(),
+                    row[10].ToString(),
+                    row[13].ToString(),
+                    row[12].ToString(),
+                    row[14].ToString(),
+                    (byte[])row[0]
+                );
+                UCSP ucSP = new UCSP(sp, tenTK);
+                fpanelSPChungNH.Controls.Add(ucSP);
+            }
         }
         private void LoadThongTin()
         {
@@ -153,6 +182,5 @@ namespace DoANLapTrinhWin
         {
             traitim();
         }
-
     }
 }

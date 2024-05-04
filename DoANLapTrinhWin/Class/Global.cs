@@ -81,16 +81,6 @@ namespace DoANLapTrinhWin
             pic.Cursor = Cursors.Hand;
             return pic;
         }
-        public static PictureBox CreatePictureBoxNoClick(Image image) //khong click
-        {
-            PictureBox pic = new PictureBox();
-            pic.Size = new Size(50, 50);
-            pic.Dock = DockStyle.Left;
-            pic.Image = image;
-            pic.SizeMode = PictureBoxSizeMode.Zoom;
-            pic.Cursor = Cursors.Hand;
-            return pic;
-        }
         public static PictureBox CreatePictureBox(System.Drawing.Image image, PictureBox picHinh) // co click
         {
             PictureBox pic = new PictureBox();
@@ -144,28 +134,13 @@ namespace DoANLapTrinhWin
             if (odlgOpenFile.ShowDialog() == DialogResult.OK)
             {
                 Image image = Image.FromFile(odlgOpenFile.FileName);
-                PictureBox pic = CreatePictureBoxNoClick(image);
-                panel.Controls.Add(pic);
-                arrPicture.Add(image);
-            }
-            return arrPicture;
-        }
-        //bo nhieu hinh (to) vao panel khong click
-        public static List<Image> CreateOpenFileDialogMoreNoClickTo(Panel panel, List<Image> arrPicture)
-        {
-            OpenFileDialog odlgOpenFile = new OpenFileDialog();
-            odlgOpenFile.InitialDirectory = "C:\\";
-            odlgOpenFile.Title = "Open File";
-            odlgOpenFile.Filter = "Image files (*.jpg)|*.jpg|All files (*.*)|*.*";
-            if (odlgOpenFile.ShowDialog() == DialogResult.OK)
-            {
-                Image image = Image.FromFile(odlgOpenFile.FileName);
                 PictureBox pic = CreatePictureBoxNoClickTo(image);
                 panel.Controls.Add(pic);
                 arrPicture.Add(image);
             }
             return arrPicture;
         }
+        //bo nhieu hinh (to) vao panel khong click
 
         public static void TimDo(PictureBox picHeart)
         {
