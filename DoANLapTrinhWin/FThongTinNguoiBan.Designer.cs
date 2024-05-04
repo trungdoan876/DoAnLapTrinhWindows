@@ -37,7 +37,6 @@
             this.picHinh = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnThemAnh = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGioiTinh = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCCCD = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,7 +56,6 @@
             this.panel1.Controls.Add(this.picHinh);
             this.panel1.Controls.Add(this.btnThemAnh);
             this.panel1.Controls.Add(this.txtDiaChi);
-            this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.txtGioiTinh);
             this.panel1.Controls.Add(this.txtSDT);
             this.panel1.Controls.Add(this.txtCCCD);
@@ -121,7 +119,7 @@
             this.guna2CircleProgressBar1.ProgressColor2 = System.Drawing.Color.MediumSlateBlue;
             this.guna2CircleProgressBar1.ProgressThickness = 15;
             this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(91, 91);
+            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(90, 90);
             this.guna2CircleProgressBar1.TabIndex = 226;
             this.guna2CircleProgressBar1.Value = 70;
             // 
@@ -206,7 +204,7 @@
             this.txtDiaChi.HoverState.FillColor = System.Drawing.Color.White;
             this.txtDiaChi.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDiaChi.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtDiaChi.IconLeft")));
-            this.txtDiaChi.Location = new System.Drawing.Point(518, 452);
+            this.txtDiaChi.Location = new System.Drawing.Point(518, 443);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
@@ -214,32 +212,6 @@
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.Size = new System.Drawing.Size(848, 53);
             this.txtDiaChi.TabIndex = 222;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
-            this.txtEmail.BorderColor = System.Drawing.Color.Black;
-            this.txtEmail.BorderRadius = 10;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultText = "";
-            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.LimeGreen;
-            this.txtEmail.HoverState.FillColor = System.Drawing.Color.White;
-            this.txtEmail.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmail.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtEmail.IconLeft")));
-            this.txtEmail.Location = new System.Drawing.Point(984, 338);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PasswordChar = '\0';
-            this.txtEmail.PlaceholderText = "";
-            this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(382, 53);
-            this.txtEmail.TabIndex = 221;
             // 
             // txtGioiTinh
             // 
@@ -258,7 +230,7 @@
             this.txtGioiTinh.HoverState.FillColor = System.Drawing.Color.White;
             this.txtGioiTinh.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtGioiTinh.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtGioiTinh.IconLeft")));
-            this.txtGioiTinh.Location = new System.Drawing.Point(518, 245);
+            this.txtGioiTinh.Location = new System.Drawing.Point(518, 339);
             this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGioiTinh.Name = "txtGioiTinh";
             this.txtGioiTinh.PasswordChar = '\0';
@@ -284,13 +256,13 @@
             this.txtSDT.HoverState.FillColor = System.Drawing.Color.White;
             this.txtSDT.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSDT.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSDT.IconLeft")));
-            this.txtSDT.Location = new System.Drawing.Point(518, 338);
+            this.txtSDT.Location = new System.Drawing.Point(984, 339);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderText = "";
             this.txtSDT.SelectedText = "";
-            this.txtSDT.Size = new System.Drawing.Size(373, 53);
+            this.txtSDT.Size = new System.Drawing.Size(382, 53);
             this.txtSDT.TabIndex = 219;
             // 
             // txtCCCD
@@ -337,7 +309,7 @@
             this.txtHoTen.HoverState.FillColor = System.Drawing.Color.White;
             this.txtHoTen.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtHoTen.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtHoTen.IconLeft")));
-            this.txtHoTen.Location = new System.Drawing.Point(518, 145);
+            this.txtHoTen.Location = new System.Drawing.Point(518, 245);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.PasswordChar = '\0';
@@ -364,13 +336,13 @@
             this.txtMaTaiKhoan.HoverState.FillColor = System.Drawing.Color.White;
             this.txtMaTaiKhoan.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMaTaiKhoan.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtMaTaiKhoan.IconLeft")));
-            this.txtMaTaiKhoan.Location = new System.Drawing.Point(133, 133);
+            this.txtMaTaiKhoan.Location = new System.Drawing.Point(518, 145);
             this.txtMaTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMaTaiKhoan.Name = "txtMaTaiKhoan";
             this.txtMaTaiKhoan.PasswordChar = '\0';
             this.txtMaTaiKhoan.PlaceholderText = "";
             this.txtMaTaiKhoan.SelectedText = "";
-            this.txtMaTaiKhoan.Size = new System.Drawing.Size(231, 53);
+            this.txtMaTaiKhoan.Size = new System.Drawing.Size(373, 53);
             this.txtMaTaiKhoan.TabIndex = 216;
             // 
             // dtpNgSinh
@@ -412,7 +384,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox picHinh;
         private Guna.UI2.WinForms.Guna2GradientButton btnThemAnh;
         private Guna.UI2.WinForms.Guna2TextBox txtDiaChi;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2TextBox txtGioiTinh;
         private Guna.UI2.WinForms.Guna2TextBox txtSDT;
         private Guna.UI2.WinForms.Guna2TextBox txtCCCD;

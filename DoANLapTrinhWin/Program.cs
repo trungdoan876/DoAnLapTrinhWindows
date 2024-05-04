@@ -16,10 +16,11 @@ namespace DoANLapTrinhWin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FDangNhap());
-            //Application.Run(new FNguoiMua("NM01"));
+            //Application.Run(new FDangNhap());
+            NguoiMua ngmua = new NguoiMua("NM01");
+            Application.Run(new FNguoiMua(ngmua));
             //Application.Run(new FNguoiBan("NB01"));
-            //Application.Run(new FGioHang("NM01"));
+            //Application.Run(new FMuaHang("NM01"));
             //Application.Run(new Loading());
         }
     }

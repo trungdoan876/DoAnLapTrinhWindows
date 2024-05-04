@@ -31,8 +31,8 @@ namespace DoANLapTrinhWin
         {
 
         }
-        public NguoiMua (byte[] hinh,string ma,string Ten, string SDT,DateTime ngaySinh,string gioiTinh,string CCCD,string diaChi,string eMail) 
-            : base (hinh,ma, Ten, SDT, ngaySinh, gioiTinh, CCCD, diaChi, eMail)
+        public NguoiMua (byte[] hinh,string ma,string Ten, string SDT,DateTime ngaySinh,string gioiTinh,string CCCD,string diaChi) 
+            : base (hinh,ma, Ten, SDT, ngaySinh, gioiTinh, CCCD, diaChi)
         {
         }
         public NguoiMua(byte[]hinh,string ten,string ma) : base(hinh,ten,ma)

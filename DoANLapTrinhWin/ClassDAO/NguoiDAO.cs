@@ -45,8 +45,8 @@ namespace DoANLapTrinhWin
         {
             string anh = BitConverter.ToString(nguoi.Hinh).Replace("-", "");
             string sqlStr = string.Format("UPDATE {0} SET Hinh = 0x{1}, Ten = N'{3}', SDT = '{4}', NgaySinh = '{5}', GioiTinh = N'{6}', " +
-                "CCCD = '{7}', DiaChi = N'{8}', Email = N'{9}', MoTaShop = N'{10}' WHERE Ma = '{2}'", Table, anh, nguoi.Ma, nguoi.Ten1, 
-                nguoi.SDT, nguoi.NgaySinh, nguoi.GioiTinh, nguoi.CCCD, nguoi.DiaChi, nguoi.EMail, nguoi.MoTa);
+                "CCCD = '{7}', DiaChi = N'{8}', MoTaShop = N'{9}' WHERE Ma = '{2}'", Table, anh, nguoi.Ma, nguoi.Ten1, 
+                nguoi.SDT, nguoi.NgaySinh, nguoi.GioiTinh, nguoi.CCCD, nguoi.DiaChi, nguoi.MoTa);
             tt.ThucThi(sqlStr);
         }
         public void CapNhatMua(Nguoi nguoi)
@@ -54,8 +54,8 @@ namespace DoANLapTrinhWin
             MessageBox.Show(Table);
             string anh = BitConverter.ToString(nguoi.Hinh).Replace("-", "");
             string sqlStr = string.Format("UPDATE {0} SET Hinh =0x{1}, Ten = N'{3}', SDT = '{4}', NgaySinh = '{5}', GioiTinh =N'{6}', " +
-                "CCCD = '{7}', DiaChi = N'{8}', Email =N'{9}' WHERE Ma='{2}'", Table, anh, nguoi.Ma, nguoi.Ten1, nguoi.SDT, nguoi.NgaySinh, nguoi.GioiTinh, nguoi.CCCD,
-                nguoi.DiaChi, nguoi.EMail);
+                "CCCD = '{7}', DiaChi = N'{8}' WHERE Ma='{2}'", Table, anh, nguoi.Ma, nguoi.Ten1, nguoi.SDT, nguoi.NgaySinh, nguoi.GioiTinh, nguoi.CCCD,
+                nguoi.DiaChi);
             tt.ThucThi(sqlStr);
         }
         public NguoiDAO() { }
@@ -85,7 +85,7 @@ namespace DoANLapTrinhWin
         }
         public int KiemTraDangKy(Nguoi ng)
         {
-            string sql = string.Format("Select count(*) from {0} WHERE SDT = '{1}' ", Table,ng.SDT);
+            string sql = string.Format("Select Count(*) from {0} WHERE SDT = '{1}' ", Table,ng.SDT);
             return tt.KetQuaDuyNhat(sql);
         }
     }

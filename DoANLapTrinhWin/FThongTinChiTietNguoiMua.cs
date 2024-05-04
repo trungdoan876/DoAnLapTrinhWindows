@@ -37,10 +37,9 @@ namespace DoANLapTrinhWin
                 txtCCCD.Text = row[5].ToString();
                 txtDiaChi.Text = row[6].ToString();
                 txtSDT.Text = row[7].ToString();
-                txtEmail.Text = row[8].ToString();
-                if (row[9] != DBNull.Value)
+                if (row[8] != DBNull.Value)
                 {
-                    hinh = (byte[])row[9];
+                    hinh = (byte[])row[8];
                 }
                 picHinh.Image = Global.ByteArrayToImage(hinh);
             }
@@ -53,7 +52,7 @@ namespace DoANLapTrinhWin
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            NguoiMua nguoimua = new NguoiMua(Global.ImageToByteArray(picHinh.Image), txtMaTaiKhoan.Text, txtHoTen.Text, txtSDT.Text, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, txtEmail.Text);
+            NguoiMua nguoimua = new NguoiMua(Global.ImageToByteArray(picHinh.Image), txtMaTaiKhoan.Text, txtHoTen.Text, txtSDT.Text, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text);
             nguoimuaDao.CapNhatMua(nguoimua);
         }
 

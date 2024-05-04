@@ -39,11 +39,10 @@ namespace DoANLapTrinhWin
                 txtCCCD.Text = row[6].ToString();
                 txtSDT.Text = row[3].ToString();
                 txtDiaChi.Text = row[7].ToString();
-                txtEmail.Text = row[8].ToString();
-                txtMoTa.Text = row[9].ToString();
-                if (row[10] != DBNull.Value)
+                txtMoTa.Text = row[8].ToString();
+                if (row[9] != DBNull.Value)
                 {
-                    hinh = (byte[])row[10];
+                    hinh = (byte[])row[9];
                 }
                 picHinh.Image = Global.ByteArrayToImage(hinh);
             }
@@ -56,7 +55,7 @@ namespace DoANLapTrinhWin
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            NguoiBan nguoiban = new NguoiBan(Global.ImageToByteArray(picHinh.Image), txtMaTaiKhoan.Text, txtHoTen.Text, txtSDT.Text, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, txtEmail.Text, txtMoTa.Text);
+            NguoiBan nguoiban = new NguoiBan(Global.ImageToByteArray(picHinh.Image), txtMaTaiKhoan.Text, txtHoTen.Text, txtSDT.Text, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, txtMoTa.Text);
             nguoiDao.CapNhat(nguoiban);
         }
 

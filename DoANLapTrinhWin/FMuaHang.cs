@@ -23,6 +23,7 @@ namespace DoANLapTrinhWin
         public FMuaHang(string tenTK)
         {
             InitializeComponent();
+            panelThongTin.Hide();
             this.tenTaiKhoan = tenTK;
         }
         public void LoadData()
@@ -217,6 +218,14 @@ namespace DoANLapTrinhWin
         private void txtTimKiem_IconRightClick(object sender, EventArgs e)
         {
             LoadTimKiem(txtTimKiem.Text.Trim());
+        }
+
+        private void thongTinNM_MouseHover_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("a");
+            panelThongTin.BringToFront();
+            panelThongTin.Show();
+            panelThongTin.BringToFront();
         }
     }
 }
