@@ -95,7 +95,9 @@ namespace DoANLapTrinhWin
         }
         public DataSet TatCaSanPham()
         {
-            string sqlStr = string.Format("SELECT* FROM SanPham WHERE DangBan = '{0}'", 1);
+            string sqlStr = string.Format("select * from SanPham left join TimKiem on SanPham.NganhHang Like TimKiem.NganhHang " 
+                + "where DangBan = '{0}' order by TanSuatTimKiem desc", 1);
+            //string sqlStr = string.Format("SELECT* FROM SanPham WHERE DangBan = '{0}'", 1);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
@@ -116,7 +118,7 @@ namespace DoANLapTrinhWin
         }
         public DataSet TimKiemSanPham(string timkiem)
         {
-            string sqlStr = string.Format("SELECT *FROM SanPham WHERE TenSanPham LIKE '%{0}%' AND DangBan = '{1}'", timkiem, 1);
+            string sqlStr = string.Format("SELECT * FROM SanPham WHERE TenSanPham LIKE N'%{0}%' AND DangBan = '{1}'", timkiem.Trim(), 1);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
