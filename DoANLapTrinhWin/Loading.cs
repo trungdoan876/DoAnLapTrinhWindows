@@ -54,7 +54,6 @@ namespace DoANLapTrinhWin
                     FDangNhap dn = new FDangNhap();
                     dn.ShowDialog();
                 } 
-                
             }
             else
             {
