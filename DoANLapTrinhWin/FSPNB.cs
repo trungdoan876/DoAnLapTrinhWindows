@@ -14,17 +14,21 @@ namespace DoANLapTrinhWin
     {
         SanPham sp;
         SanPhamDAO spdao = new SanPhamDAO();
-        string manb;
+        NguoiBan ngban;
+        NguoiMua ngmua;
+        NguoiDAO ngDao = new NguoiDAO();
         public FSPNB()
         {
             InitializeComponent();
         }
-        public FSPNB(SanPham sp, string manb)
+        public FSPNB(SanPham sp, NguoiBan ngBan,NguoiMua ngMua)
         {
             InitializeComponent();
-            this.sp = sp;
-            this.manb = manb;
             this.Size = new Size(1200, 600);
+            this.sp = sp;
+            this.ngban = ngBan;
+            this.ngmua = ngMua;
+            LayThongTinNB();
             LoadSP();
         }
         public void LoadSP()
@@ -53,22 +57,31 @@ namespace DoANLapTrinhWin
                     row[14].ToString(),
                     (byte[])row[0]
                 );
-                //UCSP ucSP = new UCSP(sp, manb);
+                UCSP ucSP = new UCSP(sp,ngmua); //sao truyền manb dô đây z 
                 //vi tri moi uc
-                /*ucSP.Location = new Point(x, y);
+                ucSP.Location = new Point(x, y);
                 x += ucSP.Width + 5;
                 if (x == ucSP.Width * 4)
                 {
                     x = 0;
                     y += ucSP.Height + 5;
                 }
-                panelSPNB.Controls.Add(ucSP);*/
+                panelSPNB.Controls.Add(ucSP);
             }
         }
 
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void LayThongTinNB()
+        {
+            DataSet ds = ngDao.LayThongTin(ngban);
+            foreach(DataRow r in ds.Tables[0].Rows)
+            {
+                this.picHinhNB.Image = Global.ByteArrayToImage((byte[])r[0]);
+                this.lbltenNB.Text = r[1].ToString();
+            }    
         }
     }
 }

@@ -41,6 +41,7 @@ namespace DoANLapTrinhWin
             this.lblGiaGoc.Text =  sp.GiaGoc ;
             this.lblDiaChi.Text = sp.DiaChi;
             this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
+            HienYeuThich();
         }
         private void UCSP_Click(object sender, EventArgs e)
         {
@@ -75,14 +76,14 @@ namespace DoANLapTrinhWin
         }
         private void UCSP_Load_1(object sender, EventArgs e)
         {
-            LoadTT();
+            //HienYeuThich();
         }
-        private void LoadTT()
+        private void HienYeuThich()
         {
             DataSet dtSet = ytdao.HienYeuThich();
             foreach (DataRow row in dtSet.Tables[0].Rows)
             {
-                if (row[0].ToString() == sp.MaSP && row[1].ToString().Trim() == ngmua.Ma.Trim())
+                if (row[0].ToString().Trim() == sp.MaSP.Trim() && row[1].ToString().Trim() == ngmua.Ma.Trim())
                 {
                     Global.TimDo(picHeart);
                     picClick = true;

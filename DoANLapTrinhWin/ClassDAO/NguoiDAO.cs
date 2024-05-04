@@ -95,10 +95,18 @@ namespace DoANLapTrinhWin
             string sql = string.Format("Select Count(*) from {0} WHERE SDT = '{1}' ", Table,ng.SDT);
             return tt.KetQuaDuyNhat(sql);
         }
-        //tạo mã người ->FDangKy
+        //tạo mã người -> FDangKy
         public DataSet TaoMa(string Table)
         {
             string sql = string.Format("select * from {0}", Table);
+            DataSet ds = new DataSet();
+            ds = tt.Load(sql);
+            return ds;
+        }
+        //FSPNB
+        public DataSet LayThongTin(NguoiBan ngban)
+        {
+            string sql = string.Format("select Hinh,Ten,Ma from NguoiBan WHERE Ma ='{0}'",ngban.Ma);
             DataSet ds = new DataSet();
             ds = tt.Load(sql);
             return ds;

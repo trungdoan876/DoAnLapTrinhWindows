@@ -22,12 +22,12 @@ namespace DoANLapTrinhWin
         SanPhamDAO spdao = new SanPhamDAO();
         DanhGiaDAO dgdao = new DanhGiaDAO();
         NguoiBanDAO ngbandao = new NguoiBanDAO();
-        NguoiBan ngban;
         NguoiMua ngmua;
         SanPham sp;
         string maSP;
         bool picClick;
         byte[] hinh;
+        NguoiBan nguoiBan;
         public FCTSP()
         {
             InitializeComponent();
@@ -44,7 +44,7 @@ namespace DoANLapTrinhWin
             LoadHinh(sp.MaSP);
             LoadDanhGia();
             LoadSPChungNH(sp.NganhHang,sp.MaSP);
-            LoadNB(sp.MaNguoiBan);
+            LoadNB();
         }
         public void LoadSPChungNH(string nganhhang,string masp)
         {
@@ -92,9 +92,10 @@ namespace DoANLapTrinhWin
             this.lblSoLuong.Text = sp.SoLuong + " sản phẩm sẵn có";
             this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
         }
-        private void LoadNB(string mnb)
+        //private void LoadNB(string mnb) -mnb???
+            private void LoadNB()
         {
-            DataTable dt = ngbandao.ThongTinNguoiBan(mnb);
+            DataTable dt = ngbandao.ThongTinNguoiBan(sp.MaNguoiBan);
             foreach (DataRow row in dt.Rows)
             {
                 lbltenNB.Text = row[2].ToString();
@@ -104,6 +105,7 @@ namespace DoANLapTrinhWin
                     hinh = (byte[])row[9];
                 }
                 picHinhNB.Image = Global.ByteArrayToImage(hinh);
+                nguoiBan = new NguoiBan((byte[])row[9], row[2].ToString(), sp.MaNguoiBan);
             }
         }
         private void LoadPicClick()
@@ -121,8 +123,6 @@ namespace DoANLapTrinhWin
         }
         private void LoadDanhGia()
         {
-            //nguoimua: hinh,ten
-            //danh gia: nhanxet,sao
             DataSet ds = dgdao.HienDanhGia(sp);
             foreach (DataRow row in ds.Tables[0].Rows)
             {
@@ -200,7 +200,7 @@ namespace DoANLapTrinhWin
 
         private void btnShop_Click(object sender, EventArgs e)
         {
-            FSPNB form2 = new FSPNB(sp,sp.MaNguoiBan);
+            FSPNB form2 = new FSPNB(sp,nguoiBan,ngmua);
             form2.ShowDialog();
         }
     }
