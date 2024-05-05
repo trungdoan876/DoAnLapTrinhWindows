@@ -15,31 +15,9 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         DBConnection tt = new DBConnection();
         string Table;
-        //này làm j z
         public NguoiDAO(string Table)
         {
             this.Table = Table;
-        }
-        public DataTable Load()
-        {
-            try
-            {
-                conn.Open();
-                string sqlStr = string.Format("SELECT *FROM {0}", Table);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                return dt;
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return null;
         }
         public void CapNhat(Nguoi nguoi)
         {
