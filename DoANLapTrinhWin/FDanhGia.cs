@@ -17,12 +17,12 @@ namespace DoANLapTrinhWin
 {
     public partial class FDanhGia : Form
     {
-        DonHang dh;
         byte[] hinh;
-        private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
-        private List<string> maSanPhamList = new List<string>();
+        DonHang dh;
         DanhGiaDAO dgdao = new DanhGiaDAO();
         HinhDanhGiaDAO hdgdao = new HinhDanhGiaDAO();
+        private List<string> maSanPhamList = new List<string>();
+        private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
         public FDanhGia(DonHang dh)
         {
             InitializeComponent();
@@ -47,7 +47,6 @@ namespace DoANLapTrinhWin
                 fpanelSP.Controls.Add(uc);
             }
         }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();

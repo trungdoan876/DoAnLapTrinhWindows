@@ -37,7 +37,7 @@ namespace DoANLapTrinhWin.UC
 
         private void UCDonHang_Click(object sender, EventArgs e)
         {
-            FCTDonHangNM fdh = new FCTDonHangNM(lblMaDH.Text);
+            FCTDonHangNM fdh = new FCTDonHangNM(dh);
             fdh.ShowDialog();
         }
 

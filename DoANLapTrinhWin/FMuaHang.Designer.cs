@@ -459,6 +459,7 @@
             // 
             // panelMuaHang
             // 
+            this.panelMuaHang.AutoScroll = true;
             this.panelMuaHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMuaHang.Location = new System.Drawing.Point(0, 205);
             this.panelMuaHang.Name = "panelMuaHang";

@@ -33,6 +33,7 @@
             // 
             // panelChuaDangBan
             // 
+            this.panelChuaDangBan.AutoScroll = true;
             this.panelChuaDangBan.BackColor = System.Drawing.Color.White;
             this.panelChuaDangBan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChuaDangBan.Location = new System.Drawing.Point(0, 0);
@@ -48,7 +49,6 @@
             this.Controls.Add(this.panelChuaDangBan);
             this.Name = "FChuaDangBan";
             this.Text = "FChuaDangBan";
-
             this.ResumeLayout(false);
 
         }

@@ -16,9 +16,9 @@ namespace DoANLapTrinhWin
 {
     public partial class FCTDonHangNB : Form
     {
+        DonHang dh;
         DonHangDAO dhDao = new DonHangDAO();
         ChiTietDonHangDAO ctdhDao = new ChiTietDonHangDAO();
-        DonHang dh;
         public FCTDonHangNB(DonHang dh)
         {
             InitializeComponent();

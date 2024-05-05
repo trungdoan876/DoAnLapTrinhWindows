@@ -41,7 +41,7 @@ namespace DoANLapTrinhWin.Class
             string sql = string.Format("INSERT INTO DanhGia (MaSanPham, MaNguoiMua, Sao, SaoNguoiBan, SaoGiaoHang, NhanXet,NgayDanhGia) " +
                             "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', N'{5}','{6}')",
                             dg.MaSP, dg.MaNM, dg.Sao, dg.SaoNB, dg.SaoGiaoHang, dg.NhanXet, dg.Ngaydg);
-            tt.ThucThi(sql);
+            tt.ThucThiKhong(sql);
         }
     }
 }

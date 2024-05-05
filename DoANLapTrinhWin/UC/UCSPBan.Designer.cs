@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSPBan));
             this.picHinh = new System.Windows.Forms.PictureBox();
             this.lblGiaTien = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.lblMaSP = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnXoaSP = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btnXoaSP = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXoaSP)).BeginInit();
             this.SuspendLayout();
             // 
             // picHinh
@@ -94,27 +97,27 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Giá tiền:";
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // btnXoaSP
             // 
-            this.btnXoaSP.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnXoaSP.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btnXoaSP.HoverState.ImageSize = new System.Drawing.Size(37, 37);
             this.btnXoaSP.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaSP.Image")));
-            this.btnXoaSP.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnXoaSP.ImageRotate = 0F;
-            this.btnXoaSP.ImageSize = new System.Drawing.Size(37, 37);
-            this.btnXoaSP.Location = new System.Drawing.Point(212, 258);
+            this.btnXoaSP.Location = new System.Drawing.Point(192, 260);
             this.btnXoaSP.Name = "btnXoaSP";
-            this.btnXoaSP.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnXoaSP.Size = new System.Drawing.Size(64, 54);
-            this.btnXoaSP.TabIndex = 36;
-            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click_1);
+            this.btnXoaSP.Size = new System.Drawing.Size(89, 63);
+            this.btnXoaSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnXoaSP.TabIndex = 37;
+            this.btnXoaSP.TabStop = false;
+            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
             // 
             // UCSPBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(210)))), ((int)(((byte)(224)))));
             this.Controls.Add(this.btnXoaSP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMaSP);
@@ -124,9 +127,10 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UCSPBan";
-            this.Size = new System.Drawing.Size(279, 324);
+            this.Size = new System.Drawing.Size(281, 326);
             this.Click += new System.EventHandler(this.UCSPBan_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXoaSP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,6 +142,7 @@
         public System.Windows.Forms.Label lblTenSP;
         public System.Windows.Forms.Label lblMaSP;
         public System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ImageButton btnXoaSP;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.PictureBox btnXoaSP;
     }
 }

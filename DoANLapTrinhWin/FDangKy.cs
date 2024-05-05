@@ -59,7 +59,6 @@ namespace DoANLapTrinhWin
                 else
                     Global.MoFormCon(new FThongTinDangKy(selctecOption, txtDK.Text), panelDK);
             }
-            
         }
 
         private void btnBanHang_Click(object sender, EventArgs e)

@@ -76,6 +76,8 @@ namespace DoANLapTrinhWin
                 ma = maBanDau; //="NB0"
                 k = Convert.ToInt32(ds.Tables[0].Rows[ds.Tables[0].Rows.Count - 1][1].ToString().Trim().Substring(2));
                 k = k + 1;
+                if(k<10)
+                   ma = ma + "0";
                 ma = ma + k.ToString();
             }
             return ma;
@@ -83,7 +85,7 @@ namespace DoANLapTrinhWin
 
         private void btnThemSanPham_Click(object sender, EventArgs e)
         {
-            SanPham sanPham = new SanPham(TaoMa("SanPham", "SP0"));
+            SanPham sanPham = new SanPham(TaoMa("SanPham", "SP"));
             Global.MoFormCon(new FThemSanPham(ngBan, sanPham), panelTatCaSP);
         }
     }

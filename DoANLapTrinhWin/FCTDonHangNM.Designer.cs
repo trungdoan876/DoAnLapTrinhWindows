@@ -211,6 +211,7 @@
             // 
             // panelDH
             // 
+            this.panelDH.AutoScroll = true;
             this.panelDH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDH.Location = new System.Drawing.Point(0, 71);
             this.panelDH.Name = "panelDH";

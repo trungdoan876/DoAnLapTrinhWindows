@@ -9,6 +9,7 @@ namespace DoANLapTrinhWin
     internal class NguoiMuaDAO :NguoiDAO
     {
         public NguoiMuaDAO():base("NguoiMua") 
-        { }
+        { 
+        }
     }
 }

@@ -17,16 +17,16 @@ namespace DoANLapTrinhWin
 {
     public partial class FCTSP : Form
     {
+        bool picClick;
+        byte[] hinh;
+        NguoiBan nguoiBan;
+        NguoiMua ngmua;
+        SanPham sp;
         YeuThichDAO ytdao = new YeuThichDAO();
         GioHangDAO ghdao = new GioHangDAO();
         SanPhamDAO spdao = new SanPhamDAO();
         DanhGiaDAO dgdao = new DanhGiaDAO();
         NguoiBanDAO ngbandao = new NguoiBanDAO();
-        NguoiMua ngmua;
-        SanPham sp;
-        bool picClick;
-        byte[] hinh;
-        NguoiBan nguoiBan;
         public FCTSP()
         {
             InitializeComponent();
@@ -159,6 +159,7 @@ namespace DoANLapTrinhWin
             string slmua = soluongmua.Value.ToString();
             GioHang gh = new GioHang(sp.MaSP,sp.TenSP,sp.GiaBan,int.Parse(slmua),sp.MaNguoiBan,ngmua.Ma,sp.Hinh);
             ghdao.ThemVaoGioHang(gh);
+            MessageBox.Show("Đã thêm vào giỏ hàng!");
         }
         //mua ngay
         private void btnMuaNgay_Click(object sender, EventArgs e)
@@ -183,6 +184,7 @@ namespace DoANLapTrinhWin
                 Global.TimDen(picHeart);
                 YeuThich yt = new YeuThich(sp.MaNguoiBan,ngmua.Ma,sp.MaSP);
                 ytdao.XoaYeuThich(yt);
+                MessageBox.Show("Đã xóa sản phẩm khỏi yêu thích! TT");
             }
             //ban dau la false nhan vao la true chuyen thanh mau do
             else
@@ -190,6 +192,7 @@ namespace DoANLapTrinhWin
                 Global.TimDo(picHeart);
                 YeuThich yt = new YeuThich(sp.MaNguoiBan, ngmua.Ma, sp.MaSP);
                 ytdao.ThemYeuThich(yt);
+                MessageBox.Show("Đã thêm sản phẩm vào yêu thích! <3");
             }
         }
         private void picHeart_Click(object sender, EventArgs e)

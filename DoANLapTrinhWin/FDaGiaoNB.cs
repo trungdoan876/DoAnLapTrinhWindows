@@ -13,8 +13,8 @@ namespace DoANLapTrinhWin
 {
     public partial class FDaGiaoNB : Form
     {
-        DonHangDAO dhDao = new DonHangDAO();
         NguoiBan ngban;
+        DonHangDAO dhDao = new DonHangDAO();
         public FDaGiaoNB(NguoiBan ngBan)
         {
             InitializeComponent();

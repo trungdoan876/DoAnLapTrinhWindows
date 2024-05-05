@@ -37,11 +37,12 @@ namespace DoANLapTrinhWin
             formCTSP = null;
             this.Show();
         }
-        private void btnXoaSP_Click_1(object sender, EventArgs e)
+        private void btnXoaSP_Click(object sender, EventArgs e)
         {
             SanPham sp = new SanPham(lblMaSP.Text);
             spDAO.XoaSanPham(sp);
             spDAO.XoaNhieuHinh(sp);
+            MessageBox.Show("Sản phẩm đã được xóa khỏi danh sách:( ");
         }
     }
 }

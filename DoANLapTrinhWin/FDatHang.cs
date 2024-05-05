@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using DoANLapTrinhWin.Class;
+using DoANLapTrinhWin.ClassDAO;
+using System.Windows.Documents;
 
 namespace DoANLapTrinhWin
 {
@@ -29,6 +31,7 @@ namespace DoANLapTrinhWin
         GioHangDAO ghDao = new GioHangDAO();
         DonHangDAO dhDao = new DonHangDAO();
         ChiTietDonHangDAO ctdhDao = new ChiTietDonHangDAO();
+        ThongKeDAO tkDao = new ThongKeDAO();
         public FDatHang(NguoiMua ngMua,SanPham sp, int tongtien)
         {
             InitializeComponent();
@@ -54,10 +57,13 @@ namespace DoANLapTrinhWin
             else
             {
                 int k;
-                ma = "DH0";
+                ma = "DH";
                 k = Convert.ToInt32(ds.Tables[0].Rows[ds.Tables[0].Rows.Count - 1][0].ToString().Substring(2));
                 k = k + 1;
+                if (k < 10)
+                    ma = ma + "0";
                 ma = ma + k.ToString();
+                MessageBox.Show(ma);
             }
             return ma;
         }
@@ -117,6 +123,52 @@ namespace DoANLapTrinhWin
                 uc.panelSP.Controls.Add(ucdh);
             }
         }
+        //dung cho thong ke
+        private void TinhSoLuotMuaSanPham(SanPham sanPham)
+        {
+            DataTable dta = tkDao.SoLuotMua(sanPham.MaSP);
+            int soLuot;
+            if (dta.Rows.Count > 0)
+            {
+                soLuot = Convert.ToInt32(dta.Rows[0][0]); // +1; //dta.Rows[0][0] là giá trị của cột đầu tiên của hàng đó.
+            }
+            else
+            {
+                soLuot = 0;
+            }
+            if (soLuot == 0)
+            {
+                tkDao.ThemLuotMua(sanPham.MaSP, sanPham.MaNguoiBan,soLuot + 1);
+            }
+            else //nếu đã có, cập nhật tuần suất lên 1
+            {
+                tkDao.CapNhatLuotMua(sanPham.MaSP, soLuot + 1);
+            }
+        }
+        private void TinhSoLanBanSanPham(SanPham sanPham)
+        {
+            DataTable dta = tkDao.LaySoLanBanRaTheoNgay(sanPham.MaNguoiBan);
+            int k = tkDao.KiemTraNgay(ngayhientai);
+            int soLan;
+            if (dta.Rows.Count > 0 && k > 0)
+            {
+                soLan = Convert.ToInt32(dta.Rows[0][0]); // +1; //dta.Rows[0][0] là giá trị của cột đầu tiên của hàng đó.
+            }
+            else
+            {
+                soLan = 0;
+            }
+            if (soLan == 0 && k == 0)
+            {
+                ThongKe tk = new ThongKe(sanPham.MaNguoiBan, DateTime.Now, soLan + 1);
+                tkDao.ThemSoLanBan(tk);
+            }
+            else //nếu đã có, cập nhật tuần suất lên 1
+            {
+                ThongKe tk = new ThongKe(sanPham.MaNguoiBan, DateTime.Now, soLan + 1);
+                tkDao.CapNhatSoLanBan(tk);
+            }
+        }
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -141,6 +193,9 @@ namespace DoANLapTrinhWin
                 dhDao.TaoDonHang(dh);
                 foreach (var sanPham in i)
                 {
+                    TinhSoLanBanSanPham(sanPham);
+                    TinhSoLuotMuaSanPham(sanPham);
+
                     decimal totalValue = tinhTien(sanPham);
                     ChiTietDonHang ct = new ChiTietDonHang(maDonHang,sanPham.MaSP,sanPham.SoLuong, totalValue.ToString(),sanPham.TenSP,sanPham.Hinh);
                     ctdhDao.ThemVaoChiTiet(ct);

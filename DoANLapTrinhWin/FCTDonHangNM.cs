@@ -17,13 +17,13 @@ namespace DoANLapTrinhWin
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         ChiTietDonHangDAO ctdhDao = new ChiTietDonHangDAO();
-        string maDH;
-        public FCTDonHangNM(string madh)
+        DonHang dh;
+        public FCTDonHangNM(DonHang dh)
         {
             InitializeComponent();
             this.Size = new Size(1200,600);
-            this.maDH = madh;
-            this.lblMaDH.Text = maDH.ToString();
+            this.dh = dh;
+            this.lblMaDH.Text = dh.MaDonHang.ToString();
             LoadData();
             TongTienDH();
         }
@@ -37,7 +37,7 @@ namespace DoANLapTrinhWin
                 conn.Open();
                 string sqlStr = string.Format("select TongTien, NgayDatHang " +
                     "FROM DonHang " +
-                    "WHERE MaDonHang = '{0}'",maDH);
+                    "WHERE MaDonHang = '{0}'", dh.MaDonHang);
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataSet dtSet = new DataSet();
                 adapter.Fill(dtSet);
@@ -62,7 +62,7 @@ namespace DoANLapTrinhWin
         }
         public void LoadData()
         {
-            ChiTietDonHang ctdh = new ChiTietDonHang(maDH);
+            ChiTietDonHang ctdh = new ChiTietDonHang(dh.MaDonHang);
             DataSet dt = new DataSet();
             dt = ctdhDao.HienChiTietDonHang(ctdh);
             foreach (DataRow row in dt.Tables[0].Rows)

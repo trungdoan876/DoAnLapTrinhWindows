@@ -92,11 +92,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassDAO\HinhDanhGiaDAO.cs" />
+    <Compile Include="ClassDAO\ThongKeDAO.cs" />
     <Compile Include="Class\ChiTietDonHang.cs" />
     <Compile Include="ClassDAO\ChiTietDonHangDAO.cs" />
     <Compile Include="Class\DanhGia.cs" />
     <Compile Include="ClassDAO\DanhGiaDAO.cs" />
     <Compile Include="Class\HinhDanhGia.cs" />
+    <Compile Include="Class\ThongKe.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Class\DonHang.cs" />
     <Compile Include="ClassDAO\DonHangDAO.cs" />
