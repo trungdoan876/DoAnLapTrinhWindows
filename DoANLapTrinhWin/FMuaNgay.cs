@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DoANLapTrinhWin
 {
-    public partial class FThanhToan : Form
+    public partial class FMuaNgay : Form
     {
         SanPham sp;
         System.Drawing.Image ByteArrayToImage(byte[] a)
@@ -19,11 +19,11 @@ namespace DoANLapTrinhWin
             MemoryStream ms = new MemoryStream(a);
             return System.Drawing.Image.FromStream(ms);
         }
-        public FThanhToan()
+        public FMuaNgay()
         {
             InitializeComponent();
         }
-        public FThanhToan(SanPham sp)
+        public FMuaNgay(SanPham sp)
         {
             this.sp = sp;
             InitializeComponent();
