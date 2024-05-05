@@ -17,7 +17,6 @@ namespace DoANLapTrinhWin
         SanPham sp;
         DonHang dh;
         public List<Image> arrPicture = new List<Image>();
-        Global gt = new Global();
         public UCDanhGiaNhieuSP(SanPham sp,DonHang dh)
         {
             InitializeComponent();

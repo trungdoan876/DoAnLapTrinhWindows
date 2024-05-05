@@ -46,13 +46,13 @@ namespace DoANLapTrinhWin
         private void btnGioHang_Click(object sender, EventArgs e)
         {
             Global.TaoButton(btnGioHang, ref gl.btnOK);
-            Global.MoFormCon(new FGioHang(ngMua.Ma), panelThan);
+            Global.MoFormCon(new FGioHang(ngMua), panelThan);
         }
 
         private void btnDonHang_Click(object sender, EventArgs e)
         {
             Global.TaoButton(btnDonHang, ref gl.btnOK);
-            Global.MoFormCon(new FDonHangNguoiMua(ngMua.Ma), panelThan);
+            Global.MoFormCon(new FDonHangNguoiMua(ngMua), panelThan);
         }
 
         private void btnYeuThich_Click(object sender, EventArgs e)

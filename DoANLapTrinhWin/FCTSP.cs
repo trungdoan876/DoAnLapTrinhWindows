@@ -17,20 +17,16 @@ namespace DoANLapTrinhWin
 {
     public partial class FCTSP : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         YeuThichDAO ytdao = new YeuThichDAO();
         GioHangDAO ghdao = new GioHangDAO();
         SanPhamDAO spdao = new SanPhamDAO();
         DanhGiaDAO dgdao = new DanhGiaDAO();
         NguoiBanDAO ngbandao = new NguoiBanDAO();
-        NguoiBan ngban;
         NguoiMua ngmua;
         SanPham sp;
-        Global gl = new Global();
-        string maSP;
         bool picClick;
-        //string tenTK;
         byte[] hinh;
+        NguoiBan nguoiBan;
         public FCTSP()
         {
             InitializeComponent();
@@ -44,14 +40,14 @@ namespace DoANLapTrinhWin
             this.ngmua = ngmua;
             LoadThongTin();
             LoadPicClick();
-            LoadHinh(sp.MaSP);
+            LoadHinh();
             LoadDanhGia();
-            LoadSPChungNH(sp.NganhHang,sp.MaSP);
-            LoadNB(sp.MaNguoiBan);
+            LoadSPChungNH();
+            LoadNB();
         }
-        public void LoadSPChungNH(string nganhhang,string masp)
+        public void LoadSPChungNH() //masp ?
         {
-            DataSet dt = spdao.SanPhamChungNH(nganhhang,masp);
+            DataSet dt = spdao.SanPhamChungNH(sp.NganhHang, sp.MaSP);
 
             fpanelSPChungNH.AutoScroll = true;
             foreach (DataRow row in dt.Tables[0].Rows)
@@ -95,9 +91,10 @@ namespace DoANLapTrinhWin
             this.lblSoLuong.Text = sp.SoLuong + " sản phẩm sẵn có";
             this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
         }
-        private void LoadNB(string mnb)
+        //private void LoadNB(string mnb) -mnb???
+        private void LoadNB()
         {
-            DataTable dt = ngbandao.ThongTinNguoiBan(mnb);
+            DataTable dt = ngbandao.ThongTinNguoiBan(sp.MaNguoiBan);
             foreach (DataRow row in dt.Rows)
             {
                 lbltenNB.Text = row[2].ToString();
@@ -107,6 +104,7 @@ namespace DoANLapTrinhWin
                     hinh = (byte[])row[9];
                 }
                 picHinhNB.Image = Global.ByteArrayToImage(hinh);
+                nguoiBan = new NguoiBan((byte[])row[9], row[2].ToString(), sp.MaNguoiBan);
             }
         }
         private void LoadPicClick()
@@ -124,22 +122,20 @@ namespace DoANLapTrinhWin
         }
         private void LoadDanhGia()
         {
-            //nguoimua: hinh,ten
-            //danh gia: nhanxet,sao
             DataSet ds = dgdao.HienDanhGia(sp);
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                 NguoiMua ngmua = new NguoiMua((byte[])row[0], row[1].ToString(), row[2].ToString());
-                DanhGia dg = new DanhGia(row[3].ToString(), (int)row[4], (DateTime)row[5], row[6].ToString());
+                DanhGia dg = new DanhGia(row[3].ToString(), row[4].ToString(), (DateTime)row[5], row[6].ToString());
                 UCDanhGiaCT uc = new UCDanhGiaCT(ngmua,dg);
                 fpanelDanhGia.Controls.Add(uc);
             }
         }
         //hien nhieu hinh
-        private void LoadHinh(string masp)
+        private void LoadHinh()
         {
             DataSet dt = new DataSet();
-            dt = spdao.LayHinhAnhTheoMaSanPham(masp);
+            dt = spdao.LayHinhAnhTheoMaSanPham(sp.MaSP);
             foreach (DataRow row in dt.Tables[0].Rows)
             {
                 byte[] imageBytes = (byte[])row["Hinh"];
@@ -203,7 +199,7 @@ namespace DoANLapTrinhWin
 
         private void btnShop_Click(object sender, EventArgs e)
         {
-            FSPNB form2 = new FSPNB(sp,sp.MaNguoiBan);
+            FSPNB form2 = new FSPNB(sp,nguoiBan,ngmua);
             form2.ShowDialog();
         }
     }

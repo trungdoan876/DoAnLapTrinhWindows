@@ -17,17 +17,13 @@ namespace DoANLapTrinhWin
     {
         private List<Image> arrPicture = new List<Image>();  
         SanPhamDAO spDAO = new SanPhamDAO();
-        Global gl = new Global(); 
-        public FThemSanPham(string maNB)
+        SanPham spham; //dùng để lấy mã sản phẩm tự động
+        public FThemSanPham(NguoiBan ngban, SanPham spham)
         {
             InitializeComponent();
-            this.lblMaNB.Text = maNB;
+            this.lblMaNB.Text = ngban.Ma;
+            this.txtMaSanPham.Text = spham.MaSP;
             cmbNganhHang.DisplayMember = "Text";
-        }
-
-        private void FSanPhamNguoiBan_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void tinhTrang_Scroll(object sender, ScrollEventArgs e)

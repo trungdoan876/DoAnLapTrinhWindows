@@ -72,23 +72,23 @@ namespace DoANLapTrinhWin
                 }
             }
         }
-        public DataSet LoadChuaDangBan(string maNB)
+        public DataSet LoadChuaDangBan(NguoiBan ngban)
         {
-            string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", maNB, 0);
+            string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", ngban.Ma, 0);
             DataSet dt = new DataSet();
             dt=tt.Load(sqlStr);
             return dt;
         }
-        public DataSet LoadDaDangBan(string maNB)
+        public DataSet LoadDaDangBan(NguoiBan ngban)
         {
-            string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", maNB, 1);
+            string sqlStr = string.Format("SELECT *FROM SanPham WHERE MaNguoiBan ='{0}'AND DangBan ='{1}'", ngban.Ma, 1);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
         }
-        public DataSet LoadDanhSachSanPham(string maNB)
+        public DataSet LoadDanhSachSanPham(NguoiBan ngban)
         {
-            string sqlStr = string.Format("SELECT * FROM SanPham WHERE MaNguoiBan ='{0}'", maNB);
+            string sqlStr = string.Format("SELECT * FROM SanPham WHERE MaNguoiBan ='{0}'", ngban.Ma);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
@@ -149,6 +149,39 @@ namespace DoANLapTrinhWin
             DataSet ds = new DataSet();
             ds = tt.LoadHinh(sqlStr, new SqlParameter("@id", masp));
             return ds;
+        }
+        //để tạo mã sản phẩm trong FThemSanPham
+        public DataSet TaoMaSP(string Table)
+        {
+            string sql = string.Format("select * from {0}", Table);
+            DataSet dt = new DataSet();
+            dt = tt.Load(sql);
+            return dt;
+        }
+        //đọc dữ liệu để lấy ngành hàng
+        public DataTable LayNganhHang(string nganhHang)
+        {
+            string sql = string.Format("select distinct NganhHang From SanPham where TenSanPham LIKE N'%{0}%'", nganhHang);
+            DataTable dt = new DataTable();
+            dt = tt.DocDuLieu(sql);
+            return dt;
+        }
+        public DataTable TanSuatTimKiem(string nganhHang,string maNM)
+        {
+            string sql1 = string.Format("Select TanSuatTimKiem From TimKiem where NganhHang like N'{0}' and MaNguoiMua ='{1}'", nganhHang,maNM);
+            DataTable dt = new DataTable();
+            dt = tt.DocDuLieu(sql1);
+            return dt;
+        }
+        public void ThemTanSuatVaoTimKiem(NguoiMua ngmua, string nganhHang)
+        {
+            string sqlStr = string.Format("INSERT INTO TimKiem (MaNguoiMua,TanSuatTimKiem,NganhHang) VALUES ('{0}','{1}',N'{2}')", ngmua.Ma, 1, nganhHang);
+            tt.ThucThiKhong(sqlStr);
+        }
+        public void CapNhatTanSuatTimKiem(NguoiMua ngmua, string nganhHang,int tanSuat)
+        {
+            string sqlStr = string.Format("UPDATE TimKiem SET TanSuatTimKiem ='{0}' WHERE MaNguoiMua ='{1}'and NganhHang =N'{2}'", tanSuat + 1, ngmua.Ma, nganhHang);
+            tt.ThucThiKhong(sqlStr);
         }
     }
 }

@@ -16,18 +16,18 @@ namespace DoANLapTrinhWin
     public partial class FDHDangThucHienNB : Form
     {
         DonHangDAO dhDao = new DonHangDAO();
-        string maNB;
-        public FDHDangThucHienNB(string maNB)
+        NguoiBan ngban;
+        public FDHDangThucHienNB(NguoiBan ngBan)
         {
             InitializeComponent();
-            this.maNB = maNB;
+            this.ngban = ngBan;
             LoadData();
             LoadData2();
         }
         public void LoadData()
         {
             DataSet ds = new DataSet();
-            ds=dhDao.DangThucHienNB(maNB);
+            ds=dhDao.DangThucHienNB(ngban);
             int y = 0;
             foreach (DataRow row in ds.Tables[0].Rows)
             {
@@ -54,7 +54,7 @@ namespace DoANLapTrinhWin
         public void LoadData2()
         {
             DataSet ds = new DataSet();
-            ds = dhDao.DangGiaoHangNB(maNB);
+            ds = dhDao.DangGiaoHangNB(ngban);
             int y = 0;
             foreach (DataRow row in ds.Tables[0].Rows)
             {

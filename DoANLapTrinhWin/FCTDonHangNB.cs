@@ -18,19 +18,19 @@ namespace DoANLapTrinhWin
     {
         DonHangDAO dhDao = new DonHangDAO();
         ChiTietDonHangDAO ctdhDao = new ChiTietDonHangDAO();
-        string maDH;
-        public FCTDonHangNB(string maDH)
+        DonHang dh;
+        public FCTDonHangNB(DonHang dh)
         {
             InitializeComponent();
             this.Size = new Size(1200, 600);
-            this.maDH = maDH;
-            this.lblMaDH.Text = maDH;
+            this.dh = dh;
+            this.lblMaDH.Text = dh.MaDonHang;
             LoadData();
         }
         int y = 0;
         public void LoadData()
         {
-            ChiTietDonHang ctdh = new ChiTietDonHang(maDH);
+            ChiTietDonHang ctdh = new ChiTietDonHang(dh.MaDonHang);
             DataSet dt = ctdhDao.HienChiTietDonHang(ctdh);
             foreach (DataRow row in dt.Tables[0].Rows)
             {
@@ -55,8 +55,8 @@ namespace DoANLapTrinhWin
 
         private void btnGiaoHang_Click(object sender, EventArgs e)
         {
-            DonHang dh = new DonHang(maDH);
-            dhDao.CapNhatGiaoHangNB(dh);
+            DonHang dhang = new DonHang(dh.MaDonHang);
+            dhDao.CapNhatGiaoHangNB(dhang);
         }
     }
 }

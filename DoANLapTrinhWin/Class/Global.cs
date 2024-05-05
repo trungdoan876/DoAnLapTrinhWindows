@@ -3,9 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DoANLapTrinhWin
@@ -17,7 +14,6 @@ namespace DoANLapTrinhWin
 
         public static void MoFormCon(Form form, Panel panel)
         {
-
             formcon = form;
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
@@ -109,7 +105,7 @@ namespace DoANLapTrinhWin
             return picHinh.Image;
         }
         //bo hinh vao panel co click
-        public static List<Image> CreateOpenFileDialogMore(PictureBox picHinh,Panel panel, List<Image> arrPicture)
+        public static List<Image> CreateOpenFileDialogMore(PictureBox picHinh, Panel panel, List<Image> arrPicture)
         {
             OpenFileDialog odlgOpenFile = new OpenFileDialog();
             odlgOpenFile.InitialDirectory = "C:\\";
@@ -118,7 +114,7 @@ namespace DoANLapTrinhWin
             if (odlgOpenFile.ShowDialog() == DialogResult.OK)
             {
                 Image image = Image.FromFile(odlgOpenFile.FileName);
-                PictureBox pic = CreatePictureBox(image,picHinh);
+                PictureBox pic = CreatePictureBox(image, picHinh);
                 panel.Controls.Add(pic);
                 arrPicture.Add(image);
             }

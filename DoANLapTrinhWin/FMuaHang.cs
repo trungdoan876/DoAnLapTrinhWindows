@@ -218,7 +218,33 @@ namespace DoANLapTrinhWin
         private void txtTimKiem_IconRightClick(object sender, EventArgs e)
         {
             LoadTimKiem(txtTimKiem.Text.Trim());
-            try
+            //tần suất tìm kiếm
+            DataTable dt = spdao.LayNganhHang(txtTimKiem.Text.Trim());
+            string nganhHang = "";
+            foreach (DataRow row in dt.Rows)
+            {
+                nganhHang = row[0].ToString();
+            }
+            int tanSuat;
+            DataTable dta  = spdao.TanSuatTimKiem(nganhHang,ngmua.Ma);
+            if (dta.Rows.Count>0)
+            {
+                // Đọc hàng đầu tiên 
+                tanSuat = Convert.ToInt32(dta.Rows[0][0]); // +1; //dta.Rows[0][0] là giá trị của cột đầu tiên của hàng đó.
+            }
+            else
+            {
+                tanSuat = 0;
+            }
+            if (tanSuat == 0)
+            {
+                spdao.ThemTanSuatVaoTimKiem(ngmua,nganhHang);
+            }
+            else //nếu đã có, cập nhật tuần suất lên 1
+            {
+                spdao.CapNhatTanSuatTimKiem(ngmua,nganhHang,tanSuat);
+            }
+            /*try
             {
                 if(conn.State == ConnectionState.Open)
                 {
@@ -279,7 +305,7 @@ namespace DoANLapTrinhWin
             finally
             {
                 conn.Close();
-            }
+            }*/
         }
 
         private void panelChiTiet_MouseMove_1(object sender, MouseEventArgs e)

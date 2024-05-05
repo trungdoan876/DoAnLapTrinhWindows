@@ -47,11 +47,11 @@
             this.btnKhac = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.panelMuaHang = new System.Windows.Forms.Panel();
             this.panelChiTiet = new System.Windows.Forms.Panel();
+            this.panelThongTin = new System.Windows.Forms.FlowLayoutPanel();
             this.btnThongTin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDonHang = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.panelThongTin = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelMuaHang = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -392,23 +392,27 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1767, 116);
             this.guna2CustomGradientPanel1.TabIndex = 32;
             // 
-            // panelMuaHang
-            // 
-            this.panelMuaHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMuaHang.Location = new System.Drawing.Point(0, 205);
-            this.panelMuaHang.Name = "panelMuaHang";
-            this.panelMuaHang.Size = new System.Drawing.Size(1767, 649);
-            this.panelMuaHang.TabIndex = 33;
-            // 
             // panelChiTiet
             // 
             this.panelChiTiet.Controls.Add(this.panelThongTin);
             this.panelChiTiet.Controls.Add(this.pictureBox2);
             this.panelChiTiet.Location = new System.Drawing.Point(1111, 0);
             this.panelChiTiet.Name = "panelChiTiet";
-            this.panelChiTiet.Size = new System.Drawing.Size(499, 116);
+            this.panelChiTiet.Size = new System.Drawing.Size(508, 116);
             this.panelChiTiet.TabIndex = 35;
             this.panelChiTiet.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelChiTiet_MouseMove_1);
+            // 
+            // panelThongTin
+            // 
+            this.panelThongTin.Controls.Add(this.btnThongTin);
+            this.panelThongTin.Controls.Add(this.btnDonHang);
+            this.panelThongTin.Location = new System.Drawing.Point(269, 3);
+            this.panelThongTin.Name = "panelThongTin";
+            this.panelThongTin.Size = new System.Drawing.Size(201, 113);
+            this.panelThongTin.TabIndex = 37;
+            this.panelThongTin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelThongTin_MouseDown);
+            this.panelThongTin.MouseLeave += new System.EventHandler(this.panelThongTin_MouseLeave);
+            this.panelThongTin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelThongTin_MouseMove);
             // 
             // btnThongTin
             // 
@@ -453,17 +457,13 @@
             this.btnDonHang.TabIndex = 1;
             this.btnDonHang.Text = "Đơn hàng";
             // 
-            // panelThongTin
+            // panelMuaHang
             // 
-            this.panelThongTin.Controls.Add(this.btnThongTin);
-            this.panelThongTin.Controls.Add(this.btnDonHang);
-            this.panelThongTin.Location = new System.Drawing.Point(269, 3);
-            this.panelThongTin.Name = "panelThongTin";
-            this.panelThongTin.Size = new System.Drawing.Size(201, 113);
-            this.panelThongTin.TabIndex = 37;
-            this.panelThongTin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelThongTin_MouseDown);
-            this.panelThongTin.MouseLeave += new System.EventHandler(this.panelThongTin_MouseLeave);
-            this.panelThongTin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelThongTin_MouseMove);
+            this.panelMuaHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMuaHang.Location = new System.Drawing.Point(0, 205);
+            this.panelMuaHang.Name = "panelMuaHang";
+            this.panelMuaHang.Size = new System.Drawing.Size(1767, 649);
+            this.panelMuaHang.TabIndex = 33;
             // 
             // FMuaHang
             // 

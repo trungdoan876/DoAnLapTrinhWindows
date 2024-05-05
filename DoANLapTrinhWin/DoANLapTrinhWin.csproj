@@ -91,13 +91,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ButtonTuyChinh.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="ClassDAO\HinhDanhGiaDAO.cs" />
     <Compile Include="Class\ChiTietDonHang.cs" />
     <Compile Include="ClassDAO\ChiTietDonHangDAO.cs" />
     <Compile Include="Class\DanhGia.cs" />
     <Compile Include="ClassDAO\DanhGiaDAO.cs" />
+    <Compile Include="Class\HinhDanhGia.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Class\DonHang.cs" />
     <Compile Include="ClassDAO\DonHangDAO.cs" />

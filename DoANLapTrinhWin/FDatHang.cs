@@ -16,9 +16,8 @@ namespace DoANLapTrinhWin
 {
     public partial class FDatHang : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPham sp;
-        string maNM;
+        NguoiMua ngmua;
         string maNB;
         int tongtien;
         string diachi;
@@ -30,35 +29,12 @@ namespace DoANLapTrinhWin
         GioHangDAO ghDao = new GioHangDAO();
         DonHangDAO dhDao = new DonHangDAO();
         ChiTietDonHangDAO ctdhDao = new ChiTietDonHangDAO();
-        
-        //tao ma don hang
-        public string TaoMaDonHang()
-        {
-            string sql = string.Format("Select * from DonHang");
-            SqlDataAdapter da = new SqlDataAdapter(sql,conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            string ma = "";
-            if (dt.Rows.Count <= 0)
-            {
-                ma = "DH01";
-            }
-            else
-            {
-                int k;
-                ma = "DH0";
-                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 3));
-                k = k + 1;
-                ma = ma + k.ToString();
-            }
-            return ma;
-        }
-        public FDatHang(string maNM,SanPham sp, int tongtien)
+        public FDatHang(NguoiMua ngMua,SanPham sp, int tongtien)
         {
             InitializeComponent();
             this.Size = new Size(1200, 600);
             this.sp = sp;
-            this.maNM = maNM;
+            this.ngmua = ngMua;
             this.tongtien = tongtien;
             this.lblTongTien.Text = "đ" + tongtien.ToString() + ".000";
             ThongTin();
@@ -66,10 +42,29 @@ namespace DoANLapTrinhWin
             this.lblDiaChi.Text = diachi;
             LoadData();
         }
+        public string TaoMaDonHang()
+        {
+            DataSet ds = dhDao.TaoMaDonHang();
+
+            string ma = "";
+            if (ds.Tables[0].Rows.Count <= 0)
+            {
+                ma = "DH01";
+            }
+            else
+            {
+                int k;
+                ma = "DH0";
+                k = Convert.ToInt32(ds.Tables[0].Rows[ds.Tables[0].Rows.Count - 1][0].ToString().Substring(2));
+                k = k + 1;
+                ma = ma + k.ToString();
+            }
+            return ma;
+        }
         public void ThongTin()
         {
             DataSet ds = new DataSet();
-            ds = ghDao.LoadThongTinNguoiMuaTrongGioHang(maNM);
+            ds = ghDao.LoadThongTinNguoiMuaTrongGioHang(ngmua);
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                 ten = row["ten"].ToString();
@@ -79,7 +74,7 @@ namespace DoANLapTrinhWin
          public void LoadData()
          {
             DataSet ds = new DataSet();
-            ds = ghDao.LoadDatHang(maNM);
+            ds = ghDao.LoadDatHang(ngmua);
             int yc = 0;
             int y = 0;
 
@@ -131,7 +126,7 @@ namespace DoANLapTrinhWin
             if(cmbThanhToan.Text =="Chuyển khoản")
             {
                 trangthai = "Đã thanh toán";
-                FChuyenKhoan fdh = new FChuyenKhoan(maNM, sp, tongtien,ten,diachi);
+                FChuyenKhoan fdh = new FChuyenKhoan(ngmua.Ma, sp, tongtien,ten,diachi);
                 fdh.ShowDialog();
             }
             else
@@ -142,7 +137,7 @@ namespace DoANLapTrinhWin
             foreach (var i in NhomNguoiBan)
             {
                 string maDonHang = TaoMaDonHang();
-                DonHang dh = new DonHang(maDonHang,i.Key, maNM, tongtien.ToString(), ngayhientai,"Đặt hàng thành công","Chuẩn bị hàng");
+                DonHang dh = new DonHang(maDonHang,i.Key, ngmua.Ma, tongtien.ToString(), ngayhientai,"Đặt hàng thành công","Chuẩn bị hàng");
                 dhDao.TaoDonHang(dh);
                 foreach (var sanPham in i)
                 {
@@ -154,6 +149,7 @@ namespace DoANLapTrinhWin
                     ghDao.XoaGioHang(gh);
                 }
             }
+            MessageBox.Show("Đặt hàng thành công");
         }
         private decimal tinhTien(SanPham sanPham)
         {

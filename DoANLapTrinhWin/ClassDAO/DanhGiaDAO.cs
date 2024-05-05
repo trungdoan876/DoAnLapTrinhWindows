@@ -22,9 +22,26 @@ namespace DoANLapTrinhWin.Class
         }
         public DataSet LayHinhAnhTheoMaSPvaMaNM(NguoiMua ng, DanhGia dg)
         {
-            string sqlStr = "SELECT Hinh FROM HinhDanhGia WHERE MaSanPham = @id AND MaNguoiMua = @ngmua AND NgayDanhGia=@ngaydg" ;
-            DataSet ds = tt.LoadHinh(sqlStr, new SqlParameter("@id", dg.MaSP),new SqlParameter("@ngmua", ng.Ma), new SqlParameter("@ngaydg", dg.Ngaydg));
+            string sqlStr = "SELECT Hinh FROM HinhDanhGia WHERE MaSanPham = @id AND MaNguoiMua = @ngmua AND NgayDanhGia=@ngaydg";
+            DataSet ds = tt.LoadHinh(sqlStr, new SqlParameter("@id", dg.MaSP), new SqlParameter("@ngmua", ng.Ma), new SqlParameter("@ngaydg", dg.Ngaydg));
             return ds;
+        }
+        //load thông tin để đánh giá trong FDanhGia
+        public DataSet LoadThongTinSanPham(DonHang dh)
+        {
+            string sqlStr = string.Format("SELECT MaDonHang, SanPham.MaSanPham,SanPham.TenSanPham, ChiTietDonHang.SoLuong AS slmua, ChiTietDonHang.GiaTien AS gtien, SanPham.Hinh " +
+                                "FROM ChiTietDonHang, SanPham " +
+                                "WHERE SanPham.MaSanPham = ChiTietDonHang.MaSanPham AND ChiTietDonHang.MaDonHang = '{0}'", dh.MaDonHang);
+            DataSet dt = new DataSet();
+            dt = tt.Load(sqlStr);
+            return dt;
+        }
+        public void ThemDanhGia(DanhGia dg)
+        {
+            string sql = string.Format("INSERT INTO DanhGia (MaSanPham, MaNguoiMua, Sao, SaoNguoiBan, SaoGiaoHang, NhanXet,NgayDanhGia) " +
+                            "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', N'{5}','{6}')",
+                            dg.MaSP, dg.MaNM, dg.Sao, dg.SaoNB, dg.SaoGiaoHang, dg.NhanXet, dg.Ngaydg);
+            tt.ThucThi(sql);
         }
     }
 }

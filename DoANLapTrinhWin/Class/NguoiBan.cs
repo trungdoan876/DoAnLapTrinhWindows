@@ -17,6 +17,10 @@ namespace DoANLapTrinhWin
         {
 
         }
+        public NguoiBan(byte[] hinh, string ten,string ma) : base(hinh,ten,ma)
+        {
+
+        }
         public NguoiBan (string sdt) : base(sdt)
         {
 

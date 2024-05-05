@@ -15,17 +15,17 @@ namespace DoANLapTrinhWin
     public partial class FDaGiaoNM : Form
     {
         DonHangDAO dhDao = new DonHangDAO();
-        string maNM;
-        public FDaGiaoNM(string maNM)
+        NguoiMua ngmua;
+        public FDaGiaoNM(NguoiMua ngMua)
         {
             InitializeComponent();
-            this.maNM = maNM;
+            this.ngmua = ngMua;
             LoadData();
         }
         public void LoadData()
         {
             DataSet dt = new DataSet();
-            dt = dhDao.DaGiaoNM(maNM); //them manb de hien len theo manb
+            dt = dhDao.DaGiaoNM(ngmua); //them manb de hien len theo manb
             foreach (DataRow row in dt.Tables[0].Rows)
             {
                 DonHang dh = new DonHang(row[2].ToString(), row[3].ToString(), (DateTime)row[4], row[5].ToString(), row[0].ToString());

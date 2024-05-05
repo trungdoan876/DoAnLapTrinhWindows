@@ -15,11 +15,6 @@ namespace DoANLapTrinhWin
     {
         SanPham sp;
         SanPhamDAO spDAO = new SanPhamDAO();
-        Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return Image.FromStream(ms);
-        }
         public UCSPBan()
         {
             InitializeComponent();
@@ -31,7 +26,7 @@ namespace DoANLapTrinhWin
             this.lblMaSP.Text = sp.MaSP;
             this.lblTenSP.Text = sp.TenSP;
             this.lblGiaTien.Text = sp.GiaBan + "VND";
-            this.picHinh.Image = ByteArrayToImage(sp.Hinh);
+            this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
         }
         private void UCSPBan_Click(object sender, EventArgs e)
         {

@@ -16,9 +16,7 @@ namespace DoANLapTrinhWin
     {
         private List<byte[]> byteImage = new List<byte[]>();
         private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPhamDAO spDao= new SanPhamDAO();
-        Global gl = new Global();
         public FCTSPSua()
         {
             InitializeComponent();

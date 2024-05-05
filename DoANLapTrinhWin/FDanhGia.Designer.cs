@@ -49,7 +49,7 @@
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(675, 89);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1420, 89);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
             // btnguii
@@ -65,7 +65,7 @@
             this.btnguii.ForeColor = System.Drawing.Color.White;
             this.btnguii.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnguii.HoverState.FillColor2 = System.Drawing.Color.Orange;
-            this.btnguii.Location = new System.Drawing.Point(592, 11);
+            this.btnguii.Location = new System.Drawing.Point(1304, 12);
             this.btnguii.Name = "btnguii";
             this.btnguii.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnguii.Size = new System.Drawing.Size(80, 65);
@@ -80,7 +80,7 @@
             this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(114, 12);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(114, 9);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.Size = new System.Drawing.Size(88, 74);
@@ -91,7 +91,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(208, 26);
+            this.label4.Location = new System.Drawing.Point(208, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(427, 60);
             this.label4.TabIndex = 1;
@@ -123,14 +123,14 @@
             this.fpanelSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fpanelSP.Location = new System.Drawing.Point(0, 89);
             this.fpanelSP.Name = "fpanelSP";
-            this.fpanelSP.Size = new System.Drawing.Size(675, 627);
-            this.fpanelSP.TabIndex = 1;
+            this.fpanelSP.Size = new System.Drawing.Size(1420, 627);
+            this.fpanelSP.TabIndex = 2;
             // 
             // FDanhGia
             // 
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(675, 716);
+            this.ClientSize = new System.Drawing.Size(1420, 716);
             this.Controls.Add(this.fpanelSP);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

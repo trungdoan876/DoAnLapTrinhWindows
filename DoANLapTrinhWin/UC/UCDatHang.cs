@@ -17,12 +17,6 @@ namespace DoANLapTrinhWin
     {
         SanPham sp;
         ChiTietDonHang ct;
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return Image.FromStream(ms);
-        }
         public UCDatHang(SanPham sp)
         {
             InitializeComponent();
@@ -31,7 +25,7 @@ namespace DoANLapTrinhWin
             this.lblGiaTien.Text = sp.GiaBan;
             this.lblsoluong.Text = sp.SoLuong;
             this.lblthanhtien.Text = TinhTienMoiSanPham(lblsoluong.Text, lblGiaTien.Text);
-            this.picHinh.Image = ByteArrayToImage(sp.Hinh);
+            this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
         }
         public UCDatHang(ChiTietDonHang ct)
         {
@@ -40,7 +34,7 @@ namespace DoANLapTrinhWin
             this.lblTenSP.Text = ct.TenSP;
             this.lblGiaTien.Text = ct.GiaTien;
             this.lblsoluong.Text = ct.SoLuong;
-            this.picHinh.Image = ByteArrayToImage(ct.Hinh);
+            this.picHinh.Image = Global.ByteArrayToImage(ct.Hinh);
             this.lblthanhtien.Text = TinhTienMoiSanPham(lblsoluong.Text, lblGiaTien.Text);  
         }
         public string TinhTienMoiSanPham(string soLuong, string giaTien)

@@ -21,11 +21,6 @@ namespace DoANLapTrinhWin
         private string cccd;
         private string diaChi;
         private string moTa;
-        // dung cho nguoi mua
-/*        public Nguoi(string ma)
-        {
-            this.ma = ma;
-        }*/
         //dùng cho đăng kí
         public Nguoi(string sdt)
         {
@@ -37,7 +32,7 @@ namespace DoANLapTrinhWin
             this.ma = ma;
             this.matKhau = matkhau;
         }
-        //dung cho danh gia
+        //dung cho danh gia,fctsp
         public Nguoi(byte[]hinh, string ten, string ma)
         {
             this.hinh = hinh;

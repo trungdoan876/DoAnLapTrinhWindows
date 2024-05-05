@@ -25,7 +25,7 @@ namespace DoANLapTrinhWin
         //đổ dữ liệu vào user control trong danh sách sản phẩm
         private void LoadData()
         {
-            DataSet dt = spDao.LoadDanhSachSanPham(ngBan.Ma);
+            DataSet dt = spDao.LoadDanhSachSanPham(ngBan);
             int x = panelThem.Width + 5;
             int y = 0;
             foreach (DataRow row in dt.Tables[0].Rows)
@@ -61,10 +61,30 @@ namespace DoANLapTrinhWin
         {
             LoadData();
         }
+        //tạo mã sản phẩm
+        public string TaoMa(string Table, string maBanDau)
+        {
+            DataSet ds = spDao.TaoMaSP(Table);
+            string ma = "";
+            if (ds.Tables[0].Rows.Count <= 0)
+            {
+                ma = maBanDau + "1";
+            }
+            else
+            {
+                int k;
+                ma = maBanDau; //="NB0"
+                k = Convert.ToInt32(ds.Tables[0].Rows[ds.Tables[0].Rows.Count - 1][1].ToString().Trim().Substring(2));
+                k = k + 1;
+                ma = ma + k.ToString();
+            }
+            return ma;
+        }
 
         private void btnThemSanPham_Click(object sender, EventArgs e)
         {
-            Global.MoFormCon(new FThemSanPham(ngBan.Ma),panelTatCaSP);
+            SanPham sanPham = new SanPham(TaoMa("SanPham", "SP0"));
+            Global.MoFormCon(new FThemSanPham(ngBan, sanPham), panelTatCaSP);
         }
     }
 }

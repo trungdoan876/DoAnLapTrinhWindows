@@ -16,10 +16,9 @@ namespace DoANLapTrinhWin
     public partial class UCDanhGiaCT : UserControl
     {
         string ten, nx;
-        int sao;
+        string sao;
         byte[] hinh;
         string masp;
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         NguoiMua ngmua;
         DanhGia dg;
         DanhGiaDAO dgdao = new DanhGiaDAO();
@@ -30,13 +29,13 @@ namespace DoANLapTrinhWin
             this.ngmua = ng;
             this.ten = ng.Ten1;
             this.nx = dg.NhanXet;
-            this.sao = dg.Sao1;
+            this.sao = dg.Sao;
             this.hinh = ng.Hinh;
             this.masp = dg.MaSP;
             this.picHinhNM.Image = Global.ByteArrayToImage(ng.Hinh);
             this.lblnhanxet.Text = dg.NhanXet;
             this.lblTenNM.Text = ng.Ten1;
-            this.ratingsao.Value = dg.Sao1;
+            //this.ratingsao.Value = dg.Sao;
             this.dtpNgayDG.Text = dg.Ngaydg.ToString().Trim();
             LoadImagesFromDatabase(ng,dg);
         }

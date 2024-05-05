@@ -15,7 +15,6 @@ namespace DoANLapTrinhWin.UC
     {
         SanPham sp;
         DonHang dh;
-        Global gt = new Global();
         public UCDaGiaoNM(SanPham sp, DonHang dh)
         {
             InitializeComponent();
@@ -23,7 +22,6 @@ namespace DoANLapTrinhWin.UC
             this.dh = dh;
             this.lblMaDH.Text = dh.MaDonHang.ToString();
             this.lblTenSP.Text = sp.TenSP.ToString();
-            //this.lblNgayDatHang.Text = dh.NgayDatHang.ToString();
             this.lblTongTien.Text = dh.TongTien.ToString();
             this.lblTrangThai.Text = dh.TrangThaiDonHangNM.ToString();
             this.pictureBox1.Image = Global.ByteArrayToImage(sp.Hinh);
@@ -31,7 +29,7 @@ namespace DoANLapTrinhWin.UC
 
         private void btnDaNhanHang_Click(object sender, EventArgs e)
         {
-            FDanhGia fdh = new FDanhGia(dh.MaDonHang.ToString(),dh);
+            FDanhGia fdh = new FDanhGia(dh);
             fdh.ShowDialog();
         }
 

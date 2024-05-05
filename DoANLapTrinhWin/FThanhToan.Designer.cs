@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.menuContainer = new System.Windows.Forms.Panel();
-            this.btnTS = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.btnChonPTTT = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.btnCK = new DoANLapTrinhWin.ButtonTuyChinh();
-            this.btnTTKNH = new DoANLapTrinhWin.ButtonTuyChinh();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.lblTGGiaoHang = new System.Windows.Forms.Label();
             this.lblGiaGoc = new System.Windows.Forms.Label();
@@ -61,10 +57,6 @@
             // 
             // menuContainer
             // 
-            this.menuContainer.Controls.Add(this.btnTS);
-            this.menuContainer.Controls.Add(this.btnChonPTTT);
-            this.menuContainer.Controls.Add(this.btnCK);
-            this.menuContainer.Controls.Add(this.btnTTKNH);
             this.menuContainer.Location = new System.Drawing.Point(941, 36);
             this.menuContainer.Margin = new System.Windows.Forms.Padding(0);
             this.menuContainer.Name = "menuContainer";
@@ -72,68 +64,6 @@
             this.menuContainer.TabIndex = 3;
             // 
             // btnTS
-            // 
-            this.btnTS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTS.FlatAppearance.BorderSize = 0;
-            this.btnTS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTS.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTS.ForeColor = System.Drawing.Color.White;
-            this.btnTS.Location = new System.Drawing.Point(0, 205);
-            this.btnTS.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTS.Name = "btnTS";
-            this.btnTS.Size = new System.Drawing.Size(173, 67);
-            this.btnTS.TabIndex = 3;
-            this.btnTS.Text = "Chọn Trả Sau";
-            this.btnTS.UseVisualStyleBackColor = false;
-            this.btnTS.Click += new System.EventHandler(this.btnTS_Click);
-            // 
-            // btnChonPTTT
-            // 
-            this.btnChonPTTT.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnChonPTTT.FlatAppearance.BorderSize = 0;
-            this.btnChonPTTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChonPTTT.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChonPTTT.ForeColor = System.Drawing.Color.White;
-            this.btnChonPTTT.Location = new System.Drawing.Point(0, -2);
-            this.btnChonPTTT.Margin = new System.Windows.Forms.Padding(0);
-            this.btnChonPTTT.Name = "btnChonPTTT";
-            this.btnChonPTTT.Size = new System.Drawing.Size(173, 67);
-            this.btnChonPTTT.TabIndex = 0;
-            this.btnChonPTTT.Text = "Chọn phương thức thanh toán";
-            this.btnChonPTTT.UseVisualStyleBackColor = false;
-            this.btnChonPTTT.Click += new System.EventHandler(this.btnChonPTTT_Click);
-            // 
-            // btnCK
-            // 
-            this.btnCK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCK.FlatAppearance.BorderSize = 0;
-            this.btnCK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCK.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCK.ForeColor = System.Drawing.Color.White;
-            this.btnCK.Location = new System.Drawing.Point(0, 138);
-            this.btnCK.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCK.Name = "btnCK";
-            this.btnCK.Size = new System.Drawing.Size(173, 67);
-            this.btnCK.TabIndex = 2;
-            this.btnCK.Text = "Chuyển khoản";
-            this.btnCK.UseVisualStyleBackColor = false;
-            this.btnCK.Click += new System.EventHandler(this.btnCK_Click);
-            // 
-            // btnTTKNH
-            // 
-            this.btnTTKNH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTTKNH.FlatAppearance.BorderSize = 0;
-            this.btnTTKNH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTTKNH.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTTKNH.ForeColor = System.Drawing.Color.White;
-            this.btnTTKNH.Location = new System.Drawing.Point(0, 67);
-            this.btnTTKNH.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTTKNH.Name = "btnTTKNH";
-            this.btnTTKNH.Size = new System.Drawing.Size(173, 71);
-            this.btnTTKNH.TabIndex = 1;
-            this.btnTTKNH.Text = "Thanh toán khi nhận hàng";
-            this.btnTTKNH.UseVisualStyleBackColor = false;
-            this.btnTTKNH.Click += new System.EventHandler(this.btnTTKNH_Click);
             // 
             // lblTenSP
             // 
@@ -342,10 +272,6 @@
 
         #endregion
 
-        private ButtonTuyChinh btnChonPTTT;
-        private ButtonTuyChinh btnTTKNH;
-        private ButtonTuyChinh btnCK;
-        private ButtonTuyChinh btnTS;
         private System.Windows.Forms.Timer menuTransition;
         private System.Windows.Forms.Panel menuContainer;
         private System.Windows.Forms.Label lblTenSP;
