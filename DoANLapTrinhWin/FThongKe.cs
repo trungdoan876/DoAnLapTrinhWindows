@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.Charts.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace DoANLapTrinhWin
     {
         public FThongKe()
         {
+           
+
             InitializeComponent();
             // Tạo một đối tượng Series
 
