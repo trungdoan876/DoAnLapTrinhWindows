@@ -17,7 +17,6 @@ namespace DoANLapTrinhWin
 {
     public partial class FMuaHang : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         Global gl = new Global();
         SanPhamDAO spdao = new SanPhamDAO();
         NguoiMua ngmua;
@@ -219,31 +218,7 @@ namespace DoANLapTrinhWin
         {
             LoadTimKiem(txtTimKiem.Text.Trim());
             //tần suất tìm kiếm
-            DataTable dt = spdao.LayNganhHang(txtTimKiem.Text.Trim());
-            string nganhHang = "";
-            foreach (DataRow row in dt.Rows)
-            {
-                nganhHang = row[0].ToString();
-            }
-            int tanSuat;
-            DataTable dta  = spdao.TanSuatTimKiem(nganhHang,ngmua.Ma);
-            if (dta.Rows.Count>0)
-            {
-                // Đọc hàng đầu tiên 
-                tanSuat = Convert.ToInt32(dta.Rows[0][0]); // +1; //dta.Rows[0][0] là giá trị của cột đầu tiên của hàng đó.
-            }
-            else
-            {
-                tanSuat = 0;
-            }
-            if (tanSuat == 0)
-            {
-                spdao.ThemTanSuatVaoTimKiem(ngmua,nganhHang);
-            }
-            else //nếu đã có, cập nhật tuần suất lên 1
-            {
-                spdao.CapNhatTanSuatTimKiem(ngmua,nganhHang,tanSuat);
-            }
+            TanSuatTimKiem();
             /*try
             {
                 if(conn.State == ConnectionState.Open)
@@ -307,7 +282,34 @@ namespace DoANLapTrinhWin
                 conn.Close();
             }*/
         }
-
+        private void TanSuatTimKiem()
+        {
+            DataTable dt = spdao.LayNganhHang(txtTimKiem.Text.Trim());
+            string nganhHang = "";
+            foreach (DataRow row in dt.Rows)
+            {
+                nganhHang = row[0].ToString();
+            }
+            int tanSuat;
+            DataTable dta = spdao.TanSuatTimKiem(nganhHang, ngmua.Ma);
+            if (dta.Rows.Count > 0)
+            {
+                // Đọc hàng đầu tiên 
+                tanSuat = Convert.ToInt32(dta.Rows[0][0]); // +1; //dta.Rows[0][0] là giá trị của cột đầu tiên của hàng đó.
+            }
+            else
+            {
+                tanSuat = 0;
+            }
+            if (tanSuat == 0)
+            {
+                spdao.ThemTanSuatVaoTimKiem(ngmua, nganhHang);
+            }
+            else //nếu đã có, cập nhật tuần suất lên 1
+            {
+                spdao.CapNhatTanSuatTimKiem(ngmua, nganhHang, tanSuat);
+            }
+        }
         private void panelChiTiet_MouseMove_1(object sender, MouseEventArgs e)
         {
             panelThongTin.Show();

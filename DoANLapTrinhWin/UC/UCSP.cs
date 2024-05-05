@@ -18,13 +18,10 @@ namespace DoANLapTrinhWin
     public partial class UCSP : UserControl
     {
         SanPham sp;
-        YeuThichDAO ytdao = new YeuThichDAO();
         NguoiBan ngban;
         NguoiMua ngmua;
-        private void UCSP_Load(object sender, EventArgs e)
-        {
-
-        }
+        YeuThichDAO ytdao = new YeuThichDAO();
+        SanPhamDAO spdao = new SanPhamDAO();
         public UCSP()
         {
                InitializeComponent();
@@ -44,6 +41,8 @@ namespace DoANLapTrinhWin
         }
         private void UCSP_Click(object sender, EventArgs e)
         {
+            //cập nhật tần suất truy cập vào sản phẩm của người mua
+            TanSuatTruyCap();
             this.Hide(); //an form 1
             FCTSP formCTSP = new FCTSP(sp,picClick,ngmua);
             formCTSP.ShowDialog();
@@ -68,14 +67,38 @@ namespace DoANLapTrinhWin
                 ytdao.ThemYeuThich(yt);
             }
         }
-
+        private void TanSuatTruyCap()
+        {
+            DataTable dt = spdao.LayNganhHangTheoMaSanPham(sp.MaSP);
+            string nganhHang = "";
+            foreach (DataRow row in dt.Rows)
+            {
+                nganhHang = row[0].ToString();
+            }
+            int tanSuat;
+            DataTable dta = spdao.TanSuatTruyCap(ngmua.Ma,nganhHang);
+            if (dta.Rows.Count > 0)
+            {
+                // Đọc hàng đầu tiên 
+                tanSuat = Convert.ToInt32(dta.Rows[0][0]); // +1; //dta.Rows[0][0] là giá trị của cột đầu tiên của hàng đó.
+            }
+            else
+            {
+                tanSuat = 0;
+            }
+            if (tanSuat == 0)
+            {
+                spdao.ThemTanSuatTruyCapCuaSanPham(ngmua.Ma,tanSuat,nganhHang);
+            }
+            else //nếu đã có, cập nhật tuần suất lên 1
+            {
+                tanSuat += 1;
+                spdao.CapNhatTanSuatTruyCap(ngmua.Ma, tanSuat, nganhHang);
+            }
+        }
         private void picHeart_Click(object sender, EventArgs e)
         {
             traitim();
-        }
-        private void UCSP_Load_1(object sender, EventArgs e)
-        {
-            //HienYeuThich();
         }
         private void HienYeuThich()
         {

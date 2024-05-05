@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Net.Mime.MediaTypeNames;
+using static TheArtOfDevHtmlRenderer.Adapters.RGraphicsPath;
 
 namespace DoANLapTrinhWin
 {
@@ -101,10 +103,15 @@ namespace DoANLapTrinhWin
             dt = tt.Load(sqlStr);
             return dt;
         }
+        //hiện lên FMuaHang
         public DataSet TatCaSanPham()
         {
-            string sqlStr = string.Format("select * from SanPham left join TimKiem on SanPham.NganhHang Like TimKiem.NganhHang "
-                + "where DangBan = '{0}' order by TanSuatTimKiem desc", 1);
+            //load form theo tần suất tìm kiếm của người mua
+            /*string sqlStr = string.Format("select * from SanPham left join TimKiem on SanPham.NganhHang Like TimKiem.NganhHang "
+                + "where DangBan = '{0}' order by TanSuatTimKiem desc", 1);*/
+            //load form theo tần suất bấm vào sản phẩm của người mua và load ra danh sách các sản phẩm có cùng ngành hàng đó
+            string sqlStr = string.Format(" select * from SanPham  left join (select max(TanSuatTruyCap) as Max, NganhHang " +
+                "FROM TanSuatTruyCap GROUP BY NganhHang) Q ON SanPham.NganhHang = Q.NganhHang order by Q.Max desc");
             //string sqlStr = string.Format("SELECT* FROM SanPham WHERE DangBan = '{0}'", 1);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
@@ -158,7 +165,7 @@ namespace DoANLapTrinhWin
             dt = tt.Load(sql);
             return dt;
         }
-        //đọc dữ liệu để lấy ngành hàng
+        //đọc dữ liệu để lấy ngành hàng theo tên
         public DataTable LayNganhHang(string nganhHang)
         {
             string sql = string.Format("select distinct NganhHang From SanPham where TenSanPham LIKE N'%{0}%'", nganhHang);
@@ -182,6 +189,31 @@ namespace DoANLapTrinhWin
         {
             string sqlStr = string.Format("UPDATE TimKiem SET TanSuatTimKiem ='{0}' WHERE MaNguoiMua ='{1}'and NganhHang =N'{2}'", tanSuat + 1, ngmua.Ma, nganhHang);
             tt.ThucThiKhong(sqlStr);
+        }
+        //tần suất truy cập vào sản phẩm của người mua
+        public DataTable TanSuatTruyCap(string maNM,string nganhHang)
+        {
+            string sql1 = string.Format("Select TanSuatTruyCap From TanSuatTruyCap where NganhHang = N'{0}' and MaNguoiMua = '{1}' ", nganhHang, maNM);
+            DataTable dt = new DataTable();
+            dt = tt.DocDuLieu(sql1);
+            return dt;
+        }
+        public void ThemTanSuatTruyCapCuaSanPham(string maNM, int tanSuat,string nganhHang)
+        {
+            string sqlStr = string.Format("INSERT INTO TanSuatTruyCap (MaNguoiMua,TanSuatTruyCap,NganhHang) VALUES ('{0}','{1}',N'{2}')", maNM, 1, nganhHang);
+            tt.ThucThiKhong(sqlStr);
+        }
+        public void CapNhatTanSuatTruyCap(string maNM, int tanSuat, string nganhHang)
+        {
+            string sqlStr = string.Format("UPDATE TanSuatTruyCap SET TanSuatTruyCap = '{0}' WHERE MaNguoiMua = '{1}' and NganhHang = N'{2}' ", tanSuat, maNM,nganhHang);
+            tt.ThucThiKhong(sqlStr);
+        }
+        public DataTable LayNganhHangTheoMaSanPham(string MaSanPham)
+        {
+            string sql = string.Format("select NganhHang From SanPham where MaSanPham='{0}'", MaSanPham);
+            DataTable dt = new DataTable();
+            dt = tt.DocDuLieu(sql);
+            return dt;
         }
     }
 }
