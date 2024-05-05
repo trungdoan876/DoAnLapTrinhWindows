@@ -129,6 +129,7 @@ namespace DoANLapTrinhWin
                 conn.Close();
             }
         }
+        //kết quả trả về số nguyên
         public int KetQuaDuyNhat(string sqlStr)
         {
             try

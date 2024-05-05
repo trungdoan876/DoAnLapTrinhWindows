@@ -34,8 +34,8 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnQuaylai = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSDT = new System.Windows.Forms.Label();
+            this.lblDiaChi = new System.Windows.Forms.Label();
             this.lbltenNB = new System.Windows.Forms.Label();
             this.picHinhNB = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelSPNB = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -61,8 +61,8 @@
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.Controls.Add(this.btnQuaylai);
-            this.guna2CustomGradientPanel2.Controls.Add(this.label3);
-            this.guna2CustomGradientPanel2.Controls.Add(this.label2);
+            this.guna2CustomGradientPanel2.Controls.Add(this.lblSDT);
+            this.guna2CustomGradientPanel2.Controls.Add(this.lblDiaChi);
             this.guna2CustomGradientPanel2.Controls.Add(this.lbltenNB);
             this.guna2CustomGradientPanel2.Controls.Add(this.picHinhNB);
             this.guna2CustomGradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -90,28 +90,28 @@
             this.btnQuaylai.TabIndex = 285;
             this.btnQuaylai.Click += new System.EventHandler(this.btnQuaylai_Click);
             // 
-            // label3
+            // lblSDT
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1081, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 32);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
+            this.lblSDT.AutoSize = true;
+            this.lblSDT.BackColor = System.Drawing.Color.Transparent;
+            this.lblSDT.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSDT.Location = new System.Drawing.Point(1068, 13);
+            this.lblSDT.Name = "lblSDT";
+            this.lblSDT.Size = new System.Drawing.Size(84, 32);
+            this.lblSDT.TabIndex = 4;
+            this.lblSDT.Text = "label3";
             // 
-            // label2
+            // lblDiaChi
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(1082, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 28);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
+            this.lblDiaChi.AutoSize = true;
+            this.lblDiaChi.BackColor = System.Drawing.Color.Transparent;
+            this.lblDiaChi.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiaChi.ForeColor = System.Drawing.Color.Gray;
+            this.lblDiaChi.Location = new System.Drawing.Point(1082, 58);
+            this.lblDiaChi.Name = "lblDiaChi";
+            this.lblDiaChi.Size = new System.Drawing.Size(70, 28);
+            this.lblDiaChi.TabIndex = 3;
+            this.lblDiaChi.Text = "label2";
             // 
             // lbltenNB
             // 
@@ -169,8 +169,8 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSDT;
+        private System.Windows.Forms.Label lblDiaChi;
         private Guna.UI2.WinForms.Guna2ImageButton btnQuaylai;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel panelSPNB;
         public Guna.UI2.WinForms.Guna2CirclePictureBox picHinhNB;

@@ -61,6 +61,7 @@ namespace DoANLapTrinhWin
         {
             LoadData();
         }
+        //tạo mã sản phẩm
         public string TaoMa(string Table, string maBanDau)
         {
             DataSet ds = spDao.TaoMaSP(Table);

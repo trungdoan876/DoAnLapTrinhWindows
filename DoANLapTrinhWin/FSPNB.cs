@@ -81,6 +81,8 @@ namespace DoANLapTrinhWin
             {
                 this.picHinhNB.Image = Global.ByteArrayToImage((byte[])r[0]);
                 this.lbltenNB.Text = r[1].ToString();
+                this.lblSDT.Text = r[3].ToString();
+                this.lblDiaChi.Text = r[4].ToString();
             }    
         }
     }

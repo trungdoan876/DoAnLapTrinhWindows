@@ -25,7 +25,7 @@ namespace DoANLapTrinhWin
             this.ngMua = ngmua;
             LoadGioHang();
         }
-        //đoạn này mình thấy mình làm vẫn chưa đẹp lắm ý
+        //đoạn này mình thấy mình làm vẫn chưa gọn lắm 
         public void LoadGioHang()
         {
             DataSet ds = new DataSet();

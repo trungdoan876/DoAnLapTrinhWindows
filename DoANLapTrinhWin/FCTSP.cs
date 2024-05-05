@@ -24,7 +24,6 @@ namespace DoANLapTrinhWin
         NguoiBanDAO ngbandao = new NguoiBanDAO();
         NguoiMua ngmua;
         SanPham sp;
-        string maSP;
         bool picClick;
         byte[] hinh;
         NguoiBan nguoiBan;
@@ -41,14 +40,14 @@ namespace DoANLapTrinhWin
             this.ngmua = ngmua;
             LoadThongTin();
             LoadPicClick();
-            LoadHinh(sp.MaSP);
+            LoadHinh();
             LoadDanhGia();
-            LoadSPChungNH(sp.NganhHang,sp.MaSP);
+            LoadSPChungNH();
             LoadNB();
         }
-        public void LoadSPChungNH(string nganhhang,string masp)
+        public void LoadSPChungNH() //masp ?
         {
-            DataSet dt = spdao.SanPhamChungNH(nganhhang,masp);
+            DataSet dt = spdao.SanPhamChungNH(sp.NganhHang, sp.MaSP);
 
             fpanelSPChungNH.AutoScroll = true;
             foreach (DataRow row in dt.Tables[0].Rows)
@@ -133,10 +132,10 @@ namespace DoANLapTrinhWin
             }
         }
         //hien nhieu hinh
-        private void LoadHinh(string masp)
+        private void LoadHinh()
         {
             DataSet dt = new DataSet();
-            dt = spdao.LayHinhAnhTheoMaSanPham(masp);
+            dt = spdao.LayHinhAnhTheoMaSanPham(sp.MaSP);
             foreach (DataRow row in dt.Tables[0].Rows)
             {
                 byte[] imageBytes = (byte[])row["Hinh"];
