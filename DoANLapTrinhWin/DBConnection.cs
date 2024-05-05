@@ -89,7 +89,7 @@ namespace DoANLapTrinhWin
         }
         
         //thực thi 1 câu lệnh
-        public void ThucThi(string sqlStr)
+        /*public void ThucThi(string sqlStr)
         {
             try
             {
@@ -108,7 +108,7 @@ namespace DoANLapTrinhWin
             {
                 conn.Close();
             }
-        }
+        }*/
         //thực thi không thông báo
         public void ThucThiKhong(string sqlStr)
         {

@@ -15,8 +15,8 @@ namespace DoANLapTrinhWin
 {
     public partial class FDHDangThucHienNB : Form
     {
-        DonHangDAO dhDao = new DonHangDAO();
         NguoiBan ngban;
+        DonHangDAO dhDao = new DonHangDAO();
         public FDHDangThucHienNB(NguoiBan ngBan)
         {
             InitializeComponent();

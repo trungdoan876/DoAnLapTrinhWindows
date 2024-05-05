@@ -15,9 +15,9 @@ namespace DoANLapTrinhWin
 {
     public partial class FThemSanPham : Form
     {
-        private List<Image> arrPicture = new List<Image>();  
-        SanPhamDAO spDAO = new SanPhamDAO();
         SanPham spham; //dùng để lấy mã sản phẩm tự động
+        SanPhamDAO spDAO = new SanPhamDAO();
+        private List<Image> arrPicture = new List<Image>();  
         public FThemSanPham(NguoiBan ngban, SanPham spham)
         {
             InitializeComponent();
@@ -47,6 +47,7 @@ namespace DoANLapTrinhWin
                     lblTinhTrang.Text, txtDiaChi.Text, lblMaNB.Text, txtSoLuonSanCo.Text, b);
             spDAO.ThemSanPham(sp);
             spDAO.ThemNhieuHinh(txtMaSanPham.Text, arrPicture);
+            MessageBox.Show("Thêm sản phẩm thành công <3!");
         }
 
         private void btnThemHinh_Click(object sender, EventArgs e)

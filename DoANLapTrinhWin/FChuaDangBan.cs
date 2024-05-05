@@ -13,8 +13,8 @@ namespace DoANLapTrinhWin
 {
     public partial class FChuaDangBan : Form
     {
-        SanPhamDAO spDao = new SanPhamDAO();
         NguoiBan ngBan;
+        SanPhamDAO spDao = new SanPhamDAO();
         public FChuaDangBan(NguoiBan ngBan)
         {
             InitializeComponent();

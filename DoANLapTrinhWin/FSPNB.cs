@@ -13,10 +13,10 @@ namespace DoANLapTrinhWin
     public partial class FSPNB : Form
     {
         SanPham sp;
-        SanPhamDAO spdao = new SanPhamDAO();
         NguoiBan ngban;
         NguoiMua ngmua;
         NguoiDAO ngDao = new NguoiDAO();
+        SanPhamDAO spdao = new SanPhamDAO();
         public FSPNB()
         {
             InitializeComponent();

@@ -82,6 +82,7 @@
             // 
             // panelGioHang
             // 
+            this.panelGioHang.AutoScroll = true;
             this.panelGioHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelGioHang.Location = new System.Drawing.Point(0, 0);
             this.panelGioHang.Name = "panelGioHang";

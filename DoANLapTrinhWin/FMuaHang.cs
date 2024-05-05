@@ -17,9 +17,9 @@ namespace DoANLapTrinhWin
 {
     public partial class FMuaHang : Form
     {
+        NguoiMua ngmua;
         Global gl = new Global();
         SanPhamDAO spdao = new SanPhamDAO();
-        NguoiMua ngmua;
         public FMuaHang(NguoiMua ngmua)
         {
             InitializeComponent();

@@ -16,13 +16,11 @@ namespace DoANLapTrinhWin
     public partial class FThongKe : Form
     {
         ThongKeDAO tkDao = new ThongKeDAO();
-        string ten;
         public FThongKe()
         {
             InitializeComponent();
             TheoThangg();
             BestSeller();
-            
         }
         public void TheoThangg()
         {
@@ -36,12 +34,13 @@ namespace DoANLapTrinhWin
         }
         public void BestSeller()
         {
+            string ten;
             DataSet ds = tkDao.LayBestSeller();
             int x = 0;
             foreach (DataRow r in ds.Tables[0].Rows)
             {
-                chartBestSeller.DataPoints[x].Y = (int)r["LuotMua"]; //số lần bán
-                ten = r["TenSanPham"].ToString();
+                chartBestSeller.DataPoints[x].Y = (int)r[2]; //số lần bán
+                ten = r[3].ToString();
                 if(x==0)
                     lblsp0.Text = ten;
                 if (x == 1)
@@ -55,8 +54,6 @@ namespace DoANLapTrinhWin
                 x += 1;
 
             }
-            MessageBox.Show(x.ToString());
-                lblsp0.Text = ten;
         }
     }
 }

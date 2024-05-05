@@ -14,8 +14,8 @@ namespace DoANLapTrinhWin
 {
     public partial class FYeuThich : Form
     {
-        SanPhamDAO spDao = new SanPhamDAO();
         NguoiMua ngmua;
+        SanPhamDAO spDao = new SanPhamDAO();
         public FYeuThich(NguoiMua ngmua)
         {
             InitializeComponent();

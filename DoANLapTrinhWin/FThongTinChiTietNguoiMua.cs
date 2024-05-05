@@ -53,6 +53,7 @@ namespace DoANLapTrinhWin
         {
             NguoiMua nguoimua = new NguoiMua(Global.ImageToByteArray(picHinh.Image), txtMaTaiKhoan.Text, txtHoTen.Text, txtSDT.Text, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text);
             nguoimuaDao.CapNhatMua(nguoimua);
+            MessageBox.Show("Thông tin đã được cập nhật!");
         }
 
         private void btnThemHinh_Click(object sender, EventArgs e)

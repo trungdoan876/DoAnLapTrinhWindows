@@ -56,6 +56,7 @@ namespace DoANLapTrinhWin
         {
             NguoiBan nguoiban = new NguoiBan(Global.ImageToByteArray(picHinh.Image), txtMaTaiKhoan.Text, txtHoTen.Text, txtSDT.Text, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, txtMoTa.Text);
             nguoiDao.CapNhat(nguoiban);
+            MessageBox.Show("Thông tin đã được cập nhật!");
         }
 
         private void btnThemAnh_Click(object sender, EventArgs e)

@@ -25,12 +25,12 @@ namespace DoANLapTrinhWin
                 "GiaGoc, XuatXu, TGDSD, MoTaSanPham, NganhHang, TinhTrang,DiaChi,NgayDang,MaNguoiBan,SoLuong,Hinh,DangBan) " +
                 "VALUES ('{0}', N'{1}', '{2}','{3}', N'{4}','{5}',N'{6}',N'{7}',N'{8}',N'{9}',N'{10}','{11}','{12}',0x{13},'{14}')", 
                 sp.MaSP, sp.TenSP, sp.GiaBan, sp.GiaGoc, sp.XuatXu, sp.ThoiGianDaSuDung, sp.MoTaSanPham, sp.NganhHang, sp.TinhTrang,sp.DiaChi,sp.NgayDang,sp.MaNguoiBan,sp.SoLuong,anh,0);
-            tt.ThucThi(sqlStr);
+            tt.ThucThiKhong(sqlStr);
         }
         public void XoaSanPham(SanPham sp)
         {
             string sqlStr = string.Format("DELETE FROM SanPham WHERE MaSanPham = '{0}'", sp.MaSP);
-            tt.ThucThi(sqlStr);
+            tt.ThucThiKhong(sqlStr);
         }
         public void CapNhatSanPham(SanPham sp)
         {
@@ -42,23 +42,23 @@ namespace DoANLapTrinhWin
                 "SoLuong='{11}' WHERE MaSanPham = '{12}'", 
                 sp.TenSP, sp.GiaBan, sp.GiaGoc, sp.XuatXu, sp.ThoiGianDaSuDung, sp.MoTaSanPham, sp.NganhHang, sp.TinhTrang,
                 sp.DiaChi, sp.NgayDang,anh,sp.SoLuong, sp.MaSP);
-            tt.ThucThi(sqlStr);
+            tt.ThucThiKhong(sqlStr);
         }
         public void CapNhatDangBan(SanPham sp)
         {
             string sqlStr = string.Format("UPDATE SanPham SET DangBan = '{0}'WHERE MaSanPham ='{1}'", 1,sp.MaSP);
             //kiem tra dang ban xem da dang ban chua thi moi duoc dang ban
-            tt.ThucThi(sqlStr);
+            tt.ThucThiKhong(sqlStr);
         }
         public void GoSanPham(SanPham sp)
         {
             string sqlStr = string.Format("UPDATE SanPham SET DangBan = '{0}'WHERE MaSanPham ='{1}'", 0, sp.MaSP);
-            tt.ThucThi(sqlStr);
+            tt.ThucThiKhong(sqlStr);
         }
         public void XoaNhieuHinh(SanPham sp)
         {
             string sqlStr = string.Format("DELETE FROM HinhAnh WHERE MaSanPham = '{0}'", sp.MaSP);
-            tt.ThucThi(sqlStr);
+            tt.ThucThiKhong(sqlStr);
         }
         public void ThemNhieuHinh(string maSP, List<System.Drawing.Image> arrPicture)
         {

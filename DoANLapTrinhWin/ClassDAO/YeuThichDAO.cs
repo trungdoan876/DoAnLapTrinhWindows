@@ -16,13 +16,13 @@ namespace DoANLapTrinhWin
         public void XoaYeuThich(YeuThich yt)
         {
             string sqlStr = string.Format("DELETE FROM YeuThich WHERE MaSanPham ='{0}'", yt.MaSP);
-            tt.ThucThi(sqlStr);
+            tt.ThucThiKhong(sqlStr);
         }
         public void ThemYeuThich(YeuThich yt)
         {
             string sqlStr = string.Format("INSERT INTO YeuThich (MaSanPham , MaNguoiMua, MaNguoiBan) VALUES ('{0}', '{1}','{2}')"
                 , yt.MaSP, yt.MaNM, yt.MaNB);
-            tt.ThucThi(sqlStr);
+            tt.ThucThiKhong(sqlStr);
         }
         public DataSet HienYeuThich()
         {

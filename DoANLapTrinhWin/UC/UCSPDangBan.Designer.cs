@@ -108,6 +108,7 @@
             // 
             // GoDangBan
             // 
+            this.GoDangBan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GoDangBan.Image = ((System.Drawing.Image)(resources.GetObject("GoDangBan.Image")));
             this.GoDangBan.Location = new System.Drawing.Point(195, 255);
             this.GoDangBan.Name = "GoDangBan";

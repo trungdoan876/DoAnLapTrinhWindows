@@ -33,6 +33,7 @@
             // 
             // panelDonHang
             // 
+            this.panelDonHang.AutoScroll = true;
             this.panelDonHang.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDonHang.Location = new System.Drawing.Point(0, 0);

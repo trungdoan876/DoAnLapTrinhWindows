@@ -33,6 +33,7 @@
             // 
             // panelDangThucHien
             // 
+            this.panelDangThucHien.AutoScroll = true;
             this.panelDangThucHien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDangThucHien.Location = new System.Drawing.Point(0, 0);
             this.panelDangThucHien.Name = "panelDangThucHien";

@@ -213,6 +213,7 @@
             // 
             // panelDH
             // 
+            this.panelDH.AutoScroll = true;
             this.panelDH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelDH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDH.Location = new System.Drawing.Point(0, 84);

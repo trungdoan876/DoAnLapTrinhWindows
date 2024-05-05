@@ -149,6 +149,7 @@
             // 
             // panelThan
             // 
+            this.panelThan.AutoScroll = true;
             this.panelThan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelThan.Location = new System.Drawing.Point(0, 78);
             this.panelThan.Name = "panelThan";

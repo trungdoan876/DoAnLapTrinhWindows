@@ -57,10 +57,13 @@ namespace DoANLapTrinhWin
             else
             {
                 int k;
-                ma = "DH0";
+                ma = "DH";
                 k = Convert.ToInt32(ds.Tables[0].Rows[ds.Tables[0].Rows.Count - 1][0].ToString().Substring(2));
                 k = k + 1;
+                if (k < 10)
+                    ma = ma + "0";
                 ma = ma + k.ToString();
+                MessageBox.Show(ma);
             }
             return ma;
         }
