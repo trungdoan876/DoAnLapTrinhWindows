@@ -73,5 +73,20 @@ namespace DoANLapTrinhWin.ClassDAO
             dt = tt.Load(sql);
             return dt;
         }
+        public int TatCaSP(NguoiBan ng)
+        {
+            string sql = string.Format("Select count(*) from SanPham Where MaNguoiBan ='{0}'", ng.Ma);
+            return tt.KetQuaDuyNhat(sql);
+        }
+        public int SPDB(NguoiBan ng)
+        {
+            string sql = string.Format("Select count(*) from SanPham Where MaNguoiBan ='{0}' AND DangBan = '{1}'", ng.Ma, 1);
+            return tt.KetQuaDuyNhat(sql);
+        }
+        public int SPChuaDB(NguoiBan ng)
+        {
+            string sql = string.Format("Select count(*) from SanPham Where MaNguoiBan ='{0}' AND DangBan = '{1}'", ng.Ma, 0);
+            return tt.KetQuaDuyNhat(sql);
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace DoANLapTrinhWin
             string ma = "";
             if (dt.Tables[0].Rows.Count <= 0)
             {
-                ma = maBanDau + "1";
+                ma = maBanDau + "01";
             }
             else
             {
@@ -66,6 +66,11 @@ namespace DoANLapTrinhWin
         private void btnThemHinh_Click(object sender, EventArgs e)
         {
             picHinh.Image = Global.CreateOpenFileDialog(picHinh);  
+        }
+
+        private void btnQuaylai_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

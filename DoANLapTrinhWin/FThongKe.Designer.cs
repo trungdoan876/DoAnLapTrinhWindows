@@ -86,9 +86,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnChuaDB = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnDaDB = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnTatCaSP = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblsp4 = new System.Windows.Forms.Label();
@@ -220,77 +220,77 @@
             // 
             // guna2CustomGradientPanel3
             // 
-            this.guna2CustomGradientPanel3.Controls.Add(this.guna2GradientButton3);
-            this.guna2CustomGradientPanel3.Controls.Add(this.guna2GradientButton2);
-            this.guna2CustomGradientPanel3.Controls.Add(this.guna2GradientButton1);
+            this.guna2CustomGradientPanel3.Controls.Add(this.btnChuaDB);
+            this.guna2CustomGradientPanel3.Controls.Add(this.btnDaDB);
+            this.guna2CustomGradientPanel3.Controls.Add(this.btnTatCaSP);
             this.guna2CustomGradientPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(0, 114);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(1789, 126);
             this.guna2CustomGradientPanel3.TabIndex = 1;
             // 
-            // guna2GradientButton3
+            // btnChuaDB
             // 
-            this.guna2GradientButton3.BorderColor = System.Drawing.Color.ForestGreen;
-            this.guna2GradientButton3.BorderRadius = 20;
-            this.guna2GradientButton3.BorderThickness = 2;
-            this.guna2GradientButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2GradientButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(238)))), ((int)(((byte)(128)))));
-            this.guna2GradientButton3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(185)))), ((int)(((byte)(84)))));
-            this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton3.Location = new System.Drawing.Point(1091, 0);
-            this.guna2GradientButton3.Name = "guna2GradientButton3";
-            this.guna2GradientButton3.Size = new System.Drawing.Size(522, 126);
-            this.guna2GradientButton3.TabIndex = 2;
-            this.guna2GradientButton3.Text = "Sản phẩm chưa đăng bán";
+            this.btnChuaDB.BorderColor = System.Drawing.Color.ForestGreen;
+            this.btnChuaDB.BorderRadius = 20;
+            this.btnChuaDB.BorderThickness = 2;
+            this.btnChuaDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChuaDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChuaDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChuaDB.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChuaDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChuaDB.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnChuaDB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(238)))), ((int)(((byte)(128)))));
+            this.btnChuaDB.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(185)))), ((int)(((byte)(84)))));
+            this.btnChuaDB.Font = new System.Drawing.Font("Segoe UI Black", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChuaDB.ForeColor = System.Drawing.Color.White;
+            this.btnChuaDB.Location = new System.Drawing.Point(1091, 0);
+            this.btnChuaDB.Name = "btnChuaDB";
+            this.btnChuaDB.Size = new System.Drawing.Size(522, 126);
+            this.btnChuaDB.TabIndex = 2;
+            this.btnChuaDB.Text = "Sản phẩm chưa đăng bán";
             // 
-            // guna2GradientButton2
+            // btnDaDB
             // 
-            this.guna2GradientButton2.BorderColor = System.Drawing.Color.ForestGreen;
-            this.guna2GradientButton2.BorderRadius = 20;
-            this.guna2GradientButton2.BorderThickness = 2;
-            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2GradientButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(185)))), ((int)(((byte)(84)))));
-            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(238)))), ((int)(((byte)(128)))));
-            this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(546, 0);
-            this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.Size = new System.Drawing.Size(545, 126);
-            this.guna2GradientButton2.TabIndex = 1;
-            this.guna2GradientButton2.Text = "Sản phẩm đã đăng bán";
+            this.btnDaDB.BorderColor = System.Drawing.Color.ForestGreen;
+            this.btnDaDB.BorderRadius = 20;
+            this.btnDaDB.BorderThickness = 2;
+            this.btnDaDB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDaDB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDaDB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDaDB.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDaDB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDaDB.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDaDB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(185)))), ((int)(((byte)(84)))));
+            this.btnDaDB.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(238)))), ((int)(((byte)(128)))));
+            this.btnDaDB.Font = new System.Drawing.Font("Segoe UI Black", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDaDB.ForeColor = System.Drawing.Color.White;
+            this.btnDaDB.Location = new System.Drawing.Point(546, 0);
+            this.btnDaDB.Name = "btnDaDB";
+            this.btnDaDB.Size = new System.Drawing.Size(545, 126);
+            this.btnDaDB.TabIndex = 1;
+            this.btnDaDB.Text = "Sản phẩm đã đăng bán";
             // 
-            // guna2GradientButton1
+            // btnTatCaSP
             // 
-            this.guna2GradientButton1.BorderColor = System.Drawing.Color.ForestGreen;
-            this.guna2GradientButton1.BorderRadius = 20;
-            this.guna2GradientButton1.BorderThickness = 2;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(238)))), ((int)(((byte)(128)))));
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(185)))), ((int)(((byte)(84)))));
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(546, 126);
-            this.guna2GradientButton1.TabIndex = 0;
-            this.guna2GradientButton1.Text = "Tất cả sản phẩm";
+            this.btnTatCaSP.BorderColor = System.Drawing.Color.ForestGreen;
+            this.btnTatCaSP.BorderRadius = 20;
+            this.btnTatCaSP.BorderThickness = 2;
+            this.btnTatCaSP.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTatCaSP.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTatCaSP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTatCaSP.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTatCaSP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTatCaSP.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnTatCaSP.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(238)))), ((int)(((byte)(128)))));
+            this.btnTatCaSP.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(185)))), ((int)(((byte)(84)))));
+            this.btnTatCaSP.Font = new System.Drawing.Font("Segoe UI Black", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTatCaSP.ForeColor = System.Drawing.Color.White;
+            this.btnTatCaSP.Location = new System.Drawing.Point(0, 0);
+            this.btnTatCaSP.Name = "btnTatCaSP";
+            this.btnTatCaSP.Size = new System.Drawing.Size(546, 126);
+            this.btnTatCaSP.TabIndex = 0;
+            this.btnTatCaSP.Text = "Tất cả sản phẩm";
             // 
             // guna2CustomGradientPanel2
             // 
@@ -757,9 +757,9 @@
         private System.Windows.Forms.Label lblsp3;
         private System.Windows.Forms.Label lblsp2;
         private System.Windows.Forms.Label lblsp1;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnChuaDB;
+        private Guna.UI2.WinForms.Guna2GradientButton btnDaDB;
+        private Guna.UI2.WinForms.Guna2GradientButton btnTatCaSP;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private System.Windows.Forms.Label label10;

@@ -68,7 +68,7 @@ namespace DoANLapTrinhWin
             string ma = "";
             if (ds.Tables[0].Rows.Count <= 0)
             {
-                ma = maBanDau + "1";
+                ma = maBanDau + "01";
             }
             else
             {

@@ -39,6 +39,7 @@
             this.txtMK = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnThemHinh = new Guna.UI2.WinForms.Guna2Button();
             this.picHinh = new System.Windows.Forms.PictureBox();
+            this.btnQuaylai = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnDangKy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.SuspendLayout();
@@ -252,12 +253,29 @@
             this.picHinh.TabIndex = 289;
             this.picHinh.TabStop = false;
             // 
+            // btnQuaylai
+            // 
+            this.btnQuaylai.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnQuaylai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuaylai.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnQuaylai.Image = ((System.Drawing.Image)(resources.GetObject("btnQuaylai.Image")));
+            this.btnQuaylai.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnQuaylai.ImageRotate = 0F;
+            this.btnQuaylai.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnQuaylai.Location = new System.Drawing.Point(12, 12);
+            this.btnQuaylai.Name = "btnQuaylai";
+            this.btnQuaylai.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnQuaylai.Size = new System.Drawing.Size(94, 52);
+            this.btnQuaylai.TabIndex = 291;
+            this.btnQuaylai.Click += new System.EventHandler(this.btnQuaylai_Click);
+            // 
             // FThongTinDangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1491, 665);
+            this.Controls.Add(this.btnQuaylai);
             this.Controls.Add(this.btnThemHinh);
             this.Controls.Add(this.picHinh);
             this.Controls.Add(this.guna2TextBox2);
@@ -287,5 +305,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtMK;
         private Guna.UI2.WinForms.Guna2Button btnThemHinh;
         private System.Windows.Forms.PictureBox picHinh;
+        private Guna.UI2.WinForms.Guna2ImageButton btnQuaylai;
     }
 }

@@ -16,11 +16,18 @@ namespace DoANLapTrinhWin
     public partial class FThongKe : Form
     {
         ThongKeDAO tkDao = new ThongKeDAO();
+        NguoiBan ngBan;
         public FThongKe()
         {
             InitializeComponent();
+        }
+        public FThongKe(NguoiBan ngBan)
+        {
+            InitializeComponent();
+            this.ngBan = ngBan;
             TheoThangg();
             BestSeller();
+            TKKho();
         }
         public void TheoThangg()
         {
@@ -54,6 +61,15 @@ namespace DoANLapTrinhWin
                 x += 1;
 
             }
+        }
+        public void TKKho()
+        {
+            int tcsp = tkDao.TatCaSP(ngBan);
+            btnTatCaSP.Text =  "Tất cả sản phẩm: "+ tcsp.ToString();
+            int spdDB = tkDao.SPDB(ngBan);
+            btnDaDB.Text = spdDB + " Sản phẩm đã đăng bán";
+            int spcDB = tkDao.SPChuaDB(ngBan);
+            btnChuaDB.Text = spcDB + " Sản phẩm chưa đăng bán";
         }
     }
 }
