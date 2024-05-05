@@ -21,6 +21,5 @@ namespace DoANLapTrinhWin
             // Tạo một đối tượng Series
 
         }
-
     }
 }

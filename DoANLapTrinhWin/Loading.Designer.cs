@@ -70,8 +70,8 @@
             this.guna2CircleProgressBar1.Location = new System.Drawing.Point(30, -500);
             this.guna2CircleProgressBar1.Minimum = 0;
             this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
-            this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.Gold;
-            this.guna2CircleProgressBar1.ProgressColor2 = System.Drawing.Color.MediumTurquoise;
+            this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(213)))), ((int)(((byte)(208)))));
+            this.guna2CircleProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(219)))), ((int)(((byte)(107)))));
             this.guna2CircleProgressBar1.ProgressThickness = 550;
             this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleProgressBar1.Size = new System.Drawing.Size(2000, 2000);
