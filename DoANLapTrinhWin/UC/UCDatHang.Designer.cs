@@ -73,12 +73,12 @@
             // 
             // lblTenSP
             // 
-            this.lblTenSP.AutoSize = true;
+            this.lblTenSP.AutoEllipsis = true;
             this.lblTenSP.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.ForeColor = System.Drawing.Color.Black;
             this.lblTenSP.Location = new System.Drawing.Point(132, 63);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(89, 32);
+            this.lblTenSP.Size = new System.Drawing.Size(290, 32);
             this.lblTenSP.TabIndex = 94;
             this.lblTenSP.Text = "Tên SP";
             // 
@@ -103,7 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(220)))), ((int)(((byte)(245)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
             this.Controls.Add(this.lblsoluong);
             this.Controls.Add(this.lblthanhtien);
             this.Controls.Add(this.lblGiaTien);

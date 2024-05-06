@@ -18,6 +18,7 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         ChiTietDonHangDAO ctdhDao = new ChiTietDonHangDAO();
         DonHang dh;
+        DonHangDAO dhdao = new DonHangDAO();
         public FCTDonHangNM(DonHang dh)
         {
             InitializeComponent();
@@ -32,32 +33,15 @@ namespace DoANLapTrinhWin
         //lấy thông tin về tổng tiền, ngày đặt hàng -> ngày giao hàng 
         public void TongTienDH()
         {
-            try
+            DataSet ds = dhdao.TongTienNgayDat(dh);
+            if (ds.Tables[0].Rows.Count > 0)
             {
-                conn.Open();
-                string sqlStr = string.Format("select TongTien, NgayDatHang " +
-                    "FROM DonHang " +
-                    "WHERE MaDonHang = '{0}'", dh.MaDonHang);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataSet dtSet = new DataSet();
-                adapter.Fill(dtSet);
-                if (dtSet.Tables[0].Rows.Count > 0)
-                {
-                    // Lấy tổng tiền và ngày đặt hàng từ dòng đầu tiên của kết quả truy vấn
-                    string tongTien = dtSet.Tables[0].Rows[0]["TongTien"].ToString();
-                    DateTime ngayDatHang = Convert.ToDateTime(dtSet.Tables[0].Rows[0]["NgayDatHang"]);
-                    DateTime ngayGiaoHang = ngayDatHang.AddDays(1);
-                    this.lbltongtienDH.Text = tongTien.ToString()+"đ";
-                    this.lblNgayGiao.Text = ngayGiaoHang.ToString("yyyy-MM-dd");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                // Lấy tổng tiền và ngày đặt hàng từ dòng đầu tiên của kết quả truy vấn
+                string tongTien = ds.Tables[0].Rows[0][0].ToString();
+                DateTime ngayDatHang = Convert.ToDateTime(ds.Tables[0].Rows[0][1]);
+                DateTime ngayGiaoHang = ngayDatHang.AddDays(1);
+                this.lbltongtienDH.Text = tongTien.ToString() + "đ";
+                this.lblNgayGiao.Text = ngayGiaoHang.ToString("yyyy-MM-dd");
             }
         }
         public void LoadData()

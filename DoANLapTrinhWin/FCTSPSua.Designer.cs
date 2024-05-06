@@ -50,10 +50,10 @@
             this.lblTinhTrang = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnThemHinh = new Guna.UI2.WinForms.Guna2Button();
-            this.panelThemNhieuHinh = new System.Windows.Forms.Panel();
             this.btnThemNhieuHinh = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panelThemNhieuHinh = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -448,16 +448,6 @@
             this.btnThemHinh.Text = "Thêm ảnh chính";
             this.btnThemHinh.Click += new System.EventHandler(this.btnThemHinh_Click);
             // 
-            // panelThemNhieuHinh
-            // 
-            this.panelThemNhieuHinh.AllowDrop = true;
-            this.panelThemNhieuHinh.AutoScroll = true;
-            this.panelThemNhieuHinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelThemNhieuHinh.Location = new System.Drawing.Point(81, 149);
-            this.panelThemNhieuHinh.Name = "panelThemNhieuHinh";
-            this.panelThemNhieuHinh.Size = new System.Drawing.Size(266, 755);
-            this.panelThemNhieuHinh.TabIndex = 290;
-            // 
             // btnThemNhieuHinh
             // 
             this.btnThemNhieuHinh.BorderRadius = 10;
@@ -469,7 +459,7 @@
             this.btnThemNhieuHinh.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemNhieuHinh.ForeColor = System.Drawing.Color.White;
             this.btnThemNhieuHinh.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNhieuHinh.Image")));
-            this.btnThemNhieuHinh.Location = new System.Drawing.Point(137, 910);
+            this.btnThemNhieuHinh.Location = new System.Drawing.Point(148, 947);
             this.btnThemNhieuHinh.Name = "btnThemNhieuHinh";
             this.btnThemNhieuHinh.Size = new System.Drawing.Size(143, 51);
             this.btnThemNhieuHinh.TabIndex = 291;
@@ -498,16 +488,28 @@
             this.label2.TabIndex = 293;
             this.label2.Text = "Đăng bán";
             // 
+            // panelThemNhieuHinh
+            // 
+            this.panelThemNhieuHinh.AutoScroll = true;
+            this.panelThemNhieuHinh.BackColor = System.Drawing.Color.Transparent;
+            this.panelThemNhieuHinh.BorderColor = System.Drawing.Color.Gray;
+            this.panelThemNhieuHinh.BorderRadius = 20;
+            this.panelThemNhieuHinh.CustomBorderColor = System.Drawing.Color.Gray;
+            this.panelThemNhieuHinh.Location = new System.Drawing.Point(91, 102);
+            this.panelThemNhieuHinh.Name = "panelThemNhieuHinh";
+            this.panelThemNhieuHinh.Size = new System.Drawing.Size(290, 838);
+            this.panelThemNhieuHinh.TabIndex = 294;
+            // 
             // FCTSPSua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1813, 1010);
+            this.Controls.Add(this.panelThemNhieuHinh);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnThemNhieuHinh);
-            this.Controls.Add(this.panelThemNhieuHinh);
             this.Controls.Add(this.btnThemHinh);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTinhTrang);
@@ -559,9 +561,9 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTinhTrang;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnThemHinh;
-        private System.Windows.Forms.Panel panelThemNhieuHinh;
         private Guna.UI2.WinForms.Guna2Button btnThemNhieuHinh;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel panelThemNhieuHinh;
     }
 }

@@ -56,7 +56,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SeaShell;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(244)))), ((int)(((byte)(209)))));
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -154,7 +154,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SeaShell;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(244)))), ((int)(((byte)(209)))));
             this.panel2.Controls.Add(this.lblNgayGiao);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.lbltongtienDH);

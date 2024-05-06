@@ -57,13 +57,13 @@
             // 
             // lblTenSP
             // 
-            this.lblTenSP.AutoSize = true;
+            this.lblTenSP.AutoEllipsis = true;
             this.lblTenSP.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.ForeColor = System.Drawing.Color.SeaGreen;
-            this.lblTenSP.Location = new System.Drawing.Point(13, 152);
+            this.lblTenSP.Location = new System.Drawing.Point(13, 162);
             this.lblTenSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(71, 29);
+            this.lblTenSP.Size = new System.Drawing.Size(262, 29);
             this.lblTenSP.TabIndex = 26;
             this.lblTenSP.Text = "tenSP";
             // 
