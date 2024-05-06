@@ -25,7 +25,7 @@ namespace DoANLapTrinhWin
         public FCTSPSua(SanPham sp)
         {
             InitializeComponent(); 
-            this.Size = new Size(1100,550); //tao size moi cho form
+            this.Size = new Size(1250,700); //tao size moi cho form
             ThongTin(sp); //thông tin hiện lên của sản phẩm
             LoadImagesFromDatabase(txtMaSanPham.Text);
         }

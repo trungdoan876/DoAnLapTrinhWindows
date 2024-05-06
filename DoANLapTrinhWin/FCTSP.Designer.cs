@@ -111,7 +111,7 @@
             // 
             // picHinh
             // 
-            this.picHinh.Location = new System.Drawing.Point(466, 60);
+            this.picHinh.Location = new System.Drawing.Point(571, 59);
             this.picHinh.Margin = new System.Windows.Forms.Padding(2);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(626, 359);
@@ -125,7 +125,7 @@
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Location = new System.Drawing.Point(319, 593);
+            this.label10.Location = new System.Drawing.Point(424, 592);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(201, 28);
             this.label10.TabIndex = 58;
@@ -164,7 +164,7 @@
             // 
             this.lblSoLuong.AutoSize = true;
             this.lblSoLuong.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblSoLuong.Location = new System.Drawing.Point(898, 442);
+            this.lblSoLuong.Location = new System.Drawing.Point(1003, 441);
             this.lblSoLuong.Name = "lblSoLuong";
             this.lblSoLuong.Size = new System.Drawing.Size(16, 20);
             this.lblSoLuong.TabIndex = 77;
@@ -192,9 +192,9 @@
             this.panel1.Controls.Add(this.lblGiaGoc);
             this.panel1.Controls.Add(this.lblGiaBan);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1225, 0);
+            this.panel1.Location = new System.Drawing.Point(1395, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(506, 1705);
+            this.panel1.Size = new System.Drawing.Size(506, 1704);
             this.panel1.TabIndex = 78;
             // 
             // btnMuaNgay
@@ -465,7 +465,7 @@
             this.txtMota.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMota.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMota.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMota.Location = new System.Drawing.Point(301, 626);
+            this.txtMota.Location = new System.Drawing.Point(406, 625);
             this.txtMota.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMota.Multiline = true;
             this.txtMota.Name = "txtMota";
@@ -479,9 +479,10 @@
             // 
             this.panelThemNhieuHinh.AllowDrop = true;
             this.panelThemNhieuHinh.AutoScroll = true;
+            this.panelThemNhieuHinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelThemNhieuHinh.Location = new System.Drawing.Point(12, 75);
             this.panelThemNhieuHinh.Name = "panelThemNhieuHinh";
-            this.panelThemNhieuHinh.Size = new System.Drawing.Size(278, 989);
+            this.panelThemNhieuHinh.Size = new System.Drawing.Size(308, 1080);
             this.panelThemNhieuHinh.TabIndex = 286;
             // 
             // soluongmua
@@ -489,7 +490,7 @@
             this.soluongmua.BackColor = System.Drawing.Color.Transparent;
             this.soluongmua.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.soluongmua.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.soluongmua.Location = new System.Drawing.Point(763, 429);
+            this.soluongmua.Location = new System.Drawing.Point(868, 428);
             this.soluongmua.Margin = new System.Windows.Forms.Padding(8);
             this.soluongmua.Name = "soluongmua";
             this.soluongmua.Size = new System.Drawing.Size(112, 33);
@@ -507,7 +508,7 @@
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel7.Image = ((System.Drawing.Image)(resources.GetObject("bunifuCustomLabel7.Image")));
             this.bunifuCustomLabel7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(634, 429);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(739, 428);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(151, 33);
             this.bunifuCustomLabel7.TabIndex = 80;
@@ -517,7 +518,7 @@
             // 
             this.picHeart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picHeart.Image = ((System.Drawing.Image)(resources.GetObject("picHeart.Image")));
-            this.picHeart.Location = new System.Drawing.Point(1097, 369);
+            this.picHeart.Location = new System.Drawing.Point(1202, 368);
             this.picHeart.Name = "picHeart";
             this.picHeart.Size = new System.Drawing.Size(66, 50);
             this.picHeart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -529,9 +530,9 @@
             // 
             this.fpanelDanhGia.AutoScroll = true;
             this.fpanelDanhGia.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
-            this.fpanelDanhGia.Location = new System.Drawing.Point(307, 1381);
+            this.fpanelDanhGia.Location = new System.Drawing.Point(406, 1380);
             this.fpanelDanhGia.Name = "fpanelDanhGia";
-            this.fpanelDanhGia.Size = new System.Drawing.Size(912, 324);
+            this.fpanelDanhGia.Size = new System.Drawing.Size(918, 324);
             this.fpanelDanhGia.TabIndex = 289;
             // 
             // label2
@@ -540,7 +541,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(319, 1339);
+            this.label2.Location = new System.Drawing.Point(424, 1338);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(233, 28);
             this.label2.TabIndex = 290;
@@ -580,7 +581,7 @@
             // 
             // fpanelSPChungNH
             // 
-            this.fpanelSPChungNH.Location = new System.Drawing.Point(301, 945);
+            this.fpanelSPChungNH.Location = new System.Drawing.Point(406, 944);
             this.fpanelSPChungNH.Name = "fpanelSPChungNH";
             this.fpanelSPChungNH.Size = new System.Drawing.Size(912, 391);
             this.fpanelSPChungNH.TabIndex = 292;
@@ -591,7 +592,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(319, 914);
+            this.label1.Location = new System.Drawing.Point(424, 913);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(254, 28);
             this.label1.TabIndex = 293;
@@ -602,7 +603,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(1109, 446);
+            this.label3.Location = new System.Drawing.Point(1214, 445);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 28);
             this.label3.TabIndex = 294;
@@ -612,7 +613,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(1160, 476);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(1265, 475);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(27, 24);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -626,7 +627,7 @@
             this.panel3.Controls.Add(this.lblDiaChiNB);
             this.panel3.Controls.Add(this.lbltenNB);
             this.panel3.Controls.Add(this.picHinhNB);
-            this.panel3.Location = new System.Drawing.Point(301, 502);
+            this.panel3.Location = new System.Drawing.Point(406, 501);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(912, 69);
             this.panel3.TabIndex = 291;
@@ -654,7 +655,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(319, 462);
+            this.label4.Location = new System.Drawing.Point(424, 461);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 28);
             this.label4.TabIndex = 295;
@@ -666,7 +667,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1757, 1106);
+            this.ClientSize = new System.Drawing.Size(1927, 1106);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.label3);

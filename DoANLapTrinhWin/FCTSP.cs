@@ -34,7 +34,7 @@ namespace DoANLapTrinhWin
         public FCTSP(SanPham sp,bool picClick,NguoiMua ngmua)
         {
             InitializeComponent();
-            this.Size = new Size(1200, 600);
+            this.Size = new Size(1250, 700);
             this.sp = sp;
             this.picClick = picClick;
             this.ngmua = ngmua;
