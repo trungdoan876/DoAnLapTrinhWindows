@@ -251,7 +251,7 @@
             this.Controls.Add(this.lblTrangThai);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UCSPGioHang";
-            this.Size = new System.Drawing.Size(1502, 239);
+            this.Size = new System.Drawing.Size(1673, 239);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soluongmuaGH)).EndInit();
             this.vongtrontt.ResumeLayout(false);
