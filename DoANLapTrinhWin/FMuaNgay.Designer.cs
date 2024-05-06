@@ -43,7 +43,7 @@
             this.picHinhNB = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelSP = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbThanhToan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblTien = new System.Windows.Forms.Label();
             this.lblSLMua = new System.Windows.Forms.Label();
@@ -200,7 +200,7 @@
             // 
             // guna2CustomGradientPanel5
             // 
-            this.guna2CustomGradientPanel5.Controls.Add(this.guna2ComboBox1);
+            this.guna2CustomGradientPanel5.Controls.Add(this.cmbThanhToan);
             this.guna2CustomGradientPanel5.Controls.Add(this.label3);
             this.guna2CustomGradientPanel5.Controls.Add(this.lblTien);
             this.guna2CustomGradientPanel5.Controls.Add(this.lblSLMua);
@@ -211,23 +211,23 @@
             this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(1353, 493);
             this.guna2CustomGradientPanel5.TabIndex = 4;
             // 
-            // guna2ComboBox1
+            // cmbThanhToan
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(195)))), ((int)(((byte)(223)))));
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.cmbThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(195)))), ((int)(((byte)(223)))));
+            this.cmbThanhToan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbThanhToan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbThanhToan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbThanhToan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbThanhToan.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbThanhToan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbThanhToan.ItemHeight = 30;
+            this.cmbThanhToan.Items.AddRange(new object[] {
             "Thanh toán khi nhận hàng",
             "Chuyển khoản"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(537, 176);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(322, 36);
-            this.guna2ComboBox1.TabIndex = 290;
+            this.cmbThanhToan.Location = new System.Drawing.Point(537, 176);
+            this.cmbThanhToan.Name = "cmbThanhToan";
+            this.cmbThanhToan.Size = new System.Drawing.Size(322, 36);
+            this.cmbThanhToan.TabIndex = 290;
             // 
             // label3
             // 
@@ -321,7 +321,7 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox picHinhNB;
         private System.Windows.Forms.Label lblTien;
         private System.Windows.Forms.Label lblSLMua;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbThanhToan;
         private System.Windows.Forms.Label label3;
     }
 }

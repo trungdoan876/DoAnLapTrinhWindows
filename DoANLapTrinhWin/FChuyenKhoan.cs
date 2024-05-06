@@ -14,12 +14,12 @@ namespace DoANLapTrinhWin
     {
         SanPham sp;
         string maNM,ten,diachi;
-        int tongtien;
+        decimal tongtien;
         public FChuyenKhoan()
         {
             InitializeComponent();
         }
-        public FChuyenKhoan(string maNM, SanPham sp, int tongtien, string ten, string diachi)
+        public FChuyenKhoan(string maNM, SanPham sp, decimal tongtien, string ten, string diachi)
         {
             this.sp = sp;
             this.maNM = maNM;
