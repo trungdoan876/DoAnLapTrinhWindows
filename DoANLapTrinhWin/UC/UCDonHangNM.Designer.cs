@@ -118,7 +118,7 @@
             this.btnDaNhanHang.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnDaNhanHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDaNhanHang.Image")));
             this.btnDaNhanHang.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnDaNhanHang.Location = new System.Drawing.Point(1417, 77);
+            this.btnDaNhanHang.Location = new System.Drawing.Point(1446, 77);
             this.btnDaNhanHang.Name = "btnDaNhanHang";
             this.btnDaNhanHang.Size = new System.Drawing.Size(180, 45);
             this.btnDaNhanHang.TabIndex = 106;
@@ -161,7 +161,7 @@
             this.Controls.Add(this.lblTongTien);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UCDonHangNM";
-            this.Size = new System.Drawing.Size(1618, 200);
+            this.Size = new System.Drawing.Size(1663, 200);
             this.Click += new System.EventHandler(this.UCDonHang_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

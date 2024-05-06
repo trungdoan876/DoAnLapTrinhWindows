@@ -149,7 +149,7 @@
             this.Controls.Add(this.lblTrangThai);
             this.Controls.Add(this.lblTongTien);
             this.Name = "UCDaGiaoNM";
-            this.Size = new System.Drawing.Size(1603, 209);
+            this.Size = new System.Drawing.Size(1683, 209);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

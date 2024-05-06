@@ -22,7 +22,6 @@ namespace DoANLapTrinhWin
             this.ngmua = ngmua;
             LoadYeuThich();
         }
-
         public void LoadYeuThich()
         {
             DataSet ds = new DataSet();
