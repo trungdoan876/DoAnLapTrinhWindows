@@ -168,6 +168,12 @@
     <Compile Include="FDonHangNguoiMua.Designer.cs">
       <DependentUpon>FDonHangNguoiMua.cs</DependentUpon>
     </Compile>
+    <Compile Include="FLoadingGH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLoadingGH.Designer.cs">
+      <DependentUpon>FLoadingGH.cs</DependentUpon>
+    </Compile>
     <Compile Include="FSPNB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -431,6 +437,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FGioHang.resx">
       <DependentUpon>FGioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLoadingGH.resx">
+      <DependentUpon>FLoadingGH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMuaHang.resx">
       <DependentUpon>FMuaHang.cs</DependentUpon>
