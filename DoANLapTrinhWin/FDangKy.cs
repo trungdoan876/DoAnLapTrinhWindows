@@ -55,7 +55,9 @@ namespace DoANLapTrinhWin
                 NguoiMua ngmua = new NguoiMua(txtDK.Text);
                 int kt = ngbandao.KiemTraDangKy(ngmua);
                 if (kt > 0)
+                {
                     MessageBox.Show("Số điện thoại đã được đăng ký!");
+                }
                 else
                     Global.MoFormCon(new FThongTinDangKy(selctecOption, txtDK.Text), panelDK);
             }

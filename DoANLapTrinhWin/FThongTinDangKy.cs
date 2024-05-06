@@ -54,6 +54,7 @@ namespace DoANLapTrinhWin
                 NguoiBan ngban = new NguoiBan(maNB, txtMK.Text, txtHoTen.Text, sdt, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, b);
                 ngdao.DangKy(ngban);
                 MessageBox.Show("Đăng kí tài khoản bán hàng thành công!!");
+                this.Close();
             }
             else
             {
@@ -61,6 +62,7 @@ namespace DoANLapTrinhWin
                 NguoiMua ng = new NguoiMua(maNM, txtMK.Text, txtHoTen.Text, sdt, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, b);
                 ngmuadao.DangKy(ng);
                 MessageBox.Show("Đăng kí tài khoản mua hàng thành công!!");
+                this.Close();
             } 
         }
         private void btnThemHinh_Click(object sender, EventArgs e)

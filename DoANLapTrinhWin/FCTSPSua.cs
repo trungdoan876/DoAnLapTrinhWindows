@@ -82,7 +82,6 @@ namespace DoANLapTrinhWin
                     lblTinhTrang.Text, txtDiaChi.Text, "",txtSoLuonSanCo.Text, Global.ImageToByteArray(picHinh.Image));
             spDao.CapNhatSanPham(sp);
             spDao.ThemNhieuHinh(txtMaSanPham.Text, arrPicture);
-            MessageBox.Show("Đã cập nhật sản phẩm <3!");
         }
         //đăng bán sản phẩm
         private void btnDangBan_Click(object sender, EventArgs e)
@@ -91,7 +90,6 @@ namespace DoANLapTrinhWin
                     txtXuatXu.Text, txtTGSD.Text, dtp.Value, txtMoTa.Text, txtNganhHang.Text,
                    lblTinhTrang.Text, txtDiaChi.Text, "", txtSoLuonSanCo.Text, Global.ImageToByteArray(picHinh.Image));
             spDao.CapNhatDangBan(sp);
-            MessageBox.Show("Sản phẩm đã được đăng bán hihi!");
         }
         //nút back
         private void btnQuaylai_Click(object sender, EventArgs e)

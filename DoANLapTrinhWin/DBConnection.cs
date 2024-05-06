@@ -87,18 +87,18 @@ namespace DoANLapTrinhWin
             }
             return null;
         }
-        
+
         //thực thi 1 câu lệnh
-        /*public void ThucThi(string sqlStr)
+        public void ThucThi(string sqlStr)
         {
             try
             {
                 // Ket noi
                 conn.Open();
-               
+
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Thực thi thành công!!!");
+                    MessageBox.Show("Thành công <3 !");
             }
             catch (Exception ex)
             {
@@ -108,7 +108,7 @@ namespace DoANLapTrinhWin
             {
                 conn.Close();
             }
-        }*/
+        }
         //thực thi không thông báo
         public void ThucThiKhong(string sqlStr)
         {
