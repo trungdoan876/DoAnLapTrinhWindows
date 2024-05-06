@@ -45,7 +45,7 @@ namespace DoANLapTrinhWin
         }
         private void LoadData()
         {
-            UCSPGioHang ucgh = new UCSPGioHang(sp);
+            UCSPGioHang ucgh = new UCSPGioHang(sp,ngmua);
             ucgh.soluongmuaGH.Value= slmua;
             ucgh.soluongmuaGH.Enabled = false;
             panelSP.Controls.Add(ucgh);

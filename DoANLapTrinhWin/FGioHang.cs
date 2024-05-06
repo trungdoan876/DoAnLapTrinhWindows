@@ -19,6 +19,7 @@ namespace DoANLapTrinhWin
         GioHangDAO ghdao = new GioHangDAO();
         SanPham sp;
         NguoiMua ngMua;
+        string check;
         public FGioHang(NguoiMua ngmua)
         {
             InitializeComponent();
@@ -64,31 +65,52 @@ namespace DoANLapTrinhWin
                     row[7].ToString()
                 );
 
-                UCSPGioHang spgh = new UCSPGioHang(sp);
+                UCSPGioHang spgh = new UCSPGioHang(sp,ngMua);
 
                 //vị trí uc
                 spgh.Location = new Point(0, y);
                 y += spgh.Height += 5;
                 ucnb.panelSP.Controls.Add(spgh);
-
+                LoadTT(spgh.checkBoxSP);
                 spgh.lblTrangThai.Text = row[10].ToString(); //có được chọn để mua hay không
                 spgh.soluongmuaGH.Value = int.Parse(soLuongMua); //số lượng thêm vào giỏ
-
                 lblTongTien.Text = "đ"+ThanhTien(spgh.lblTrangThai.Text, spgh.lblGiaTien.Text, int.Parse(soLuongMua))+".000";
             }
         }
         public string ThanhTien(string TrangThai,string giaTien,int soluongmua)
         {
-            string giaban = giaTien.Substring(1); // Loại bỏ ký tự "đ" ở đầu chuỗi
-            decimal gb = decimal.Parse(giaban); // Chuyển đổi giá trị của giaban thành kiểu decimal
-            int tien = (int)(gb * soluongmua); // Thực hiện phép nhân và chuyển đổi kết quả thành kiểu int
-            tongtien += tien;
+            if (TrangThai == "True")
+            {
+                string giaban = giaTien.Substring(1); // Loại bỏ ký tự "đ" ở đầu chuỗi
+                decimal gb = decimal.Parse(giaban); // Chuyển đổi giá trị của giaban thành kiểu decimal
+                int tien = (int)(gb * soluongmua); // Thực hiện phép nhân và chuyển đổi kết quả thành kiểu int
+                tongtien += tien;
+            }
             return tongtien.ToString();
         }
         private void MuaHang_Click(object sender, EventArgs e)
         {
             FDatHang fdh = new FDatHang(ngMua, sp, tongtien);
             fdh.ShowDialog();
+        }
+        private void LoadTT(CheckBox checkBoxSP)
+        {
+            DataSet dt = ghdao.HienGioHang(ngMua);
+            foreach (DataRow row in dt.Tables[0].Rows)
+            {
+                check = row[10].ToString();
+
+                if (check == "True") //tick vao checkbox
+                {
+                    checkBoxSP.Checked = true;
+                    check = "False";
+                }
+                else //=true -> đã chọn
+                {
+                    checkBoxSP.Checked = false;
+                    check = "True";
+                }
+            }
         }
     }
 }

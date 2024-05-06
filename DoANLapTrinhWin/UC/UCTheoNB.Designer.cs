@@ -102,6 +102,6 @@
         private System.Windows.Forms.Label lbltenNB;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picHinhNB;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private System.Windows.Forms.FlowLayoutPanel panelSP;
+        public System.Windows.Forms.FlowLayoutPanel panelSP;
     }
 }

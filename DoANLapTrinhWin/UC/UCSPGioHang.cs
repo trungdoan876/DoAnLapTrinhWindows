@@ -9,6 +9,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace DoANLapTrinhWin
@@ -17,11 +18,14 @@ namespace DoANLapTrinhWin
     {
         SanPham sp;
         string slmua ;
+        string check;
+        NguoiMua ngmua;
         GioHangDAO ghDAO = new GioHangDAO();
-        public UCSPGioHang(SanPham sanpham)
+        public UCSPGioHang(SanPham sanpham,NguoiMua ngmua)
         {
             InitializeComponent();
             this.sp = sanpham;
+            this.ngmua = ngmua;
             this.lblTenSP.Text = sp.TenSP;
             this.lblGiaTien.Text = "đ" + sp.GiaBan;
             this.lblTinhTrang.Text = sp.TinhTrang;
@@ -37,20 +41,22 @@ namespace DoANLapTrinhWin
             int tt = int.Parse(str);
             return tt;
         }
-        bool check = true;
+        
         private void checkBoxSP_CheckedChanged(object sender, EventArgs e)
         {
-            if (check == false) //tick vao checkbox
+            if (check == "True") //tick vao checkbox
             {
-                check = true;
+                checkBoxSP.Checked = true;
                 GioHang gh = new GioHang(sp.MaSP);
                 ghDAO.CapNhatChonSanPham(gh);
+                check = "False";
             }
             else //=true -> đã chọn
             {
-                check = false;
+                checkBoxSP.Checked = false;
                 GioHang gh = new GioHang(sp.MaSP);
                 ghDAO.CapNhatKhongchon(gh);
+                check = "True";
             }
         }
         private void soluongmuaGH_ValueChanged(object sender, EventArgs e)
