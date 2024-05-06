@@ -47,7 +47,6 @@ namespace DoANLapTrinhWin
                     lblTinhTrang.Text, txtDiaChi.Text, lblMaNB.Text, txtSoLuonSanCo.Text, b);
             spDAO.ThemSanPham(sp);
             spDAO.ThemNhieuHinh(txtMaSanPham.Text, arrPicture);
-            MessageBox.Show("Thêm sản phẩm thành công <3!");
         }
 
         private void btnThemHinh_Click(object sender, EventArgs e)

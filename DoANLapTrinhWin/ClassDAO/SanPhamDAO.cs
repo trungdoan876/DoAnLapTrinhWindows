@@ -25,13 +25,14 @@ namespace DoANLapTrinhWin
                 "GiaGoc, XuatXu, TGDSD, MoTaSanPham, NganhHang, TinhTrang,DiaChi,NgayDang,MaNguoiBan,SoLuong,Hinh,DangBan) " +
                 "VALUES ('{0}', N'{1}', '{2}','{3}', N'{4}','{5}',N'{6}',N'{7}',N'{8}',N'{9}',N'{10}','{11}','{12}',0x{13},'{14}')",
                 sp.MaSP, sp.TenSP, sp.GiaBan, sp.GiaGoc, sp.XuatXu, sp.ThoiGianDaSuDung, sp.MoTaSanPham, sp.NganhHang, sp.TinhTrang, sp.DiaChi, sp.NgayDang, sp.MaNguoiBan, sp.SoLuong, anh, 0);
-            //if(sp.kiemTraNull())
-                tt.ThucThiKhong(sqlStr);
+            tt.ThucThiKhong(sqlStr);
+            MessageBox.Show("Thêm sản phẩm thành công <3!");
         }
         public void XoaSanPham(SanPham sp)
         {
             string sqlStr = string.Format("DELETE FROM SanPham WHERE MaSanPham = '{0}'", sp.MaSP);
             tt.ThucThiKhong(sqlStr);
+            MessageBox.Show("Đã xóa sản phẩm!");
         }
         public void CapNhatSanPham(SanPham sp)
         {
@@ -42,19 +43,20 @@ namespace DoANLapTrinhWin
                 "SoLuong='{11}' WHERE MaSanPham = '{12}'",
                 sp.TenSP, sp.GiaBan, sp.GiaGoc, sp.XuatXu, sp.ThoiGianDaSuDung, sp.MoTaSanPham, sp.NganhHang, sp.TinhTrang,
                 sp.DiaChi, sp.NgayDang, anh, sp.SoLuong, sp.MaSP);
-            if(sp.kiemTraNull())
+            //if(sp.kiemTraNull())
                 tt.ThucThiKhong(sqlStr);
+            MessageBox.Show("Cập nhật sản phẩm thành công!");
         }
         public void CapNhatDangBan(SanPham sp)
         {
             string sqlStr = string.Format("UPDATE SanPham SET DangBan = '{0}'WHERE MaSanPham ='{1}'", 1, sp.MaSP);
             //kiem tra dang ban xem da dang ban chua thi moi duoc dang ban
-            tt.ThucThiKhong(sqlStr);
+            tt.ThucThi(sqlStr);
         }
         public void GoSanPham(SanPham sp)
         {
             string sqlStr = string.Format("UPDATE SanPham SET DangBan = '{0}'WHERE MaSanPham ='{1}'", 0, sp.MaSP);
-            tt.ThucThiKhong(sqlStr);
+            tt.ThucThi(sqlStr);
         }
         public void XoaNhieuHinh(SanPham sp)
         {

@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace DoANLapTrinhWin
 {
@@ -16,13 +17,13 @@ namespace DoANLapTrinhWin
         {
             string sqlStr = string.Format("UPDATE DonHang SET TrangThaiDonHangNM = N'{0}', TrangThaiDonHangNB = N'{1}' WHERE MaDonHang ='{2}'",
                     "Đang giao hàng", "Đang giao hàng", dh.MaDonHang);
-            tt.ThucThiKhong(sqlStr);
+            tt.ThucThi(sqlStr);
         }
         public void CapNhatNhanHang(DonHang dh)
         {
             string sqlStr = string.Format("UPDATE DonHang SET TrangThaiDonHangNM = N'{0}', TrangThaiDonHangNB = N'{1}' WHERE MaDonHang ='{2}'",
                     "Giao hàng thành công", "Giao hàng thành công", dh.MaDonHang);
-            tt.ThucThiKhong(sqlStr);
+            tt.ThucThi(sqlStr);
         }
         public DataSet CapNhatGHThanhCongNB(NguoiBan ngban)
         {
@@ -95,7 +96,7 @@ namespace DoANLapTrinhWin
         {
             string sql = string.Format("INSERT INTO DonHang (MaDonHang, MaNguoiMua, MaNguoiBan, TongTien, NgayDatHang, TrangThaiDonHangNM, TrangThaiDonHangNB) " +
                     "VALUES('{0}','{1}','{2}','{3}','{4}',N'{5}',N'{6}')", dh.MaDonHang,dh.MaNguoiMua,dh.MaNguoiBan,dh.TongTien,dh.NgayDatHang,dh.TrangThaiDonHangNM,dh.TrangThaiDonHangNB);
-            tt.ThucThiKhong(sql);
+            tt.ThucThi(sql);
         }
         public DataSet TaoMaDonHang()
         {

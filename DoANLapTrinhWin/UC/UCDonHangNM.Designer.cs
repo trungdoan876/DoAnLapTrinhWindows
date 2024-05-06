@@ -48,7 +48,7 @@
             this.lblTrangThai.AutoSize = true;
             this.lblTrangThai.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lblTrangThai.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrangThai.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblTrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblTrangThai.Location = new System.Drawing.Point(1270, 149);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.Size = new System.Drawing.Size(86, 25);
@@ -102,6 +102,7 @@
             // 
             // btnDaNhanHang
             // 
+            this.btnDaNhanHang.BorderColor = System.Drawing.Color.Transparent;
             this.btnDaNhanHang.BorderRadius = 14;
             this.btnDaNhanHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDaNhanHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -112,7 +113,7 @@
             this.btnDaNhanHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnDaNhanHang.FillColor2 = System.Drawing.Color.Salmon;
             this.btnDaNhanHang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDaNhanHang.ForeColor = System.Drawing.Color.Black;
+            this.btnDaNhanHang.ForeColor = System.Drawing.Color.White;
             this.btnDaNhanHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDaNhanHang.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnDaNhanHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDaNhanHang.Image")));
@@ -150,7 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblMaDH);
             this.Controls.Add(this.btnDaNhanHang);

@@ -100,7 +100,7 @@
             this.lblTenSP.AutoSize = true;
             this.lblTenSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.ForeColor = System.Drawing.Color.Black;
-            this.lblTenSP.Location = new System.Drawing.Point(221, 83);
+            this.lblTenSP.Location = new System.Drawing.Point(211, 83);
             this.lblTenSP.Name = "lblTenSP";
             this.lblTenSP.Size = new System.Drawing.Size(55, 25);
             this.lblTenSP.TabIndex = 305;
@@ -111,7 +111,7 @@
             this.lblTrangThai.AutoSize = true;
             this.lblTrangThai.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lblTrangThai.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrangThai.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblTrangThai.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblTrangThai.Location = new System.Drawing.Point(1258, 146);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.Size = new System.Drawing.Size(86, 25);
@@ -133,6 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblMaDH);
             this.Controls.Add(this.btnDaNhanHang);

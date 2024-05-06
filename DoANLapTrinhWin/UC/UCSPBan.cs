@@ -42,7 +42,6 @@ namespace DoANLapTrinhWin
             SanPham sp = new SanPham(lblMaSP.Text);
             spDAO.XoaSanPham(sp);
             spDAO.XoaNhieuHinh(sp);
-            MessageBox.Show("Sản phẩm đã được xóa khỏi danh sách:( ");
         }
     }
 }

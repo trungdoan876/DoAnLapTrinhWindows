@@ -35,7 +35,6 @@ namespace DoANLapTrinhWin
         {
             SanPham sp = new SanPham(lblMaSP.Text);
             spDAO.GoSanPham(sp);
-            MessageBox.Show("Sản phẩm đã được gỡ đăng bán!");
         }
     }
 }
