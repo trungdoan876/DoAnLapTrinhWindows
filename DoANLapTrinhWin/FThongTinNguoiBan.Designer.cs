@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FThongTinNguoiBan));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnSua = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblGioiThieu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
@@ -43,18 +44,17 @@
             this.txtHoTen = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaTaiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtpNgSinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.guna2PictureBox3);
             this.panel1.Controls.Add(this.guna2PictureBox2);
-            this.panel1.Controls.Add(this.guna2PictureBox1);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.lblGioiThieu);
             this.panel1.Controls.Add(this.guna2CircleProgressBar1);
@@ -73,6 +73,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1768, 1050);
             this.panel1.TabIndex = 0;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(1323, 433);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(300, 200);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 230;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // btnSua
             // 
@@ -173,7 +184,9 @@
             // btnThemAnh
             // 
             this.btnThemAnh.Animated = true;
+            this.btnThemAnh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(147)))), ((int)(((byte)(238)))));
             this.btnThemAnh.BorderRadius = 10;
+            this.btnThemAnh.BorderThickness = 1;
             this.btnThemAnh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemAnh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThemAnh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -365,27 +378,16 @@
             this.dtpNgSinh.TabIndex = 214;
             this.dtpNgSinh.Value = new System.DateTime(2024, 4, 13, 15, 2, 40, 120);
             // 
-            // guna2PictureBox1
+            // guna2PictureBox3
             // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(1369, 336);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(300, 303);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 229;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(67, 677);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(300, 200);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 230;
-            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(47, 594);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(353, 319);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 231;
+            this.guna2PictureBox3.TabStop = false;
             // 
             // FThongTinNguoiBan
             // 
@@ -400,9 +402,9 @@
             this.Load += new System.EventHandler(this.FThongTinNguoiBan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -422,7 +424,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblGioiThieu;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
         private Guna.UI2.WinForms.Guna2GradientButton btnSua;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
     }
 }
