@@ -23,7 +23,7 @@ namespace DoANLapTrinhWin
             string anh = BitConverter.ToString(sp.Hinh).Replace("-", "");
             string sqlStr = string.Format("INSERT INTO SanPham(MaSanPham, TenSanPham, GiaBan, " +
                 "GiaGoc, XuatXu, TGDSD, MoTaSanPham, NganhHang, TinhTrang,DiaChi,NgayDang,MaNguoiBan,SoLuong,Hinh,DangBan) " +
-                "VALUES ('{0}', N'{1}', '{2}','{3}', N'{4}','{5}',N'{6}',N'{7}',N'{8}',N'{9}',N'{10}','{11}','{12}',0x{13},'{14}')",
+                "VALUES ('{0}', N'{1}', '{2}','{3}', N'{4}',N'{5}',N'{6}',N'{7}',N'{8}',N'{9}',N'{10}','{11}','{12}',0x{13},'{14}')",
                 sp.MaSP, sp.TenSP, sp.GiaBan, sp.GiaGoc, sp.XuatXu, sp.ThoiGianDaSuDung, sp.MoTaSanPham, sp.NganhHang, sp.TinhTrang, sp.DiaChi, sp.NgayDang, sp.MaNguoiBan, sp.SoLuong, anh, 0);
             tt.ThucThiKhong(sqlStr);
             MessageBox.Show("Thêm sản phẩm thành công <3!");

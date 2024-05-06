@@ -64,7 +64,7 @@
             this.lblMaNB.AutoSize = true;
             this.lblMaNB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaNB.ForeColor = System.Drawing.Color.SeaGreen;
-            this.lblMaNB.Location = new System.Drawing.Point(400, 40);
+            this.lblMaNB.Location = new System.Drawing.Point(578, 58);
             this.lblMaNB.Name = "lblMaNB";
             this.lblMaNB.Size = new System.Drawing.Size(59, 25);
             this.lblMaNB.TabIndex = 228;
@@ -73,7 +73,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(593, 405);
+            this.pictureBox1.Location = new System.Drawing.Point(756, 503);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(59, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -84,7 +84,7 @@
             // 
             this.lblTinhTrang.BackColor = System.Drawing.Color.Transparent;
             this.lblTinhTrang.ForeColor = System.Drawing.Color.LimeGreen;
-            this.lblTinhTrang.Location = new System.Drawing.Point(658, 382);
+            this.lblTinhTrang.Location = new System.Drawing.Point(821, 478);
             this.lblTinhTrang.Name = "lblTinhTrang";
             this.lblTinhTrang.Size = new System.Drawing.Size(26, 22);
             this.lblTinhTrang.TabIndex = 284;
@@ -116,7 +116,7 @@
             this.dtp.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.dtp.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtp.Location = new System.Drawing.Point(1267, 18);
+            this.dtp.Location = new System.Drawing.Point(1495, 36);
             this.dtp.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp.Name = "dtp";
@@ -130,7 +130,7 @@
             this.tinhTrang.FillColor = System.Drawing.Color.Gold;
             this.tinhTrang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.tinhTrang.HoverState.ThumbColor = System.Drawing.Color.DodgerBlue;
-            this.tinhTrang.Location = new System.Drawing.Point(658, 405);
+            this.tinhTrang.Location = new System.Drawing.Point(821, 503);
             this.tinhTrang.Name = "tinhTrang";
             this.tinhTrang.Size = new System.Drawing.Size(708, 43);
             this.tinhTrang.TabIndex = 281;
@@ -155,13 +155,13 @@
             this.txtSoLuonSanCo.HoverState.FillColor = System.Drawing.Color.White;
             this.txtSoLuonSanCo.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSoLuonSanCo.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSoLuonSanCo.IconLeft")));
-            this.txtSoLuonSanCo.Location = new System.Drawing.Point(1001, 324);
+            this.txtSoLuonSanCo.Location = new System.Drawing.Point(1164, 416);
             this.txtSoLuonSanCo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSoLuonSanCo.Name = "txtSoLuonSanCo";
             this.txtSoLuonSanCo.PasswordChar = '\0';
             this.txtSoLuonSanCo.PlaceholderText = "Số lượng sẵn có";
             this.txtSoLuonSanCo.SelectedText = "";
-            this.txtSoLuonSanCo.Size = new System.Drawing.Size(365, 50);
+            this.txtSoLuonSanCo.Size = new System.Drawing.Size(365, 54);
             this.txtSoLuonSanCo.TabIndex = 279;
             // 
             // txtDiaChi
@@ -181,13 +181,13 @@
             this.txtDiaChi.HoverState.FillColor = System.Drawing.Color.White;
             this.txtDiaChi.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDiaChi.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtDiaChi.IconLeft")));
-            this.txtDiaChi.Location = new System.Drawing.Point(1001, 249);
+            this.txtDiaChi.Location = new System.Drawing.Point(1164, 329);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "Địa chỉ\r\n";
             this.txtDiaChi.SelectedText = "";
-            this.txtDiaChi.Size = new System.Drawing.Size(365, 50);
+            this.txtDiaChi.Size = new System.Drawing.Size(365, 54);
             this.txtDiaChi.TabIndex = 278;
             // 
             // txtGiaGoc
@@ -207,13 +207,13 @@
             this.txtGiaGoc.HoverState.FillColor = System.Drawing.Color.White;
             this.txtGiaGoc.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtGiaGoc.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtGiaGoc.IconLeft")));
-            this.txtGiaGoc.Location = new System.Drawing.Point(1001, 171);
+            this.txtGiaGoc.Location = new System.Drawing.Point(1164, 244);
             this.txtGiaGoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGiaGoc.Name = "txtGiaGoc";
             this.txtGiaGoc.PasswordChar = '\0';
             this.txtGiaGoc.PlaceholderText = "Giá gốc";
             this.txtGiaGoc.SelectedText = "";
-            this.txtGiaGoc.Size = new System.Drawing.Size(365, 50);
+            this.txtGiaGoc.Size = new System.Drawing.Size(365, 54);
             this.txtGiaGoc.TabIndex = 276;
             // 
             // txtTGSD
@@ -233,13 +233,13 @@
             this.txtTGSD.HoverState.FillColor = System.Drawing.Color.White;
             this.txtTGSD.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTGSD.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtTGSD.IconLeft")));
-            this.txtTGSD.Location = new System.Drawing.Point(591, 324);
+            this.txtTGSD.Location = new System.Drawing.Point(754, 416);
             this.txtTGSD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTGSD.Name = "txtTGSD";
             this.txtTGSD.PasswordChar = '\0';
             this.txtTGSD.PlaceholderText = "Thời gian sử dụng";
             this.txtTGSD.SelectedText = "";
-            this.txtTGSD.Size = new System.Drawing.Size(365, 50);
+            this.txtTGSD.Size = new System.Drawing.Size(365, 54);
             this.txtTGSD.TabIndex = 275;
             // 
             // txtXuatXu
@@ -259,13 +259,13 @@
             this.txtXuatXu.HoverState.FillColor = System.Drawing.Color.White;
             this.txtXuatXu.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtXuatXu.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtXuatXu.IconLeft")));
-            this.txtXuatXu.Location = new System.Drawing.Point(591, 249);
+            this.txtXuatXu.Location = new System.Drawing.Point(754, 329);
             this.txtXuatXu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtXuatXu.Name = "txtXuatXu";
             this.txtXuatXu.PasswordChar = '\0';
             this.txtXuatXu.PlaceholderText = "Xuất xứ\r\n\r\n\r\n";
             this.txtXuatXu.SelectedText = "";
-            this.txtXuatXu.Size = new System.Drawing.Size(365, 50);
+            this.txtXuatXu.Size = new System.Drawing.Size(365, 54);
             this.txtXuatXu.TabIndex = 274;
             // 
             // txtGiaBan
@@ -285,13 +285,13 @@
             this.txtGiaBan.HoverState.FillColor = System.Drawing.Color.White;
             this.txtGiaBan.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtGiaBan.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtGiaBan.IconLeft")));
-            this.txtGiaBan.Location = new System.Drawing.Point(591, 171);
+            this.txtGiaBan.Location = new System.Drawing.Point(754, 244);
             this.txtGiaBan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGiaBan.Name = "txtGiaBan";
             this.txtGiaBan.PasswordChar = '\0';
             this.txtGiaBan.PlaceholderText = "Giá bán sản phẩm";
             this.txtGiaBan.SelectedText = "";
-            this.txtGiaBan.Size = new System.Drawing.Size(365, 50);
+            this.txtGiaBan.Size = new System.Drawing.Size(365, 54);
             this.txtGiaBan.TabIndex = 273;
             // 
             // txtTenSP
@@ -311,13 +311,13 @@
             this.txtTenSP.HoverState.FillColor = System.Drawing.Color.White;
             this.txtTenSP.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTenSP.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtTenSP.IconLeft")));
-            this.txtTenSP.Location = new System.Drawing.Point(591, 86);
+            this.txtTenSP.Location = new System.Drawing.Point(754, 159);
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.PasswordChar = '\0';
             this.txtTenSP.PlaceholderText = "Tên sản phẩm";
             this.txtTenSP.SelectedText = "";
-            this.txtTenSP.Size = new System.Drawing.Size(365, 50);
+            this.txtTenSP.Size = new System.Drawing.Size(365, 54);
             this.txtTenSP.TabIndex = 272;
             // 
             // txtMaSanPham
@@ -338,7 +338,7 @@
             this.txtMaSanPham.HoverState.FillColor = System.Drawing.Color.White;
             this.txtMaSanPham.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMaSanPham.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtMaSanPham.IconLeft")));
-            this.txtMaSanPham.Location = new System.Drawing.Point(296, 103);
+            this.txtMaSanPham.Location = new System.Drawing.Point(459, 159);
             this.txtMaSanPham.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMaSanPham.Name = "txtMaSanPham";
             this.txtMaSanPham.PasswordChar = '\0';
@@ -350,9 +350,9 @@
             // picHinh
             // 
             this.picHinh.Image = ((System.Drawing.Image)(resources.GetObject("picHinh.Image")));
-            this.picHinh.Location = new System.Drawing.Point(310, 152);
+            this.picHinh.Location = new System.Drawing.Point(437, 225);
             this.picHinh.Name = "picHinh";
-            this.picHinh.Size = new System.Drawing.Size(181, 196);
+            this.picHinh.Size = new System.Drawing.Size(267, 224);
             this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHinh.TabIndex = 268;
             this.picHinh.TabStop = false;
@@ -375,7 +375,7 @@
             this.txtMoTa.HoverState.FillColor = System.Drawing.Color.White;
             this.txtMoTa.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMoTa.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtMoTa.IconLeft")));
-            this.txtMoTa.Location = new System.Drawing.Point(591, 489);
+            this.txtMoTa.Location = new System.Drawing.Point(754, 587);
             this.txtMoTa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
@@ -388,7 +388,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(320, 24);
+            this.pictureBox2.Location = new System.Drawing.Point(498, 42);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(74, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -405,7 +405,7 @@
             this.btnThemSP.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnThemSP.ImageRotate = 0F;
             this.btnThemSP.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnThemSP.Location = new System.Drawing.Point(429, 560);
+            this.btnThemSP.Location = new System.Drawing.Point(594, 790);
             this.btnThemSP.Name = "btnThemSP";
             this.btnThemSP.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnThemSP.Size = new System.Drawing.Size(110, 82);
@@ -423,7 +423,7 @@
             this.btnThemHinh.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemHinh.ForeColor = System.Drawing.Color.White;
             this.btnThemHinh.Image = ((System.Drawing.Image)(resources.GetObject("btnThemHinh.Image")));
-            this.btnThemHinh.Location = new System.Drawing.Point(287, 382);
+            this.btnThemHinh.Location = new System.Drawing.Point(459, 478);
             this.btnThemHinh.Name = "btnThemHinh";
             this.btnThemHinh.Size = new System.Drawing.Size(232, 53);
             this.btnThemHinh.TabIndex = 288;
@@ -434,7 +434,7 @@
             // 
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(294, 523);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(459, 753);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(178, 34);
             this.bunifuCustomLabel1.TabIndex = 290;
@@ -444,7 +444,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(361, 560);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(526, 790);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(77, 46);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -476,7 +476,7 @@
             "Khác"});
             this.cmbNganhHang.ItemsAppearance.BackColor = System.Drawing.Color.White;
             this.cmbNganhHang.ItemsAppearance.SelectedBackColor = System.Drawing.Color.SkyBlue;
-            this.cmbNganhHang.Location = new System.Drawing.Point(1001, 86);
+            this.cmbNganhHang.Location = new System.Drawing.Point(1164, 159);
             this.cmbNganhHang.Name = "cmbNganhHang";
             this.cmbNganhHang.Size = new System.Drawing.Size(365, 31);
             this.cmbNganhHang.StartIndex = 0;
@@ -495,7 +495,7 @@
             this.btnThemNhieuHinh.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemNhieuHinh.ForeColor = System.Drawing.Color.White;
             this.btnThemNhieuHinh.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNhieuHinh.Image")));
-            this.btnThemNhieuHinh.Location = new System.Drawing.Point(39, 676);
+            this.btnThemNhieuHinh.Location = new System.Drawing.Point(162, 809);
             this.btnThemNhieuHinh.Name = "btnThemNhieuHinh";
             this.btnThemNhieuHinh.Size = new System.Drawing.Size(174, 51);
             this.btnThemNhieuHinh.TabIndex = 294;
@@ -506,9 +506,9 @@
             // 
             this.panelThemNhieuHinh.AllowDrop = true;
             this.panelThemNhieuHinh.AutoScroll = true;
-            this.panelThemNhieuHinh.Location = new System.Drawing.Point(22, 86);
+            this.panelThemNhieuHinh.Location = new System.Drawing.Point(101, 97);
             this.panelThemNhieuHinh.Name = "panelThemNhieuHinh";
-            this.panelThemNhieuHinh.Size = new System.Drawing.Size(234, 584);
+            this.panelThemNhieuHinh.Size = new System.Drawing.Size(295, 706);
             this.panelThemNhieuHinh.TabIndex = 293;
             // 
             // FThemSanPham
@@ -516,7 +516,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1561, 739);
+            this.ClientSize = new System.Drawing.Size(1743, 983);
             this.Controls.Add(this.btnThemNhieuHinh);
             this.Controls.Add(this.panelThemNhieuHinh);
             this.Controls.Add(this.cmbNganhHang);
