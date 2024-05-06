@@ -85,7 +85,7 @@
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.ElipseRadius = 40;
             this.bunifuElipse1.TargetControl = this;
             // 
             // label1
@@ -123,7 +123,7 @@
             this.Controls.Add(this.lblTongTien);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UCDonHangNB";
-            this.Size = new System.Drawing.Size(1628, 203);
+            this.Size = new System.Drawing.Size(1653, 203);
             this.Click += new System.EventHandler(this.UCDonHangNB_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

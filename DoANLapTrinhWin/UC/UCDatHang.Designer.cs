@@ -53,7 +53,7 @@
             // 
             this.lblthanhtien.AutoSize = true;
             this.lblthanhtien.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblthanhtien.ForeColor = System.Drawing.Color.Black;
+            this.lblthanhtien.ForeColor = System.Drawing.Color.Red;
             this.lblthanhtien.Location = new System.Drawing.Point(1077, 69);
             this.lblthanhtien.Name = "lblthanhtien";
             this.lblthanhtien.Size = new System.Drawing.Size(19, 25);
@@ -64,7 +64,7 @@
             // 
             this.lblGiaTien.AutoSize = true;
             this.lblGiaTien.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiaTien.ForeColor = System.Drawing.Color.Red;
+            this.lblGiaTien.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblGiaTien.Location = new System.Drawing.Point(457, 70);
             this.lblGiaTien.Name = "lblGiaTien";
             this.lblGiaTien.Size = new System.Drawing.Size(67, 25);
@@ -85,7 +85,7 @@
             // picHinh
             // 
             this.picHinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picHinh.Location = new System.Drawing.Point(19, 24);
+            this.picHinh.Location = new System.Drawing.Point(19, 15);
             this.picHinh.Margin = new System.Windows.Forms.Padding(2);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(108, 108);
@@ -103,7 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(210)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(220)))), ((int)(((byte)(245)))));
             this.Controls.Add(this.lblsoluong);
             this.Controls.Add(this.lblthanhtien);
             this.Controls.Add(this.lblGiaTien);
@@ -112,7 +112,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UCDatHang";
-            this.Size = new System.Drawing.Size(1195, 157);
+            this.Size = new System.Drawing.Size(1195, 147);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
