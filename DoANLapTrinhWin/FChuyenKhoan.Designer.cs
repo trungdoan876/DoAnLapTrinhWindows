@@ -40,12 +40,13 @@
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblDiaChi = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnThanhToan = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnQuaylai = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTongTien
@@ -199,20 +200,6 @@
             this.guna2TextBox4.Size = new System.Drawing.Size(402, 49);
             this.guna2TextBox4.TabIndex = 88;
             // 
-            // guna2ImageButton2
-            // 
-            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
-            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(116, 367);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Size = new System.Drawing.Size(70, 77);
-            this.guna2ImageButton2.TabIndex = 89;
-            // 
             // lblDiaChi
             // 
             this.lblDiaChi.AutoSize = true;
@@ -278,18 +265,29 @@
             this.btnQuaylai.TabIndex = 94;
             this.btnQuaylai.Click += new System.EventHandler(this.btnQuaylai_Click);
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(116, 373);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(98, 83);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 95;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // FChuyenKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1026, 564);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.btnQuaylai);
             this.Controls.Add(this.guna2ImageButton4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.lblDiaChi);
-            this.Controls.Add(this.guna2ImageButton2);
             this.Controls.Add(this.guna2TextBox4);
             this.Controls.Add(this.guna2TextBox3);
             this.Controls.Add(this.guna2TextBox2);
@@ -304,6 +302,7 @@
             this.Name = "FChuyenKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FChuyenKhoan";
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,10 +320,10 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label lblDiaChi;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
         private Guna.UI2.WinForms.Guna2ImageButton btnQuaylai;
         private Guna.UI2.WinForms.Guna2ImageButton btnThanhToan;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

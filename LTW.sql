@@ -1,5 +1,6 @@
 ﻿--database new
 CREATE DATABASE LTW
+ USE LTW
 --Sản Phẩm
 
 CREATE TABLE SanPham 
@@ -37,6 +38,8 @@ CREATE TABLE NguoiBan
 	PRIMARY KEY(Ma)
 );
 GO
+
+select * from NguoiBan
 --Người Mua
 CREATE TABLE NguoiMua
 (
