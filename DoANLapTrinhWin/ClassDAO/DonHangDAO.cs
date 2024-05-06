@@ -105,5 +105,15 @@ namespace DoANLapTrinhWin
             dt = tt.Load(sql);
             return dt;
         }
+        //lấy thông tin về tổng tiền, ngày đặt hàng -> ngày giao hàng -> FCTDonHangNM
+        public DataSet TongTienNgayDat(DonHang dh)
+        {
+            string sql = string.Format("select TongTien, NgayDatHang " +
+                    "FROM DonHang " +
+                    "WHERE MaDonHang = '{0}'", dh.MaDonHang);
+            DataSet dt = new DataSet();
+            dt = tt.Load(sql);
+            return dt;
+        }
     }
 }

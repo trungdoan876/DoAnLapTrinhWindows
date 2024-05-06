@@ -80,7 +80,7 @@ namespace DoANLapTrinhWin
         public static PictureBox CreatePictureBox(System.Drawing.Image image, PictureBox picHinh) // co click
         {
             PictureBox pic = new PictureBox();
-            pic.Size = new Size(100, 100);
+            pic.Size = new Size(150, 150);
             pic.Dock = DockStyle.Top;
             pic.Image = image;
             pic.SizeMode = PictureBoxSizeMode.Zoom;

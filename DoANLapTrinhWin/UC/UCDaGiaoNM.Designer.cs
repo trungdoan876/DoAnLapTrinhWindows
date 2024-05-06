@@ -99,12 +99,12 @@
             // 
             // lblTenSP
             // 
-            this.lblTenSP.AutoSize = true;
+            this.lblTenSP.AutoEllipsis = true;
             this.lblTenSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.ForeColor = System.Drawing.Color.Black;
             this.lblTenSP.Location = new System.Drawing.Point(211, 83);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(55, 25);
+            this.lblTenSP.Size = new System.Drawing.Size(1111, 25);
             this.lblTenSP.TabIndex = 305;
             this.lblTenSP.Text = "tensp";
             // 

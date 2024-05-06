@@ -41,11 +41,11 @@
             // 
             // lblTenNM
             // 
-            this.lblTenNM.AutoSize = true;
+            this.lblTenNM.AutoEllipsis = true;
             this.lblTenNM.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenNM.Location = new System.Drawing.Point(115, 15);
             this.lblTenNM.Name = "lblTenNM";
-            this.lblTenNM.Size = new System.Drawing.Size(84, 32);
+            this.lblTenNM.Size = new System.Drawing.Size(469, 32);
             this.lblTenNM.TabIndex = 0;
             this.lblTenNM.Text = "label1";
             // 

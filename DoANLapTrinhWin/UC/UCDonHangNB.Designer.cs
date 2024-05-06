@@ -51,12 +51,12 @@
             // 
             // lblTenSP
             // 
-            this.lblTenSP.AutoSize = true;
+            this.lblTenSP.AutoEllipsis = true;
             this.lblTenSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSP.ForeColor = System.Drawing.Color.Black;
+            this.lblTenSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(24)))), ((int)(((byte)(112)))));
             this.lblTenSP.Location = new System.Drawing.Point(212, 97);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(55, 25);
+            this.lblTenSP.Size = new System.Drawing.Size(858, 34);
             this.lblTenSP.TabIndex = 109;
             this.lblTenSP.Text = "tensp";
             // 
@@ -65,8 +65,8 @@
             this.lblTrangThai.AutoSize = true;
             this.lblTrangThai.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lblTrangThai.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrangThai.ForeColor = System.Drawing.Color.Tomato;
-            this.lblTrangThai.Location = new System.Drawing.Point(1442, 97);
+            this.lblTrangThai.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblTrangThai.Location = new System.Drawing.Point(1455, 97);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.Size = new System.Drawing.Size(86, 25);
             this.lblTrangThai.TabIndex = 108;
@@ -76,7 +76,7 @@
             // 
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongTien.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblTongTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(24)))), ((int)(((byte)(112)))));
             this.lblTongTien.Location = new System.Drawing.Point(1132, 97);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(104, 25);
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LavenderBlush;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(225)))), ((int)(((byte)(246)))));
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMaDH);
             this.Controls.Add(this.pictureBox1);
@@ -123,7 +123,7 @@
             this.Controls.Add(this.lblTongTien);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UCDonHangNB";
-            this.Size = new System.Drawing.Size(1653, 203);
+            this.Size = new System.Drawing.Size(1666, 203);
             this.Click += new System.EventHandler(this.UCDonHangNB_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

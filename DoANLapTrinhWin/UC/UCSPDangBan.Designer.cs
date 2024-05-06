@@ -87,13 +87,13 @@
             // 
             // lblTenSP
             // 
-            this.lblTenSP.AutoSize = true;
+            this.lblTenSP.AutoEllipsis = true;
             this.lblTenSP.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblTenSP.Location = new System.Drawing.Point(23, 180);
+            this.lblTenSP.Location = new System.Drawing.Point(7, 180);
             this.lblTenSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(64, 27);
+            this.lblTenSP.Size = new System.Drawing.Size(257, 27);
             this.lblTenSP.TabIndex = 38;
             this.lblTenSP.Text = "tenSP";
             // 
@@ -125,6 +125,7 @@
             this.Controls.Add(this.picHinh);
             this.Controls.Add(this.lblGiaTien);
             this.Controls.Add(this.lblTenSP);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UCSPDangBan";
             this.Size = new System.Drawing.Size(266, 335);
