@@ -16,6 +16,8 @@ namespace DoANLapTrinhWin
         SanPham sp;
         NguoiBan ngBan;
         NguoiMua ngmua;
+        NguoiMuaDAO ngmuadao = new NguoiMuaDAO();
+        NguoiBanDAO ngbandao = new NguoiBanDAO();
         int slmua;
         public FMuaNgay()
         {
@@ -24,7 +26,7 @@ namespace DoANLapTrinhWin
         public FMuaNgay(SanPham sp, NguoiBan ngBan, NguoiMua ngmua,int slmua)
         {
             InitializeComponent();
-           // this.Size = new Size(1200, 600);
+            this.Size = new Size(1000, 500);
             this.sp = sp;
             this.ngBan = ngBan;
             this.ngmua = ngmua;
@@ -34,14 +36,18 @@ namespace DoANLapTrinhWin
         private void LoadData()
         {
             UCSPGioHang ucgh = new UCSPGioHang(sp);
+            ucgh.soluongmuaGH.Enabled = false;
             panelSP.Controls.Add(ucgh);
             //ng ban
+            DataTable ds = ngbandao.ThongTinNguoi(ngBan);
+            foreach (DataRow row in ds.Rows)
+                lblDiaChiNB.Text = row[7].ToString();
             picHinhNB.Image = Global.ByteArrayToImage(ngBan.Hinh);
             lbltenNB.Text = ngBan.Ten1;
-            lblDiaChiNB.Text = ngBan.DiaChi;
             //dc
-            MessageBox.Show(ngmua.DiaChi);
-            txtDC.Text = ngmua.DiaChi;
+            DataTable dt = ngmuadao.ThongTinNguoi(ngmua);
+            foreach (DataRow row in dt.Rows)
+                txtDC.Text = row[6].ToString();
             //tien
             lblSLMua.Text = "Tổng số tiền (" + slmua.ToString() + " sản phẩm): ";
             lblTien.Text = sp.GiaBan;
