@@ -51,6 +51,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -63,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -261,6 +263,7 @@
             // 
             this.panelThan.AutoSize = true;
             this.panelThan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelThan.Controls.Add(this.guna2PictureBox1);
             this.panelThan.Controls.Add(this.pictureBox1);
             this.panelThan.Controls.Add(this.label2);
             this.panelThan.Controls.Add(this.pictureBox3);
@@ -347,6 +350,17 @@
             this.bunifuElipse1.ElipseRadius = 45;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(112, 51);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(597, 676);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 31;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // FNguoiBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -374,6 +388,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,5 +417,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSanPham;
         private System.Windows.Forms.Panel panel12;
         private Guna.UI2.WinForms.Guna2Button btnThongKe;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
