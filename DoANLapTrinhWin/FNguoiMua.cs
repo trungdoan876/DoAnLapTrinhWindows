@@ -18,7 +18,7 @@ namespace DoANLapTrinhWin
         public FNguoiMua(NguoiMua ng)
         {
             InitializeComponent();
-            this.Size = new Size(1200, 600);
+            this.Size = new Size(1250, 700);
             this.ngMua = ng;
         }
         private void FNguoiMua_Load(object sender, EventArgs e)

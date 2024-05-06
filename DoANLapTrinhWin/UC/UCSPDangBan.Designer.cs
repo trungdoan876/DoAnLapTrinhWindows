@@ -28,28 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSPDangBan));
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblMaSP = new System.Windows.Forms.Label();
             this.picHinh = new System.Windows.Forms.PictureBox();
             this.lblGiaTien = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.GoDangBan = new System.Windows.Forms.PictureBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GoDangBan)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 255);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 27);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Mã sản phẩm:";
             // 
             // label1
             // 
@@ -66,7 +56,8 @@
             // 
             this.lblMaSP.AutoSize = true;
             this.lblMaSP.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaSP.Location = new System.Drawing.Point(146, 255);
+            this.lblMaSP.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblMaSP.Location = new System.Drawing.Point(2, 287);
             this.lblMaSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaSP.Name = "lblMaSP";
             this.lblMaSP.Size = new System.Drawing.Size(44, 27);
@@ -75,7 +66,7 @@
             // 
             // picHinh
             // 
-            this.picHinh.Location = new System.Drawing.Point(56, 16);
+            this.picHinh.Location = new System.Drawing.Point(63, 12);
             this.picHinh.Margin = new System.Windows.Forms.Padding(2);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(140, 152);
@@ -110,21 +101,25 @@
             // 
             this.GoDangBan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GoDangBan.Image = ((System.Drawing.Image)(resources.GetObject("GoDangBan.Image")));
-            this.GoDangBan.Location = new System.Drawing.Point(195, 255);
+            this.GoDangBan.Location = new System.Drawing.Point(185, 263);
             this.GoDangBan.Name = "GoDangBan";
-            this.GoDangBan.Size = new System.Drawing.Size(63, 75);
+            this.GoDangBan.Size = new System.Drawing.Size(74, 69);
             this.GoDangBan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.GoDangBan.TabIndex = 46;
             this.GoDangBan.TabStop = false;
             this.GoDangBan.Click += new System.EventHandler(this.GoDangBan_Click);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // UCSPDangBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.Controls.Add(this.GoDangBan);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMaSP);
             this.Controls.Add(this.picHinh);
@@ -132,7 +127,7 @@
             this.Controls.Add(this.lblTenSP);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UCSPDangBan";
-            this.Size = new System.Drawing.Size(261, 333);
+            this.Size = new System.Drawing.Size(266, 335);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GoDangBan)).EndInit();
             this.ResumeLayout(false);
@@ -141,13 +136,12 @@
         }
 
         #endregion
-
-        public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lblMaSP;
         public System.Windows.Forms.PictureBox picHinh;
         public System.Windows.Forms.Label lblGiaTien;
         public System.Windows.Forms.Label lblTenSP;
         private System.Windows.Forms.PictureBox GoDangBan;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

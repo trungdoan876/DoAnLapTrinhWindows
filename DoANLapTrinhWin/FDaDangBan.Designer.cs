@@ -37,14 +37,14 @@
             this.panelDangBan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDangBan.Location = new System.Drawing.Point(0, 0);
             this.panelDangBan.Name = "panelDangBan";
-            this.panelDangBan.Size = new System.Drawing.Size(1295, 544);
+            this.panelDangBan.Size = new System.Drawing.Size(748, 485);
             this.panelDangBan.TabIndex = 0;
             // 
             // FDaDangBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1295, 544);
+            this.ClientSize = new System.Drawing.Size(748, 485);
             this.Controls.Add(this.panelDangBan);
             this.Name = "FDaDangBan";
             this.Text = "FDaDangBan";

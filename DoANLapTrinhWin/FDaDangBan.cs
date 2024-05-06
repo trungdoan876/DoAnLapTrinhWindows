@@ -49,7 +49,7 @@ namespace DoANLapTrinhWin
 
                 ucSPBan.Location = new Point(x, y);
                 x += ucSPBan.Width += 5;
-                if (x == ucSPBan.Width * 3)
+                if (x + ucSPBan.Width > panelDangBan.Width)
                 {
                     x = 0;
                     y += ucSPBan.Height + 5;

@@ -43,7 +43,7 @@
             // 
             // picHinh
             // 
-            this.picHinh.Location = new System.Drawing.Point(78, 17);
+            this.picHinh.Location = new System.Drawing.Point(68, 19);
             this.picHinh.Margin = new System.Windows.Forms.Padding(2);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(138, 139);
@@ -105,9 +105,9 @@
             // btnXoaSP
             // 
             this.btnXoaSP.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaSP.Image")));
-            this.btnXoaSP.Location = new System.Drawing.Point(192, 260);
+            this.btnXoaSP.Location = new System.Drawing.Point(193, 260);
             this.btnXoaSP.Name = "btnXoaSP";
-            this.btnXoaSP.Size = new System.Drawing.Size(89, 63);
+            this.btnXoaSP.Size = new System.Drawing.Size(81, 63);
             this.btnXoaSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnXoaSP.TabIndex = 37;
             this.btnXoaSP.TabStop = false;
@@ -127,7 +127,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UCSPBan";
-            this.Size = new System.Drawing.Size(281, 326);
+            this.Size = new System.Drawing.Size(274, 326);
             this.Click += new System.EventHandler(this.UCSPBan_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoaSP)).EndInit();
