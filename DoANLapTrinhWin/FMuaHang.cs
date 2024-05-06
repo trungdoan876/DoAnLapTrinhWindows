@@ -34,7 +34,7 @@ namespace DoANLapTrinhWin
             panelMuaHang.AutoScroll = true;
             int x = 0;
             int y = 0;
-            int maxPerRow = 6; // Số lượng tối đa UC trong mỗi hàng
+            int max = 6; // Số lượng tối đa UC trong mỗi hàng
             int ucCount = 0; // Đếm số lượng UC đã thêm vào hàng hiện tại
             foreach (DataRow row in dt.Tables[0].Rows)
             {
@@ -60,7 +60,7 @@ namespace DoANLapTrinhWin
                 ucSP.Location = new Point(x, y);
                 ucCount++;
                 x += ucSP.Width + 5;
-                if (ucCount == maxPerRow)
+                if (ucCount == max)
                 {
                     x = 0;
                     y += ucSP.Height + 10;

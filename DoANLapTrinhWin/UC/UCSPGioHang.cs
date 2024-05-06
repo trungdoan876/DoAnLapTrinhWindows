@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,7 +37,7 @@ namespace DoANLapTrinhWin
             int tt = int.Parse(str);
             return tt;
         }
-        bool check = false;
+        bool check = true;
         private void checkBoxSP_CheckedChanged(object sender, EventArgs e)
         {
             if (check == false) //tick vao checkbox
@@ -45,7 +46,7 @@ namespace DoANLapTrinhWin
                 GioHang gh = new GioHang(sp.MaSP);
                 ghDAO.CapNhatChonSanPham(gh);
             }
-            else //nhấn vào checkbox 1 lần nữa
+            else //=true -> đã chọn
             {
                 check = false;
                 GioHang gh = new GioHang(sp.MaSP);
