@@ -581,6 +581,7 @@
             // 
             // fpanelSPChungNH
             // 
+            this.fpanelSPChungNH.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
             this.fpanelSPChungNH.Location = new System.Drawing.Point(406, 944);
             this.fpanelSPChungNH.Name = "fpanelSPChungNH";
             this.fpanelSPChungNH.Size = new System.Drawing.Size(912, 391);

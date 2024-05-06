@@ -45,9 +45,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDangNhap = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblDangKy = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btnDangNhap = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -74,9 +74,9 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 22);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-40, 56);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(597, 676);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(704, 676);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
@@ -101,12 +101,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 28F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(69, 93);
+            this.label2.Location = new System.Drawing.Point(69, 78);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(375, 63);
+            this.label2.Size = new System.Drawing.Size(436, 75);
             this.label2.TabIndex = 17;
             this.label2.Text = "tiệm trao đổi đồ";
             // 
@@ -219,7 +219,7 @@
             this.pictureBox4.Location = new System.Drawing.Point(889, 116);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(67, 65);
+            this.pictureBox4.Size = new System.Drawing.Size(63, 65);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 19;
             this.pictureBox4.TabStop = false;
@@ -294,6 +294,29 @@
             this.panel1.Size = new System.Drawing.Size(1103, 723);
             this.panel1.TabIndex = 32;
             // 
+            // lblDangKy
+            // 
+            this.lblDangKy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDangKy.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblDangKy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDangKy.Location = new System.Drawing.Point(259, 593);
+            this.lblDangKy.Name = "lblDangKy";
+            this.lblDangKy.Size = new System.Drawing.Size(148, 27);
+            this.lblDangKy.TabIndex = 34;
+            this.lblDangKy.Text = "Đăng ký ngay!";
+            this.lblDangKy.Click += new System.EventHandler(this.lblDangKy_Click);
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(28, 593);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(244, 27);
+            this.bunifuCustomLabel1.TabIndex = 33;
+            this.bunifuCustomLabel1.Text = "Bạn mới biết đến Panda?";
+            // 
             // btnDangNhap
             // 
             this.btnDangNhap.Animated = true;
@@ -319,29 +342,6 @@
             this.btnDangNhap.TabIndex = 32;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click_1);
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(28, 593);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(244, 27);
-            this.bunifuCustomLabel1.TabIndex = 33;
-            this.bunifuCustomLabel1.Text = "Bạn mới biết đến Panda?";
-            // 
-            // lblDangKy
-            // 
-            this.lblDangKy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDangKy.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblDangKy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblDangKy.Location = new System.Drawing.Point(259, 593);
-            this.lblDangKy.Name = "lblDangKy";
-            this.lblDangKy.Size = new System.Drawing.Size(148, 27);
-            this.lblDangKy.TabIndex = 34;
-            this.lblDangKy.Text = "Đăng ký ngay!";
-            this.lblDangKy.Click += new System.EventHandler(this.lblDangKy_Click);
             // 
             // FDangNhap
             // 

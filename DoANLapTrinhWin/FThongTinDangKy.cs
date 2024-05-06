@@ -22,6 +22,7 @@ namespace DoANLapTrinhWin
         public FThongTinDangKy(string loainguoi, string sdt)
         {
             InitializeComponent();
+            this.Size = new Size(1005, 500);
             this.loainguoi = loainguoi;
             this.sdt = sdt;
         }
