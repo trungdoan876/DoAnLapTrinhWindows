@@ -25,6 +25,7 @@ namespace DoANLapTrinhWin
             InitializeComponent();
             panelThongTin.Hide();
             this.ngmua = ngmua;
+            LoadData();
         }
         public void LoadData()
         {
@@ -33,6 +34,8 @@ namespace DoANLapTrinhWin
             panelMuaHang.AutoScroll = true;
             int x = 0;
             int y = 0;
+            int maxPerRow = 6; // Số lượng tối đa UC trong mỗi hàng
+            int ucCount = 0; // Đếm số lượng UC đã thêm vào hàng hiện tại
             foreach (DataRow row in dt.Tables[0].Rows)
             {
                 SanPham sp = new SanPham
@@ -55,11 +58,13 @@ namespace DoANLapTrinhWin
                 UCSP ucSP = new UCSP(sp,ngmua);
                 //vi tri moi uc
                 ucSP.Location = new Point(x, y);
+                ucCount++;
                 x += ucSP.Width + 5;
-                if (x == ucSP.Width * 4)
+                if (ucCount == maxPerRow)
                 {
                     x = 0;
-                    y += ucSP.Height + 5;
+                    y += ucSP.Height + 10;
+                    ucCount = 0;
                 }
                 panelMuaHang.Controls.Add(ucSP);
             }  
@@ -131,7 +136,7 @@ namespace DoANLapTrinhWin
                 //vi tri moi uc
                 ucSP.Location = new Point(x, y);
                 x += ucSP.Width + 5;
-                if (x == ucSP.Width * 4)
+                if (x == x + ucSP.Width * 6)
                 {
                     x = 0;
                     y += ucSP.Height + 5;
@@ -141,7 +146,7 @@ namespace DoANLapTrinhWin
         }
         private void FMuaHang_Load(object sender, EventArgs e)
         {
-            LoadData();
+            //LoadData();
         }
         private void BoLoc(string boloc)
         {
