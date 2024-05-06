@@ -52,7 +52,6 @@
             // 
             // picHinh
             // 
-            this.picHinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picHinh.Location = new System.Drawing.Point(118, 13);
             this.picHinh.Margin = new System.Windows.Forms.Padding(2);
             this.picHinh.Name = "picHinh";
