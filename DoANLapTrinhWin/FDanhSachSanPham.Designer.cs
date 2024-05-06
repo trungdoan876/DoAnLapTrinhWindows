@@ -98,7 +98,6 @@
             this.Name = "FDanhSachSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FTatCaSanPham";
-            this.Load += new System.EventHandler(this.FTatCaSanPham_Load);
             this.panelTatCaSP.ResumeLayout(false);
             this.panelThem.ResumeLayout(false);
             this.ResumeLayout(false);

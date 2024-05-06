@@ -18,7 +18,7 @@ namespace DoANLapTrinhWin
         public FNguoiBan(NguoiBan ngban)
         {
             InitializeComponent();
-            this.Size = new Size(1200, 600);
+            this.Size = new Size(1250, 700);
             this.ngBan = ngban;
         }
         private void FNguoiBan_Load(object sender, EventArgs e)

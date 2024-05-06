@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace DoANLapTrinhWin
 {
@@ -23,6 +24,7 @@ namespace DoANLapTrinhWin
         private string maNguoiBan;
         private string diaChi;
         private byte[] hinh;
+
         public SanPham(string maSP) //để xóa sản phẩm 
         {
             this.maSP = maSP;
@@ -100,6 +102,16 @@ namespace DoANLapTrinhWin
             this.maNguoiBan = maNguoiBan;
             this.soLuong = soLuong;
             this.hinh = hinh;
+        }
+        public bool kiemTraNull()
+        {
+            if (this.tenSP == "" || this.giaBan =="" || this.giaGoc == ""|| this.xuatXu==""||this.thoiGianDaSuDung==""
+                ||this.moTaSanPham==""||this.nganhHang==""||this.tinhTrang==""||this.diaChi==""||this.hinh==null)
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin và hình ảnh!");
+                return false;
+            }
+            return true;
         }
         public string SoLuong { get => soLuong; set => soLuong = value; }
         public string MaSP { get => maSP; set => maSP = value; }

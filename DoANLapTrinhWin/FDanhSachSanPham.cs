@@ -47,19 +47,17 @@ namespace DoANLapTrinhWin
                     (byte[])row[0] //hinh
                     ) ;
                 UCSPBan ucSPBan = new UCSPBan(sp);
+                //chỉnh vị trí uc
                 ucSPBan.Location = new Point(x, y);
                 x += ucSPBan.Width  + 5;
-                if (x == ucSPBan.Width * 4)
+                if (x + ucSPBan.Width > panelTatCaSP.Width)
+                    //if (x == ucSPBan.Width * 6)
                 {
                     x = 0;
                     y += ucSPBan.Height + 5;
                 }
                 panelTatCaSP.Controls.Add(ucSPBan);
              }
-        }
-        private void FTatCaSanPham_Load(object sender, EventArgs e)
-        {
-            LoadData();
         }
         //tạo mã sản phẩm
         public string TaoMa(string Table, string maBanDau)

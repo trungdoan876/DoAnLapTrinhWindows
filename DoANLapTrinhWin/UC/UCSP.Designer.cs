@@ -116,10 +116,10 @@
             // picHeart
             // 
             this.picHeart.Image = ((System.Drawing.Image)(resources.GetObject("picHeart.Image")));
-            this.picHeart.Location = new System.Drawing.Point(218, 261);
+            this.picHeart.Location = new System.Drawing.Point(218, 259);
             this.picHeart.Margin = new System.Windows.Forms.Padding(2);
             this.picHeart.Name = "picHeart";
-            this.picHeart.Size = new System.Drawing.Size(43, 50);
+            this.picHeart.Size = new System.Drawing.Size(57, 52);
             this.picHeart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHeart.TabIndex = 47;
             this.picHeart.TabStop = false;
