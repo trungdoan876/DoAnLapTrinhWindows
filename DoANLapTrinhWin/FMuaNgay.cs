@@ -14,19 +14,46 @@ namespace DoANLapTrinhWin
     public partial class FMuaNgay : Form
     {
         SanPham sp;
-        System.Drawing.Image ByteArrayToImage(byte[] a)
-        {
-            MemoryStream ms = new MemoryStream(a);
-            return System.Drawing.Image.FromStream(ms);
-        }
+        NguoiBan ngBan;
+        NguoiMua ngmua;
+        int slmua;
         public FMuaNgay()
         {
             InitializeComponent();
         }
-        public FMuaNgay(SanPham sp)
+        public FMuaNgay(SanPham sp, NguoiBan ngBan, NguoiMua ngmua,int slmua)
         {
-            this.sp = sp;
             InitializeComponent();
+           // this.Size = new Size(1200, 600);
+            this.sp = sp;
+            this.ngBan = ngBan;
+            this.ngmua = ngmua;
+            this.slmua = slmua;
+            LoadData();
+        }
+        private void LoadData()
+        {
+            UCSPGioHang ucgh = new UCSPGioHang(sp);
+            panelSP.Controls.Add(ucgh);
+            //ng ban
+            picHinhNB.Image = Global.ByteArrayToImage(ngBan.Hinh);
+            lbltenNB.Text = ngBan.Ten1;
+            lblDiaChiNB.Text = ngBan.DiaChi;
+            //dc
+            MessageBox.Show(ngmua.DiaChi);
+            txtDC.Text = ngmua.DiaChi;
+            //tien
+            lblSLMua.Text = "Tổng số tiền (" + slmua.ToString() + " sản phẩm): ";
+            lblTien.Text = sp.GiaBan;
+        }
+        private void btnQuaylai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void DatHang_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

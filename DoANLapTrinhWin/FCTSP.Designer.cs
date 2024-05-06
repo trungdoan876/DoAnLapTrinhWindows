@@ -111,7 +111,7 @@
             // 
             // picHinh
             // 
-            this.picHinh.Location = new System.Drawing.Point(434, 60);
+            this.picHinh.Location = new System.Drawing.Point(466, 60);
             this.picHinh.Margin = new System.Windows.Forms.Padding(2);
             this.picHinh.Name = "picHinh";
             this.picHinh.Size = new System.Drawing.Size(626, 359);

@@ -165,7 +165,8 @@ namespace DoANLapTrinhWin
         private void btnMuaNgay_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FMuaNgay form2 = new FMuaNgay(sp);
+            string slmua = soluongmua.Value.ToString();
+            FMuaNgay form2 = new FMuaNgay(sp,nguoiBan,ngmua, int.Parse(slmua));
             form2.ShowDialog();
             form2 = null; //tat form2, tuc la form 2 tro ve null
             this.Show();
