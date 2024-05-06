@@ -52,7 +52,7 @@ namespace DoANLapTrinhWin
                 //vi tri moi uc
                 ucSP.Location = new Point(x, y);
                 x += ucSP.Width += 5;
-                if (x == ucSP.Width * 3)
+                if (x == ucSP.Width * 6)
                 {
                     x = 0;
                     y += ucSP.Height + 5;

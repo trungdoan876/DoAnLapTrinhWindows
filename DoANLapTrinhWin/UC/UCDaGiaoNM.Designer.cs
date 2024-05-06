@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDaGiaoNM));
             this.label7 = new System.Windows.Forms.Label();
             this.lblMaDH = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@
             this.lblTenSP = new System.Windows.Forms.Label();
             this.lblTrangThai = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,6 +131,11 @@
             this.lblTongTien.TabIndex = 303;
             this.lblTongTien.Text = "tongtienDH";
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // UCDaGiaoNM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -158,5 +165,6 @@
         public System.Windows.Forms.Label lblTenSP;
         public System.Windows.Forms.Label lblTrangThai;
         public System.Windows.Forms.Label lblTongTien;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

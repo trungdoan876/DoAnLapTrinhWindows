@@ -155,7 +155,7 @@
             this.Controls.Add(this.lblTenSP);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ForeColor = System.Drawing.Color.Black;
-            this.Margin = new System.Windows.Forms.Padding(20);
+            this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "UCSP";
             this.Size = new System.Drawing.Size(277, 327);
             this.Click += new System.EventHandler(this.UCSP_Click);

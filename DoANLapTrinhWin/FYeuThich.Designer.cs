@@ -33,6 +33,7 @@
             // 
             // panelYeuThich
             // 
+            this.panelYeuThich.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelYeuThich.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelYeuThich.Location = new System.Drawing.Point(0, 0);
             this.panelYeuThich.Name = "panelYeuThich";
