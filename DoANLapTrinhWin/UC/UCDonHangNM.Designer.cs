@@ -81,7 +81,7 @@
             this.lblTenSP.ForeColor = System.Drawing.Color.Black;
             this.lblTenSP.Location = new System.Drawing.Point(233, 86);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(807, 25);
+            this.lblTenSP.Size = new System.Drawing.Size(851, 25);
             this.lblTenSP.TabIndex = 103;
             this.lblTenSP.Text = "tensp";
             // 

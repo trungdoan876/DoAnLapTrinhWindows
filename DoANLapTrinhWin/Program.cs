@@ -19,7 +19,7 @@ namespace DoANLapTrinhWin
             Application.Run(new FDangNhap());
             //Application.Run(new FNguoiBan("NB01"));
             //Application.Run(new FMuaHang("NM01"));
-            //Application.Run(new Loading());
+            //Application.Run(new FLoadingGiaoHang());
         }
     }
 }

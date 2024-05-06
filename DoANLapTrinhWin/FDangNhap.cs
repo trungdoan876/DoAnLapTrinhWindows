@@ -78,7 +78,7 @@ namespace DoANLapTrinhWin
                 if (dt.Rows.Count > 0)
                 {
                     this.Hide(); //an form 1
-                    Loading load = new Loading(ngmua,selctecOption);
+                    FLoading load = new FLoading(ngmua,selctecOption);
                     load.Show();
                     txtDangNhap.Text = null;
                     txtMatKhau.Text = null;
@@ -95,7 +95,7 @@ namespace DoANLapTrinhWin
                 if (dt.Rows.Count > 0)
                 {
                     this.Hide(); //an form 1
-                    Loading load = new Loading(ngBan,selctecOption);
+                    FLoading load = new FLoading(ngBan,selctecOption);
                     load.Show();
                     txtDangNhap.Text = null;
                     txtMatKhau.Text = null;

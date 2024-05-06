@@ -56,6 +56,8 @@ namespace DoANLapTrinhWin
         private void btnGiaoHang_Click(object sender, EventArgs e)
         {
             DonHang dhang = new DonHang(dh.MaDonHang);
+            FLoadingGiaoHang fload = new FLoadingGiaoHang();
+            fload.ShowDialog();
             dhDao.CapNhatGiaoHangNB(dhang);
         }
     }

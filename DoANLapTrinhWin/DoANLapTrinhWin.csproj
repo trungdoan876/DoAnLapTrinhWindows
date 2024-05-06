@@ -174,6 +174,12 @@
     <Compile Include="FLoadingGH.Designer.cs">
       <DependentUpon>FLoadingGH.cs</DependentUpon>
     </Compile>
+    <Compile Include="FLoadingGiaoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLoadingGiaoHang.Designer.cs">
+      <DependentUpon>FLoadingGiaoHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FSPNB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,11 +309,11 @@
     <Compile Include="ClassDAO\NguoiDAO.cs" />
     <Compile Include="Class\NguoiMua.cs" />
     <Compile Include="ClassDAO\NguoiMuaDAO.cs" />
-    <Compile Include="Loading.cs">
+    <Compile Include="FLoading.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loading.Designer.cs">
-      <DependentUpon>Loading.cs</DependentUpon>
+    <Compile Include="FLoading.Designer.cs">
+      <DependentUpon>FLoading.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -441,6 +447,9 @@
     <EmbeddedResource Include="FLoadingGH.resx">
       <DependentUpon>FLoadingGH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FLoadingGiaoHang.resx">
+      <DependentUpon>FLoadingGiaoHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FMuaHang.resx">
       <DependentUpon>FMuaHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -483,8 +492,8 @@
     <EmbeddedResource Include="FYeuThich.resx">
       <DependentUpon>FYeuThich.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loading.resx">
-      <DependentUpon>Loading.cs</DependentUpon>
+    <EmbeddedResource Include="FLoading.resx">
+      <DependentUpon>FLoading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

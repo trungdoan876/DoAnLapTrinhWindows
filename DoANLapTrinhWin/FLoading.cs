@@ -10,20 +10,20 @@ using System.Windows.Forms;
 
 namespace DoANLapTrinhWin
 {
-    public partial class Loading : Form
+    public partial class FLoading : Form
     {
         NguoiMua ngmua;
         string luachon;
         NguoiBan ngban;
 
-        public Loading(NguoiMua ngmua,string luaChon)
+        public FLoading(NguoiMua ngmua,string luaChon)
         {
             InitializeComponent();
             this.Size = new Size(1200,600);
             this.ngmua = ngmua;
             this.luachon = luaChon; 
         }
-        public Loading(NguoiBan ngban,string luaChon)
+        public FLoading(NguoiBan ngban,string luaChon)
         {
             InitializeComponent();
             this.Size = new Size(1200, 600);

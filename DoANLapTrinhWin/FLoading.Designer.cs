@@ -1,6 +1,6 @@
 ﻿namespace DoANLapTrinhWin
 {
-    partial class Loading
+    partial class FLoading
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loading));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FLoading));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
@@ -151,7 +151,7 @@
             this.guna2PictureBox1.TabIndex = 11;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // Loading
+            // FLoading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,7 +160,7 @@
             this.Controls.Add(this.guna2CircleProgressBar1);
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Loading";
+            this.Name = "FLoading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loading";
             this.Load += new System.EventHandler(this.Loading_Load);
