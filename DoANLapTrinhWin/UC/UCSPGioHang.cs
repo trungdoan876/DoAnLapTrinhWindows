@@ -21,11 +21,12 @@ namespace DoANLapTrinhWin
         string check;
         NguoiMua ngmua;
         GioHangDAO ghDAO = new GioHangDAO();
-        public UCSPGioHang(SanPham sanpham,NguoiMua ngmua)
+        public UCSPGioHang(SanPham sanpham,NguoiMua ngmua,string check)
         {
             InitializeComponent();
             this.sp = sanpham;
             this.ngmua = ngmua;
+            this.check = check;
             this.lblTenSP.Text = sp.TenSP;
             this.lblGiaTien.Text = "đ" + sp.GiaBan;
             this.lblTinhTrang.Text = sp.TinhTrang;
@@ -44,19 +45,15 @@ namespace DoANLapTrinhWin
         
         private void checkBoxSP_CheckedChanged(object sender, EventArgs e)
         {
-            if (check == "True") //tick vao checkbox
+            if (check == "False") //tick vao checkbox
             {
-                checkBoxSP.Checked = true;
                 GioHang gh = new GioHang(sp.MaSP);
                 ghDAO.CapNhatChonSanPham(gh);
-                check = "False";
             }
             else //=true -> đã chọn
             {
-                checkBoxSP.Checked = false;
                 GioHang gh = new GioHang(sp.MaSP);
                 ghDAO.CapNhatKhongchon(gh);
-                check = "True";
             }
         }
         private void soluongmuaGH_ValueChanged(object sender, EventArgs e)

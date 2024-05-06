@@ -19,7 +19,6 @@ namespace DoANLapTrinhWin
         GioHangDAO ghdao = new GioHangDAO();
         SanPham sp;
         NguoiMua ngMua;
-        string check;
         public FGioHang(NguoiMua ngmua)
         {
             InitializeComponent();
@@ -36,7 +35,7 @@ namespace DoANLapTrinhWin
             int yc = 0;
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-
+                string check = row[10].ToString();
                 string maNB = row["maNB"].ToString();
                 UCTheoNB ucnb = new UCTheoNB(maNB);
 
@@ -65,13 +64,15 @@ namespace DoANLapTrinhWin
                     row[7].ToString()
                 );
 
-                UCSPGioHang spgh = new UCSPGioHang(sp,ngMua);
-
+                UCSPGioHang spgh = new UCSPGioHang(sp,ngMua,check);
                 //vị trí uc
                 spgh.Location = new Point(0, y);
                 y += spgh.Height += 5;
                 ucnb.panelSP.Controls.Add(spgh);
-                LoadTT(spgh.checkBoxSP);
+                if (check == "True") //tick vao checkbox
+                    spgh.checkBoxSP.Checked = true;
+                else //=true -> đã chọn
+                    spgh.checkBoxSP.Checked = false;
                 spgh.lblTrangThai.Text = row[10].ToString(); //có được chọn để mua hay không
                 spgh.soluongmuaGH.Value = int.Parse(soLuongMua); //số lượng thêm vào giỏ
                 lblTongTien.Text = "đ"+ThanhTien(spgh.lblTrangThai.Text, spgh.lblGiaTien.Text, int.Parse(soLuongMua))+".000";
@@ -92,25 +93,6 @@ namespace DoANLapTrinhWin
         {
             FDatHang fdh = new FDatHang(ngMua, sp, tongtien);
             fdh.ShowDialog();
-        }
-        private void LoadTT(CheckBox checkBoxSP)
-        {
-            DataSet dt = ghdao.HienGioHang(ngMua);
-            foreach (DataRow row in dt.Tables[0].Rows)
-            {
-                check = row[10].ToString();
-
-                if (check == "True") //tick vao checkbox
-                {
-                    checkBoxSP.Checked = true;
-                    check = "False";
-                }
-                else //=true -> đã chọn
-                {
-                    checkBoxSP.Checked = false;
-                    check = "True";
-                }
-            }
         }
     }
 }
