@@ -65,7 +65,7 @@
             this.btnguii.ForeColor = System.Drawing.Color.White;
             this.btnguii.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnguii.HoverState.FillColor2 = System.Drawing.Color.Orange;
-            this.btnguii.Location = new System.Drawing.Point(1304, 12);
+            this.btnguii.Location = new System.Drawing.Point(753, 12);
             this.btnguii.Name = "btnguii";
             this.btnguii.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnguii.Size = new System.Drawing.Size(80, 65);

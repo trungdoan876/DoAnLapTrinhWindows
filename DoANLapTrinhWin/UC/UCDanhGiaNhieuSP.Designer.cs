@@ -59,20 +59,21 @@
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(974, 158);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1696, 158);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
             // ucDanhGia1
             // 
-            this.ucDanhGia1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ucDanhGia1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(230)))), ((int)(((byte)(245)))));
             this.ucDanhGia1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucDanhGia1.Location = new System.Drawing.Point(0, 0);
             this.ucDanhGia1.Name = "ucDanhGia1";
-            this.ucDanhGia1.Size = new System.Drawing.Size(974, 158);
+            this.ucDanhGia1.Size = new System.Drawing.Size(1696, 158);
             this.ucDanhGia1.TabIndex = 0;
             // 
             // guna2GradientPanel2
             // 
+            this.guna2GradientPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(223)))), ((int)(((byte)(247)))));
             this.guna2GradientPanel2.Controls.Add(this.guna2PictureBox5);
             this.guna2GradientPanel2.Controls.Add(this.txtDanhGia);
             this.guna2GradientPanel2.Controls.Add(this.label7);
@@ -83,14 +84,14 @@
             this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 158);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(974, 451);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(1696, 451);
             this.guna2GradientPanel2.TabIndex = 1;
             // 
             // guna2PictureBox5
             // 
             this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
             this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(89, 98);
+            this.guna2PictureBox5.Location = new System.Drawing.Point(448, 87);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
             this.guna2PictureBox5.Size = new System.Drawing.Size(29, 10);
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -111,14 +112,14 @@
             this.txtDanhGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDanhGia.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDanhGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDanhGia.Location = new System.Drawing.Point(52, 234);
+            this.txtDanhGia.Location = new System.Drawing.Point(227, 223);
             this.txtDanhGia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDanhGia.Multiline = true;
             this.txtDanhGia.Name = "txtDanhGia";
             this.txtDanhGia.PasswordChar = '\0';
             this.txtDanhGia.PlaceholderText = "Hãy chia sẻ nhận xét về sản phẩm này bạn nhé!";
             this.txtDanhGia.SelectedText = "";
-            this.txtDanhGia.Size = new System.Drawing.Size(782, 213);
+            this.txtDanhGia.Size = new System.Drawing.Size(1256, 213);
             this.txtDanhGia.TabIndex = 300;
             // 
             // label7
@@ -126,7 +127,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(48, 74);
+            this.label7.Location = new System.Drawing.Point(407, 63);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(215, 21);
             this.label7.TabIndex = 299;
@@ -135,9 +136,9 @@
             // panelThemNhieuHinh
             // 
             this.panelThemNhieuHinh.Controls.Add(this.picThemHinh);
-            this.panelThemNhieuHinh.Location = new System.Drawing.Point(36, 115);
+            this.panelThemNhieuHinh.Location = new System.Drawing.Point(206, 104);
             this.panelThemNhieuHinh.Name = "panelThemNhieuHinh";
-            this.panelThemNhieuHinh.Size = new System.Drawing.Size(798, 111);
+            this.panelThemNhieuHinh.Size = new System.Drawing.Size(1277, 111);
             this.panelThemNhieuHinh.TabIndex = 298;
             // 
             // picThemHinh
@@ -158,7 +159,7 @@
             this.lblsao.AutoSize = true;
             this.lblsao.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsao.ForeColor = System.Drawing.Color.Orange;
-            this.lblsao.Location = new System.Drawing.Point(680, 29);
+            this.lblsao.Location = new System.Drawing.Point(1039, 18);
             this.lblsao.Name = "lblsao";
             this.lblsao.Size = new System.Drawing.Size(100, 28);
             this.lblsao.TabIndex = 297;
@@ -166,7 +167,7 @@
             // 
             // ratingsp
             // 
-            this.ratingsp.Location = new System.Drawing.Point(392, 16);
+            this.ratingsp.Location = new System.Drawing.Point(751, 5);
             this.ratingsp.Name = "ratingsp";
             this.ratingsp.RatingColor = System.Drawing.Color.Gold;
             this.ratingsp.Size = new System.Drawing.Size(229, 41);
@@ -179,7 +180,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(98, 25);
+            this.label5.Location = new System.Drawing.Point(457, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(263, 32);
             this.label5.TabIndex = 295;
@@ -190,7 +191,7 @@
             this.lblgiaohang.AutoSize = true;
             this.lblgiaohang.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblgiaohang.ForeColor = System.Drawing.Color.Orange;
-            this.lblgiaohang.Location = new System.Drawing.Point(680, 680);
+            this.lblgiaohang.Location = new System.Drawing.Point(1024, 686);
             this.lblgiaohang.Name = "lblgiaohang";
             this.lblgiaohang.Size = new System.Drawing.Size(100, 28);
             this.lblgiaohang.TabIndex = 305;
@@ -198,7 +199,7 @@
             // 
             // ratinggiaohang
             // 
-            this.ratinggiaohang.Location = new System.Drawing.Point(411, 670);
+            this.ratinggiaohang.Location = new System.Drawing.Point(755, 676);
             this.ratinggiaohang.Name = "ratinggiaohang";
             this.ratinggiaohang.RatingColor = System.Drawing.Color.Gold;
             this.ratinggiaohang.Size = new System.Drawing.Size(229, 43);
@@ -211,7 +212,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(98, 680);
+            this.label11.Location = new System.Drawing.Point(442, 686);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(266, 32);
             this.label11.TabIndex = 303;
@@ -222,7 +223,7 @@
             this.lblnguoiban.AutoSize = true;
             this.lblnguoiban.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnguoiban.ForeColor = System.Drawing.Color.Orange;
-            this.lblnguoiban.Location = new System.Drawing.Point(680, 618);
+            this.lblnguoiban.Location = new System.Drawing.Point(1024, 624);
             this.lblnguoiban.Name = "lblnguoiban";
             this.lblnguoiban.Size = new System.Drawing.Size(100, 28);
             this.lblnguoiban.TabIndex = 302;
@@ -230,7 +231,7 @@
             // 
             // ratingnguoiban
             // 
-            this.ratingnguoiban.Location = new System.Drawing.Point(411, 616);
+            this.ratingnguoiban.Location = new System.Drawing.Point(755, 622);
             this.ratingnguoiban.Name = "ratingnguoiban";
             this.ratingnguoiban.RatingColor = System.Drawing.Color.Gold;
             this.ratingnguoiban.Size = new System.Drawing.Size(229, 42);
@@ -243,7 +244,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(98, 616);
+            this.label9.Location = new System.Drawing.Point(442, 622);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(278, 32);
             this.label9.TabIndex = 300;
@@ -253,7 +254,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(230)))), ((int)(((byte)(245)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.lblgiaohang);
             this.Controls.Add(this.ratinggiaohang);
@@ -264,7 +265,7 @@
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "UCDanhGiaNhieuSP";
-            this.Size = new System.Drawing.Size(974, 735);
+            this.Size = new System.Drawing.Size(1696, 735);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();

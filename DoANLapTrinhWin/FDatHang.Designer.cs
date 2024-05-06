@@ -71,7 +71,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 523);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1773, 173);
+            this.panel3.Size = new System.Drawing.Size(1866, 173);
             this.panel3.TabIndex = 11;
             // 
             // cmbThanhToan
@@ -191,7 +191,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1773, 56);
+            this.panel1.Size = new System.Drawing.Size(1866, 56);
             this.panel1.TabIndex = 6;
             // 
             // panel2
@@ -204,7 +204,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1773, 56);
+            this.panel2.Size = new System.Drawing.Size(1866, 56);
             this.panel2.TabIndex = 7;
             // 
             // btnQuaylai
@@ -228,7 +228,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label8.Location = new System.Drawing.Point(1586, 25);
+            this.label8.Location = new System.Drawing.Point(1545, 25);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 28);
             this.label8.TabIndex = 3;
@@ -332,15 +332,15 @@
             this.paneldathang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneldathang.Location = new System.Drawing.Point(0, 56);
             this.paneldathang.Name = "paneldathang";
-            this.paneldathang.Size = new System.Drawing.Size(1773, 467);
-            this.paneldathang.TabIndex = 14;
+            this.paneldathang.Size = new System.Drawing.Size(1866, 467);
+            this.paneldathang.TabIndex = 15;
             // 
             // FDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1773, 696);
+            this.ClientSize = new System.Drawing.Size(1866, 696);
             this.Controls.Add(this.paneldathang);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

@@ -59,7 +59,7 @@
             this.lblTenSP.AutoSize = true;
             this.lblTenSP.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTenSP.Location = new System.Drawing.Point(254, 68);
+            this.lblTenSP.Location = new System.Drawing.Point(187, 55);
             this.lblTenSP.Name = "lblTenSP";
             this.lblTenSP.Size = new System.Drawing.Size(93, 38);
             this.lblTenSP.TabIndex = 1;
@@ -70,7 +70,7 @@
             this.lblTrangthai.AutoSize = true;
             this.lblTrangthai.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrangthai.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblTrangthai.Location = new System.Drawing.Point(603, 76);
+            this.lblTrangthai.Location = new System.Drawing.Point(948, 75);
             this.lblTrangthai.Name = "lblTrangthai";
             this.lblTrangthai.Size = new System.Drawing.Size(20, 28);
             this.lblTrangthai.TabIndex = 2;
@@ -80,12 +80,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(223)))), ((int)(((byte)(247)))));
             this.Controls.Add(this.lblTrangthai);
             this.Controls.Add(this.lblTenSP);
             this.Controls.Add(this.picHinh);
             this.Name = "UCDanhGia";
-            this.Size = new System.Drawing.Size(713, 161);
+            this.Size = new System.Drawing.Size(1176, 161);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

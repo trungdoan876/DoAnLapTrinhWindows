@@ -44,7 +44,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1663, 77);
+            this.panel1.Size = new System.Drawing.Size(1823, 77);
             this.panel1.TabIndex = 0;
             // 
             // picHinhNB
@@ -76,8 +76,8 @@
             this.panelSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSP.Location = new System.Drawing.Point(0, 77);
             this.panelSP.Name = "panelSP";
-            this.panelSP.Size = new System.Drawing.Size(1663, 440);
-            this.panelSP.TabIndex = 4;
+            this.panelSP.Size = new System.Drawing.Size(1823, 440);
+            this.panelSP.TabIndex = 5;
             // 
             // UCTheoNB
             // 
@@ -87,7 +87,7 @@
             this.Controls.Add(this.panelSP);
             this.Controls.Add(this.panel1);
             this.Name = "UCTheoNB";
-            this.Size = new System.Drawing.Size(1663, 517);
+            this.Size = new System.Drawing.Size(1823, 517);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNB)).EndInit();

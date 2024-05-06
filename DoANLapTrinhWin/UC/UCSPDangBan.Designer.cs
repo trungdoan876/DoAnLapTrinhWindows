@@ -101,7 +101,7 @@
             // 
             this.GoDangBan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GoDangBan.Image = ((System.Drawing.Image)(resources.GetObject("GoDangBan.Image")));
-            this.GoDangBan.Location = new System.Drawing.Point(185, 263);
+            this.GoDangBan.Location = new System.Drawing.Point(192, 263);
             this.GoDangBan.Name = "GoDangBan";
             this.GoDangBan.Size = new System.Drawing.Size(74, 69);
             this.GoDangBan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -118,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MistyRose;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(201)))));
             this.Controls.Add(this.GoDangBan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMaSP);

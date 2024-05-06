@@ -26,7 +26,7 @@ namespace DoANLapTrinhWin
         public FDanhGia(DonHang dh)
         {
             InitializeComponent();
-            this.Size = new Size(1000,600);
+            this.Size = new Size(1200,600);
             this.dh = dh;
             LoadData();
         }

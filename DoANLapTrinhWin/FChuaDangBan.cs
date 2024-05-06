@@ -27,6 +27,8 @@ namespace DoANLapTrinhWin
             DataSet dt = spDao.LoadChuaDangBan(ngBan);
             int x = 0;
             int y = 0;
+            int maxPerRow = 6; // Số lượng tối đa UC trong mỗi hàng
+            int ucCount = 0; // Đếm số lượng UC đã thêm vào hàng hiện tại
             foreach (DataRow row in dt.Tables[0].Rows)
             {
                 SanPham sp = new SanPham
@@ -47,13 +49,15 @@ namespace DoANLapTrinhWin
                     (byte[])row[0]
                 );
                 UCSPBan ucSPBan = new UCSPBan(sp);
-
+                ucCount++;
                 ucSPBan.Location = new Point(x, y);
                 x += ucSPBan.Width += 5;
-                if (x == x + ucSPBan.Width * 4)
+                
+                if (ucCount == maxPerRow)
                 {
                      x = 0;
                      y += ucSPBan.Height + 5;
+                     ucCount = 0;
                 }
                 panelChuaDangBan.Controls.Add(ucSPBan);
             }

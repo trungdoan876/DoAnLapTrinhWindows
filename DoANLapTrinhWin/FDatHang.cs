@@ -35,7 +35,7 @@ namespace DoANLapTrinhWin
         public FDatHang(NguoiMua ngMua,SanPham sp, int tongtien)
         {
             InitializeComponent();
-            this.Size = new Size(1200, 600);
+            this.Size = new Size(1130, 600);
             this.sp = sp;
             this.ngmua = ngMua;
             this.tongtien = tongtien;
