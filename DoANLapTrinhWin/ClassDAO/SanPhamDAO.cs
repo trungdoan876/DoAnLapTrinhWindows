@@ -114,7 +114,7 @@ namespace DoANLapTrinhWin
                 + "where DangBan = '{0}' order by TanSuatTimKiem desc", 1);*/
             //load form theo tần suất bấm vào sản phẩm của người mua và load ra danh sách các sản phẩm có cùng ngành hàng đó
             string sqlStr = string.Format(" select * from SanPham  left join (select max(TanSuatTruyCap) as Max, NganhHang " +
-                "FROM TanSuatTruyCap GROUP BY NganhHang) Q ON SanPham.NganhHang = Q.NganhHang order by Q.Max desc");
+                "FROM TanSuatTruyCap GROUP BY NganhHang) Q ON SanPham.NganhHang = Q.NganhHang Where DangBan ='{0}' order by Q.Max desc",1);
             //string sqlStr = string.Format("SELECT* FROM SanPham WHERE DangBan = '{0}'", 1);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
