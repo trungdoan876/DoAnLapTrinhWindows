@@ -73,9 +73,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btnShop = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label4 = new System.Windows.Forms.Label();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             this.panel1.SuspendLayout();
             this.vongtrontt.SuspendLayout();
@@ -84,7 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picHeart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTenSP
@@ -550,9 +550,10 @@
             // lblDiaChiNB
             // 
             this.lblDiaChiNB.AutoSize = true;
+            this.lblDiaChiNB.BackColor = System.Drawing.Color.Transparent;
             this.lblDiaChiNB.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiaChiNB.ForeColor = System.Drawing.Color.Gray;
-            this.lblDiaChiNB.Location = new System.Drawing.Point(533, 21);
+            this.lblDiaChiNB.Location = new System.Drawing.Point(448, 20);
             this.lblDiaChiNB.Name = "lblDiaChiNB";
             this.lblDiaChiNB.Size = new System.Drawing.Size(64, 28);
             this.lblDiaChiNB.TabIndex = 3;
@@ -561,8 +562,9 @@
             // lbltenNB
             // 
             this.lbltenNB.AutoSize = true;
+            this.lbltenNB.BackColor = System.Drawing.Color.Transparent;
             this.lbltenNB.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltenNB.Location = new System.Drawing.Point(154, 21);
+            this.lbltenNB.Location = new System.Drawing.Point(173, 20);
             this.lbltenNB.Name = "lbltenNB";
             this.lbltenNB.Size = new System.Drawing.Size(64, 28);
             this.lbltenNB.TabIndex = 1;
@@ -570,11 +572,12 @@
             // 
             // picHinhNB
             // 
+            this.picHinhNB.BackColor = System.Drawing.Color.Transparent;
             this.picHinhNB.ImageRotate = 0F;
-            this.picHinhNB.Location = new System.Drawing.Point(37, 2);
+            this.picHinhNB.Location = new System.Drawing.Point(35, 0);
             this.picHinhNB.Name = "picHinhNB";
             this.picHinhNB.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picHinhNB.Size = new System.Drawing.Size(64, 64);
+            this.picHinhNB.Size = new System.Drawing.Size(64, 67);
             this.picHinhNB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHinhNB.TabIndex = 0;
             this.picHinhNB.TabStop = false;
@@ -621,20 +624,9 @@
             this.guna2PictureBox1.TabIndex = 4;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(224)))));
-            this.panel3.Controls.Add(this.btnShop);
-            this.panel3.Controls.Add(this.lblDiaChiNB);
-            this.panel3.Controls.Add(this.lbltenNB);
-            this.panel3.Controls.Add(this.picHinhNB);
-            this.panel3.Location = new System.Drawing.Point(406, 501);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(912, 69);
-            this.panel3.TabIndex = 291;
-            // 
             // btnShop
             // 
+            this.btnShop.BackColor = System.Drawing.Color.Transparent;
             this.btnShop.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnShop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShop.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
@@ -643,7 +635,7 @@
             this.btnShop.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnShop.ImageRotate = 0F;
             this.btnShop.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnShop.Location = new System.Drawing.Point(832, 4);
+            this.btnShop.Location = new System.Drawing.Point(820, 3);
             this.btnShop.Name = "btnShop";
             this.btnShop.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnShop.Size = new System.Drawing.Size(64, 62);
@@ -662,6 +654,20 @@
             this.label4.TabIndex = 295;
             this.label4.Text = "    Shop: ";
             // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.BorderRadius = 20;
+            this.guna2CustomGradientPanel1.Controls.Add(this.lbltenNB);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnShop);
+            this.guna2CustomGradientPanel1.Controls.Add(this.picHinhNB);
+            this.guna2CustomGradientPanel1.Controls.Add(this.lblDiaChiNB);
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(144)))), ((int)(((byte)(241)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(207)))), ((int)(((byte)(163)))));
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(406, 505);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(912, 70);
+            this.guna2CustomGradientPanel1.TabIndex = 296;
+            // 
             // FCTSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -669,12 +675,12 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1927, 1106);
+            this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fpanelSPChungNH);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.fpanelDanhGia);
             this.Controls.Add(this.picHeart);
@@ -702,8 +708,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picHeart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.guna2CustomGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -753,8 +759,8 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2ImageButton btnShop;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
     }
 }

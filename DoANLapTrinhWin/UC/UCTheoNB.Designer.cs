@@ -28,29 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.picHinhNB = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lbltenNB = new System.Windows.Forms.Label();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panelSP = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNB)).BeginInit();
+            this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.MistyRose;
-            this.panel1.Controls.Add(this.picHinhNB);
-            this.panel1.Controls.Add(this.lbltenNB);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1823, 77);
-            this.panel1.TabIndex = 0;
             // 
             // picHinhNB
             // 
+            this.picHinhNB.BackColor = System.Drawing.Color.Transparent;
             this.picHinhNB.ImageRotate = 0F;
-            this.picHinhNB.Location = new System.Drawing.Point(32, 7);
+            this.picHinhNB.Location = new System.Drawing.Point(79, 7);
             this.picHinhNB.Name = "picHinhNB";
             this.picHinhNB.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.picHinhNB.Size = new System.Drawing.Size(64, 64);
@@ -61,23 +51,36 @@
             // lbltenNB
             // 
             this.lbltenNB.AutoSize = true;
-            this.lbltenNB.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltenNB.BackColor = System.Drawing.Color.Transparent;
+            this.lbltenNB.Font = new System.Drawing.Font("Segoe UI", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltenNB.ForeColor = System.Drawing.Color.DimGray;
-            this.lbltenNB.Location = new System.Drawing.Point(130, 22);
+            this.lbltenNB.Location = new System.Drawing.Point(201, 14);
             this.lbltenNB.Name = "lbltenNB";
-            this.lbltenNB.Size = new System.Drawing.Size(49, 32);
+            this.lbltenNB.Size = new System.Drawing.Size(68, 45);
             this.lbltenNB.TabIndex = 0;
             this.lbltenNB.Text = "ten";
             // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.BorderRadius = 20;
+            this.guna2CustomGradientPanel1.Controls.Add(this.picHinhNB);
+            this.guna2CustomGradientPanel1.Controls.Add(this.lbltenNB);
+            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(166)))), ((int)(((byte)(189)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(172)))), ((int)(((byte)(139)))));
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1826, 74);
+            this.guna2CustomGradientPanel1.TabIndex = 6;
+            // 
             // panelSP
             // 
-            this.panelSP.AutoScroll = true;
-            this.panelSP.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelSP.BackColor = System.Drawing.Color.White;
             this.panelSP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSP.Location = new System.Drawing.Point(0, 77);
+            this.panelSP.Location = new System.Drawing.Point(0, 74);
             this.panelSP.Name = "panelSP";
-            this.panelSP.Size = new System.Drawing.Size(1823, 440);
-            this.panelSP.TabIndex = 5;
+            this.panelSP.Size = new System.Drawing.Size(1826, 446);
+            this.panelSP.TabIndex = 7;
             // 
             // UCTheoNB
             // 
@@ -85,21 +88,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.panelSP);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "UCTheoNB";
-            this.Size = new System.Drawing.Size(1823, 517);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Size = new System.Drawing.Size(1826, 520);
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNB)).EndInit();
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.guna2CustomGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbltenNB;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picHinhNB;
-        public System.Windows.Forms.FlowLayoutPanel panelSP;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private System.Windows.Forms.FlowLayoutPanel panelSP;
     }
 }

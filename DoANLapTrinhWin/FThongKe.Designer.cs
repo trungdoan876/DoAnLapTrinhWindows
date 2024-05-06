@@ -79,6 +79,7 @@
             Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -111,8 +112,8 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.gunaChart2 = new Guna.Charts.WinForms.GunaChart();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -122,7 +123,6 @@
             this.guna2CustomGradientPanel4.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -143,6 +143,17 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1789, 114);
             this.guna2CustomGradientPanel1.TabIndex = 0;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1263, 14);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(138, 78);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -225,9 +236,9 @@
             this.btnChuaDB.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(185)))), ((int)(((byte)(84)))));
             this.btnChuaDB.Font = new System.Drawing.Font("Segoe UI Black", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChuaDB.ForeColor = System.Drawing.Color.White;
-            this.btnChuaDB.Location = new System.Drawing.Point(1091, 0);
+            this.btnChuaDB.Location = new System.Drawing.Point(1102, 0);
             this.btnChuaDB.Name = "btnChuaDB";
-            this.btnChuaDB.Size = new System.Drawing.Size(522, 126);
+            this.btnChuaDB.Size = new System.Drawing.Size(525, 126);
             this.btnChuaDB.TabIndex = 2;
             this.btnChuaDB.Text = "Sản phẩm chưa đăng bán";
             // 
@@ -246,7 +257,7 @@
             this.btnDaDB.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(238)))), ((int)(((byte)(128)))));
             this.btnDaDB.Font = new System.Drawing.Font("Segoe UI Black", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDaDB.ForeColor = System.Drawing.Color.White;
-            this.btnDaDB.Location = new System.Drawing.Point(546, 0);
+            this.btnDaDB.Location = new System.Drawing.Point(557, 0);
             this.btnDaDB.Name = "btnDaDB";
             this.btnDaDB.Size = new System.Drawing.Size(545, 126);
             this.btnDaDB.TabIndex = 1;
@@ -269,7 +280,7 @@
             this.btnTatCaSP.ForeColor = System.Drawing.Color.White;
             this.btnTatCaSP.Location = new System.Drawing.Point(0, 0);
             this.btnTatCaSP.Name = "btnTatCaSP";
-            this.btnTatCaSP.Size = new System.Drawing.Size(546, 126);
+            this.btnTatCaSP.Size = new System.Drawing.Size(557, 126);
             this.btnTatCaSP.TabIndex = 0;
             this.btnTatCaSP.Text = "Tất cả sản phẩm";
             // 
@@ -685,17 +696,6 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Top 5 sản phẩm bán được nhiều nhất";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1263, 14);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(138, 78);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
             // FThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -711,6 +711,7 @@
             this.Text = "KL";
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -723,7 +724,6 @@
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
