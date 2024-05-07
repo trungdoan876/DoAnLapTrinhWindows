@@ -35,7 +35,7 @@ namespace DoANLapTrinhWin
             this.lblDiaChi.Text = sp.DiaChi;
             this.vongtrontt.Value = TinhTinhTrang();
             this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
-            loadtinhtrang();
+            //loadtinhtrang();
         }
         public int TinhTinhTrang()
         {
