@@ -54,6 +54,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelThemNhieuHinh = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.fpanelDanhGia = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -500,12 +502,36 @@
             this.panelThemNhieuHinh.Size = new System.Drawing.Size(290, 838);
             this.panelThemNhieuHinh.TabIndex = 294;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Location = new System.Drawing.Point(468, 928);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(233, 28);
+            this.label3.TabIndex = 296;
+            this.label3.Text = "    Đánh giá sản phẩm: ";
+            // 
+            // fpanelDanhGia
+            // 
+            this.fpanelDanhGia.AutoScroll = true;
+            this.fpanelDanhGia.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
+            this.fpanelDanhGia.Location = new System.Drawing.Point(462, 959);
+            this.fpanelDanhGia.Name = "fpanelDanhGia";
+            this.fpanelDanhGia.Size = new System.Drawing.Size(918, 265);
+            this.fpanelDanhGia.TabIndex = 295;
+            // 
             // FCTSPSua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1813, 1010);
+            this.ClientSize = new System.Drawing.Size(1910, 1226);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.fpanelDanhGia);
             this.Controls.Add(this.panelThemNhieuHinh);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -565,5 +591,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel panelThemNhieuHinh;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.FlowLayoutPanel fpanelDanhGia;
     }
 }

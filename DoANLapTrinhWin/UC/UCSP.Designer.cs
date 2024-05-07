@@ -158,6 +158,7 @@
             this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "UCSP";
             this.Size = new System.Drawing.Size(277, 327);
+            this.Load += new System.EventHandler(this.UCSP_Load);
             this.Click += new System.EventHandler(this.UCSP_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHeart)).EndInit();

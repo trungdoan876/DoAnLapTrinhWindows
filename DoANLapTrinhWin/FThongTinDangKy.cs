@@ -51,7 +51,9 @@ namespace DoANLapTrinhWin
             byte[] b = Global.ImageToByteArray(picHinh.Image);
             if (loainguoi == "Bán hàng")
             {
+                
                 string maNB = TaoMa("NguoiBan", "NB");
+                this.txtTenTK.Text = maNB;
                 NguoiBan ngban = new NguoiBan(maNB, txtMK.Text, txtHoTen.Text, sdt, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, b);
                 ngdao.DangKy(ngban);
                 MessageBox.Show("Đăng kí tài khoản bán hàng thành công!!");
@@ -60,6 +62,7 @@ namespace DoANLapTrinhWin
             else
             {
                 string maNM = TaoMa("NguoiMua", "NM");
+                this.txtTenTK.Text = maNM;
                 NguoiMua ng = new NguoiMua(maNM, txtMK.Text, txtHoTen.Text, sdt, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, b);
                 ngmuadao.DangKy(ng);
                 MessageBox.Show("Đăng kí tài khoản mua hàng thành công!!");

@@ -63,7 +63,6 @@ namespace DoANLapTrinhWin
                 if (k < 10)
                     ma = ma + "0";
                 ma = ma + k.ToString();
-                MessageBox.Show(ma);
             }
             return ma;
         }
@@ -73,8 +72,8 @@ namespace DoANLapTrinhWin
             ds = ghDao.LoadThongTinNguoiMuaTrongGioHang(ngmua);
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-                ten = row["ten"].ToString();
-                diachi = row["diachi"].ToString();
+                ten = row[2].ToString(); //"ten"
+                diachi = row[3].ToString();//"diachi"
             }
         }
          public void LoadData()
@@ -88,7 +87,7 @@ namespace DoANLapTrinhWin
 
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-                maNB = row["MaNguoiBan"].ToString();
+                maNB = row[5].ToString(); //manb
                 UCTheoNB uc;
                 if (!dictUCTheoNB.ContainsKey(maNB))
                 {
@@ -102,13 +101,13 @@ namespace DoANLapTrinhWin
                 {
                     uc = dictUCTheoNB[maNB];
                 }
-                string maSP = row["MaSanPham"].ToString();
-                string tenSP = row["TenSanPham"].ToString();
-                string giaBan = row["GiaBan"].ToString();
-                string soLuong = row["SoLuong"].ToString();
-                if (row["Hinh"] != DBNull.Value)
+                string maSP = row[1].ToString(); //masp
+                string tenSP = row[2].ToString(); //tensp
+                string giaBan = row[3].ToString(); //gia ban
+                string soLuong = row[4].ToString(); //so luong
+                if (row[7] != DBNull.Value)
                 {
-                    hinh = (byte[])row["Hinh"];
+                    hinh = (byte[])row[7];
                 }
 
                 sp = new SanPham(maNB, maSP, tenSP, giaBan, hinh, soLuong);
@@ -122,6 +121,7 @@ namespace DoANLapTrinhWin
                 y += ucdh.Height += 5;
                 uc.panelSP.Controls.Add(ucdh);
             }
+            //ghDao.CapNhatGioHang();
         }
         //dung cho thong ke
         private void TinhSoLuotMuaSanPham(SanPham sanPham)

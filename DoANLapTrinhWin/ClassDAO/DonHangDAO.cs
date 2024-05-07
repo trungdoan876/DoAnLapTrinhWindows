@@ -96,7 +96,7 @@ namespace DoANLapTrinhWin
         {
             string sql = string.Format("INSERT INTO DonHang (MaDonHang, MaNguoiMua, MaNguoiBan, TongTien, NgayDatHang, TrangThaiDonHangNM, TrangThaiDonHangNB) " +
                     "VALUES('{0}','{1}','{2}','{3}','{4}',N'{5}',N'{6}')", dh.MaDonHang,dh.MaNguoiMua,dh.MaNguoiBan,dh.TongTien,dh.NgayDatHang,dh.TrangThaiDonHangNM,dh.TrangThaiDonHangNB);
-            tt.ThucThi(sql);
+            tt.ThucThiKhong(sql);
         }
         public DataSet TaoMaDonHang()
         {

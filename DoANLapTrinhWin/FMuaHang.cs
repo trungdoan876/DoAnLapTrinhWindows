@@ -222,70 +222,7 @@ namespace DoANLapTrinhWin
         private void txtTimKiem_IconRightClick(object sender, EventArgs e)
         {
             LoadTimKiem(txtTimKiem.Text.Trim());
-            //tần suất tìm kiếm
             TanSuatTimKiem();
-            /*try
-            {
-                if(conn.State == ConnectionState.Open)
-                {
-                    conn.Close();
-                }
-                conn.Open();
-                //lấy ngành hàng
-                string sql = string.Format("select distinct NganhHang From SanPham where TenSanPham LIKE N'%{0}%'",txtTimKiem.Text.Trim());
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                string nganhHang = "";
-
-                // Kiểm tra xem có bất kỳ hàng nào được trả về từ truy vấn không
-                if (reader.HasRows)
-                {
-                    // Đọc hàng đầu tiên (giả sử chỉ có một hàng được trả về)
-                    reader.Read();
-
-                    // Lấy giá trị của cột đầu tiên trong tập kết quả (NganhHang)
-                    nganhHang = reader.GetString(0);
-                }
-                reader.Close();
-                //một lần tìm kiếm sẽ insert vào bảng nếu chưa có trong bảng
-                string sql1 = string.Format("Select TanSuatTimKiem From TimKiem where NganhHang like N'{0}'",nganhHang);
-                SqlCommand cmd1 = new SqlCommand(sql1, conn);
-                SqlDataReader reader1 = cmd1.ExecuteReader();
-                int tanSuat;
-                // Kiểm tra xem có bất kỳ hàng nào được trả về từ truy vấn không
-                if (reader1.HasRows)
-                {
-                    // Đọc hàng đầu tiên (giả sử chỉ có một hàng được trả về)
-                    reader1.Read();
-                    tanSuat = reader1.GetInt32(0); // +1;
-                }
-                else
-                {
-                     tanSuat = 0;
-                }
-                reader1.Close();
-                if(tanSuat == 0)
-                {
-                    string sqlStr = string.Format("INSERT INTO TimKiem (MaNguoiMua,TanSuatTimKiem,NganhHang) VALUES ('{0}','{1}',N'{2}')", ngmua.Ma , 1, nganhHang);
-                    SqlCommand cmd2 = new SqlCommand(sqlStr, conn);
-                    cmd2.ExecuteNonQuery();
-                }
-                else //nếu đã có, cập nhật tuần suất lên 1
-                {
-                    string sqlStr = string.Format("UPDATE TimKiem SET TanSuatTimKiem ='{0}' WHERE MaNguoiMua ='{1}'and NganhHang =N'{2}'",tanSuat+1, ngmua.Ma,nganhHang);
-                    SqlCommand cmd3 = new SqlCommand(sqlStr, conn);
-                    cmd3.ExecuteNonQuery();
-                } 
-                    
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }*/
         }
         private void TanSuatTimKiem()
         {
@@ -317,22 +254,22 @@ namespace DoANLapTrinhWin
         }
         private void panelChiTiet_MouseMove_1(object sender, MouseEventArgs e)
         {
-            panelThongTin.Show();
+            //panelThongTin.Show();
         }
 
         private void panelThongTin_MouseMove(object sender, MouseEventArgs e)
         {
-            panelThongTin.Show();
+            //panelThongTin.Show();
         }
 
         private void panelThongTin_MouseLeave(object sender, EventArgs e)
         {
-            panelThongTin.Hide();
+            //panelThongTin.Hide();
         }
 
         private void panelThongTin_MouseDown(object sender, MouseEventArgs e)
         {
-            panelThongTin.Hide();
+            //panelThongTin.Hide();
         }
     }
 }

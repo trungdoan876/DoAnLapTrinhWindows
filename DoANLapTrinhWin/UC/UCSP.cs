@@ -117,5 +117,10 @@ namespace DoANLapTrinhWin
                 }
             }
         }
+
+        private void UCSP_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

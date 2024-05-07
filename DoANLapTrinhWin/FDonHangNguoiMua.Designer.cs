@@ -35,12 +35,9 @@
             this.btnDangThucHien = new Guna.UI2.WinForms.Guna2Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnDaGiao = new Guna.UI2.WinForms.Guna2Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnDaHuy = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,7 +55,6 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panel8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -69,9 +65,9 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.btnDangThucHien);
-            this.panel7.Location = new System.Drawing.Point(3, 5);
+            this.panel7.Location = new System.Drawing.Point(29, 5);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(487, 70);
+            this.panel7.Size = new System.Drawing.Size(721, 70);
             this.panel7.TabIndex = 42;
             // 
             // btnDangThucHien
@@ -92,7 +88,7 @@
             this.btnDangThucHien.ImageSize = new System.Drawing.Size(30, 30);
             this.btnDangThucHien.Location = new System.Drawing.Point(0, 0);
             this.btnDangThucHien.Name = "btnDangThucHien";
-            this.btnDangThucHien.Size = new System.Drawing.Size(487, 70);
+            this.btnDangThucHien.Size = new System.Drawing.Size(721, 70);
             this.btnDangThucHien.TabIndex = 38;
             this.btnDangThucHien.Text = "Đang thực hiện";
             this.btnDangThucHien.Click += new System.EventHandler(this.btnDangThucHien_Click);
@@ -100,9 +96,9 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.btnDaGiao);
-            this.panel6.Location = new System.Drawing.Point(496, 5);
+            this.panel6.Location = new System.Drawing.Point(756, 5);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(487, 70);
+            this.panel6.Size = new System.Drawing.Size(724, 70);
             this.panel6.TabIndex = 44;
             // 
             // btnDaGiao
@@ -122,40 +118,10 @@
             this.btnDaGiao.ImageSize = new System.Drawing.Size(25, 25);
             this.btnDaGiao.Location = new System.Drawing.Point(0, 0);
             this.btnDaGiao.Name = "btnDaGiao";
-            this.btnDaGiao.Size = new System.Drawing.Size(487, 70);
+            this.btnDaGiao.Size = new System.Drawing.Size(721, 70);
             this.btnDaGiao.TabIndex = 39;
             this.btnDaGiao.Text = "Đã giao";
             this.btnDaGiao.Click += new System.EventHandler(this.btnDaGiao_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.btnDaHuy);
-            this.panel8.Location = new System.Drawing.Point(989, 5);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(487, 70);
-            this.panel8.TabIndex = 43;
-            // 
-            // btnDaHuy
-            // 
-            this.btnDaHuy.Animated = true;
-            this.btnDaHuy.BorderRadius = 15;
-            this.btnDaHuy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDaHuy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDaHuy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDaHuy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDaHuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDaHuy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDaHuy.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDaHuy.ForeColor = System.Drawing.Color.White;
-            this.btnDaHuy.HoverState.FillColor = System.Drawing.Color.Lime;
-            this.btnDaHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnDaHuy.Image")));
-            this.btnDaHuy.ImageOffset = new System.Drawing.Point(0, -5);
-            this.btnDaHuy.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnDaHuy.Location = new System.Drawing.Point(0, -4);
-            this.btnDaHuy.Name = "btnDaHuy";
-            this.btnDaHuy.Size = new System.Drawing.Size(487, 74);
-            this.btnDaHuy.TabIndex = 40;
-            this.btnDaHuy.Text = "Đơn đã hủy";
             // 
             // FDonHangNguoiMua
             // 
@@ -169,7 +135,6 @@
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -182,7 +147,5 @@
         private Guna.UI2.WinForms.Guna2Button btnDaGiao;
         private System.Windows.Forms.Panel panel7;
         private Guna.UI2.WinForms.Guna2Button btnDangThucHien;
-        private System.Windows.Forms.Panel panel8;
-        private Guna.UI2.WinForms.Guna2Button btnDaHuy;
     }
 }

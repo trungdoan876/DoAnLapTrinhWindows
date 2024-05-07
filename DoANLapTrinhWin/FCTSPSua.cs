@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoANLapTrinhWin.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,8 @@ namespace DoANLapTrinhWin
         private List<byte[]> byteImage = new List<byte[]>();
         private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
         SanPhamDAO spDao= new SanPhamDAO();
+        DanhGiaDAO dgdao = new DanhGiaDAO();
+        SanPham sp;
         public FCTSPSua()
         {
             InitializeComponent();
@@ -24,10 +27,12 @@ namespace DoANLapTrinhWin
         }
         public FCTSPSua(SanPham sp)
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            this.sp = sp;
             this.Size = new Size(1250,700); //tao size moi cho form
             ThongTin(sp); //thông tin hiện lên của sản phẩm
             LoadImagesFromDatabase(txtMaSanPham.Text);
+            LoadDanhGia();
         }
         private void ThongTin(SanPham sp)
         {
@@ -117,6 +122,17 @@ namespace DoANLapTrinhWin
         private void btnThemNhieuHinh_Click(object sender, EventArgs e)
         {
             arrPicture = Global.CreateOpenFileDialogMore(picHinh, panelThemNhieuHinh, arrPicture);  
+        }
+        private void LoadDanhGia()
+        {
+            DataSet ds = dgdao.HienDanhGia(sp);
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                NguoiMua ngmua = new NguoiMua((byte[])row[0], row[1].ToString(), row[2].ToString());
+                DanhGia dg = new DanhGia(row[3].ToString(), row[4].ToString(), (DateTime)row[5], row[6].ToString());
+                UCDanhGiaCT uc = new UCDanhGiaCT(ngmua, dg);
+                fpanelDanhGia.Controls.Add(uc);
+            }
         }
     }
 }

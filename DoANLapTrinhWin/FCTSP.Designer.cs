@@ -549,24 +549,24 @@
             // 
             // lblDiaChiNB
             // 
-            this.lblDiaChiNB.AutoSize = true;
+            this.lblDiaChiNB.AutoEllipsis = true;
             this.lblDiaChiNB.BackColor = System.Drawing.Color.Transparent;
             this.lblDiaChiNB.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiaChiNB.ForeColor = System.Drawing.Color.Gray;
             this.lblDiaChiNB.Location = new System.Drawing.Point(448, 20);
             this.lblDiaChiNB.Name = "lblDiaChiNB";
-            this.lblDiaChiNB.Size = new System.Drawing.Size(64, 28);
+            this.lblDiaChiNB.Size = new System.Drawing.Size(366, 28);
             this.lblDiaChiNB.TabIndex = 3;
             this.lblDiaChiNB.Text = "label1";
             // 
             // lbltenNB
             // 
-            this.lbltenNB.AutoSize = true;
+            this.lbltenNB.AutoEllipsis = true;
             this.lbltenNB.BackColor = System.Drawing.Color.Transparent;
             this.lbltenNB.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltenNB.Location = new System.Drawing.Point(173, 20);
             this.lbltenNB.Name = "lbltenNB";
-            this.lbltenNB.Size = new System.Drawing.Size(64, 28);
+            this.lbltenNB.Size = new System.Drawing.Size(269, 28);
             this.lbltenNB.TabIndex = 1;
             this.lbltenNB.Text = "label1";
             // 
@@ -709,7 +709,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
-            this.guna2CustomGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

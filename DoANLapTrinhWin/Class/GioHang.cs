@@ -14,13 +14,13 @@ namespace DoANLapTrinhWin
         private int soLuong;
 	    private string maNB;
         private string maNM;
-        //TrangThaiSP bit,
+        private int TrangThaiSP;
         private byte[] hinh;
         public GioHang(string masp)
         {
             this.MaSP = masp;
         }
-        public GioHang(string maSP, string tenSP, string giaBan, int soLuong, string maNB, string maNM, byte[] hinh)
+        public GioHang(string maSP, string tenSP, string giaBan, int soLuong, string maNB, string maNM, byte[] hinh, int trangThaiSP)
         {
             this.MaSP = maSP;
             this.TenSP = tenSP;
@@ -29,6 +29,7 @@ namespace DoANLapTrinhWin
             this.MaNB = maNB;
             this.MaNM = maNM;
             this.Hinh = hinh;
+            this.TrangThaiSP = trangThaiSP;
         }
 
         public string MaSP { get => maSP; set => maSP = value; }
@@ -38,5 +39,6 @@ namespace DoANLapTrinhWin
         public string MaNB { get => maNB; set => maNB = value; }
         public string MaNM { get => maNM; set => maNM = value; }
         public byte[] Hinh { get => hinh; set => hinh = value; }
+        public int TrangThaiSP1 { get => TrangThaiSP; set => TrangThaiSP = value; }
     }
 }

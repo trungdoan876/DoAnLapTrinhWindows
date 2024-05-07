@@ -123,6 +123,7 @@ namespace DoANLapTrinhWin
         private void LoadDanhGia()
         {
             DataSet ds = dgdao.HienDanhGia(sp);
+
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                 NguoiMua ngmua = new NguoiMua((byte[])row[0], row[1].ToString(), row[2].ToString());
@@ -157,7 +158,7 @@ namespace DoANLapTrinhWin
         private void btnThemVaoGio_Click_1(object sender, EventArgs e)
         {
             string slmua = soluongmua.Value.ToString();
-            GioHang gh = new GioHang(sp.MaSP,sp.TenSP,sp.GiaBan,int.Parse(slmua),sp.MaNguoiBan,ngmua.Ma,sp.Hinh);
+            GioHang gh = new GioHang(sp.MaSP,sp.TenSP,sp.GiaBan,int.Parse(slmua),sp.MaNguoiBan,ngmua.Ma,sp.Hinh,0);
             ghdao.ThemVaoGioHang(gh);
             MessageBox.Show("Đã thêm vào giỏ hàng!");
         }

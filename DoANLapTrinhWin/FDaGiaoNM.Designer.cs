@@ -33,6 +33,7 @@
             // 
             // panelDaGiao
             // 
+            this.panelDaGiao.AutoScroll = true;
             this.panelDaGiao.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelDaGiao.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDaGiao.Location = new System.Drawing.Point(0, 0);

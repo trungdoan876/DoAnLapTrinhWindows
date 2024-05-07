@@ -69,18 +69,23 @@ namespace DoANLapTrinhWin
                 spgh.Location = new Point(0, y);
                 y += spgh.Height += 5;
                 ucnb.panelSP.Controls.Add(spgh);
-                if (check == "True") //tick vao checkbox
+                if (check == "False") //tick vao checkbox
+                {
                     spgh.checkBoxSP.Checked = true;
-                else //=true -> đã chọn
+                }
+                if (check == "True") //=true -> đã chọn
+                {
                     spgh.checkBoxSP.Checked = false;
+                }
                 spgh.lblTrangThai.Text = row[10].ToString(); //có được chọn để mua hay không
                 spgh.soluongmuaGH.Value = int.Parse(soLuongMua); //số lượng thêm vào giỏ
                 lblTongTien.Text = "đ"+ThanhTien(spgh.lblTrangThai.Text, spgh.lblGiaTien.Text, int.Parse(soLuongMua))+".000";
             }
+            //ghdao.CapNhatGioHang();
         }
         public string ThanhTien(string TrangThai,string giaTien,int soluongmua)
         {
-            if (TrangThai == "True")
+            if (TrangThai == "False")
             {
                 string giaban = giaTien.Substring(1); // Loại bỏ ký tự "đ" ở đầu chuỗi
                 decimal gb = decimal.Parse(giaban); // Chuyển đổi giá trị của giaban thành kiểu decimal

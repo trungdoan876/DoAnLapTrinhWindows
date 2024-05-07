@@ -35,6 +35,7 @@ namespace DoANLapTrinhWin
             this.lblDiaChi.Text = sp.DiaChi;
             this.vongtrontt.Value = TinhTinhTrang();
             this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
+            loadtinhtrang();
         }
         public int TinhTinhTrang()
         {
@@ -42,8 +43,7 @@ namespace DoANLapTrinhWin
             int tt = int.Parse(str);
             return tt;
         }
-        
-        private void checkBoxSP_CheckedChanged(object sender, EventArgs e)
+        private void loadtinhtrang()
         {
             if (check == "False") //tick vao checkbox
             {
@@ -55,6 +55,10 @@ namespace DoANLapTrinhWin
                 GioHang gh = new GioHang(sp.MaSP);
                 ghDAO.CapNhatKhongchon(gh);
             }
+        }
+        private void checkBoxSP_CheckedChanged(object sender, EventArgs e)
+        {
+            loadtinhtrang();
         }
         private void soluongmuaGH_ValueChanged(object sender, EventArgs e)
         {

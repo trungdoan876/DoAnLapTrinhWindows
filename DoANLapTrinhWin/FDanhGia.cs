@@ -66,9 +66,6 @@ namespace DoANLapTrinhWin
                         else
                         {
                             string maNguoiMua = dh.MaNguoiMua;
-                            /*float sao = uc.ratingsp.Value;
-                            float saoNguoiBan = uc.ratingnguoiban.Value;
-                            float saoGiaoHang = uc.ratinggiaohang.Value;*/
                             float sao = uc.ratingsp.Value;
                             float saoNguoiBan = uc.ratingnguoiban.Value;
                             float saoGiaoHang = uc.ratinggiaohang.Value;
@@ -88,8 +85,9 @@ namespace DoANLapTrinhWin
                                     hdgdao.ThemHinhDanhGia(hdg);
                                 }
                             }
+                            daXuLy = true;
                         }
-                        daXuLy = true;
+                        //daXuLy = true;
                     }
                 }
             }

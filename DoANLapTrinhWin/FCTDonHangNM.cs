@@ -15,7 +15,6 @@ namespace DoANLapTrinhWin
 {
     public partial class FCTDonHangNM : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         ChiTietDonHangDAO ctdhDao = new ChiTietDonHangDAO();
         DonHang dh;
         DonHangDAO dhdao = new DonHangDAO();
