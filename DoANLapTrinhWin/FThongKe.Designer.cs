@@ -92,9 +92,6 @@
             this.chartBestSeller = new Guna.Charts.WinForms.GunaDoughnutDataset();
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.gunaChart1 = new Guna.Charts.WinForms.GunaChart();
             this.chartTheoThang = new Guna.Charts.WinForms.GunaBarDataset();
@@ -120,7 +117,6 @@
             this.guna2CustomGradientPanel3.SuspendLayout();
             this.guna2CustomGradientPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            this.guna2CustomGradientPanel4.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -313,7 +309,6 @@
             // guna2CustomGradientPanel5
             // 
             this.guna2CustomGradientPanel5.Controls.Add(this.guna2PictureBox4);
-            this.guna2CustomGradientPanel5.Controls.Add(this.guna2CustomGradientPanel4);
             this.guna2CustomGradientPanel5.Controls.Add(this.label11);
             this.guna2CustomGradientPanel5.Controls.Add(this.gunaChart1);
             this.guna2CustomGradientPanel5.Dock = System.Windows.Forms.DockStyle.Left;
@@ -333,38 +328,6 @@
             this.guna2PictureBox4.TabIndex = 13;
             this.guna2PictureBox4.TabStop = false;
             // 
-            // guna2CustomGradientPanel4
-            // 
-            this.guna2CustomGradientPanel4.Controls.Add(this.label2);
-            this.guna2CustomGradientPanel4.Controls.Add(this.label1);
-            this.guna2CustomGradientPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(0, 610);
-            this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(1080, 181);
-            this.guna2CustomGradientPanel4.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 34F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(107)))), ((int)(((byte)(100)))));
-            this.label2.Location = new System.Drawing.Point(436, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(487, 91);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "đ1567223.000";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(85)))));
-            this.label1.Location = new System.Drawing.Point(12, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(418, 65);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tổng doanh thu:";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -380,12 +343,12 @@
             // 
             this.gunaChart1.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] {
             this.chartTheoThang});
-            this.gunaChart1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaChart1.Dock = System.Windows.Forms.DockStyle.Left;
             chartFont9.FontName = "Arial";
             this.gunaChart1.Legend.LabelFont = chartFont9;
             this.gunaChart1.Location = new System.Drawing.Point(0, 0);
             this.gunaChart1.Name = "gunaChart1";
-            this.gunaChart1.Size = new System.Drawing.Size(1080, 604);
+            this.gunaChart1.Size = new System.Drawing.Size(1080, 791);
             this.gunaChart1.TabIndex = 0;
             chartFont10.FontName = "Arial";
             chartFont10.Size = 12;
@@ -719,8 +682,6 @@
             this.guna2CustomGradientPanel5.ResumeLayout(false);
             this.guna2CustomGradientPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            this.guna2CustomGradientPanel4.ResumeLayout(false);
-            this.guna2CustomGradientPanel4.PerformLayout();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
@@ -746,9 +707,6 @@
         public Guna.Charts.WinForms.GunaDoughnutDataset chartBestSeller;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private System.Windows.Forms.Label lblsp4;

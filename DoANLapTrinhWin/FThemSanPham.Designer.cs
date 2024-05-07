@@ -116,7 +116,7 @@
             this.dtp.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.dtp.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtp.Location = new System.Drawing.Point(1495, 36);
+            this.dtp.Location = new System.Drawing.Point(1451, 42);
             this.dtp.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp.Name = "dtp";

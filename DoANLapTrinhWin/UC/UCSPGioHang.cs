@@ -69,6 +69,7 @@ namespace DoANLapTrinhWin
         {
             GioHang gh = new GioHang(sp.MaSP);
             ghDAO.XoaGioHang(gh);
+            MessageBox.Show("Đã xóa sản phẩm khỏi giỏ hàng! TT ");
         }
     }
 }
