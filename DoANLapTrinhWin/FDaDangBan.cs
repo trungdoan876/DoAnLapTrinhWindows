@@ -45,9 +45,5 @@ namespace DoANLapTrinhWin
                 panelDangBan.Controls.Add(ucSPBan);
             }
         }
-        private void FDaDangBan_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -182,6 +182,5 @@ namespace DoANLapTrinhWin
                 return "Tuyệt vời";
             return "";
         }
-      
     }
 }

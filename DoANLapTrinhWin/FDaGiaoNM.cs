@@ -24,8 +24,7 @@ namespace DoANLapTrinhWin
         }
         public void LoadData()
         {
-            DataSet dt = new DataSet();
-            dt = dhDao.DaGiaoNM(ngmua); //them manb de hien len theo manb
+            DataSet dt = dhDao.DaGiaoNM(ngmua); //them manb de hien len theo manb
             foreach (DataRow row in dt.Tables[0].Rows)
             {
                 DonHang dh = new DonHang(row[2].ToString(), row[3].ToString(), (DateTime)row[4], row[5].ToString(), row[0].ToString());

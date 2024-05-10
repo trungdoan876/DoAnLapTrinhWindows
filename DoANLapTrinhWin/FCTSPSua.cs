@@ -15,15 +15,13 @@ namespace DoANLapTrinhWin
 {
     public partial class FCTSPSua : Form
     {
-        private List<byte[]> byteImage = new List<byte[]>();
-        private List<System.Drawing.Image> arrPicture = new List<System.Drawing.Image>();
+        private List<Image> arrPicture = new List<Image>();
         SanPhamDAO spDao= new SanPhamDAO();
         DanhGiaDAO dgdao = new DanhGiaDAO();
         SanPham sp;
         public FCTSPSua()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
         }
         public FCTSPSua(SanPham sp)
         {
@@ -65,19 +63,17 @@ namespace DoANLapTrinhWin
         //hien nhieu hinh
         private void LoadImagesFromDatabase(string masp)
         {
-            DataSet dt = new DataSet();
-            dt = spDao.LayHinhAnhTheoMaSanPham(masp);
+            DataSet dt = spDao.LayHinhAnhTheoMaSanPham(masp);
             foreach (DataRow row in dt.Tables[0].Rows)
             {
                 byte[] imageBytes = (byte[])row["Hinh"];
                 using (MemoryStream mss = new MemoryStream(imageBytes))
                 {
-                    System.Drawing.Image image = System.Drawing.Image.FromStream(mss);
+                    Image image = Image.FromStream(mss);
                     PictureBox pic = Global.CreatePictureBox(image, picHinh);
                     panelThemNhieuHinh.Controls.Add(pic);
                 }
             }
-        
         }
         //chỉnh sửa sản phẩm
         private void btnSuaSanPham_Click(object sender, EventArgs e)

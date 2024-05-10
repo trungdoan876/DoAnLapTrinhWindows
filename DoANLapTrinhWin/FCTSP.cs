@@ -119,8 +119,7 @@ namespace DoANLapTrinhWin
         //hien nhieu hinh
         private void LoadHinh()
         {
-            DataSet dt = new DataSet();
-            dt = spdao.LayHinhAnhTheoMaSanPham(sp.MaSP);
+            DataSet dt = spdao.LayHinhAnhTheoMaSanPham(sp.MaSP);
             foreach (DataRow row in dt.Tables[0].Rows)
             {
                 byte[] imageBytes = (byte[])row["Hinh"];
@@ -130,8 +129,7 @@ namespace DoANLapTrinhWin
                     PictureBox pic = Global.CreatePictureBox(image,picHinh);
                     panelThemNhieuHinh.Controls.Add(pic);
                 }
-            }
-            
+            }        
         }
         private void btnQuaylai_Click(object sender, EventArgs e)
         {

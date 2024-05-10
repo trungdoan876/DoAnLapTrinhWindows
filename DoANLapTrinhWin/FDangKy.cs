@@ -15,7 +15,6 @@ namespace DoANLapTrinhWin
     public partial class FDangKy : Form
     {
         Global gl = new Global();
-        private Guna2GradientButton btnOK;
         private string selctecOption = null;
         NguoiBanDAO ngbandao = new NguoiBanDAO();
         NguoiMuaDAO ngmuadao = new NguoiMuaDAO();
@@ -23,21 +22,6 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.Size = new Size(1005, 500);
-        }
-        private void TaoButton(object button)
-        {
-            var btn = (Guna2GradientButton)button;
-
-            btn.FillColor = Color.DeepSkyBlue;
-            btn.FillColor2 = Color.Violet;
-
-            if (btnOK != null && btnOK != btn)
-            {
-                btnOK.FillColor = Color.FromArgb(255, 128, 128);
-                btnOK.FillColor2 = Color.Gray;
-            }
-
-            btnOK = btn;
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -53,7 +37,7 @@ namespace DoANLapTrinhWin
             else
             {
                 NguoiMua ngmua = new NguoiMua(txtDK.Text);
-                int kt = ngbandao.KiemTraDangKy(ngmua);
+                int kt = ngmuadao.KiemTraDangKy(ngmua);
                 if (kt > 0)
                 {
                     MessageBox.Show("Số điện thoại đã được đăng ký!");
@@ -65,7 +49,7 @@ namespace DoANLapTrinhWin
 
         private void btnBanHang_Click(object sender, EventArgs e)
         {
-            TaoButton(btnBanHang);
+            Global.TaoButtonDangNhap(btnBanHang, ref gl.btncheck);
             selctecOption = "Bán hàng";
             btnBanHang.FillColor = Color.DeepSkyBlue;
             btnBanHang.FillColor2 = Color.Violet;
@@ -73,7 +57,7 @@ namespace DoANLapTrinhWin
 
         private void btnMuaHang_Click(object sender, EventArgs e)
         {
-            TaoButton(sender);
+            Global.TaoButtonDangNhap(btnBanHang, ref gl.btncheck);
             selctecOption = "Mua hàng";
             btnMuaHang.FillColor = Color.DeepSkyBlue;
             btnMuaHang.FillColor2 = Color.Violet;

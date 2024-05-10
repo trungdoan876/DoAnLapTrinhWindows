@@ -46,8 +46,7 @@ namespace DoANLapTrinhWin
         public void LoadData()
         {
             ChiTietDonHang ctdh = new ChiTietDonHang(dh.MaDonHang);
-            DataSet dt = new DataSet();
-            dt = ctdhDao.HienChiTietDonHang(ctdh);
+            DataSet dt = ctdhDao.HienChiTietDonHang(ctdh);
             foreach (DataRow row in dt.Tables[0].Rows)
             {
                 ChiTietDonHang ct = new ChiTietDonHang(row);

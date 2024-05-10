@@ -23,19 +23,12 @@ namespace DoANLapTrinhWin
         }
         public void LoadData()
         {
-            DataSet dt = new DataSet();
-            dt = dhDao.CapNhatGHThanhCongNB(ngban); //them manb de hien len theo manb
+            DataSet dt = dhDao.CapNhatGHThanhCongNB(ngban); //them manb de hien len theo manb
             foreach (DataRow row in dt.Tables[0].Rows)
             {
                 DonHang dh = new DonHang(row);
-                SanPham sp = new SanPham
-                (
-                    row[4].ToString(),
-                    (byte[])row[5]
-                );
-
+                SanPham sp = new SanPham(row[4].ToString(),(byte[])row[5]);
                 UCDonHangNB uc = new UCDonHangNB(dh, sp);
-
                 panelDaGiao.Controls.Add(uc);
             }
         }

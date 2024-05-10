@@ -19,7 +19,6 @@ namespace DoANLapTrinhWin
     public partial class UCSP : UserControl
     {
         SanPham sp;
-        NguoiBan ngban;
         NguoiMua ngmua;
         YeuThichDAO ytdao = new YeuThichDAO();
         SanPhamDAO spdao = new SanPhamDAO();
@@ -96,7 +95,6 @@ namespace DoANLapTrinhWin
             }
             else //nếu đã có, cập nhật tuần suất lên 1
             {
-                //tanSuat += 1;
                 tsdao.CapNhatTanSuatTruyCap(tstc);
             }
         }
@@ -121,11 +119,6 @@ namespace DoANLapTrinhWin
                     picClick = false;
                 }
             }
-        }
-
-        private void UCSP_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -49,7 +49,6 @@
             this.Controls.Add(this.panelDangBan);
             this.Name = "FDaDangBan";
             this.Text = "FDaDangBan";
-            this.Load += new System.EventHandler(this.FDaDangBan_Load);
             this.ResumeLayout(false);
 
         }

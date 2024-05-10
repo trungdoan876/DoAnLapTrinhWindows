@@ -30,7 +30,6 @@ namespace DoANLapTrinhWin
         }
         private void UCSPBan_Click(object sender, EventArgs e)
         {
-            UCSPBan uCSPBan = new UCSPBan();
             this.Hide(); //an form 1
             FCTSPSua formCTSP = new FCTSPSua(sp);
             formCTSP.ShowDialog();
