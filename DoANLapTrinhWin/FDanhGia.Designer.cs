@@ -65,7 +65,7 @@
             this.btnguii.ForeColor = System.Drawing.Color.White;
             this.btnguii.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnguii.HoverState.FillColor2 = System.Drawing.Color.Orange;
-            this.btnguii.Location = new System.Drawing.Point(753, 12);
+            this.btnguii.Location = new System.Drawing.Point(1102, 9);
             this.btnguii.Name = "btnguii";
             this.btnguii.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnguii.Size = new System.Drawing.Size(80, 65);
@@ -80,7 +80,7 @@
             this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(114, 9);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(350, 3);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.Size = new System.Drawing.Size(88, 74);
@@ -91,7 +91,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(208, 17);
+            this.label4.Location = new System.Drawing.Point(444, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(427, 60);
             this.label4.TabIndex = 1;

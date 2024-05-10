@@ -62,7 +62,7 @@ namespace DoANLapTrinhWin
             //tien
             lblSLMua.Text = "Tổng số tiền (" + slmua.ToString() + " sản phẩm): ";
 
-            lblTien.Text = "đ" + tinhTien(sp) + ".000" ;
+            lblTien.Text = "đ" + tinhTien(sp) ;
         }
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
@@ -164,7 +164,7 @@ namespace DoANLapTrinhWin
         {
             int soLuong = slmua;
 
-            string giaban = sanPham.GiaBan.Substring(1);
+            string giaban = sanPham.GiaBan;
             decimal giatien = decimal.Parse(giaban);
 
             // Tính giá trị tổng tiền

@@ -40,8 +40,8 @@ namespace DoANLapTrinhWin
         public string TinhTienMoiSanPham(string soLuong, string giaTien)
         {
             int sl = int.Parse(soLuong);
-            decimal giatien = decimal.Parse(giaTien.Substring(1));
-            decimal thanhTien = giatien * sl;
+            decimal giatien = decimal.Parse(giaTien);
+            decimal thanhTien = giatien * (decimal)sl;
             return thanhTien.ToString();
         }
     }

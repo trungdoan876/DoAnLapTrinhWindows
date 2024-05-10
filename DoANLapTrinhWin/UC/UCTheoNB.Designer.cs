@@ -79,8 +79,8 @@
             this.panelSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSP.Location = new System.Drawing.Point(0, 74);
             this.panelSP.Name = "panelSP";
-            this.panelSP.Size = new System.Drawing.Size(1826, 339);
-            this.panelSP.TabIndex = 8;
+            this.panelSP.Size = new System.Drawing.Size(1826, 297);
+            this.panelSP.TabIndex = 10;
             // 
             // UCTheoNB
             // 
@@ -90,7 +90,7 @@
             this.Controls.Add(this.panelSP);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "UCTheoNB";
-            this.Size = new System.Drawing.Size(1826, 413);
+            this.Size = new System.Drawing.Size(1826, 371);
             ((System.ComponentModel.ISupportInitialize)(this.picHinhNB)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();

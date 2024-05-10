@@ -27,7 +27,7 @@ namespace DoANLapTrinhWin
             this.ten = ten;
             this.diachi = diachi;
             InitializeComponent();
-            lblTongTien.Text = "đ" + tongtien.ToString()+".000";
+            lblTongTien.Text = "đ" + tongtien.ToString();
             txtTen.Text = ten;
             lblDiaChi.Text = diachi;
         }
