@@ -27,7 +27,7 @@ namespace DoANLapTrinhWin
             this.picHinhNM.Image = Global.ByteArrayToImage(ng.Hinh);
             this.lblnhanxet.Text = dg.NhanXet;
             this.lblTenNM.Text = ng.Ten1;
-            this.ratingsao.Value = int.Parse(dg.Sao);
+            //this.ratingsao.Value = int.Parse(dg.Sao);
             this.dtpNgayDG.Text = dg.Ngaydg.ToString().Trim();
             LoadImagesFromDatabase(ng,dg);
         }

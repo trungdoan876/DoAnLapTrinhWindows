@@ -655,9 +655,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(85)))));
             this.label3.Location = new System.Drawing.Point(70, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(601, 45);
+            this.label3.Size = new System.Drawing.Size(500, 45);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Top 5 sản phẩm bán được nhiều nhất";
+            this.label3.Text = "Top 5 sản phẩm bán chạy nhất";
             // 
             // FThongKe
             // 

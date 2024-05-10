@@ -207,7 +207,7 @@ namespace DoANLapTrinhWin
             string soluong = sanPham.SoLuong.Trim();
             int soLuong = int.Parse(sanPham.SoLuong);
 
-            string giaban = sanPham.GiaBan.Substring(1);
+            string giaban = sanPham.GiaBan;
             decimal giatien = decimal.Parse(giaban);
             // Tính giá trị tổng tiền
             decimal totalValue = soLuong * giatien;

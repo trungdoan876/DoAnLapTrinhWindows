@@ -96,7 +96,7 @@ namespace DoANLapTrinhWin
             }
             else //nếu đã có, cập nhật tuần suất lên 1
             {
-                tanSuat += 1;
+                //tanSuat += 1;
                 tsdao.CapNhatTanSuatTruyCap(tstc);
             }
         }

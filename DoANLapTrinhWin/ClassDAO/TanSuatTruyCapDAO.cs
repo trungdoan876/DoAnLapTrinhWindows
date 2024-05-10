@@ -27,7 +27,7 @@ namespace DoANLapTrinhWin.ClassDAO
         }
         public void CapNhatTanSuatTruyCap(TanSuatTruyCap ts)
         {
-            string sqlStr = string.Format("UPDATE TanSuatTruyCap SET TanSuatTruyCap = '{0}' WHERE MaNguoiMua = '{1}' and NganhHang = N'{2}' ", ts.TanSuat, ts.MaNM, ts.NganhHang);
+            string sqlStr = string.Format("UPDATE TanSuatTruyCap SET TanSuatTruyCap = '{0}' WHERE MaNguoiMua = '{1}' and NganhHang = N'{2}' ", ts.TanSuat+1, ts.MaNM, ts.NganhHang);
             tt.ThucThiKhong(sqlStr);
         }
     }
