@@ -32,13 +32,7 @@ namespace DoANLapTrinhWin
             int y = 0;
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-                DonHang dh = new DonHang
-                (
-                    row[0].ToString(),
-                    row[1].ToString(),
-                    (DateTime)row[2],
-                    row[3].ToString()
-                );
+                DonHang dh = new DonHang(row);
                 SanPham sp = new SanPham
                 (
                     row[4].ToString(),
@@ -59,13 +53,7 @@ namespace DoANLapTrinhWin
             int y = 0;
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-                DonHang dh = new DonHang
-                (
-                    row[0].ToString(),
-                    row[1].ToString(),
-                    (DateTime)row[2],
-                    row[3].ToString()
-                );
+                DonHang dh = new DonHang(row);
                 SanPham sp = new SanPham
                 (
                     row[4].ToString(),

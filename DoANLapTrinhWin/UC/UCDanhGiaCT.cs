@@ -15,10 +15,6 @@ namespace DoANLapTrinhWin
 {
     public partial class UCDanhGiaCT : UserControl
     {
-        string ten, nx;
-        string sao;
-        byte[] hinh;
-        string masp;
         NguoiMua ngmua;
         DanhGia dg;
         DanhGiaDAO dgdao = new DanhGiaDAO();
@@ -27,11 +23,6 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.ngmua = ng;
-            this.ten = ng.Ten1;
-            this.nx = dg.NhanXet;
-            this.sao = dg.Sao;
-            this.hinh = ng.Hinh;
-            this.masp = dg.MaSP;
             this.picHinhNM.Image = Global.ByteArrayToImage(ng.Hinh);
             this.lblnhanxet.Text = dg.NhanXet;
             this.lblTenNM.Text = ng.Ten1;
@@ -46,7 +37,7 @@ namespace DoANLapTrinhWin
             dt = dgdao.LayHinhAnhTheoMaSPvaMaNM(ng,dg);
             foreach (DataRow row in dt.Tables[0].Rows)
             {
-                byte[] imageBytes = (byte[])row["Hinh"];
+                byte[] imageBytes = (byte[])row[0];
                 using (MemoryStream mss = new MemoryStream(imageBytes))
                 {
                     Image image = Image.FromStream(mss);

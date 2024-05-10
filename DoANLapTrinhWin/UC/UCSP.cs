@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DoANLapTrinhWin.Class;
+using DoANLapTrinhWin.ClassDAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +23,7 @@ namespace DoANLapTrinhWin
         NguoiMua ngmua;
         YeuThichDAO ytdao = new YeuThichDAO();
         SanPhamDAO spdao = new SanPhamDAO();
+        TanSuatTruyCapDAO tsdao = new TanSuatTruyCapDAO();
         public UCSP()
         {
                InitializeComponent();
@@ -41,7 +44,7 @@ namespace DoANLapTrinhWin
         private void UCSP_Click(object sender, EventArgs e)
         {
             //cập nhật tần suất truy cập vào sản phẩm của người mua
-            TanSuatTruyCap();
+            DuLieuTanSuatTruyCap();
             this.Hide(); //an form 1
             FCTSP formCTSP = new FCTSP(sp,picClick,ngmua);
             formCTSP.ShowDialog();
@@ -66,7 +69,7 @@ namespace DoANLapTrinhWin
                 ytdao.ThemYeuThich(yt);
             }
         }
-        private void TanSuatTruyCap()
+        private void DuLieuTanSuatTruyCap()
         {
             DataTable dt = spdao.LayNganhHangTheoMaSanPham(sp.MaSP);
             string nganhHang = "";
@@ -75,7 +78,8 @@ namespace DoANLapTrinhWin
                 nganhHang = row[0].ToString();
             }
             int tanSuat;
-            DataTable dta = spdao.TanSuatTruyCap(ngmua.Ma,nganhHang);
+            TanSuatTruyCap ts = new TanSuatTruyCap(ngmua.Ma,sp.NganhHang);
+            DataTable dta = tsdao.TanSuatTruyCap(ts);
             if (dta.Rows.Count > 0)
             {
                 // Đọc hàng đầu tiên 
@@ -85,14 +89,15 @@ namespace DoANLapTrinhWin
             {
                 tanSuat = 0;
             }
+            TanSuatTruyCap tstc = new TanSuatTruyCap(ngmua.Ma, tanSuat, nganhHang);
             if (tanSuat == 0)
             {
-                spdao.ThemTanSuatTruyCapCuaSanPham(ngmua.Ma,tanSuat,nganhHang);
+                tsdao.ThemTanSuatTruyCapCuaSanPham(tstc);
             }
             else //nếu đã có, cập nhật tuần suất lên 1
             {
                 tanSuat += 1;
-                spdao.CapNhatTanSuatTruyCap(ngmua.Ma, tanSuat, nganhHang);
+                tsdao.CapNhatTanSuatTruyCap(tstc);
             }
         }
         private void picHeart_Click(object sender, EventArgs e)

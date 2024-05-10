@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,20 +11,21 @@ namespace DoANLapTrinhWin
 {
     public class SanPham
     {
+        private byte[] hinh;
         private string maSP;
         private string tenSP;
         private string giaBan;
         private string giaGoc;
         private string xuatXu;
-        private string soLuong; //so luong co san
 	    private string thoiGianDaSuDung;
         private DateTime ngayDang;
         private string moTaSanPham;
         private string nganhHang;
         private string tinhTrang;
+        private string dangBan;
         private string maNguoiBan;
         private string diaChi;
-        private byte[] hinh;
+        private string soLuong; //so luong co san
 
         public SanPham(string maSP) //để xóa sản phẩm 
         {
@@ -48,24 +50,17 @@ namespace DoANLapTrinhWin
             this.soLuong = soLuong;
             this.hinh = hinh;
         }
-        public SanPham(string tenSP, string giaTien, string soLuong, byte[] hinh)
-        {
-            this.tenSP = tenSP;
-            this.giaBan = giaTien;
-            this.soLuong = soLuong;
-            this.hinh = hinh;
-        }
-        public SanPham(string maNB, string maSP, string tenSP, string giaBan,byte[] hinh,string soLuong) // dung cho dat hang
+        public SanPham(string maNB, string maSP, string tenSP, string giaBan, byte[] hinh, string soLuong) // dung cho dat hang
         {
             this.maNguoiBan = maNB;
             this.MaSP = maSP;
             this.tenSP = tenSP;
             this.giaBan = giaBan;
-            this.hinh= hinh;
+            this.hinh = hinh;
             this.soLuong = soLuong;
         }
-        
-        public SanPham(string tenSP, string giaBan, string giaGoc, string tinhTrang,string maSP,string soLuong,byte[] hinh, string diaChi) //khoi tao dung cho FGioHang
+
+        public SanPham(string tenSP, string giaBan, string giaGoc, string tinhTrang, string maSP, string soLuong, byte[] hinh, string diaChi) //khoi tao dung cho FGioHang
         {
             this.tenSP = tenSP;
             this.giaBan = giaBan;
@@ -76,17 +71,8 @@ namespace DoANLapTrinhWin
             this.hinh = hinh;
             this.diaChi = diaChi;
         }
-        public SanPham(string maSP,string tenSP, string giaBan,string giaGoc,string diaChi, byte[] hinh) //khoi tao dung  cho FYeuThich
-        {
-            this.maSP= maSP;
-            this.tenSP = tenSP;
-            this.giaBan = giaBan;
-            this.diaChi = diaChi;
-            this.giaGoc = giaGoc;
-            this.hinh = hinh;
-        }
-        public SanPham(string maSP, string tenSP, string giaBan, string giaGoc, string xuatXu, string thoiGianDaSuDung,DateTime ngayDang, string moTaSanPham,
-            string nganhHang, string tinhTrang, string diaChi, string maNguoiBan, string soLuong,byte[]hinh) //data row
+        public SanPham(string maSP, string tenSP, string giaBan, string giaGoc, string xuatXu, string thoiGianDaSuDung, DateTime ngayDang, string moTaSanPham,
+            string nganhHang, string tinhTrang, string diaChi, string maNguoiBan, string soLuong, byte[] hinh) //data row
         {
             this.maSP = maSP;
             this.tenSP = tenSP;
@@ -103,15 +89,23 @@ namespace DoANLapTrinhWin
             this.soLuong = soLuong;
             this.hinh = hinh;
         }
-        public bool kiemTraNull()
+        public SanPham(DataRow r) //data row
         {
-            if (this.tenSP == "" || this.giaBan =="" || this.giaGoc == ""|| this.xuatXu==""||this.thoiGianDaSuDung==""
-                ||this.moTaSanPham==""||this.nganhHang==""||this.tinhTrang==""||this.diaChi==""||this.hinh==null)
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin và hình ảnh!");
-                return false;
-            }
-            return true;
+            this.hinh = (byte[])r[0];
+            this.maSP = r[1].ToString();
+            this.tenSP = r[2].ToString();
+            this.giaBan = r[3].ToString();
+            this.giaGoc = r[4].ToString();
+            this.xuatXu = r[5].ToString();
+            this.thoiGianDaSuDung = r[6].ToString();
+            this.ngayDang = (DateTime)r[7];
+            this.moTaSanPham = r[8].ToString();
+            this.nganhHang = r[9].ToString();
+            this.tinhTrang = r[10].ToString();
+            this.dangBan = r[11].ToString();
+            this.maNguoiBan = r[12].ToString();
+            this.diaChi = r[13].ToString();
+            this.soLuong = r[14].ToString();
         }
         public string SoLuong { get => soLuong; set => soLuong = value; }
         public string MaSP { get => maSP; set => maSP = value; }
@@ -127,5 +121,6 @@ namespace DoANLapTrinhWin
         public string MaNguoiBan { get => maNguoiBan; set => maNguoiBan = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public byte[] Hinh { get => hinh; set => hinh = value; }
+        public string DangBan { get => dangBan; set => dangBan = value; }
     }
 }

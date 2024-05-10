@@ -27,8 +27,12 @@ namespace DoANLapTrinhWin
             dt = dhDao.CapNhatGHThanhCongNB(ngban); //them manb de hien len theo manb
             foreach (DataRow row in dt.Tables[0].Rows)
             {
-                DonHang dh = new DonHang(row[0].ToString(), row[1].ToString(), (DateTime)row[2], row[3].ToString());
-                SanPham sp = new SanPham(row[4].ToString(), (byte[])row[5]);
+                DonHang dh = new DonHang(row);
+                SanPham sp = new SanPham
+                (
+                    row[4].ToString(),
+                    (byte[])row[5]
+                );
 
                 UCDonHangNB uc = new UCDonHangNB(dh, sp);
 

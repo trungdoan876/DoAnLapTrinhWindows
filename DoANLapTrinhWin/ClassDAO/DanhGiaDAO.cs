@@ -22,7 +22,7 @@ namespace DoANLapTrinhWin.Class
         }
         public DataSet LayHinhAnhTheoMaSPvaMaNM(NguoiMua ng, DanhGia dg)
         {
-            string sqlStr = "SELECT Hinh FROM HinhDanhGia WHERE MaSanPham = @id AND MaNguoiMua = @ngmua AND NgayDanhGia=@ngaydg";
+            string sqlStr = "SELECT Hinh FROM HinhDanhGia WHERE MaSanPham = @id AND MaNguoiMua = @ngmua AND NgayDanhGia = @ngaydg";
             DataSet ds = tt.LoadHinh(sqlStr, new SqlParameter("@id", dg.MaSP), new SqlParameter("@ngmua", ng.Ma), new SqlParameter("@ngaydg", dg.Ngaydg));
             return ds;
         }

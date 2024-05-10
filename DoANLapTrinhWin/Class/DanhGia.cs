@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,13 +18,20 @@ namespace DoANLapTrinhWin.Class
         private DateTime ngaydg;
         private byte[] hinh;
         //FCTSP
-        public DanhGia(string nhanxet, string sao, DateTime ngaydg, string masp)
-        {
-            this.nhanXet = nhanxet;
-            this.sao = sao;
-            this.ngaydg = ngaydg;
-            this.maSP = masp;
-        }
+        /*        public DanhGia(string nhanxet, string sao, DateTime ngaydg, string masp)
+                {
+                    this.nhanXet = nhanxet;
+                    this.sao = sao;
+                    this.ngaydg = ngaydg;
+                    this.maSP = masp;
+                }*/
+         public DanhGia(DataRow row)
+         {
+                    this.nhanXet = row[3].ToString();
+                    this.sao = row[4].ToString();
+                    this.ngaydg = (DateTime)row[5];
+                    this.maSP = row[6].ToString();
+         }
         //FDanhGia
         public DanhGia(string maNM, string maSP, string sao, string saoNB, string saoGiaoHang, string nhanXet, DateTime ngaydg)
         {

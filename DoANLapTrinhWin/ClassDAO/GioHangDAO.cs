@@ -67,10 +67,5 @@ namespace DoANLapTrinhWin
             dt = tt.Load(sqlStr);
             return dt;
         }
-        public void CapNhatGioHang()
-        {
-            string sqlStr = string.Format("UPDATE GioHang SET TrangThaiSP = '{0}'", 0);
-            tt.ThucThiKhong(sqlStr);
-        }
     }
 }

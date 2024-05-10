@@ -129,7 +129,7 @@ namespace DoANLapTrinhWin
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                 NguoiMua ngmua = new NguoiMua((byte[])row[0], row[1].ToString(), row[2].ToString());
-                DanhGia dg = new DanhGia(row[3].ToString(), row[4].ToString(), (DateTime)row[5], row[6].ToString());
+                DanhGia dg = new DanhGia(row);
                 UCDanhGiaCT uc = new UCDanhGiaCT(ngmua, dg);
                 fpanelDanhGia.Controls.Add(uc);
             }

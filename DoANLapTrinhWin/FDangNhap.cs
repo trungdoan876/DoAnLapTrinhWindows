@@ -17,8 +17,8 @@ namespace DoANLapTrinhWin
 {
     public partial class FDangNhap : Form
     {
-        private Guna2GradientButton btnOK;
         private string selctecOption = null;
+        Global gl = new Global();
         NguoiBanDAO ngbandao = new NguoiBanDAO();
         NguoiMuaDAO ngmuadao = new NguoiMuaDAO();
         
@@ -29,21 +29,6 @@ namespace DoANLapTrinhWin
             btnBanHang.FillColor = Color.DeepSkyBlue;
             btnBanHang.FillColor2 = Color.Violet;
         }
-        private void TaoButton(object button)
-        {
-            var btn = (Guna2GradientButton)button;
-
-            btn.FillColor = Color.DeepSkyBlue;
-            btn.FillColor2 = Color.Violet;
-
-            if (btnOK != null && btnOK != btn)
-            {
-                btnOK.FillColor = Color.FromArgb(255, 128, 128);
-                btnOK.FillColor2 = Color.Gray;
-            }
-
-            btnOK = btn;
-        }
         private void btnThoat_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
@@ -51,7 +36,7 @@ namespace DoANLapTrinhWin
 
         private void btnBanHang_Click(object sender, EventArgs e)
         {
-            TaoButton(btnBanHang);
+            Global.TaoButtonDangNhap(btnBanHang,ref gl.btncheck);
             selctecOption = "Bán hàng";
             btnBanHang.FillColor = Color.DeepSkyBlue;
             btnBanHang.FillColor2 = Color.Violet;
@@ -59,7 +44,7 @@ namespace DoANLapTrinhWin
 
         private void btnMuaHang_Click_1(object sender, EventArgs e)
         {
-            TaoButton(sender);
+            Global.TaoButtonDangNhap(btnMuaHang,ref gl.btncheck);
             selctecOption = "Mua hàng";
             btnMuaHang.FillColor = Color.DeepSkyBlue;
             btnMuaHang.FillColor2 = Color.Violet;

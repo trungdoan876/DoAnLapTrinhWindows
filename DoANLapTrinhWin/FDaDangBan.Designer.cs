@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelDangBan = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelDangBan = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // panelDangBan
             // 
-            this.panelDangBan.BackColor = System.Drawing.Color.White;
+            this.panelDangBan.AutoScroll = true;
+            this.panelDangBan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelDangBan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDangBan.Location = new System.Drawing.Point(0, 0);
             this.panelDangBan.Name = "panelDangBan";
@@ -55,6 +56,6 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel panelDangBan;
+        private System.Windows.Forms.Panel panelDangBan;
     }
 }

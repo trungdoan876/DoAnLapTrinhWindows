@@ -81,7 +81,6 @@ namespace DoANLapTrinhWin
                 spgh.soluongmuaGH.Value = int.Parse(soLuongMua); //số lượng thêm vào giỏ
                 lblTongTien.Text = "đ"+ThanhTien(spgh.lblTrangThai.Text, spgh.lblGiaTien.Text, int.Parse(soLuongMua))+".000";
             }
-            //ghdao.CapNhatGioHang();
         }
         public string ThanhTien(string TrangThai,string giaTien,int soluongmua)
         {

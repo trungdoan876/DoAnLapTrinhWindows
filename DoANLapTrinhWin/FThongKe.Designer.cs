@@ -386,9 +386,9 @@
             lPoint7.Label = "T2";
             lPoint7.Y = 0D;
             lPoint8.Label = "T3";
-            lPoint8.Y = 0D;
+            lPoint8.Y = 10D;
             lPoint9.Label = "T4";
-            lPoint9.Y = 0D;
+            lPoint9.Y = 4D;
             lPoint10.Label = "T5";
             lPoint10.Y = 0D;
             lPoint11.Label = "T6";

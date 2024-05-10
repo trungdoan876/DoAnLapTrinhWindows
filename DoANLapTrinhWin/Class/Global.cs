@@ -49,6 +49,23 @@ namespace DoANLapTrinhWin
             }
             btnOK = btn;
         }
+        public Guna2GradientButton btncheck;
+        //tạo button đăng nhập
+        public static void TaoButtonDangNhap(object button, ref Guna2GradientButton btncheck)
+        {
+            var btn = (Guna2GradientButton)button;
+
+            btn.FillColor = Color.DeepSkyBlue;
+            btn.FillColor2 = Color.Violet;
+
+            if (btncheck != null && btncheck != btn)
+            {
+                btncheck.FillColor = Color.FromArgb(255, 128, 128);
+                btncheck.FillColor2 = Color.Gray;
+            }
+
+            btncheck = btn;
+        }
         //chuyển từ Hình sang Byte
         public static byte[] ImageToByteArray(Image img)
         {

@@ -22,7 +22,6 @@ namespace DoANLapTrinhWin
             this.sp = sp;
             this.lblMaDH.Text = dh.MaDonHang.ToString();
             this.lblTenSP.Text = sp.TenSP.ToString();
-            //this.lblNgayDatHang.Text = dh.NgayDatHang.ToString();
             this.lblTongTien.Text = dh.TongTien.ToString();
             this.lblTrangThai.Text = dh.TrangThaiDonHangNM.ToString();
             this.pictureBox1.Image = Global.ByteArrayToImage(sp.Hinh);

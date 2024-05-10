@@ -34,14 +34,7 @@ namespace DoANLapTrinhWin
             DataSet dt = ctdhDao.HienChiTietDonHang(ctdh);
             foreach (DataRow row in dt.Tables[0].Rows)
             {
-                ChiTietDonHang ct = new ChiTietDonHang(
-                    row[0].ToString(),
-                    row[3].ToString(),
-                    row[4].ToString(),
-                    row[2].ToString(),
-                    (byte[])row[5]
-                    );
-
+                ChiTietDonHang ct = new ChiTietDonHang(row);
                 UCDatHang uc = new UCDatHang(ct);
                 uc.Location = new Point(0, y);
                 y += uc.Height += 10;

@@ -20,11 +20,12 @@ namespace DoANLapTrinhWin
         public FSPNB()
         {
             InitializeComponent();
+            this.Size = new Size(1250, 700);
         }
         public FSPNB(SanPham sp, NguoiBan ngBan,NguoiMua ngMua)
         {
             InitializeComponent();
-            this.Size = new Size(1200, 600);
+            this.Size = new Size(1250, 700);
             this.sp = sp;
             this.ngban = ngBan;
             this.ngmua = ngMua;
@@ -40,28 +41,12 @@ namespace DoANLapTrinhWin
             int y = 0;
             foreach (DataRow row in dt.Tables[0].Rows)
             {
-                SanPham sp = new SanPham
-                (
-                    row[1].ToString(),
-                    row[2].ToString(),
-                    "đ" + row[3].ToString(),
-                    "đ" + row[4].ToString(),
-                    row[5].ToString(),
-                    row[6].ToString(),
-                    (DateTime)row[7],
-                    row[8].ToString(),
-                    row[9].ToString(),
-                    row[10].ToString(),
-                    row[13].ToString(),
-                    row[12].ToString(),
-                    row[14].ToString(),
-                    (byte[])row[0]
-                );
+                SanPham sp = new SanPham(row);
                 UCSP ucSP = new UCSP(sp,ngmua); //sao truyền manb dô đây z 
                 //vi tri moi uc
                 ucSP.Location = new Point(x, y);
                 x += ucSP.Width + 5;
-                if (x == ucSP.Width * 4)
+                if (x + ucSP.Width > panelSPNB.Width)
                 {
                     x = 0;
                     y += ucSP.Height + 5;

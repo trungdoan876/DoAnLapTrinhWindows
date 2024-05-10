@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,21 +11,21 @@ namespace DoANLapTrinhWin.Class
     {
         private string maDonHang;
         private string maSP;
+        private string tenSP;
         private string soLuong; //so luong mà người mua mua
         private string giaTien; //gia tien 1 san pham
-        private string tenSP;
         private byte[] hinh;
         public ChiTietDonHang(string maDonHang)
         {
             this.maDonHang = maDonHang;
         }
-        public ChiTietDonHang(string maDonHang,string soLuong, string giaTien, string tenSP, byte[] hinh)
+        public ChiTietDonHang(DataRow r)
         {
-            this.MaDonHang = maDonHang;
-            this.SoLuong = soLuong;
-            this.GiaTien = giaTien;
-            this.tenSP = tenSP;
-            this.hinh = hinh;
+            this.MaDonHang = r[0].ToString();
+            this.tenSP = r[2].ToString();
+            this.SoLuong = r[3].ToString();
+            this.GiaTien = r[4].ToString();
+            this.hinh = (byte[])r[5];
         }
         public ChiTietDonHang(string maDonHang, string maSP, string soLuong, string giaTien, string tenSP, byte[] hinh)
         {

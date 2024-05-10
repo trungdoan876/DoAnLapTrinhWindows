@@ -126,7 +126,7 @@
             this.Controls.Add(this.lblGiaTien);
             this.Controls.Add(this.lblTenSP);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(20);
             this.Name = "UCSPDangBan";
             this.Size = new System.Drawing.Size(266, 335);
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).EndInit();

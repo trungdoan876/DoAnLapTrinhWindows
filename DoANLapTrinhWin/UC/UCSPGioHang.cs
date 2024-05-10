@@ -21,7 +21,7 @@ namespace DoANLapTrinhWin
         string check;
         NguoiMua ngmua;
         GioHangDAO ghDAO = new GioHangDAO();
-        public UCSPGioHang(SanPham sanpham,NguoiMua ngmua,string check)
+        public UCSPGioHang(SanPham sanpham, NguoiMua ngmua, string check)
         {
             InitializeComponent();
             this.sp = sanpham;
@@ -35,7 +35,6 @@ namespace DoANLapTrinhWin
             this.lblDiaChi.Text = sp.DiaChi;
             this.vongtrontt.Value = TinhTinhTrang();
             this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
-            //loadtinhtrang();
         }
         public int TinhTinhTrang()
         {

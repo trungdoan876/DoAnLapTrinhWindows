@@ -31,23 +31,7 @@ namespace DoANLapTrinhWin
             int ucCount = 0; // Đếm số lượng UC đã thêm vào hàng hiện tại
             foreach (DataRow row in dt.Tables[0].Rows)
             {
-                SanPham sp = new SanPham
-                (
-                    row[1].ToString(),
-                    row[2].ToString(),
-                    row[3].ToString(),
-                    row[4].ToString(),
-                    row[5].ToString(),
-                    row[6].ToString(),
-                    (DateTime)row[7],
-                    row[8].ToString(),
-                    row[9].ToString(),
-                    row[10].ToString(),
-                    row[11].ToString(),
-                    row[12].ToString(),
-                    row[13].ToString(),
-                    (byte[])row[0]
-                );
+                SanPham sp = new SanPham(row);
                 UCSPBan ucSPBan = new UCSPBan(sp);
                 ucCount++;
                 ucSPBan.Location = new Point(x, y);

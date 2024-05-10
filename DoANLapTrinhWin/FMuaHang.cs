@@ -38,23 +38,7 @@ namespace DoANLapTrinhWin
             int ucCount = 0; // Đếm số lượng UC đã thêm vào hàng hiện tại
             foreach (DataRow row in dt.Tables[0].Rows)
             {
-                SanPham sp = new SanPham
-                (
-                    row[1].ToString(),
-                    row[2].ToString(),
-                    "đ" + row[3].ToString(),
-                    "đ" + row[4].ToString(),
-                    row[5].ToString(),
-                    row[6].ToString(),
-                    (DateTime)row[7],
-                    row[8].ToString(),
-                    row[9].ToString(),
-                    row[10].ToString(),
-                    row[13].ToString(),
-                    row[12].ToString(),
-                    row[14].ToString(),
-                    (byte[])row[0]
-                );
+                SanPham sp = new SanPham(row);
                 UCSP ucSP = new UCSP(sp,ngmua);
                 //vi tri moi uc
                 ucSP.Location = new Point(x, y);
@@ -78,23 +62,7 @@ namespace DoANLapTrinhWin
             panelMuaHang.Controls.Clear();
             foreach (DataRow row in dt.Tables[0].Rows)
             {
-                SanPham sp = new SanPham
-                (
-                    row[1].ToString(),
-                    row[2].ToString(),
-                    row[3].ToString(),
-                    row[4].ToString(),
-                    row[5].ToString(),
-                    row[6].ToString(),
-                    (DateTime)row[7],
-                    row[8].ToString(),
-                    row[9].ToString(),
-                    row[10].ToString(),
-                    row[13].ToString(),
-                    row[12].ToString(),
-                    row[14].ToString(),
-                    (byte[])row[0]
-                );
+                SanPham sp = new SanPham(row);
                 UCSP ucSP = new UCSP(sp, ngmua);
                 //vi tri moi uc
                 ucSP.Location = new Point(x, y);
@@ -115,23 +83,7 @@ namespace DoANLapTrinhWin
             panelMuaHang.Controls.Clear();
             foreach (DataRow row in dt.Tables[0].Rows)
             {
-                SanPham sp = new SanPham
-                (
-                    row[1].ToString(),
-                    row[2].ToString(),
-                    row[3].ToString(),
-                    row[4].ToString(),
-                    row[5].ToString(),
-                    row[6].ToString(),
-                    (DateTime)row[7],
-                    row[8].ToString(),
-                    row[9].ToString(),
-                    row[10].ToString(),
-                    row[13].ToString(),
-                    row[12].ToString(),
-                    row[14].ToString(),
-                    (byte[])row[0]
-                );
+                SanPham sp = new SanPham(row);
                 UCSP ucSP = new UCSP(sp, ngmua);
                 //vi tri moi uc
                 ucSP.Location = new Point(x, y);
@@ -222,54 +174,6 @@ namespace DoANLapTrinhWin
         private void txtTimKiem_IconRightClick(object sender, EventArgs e)
         {
             LoadTimKiem(txtTimKiem.Text.Trim());
-            TanSuatTimKiem();
-        }
-        private void TanSuatTimKiem()
-        {
-            DataTable dt = spdao.LayNganhHang(txtTimKiem.Text.Trim());
-            string nganhHang = "";
-            foreach (DataRow row in dt.Rows)
-            {
-                nganhHang = row[0].ToString();
-            }
-            int tanSuat;
-            DataTable dta = spdao.TanSuatTimKiem(nganhHang, ngmua.Ma);
-            if (dta.Rows.Count > 0)
-            {
-                // Đọc hàng đầu tiên 
-                tanSuat = Convert.ToInt32(dta.Rows[0][0]); // +1; //dta.Rows[0][0] là giá trị của cột đầu tiên của hàng đó.
-            }
-            else
-            {
-                tanSuat = 0;
-            }
-            if (tanSuat == 0)
-            {
-                spdao.ThemTanSuatVaoTimKiem(ngmua, nganhHang);
-            }
-            else //nếu đã có, cập nhật tuần suất lên 1
-            {
-                spdao.CapNhatTanSuatTimKiem(ngmua, nganhHang, tanSuat);
-            }
-        }
-        private void panelChiTiet_MouseMove_1(object sender, MouseEventArgs e)
-        {
-            //panelThongTin.Show();
-        }
-
-        private void panelThongTin_MouseMove(object sender, MouseEventArgs e)
-        {
-            //panelThongTin.Show();
-        }
-
-        private void panelThongTin_MouseLeave(object sender, EventArgs e)
-        {
-            //panelThongTin.Hide();
-        }
-
-        private void panelThongTin_MouseDown(object sender, MouseEventArgs e)
-        {
-            //panelThongTin.Hide();
         }
     }
 }

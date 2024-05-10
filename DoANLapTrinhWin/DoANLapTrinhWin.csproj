@@ -92,12 +92,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassDAO\HinhDanhGiaDAO.cs" />
+    <Compile Include="ClassDAO\TanSuatTruyCapDAO.cs" />
     <Compile Include="ClassDAO\ThongKeDAO.cs" />
     <Compile Include="Class\ChiTietDonHang.cs" />
     <Compile Include="ClassDAO\ChiTietDonHangDAO.cs" />
     <Compile Include="Class\DanhGia.cs" />
     <Compile Include="ClassDAO\DanhGiaDAO.cs" />
     <Compile Include="Class\HinhDanhGia.cs" />
+    <Compile Include="Class\TanSuatTruyCap.cs" />
     <Compile Include="Class\ThongKe.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Class\DonHang.cs" />
@@ -167,12 +169,6 @@
     </Compile>
     <Compile Include="FDonHangNguoiMua.Designer.cs">
       <DependentUpon>FDonHangNguoiMua.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FLoadingGH.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FLoadingGH.Designer.cs">
-      <DependentUpon>FLoadingGH.cs</DependentUpon>
     </Compile>
     <Compile Include="FLoadingGiaoHang.cs">
       <SubType>Form</SubType>
@@ -443,9 +439,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FGioHang.resx">
       <DependentUpon>FGioHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FLoadingGH.resx">
-      <DependentUpon>FLoadingGH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLoadingGiaoHang.resx">
       <DependentUpon>FLoadingGiaoHang.cs</DependentUpon>

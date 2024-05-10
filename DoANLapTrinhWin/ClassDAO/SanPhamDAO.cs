@@ -14,7 +14,7 @@ using static TheArtOfDevHtmlRenderer.Adapters.RGraphicsPath;
 
 namespace DoANLapTrinhWin
 {
-    internal class SanPhamDAO
+    public class SanPhamDAO
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         DBConnection tt = new DBConnection();
@@ -109,13 +109,9 @@ namespace DoANLapTrinhWin
         //hiện lên FMuaHang
         public DataSet TatCaSanPham()
         {
-            //load form theo tần suất tìm kiếm của người mua
-            /*string sqlStr = string.Format("select * from SanPham left join TimKiem on SanPham.NganhHang Like TimKiem.NganhHang "
-                + "where DangBan = '{0}' order by TanSuatTimKiem desc", 1);*/
             //load form theo tần suất bấm vào sản phẩm của người mua và load ra danh sách các sản phẩm có cùng ngành hàng đó
-            string sqlStr = string.Format(" select * from SanPham  left join (select max(TanSuatTruyCap) as Max, NganhHang " +
+            string sqlStr = string.Format("select * from SanPham  left join (select max(TanSuatTruyCap) as Max, NganhHang " +
                 "FROM TanSuatTruyCap GROUP BY NganhHang) Q ON SanPham.NganhHang = Q.NganhHang Where DangBan ='{0}' order by Q.Max desc",1);
-            //string sqlStr = string.Format("SELECT* FROM SanPham WHERE DangBan = '{0}'", 1);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
@@ -144,10 +140,9 @@ namespace DoANLapTrinhWin
 
         public DataSet SanPhamYeuThich(string maNM)
         {
-            string sqlStr = string.Format("select SanPham.Hinh,YeuThich.MaSanPham ,SanPham.TenSanPham,SanPham.GiaBan,SanPham.GiaGoc,SanPham.XuatXu,SanPham.TGDSD, " +
-                "SanPham.NgayDang, SanPham.MoTaSanPham, SanPham.NganhHang, SanPham.TinhTrang, SanPham.DiaChi, SanPham.MaNguoiBan, SanPham.SoLuong " +
-                "From YeuThich, SanPham " +
-                "WHERE YeuThich.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'", maNM);
+            string sqlStr = string.Format("select SanPham.Hinh, YeuThich.MaSanPham, SanPham.TenSanPham, SanPham.GiaBan, SanPham.GiaGoc, SanPham.XuatXu, SanPham.TGDSD, " +
+                    " SanPham.NgayDang, SanPham.MoTaSanPham, SanPham.NganhHang, SanPham.TinhTrang, SanPham.DangBan, SanPham.MaNguoiBan, SanPham.DiaChi, SanPham.SoLuong " +
+                    " From YeuThich, SanPham WHERE YeuThich.MaSanPham = SanPham.MaSanPham and MaNguoiMua = '{0}'", maNM);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
@@ -168,49 +163,8 @@ namespace DoANLapTrinhWin
             dt = tt.Load(sql);
             return dt;
         }
-        //đọc dữ liệu để lấy ngành hàng theo tên
-        public DataTable LayNganhHang(string nganhHang)
-        {
-            string sql = string.Format("select distinct NganhHang From SanPham where TenSanPham LIKE N'%{0}%'", nganhHang);
-            DataTable dt = new DataTable();
-            dt = tt.DocDuLieu(sql);
-            return dt;
-        }
-        public DataTable TanSuatTimKiem(string nganhHang, string maNM)
-        {
-            string sql1 = string.Format("Select TanSuatTimKiem From TimKiem where NganhHang like N'{0}' and MaNguoiMua ='{1}'", nganhHang, maNM);
-            DataTable dt = new DataTable();
-            dt = tt.DocDuLieu(sql1);
-            return dt;
-        }
-        public void ThemTanSuatVaoTimKiem(NguoiMua ngmua, string nganhHang)
-        {
-            string sqlStr = string.Format("INSERT INTO TimKiem (MaNguoiMua,TanSuatTimKiem,NganhHang) VALUES ('{0}','{1}',N'{2}')", ngmua.Ma, 1, nganhHang);
-            tt.ThucThiKhong(sqlStr);
-        }
-        public void CapNhatTanSuatTimKiem(NguoiMua ngmua, string nganhHang, int tanSuat)
-        {
-            string sqlStr = string.Format("UPDATE TimKiem SET TanSuatTimKiem ='{0}' WHERE MaNguoiMua ='{1}'and NganhHang =N'{2}'", tanSuat + 1, ngmua.Ma, nganhHang);
-            tt.ThucThiKhong(sqlStr);
-        }
         //tần suất truy cập vào sản phẩm của người mua
-        public DataTable TanSuatTruyCap(string maNM, string nganhHang)
-        {
-            string sql1 = string.Format("Select TanSuatTruyCap From TanSuatTruyCap where NganhHang = N'{0}' and MaNguoiMua = '{1}' ", nganhHang, maNM);
-            DataTable dt = new DataTable();
-            dt = tt.DocDuLieu(sql1);
-            return dt;
-        }
-        public void ThemTanSuatTruyCapCuaSanPham(string maNM, int tanSuat, string nganhHang)
-        {
-            string sqlStr = string.Format("INSERT INTO TanSuatTruyCap (MaNguoiMua,TanSuatTruyCap,NganhHang) VALUES ('{0}','{1}',N'{2}')", maNM, 1, nganhHang);
-            tt.ThucThiKhong(sqlStr);
-        }
-        public void CapNhatTanSuatTruyCap(string maNM, int tanSuat, string nganhHang)
-        {
-            string sqlStr = string.Format("UPDATE TanSuatTruyCap SET TanSuatTruyCap = '{0}' WHERE MaNguoiMua = '{1}' and NganhHang = N'{2}' ", tanSuat, maNM, nganhHang);
-            tt.ThucThiKhong(sqlStr);
-        }
+        
         public DataTable LayNganhHangTheoMaSanPham(string MaSanPham)
         {
             string sql = string.Format("select NganhHang From SanPham where MaSanPham='{0}'", MaSanPham);

@@ -52,23 +52,7 @@ namespace DoANLapTrinhWin
             fpanelSPChungNH.AutoScroll = true;
             foreach (DataRow row in dt.Tables[0].Rows)
             {
-                SanPham sp = new SanPham
-                (
-                    row[1].ToString(),
-                    row[2].ToString(),
-                    "đ" + row[3].ToString(),
-                    "đ" + row[4].ToString(),
-                    row[5].ToString(),
-                    row[6].ToString(),
-                    (DateTime)row[7],
-                    row[8].ToString(),
-                    row[9].ToString(),
-                    row[10].ToString(),
-                    row[13].ToString(),
-                    row[12].ToString(),
-                    row[14].ToString(),
-                    (byte[])row[0]
-                );
+                SanPham sp = new SanPham(row);
                 UCSP ucSP = new UCSP(sp, ngmua);
                 fpanelSPChungNH.Controls.Add(ucSP);
             }
@@ -91,7 +75,7 @@ namespace DoANLapTrinhWin
             this.lblSoLuong.Text = sp.SoLuong + " sản phẩm sẵn có";
             this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
         }
-        //private void LoadNB(string mnb) -mnb???
+        //load thông tin người bán
         private void LoadNB()
         {
             DataTable dt = ngbandao.ThongTinNguoiBan(sp.MaNguoiBan);
@@ -127,7 +111,7 @@ namespace DoANLapTrinhWin
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                 NguoiMua ngmua = new NguoiMua((byte[])row[0], row[1].ToString(), row[2].ToString());
-                DanhGia dg = new DanhGia(row[3].ToString(), row[4].ToString(), (DateTime)row[5], row[6].ToString());
+                DanhGia dg = new DanhGia(row);
                 UCDanhGiaCT uc = new UCDanhGiaCT(ngmua,dg);
                 fpanelDanhGia.Controls.Add(uc);
             }

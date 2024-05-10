@@ -400,7 +400,6 @@
             this.panelChiTiet.Name = "panelChiTiet";
             this.panelChiTiet.Size = new System.Drawing.Size(508, 116);
             this.panelChiTiet.TabIndex = 35;
-            this.panelChiTiet.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelChiTiet_MouseMove_1);
             // 
             // panelThongTin
             // 
@@ -410,9 +409,6 @@
             this.panelThongTin.Name = "panelThongTin";
             this.panelThongTin.Size = new System.Drawing.Size(201, 113);
             this.panelThongTin.TabIndex = 37;
-            this.panelThongTin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelThongTin_MouseDown);
-            this.panelThongTin.MouseLeave += new System.EventHandler(this.panelThongTin_MouseLeave);
-            this.panelThongTin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelThongTin_MouseMove);
             // 
             // btnThongTin
             // 

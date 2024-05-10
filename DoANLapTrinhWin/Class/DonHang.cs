@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,13 +20,20 @@ namespace DoANLapTrinhWin
         {
             this.maDonHang = MaDonHang;
         }
-        public DonHang(string MaDonHang, string TongTien, DateTime NgayDatHang, string TrangThaiDonHang)
+        /*public DonHang(string MaDonHang, string TongTien, DateTime NgayDatHang, string TrangThaiDonHang)
         {
             this.maDonHang = MaDonHang;
             this.tongTien = TongTien;
             this.ngayDatHang = NgayDatHang;
             this.trangThaiDonHangNM = TrangThaiDonHang;
-        }
+        }*/
+        public DonHang(DataRow r)
+       {
+           this.maDonHang = r[0].ToString();
+           this.tongTien = r[1].ToString();
+           this.ngayDatHang = (DateTime)r[2];
+           this.trangThaiDonHangNM = r[3].ToString();
+       }
         public DonHang(string MaDonHang, string TongTien, DateTime NgayDatHang, string TrangThaiDonHang, string MaNguoiMua)// khoi tao cho danh gia
         {
             this.maDonHang = MaDonHang;

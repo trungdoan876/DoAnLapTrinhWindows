@@ -26,8 +26,8 @@ namespace DoANLapTrinhWin.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PCHOME-HAINT\\MYHOANG;Initial Catalog=LTW;Integrated Security=True;Enc" +
-            "rypt=True;TrustServerCertificate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-IF0QD89F\\TRUNGDOAN;Initial Catalog=LTW;Integrated Security=Tru" +
+            "e;Encrypt=True;TrustServerCertificate=True")]
         public string connStr {
             get {
                 return ((string)(this["connStr"]));

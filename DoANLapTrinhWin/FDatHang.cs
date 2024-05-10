@@ -20,7 +20,6 @@ namespace DoANLapTrinhWin
     {
         SanPham sp;
         NguoiMua ngmua;
-        string maNB;
         int tongtien;
         string diachi;
         string ten;
@@ -87,30 +86,26 @@ namespace DoANLapTrinhWin
 
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-                maNB = row[5].ToString(); //manb
                 UCTheoNB uc;
-                if (!dictUCTheoNB.ContainsKey(maNB))
+                if (!dictUCTheoNB.ContainsKey(row[5].ToString())) //cột manb
                 {
-                    uc = new UCTheoNB(maNB);
+                    uc = new UCTheoNB(row[5].ToString());
                     uc.Location = new Point(0, yc);
                     yc += uc.Height + 5;
                     paneldathang.Controls.Add(uc);
-                    dictUCTheoNB.Add(maNB, uc); //them 1 uc theo ma nguoi ban
+                    dictUCTheoNB.Add(row[5].ToString(), uc); //them 1 uc theo ma nguoi ban
                 }
                 else
                 {
-                    uc = dictUCTheoNB[maNB];
+                    uc = dictUCTheoNB[row[5].ToString()];
                 }
-                string maSP = row[1].ToString(); //masp
-                string tenSP = row[2].ToString(); //tensp
-                string giaBan = row[3].ToString(); //gia ban
-                string soLuong = row[4].ToString(); //so luong
-                if (row[7] != DBNull.Value)
-                {
-                    hinh = (byte[])row[7];
-                }
-
-                sp = new SanPham(maNB, maSP, tenSP, giaBan, hinh, soLuong);
+                sp = new SanPham(
+                     row[5].ToString(), //manb
+                     row[1].ToString(),//msp
+                     row[2].ToString(),//tensp
+                     row[3].ToString(),//giban
+                     (byte[])row[7],//hinh
+                     row[4].ToString());//soluong
                 listsp.Add(sp);
 
                 //uc thong tin moi san pham
@@ -145,6 +140,7 @@ namespace DoANLapTrinhWin
                 tkDao.CapNhatLuotMua(sanPham.MaSP, soLuot + 1);
             }
         }
+        //thống kê
         private void TinhSoLanBanSanPham(SanPham sanPham)
         {
             DataTable dta = tkDao.LaySoLanBanRaTheoNgay(sanPham.MaNguoiBan);
@@ -189,7 +185,7 @@ namespace DoANLapTrinhWin
             foreach (var i in NhomNguoiBan)
             {
                 string maDonHang = TaoMaDonHang();
-                DonHang dh = new DonHang(maDonHang,i.Key, ngmua.Ma, tongtien.ToString(), ngayhientai,"Đặt hàng thành công","Chuẩn bị hàng");
+                DonHang dh = new DonHang(maDonHang, i.Key, ngmua.Ma, tongtien.ToString(), ngayhientai, "Đặt hàng thành công", "Chuẩn bị hàng");
                 dhDao.TaoDonHang(dh);
                 foreach (var sanPham in i)
                 {
@@ -213,7 +209,6 @@ namespace DoANLapTrinhWin
 
             string giaban = sanPham.GiaBan.Substring(1);
             decimal giatien = decimal.Parse(giaban);
-
             // Tính giá trị tổng tiền
             decimal totalValue = soLuong * giatien;
             return totalValue;
