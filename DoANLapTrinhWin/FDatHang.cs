@@ -67,8 +67,7 @@ namespace DoANLapTrinhWin
         }
         public void ThongTin()
         {
-            DataSet ds = new DataSet();
-            ds = ghDao.LoadThongTinNguoiMuaTrongGioHang(ngmua);
+            DataSet ds = ghDao.LoadThongTinNguoiMuaTrongGioHang(ngmua);
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                 ten = row[2].ToString(); //"ten"
@@ -173,8 +172,9 @@ namespace DoANLapTrinhWin
         {
             if(cmbThanhToan.Text =="Chuyển khoản")
             {
+                string tt = tongtien + ".000";
                 trangthai = "Đã thanh toán";
-                FChuyenKhoan fdh = new FChuyenKhoan(ngmua.Ma, sp, tongtien,ten,diachi);
+                FChuyenKhoan fdh = new FChuyenKhoan(ngmua, sp, int.Parse(tt));
                 fdh.ShowDialog();
             }
             else

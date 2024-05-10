@@ -44,10 +44,6 @@ namespace DoANLapTrinhWin
                 maSanPhamList.Add(row[1].ToString());
                 UCDanhGiaNhieuSP uc = new UCDanhGiaNhieuSP(sp, dh);
                 fpanelSP.Controls.Add(uc);
-                foreach (UCDanhGiaNhieuSP ucd in fpanelSP.Controls)
-                {
-                    MessageBox.Show(ucd.txtDanhGia.ToString());
-                }
             }
         }
         private void btnThoat_Click(object sender, EventArgs e)
@@ -56,35 +52,28 @@ namespace DoANLapTrinhWin
         }
         private void btnguii_Click(object sender, EventArgs e)
         {
-            foreach (string maSanPham in maSanPhamList)
+            for (int i = 0; i < maSanPhamList.Count && i < fpanelSP.Controls.Count; i++)
             {
-                string maSP = maSanPham.ToString();  // Lấy thông tin đánh giá từ UserControl
-                bool daXuLy = false;
-                foreach (UCDanhGiaNhieuSP uc in fpanelSP.Controls)
-                {                    
-                    if (daXuLy == true) //kiem tra neu da xet thi bo qua
-                        continue;
-                    else
+                string maSanPham = maSanPhamList[i].ToString();
+                UCDanhGiaNhieuSP uc = fpanelSP.Controls[i] as UCDanhGiaNhieuSP;
+
+                DanhGia dg = new DanhGia(dh.MaNguoiMua, maSanPham, uc.ratingsp.Value.ToString(), uc.ratingnguoiban.Value.ToString(),
+                    uc.ratinggiaohang.Value.ToString(), uc.txtDanhGia.Text, DateTime.Now);
+                dgdao.ThemDanhGia(dg);
+
+                foreach (System.Drawing.Image image in uc.arrPicture)
+                {
+                    using (MemoryStream ms = new MemoryStream())
                     {
-                        DanhGia dg = new DanhGia(dh.MaNguoiMua, maSP, uc.ratingsp.Value.ToString(), uc.ratingnguoiban.Value.ToString(), 
-                            uc.ratinggiaohang.Value.ToString(), uc.txtDanhGia.Text, DateTime.Now);
-                        dgdao.ThemDanhGia(dg);
-                        foreach (System.Drawing.Image image in uc.arrPicture)
-                        {
-                            using (MemoryStream ms = new MemoryStream())
-                            {
-                                image.Save(ms, image.RawFormat);
-                                byte[] imageBytes = ms.ToArray();
-                                HinhDanhGia hdg = new HinhDanhGia(dh.MaNguoiMua, maSP, imageBytes, DateTime.Now);
-                                hdgdao.ThemHinhDanhGia(hdg);
-                            }
-                        }
+                        image.Save(ms, image.RawFormat);
+                        byte[] imageBytes = ms.ToArray();
+                        HinhDanhGia hdg = new HinhDanhGia(dh.MaNguoiMua, maSanPham, imageBytes, DateTime.Now);
+                        hdgdao.ThemHinhDanhGia(hdg);
                     }
-                    daXuLy = true;
                 }
             }
             MessageBox.Show("Đã gửi đánh giá thành công");
-            this.Close(); // Đóng Form sau khi gửi đánh gi
+            this.Close(); // Đóng Form sau khi gửi đánh giá
         }
     }
 

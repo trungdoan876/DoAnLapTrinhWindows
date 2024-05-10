@@ -141,7 +141,7 @@ namespace DoANLapTrinhWin
             if (cmbThanhToan.Text == "Chuyển khoản")
             {
                 trangthai = "Đã thanh toán";
-                FChuyenKhoan fdh = new FChuyenKhoan(ngmua.Ma, sp, tinhTien(sp), ngmua.Ten1, txtDC.Text);
+                FChuyenKhoan fdh = new FChuyenKhoan(ngmua, sp, tinhTien(sp));
                 fdh.ShowDialog();
             }
             else

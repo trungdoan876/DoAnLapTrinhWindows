@@ -13,23 +13,21 @@ namespace DoANLapTrinhWin
     public partial class FChuyenKhoan : Form
     {
         SanPham sp;
-        string maNM,ten,diachi;
         decimal tongtien;
+        NguoiMua ng;
         public FChuyenKhoan()
         {
             InitializeComponent();
         }
-        public FChuyenKhoan(string maNM, SanPham sp, decimal tongtien, string ten, string diachi)
+        public FChuyenKhoan(NguoiMua ngmua, SanPham sp, decimal tongtien)
         {
             this.sp = sp;
-            this.maNM = maNM;
+            this.ng = ngmua;
             this.tongtien = tongtien;
-            this.ten = ten;
-            this.diachi = diachi;
             InitializeComponent();
             lblTongTien.Text = "đ" + tongtien.ToString();
-            txtTen.Text = ten;
-            lblDiaChi.Text = diachi;
+            txtTen.Text = ngmua.Ten1;
+            lblDiaChi.Text = ngmua.DiaChi;
         }
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
