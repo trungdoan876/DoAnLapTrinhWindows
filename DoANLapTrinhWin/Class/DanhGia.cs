@@ -16,7 +16,6 @@ namespace DoANLapTrinhWin.Class
         private string saoGiaoHang;
         private string nhanXet;
         private DateTime ngaydg;
-        private byte[] hinh;
         //FCTSP
         /*        public DanhGia(string nhanxet, string sao, DateTime ngaydg, string masp)
                 {

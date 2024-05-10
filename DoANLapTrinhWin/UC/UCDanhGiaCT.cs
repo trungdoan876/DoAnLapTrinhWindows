@@ -23,6 +23,7 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.ngmua = ng;
+            this.dg = dg;
             this.picHinhNM.Image = Global.ByteArrayToImage(ng.Hinh);
             this.lblnhanxet.Text = dg.NhanXet;
             this.lblTenNM.Text = ng.Ten1;
@@ -33,8 +34,7 @@ namespace DoANLapTrinhWin
 
         private void LoadImagesFromDatabase(NguoiMua ng,DanhGia dg)
         {
-            DataSet dt = new DataSet();
-            dt = dgdao.LayHinhAnhTheoMaSPvaMaNM(ng,dg);
+            DataSet dt = dgdao.LayHinhAnhTheoMaSPvaMaNM(ng,dg);
             foreach (DataRow row in dt.Tables[0].Rows)
             {
                 byte[] imageBytes = (byte[])row[0];

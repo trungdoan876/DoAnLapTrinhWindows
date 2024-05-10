@@ -94,7 +94,7 @@ namespace DoANLapTrinhWin
             pic.Cursor = Cursors.Hand;
             return pic;
         }
-        public static PictureBox CreatePictureBox(System.Drawing.Image image, PictureBox picHinh) // co click
+        public static PictureBox CreatePictureBox(Image image, PictureBox picHinh) // co click
         {
             PictureBox pic = new PictureBox();
             pic.Size = new Size(150, 150);
@@ -182,6 +182,6 @@ namespace DoANLapTrinhWin
                 return "Tuyệt vời";
             return "";
         }
-
+      
     }
 }
