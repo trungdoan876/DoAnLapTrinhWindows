@@ -25,6 +25,16 @@ namespace DoANLapTrinhWin
             this.Size = new Size(1005, 500);
             this.loainguoi = loainguoi;
             this.sdt = sdt;
+            if (loainguoi == "Bán hàng")
+            {
+                string maNB = TaoMa("NguoiBan", "NB");
+                this.txtTenTK.Text = maNB;
+            }
+            else
+            {
+                string maNM = TaoMa("NguoiMua", "NM");
+                this.txtTenTK.Text = maNM;
+            }
         }
         public string TaoMa(string Table, string maBanDau)
         {
@@ -53,7 +63,6 @@ namespace DoANLapTrinhWin
             {
                 
                 string maNB = TaoMa("NguoiBan", "NB");
-                this.txtTenTK.Text = maNB;
                 NguoiBan ngban = new NguoiBan(maNB, txtMK.Text, txtHoTen.Text, sdt, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, b);
                 ngdao.DangKy(ngban);
                 MessageBox.Show("Đăng kí tài khoản bán hàng thành công!!");
@@ -61,8 +70,7 @@ namespace DoANLapTrinhWin
             }
             else
             {
-                string maNM = TaoMa("NguoiMua", "NM");
-                this.txtTenTK.Text = maNM;
+                string maNM = TaoMa("NguoiMua", "NM");;
                 NguoiMua ng = new NguoiMua(maNM, txtMK.Text, txtHoTen.Text, sdt, dtpNgSinh.Value, txtGioiTinh.Text, txtCCCD.Text, txtDiaChi.Text, b);
                 ngmuadao.DangKy(ng);
                 MessageBox.Show("Đăng kí tài khoản mua hàng thành công!!");
