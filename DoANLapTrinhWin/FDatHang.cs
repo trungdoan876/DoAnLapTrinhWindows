@@ -87,8 +87,6 @@ namespace DoANLapTrinhWin
                      (byte[])row[7],//hinh
                      row[4].ToString());//soluong
                 listsp.Add(sp);
-
-                //uc thong tin moi san pham
                 UCDatHang ucdh = new UCDatHang(sp);
 
                 //vi tri moi uc

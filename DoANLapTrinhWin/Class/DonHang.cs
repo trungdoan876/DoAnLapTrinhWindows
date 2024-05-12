@@ -20,13 +20,6 @@ namespace DoANLapTrinhWin
         {
             this.maDonHang = MaDonHang;
         }
-        /*public DonHang(string MaDonHang, string TongTien, DateTime NgayDatHang, string TrangThaiDonHang)
-        {
-            this.maDonHang = MaDonHang;
-            this.tongTien = TongTien;
-            this.ngayDatHang = NgayDatHang;
-            this.trangThaiDonHangNM = TrangThaiDonHang;
-        }*/
         public DonHang(DataRow r)
        {
            this.maDonHang = r[0].ToString();

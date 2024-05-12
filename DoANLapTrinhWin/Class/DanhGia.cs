@@ -17,13 +17,6 @@ namespace DoANLapTrinhWin.Class
         private string nhanXet;
         private DateTime ngaydg;
         //FCTSP
-        /*        public DanhGia(string nhanxet, string sao, DateTime ngaydg, string masp)
-                {
-                    this.nhanXet = nhanxet;
-                    this.sao = sao;
-                    this.ngaydg = ngaydg;
-                    this.maSP = masp;
-                }*/
          public DanhGia(DataRow row)
          {
                     this.nhanXet = row[3].ToString();

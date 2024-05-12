@@ -29,7 +29,6 @@ namespace DoANLapTrinhWin
             else
             {
                 guna2CircleProgressBar1.Value += 1;
-                //label_val.Text = (Convert.ToInt32(label_val.Text) + 1).ToString();
             }
         }
     }

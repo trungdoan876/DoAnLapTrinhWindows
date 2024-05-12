@@ -21,7 +21,6 @@ namespace DoANLapTrinhWin
             this.ngBan = ng;
             LoadData();
         }
-        //Trong bảng SanPham DangBan = 1 -> đã đăng bán
         private void LoadData()
         {
             DataSet dt = spDao.LoadDaDangBan(ngBan);

@@ -27,7 +27,7 @@ namespace DoANLapTrinhWin
         {
             InitializeComponent();
             this.sp = sp;
-            this.Size = new Size(1250,700); //tao size moi cho form
+            this.Size = new Size(1250,700); 
             ThongTin(sp); //thông tin hiện lên của sản phẩm
             LoadImagesFromDatabase(txtMaSanPham.Text);
             LoadDanhGia();
@@ -101,13 +101,10 @@ namespace DoANLapTrinhWin
         private void tinhTrang_Scroll(object sender, ScrollEventArgs e)
         {
             int value = tinhTrang.Value;
-            lblTinhTrang.Text = value.ToString() +"%"; // Hiển thị giá trị của TrackBar trong Label
-
-            // Tính toán vị trí mới của Label dựa trên giá trị của TrackBar và kích thước của thanh kéo
+            lblTinhTrang.Text = value.ToString() +"%"; 
             float percent = (float)value / (float)tinhTrang.Maximum;
             int newPosition = (int)(percent * (tinhTrang.Width - lblTinhTrang.Width)) + tinhTrang.Left;
 
-            // Cập nhật vị trí mới của Label
             lblTinhTrang.Left = newPosition;
         }
         //thêm hình ảnh

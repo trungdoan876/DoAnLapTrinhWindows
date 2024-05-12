@@ -27,8 +27,8 @@ namespace DoANLapTrinhWin
             DataSet dt = spDao.LoadChuaDangBan(ngBan);
             int x = 0;
             int y = 0;
-            int maxPerRow = 6; // Số lượng tối đa UC trong mỗi hàng
-            int ucCount = 0; // Đếm số lượng UC đã thêm vào hàng hiện tại
+            int maxPerRow = 6;
+            int ucCount = 0;
             foreach (DataRow row in dt.Tables[0].Rows)
             {
                 SanPham sp = new SanPham(row);

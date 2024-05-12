@@ -13,11 +13,6 @@ namespace DoANLapTrinhWin
 {
     public class NguoiMua: Nguoi
     {
-        /*public SanPham (Datarow r)
-        {
-            this...= Row []
-        }
-        =new SanPham(row)*/
         public NguoiMua(string ma, string mk): base(ma, mk)
         {
 
