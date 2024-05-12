@@ -96,7 +96,6 @@ namespace DoANLapTrinhWin
                 y += ucdh.Height += 5;
                 uc.panelSP.Controls.Add(ucdh);
             }
-            //ghDao.CapNhatGioHang();
         }
         //dung cho thong ke
         private void TinhSoLuotMuaSanPham(SanPham sanPham)
