@@ -71,10 +71,5 @@ namespace DoANLapTrinhWin
             int spcDB = tkDao.SPChuaDB(ngBan);
             btnChuaDB.Text = spcDB + " Sản phẩm chưa đăng bán";
         }
-
-        private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

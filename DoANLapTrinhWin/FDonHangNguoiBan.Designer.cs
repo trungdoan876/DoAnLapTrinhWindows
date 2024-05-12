@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDonHangNguoiBan));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btnDangThucHien = new Guna.UI2.WinForms.Guna2Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnDaGiao = new Guna.UI2.WinForms.Guna2Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnDangThucHien = new Guna.UI2.WinForms.Guna2Button();
             this.panelThan = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -51,6 +51,36 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1553, 78);
             this.panel2.TabIndex = 4;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnDaGiao);
+            this.panel6.Location = new System.Drawing.Point(737, 5);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(692, 70);
+            this.panel6.TabIndex = 47;
+            // 
+            // btnDaGiao
+            // 
+            this.btnDaGiao.Animated = true;
+            this.btnDaGiao.BorderRadius = 15;
+            this.btnDaGiao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDaGiao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDaGiao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDaGiao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDaGiao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDaGiao.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDaGiao.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDaGiao.ForeColor = System.Drawing.Color.White;
+            this.btnDaGiao.HoverState.FillColor = System.Drawing.Color.Lime;
+            this.btnDaGiao.Image = ((System.Drawing.Image)(resources.GetObject("btnDaGiao.Image")));
+            this.btnDaGiao.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnDaGiao.Location = new System.Drawing.Point(0, 0);
+            this.btnDaGiao.Name = "btnDaGiao";
+            this.btnDaGiao.Size = new System.Drawing.Size(689, 70);
+            this.btnDaGiao.TabIndex = 39;
+            this.btnDaGiao.Text = "Đã giao";
+            this.btnDaGiao.Click += new System.EventHandler(this.btnDaGiao_Click);
             // 
             // panel7
             // 
@@ -83,36 +113,6 @@
             this.btnDangThucHien.Text = "Đang thực hiện";
             this.btnDangThucHien.Click += new System.EventHandler(this.btnDangThucHien_Click);
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.btnDaGiao);
-            this.panel6.Location = new System.Drawing.Point(737, 5);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(692, 70);
-            this.panel6.TabIndex = 47;
-            // 
-            // btnDaGiao
-            // 
-            this.btnDaGiao.Animated = true;
-            this.btnDaGiao.BorderRadius = 15;
-            this.btnDaGiao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDaGiao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDaGiao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDaGiao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDaGiao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDaGiao.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDaGiao.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDaGiao.ForeColor = System.Drawing.Color.White;
-            this.btnDaGiao.HoverState.FillColor = System.Drawing.Color.Lime;
-            this.btnDaGiao.Image = ((System.Drawing.Image)(resources.GetObject("btnDaGiao.Image")));
-            this.btnDaGiao.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnDaGiao.Location = new System.Drawing.Point(0, 0);
-            this.btnDaGiao.Name = "btnDaGiao";
-            this.btnDaGiao.Size = new System.Drawing.Size(689, 70);
-            this.btnDaGiao.TabIndex = 39;
-            this.btnDaGiao.Text = "Đã giao";
-            this.btnDaGiao.Click += new System.EventHandler(this.btnDaGiao_Click);
-            // 
             // panelThan
             // 
             this.panelThan.AutoScroll = true;
@@ -133,8 +133,8 @@
             this.Name = "FDonHangNguoiBan";
             this.Text = "FDonHangNguoiBan";
             this.panel2.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
