@@ -70,7 +70,7 @@ namespace DoANLapTrinhWin
             this.lblXuatxu.Text = sp.XuatXu;
             this.lbltinhtrang.Text = sp.TinhTrang;
             //xoa chu % cuoi cung
-            vongtrontt.Value = tinhTrang();
+            vongtrontt.Value = TinhTrang();
             this.lblThoigiandasd.Text = sp.ThoiGianDaSuDung;
             this.lblSoLuong.Text = sp.SoLuong + " sản phẩm sẵn có";
             this.picHinh.Image = Global.ByteArrayToImage(sp.Hinh);
@@ -98,7 +98,7 @@ namespace DoANLapTrinhWin
             else
                 Global.TimDen(picHeart);
         }
-        private int tinhTrang()
+        private int TinhTrang()
         {
             string str = sp.TinhTrang.Substring(0, sp.TinhTrang.Length - 1);
             int tt = int.Parse(str);
@@ -168,7 +168,6 @@ namespace DoANLapTrinhWin
                 Global.TimDen(picHeart);
                 YeuThich yt = new YeuThich(sp.MaNguoiBan,ngmua.Ma,sp.MaSP);
                 ytdao.XoaYeuThich(yt);
-                MessageBox.Show("Đã xóa sản phẩm khỏi yêu thích! TT");
             }
             //ban dau la false nhan vao la true chuyen thanh mau do
             else
@@ -176,7 +175,6 @@ namespace DoANLapTrinhWin
                 Global.TimDo(picHeart);
                 YeuThich yt = new YeuThich(sp.MaNguoiBan, ngmua.Ma, sp.MaSP);
                 ytdao.ThemYeuThich(yt);
-                MessageBox.Show("Đã thêm sản phẩm vào yêu thích! <3");
             }
         }
         private void picHeart_Click(object sender, EventArgs e)

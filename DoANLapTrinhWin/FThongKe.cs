@@ -66,7 +66,7 @@ namespace DoANLapTrinhWin
         {
             int tcsp = tkDao.TatCaSP(ngBan);
             btnTatCaSP.Text =  "Tất cả sản phẩm: "+ tcsp.ToString();
-            int spdDB = tkDao.SPDB(ngBan);
+            int spdDB = tkDao.SPDaDangBan(ngBan);
             btnDaDB.Text = spdDB + " Sản phẩm đã đăng bán";
             int spcDB = tkDao.SPChuaDB(ngBan);
             btnChuaDB.Text = spcDB + " Sản phẩm chưa đăng bán";

@@ -114,28 +114,6 @@ namespace DoANLapTrinhWin
                 tkDao.CapNhatSoLanBan(tk);
             }
         }
-        public string TaoMaDonHang()
-        {
-            DataSet ds = dhDao.TaoMaDonHang();
-
-            string ma = "";
-            if (ds.Tables[0].Rows.Count <= 0)
-            {
-                ma = "DH01";
-            }
-            else
-            {
-                int k;
-                ma = "DH";
-                k = Convert.ToInt32(ds.Tables[0].Rows[ds.Tables[0].Rows.Count - 1][0].ToString().Substring(2));
-                k = k + 1;
-                if (k < 10)
-                    ma = ma + "0";
-                ma = ma + k.ToString();
-                //MessageBox.Show(ma);
-            }
-            return ma;
-        }
         private void DatHang_Click(object sender, EventArgs e)
         {
             if (cmbThanhToan.Text == "Chuyển khoản")
@@ -148,7 +126,7 @@ namespace DoANLapTrinhWin
             {
                 trangthai = "Chưa thanh toán";
             }
-            string maDonHang = TaoMaDonHang();
+            string maDonHang = dhDao.TaoMaDonHang();
             DonHang dh = new DonHang(maDonHang, sp.MaNguoiBan, ngmua.Ma, tinhTien(sp).ToString(), ngayhientai, "Đặt hàng thành công", "Chuẩn bị hàng");
             dhDao.TaoDonHang(dh);
 

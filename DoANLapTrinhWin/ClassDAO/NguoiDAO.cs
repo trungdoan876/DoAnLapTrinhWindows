@@ -15,6 +15,10 @@ namespace DoANLapTrinhWin
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         DBConnection tt = new DBConnection();
         string Table;
+        public NguoiDAO()
+        {
+
+        }
         public NguoiDAO(string Table)
         {
             this.Table = Table;
@@ -25,7 +29,7 @@ namespace DoANLapTrinhWin
             string sqlStr = string.Format("UPDATE {0} SET Hinh = 0x{1}, Ten = N'{3}', SDT = '{4}', NgaySinh = '{5}', GioiTinh = N'{6}', " +
                 "CCCD = '{7}', DiaChi = N'{8}', MoTaShop = N'{9}' WHERE Ma = '{2}'", Table, anh, nguoi.Ma, nguoi.Ten1, 
                 nguoi.SDT, nguoi.NgaySinh, nguoi.GioiTinh, nguoi.CCCD, nguoi.DiaChi, nguoi.MoTa);
-            tt.ThucThiKhong(sqlStr);
+            tt.ThucThi(sqlStr);
         }
         public void CapNhatMua(Nguoi nguoi)
         {
@@ -34,9 +38,8 @@ namespace DoANLapTrinhWin
             string sqlStr = string.Format("UPDATE {0} SET Hinh =0x{1}, Ten = N'{3}', SDT = '{4}', NgaySinh = '{5}', GioiTinh =N'{6}', " +
                 "CCCD = '{7}', DiaChi = N'{8}' WHERE Ma='{2}'", Table, anh, nguoi.Ma, nguoi.Ten1, nguoi.SDT, nguoi.NgaySinh, nguoi.GioiTinh, nguoi.CCCD,
                 nguoi.DiaChi);
-            tt.ThucThiKhong(sqlStr);
+            tt.ThucThi(sqlStr);
         }
-        public NguoiDAO() { }
         //load thông tin người lên form thông tin
         public DataTable ThongTinNguoi(Nguoi ng)
         {

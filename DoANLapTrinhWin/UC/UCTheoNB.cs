@@ -12,19 +12,19 @@ namespace DoANLapTrinhWin
 {
     public partial class UCTheoNB : UserControl
     {
-        string mangban;
+        string maNgBan;
         byte[] hinh;
         NguoiBanDAO ngbandao = new NguoiBanDAO();
         public UCTheoNB(string mangban)
         {
             InitializeComponent();
-            this.mangban = mangban;
+            this.maNgBan = mangban;
             this.lbltenNB.Text = mangban;
             ThongTinNguoiBan();
         }
         private void ThongTinNguoiBan()
         {
-            DataTable dt = ngbandao.ThongTinNguoiBan(mangban);
+            DataTable dt = ngbandao.ThongTinNguoiBan(maNgBan);
             foreach (DataRow row in dt.Rows)
             {
                 lbltenNB.Text = row[2].ToString();

@@ -45,27 +45,7 @@ namespace DoANLapTrinhWin
             this.lblDiaChi.Text = diachi;
             LoadData();
         }
-        public string TaoMaDonHang()
-        {
-            DataSet ds = dhDao.TaoMaDonHang();
-
-            string ma = "";
-            if (ds.Tables[0].Rows.Count <= 0)
-            {
-                ma = "DH01";
-            }
-            else
-            {
-                int k;
-                ma = "DH";
-                k = Convert.ToInt32(ds.Tables[0].Rows[ds.Tables[0].Rows.Count - 1][0].ToString().Substring(2));
-                k = k + 1;
-                if (k < 10)
-                    ma = ma + "0";
-                ma = ma + k.ToString();
-            }
-            return ma;
-        }
+        
         public void ThongTin()
         {
             DataSet ds = ghDao.LoadThongTinNguoiMuaTrongGioHang(ngmua);
@@ -182,11 +162,10 @@ namespace DoANLapTrinhWin
             {
                 trangthai = "Chưa thanh toán";
             }
-            //var NhomNguoiBan = listsp.GroupBy(sp => sp.MaNguoiBan); //nhom nguoi ban lai de tao thanh 1 don hang
             var NhomNguoiBan = dhDao.NhomNguoiBan(listsp);
             foreach (var i in NhomNguoiBan)
             {
-                string maDonHang = TaoMaDonHang();
+                string maDonHang = dhDao.TaoMaDonHang();
                 DonHang dh = new DonHang(maDonHang, i.Key.Ma, ngmua.Ma, tongtien.ToString(), ngayhientai, "Đặt hàng thành công", "Chuẩn bị hàng");
                 dhDao.TaoDonHang(dh);
                 foreach (var sanPham in i.Value)

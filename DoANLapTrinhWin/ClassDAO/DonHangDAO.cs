@@ -99,13 +99,6 @@ namespace DoANLapTrinhWin
                     "VALUES('{0}','{1}','{2}','{3}','{4}',N'{5}',N'{6}')", dh.MaDonHang,dh.MaNguoiMua,dh.MaNguoiBan,dh.TongTien,dh.NgayDatHang,dh.TrangThaiDonHangNM,dh.TrangThaiDonHangNB);
             tt.ThucThiKhong(sql);
         }
-        public DataSet TaoMaDonHang()
-        {
-            string sql = string.Format("Select * from DonHang");
-            DataSet dt = new DataSet();
-            dt = tt.Load(sql);
-            return dt;
-        }
         //lấy thông tin về tổng tiền, ngày đặt hàng -> ngày giao hàng -> FCTDonHangNM
         public DataSet TongTienNgayDat(DonHang dh)
         {
@@ -132,6 +125,29 @@ namespace DoANLapTrinhWin
             }
 
             return ngBanSanPham;
+        }
+        public string TaoMaDonHang()
+        {
+            string sql = string.Format("Select * from DonHang");
+            DataSet dt = new DataSet();
+            dt = tt.Load(sql);
+            
+            string ma = "";
+            if (dt.Tables[0].Rows.Count <= 0)
+            {
+                ma = "DH01";
+            }
+            else
+            {
+                int k;
+                ma = "DH";
+                k = Convert.ToInt32(dt.Tables[0].Rows[dt.Tables[0].Rows.Count - 1][0].ToString().Substring(2));
+                k = k + 1;
+                if (k < 10)
+                    ma = ma + "0";
+                ma = ma + k.ToString();
+            }
+            return ma;
         }
     }
 }

@@ -43,31 +43,9 @@ namespace DoANLapTrinhWin
                 panelTatCaSP.Controls.Add(ucSPBan);
              }
         }
-        //tạo mã sản phẩm
-        public string TaoMa(string Table, string maBanDau)
-        {
-            DataSet ds = spDao.TaoMaSP(Table);
-            string ma = "";
-            if (ds.Tables[0].Rows.Count <= 0)
-            {
-                ma = maBanDau + "01";
-            }
-            else
-            {
-                int k;
-                ma = maBanDau; //="NB0"
-                k = Convert.ToInt32(ds.Tables[0].Rows[ds.Tables[0].Rows.Count - 1][1].ToString().Trim().Substring(2));
-                k = k + 1;
-                if(k<10)
-                   ma = ma + "0";
-                ma = ma + k.ToString();
-            }
-            return ma;
-        }
-
         private void btnThemSanPham_Click(object sender, EventArgs e)
         {
-            SanPham sanPham = new SanPham(TaoMa("SanPham", "SP"));
+            SanPham sanPham = new SanPham(spDao.TaoMaSanPham());
             Global.MoFormCon(new FThemSanPham(ngBan, sanPham), panelTatCaSP);
         }
     }

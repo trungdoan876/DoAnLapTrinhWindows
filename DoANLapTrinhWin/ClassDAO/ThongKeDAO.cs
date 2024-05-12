@@ -78,7 +78,7 @@ namespace DoANLapTrinhWin.ClassDAO
             string sql = string.Format("Select count(*) from SanPham Where MaNguoiBan ='{0}'", ng.Ma);
             return tt.KetQuaDuyNhat(sql);
         }
-        public int SPDB(NguoiBan ng)
+        public int SPDaDangBan(NguoiBan ng)
         {
             string sql = string.Format("Select count(*) from SanPham Where MaNguoiBan ='{0}' AND DangBan = '{1}'", ng.Ma, 1);
             return tt.KetQuaDuyNhat(sql);

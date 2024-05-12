@@ -16,9 +16,9 @@ namespace DoANLapTrinhWin
 {
     public partial class UCSPGioHang : UserControl
     {
-        SanPham sp;
-        string slmua ;
+        string slmua;
         string check;
+        SanPham sp;
         NguoiMua ngmua;
         GioHangDAO ghDAO = new GioHangDAO();
         public UCSPGioHang(SanPham sanpham, NguoiMua ngmua, string check)
@@ -42,7 +42,7 @@ namespace DoANLapTrinhWin
             int tt = int.Parse(str);
             return tt;
         }
-        private void loadtinhtrang()
+        private void Loadtinhtrang()
         {
             if (check == "False") //tick vao checkbox
             {
@@ -57,7 +57,7 @@ namespace DoANLapTrinhWin
         }
         private void checkBoxSP_CheckedChanged(object sender, EventArgs e)
         {
-            loadtinhtrang();
+            Loadtinhtrang();
         }
         private void soluongmuaGH_ValueChanged(object sender, EventArgs e)
         {

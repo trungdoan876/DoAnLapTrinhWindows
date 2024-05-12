@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
+using System.Windows.Documents;
 using System.Windows.Forms;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Net.Mime.MediaTypeNames;
@@ -43,14 +44,12 @@ namespace DoANLapTrinhWin
                 "SoLuong='{11}' WHERE MaSanPham = '{12}'",
                 sp.TenSP, sp.GiaBan, sp.GiaGoc, sp.XuatXu, sp.ThoiGianDaSuDung, sp.MoTaSanPham, sp.NganhHang, sp.TinhTrang,
                 sp.DiaChi, sp.NgayDang, anh, sp.SoLuong, sp.MaSP);
-            //if(sp.kiemTraNull())
-                tt.ThucThiKhong(sqlStr);
+            tt.ThucThiKhong(sqlStr);
             MessageBox.Show("Cập nhật sản phẩm thành công!");
         }
         public void CapNhatDangBan(SanPham sp)
         {
             string sqlStr = string.Format("UPDATE SanPham SET DangBan = '{0}'WHERE MaSanPham ='{1}'", 1, sp.MaSP);
-            //kiem tra dang ban xem da dang ban chua thi moi duoc dang ban
             tt.ThucThi(sqlStr);
         }
         public void GoSanPham(SanPham sp)
@@ -101,7 +100,6 @@ namespace DoANLapTrinhWin
         public DataSet TatCaSanPhamNB(SanPham sp)
         {
             string sqlStr = string.Format("select * from SanPham WHERE MaNguoiBan = '{0}' AND DangBan ='{1}'", sp.MaNguoiBan, 1);
-            //string sqlStr = string.Format("SELECT* FROM SanPham WHERE DangBan = '{0}'", 1);
             DataSet dt = new DataSet();
             dt = tt.Load(sqlStr);
             return dt;
@@ -156,15 +154,29 @@ namespace DoANLapTrinhWin
             return ds;
         }
         //để tạo mã sản phẩm trong FThemSanPham
-        public DataSet TaoMaSP(string Table)
+        public string TaoMaSanPham()
         {
-            string sql = string.Format("select * from {0}", Table);
+            string sql = string.Format("select * from SanPham");
             DataSet dt = new DataSet();
-            dt = tt.Load(sql);
-            return dt;
+            string ma = "";
+            if (dt.Tables[0].Rows.Count <= 0)
+            {
+                ma = "SP01";
+            }
+            else
+            {
+                int k;
+                ma = "SP"; 
+                k = Convert.ToInt32(dt.Tables[0].Rows[dt.Tables[0].Rows.Count - 1][1].ToString().Trim().Substring(2));
+                k = k + 1;
+                if (k < 10)
+                    ma = ma + "0";
+                ma = ma + k.ToString();
+            }
+            return ma;
         }
         //tần suất truy cập vào sản phẩm của người mua
-        
+
         public DataTable LayNganhHangTheoMaSanPham(string MaSanPham)
         {
             string sql = string.Format("select NganhHang From SanPham where MaSanPham='{0}'", MaSanPham);

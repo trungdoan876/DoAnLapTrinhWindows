@@ -21,8 +21,8 @@ namespace DoANLapTrinhWin
         }
         public UCSPBan(SanPham sp)
         {
-            this.sp = sp;
             InitializeComponent();
+            this.sp = sp;
             this.lblMaSP.Text = sp.MaSP;
             this.lblTenSP.Text = sp.TenSP;
             this.lblGiaTien.Text = sp.GiaBan + "VND";

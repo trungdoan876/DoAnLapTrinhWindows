@@ -22,11 +22,11 @@ namespace DoANLapTrinhWin.UC
         {
             InitializeComponent();
         }
-        public UCDonHangNM(DonHang dhh, SanPham spp)
+        public UCDonHangNM(DonHang dhd, SanPham sps)
         {
             InitializeComponent();
-            this.dh = dhh;
-            this.sp = spp;
+            this.dh = dhd;
+            this.sp = sps;
             this.lblMaDH.Text = dh.MaDonHang.ToString();
             this.lblTenSP.Text = sp.TenSP.ToString();
             this.lblTongTien.Text = dh.TongTien.ToString();

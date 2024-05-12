@@ -116,7 +116,6 @@ namespace DoANLapTrinhWin
             {
                 // Ket noi
                 conn.Open();
-
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                     cmd.ExecuteNonQuery();
             }

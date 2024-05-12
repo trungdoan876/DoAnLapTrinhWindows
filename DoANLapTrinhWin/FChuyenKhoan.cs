@@ -12,8 +12,8 @@ namespace DoANLapTrinhWin
 {
     public partial class FChuyenKhoan : Form
     {
-        SanPham sp;
         decimal tongtien;
+        SanPham sp;
         NguoiMua ng;
         public FChuyenKhoan()
         {
@@ -21,10 +21,10 @@ namespace DoANLapTrinhWin
         }
         public FChuyenKhoan(NguoiMua ngmua, SanPham sp, decimal tongtien)
         {
+            InitializeComponent();
             this.sp = sp;
             this.ng = ngmua;
             this.tongtien = tongtien;
-            InitializeComponent();
             lblTongTien.Text = "đ" + tongtien.ToString();
             txtTen.Text = ngmua.Ten1;
             lblDiaChi.Text = ngmua.DiaChi;

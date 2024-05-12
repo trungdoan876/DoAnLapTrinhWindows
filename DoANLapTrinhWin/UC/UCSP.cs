@@ -29,9 +29,9 @@ namespace DoANLapTrinhWin
         }
         public UCSP(SanPham sp,NguoiMua ngmua)
         {
+            InitializeComponent();
             this.sp = sp;
             this.ngmua = ngmua;
-            InitializeComponent();
             this.lblMaSP.Text = sp.MaSP;
             this.lblTenSP.Text = sp.TenSP;
             this.lblGiaBan.Text =  sp.GiaBan ;
