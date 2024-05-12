@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Documents;
 
 namespace DoANLapTrinhWin
 {
@@ -114,6 +115,23 @@ namespace DoANLapTrinhWin
             DataSet dt = new DataSet();
             dt = tt.Load(sql);
             return dt;
+        }
+        public Dictionary<NguoiBan, List<SanPham>> NhomNguoiBan(List<SanPham> listsp)
+        {
+            var NhomNguoiBan = listsp.GroupBy(sp => sp.MaNguoiBan);
+
+            Dictionary<NguoiBan, List<SanPham>> ngBanSanPham = new Dictionary<NguoiBan, List<SanPham>>();
+
+            foreach (var i in NhomNguoiBan)
+            {
+                NguoiBan nguoiBan = new NguoiBan { Ma = i.Key };
+
+                List<SanPham> sanPhams = i.ToList();
+
+                ngBanSanPham.Add(nguoiBan, sanPhams);
+            }
+
+            return ngBanSanPham;
         }
     }
 }

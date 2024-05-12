@@ -31,6 +31,7 @@ namespace DoANLapTrinhWin
         DonHangDAO dhDao = new DonHangDAO();
         ChiTietDonHangDAO ctdhDao = new ChiTietDonHangDAO();
         ThongKeDAO tkDao = new ThongKeDAO();
+
         public FDatHang(NguoiMua ngMua,SanPham sp, int tongtien)
         {
             InitializeComponent();
@@ -181,13 +182,14 @@ namespace DoANLapTrinhWin
             {
                 trangthai = "Chưa thanh toán";
             }
-            var NhomNguoiBan = listsp.GroupBy(sp => sp.MaNguoiBan); //nhom nguoi ban lai de tao thanh 1 don hang
+            //var NhomNguoiBan = listsp.GroupBy(sp => sp.MaNguoiBan); //nhom nguoi ban lai de tao thanh 1 don hang
+            var NhomNguoiBan = dhDao.NhomNguoiBan(listsp);
             foreach (var i in NhomNguoiBan)
             {
                 string maDonHang = TaoMaDonHang();
-                DonHang dh = new DonHang(maDonHang, i.Key, ngmua.Ma, tongtien.ToString(), ngayhientai, "Đặt hàng thành công", "Chuẩn bị hàng");
+                DonHang dh = new DonHang(maDonHang, i.Key.Ma, ngmua.Ma, tongtien.ToString(), ngayhientai, "Đặt hàng thành công", "Chuẩn bị hàng");
                 dhDao.TaoDonHang(dh);
-                foreach (var sanPham in i)
+                foreach (var sanPham in i.Value)
                 {
                     TinhSoLanBanSanPham(sanPham);
                     TinhSoLuotMuaSanPham(sanPham);

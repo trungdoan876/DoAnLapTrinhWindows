@@ -22,6 +22,10 @@ namespace DoANLapTrinhWin
         private string diaChi;
         private string moTa;
         //dùng cho đăng kí
+        public Nguoi()
+        {
+
+        }
         public Nguoi(string sdt)
         {
             this.sDT = sdt;

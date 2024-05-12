@@ -13,6 +13,10 @@ namespace DoANLapTrinhWin
      {
         private string moTaShop;
         //dùng để đăng kí
+        public NguoiBan()
+        {
+
+        }
         public NguoiBan(string ma, string matkhau) : base(ma, matkhau)
         {
 
